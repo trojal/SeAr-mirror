@@ -928,7 +928,7 @@
 1733,Gust_Bow,疾风之弓,4,20,,1400,95,,5,1,0x000A0808,7,2,34,3,55,1,11,{ if(isequipped(1755)) { if(readparam(bInt)>40) { bonus3 bAutoSpell,"NJ_HUUJIN",5,200; } else { bonus3 bAutoSpell,"NJ_HUUJIN",5,100; } bonus bLongAtkRate,25; } },{},{}
 1734,Orc_Archer_Bow,兽人弓箭手之弓,4,20,,1600,120,,5,0,0x000A0808,7,2,34,4,65,1,11,{ bonus2 bAddMonsterDropItem,1753,200; if(isequipped(1753)) bonus bLongAtkRate,50; },{},{}
 1735,Kkakkung,Kkakkung,4,20,,0,120,,5,0,0x000A0848,7,2,34,1,1,0,11,{ bonus2 bAddRace,RC_Boss,50; bonus2 bAddRace,RC_NonBoss,50; },{},{}
-1736,Double_Bound,双发神弓,4,20,,900,70,,5,3,0x00000800,2,2,34,3,70,1,11,{ bonus3 bAutoSpell,"AC_DOUBLE",GetSkillLv("AC_DOUBLE"),100; },{},{}
+1736,Double_Bound,双发神弓,4,20,,900,70,,5,3,0x00000800,2,2,34,3,70,1,11,{ bonus3 bAutoSpell,"AC_DOUBLE",GetSkillLv("AC_DOUBLE"),10; },{},{}
 1737,Ixion_Wing,伊克希恩的_羽翼,4,20,,300,135,,5,1,0x00000800,2,2,34,4,70,1,11,{ autobonus "{ bonus bAspdRate,7; }",10+(getrefine()*2),7000,BF_WEAPON,"{ specialeffect2 EF_HASTEUP; }"; bonus2 bAddSkillBlow,"AC_CHARGEARROW",3; },{},{}
 1738,BF_Bow1,战斗_十字弓,4,0,,0,100,,5,0,0x000A0848,7,2,34,3,80,1,11,{ bonus bDex,2; bonus2 bAddRace,RC_DemiHuman,55; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; },{},{}
 1739,BF_Bow2,战斗_十字弓,4,0,,0,100,,5,0,0x000A0848,7,2,34,3,80,1,11,{ bonus bDex,2; bonus bInt,10; bonus2 bAddRace,RC_DemiHuman,55; bonus bUnbreakableWeapon,0; },{},{}
