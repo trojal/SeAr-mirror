@@ -1,0 +1,903 @@
+//===== eAthena Script =======================================
+//= 魔物决斗场
+//===== By: ==================================================
+//= acky - god@acky.com
+//===== Current Version: =====================================
+//= 1.1.5
+//===== Compatible With: =====================================
+//= eAthena SVN
+//===== Description: =========================================
+//= Players train monsters and battle other players.
+//= Experience can be earned and monsters upgraded.
+//===== Additional Comments: =================================
+//= To add monsters, add lines after the commends labled:
+//= '// #. ---Change to Add Monsters--- //'
+//= There are 6 steps to add a monster at the moment.
+//= Added Duel Room
+//= ---------------------------------------------------------
+//= Script is messy! Be careful!
+//= 1.1.2 Changed all gmcommand to atcommand as Poki#3 suggested. [Vicious]
+//= 1.1.3 Removed Duplicate Names [Silent]
+//= 1.1.4 Fixed SummonPad syntax. [KarLaeda]
+//= 1.1.5 Some cleanup & optimization [KarLaeda]
+//= ---------------------------------------------------------
+//= 脚本中文化
+//= 守护永恒 2006/02/08
+//============================================================ 
+
+// Entrance //
+prontera.gat,164,109,6	script	魔物决斗管理人	702,{
+mes "[魔物决斗管理人]";
+mes "欢迎来到魔物决斗场!";
+mes "当前 ^FF0000" + getmapusers("gon_test.gat") + "^000000 名玩家";
+mes "^FF0000注意:^000000 大嘴鸟,老鹰和手推车不许带入!";
+L_Menu:
+next;
+menu "进入",-,"关于魔物斗技场",L_Info,"取消",L_Exit;
+
+set @marena,1;
+savepoint "gon_test.gat",56,99;
+set @battle,0;
+warp "gon_test.gat",57,99;
+close;
+
+L_Exit:
+mes "[魔物决斗管理人]";
+mes "随时欢迎.";
+close;
+
+L_Info:
+mes "[魔物决斗管理人]";
+mes "你必须找驯养师买个属于你的魔物.";
+next;
+mes "[魔物决斗管理人]";
+mes "然后告诉接待员你选择完毕.";
+next;
+mes "[魔物决斗管理人]";
+mes "裁判便会召唤你的魔物.";
+mes "当你的魔物在战斗时,你必须在和裁判说一声然后进入观众席.";
+next;
+mes "[魔物决斗管理人]";
+mes "魔物训练师可以治疗你的魔物.";
+next;
+mes "[魔物决斗管理人]";
+mes "使用方法,一直使用护士直到他说你的魔物治愈了.";
+next;
+mes "[魔物决斗管理人]";
+mes "你杀死的魔物越多, 就可以得到更多的经验去给你的魔物升级.";
+next;
+mes "[魔物决斗管理人]";
+mes "魔物越强, 再次召唤的时间也就越长.";
+
+goto L_Menu;
+}
+
+// Monster Summon Function //
+function	script	monstersummon	{
+// 1. ---Change to Add Monsters--- //
+if (#monster == 10) summon strcharinfo(0) + "的波利",1002, "OnporingKilled";
+if (#monster == 20) summon strcharinfo(0) + "的绿棉虫",1007, "OnFaberKilled";
+if (#monster == 30) summon strcharinfo(0) + "的疯兔",1063, "OnLunaticKilled";
+if (#monster == 31) summon strcharinfo(0) + "的土波利",1113, "OnDropsKilled";
+if (#monster == 32) summon strcharinfo(0) + "的小鸡",1049, "OnPickyKilled";
+if (#monster == 40) summon strcharinfo(0) + "的苍蝇",1011, "OnChonChonKilled";
+if (#monster == 41) summon strcharinfo(0) + "的蛋壳小鸡",1050, "OnSPickyKilled";
+if (#monster == 42) summon strcharinfo(0) + "的树精",1010, "OnWillowKilled";
+if (#monster == 50) summon strcharinfo(0) + "的罗达蛙",1012, "OnRodaKilled";
+if (#monster == 51) summon strcharinfo(0) + "的秃鹰",1009, "OnCondorKilled";
+if (#monster == 60) summon strcharinfo(0) + "的盗虫",1051, "OnThiefKilled";
+if (#monster == 70) summon strcharinfo(0) + "的小野猪",1167, "OnSavageKilled";
+if (#monster == 80) summon strcharinfo(0) + "的吸血蝙蝠",1005, "OnFamiliarKilled";
+if (#monster == 81) summon strcharinfo(0) + "的蜂兵",1004, "OnHornetKilled";
+if (#monster == 90) summon strcharinfo(0) + "的沙漠幼狼",1107, "OnPuppyKilled";
+if (#monster == 91) summon strcharinfo(0) + "的毒蝎",1014, "OnSporeKilled";
+if (#monster == 92) summon strcharinfo(0) + "的摇滚蝗虫",1052, "OnRockerKilled";
+if (#monster == 100) summon strcharinfo(0) + "的邪骸战士",1076, "OnSkeletonKilled";
+if (#monster == 101) summon strcharinfo(0) + "的漂浮虫",1161, "OnPlanktonKilled";
+if (#monster == 102) summon strcharinfo(0) + "的邪恶老公公",1247, "OnAntonioKilled";
+if (#monster == 103) summon strcharinfo(0) + "的浮勒盗虫",1017, "OnThiefFemaleKilled";
+close;
+}
+
+// Referee //
+-	script	monsterreferee	61,{
+if (@fighting == 1) end;
+if (@battle == 1) goto L_Start;
+end;
+
+L_Start:
+mes "[refree]";
+mes "你的魔物是:";
+
+// 2. ---Change to Add Monsters--- //
+if (#monster == 10) mes "波利";
+if (#monster == 20) mes "绿棉虫";
+if (#monster == 30) mes "疯兔";
+if (#monster == 31) mes "土波利";
+if (#monster == 32) mes "小鸡";
+if (#monster == 40) mes "苍蝇";
+if (#monster == 41) mes "蛋壳小鸡";
+if (#monster == 42) mes "树精";
+if (#monster == 50) mes "罗达蛙";
+if (#monster == 51) mes "秃鹰";
+if (#monster == 60) mes "盗虫";
+if (#monster == 70) mes "小野猪";
+if (#monster == 80) mes "吸血蝙蝠";
+if (#monster == 81) mes "蜂兵";
+if (#monster == 90) mes "沙漠幼狼";
+if (#monster == 91) mes "毒蝎";
+if (#monster == 92) mes "摇滚蝗虫";
+if (#monster == 100) mes "邪骸战士";
+if (#monster == 101) mes "漂浮虫";
+if (#monster == 102) mes "邪骸老公公";
+if (#monster == 103) mes "浮勒盗虫";
+
+mes "你要开始战斗了吗?";
+next;
+menu "开始吧",-,"取消",L_Exit;
+
+set @fighting,1;
+set #heal,1;
+set @special,rand (100); // Chance of special summon
+if (@special == 1) goto Special1;
+if (@special == 2) goto Special2;
+if (@special == 3) goto Special3;
+if (@special == 4) goto Special4;
+if (@special == 5) goto Special5;
+
+callfunc "monstersummon";
+close;
+
+// Special Summons //
+Special1:
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+summon strcharinfo(0) + "的突击队",1002, "OnporingKilled";
+close;
+
+Special2:
+summon strcharinfo(0) + "的波利之王",1090, "OnSpecialKilled";
+close;
+
+Special3:
+summon strcharinfo(0) + "疯兔之王",1093, "OnSpecialKilled";
+close;
+
+Special4:
+summon strcharinfo(0) + "的绿龙蝇",1091, "OnSpecialKilled";
+close;
+
+Special5:
+summon strcharinfo(0) + "的蛙王",1089, "OnSpecialKilled";
+close;
+
+L_Exit:
+mes "[refree]";
+mes "好吧";
+close;
+}
+gon_test.gat,56,91,6	duplicate(monsterreferee)	Referee#01	61
+
+
+// 阿瑟 //
+gon_test.gat,58,94,6	script	阿瑟	86,{
+set @marena,1;
+mes "[阿瑟]";
+mes "你想要做什么?";
+next;
+menu "^0000FF去观众席^000000",L_Spec,"^FF0000准备完毕^000000",-,"回城",L_Exit,"取消",L_Cancel;
+
+if (#monster == 0) goto L_NoMon;
+if (#heal == 1) goto L_Heal;
+
+if (#monster < 40) goto L_Low;
+if (#monster > 30 && #monster < 80) goto L_Med;
+if (#monster > 70) goto L_High;
+
+L_Low:
+menu "等级1-3",L_1to3,"^FF0000低位全等级",L_High;
+close;
+
+L_Med:
+menu "等级4-7",L_4to6,"^FF0000高位全等级",L_High;
+close;
+
+L_High:
+close2;
+savepoint "gon_test.gat",56,99;
+set @battle,1;
+atcommand strcharinfo(0) + "@option 64 0 64";
+warp "gon_test.gat",72,87;
+end;
+
+L_4to6:
+close2;
+savepoint "gon_test.gat",56,99;
+set @battle,1;
+atcommand strcharinfo(0) + "@option 64 0 64";
+warp "gon_test.gat",57,86;
+end;
+
+L_1to3:
+close2;
+savepoint "gon_test.gat",56,99;
+set @battle,1;
+atcommand strcharinfo(0) + "@option 64 0 64";
+warp "gon_test.gat",43,87;
+end;
+
+L_Exit:
+close2;
+savepoint "prontera.gat",149,186;
+set @battle,0;
+atcommand strcharinfo(0) + "@option 0 0 0";
+warp "prontera.gat",149,186;
+end;
+
+L_Spec:
+close2;
+savepoint "gon_test.gat",56,99;
+set @battle,0;
+atcommand strcharinfo(0) + "@option 0 0 0";
+warp "gon_test.gat",57,99;
+end;
+
+L_NoMon:
+mes "[阿瑟]";
+mes "你还没有得到魔物,只能进入观众席.";
+close;
+
+L_Heal:
+mes "[阿瑟]";
+mes "你必须给你的魔物治疗直到它可以战斗为止.";
+close;
+
+L_Cancel:
+close;
+}
+
+// 魔物训练师 //
+gon_test.gat,52,103,6	script	魔物训练师	87,{
+mes "[魔物训练师]";
+if (#monster != 0) goto L_Mon;
+
+mes "欢迎来到魔物斗技场, 是来选魔物的??";
+next;
+menu "是的",-,"不",L_Exit;
+
+mes "[魔物训练师]";
+mes "新来的只可以用波利.";
+mes "花费1000z,你要购买吗?";
+next;
+menu "好",-,"不要",L_Exit;
+
+if (zeny < 1000) goto L_NoZeny;
+set zeny,zeny-1000;
+set #monster,10;
+mes "[魔物训练师]";
+mes "恭喜你!";
+mes "当你的波利得到足够多的经验时,你可以找我为他升级.";
+close;
+
+L_Mon:
+mes "欢迎再来, " + strcharinfo(0) + ".";
+mes "你的魔物有 " + #monpoints + " 经验.";
+next;
+if (@fighting == 1) goto L_Heal;
+menu "升级魔物",L_Upgrade,"卖经验",L_Sell,"^FF0000丢弃魔物^000000",L_Abandon,"取消",L_Exit;
+
+L_Abandon:
+mes "[魔物训练师]";
+mes "你确定要丢弃你的魔物?";
+next;
+menu "是的",-,"不",L_Exit;
+set #monster,0;
+set #monpoints,0;
+mes "[魔物训练师]";
+mes "魔物已经被放生.";
+close;
+
+L_Sell:
+mes "[魔物训练师]";
+mes "魔物每一点经验换100z.";
+next;
+menu "卖经验",-,"取消",L_Exit;
+mes "[魔物训练师]";
+mes "你有: ^FF0000" + #monpoints + "^000000 经验值";
+mes "想卖多少?";
+next;
+input @sellexp;
+if (@sellexp > #monpoints) goto L_NoExp;
+set #monpoints,#monpoints-@sellexp;
+set @sellearn,100*@sellexp; // 经验价格
+set zeny,zeny+@sellearn;
+mes "[魔物训练师]";
+mes "你得到了 ^0000FF" + @sellearn + "^000000z.";
+close;
+
+
+L_NoExp:
+mes "[魔物训练师]";
+mes "你没有足够的经验值.";
+next;
+goto L_Exit;
+
+// 魔物升级 //
+L_Upgrade:
+mes "[魔物训练师]";
+// 3. ---Change to Add Monsters - May not be required--- //
+if (#monster > 1 && #monster < 20) mes "你需要 10 点经验值升级你的魔物.";
+if (#monster > 19 && #monster < 30) mes "你需要 20 点经验值升级你的魔物.";
+if (#monster > 29 && #monster < 40) mes "你需要 40 点经验值升级你的魔物.";
+if (#monster > 39 && #monster < 50) mes "你需要 80 点经验值升级你的魔物.";
+if (#monster > 49 && #monster < 60) mes "你需要 160 点经验值升级你的魔物.";
+if (#monster > 59 && #monster < 70) mes "你需要 320 点经验值升级你的魔物.";
+if (#monster > 69 && #monster < 80) mes "你需要 640 点经验值升级你的魔物.";
+if (#monster > 79 && #monster < 90) mes "你需要 1280 点经验值升级你的魔物.";
+if (#monster > 89 && #monster < 100) mes "你需要 2560 点经验值升级你的魔物.";
+next;
+menu "继续",-,"取消",L_Exit;
+mes "[魔物训练师]";
+
+// 4. ---Change to Add Monsters - May not be required--- //
+if (#monster > 1 && #monster < 20 && #monpoints > 9) goto L_Up1;
+if (#monster > 19 && #monster < 30 && #monpoints > 19) goto L_Up2;
+if (#monster > 29 && #monster < 40 && #monpoints > 39) goto L_Up3;
+if (#monster > 39 && #monster < 50 && #monpoints > 79) goto L_Up4;
+if (#monster > 49 && #monster < 60 && #monpoints > 159) goto L_Up5;
+if (#monster > 59 && #monster < 70 && #monpoints > 319) goto L_Up6;
+if (#monster > 69 && #monster < 80 && #monpoints > 639) goto L_Up7;
+if (#monster > 79 && #monster < 90 && #monpoints > 1279) goto L_Up8;
+if (#monster > 89 && #monster < 100 && #monpoints > 2559) goto L_Up9;
+
+mes "无法升级.";
+close;
+
+// 5. ---Change to Add Monsters--- //
+	L_Up1:
+	set #monster,20;
+	set #monpoints,#monpoints-10;
+	mes "升级到绿棉虫!";
+	close;
+
+	L_Up2:
+	mes "你想升级成哪种魔物?";
+	next;
+	menu "疯兔",U_Lunatic,"土波利",U_Drops,"小鸡",U_Picky;
+
+		U_Drops:
+		set #monster,31;
+		set #monpoints,#monpoints-20;
+		mes "[魔物训练师]";
+		mes "升级到土波利!";
+		close;
+
+		U_Picky:
+		set #monster,32;
+		set #monpoints,#monpoints-20;
+		mes "[魔物训练师]";
+		mes "升级到小鸡!";
+		close;
+
+		U_Lunatic:
+		set #monster,30;
+		set #monpoints,#monpoints-20;
+		mes "[魔物训练师]";
+		mes "升级到疯兔!";
+		close;
+
+	L_Up3:
+	mes "你想升级成哪种魔物?";
+	next;
+	menu "苍蝇",U_ChonChon,"蛋壳小鸡",U_SPicky,"树精",U_Willow;
+
+		U_ChonChon:
+		set #monster,40;
+		set #monpoints,#monpoints-40;
+		mes "[魔物训练师]";
+		mes "升级到苍蝇!";
+		close;
+
+		U_SPicky:
+		set #monster,41;
+		set #monpoints,#monpoints-40;
+		mes "[魔物训练师]";
+		mes "升级到蛋壳小鸡!";
+		close;
+
+		U_Willow:
+		set #monster,42;
+		set #monpoints,#monpoints-40;
+		mes "[魔物训练师]";
+		mes "升级到树精!";
+		close;
+
+	L_Up4:
+	mes "你想升级成哪种魔物?";
+	next;
+	menu "秃鹰",U_Condor,"罗达蛙",U_Roda;
+
+		U_Condor:
+		set #monster,51;
+		set #monpoints,#monpoints-80;
+		mes "[魔物训练师]";
+		mes "升级到秃鹰!";
+		close;
+
+		U_Roda:
+		set #monster,50;
+		set #monpoints,#monpoints-80;
+		mes "[魔物训练师]";
+		mes "升级到罗达蛙!";
+		close;
+
+	L_Up5:
+	set #monster,60;
+	set #monpoints,#monpoints-160;
+	mes "升级到盗虫!";
+	close;
+
+	L_Up6:
+	set #monster,70;
+	set #monpoints,#monpoints-320;
+	mes "升级到小野猪!";
+	close;
+
+	L_Up7:
+	mes "你想升级成哪种魔物?";
+	next;
+	menu "吸血蝙蝠",U_Familiar,"蜂兵",U_Hornet;
+
+		U_Hornet:
+		set #monster,81;
+		set #monpoints,#monpoints-640;
+		mes "[魔物训练师]";
+		mes "升级到蜂兵!";
+		close;
+
+		U_Familiar:
+		set #monster,80;
+		set #monpoints,#monpoints-640;
+		mes "[魔物训练师]";
+		mes "升级到吸血蝙蝠!";
+		close;
+
+	L_Up8:
+	mes "[魔物训练师]";
+	mes "你想升级成哪种魔物?";
+	next;
+	menu "沙漠幼狼",U_Puppy,"毒蝎",U_Spore,"摇滚蝗虫",U_Rocker;
+
+		U_Spore:
+		set #monster,91;
+		set #monpoints,#monpoints-1280;
+		mes "[魔物训练师]";
+		mes "升级到毒蝎!";
+		close;
+
+		U_Rocker:
+		set #monster,92;
+		set #monpoints,#monpoints-1280;
+		mes "[魔物训练师]";
+		mes "升级到摇滚蝗虫!";
+		close;
+
+		U_Puppy:
+		set #monster,90;
+		set #monpoints,#monpoints-1280;
+		mes "[魔物训练师]";
+		mes "升级到沙漠幼狼!";
+		close;
+
+	L_Up9:
+	mes "你想升级成哪种魔物?";
+	next;
+	menu "邪骸战士",U_Skeleton,"邪恶老公公",U_Antonio,"漂浮虫",U_Plankton,"浮勒盗虫",U_ThiefFemale;
+
+		U_Plankton:
+		set #monster,101;
+		set #monpoints,#monpoints-2560;
+		mes "[魔物训练师]";
+		mes "升级到漂浮虫!";
+		close;
+
+		U_Antonio:
+		set #monster,102;
+		set #monpoints,#monpoints-2560;
+		mes "[魔物训练师]";
+		mes "升级到邪恶老公公!";
+		close;
+
+		U_ThiefFemale:
+		set #monster,103;
+		set #monpoints,#monpoints-2560;
+		mes "[魔物训练师]";
+		mes "升级到浮勒盗虫!";
+		close;
+
+		U_Skeleton:
+		set #monster,100;
+		set #monpoints,#monpoints-2560;
+		mes "[魔物训练师]";
+		mes "升级到邪骸战士!";
+		close;
+
+L_NoZeny:
+mes "[魔物训练师]";
+mes "你的钱不够!";
+close;
+
+L_Exit:
+mes "[魔物训练师]";
+mes "再见.";
+close;
+
+L_Heal:
+mes "[魔物训练师]";
+mes "你的魔物需要治疗.";
+mes "如果你点击护士的话它的恢复会提高.";
+set #heal,1;
+close;
+}
+
+// Kill Trigger //
+// 6/Final. ---Change to Add Monsters--- //
+gon_test.gat,56,91,6	script	OnPoringKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+1;
+	announce "你杀死了1个 波利 - 得到 1 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnFaberKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+2;
+	announce "你杀死了1个 绿棉虫 - 得到 2 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnLunaticKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+4;
+	announce "你杀死了1个 疯兔 - 得到 4 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnDropsKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+4;
+	announce "你杀死了1个 土波利 - 得到 4 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnPickyKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+4;
+	announce "你杀死了1个 小鸡 - 得到 4 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnChonChonKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+8;
+	announce "你杀死了1个 苍蝇 - 得到 8 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnSPickyKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+8;
+	announce "你杀死了1个 蛋壳小鸡 - 得到 8 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnWillowKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+8;
+	announce "你杀死了1个 树精 - 得到 8 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnRodaKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+16;
+	announce "你杀死了1个 罗达蛙 - 得到 16 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnCondorKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+16;
+	announce "你杀死了1个 秃鹰 - 得到 16 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnThiefKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+32;
+	announce "你杀死了1个 盗虫 - 得到 32 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnSavageKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+64;
+	announce "你杀死了1个 小野猪 - 得到 64 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnFamiliarKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+128;
+	announce "你杀死了1个 吸血蝙蝠 - 得到 128 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnHornetKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+128;
+	announce "你杀死了1个 蜂兵 - 得到 128 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnPuppyKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+256;
+	announce "你杀死了1个 沙漠幼狼 - 得到 256 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnRockerKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+256;
+	announce "你杀死了1个 摇滚蝗虫 - 得到 256 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnSporeKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+256;
+	announce "你杀死了1个 毒蝎 - 得到 256 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnSkeletonKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+512;
+	announce "你杀死了1个 邪骸战士 - 得到 512 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnPlanktonKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+512;
+	announce "你杀死了1个 漂浮虫 - 得到 512 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnAntonioKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+512;
+	announce "你杀死了1个 邪恶老公公 - 得到 512 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnThiefFemaleKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+512;
+	announce "你杀死了1个 浮勒盗虫 - 得到 512 经验",19;
+	callfunc "duelkill";
+}
+
+gon_test.gat,56,91,6	script	OnSpecialKilled	-1,{
+	if (@marena == 0) callfunc "illegalkill";
+	set #monpoints,#monpoints+512;
+	announce "你杀死了1个 特殊魔物 - 得到 1024 经验",19;
+	callfunc "duelkill";
+}
+
+function	script	duelkill	{
+if (strcharinfo(0) == $@duelist1$ || strcharinfo(0) == $@duelist2$) goto L_Heal;
+end;
+	L_Heal:
+	announce strcharinfo(0) + " 赢得决斗!",1;
+	set @fighting,0;
+	set #heal,0;
+	set @healing,0;
+	end;
+}
+
+function	script	illegalkill	{
+announce "检测到 " + strcharinfo(0) + " 非法获胜",1;
+percentheal -100,-100;
+end;
+}
+
+// Healer //
+gon_test.gat,55,103,6	script	护士	90,{
+if (@battle == 1 || #heal == 0) goto L_NoHeal;
+if (#heal == 1 && @healing < 100) goto L_Heal; //Total healing required
+set @fighting,0;
+set #heal,0;
+set @healing,0;
+specialeffect2 364;
+announce "你的魔物已经治愈.",19;
+end;
+
+	L_Heal:
+	set @healrate,140 / #monster; //Rate of heal per click
+	set @healing,@healing + @healrate;
+	end;
+
+	L_NoHeal:
+	announce "你的魔物尚未治愈结束.",19;
+	end;
+}
+
+// Warps players //
+gon_test.gat,57,86,5	script	Summon Pad 1::SummonPad	111,2,2,{
+end;
+OnTouch:
+set @marena,1;
+warp "gon_test.gat",57,99;
+}
+gon_test.gat,43,87,5	duplicate(SummonPad)	Summon Pad 2	111,2,2
+gon_test.gat,72,87,5	duplicate(SummonPad)	Summon Pad 3	111,2,2
+
+
+
+// Skill Disabler //
+gon_test.gat,57,99,5	script	Skill Disable	111,3,3,{
+atcommand strcharinfo(0) + "@skilloff";
+disablenpc "Skill Disable";
+end;
+}
+
+// Duel Arena //
+gon_test.gat,58,103,5	script	决斗大师#01	92,{
+if ($@duelist1$ == "") set @duel,0;
+if ($@monster1 == "") set @duel,0;
+set @marena,1;
+if (#monster == 0) goto L_NoMon;
+mes "[决斗大师]";
+if ($@duel == 1) goto L_Waiting;
+if ($@duel == 2) goto L_Dueling;
+
+mes "当前没有玩家决斗.";
+next;
+menu "参加",-,"进入观众席",L_Spec,"取消",L_Exit;
+
+// Player 1 Enters Duel Area //
+if (#heal == 1) goto L_NeedHeal;
+if ($@duel == 1) goto L_Duel2;
+set $@duel,1;
+if (#monster > 1 && #monster < 20) set $@monster1,1;
+if (#monster > 19 && #monster < 30) set $@monster1,2;
+if (#monster > 29 && #monster < 40) set $@monster1,3;
+if (#monster > 39 && #monster < 50) set $@monster1,4;
+if (#monster > 49 && #monster < 60) set $@monster1,5;
+if (#monster > 59 && #monster < 70) set $@monster1,6;
+if (#monster > 69 && #monster < 80) set $@monster1,7;
+if (#monster > 79 && #monster < 90) set $@monster1,8;
+if (#monster > 89 && #monster < 100) set $@monster1,9;
+if (#monster > 99 && #monster < 110) set $@monster1,10;
+set $@duelist1$,strcharinfo(0);
+set @battle,1;
+announce strcharinfo(0) + " [魔物等级: " + $@monster1 + "] 在等待决斗",1;
+atcommand strcharinfo(0) + "@option 64 0 64";
+warp "gon_test.gat",49,5;
+close;
+
+L_Waiting:
+mes "^0000FF " + $@duelist1$ + "^000000 [魔物等级: ^FF0000" + $@monster1 + "^000000]";
+mes "请等待对手";
+next;
+menu "参加",-,"进入观众席",L_Spec,"取消",L_Exit;
+
+// Player 2 Enters Duel Area //
+if (#heal == 1) goto L_NeedHeal;
+L_Duel2:
+if ($@duel == 2) goto L_Spec;
+set $@duel,2;
+if (#monster > 1 && #monster < 20) set $@monster2,1;
+if (#monster > 19 && #monster < 30) set $@monster2,2;
+if (#monster > 29 && #monster < 40) set $@monster2,3;
+if (#monster > 39 && #monster < 50) set $@monster2,4;
+if (#monster > 49 && #monster < 60) set $@monster2,5;
+if (#monster > 59 && #monster < 70) set $@monster2,6;
+if (#monster > 69 && #monster < 80) set $@monster2,7;
+if (#monster > 79 && #monster < 90) set $@monster2,8;
+if (#monster > 89 && #monster < 100) set $@monster2,9;
+if (#monster > 99 && #monster < 110) set $@monster2,10;
+set $@duelist2$,strcharinfo(0);
+set @battle,1;
+announce strcharinfo(0) + " [魔物等级: " + $@monster2 + "] 已经加入决斗",1;
+atcommand strcharinfo(0) + "@option 64 0 64";
+warp "gon_test.gat",49,5;
+close;
+
+	L_Dueling:
+	mes "^0000FF" + $@duelist1$ + "^000000 [魔物等级: ^0000FF" + $@monster1 + "^000000]";
+	mes "           VS.";
+	mes "^FF0000" + $@duelist2$ + "^000000 [魔物等级: ^FF0000" + $@monster2 + "^000000]";
+	next;
+	menu "进入观众席",L_Spec,"取消",L_Exit;
+	
+	L_Spec:
+	set @battle,0;
+	atcommand strcharinfo(0) + "@option 64 0 64";
+	warp "gon_test.gat",49,5;
+	close;
+
+	L_Exit:
+	mes "[决斗大师]";
+	mes "再见.";
+	close;
+
+	L_NoMon:
+	mes "[决斗大师]";
+	mes "你没有魔物,你不能参加.";
+	close;
+
+	L_NeedHeal:
+	mes "[决斗大师]";
+	mes "你必须治疗你的魔物.";
+	close;
+}
+
+// Duel Exit //
+gon_test.gat,42,8,5	script	决斗大师#02	92,{
+mes "[决斗大师]";
+mes "你想回去吗?";
+menu "是的",L_Leave,"不",-;
+mes "好吧";
+close;
+
+	L_Leave:
+	if ($@duelist1$ == strcharinfo(0)) goto L_Leave1;
+	if ($@duelist2$ == strcharinfo(0)) goto L_Leave2;
+
+		L_Leave3:
+		atcommand strcharinfo(0) + "@option 0 0 0";
+		set @battle,0;
+		warp "gon_test.gat",57,99;
+		close;
+
+		L_Leave1:
+		set $@duelist1$,$@duelist2$;
+		set $@monster1,$@monster2;
+		set $@duel,$@duel-1;
+		announce strcharinfo(0) + " 停止决斗",1;
+		goto L_Leave3;
+
+		L_Leave2:
+		set $@duelist2$,"";
+		set $@monster2,0;
+		set $@duel,$@duel-1;
+		announce strcharinfo(0) + " 停止决斗",1;
+		goto L_Leave3;
+}
+
+gon_test.gat,49,5,5	duplicate(SummonPad)	Summon Pad 4	111,2,2
+gon_test.gat,55,8,6	duplicate(monsterreferee)	Referee#02	61

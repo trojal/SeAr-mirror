@@ -1,0 +1,248 @@
+//===== eAthena Script =======================================
+//= 梦罗克赛跑场
+//===== By: ==================================================
+//= acky (god@acky.com)
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= Any eAthena Version
+//===== Description: =========================================
+//= Lets players race around Morroc (pvp_y_1-5.gat)
+//===== Additional Comments: =================================
+//= If there are more than 3 players, at least 3 people
+//= must finish before a new race can be started.
+//=
+//= If there are less than 3 players, at least 1 person
+//= must finish before a new race can be started.
+//=
+//= Removed permanent global variables
+//= 1.2 Removed Duplicates [Silent]
+//===== 中文化: =================================
+//= 守护永恒2006/02/16
+//============================================================
+
+//Warps you into race way
+morocc.gat,166,105,6	script	喜欢跑步的少女#01	116,{
+mes "[喜欢跑步的少女]";
+mes "你想进入 ^0000FF梦洛克赛跑场^000000?";
+next;
+menu "是的",L_Warp,"不",-;
+mes "[喜欢跑步的少女]";
+mes "好的,当你想要离开的时候请告诉我.";
+close;
+
+L_Warp:
+warp "pvp_y_1-5.gat",165,256;
+close;
+}
+
+//Warps you out of raceway
+pvp_y_1-5.gat,169,265,5	script	喜欢跑步的少女#02	116,{
+mes "[喜欢跑步的少女]";
+mes "欢迎来到梦洛克赛跑场!";
+next;
+menu "信息",-,"离开",L_Warp,"取消",L_Cancel;
+mes "[喜欢跑步的少女]";
+mes "首先有人必须点击起跑员 NPC来开始赛跑";
+next;
+mes "[喜欢跑步的少女]";
+mes "当赛跑开始时,请按照逆时针围绕梦洛克城奔跑.";
+next;
+mes "[喜欢跑步的少女]";
+mes "你必须经过所有的标记点,不要作弊哦!!";
+close;
+
+L_Warp:
+warp "morocc.gat",165,101;
+
+L_Cancel:
+mes "[喜欢跑步的少女]";
+mes "欢迎再来!";
+close;
+}
+
+//Counts down and starts race
+pvp_y_1-5.gat,145,269,5	script	起跑员	733,{
+if ($@race != 0) goto L_Started;
+if ($@counting != 0) goto L_Started;
+if ($@racecount == 1) goto L_Started;
+L_Menu:
+mes "[起跑员]";
+mes "请保持在靠我东边的距离内.";
+menu "开跑",L_Count,"取消",-;
+close;
+
+	L_Count:
+		set $@counting,1;
+		mes "倒计时准备中.....";
+		addtimer 1000, "起跑员::OnCount1000";
+		addtimer 2000, "起跑员::OnCount2000";
+		addtimer 3000, "起跑员::OnCount3000";
+		addtimer 4000, "起跑员::OnCount4000";
+		announce strcharinfo(0) + "开始倒计时",1;
+		announce "请准备就绪!!",1;
+		close;
+
+
+	OnCount1000:
+		announce "[3]",1;
+		end;
+
+	OnCount2000:
+		announce "[2]",1;
+		end;
+
+	OnCount3000:
+		announce "[1]",1;
+		end;
+
+	OnCount4000:
+		emotion 27;
+		specialeffect 267;
+		announce "[开始!!!]",1;
+		set $@race,1;
+		set $@position,0;
+		set $@counting,0;
+		set $@raceid,rand(100000,999999);
+		end;
+
+
+L_Started:
+if ((getmapusers("pvp_y_1-5.gat") < 3) && ($@position > 0)) goto L_Menu;
+if ($@position > 2) goto L_Menu;
+mes "[起跑员]";
+mes "赛跑进行中";
+close;
+
+OnInit:
+set $@race,0;
+set $@position,0;
+set $@racecount,0;
+end;
+}
+
+//检查点 1
+pvp_y_1-5.gat,144,262,5	script	Check Point 1	111,0,5,{
+end;
+OnTouch:
+if (@raceid != $@raceid) goto L_Started;
+if (@race == 6) goto L_Finished;
+if ($@race == 1) goto L_Started;
+mes "赛跑还未开始,请回到起点.";
+close;
+L_Started:
+set @race,1;
+set @raceid,$@raceid;
+end;
+L_Finished:
+mes "你必须完成赛跑全路程.";
+close;
+}
+
+//检查点 2
+pvp_y_1-5.gat,73,247,5	script	Check Point 2	111,6,6,{
+end;
+OnTouch:
+if (@race != 1) goto L_Miss;
+set @race,2;
+announce "[" + strcharinfo(0) +"] 已经到达了检查点 [1]",1;
+end;
+L_Miss:
+mes "你错过了检查点,请重新来过.";
+close;
+}
+
+//检查点 3
+pvp_y_1-5.gat,77,44,5	script	Check Point 3	111,6,6,{
+end;
+OnTouch:
+if (@race != 2) goto L_Miss;
+set @race,3;
+announce "[" + strcharinfo(0) +"] 已经到达了检查点 [2]",1;
+end;
+L_Miss:
+mes "你错过了检查点,请重新来过.";
+close;
+}
+
+//检查点 4
+pvp_y_1-5.gat,249,60,5	script	Check Point 4	111,6,6,{
+end;
+OnTouch:
+if (@race != 3) goto L_Miss;
+set @race,4;
+announce "[" + strcharinfo(0) +"] 已经到达了检查点 [3]",1;
+end;
+L_Miss:
+mes "你错过了检查点,请重新来过.";
+close;
+}
+
+//检查点 5
+pvp_y_1-5.gat,255,256,5	script	Check Point 5	111,6,6,{
+end;
+OnTouch:
+if (@race != 4) goto L_Miss;
+set @race,5;
+announce "[" + strcharinfo(0) +"] 已经到达了检查点 [4]",1;
+end;
+L_Miss:
+mes "你错过了检查点,请重新来过.";
+close;
+}
+
+//终点线
+pvp_y_1-5.gat,174,244,5	script	Finish Line	111,6,6,{
+end;
+OnTouch:
+if (@raceid != $@raceid) goto L_WrongRace;
+if (@race != 5) goto L_Miss;
+set @race,6;
+set $@position,$@position+1;
+announce "[" + strcharinfo(0) +"] 冲过了终点!!! [Position: " + $@position + "]",1;
+end;
+L_Miss:
+mes "你错过了检查点,请重新来过.";
+close;
+L_WrongRace:
+mes "你没有参赛.";
+close;
+}
+
+//检查点旗标
+pvp_y_1-5.gat,144,267,4	script	Check Point 1#01	722,{
+end;
+}
+pvp_y_1-5.gat,144,257,4	script	Check Point 1#02	722,{
+end;
+}
+pvp_y_1-5.gat,70,252,3	script	Check Point 2#01	722,{
+end;
+}
+pvp_y_1-5.gat,77,243,3	script	Check Point 2#02	722,{
+end;
+}
+pvp_y_1-5.gat,81,48,1	script	Check Point 3#01	722,{
+end;
+}
+pvp_y_1-5.gat,72,40,1	script	Check Point 3#02	722,{
+end;
+}
+pvp_y_1-5.gat,244,65,7	script	Check Point 4#01	722,{
+end;
+}
+pvp_y_1-5.gat,252,57,7	script	Check Point 4#02	722,{
+end;
+}
+pvp_y_1-5.gat,259,260,5	script	Check Point 5#01	722,{
+end;
+}
+pvp_y_1-5.gat,251,252,5	script	Check Point 5#02	722,{
+end;
+}
+pvp_y_1-5.gat,174,249,4	script	Finish Line#01	722,{
+end;
+}
+pvp_y_1-5.gat,174,238,4	script	Finish Line#02	722,{
+end;
+}

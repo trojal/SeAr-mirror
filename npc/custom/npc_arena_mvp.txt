@@ -1,0 +1,1096 @@
+// ---- 竞技场MVP!!!!!! By Darkchild with 16 diff MVP's inside
+// --- NPC in prontera
+prontera.gat,154,197,3	script	MVP传送人员	768,{
+mes "[ ^0065DFMVP传送人员^000000 ]";
+mes "你想去mvp竞技场吗?...";
+menu "是的!",L_MVP,"不,谢谢.",L_No;
+
+L_MVP:
+warp "quiz_00",50,24;
+close;
+L_No:
+close;
+}
+// --- Inside the Arena
+// --- NPC's That explains thigns
+quiz_00.gat,49,31,4	script	竞技场MVP导游	778,{
+menu "介绍",L_Intro,"我要回去",L_Leave,"来颗天地果实磕磕",L_Heal,"取消",L_Cancel;
+
+L_Intro:
+mes "[ ^0065DF竞技场MVP导游^000000 ]";
+mes "欢迎来到这个神圣的地方, 这里将验证你是否是一个真正的勇士, 请先组队.";
+next;
+mes "在[ ^0065DFRO^000000 ]我们就像一个家庭,作为家庭的一份子,你必须学会帮助其他人,如果你想生存,必须要学会合作.";
+next;
+mes "这有为每一组的MVP设立了许多的房间,不需要把每间房打完,你只要想着一间,移动到一个房间吧.";
+next;
+mes "如果你不能向前,在这里会遭到许多抱怨，最后将离开这里.";
+next;
+mes "每组的怪兽都是由NPC组成,每组地图里面的npc都不一样,我不会告诉你那组将会给你带来惊喜,呵呵.";
+next;
+mes "祝你好运,成功的活下来!.";
+close;
+
+L_Leave:
+warp "prontera",156,179;
+close;
+
+L_Heal:
+Heal 32500,32500;
+close;
+
+L_Cancel:
+close;
+}
+
+// --- The first 第一MVP传送传送人员
+quiz_00.gat,56,31,4	script	第一MVP传送	770,{
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "我是第一个守护着,准备好了吗?.";
+menu "是的!",L_Yes,"Urrr 不.",L_No;
+
+L_Yes:
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你想去哪个竞技场??";
+	menu "竞技场 1 [" + getmapusers("pvp_n_1-2.gat") + " / 50]",Larena1,
+	"竞技场 2 [" + getmapusers("pvp_n_2-2.gat") + " / 50]",Larena2,
+	"竞技场 3 [" + getmapusers("pvp_n_3-2.gat") + " / 15]",Larena3,
+	"竞技场 4 [" + getmapusers("pvp_n_4-2.gat") + " / 15]",Larena4,
+	"竞技场 5 [" + getmapusers("pvp_n_5-2.gat") + " / 15]",Larena5,
+	"竞技场 6 [" + getmapusers("pvp_n_2-2.gat") + " / 15]",Larena6,
+	"竞技场 7 [" + getmapusers("pvp_n_3-2.gat") + " / 15]",Larena7,
+	"竞技场 8 [" + getmapusers("pvp_n_4-2.gat") + " / 15]",Larena8,
+	"离开",Lcancel;
+
+L_No:
+close;
+
+Larena1:
+if (getmapusers("pvp_n_1-2.gat") > 49) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_1-2",102,102;
+close;
+
+Larena2:
+if (getmapusers("pvp_n_2-2.gat") > 49) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_2-2",102,102;
+close;
+
+Larena3:
+if (getmapusers("pvp_n_3-2.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_3-2",102,102;
+close;
+
+Larena4:
+if (getmapusers("pvp_n_4-2.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_4-2",102,102;
+close;
+
+Larena5:
+if (getmapusers("pvp_n_5-2.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_5-2",102,102;
+close;
+
+Larena6:
+if (getmapusers("pvp_n_6-2.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_6-2",102,102;
+close;
+
+Larena7:
+if (getmapusers("pvp_n_7-2.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_7-2",102,102;
+close;
+
+Larena8:
+if (getmapusers("pvp_n_8-2.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_8-2",102,102;
+close;
+
+Lsorry:
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "对不起,这个竞技场满了,换一个吧!";
+close;
+}
+
+// --- The first Beta-MVP传送人员
+quiz_00.gat,58,31,4	script	第二MVP传送	773,{
+mes "[ ^0065DF第一MVP传送^000000 ]";
+mes "我是第一个守护者,准备好了吗?.";
+menu "是的!",L_Yes,"唔,没有.",L_No;
+
+L_Yes:
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你想去哪个竞技场阿??";
+	menu "竞技场1 [" + getmapusers("pvp_n_1-3.gat") + " / 50]",Larena1,
+	"竞技场 2 [" + getmapusers("pvp_n_2-3.gat") + " / 15]",Larena2,
+	"竞技场 3 [" + getmapusers("pvp_n_3-3.gat") + " / 15]",Larena3,
+	"竞技场 4 [" + getmapusers("pvp_n_4-3.gat") + " / 15]",Larena4,
+	"竞技场 5 [" + getmapusers("pvp_n_5-3.gat") + " / 15]",Larena5,
+	"竞技场 6 [" + getmapusers("pvp_n_2-3.gat") + " / 15]",Larena6,
+	"竞技场 7 [" + getmapusers("pvp_n_3-3.gat") + " / 15]",Larena7,
+	"竞技场 8 [" + getmapusers("pvp_n_4-3.gat") + " / 15]",Larena8,
+	"离开",Lcancel;
+
+L_No:
+close;
+
+Larena1:
+if (getmapusers("pvp_n_1-3.gat") > 49) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_1-3",102,102;
+close;
+
+Larena2:
+if (getmapusers("pvp_n_2-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_2-3",102,102;
+close;
+
+Larena3:
+if (getmapusers("pvp_n_3-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_3-3",102,102;
+close;
+
+Larena4:
+if (getmapusers("pvp_n_4-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_4-3.gat",102,102;
+close;
+
+Larena5:
+if (getmapusers("pvp_n_5-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_5-3.gat",102,102;
+close;
+
+Larena6:
+if (getmapusers("pvp_n_6-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_6-3.gat",102,102;
+close;
+
+Larena7:
+if (getmapusers("pvp_n_7-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_7-3.gat",102,102;
+close;
+
+Larena8:
+if (getmapusers("pvp_n_8-3.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_8-3.gat",102,102;
+close;
+
+Lsorry:
+mes "[ ^0065DF第二MVP传送^000000 ]";
+mes "对不起,这个竞技场满了,换一个吧!";
+close;
+}
+
+
+// --- The first Theta-MVP传送人员
+quiz_00.gat,60,31,4	script	第三MVP传送	774,{
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "我是第一个守护者,准备好了吗?.";
+menu "Yes!",L_Yes,"Urrr No.",L_No;
+
+L_Yes:
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你想去哪个竞技场??";
+	menu "竞技场 1 [" + getmapusers("pvp_n_1-4.gat") + " / 50]",Larena1,
+	"竞技场 2 [" + getmapusers("pvp_n_2-4.gat") + " / 15]",Larena2,
+	"竞技场 3 [" + getmapusers("pvp_n_3-4.gat") + " / 15]",Larena3,
+	"竞技场 4 [" + getmapusers("pvp_n_4-4.gat") + " / 15]",Larena4,
+	"竞技场 5 [" + getmapusers("pvp_n_5-4.gat") + " / 15]",Larena5,
+	"竞技场 6 [" + getmapusers("pvp_n_2-4.gat") + " / 15]",Larena6,
+	"竞技场 7 [" + getmapusers("pvp_n_3-4.gat") + " / 15]",Larena7,
+	"竞技场 8 [" + getmapusers("pvp_n_4-4.gat") + " / 15]",Larena8,
+	"离开",Lcancel;
+
+L_No:
+close;
+
+Larena1:
+if (getmapusers("pvp_n_1-4.gat") > 49) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_1-4.gat",102,102;
+close;
+
+Larena2:
+if (getmapusers("pvp_n_2-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_2-4.gat",102,102;
+close;
+
+Larena3:
+if (getmapusers("pvp_n_3-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_3-4.gat",102,102;
+close;
+
+Larena4:
+if (getmapusers("pvp_n_4-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_4-4.gat",102,102;
+close;
+
+Larena5:
+if (getmapusers("pvp_n_5-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_5-4.gat",102,102;
+close;
+
+Larena6:
+if (getmapusers("pvp_n_6-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_6-4.gat",102,102;
+close;
+
+Larena7:
+if (getmapusers("pvp_n_7-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_7-4.gat",102,102;
+close;
+
+Larena8:
+if (getmapusers("pvp_n_8-4.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_8-4.gat",102,102;
+close;
+
+Lsorry:
+mes "[ ^0065DF第三MVP传送^000000 ]";
+mes "对不起,这个竞技场满了,换一个吧!";
+close;
+}
+
+
+// --- The first Epsilon-MVP传送人员
+quiz_00.gat,62,31,4	script	第四MVP传送	776,{
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "我是第一个守护者,准备好了吗??.";
+menu "是的!",L_Yes,"唔,还没有.",L_No;
+
+L_Yes:
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你想去哪个竞技场??";
+	menu "竞技场 1 [" + getmapusers("pvp_n_1-5.gat") + " / 50]",Larena1,
+	"竞技场 2 [" + getmapusers("pvp_n_2-5.gat") + " / 15]",Larena2,
+	"竞技场 3 [" + getmapusers("pvp_n_3-5.gat") + " / 15]",Larena3,
+	"竞技场 4 [" + getmapusers("pvp_n_4-5.gat") + " / 15]",Larena4,
+	"竞技场 5 [" + getmapusers("pvp_n_5-5.gat") + " / 15]",Larena5,
+	"竞技场 6 [" + getmapusers("pvp_n_2-5.gat") + " / 15]",Larena6,
+	"竞技场 7 [" + getmapusers("pvp_n_3-5.gat") + " / 15]",Larena7,
+	"竞技场 8 [" + getmapusers("pvp_n_4-5.gat") + " / 15]",Larena8,
+	"离开",Lcancel;
+
+L_No:
+close;
+
+Larena1:
+if (getmapusers("pvp_n_1-5.gat") > 49) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_1-5.gat",102,102;
+close;
+
+Larena2:
+if (getmapusers("pvp_n_2-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_2-5.gat",102,102;
+close;
+
+Larena3:
+if (getmapusers("pvp_n_3-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_3-5.gat",102,102;
+close;
+
+Larena4:
+if (getmapusers("pvp_n_4-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_4-5.gat",102,102;
+close;
+
+Larena5:
+if (getmapusers("pvp_n_5-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_5-5.gat",102,102;
+close;
+
+Larena6:
+if (getmapusers("pvp_n_6-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_6-5.gat",102,102;
+close;
+
+Larena7:
+if (getmapusers("pvp_n_7-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_7-5.gat",102,102;
+close;
+
+Larena8:
+if (getmapusers("pvp_n_8-5.gat") > 14) goto Lsorry;
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "你去吧!";
+warp "pvp_n_8-5.gat",102,102;
+close;
+
+Lsorry:
+mes "[ ^0065DF第四MVP传送^000000 ]";
+mes "对不起,这个竞技场满了,换一个吧!";
+close;
+}
+
+
+// ---- Inside MVP-Arena NPC's
+// --- 第一MVP传送 #1
+pvp_n_1-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?";
+	menu "更强的怪兽",L_Next,"加血",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_2-2",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera",156,179;
+		close;
+}
+
+// --- 第一MVP传送 #2
+pvp_n_2-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_3-2",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera",156,179;
+		close;
+}
+// --- 第一MVP传送 #3
+pvp_n_3-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_4-2.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- 第一MVP传送 #4
+pvp_n_4-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_5-2.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- 第一MVP传送 #5
+pvp_n_5-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+		L_Next:
+		warp "pvp_n_6-2.gat",102,102;
+		close;
+
+		L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- 第一MVP传送 #6
+pvp_n_6-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_7-2.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- 第一MVP传送 #7
+pvp_n_7-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_8-2.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- 第一MVP传送 #8
+pvp_n_8-2.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #1
+pvp_n_1-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_2-3.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+
+// --- Beta-MVP #2
+pvp_n_2-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_3-3.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #3
+pvp_n_3-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_4-3.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #4
+pvp_n_4-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_5-3.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #5
+pvp_n_5-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+		L_Next:
+		warp "pvp_n_6-3.gat",102,102;
+		close;
+
+		L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #6
+pvp_n_6-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_7-3.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #7
+pvp_n_7-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_8-3.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Beta-MVP #8
+pvp_n_8-3.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #1
+pvp_n_1-4.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_2-4.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+
+// --- Theta-MVP #2
+pvp_n_2-4.gat,100,100,4	script	MVP-Protector	727,{
+	mes "[ ^0065DFMVP-Protector^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_3-4.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #3
+pvp_n_3-4.gat,100,100,4	script	MVP-Protector	727,{
+	mes "[ ^0065DFMVP-Protector^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_4-4.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #4
+pvp_n_4-4.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_5-4.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #5
+pvp_n_5-4.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+		L_Next:
+		warp "pvp_n_6-4.gat",102,102;
+		close;
+
+		L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #6
+pvp_n_6-4.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_7-4.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #7
+pvp_n_7-4.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_8-4.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Theta-MVP #8
+pvp_n_8-4.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #1
+pvp_n_1-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_2-5.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+
+// --- Epsilon-MVP #2
+pvp_n_2-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_3-5.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #3
+pvp_n_3-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_4-5.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #4
+pvp_n_4-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_5-5.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #5
+pvp_n_5-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+		L_Next:
+		warp "pvp_n_6-5.gat",102,102;
+		close;
+
+		L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #6
+pvp_n_6-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Next:
+		warp "pvp_n_7-5.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #7
+pvp_n_7-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "更强的怪兽",L_Next,"请帮我医疗",L_Heal,"离开",L_Leave;
+	L_Next:
+		warp "pvp_n_8-5.gat",102,102;
+		close;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+// --- Epsilon-MVP #8
+pvp_n_8-5.gat,100,100,4	script	MVP-保护者	727,{
+	mes "[ ^0065DFMVP-保护者^000000 ]";
+	mes "有什么能帮得上忙吗?.";
+	menu "请帮我医疗",L_Heal,"离开",L_Leave;
+
+	L_Heal:
+		Heal 32500,32500;
+		close;
+
+	L_Leave:
+		warp "prontera.gat",156,179;
+		close;
+}
+
+// ---- Monsters for the MVP-Arena
+
+// --- 第一MVP传送 Maps
+// --- First 第一MVP传送 area
+pvp_n_1-2.gat,0,0,0,0	monster	虎王	1115,3,60000,66000
+pvp_n_1-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+// --- Second 第一MVP传送 area
+pvp_n_2-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_2-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+// --- Third 第一MVP传送 area
+pvp_n_3-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_3-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+pvp_n_3-2.gat,0,0,0,0	monster	蚁后	1147,3,60000,66000
+// --- Fourth 第一MVP传送 area
+pvp_n_4-2.gat,0,0,0,0	monster	虎王	1115,3,60000,66000
+pvp_n_4-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_4-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+pvp_n_4-2.gat,0,0,0,0	monster	蚁后	1147,3,60000,66000
+// --- Fifth 第一MVP传送 area
+pvp_n_5-2.gat,0,0,0,0	monster	虎王	1115,3,60000,66000
+pvp_n_5-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_5-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+pvp_n_5-2.gat,0,0,0,0	monster	蚁后	1147,3,60000,66000
+// --- Sixth 第一MVP传送 area
+pvp_n_6-2.gat,0,0,0,0	monster	虎王	1115,3,60000,66000
+pvp_n_6-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_6-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+pvp_n_6-2.gat,0,0,0,0	monster	蚁后	1147,3,60000,66000
+// --- Seventh 第一MVP传送 area
+pvp_n_7-2.gat,0,0,0,0	monster	虎王	1115,3,60000,66000
+pvp_n_7-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_7-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+pvp_n_7-2.gat,0,0,0,0	monster	蚁后	1147,3,60000,66000
+// --- Eighth 第一MVP传送 area
+pvp_n_8-2.gat,0,0,0,0	monster	虎王	1115,3,60000,66000
+pvp_n_8-2.gat,0,0,0,0	monster	蜂后	1059,3,60000,66000
+pvp_n_8-2.gat,0,0,0,0	monster	月夜猫	1150,3,60000,66000
+pvp_n_8-2.gat,0,0,0,0	monster	蚁后	1147,3,60000,66000
+
+// --- Beta-MVP Maps
+// --- First Beta-MVP area
+pvp_n_1-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_1-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+// --- Second Beta-MVP area
+pvp_n_2-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_2-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_2-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+// --- Third Beta-MVP area
+pvp_n_3-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_3-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_3-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+pvp_n_3-3.gat,0,0,0,0	monster	兽人酋长	1190,3,60000,66000
+// --- Fourth Beta-MVP area
+pvp_n_4-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_4-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_4-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+pvp_n_4-3.gat,0,0,0,0	monster	兽人酋长	1190,3,60000,66000
+// --- Fifth Beta-MVP area
+pvp_n_5-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_5-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_5-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+pvp_n_5-3.gat,0,0,0,0	monster	兽人酋长	1190,3,60000,66000
+// --- Sixth Beta-MVP area
+pvp_n_6-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_6-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_6-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+pvp_n_6-3.gat,0,0,0,0	monster	兽人酋长	1190,3,60000,66000
+// --- Seventh Beta-MVP area
+pvp_n_7-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_7-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_7-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+pvp_n_7-3.gat,0,0,0,0	monster	兽人酋长	1190,3,60000,66000
+// --- Eighth Beta-MVP area
+pvp_n_8-3.gat,0,0,0,0	monster	皮里恩	1159,3,60000,66000
+pvp_n_8-3.gat,0,0,0,0	monster	乌龟将军	1312,3,60000,66000
+pvp_n_8-3.gat,0,0,0,0	monster	兽人英雄	1087,3,60000,66000
+pvp_n_8-3.gat,0,0,0,0	monster	兽人酋长	1190,3,60000,66000
+
+// --- Theta-MVP Maps
+// --- First Theta-MVP area
+pvp_n_1-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_1-4.gat,0,0,0,0	monster	俄里赛斯	1038,1,60000,66000
+// --- Second Theta-MVP area
+pvp_n_2-4.gat,0,0,0,0	monster	海盗之王	1112,2,60000,66000
+pvp_n_2-4.gat,0,0,0,0	monster	俄里赛斯	1038,1,60000,66000
+pvp_n_2-4.gat,0,0,0,0	monster	死灵	1046,1,60000,66000
+// --- Third Theta-MVP area
+pvp_n_3-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_3-4.gat,0,0,0,0	monster	俄里赛斯	1038,3,60000,66000
+pvp_n_3-4.gat,0,0,0,0	monster	死灵	1046,3,60000,66000
+pvp_n_3-4.gat,0,0,0,0	monster	死灵骑士	1373,3,60000,66000
+// --- Fourth Theta-MVP area
+pvp_n_4-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_4-4.gat,0,0,0,0	monster	俄里赛斯	1038,3,60000,66000
+pvp_n_4-4.gat,0,0,0,0	monster	死灵	1046,3,60000,66000
+pvp_n_4-4.gat,0,0,0,0	monster	死灵骑士	1373,3,60000,66000
+// --- Fifth Theta-MVP area
+pvp_n_5-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_5-4.gat,0,0,0,0	monster	俄里赛斯	1038,3,60000,66000
+pvp_n_5-4.gat,0,0,0,0	monster	死灵	1046,3,60000,66000
+pvp_n_5-4.gat,0,0,0,0	monster	死灵骑士	1373,3,60000,66000
+// --- Sixth Theta-MVP area
+pvp_n_6-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_6-4.gat,0,0,0,0	monster	俄里赛斯	1038,3,60000,66000
+pvp_n_6-4.gat,0,0,0,0	monster	死灵	1046,3,60000,66000
+pvp_n_6-4.gat,0,0,0,0	monster	死灵骑士	1373,3,60000,66000
+// --- Seventh Theta-MVP area
+pvp_n_7-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_7-4.gat,0,0,0,0	monster	俄里赛斯	1038,3,60000,66000
+pvp_n_7-4.gat,0,0,0,0	monster	死灵	1046,3,60000,66000
+pvp_n_7-4.gat,0,0,0,0	monster	死灵骑士	1373,3,60000,66000
+// --- Eighth Theta-MVP area
+pvp_n_8-4.gat,0,0,0,0	monster	海盗之王	1112,3,60000,66000
+pvp_n_8-4.gat,0,0,0,0	monster	俄里赛斯	1038,3,60000,66000
+pvp_n_8-4.gat,0,0,0,0	monster	死灵	1046,3,60000,66000
+pvp_n_8-4.gat,0,0,0,0	monster	死灵骑士	1373,3,60000,66000
+
+// --- Epsilon-MVP Maps
+// --- First Epsilon-MVP area
+pvp_n_1-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_1-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_2-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_2-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_2-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_3-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_3-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_3-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+pvp_n_3-5.gat,0,0,0,0	monster	巴风特	1039,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_4-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_4-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_4-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+pvp_n_4-5.gat,0,0,0,0	monster	巴风特	1039,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_5-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_5-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_5-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+pvp_n_5-5.gat,0,0,0,0	monster	巴风特	1039,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_6-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_6-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_6-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+pvp_n_6-5.gat,0,0,0,0	monster	巴风特	1039,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_7-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_7-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_7-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+pvp_n_7-5.gat,0,0,0,0	monster	巴风特	1039,2,60000,66000
+// --- First Epsilon-MVP area
+pvp_n_8-5.gat,0,0,0,0	monster	怨灵武士	1492,3,60000,66000
+pvp_n_8-5.gat,0,0,0,0	monster	法老王	1157,2,60000,66000
+pvp_n_8-5.gat,0,0,0,0	monster	黑暗之王	1272,2,60000,66000
+pvp_n_8-5.gat,0,0,0,0	monster	巴风特	1039,2,60000,66000

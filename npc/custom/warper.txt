@@ -1,0 +1,156 @@
+//===== eAthena Script =======================================
+//= Warper Script
+//===== By: ==================================================
+//= Darkchild
+//===== Current Version: =====================================
+//= 1.8
+//===== Compatible With: =====================================
+//= Any eAthena Version;
+//===== Description: =========================================
+//= Generic warper...
+//===== Additional Comments: =================================
+//= 1.0 by Darkchild
+//= 1.1 by jabs
+//= 1.2 by Lupus (placement fixed in Amatsu)
+//= 1.3 fixed Louyang label typo, added warp and WARPRA into
+//= Nifleheim. Also sorted all names in alphabet order [Lupus]
+//= 1.4 fixed morroc warp npc overlaying kafra [Aria]
+//= 1.4a Added Ayothaya and Einbroch to list, and town Warpra's [Fredzilla]
+//= 1.4b fixed Izlude warp npc overlaying BBS [Justin84]
+//= 1.5 Added this NPC to more places [Lupus]
+//= 1.6 Rewrote a lot. Changed the sprite, some locations. [Poki#3]
+//= TODO Add an option for selecting the level of the dungeon. [Poki#3]
+//= 1.7 Temporary? Added F_ClearGarbage to clear unused/outdated variables [Lupus]
+//= 1.8 Removed Duplicates [Silent]
+//============================================================
+//============================================================
+//= To allow selecting the Level of the Dungeon you want to
+//= Warp to set the @lvlselect variable to 1 (Not implemented yet!)
+//============================================================
+
+-	script	Warp Agent#01::warpra	859,{
+//	set @lvlselect,0;
+
+	callfunc "F_ClearGarbage"; //Clear outdated, unused variables
+
+//以下为验证码功能
+	set @yanzhen1,rand(100,999);
+	mes "[传送人员]";
+	mes "请正确输入下面的验证码方可使用。";
+	mes "验证码 ：[ ^FF0000"+@yanzhen1+"^000000 ]";
+	next;
+	input @yanzhen2;
+	if(@yanzhen2!=@yanzhen1) goto G_yanzhencuowu;
+//验证码功能结束
+	mes "[传送专员]";
+	mes "你好,";
+	mes "我可以帮你传送到城市或区域!";
+	mes "你想去哪里?";
+	next;
+	menu "城市",-,"区域",L_dungeon;
+	next;
+	mes "[传送专员]";
+	mes "请选择你的目的地";
+	next;
+	menu "艾尔贝塔",walberta,"艾尔帕兰",waldebaran,"天津町",wamatsu,"哎哟泰雅",wayothaya,"克魔岛",wcomodo,"艾音布罗克",weinbroch,"艾音贝赫",weinbech,"吉芬",wgeffen,"昆仑",wgonryun,"毁葛",whugel,"依斯鲁得岛",wizlude,"里希塔乐镇",wlighthalzen,"龙之城",wlouyang,"姜饼城",wxmas,"梦罗克",wmorroc,"斐扬",wpayon,"普隆德拉",wprontera,"汶巴拉",wumbala,"朱诺",wyuno;
+L_dungeon:
+	mes "[传送专员]";
+	mes "请选择你的目的地";
+	next;
+	menu "深渊湖水",dabbys,"榻榻米 迷宫",damatsu,"苏克拉特 沙漠",dant,"哎哟泰雅 原野",dayothaya,"依斯鲁得岛",dbibilan,"妙勒尼 山脉",dcoal,"普隆德拉 地下水道",dculvert,"艾音贝赫",dein,"克雷斯特汉姆古城",dglast,"昆仑",dgonryun,"尔迈斯 峡谷(深渊的峡谷)",djuperos,"里希塔乐镇",dlighthalzen,"尔迈斯 瀑雷德",dmagma,"尼芙菲姆",dniflheim,"奥丁神殿",dodin,"东边 兽人村落",dorc,"斐扬",dpayon,"梦罗克",dpyramids,"苏克拉特 沙漠",dsphinx,"沉船附近的岛屿",dsunken,"Thanatos Tower",dthanatos,"乌龟岛",dturtle;
+
+G_yanzhencuowu:
+	mes "[传送人员]";
+	mes "验证码输入错误，无法使用此服务。";
+	close;
+
+//----------------Towns----------------\\
+walberta:	warp "alberta.gat",	27,	236;	end;
+waldebaran:	warp "aldebaran.gat",	145,	120;	end;
+wamatsu:	warp "amatsu.gat",	197,	86;	end;
+wayothaya:	warp "ayothaya.gat",	149,	118;	end;
+wcomodo:   	warp "comodo.gat",	188,	161;    end;
+weinbroch:   	warp "einbroch.gat",	64, 	200;	end;
+weinbech:   	warp "einbech.gat",	70, 	95;	end;
+wgeffen:	warp "geffen.gat",	119,	66;	end;
+wgonryun:	warp "gonryun.gat",	150,    130; 	end;
+whugel:   	warp "hugel.gat",	96,	145;    end;
+wizlude:	warp "izlude.gat",	128,	111;	end;
+wlighthalzen:	warp "lighthalzen.gat",	158,	92;	end;
+wlouyang:	warp "louyang.gat",	210,	108;	end;
+wmorroc:	warp "morocc.gat",	159,	93;	end;
+wprontera:	warp "prontera.gat",	156,	187;	end;
+wpayon:		warp "payon.gat",	152,	75;	end;
+wumbala:	warp "umbala.gat",	130,    130; 	end;
+wxmas:		warp "xmas.gat",	148,	131;	end;
+wyuno:   	warp "yuno.gat",	160,	168;    end;
+
+//----------------Dungeons----------------\\
+dabbys:		warp "hu_fild05.gat",	189,	207;	end;
+damatsu:	warp "ama_dun01.gat",	229,	12;	end;
+dant:		warp "moc_fild04.gat",	210,	328;	end;
+dayothaya:	warp "ayo_fild02.gat",	280,	149;	end;
+dbibilan:	warp "izlu2dun.gat",	106,	88;	end;
+dculvert:	warp "prt_sewb1.gat",	126,	248;	end;
+dcoal:		warp "mjolnir_02.gat",	81,	359;	end;
+dein:		warp "einbech.gat",	135,	249;	end;
+dglast:		warp "glast_01.gat",	368,	303;	end;
+dgonryun:	warp "gonryun.gat",	160,    195; 	end;
+djuperos:	warp "yuno_fild07.gat",	218,	176;	end;
+dlighthalzen:	warp "lighthalzen.gat",	158,	285;	end;
+dmagma:		warp "yuno_fild03.gat",	39,	140;	end;
+dniflheim:	warp "niflheim.gat",	35,	161;	end;
+dodin:		warp "odin_tem01.gat",	98,	144;	end;
+dorc:		warp "gef_fild10.gat",	70,	332;	end;
+dpayon:		warp "pay_arche.gat",	43,	132;	end;
+dpyramids:	warp "moc_ruins.gat",	62,	162;	end;
+dsphinx:	warp "moc_fild19.gat",	107,	100;	end;
+dsunken:	warp "alb2trea.gat",	75,	98;	end;
+dthanatos:	warp "tha_scene01.gat",	131,	223;	end;
+dturtle:	warp "tur_dun01.gat",	149,	238;	end;
+}
+
+//----------------Towns----------------\\
+alberta.gat,31,240,4	duplicate(warpra)	传送专员#02	859
+aldebaran.gat,145,118,4	duplicate(warpra)	传送专员#03	859
+amatsu.gat,192,81,1	duplicate(warpra)	传送专员#04	859
+ayothaya.gat,144,117,6	duplicate(warpra)	传送专员#05	859
+comodo.gat,194,158,4	duplicate(warpra)	传送专员#06	859
+einbroch.gat,59,205,4	duplicate(warpra)	传送专员#07	859
+einbroch.gat,243,189,2	duplicate(warpra)	传送专员#08	859
+einbech.gat,135,249,4	duplicate(warpra)	传送专员#09	859
+geffen.gat,115,66,4	duplicate(warpra)	传送专员#10	859
+gonryun.gat,151,130,4	duplicate(warpra)	传送专员#11	859
+izlude.gat,133,117,4	duplicate(warpra)	传送专员#12	859
+hugel.gat,88,151,5	duplicate(warpra)	传送专员#13	859
+lighthalzen.gat,155,79,6	duplicate(warpra)	传送专员#14	859
+louyang.gat,210,106,4	duplicate(warpra)	传送专员#15	859
+morocc.gat,156,95,4	duplicate(warpra)	传送专员#16	859
+prontera.gat,161,192,4	duplicate(warpra)	传送专员#17	859
+payon.gat,182,110,4	duplicate(warpra)	传送专员#18	859
+umbala.gat,132,130,4	duplicate(warpra)	传送专员#19	859
+xmas.gat,150,136,4	duplicate(warpra)	传送专员#20	859
+yuno.gat,137,162,4	duplicate(warpra)	传送专员#21	859
+
+//----------------Dungeons----------------\\
+ama_dun01.gat,233,9,1	duplicate(warpra)	传送专员#22	859
+moc_fild04.gat,207,331,4	duplicate(warpra)	传送专员#23	859
+ayo_fild02.gat,279,154,4	duplicate(warpra)	传送专员#24	859
+izlu2dun.gat,104,82,4	duplicate(warpra)	传送专员#25	859
+prt_sewb1.gat,125,253,4	duplicate(warpra)	传送专员#26	859
+mjolnir_02.gat,85,363,4	duplicate(warpra)	传送专员#27	859
+einbech.gat,81,101,1	duplicate(warpra)	传送专员#28	859
+glast_01.gat,370,308,4	duplicate(warpra)	传送专员#29	859
+yuno_fild03.gat,37,135,4	duplicate(warpra)	传送专员#30	859
+niflheim.gat,32,161,4	duplicate(warpra)	传送专员#31	859
+gef_fild10.gat,71,339,4	duplicate(warpra)	传送专员#32	859
+pay_arche.gat,39,135,4	duplicate(warpra)	传送专员#33	859
+moc_ruins.gat,64,166,4	duplicate(warpra)	传送专员#34	859
+moc_fild19.gat,106,97,4	duplicate(warpra)	传送专员#35	859
+alb2trea.gat,73,101,4	duplicate(warpra)	传送专员#36	859
+tur_dun01.gat,148,239,4	duplicate(warpra)	传送专员#37	859
+lhz_dun01.gat,157,285,4	duplicate(warpra)	传送专员#38	859
+hu_fild05.gat,186,210,4	duplicate(warpra)	传送专员#39	859
+yuno_fild07.gat,221,179,4	duplicate(warpra)	传送专员#40	859
+tha_scene01.gat,139,194,1	duplicate(warpra)	传送专员#41	859
+odin_tem01.gat,96,149,4	duplicate(warpra)	传送专员#42	859

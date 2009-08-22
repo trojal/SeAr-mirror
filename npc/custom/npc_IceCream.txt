@@ -1,0 +1,109 @@
+// 冰淇淋贩卖脚本
+// 
+// 重整作者:		Dino9021
+// 
+// 中文版本编号:	20041201.0.1
+//
+// 参考脚本:		Kingbo 2004/1/1 10:25PM
+//
+//============================================================
+
+
+//===== eAthena Script =======================================
+//= Ice Cream Maker
+//===== By: ==================================================
+//= KOOK SWU
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= eAthena 1.0
+//===== Description: =========================================
+//= A man makes you ice-cream
+//===== Additional Comments: =================================
+//= 1.1 Optimized, changed overlapping coords in Alberta [Lupus]
+//============================================================
+
+//ALBERTA
+alberta.gat,120,45,2	script	冰淇淋宝贝::IceCreamer	85,{
+
+	mes "[冰淇淋宝贝]";
+	mes "来喔来喔";
+	mes "只有夏天才可以品尝的到的冰淇淋上市了！！";
+	mes "一客^3355FF1500 金币^000000";
+	next;
+	menu "给我冰淇淋!!",-,"有关冰淇淋",L_START_1,"结束交易",L_End;
+	
+		mes "[冰淇淋宝贝]";
+		mes "[冰品销售店]";
+		mes "冰凉又好吃的冰淇淋";
+		mes "买的人太多了";
+		mes "所以请你最多只买 50 个好吗?";
+		mes "谢谢你的合作";
+		next;
+		input @input;
+		if(@input<1) goto L_inpC;
+		if(@input>50) goto L_inpM;
+		if(Zeny< @input*1500) goto L_NoZ;
+		getitem 536,@input;
+		set Zeny,Zeny-1500*@input;
+		mes "[冰淇淋宝贝]";
+		mes "你一共买了 " +@input+ " 个。";
+		mes "好好享用吧^^";
+		close;
+		
+		L_inpC:
+			mes "[冰淇淋宝贝]";
+			mes "数目零?";
+			mes "你寻我开心喔>.<";
+			close;
+		L_inpM:
+			mes "[冰淇淋宝贝]";
+			mes "请你最多只买 50 个好吗?";
+			close;
+		L_NoZ:
+			mes "[冰淇淋宝贝]";
+			mes "哇";
+			mes "你会不会买太多";
+			mes "说真的";
+			mes "根据我们经验";
+			mes "吃太多，对身体真的不好";
+			mes "会肚子痛的 ?";
+			close;
+	L_START_1:
+			mes "[冰品销售店]";
+			mes "冰淇淋的制造方式？";
+			mes "你不会是商业间谍吧！..";
+			mes "不过，你看起来也不像";
+			mes "我就偷偷的告诉你好了";
+			mes "糖加上鸡蛋加上安定剂再加上牛奶";
+			next;
+  			mes "[冰品销售店]";
+ 			mes "还有香料，色素等";
+ 			mes "放入搅拌后，再冷冻";
+ 			mes "就完成了";
+ 			mes "不过，热量很高喔";
+ 			mes "适量的食用比较好喔";
+ 			next;
+  			mes "[冰品销售店]";
+ 			mes "还有 ..";
+  			mes "吃太多的话";
+			mes "会肠胃不适";
+			mes "肚子痛我不会负责的！";
+			close;
+	L_End:
+			mes "[冰淇淋宝贝]";
+			mes "现在没有把握这机会的话";
+			mes "到明年夏天";
+			mes "就吃不到了喔";
+			mes "快来买喔 !";
+			close;
+}
+
+//MORROC FIELD
+//moc_fild16.gat,88,304,4	duplicate(IceCreamer)	冰淇淋宝贝#2	85
+
+//MORROC
+morocc.gat,160,144,4	duplicate(IceCreamer)	冰淇淋宝贝#3	85
+
+//prontera
+prontera.gat,146,91,6	duplicate(IceCreamer)	冰淇淋宝贝#4	85

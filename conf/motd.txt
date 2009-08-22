@@ -1,0 +1,3 @@
+// 预设限制为 128 行。如果你需要更多行显示，必须修改pc.c里面定义的MOTD_LINE_SIZE
+欢迎使用SeAthena，官方论坛http://www.4fro.cn/sea。
+欢迎回报你在游戏中所遇到的任何Bug，谢谢。

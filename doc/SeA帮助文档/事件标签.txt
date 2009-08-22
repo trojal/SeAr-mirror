@@ -1,0 +1,71 @@
+//===== Athena 文档 =======================================
+//= SeAthena 脚本标签列表
+//===== 制作 ==============================================
+//= Inkfish
+//===== 版本 ==============================================
+//= 1.0.20090805
+//= 1.1.20090806
+//=========================================================
+//= 1.0.20090805 - 标准化文档 [Inkfish]
+//= 1.0.20090806 - 添加无角色关联标签 [Inkfish]
+//===== 描述 ==============================================
+//= 主要关于 OnEvent的 用法及作用
+//=========================================================
+
+OnInit			Map服务器启动后执行的事件
+OnCharIfInit		Map服务器连接到Char服务器时执行的事件
+OnInterIfInit		Map服务器连接到Char服务器时执行的事件
+OnInterIfInitOnce	Map服务器首次连接到Char服务器时执行的事件
+OnClock<HH><MM>		HH点MM分执行的事件，如OnClock0801，则是8点01分执行，24小时制，0点~23点
+OnMinute<MM>		每小时MM分执行的事件
+OnHour<HH>		每小时00分执行的事件
+On<DD><HH><MM>		星期DD的HH点MM分执行的事件
+OnDay<MM><DD>		MM月DD日0时整执行的事件
+OnAgitStart		公会战开始时执行的事件
+OnAgitEnd		公会战结束时执行的事件
+OnAgitInit		在服务器请求公会城堡的相关信息时执行的事件。用于初始化与公会城堡相关的NPC
+OnAgitStart2		公会战二期开始时执行的事件
+OnAgitEnd2		公会战二期结束时执行的事件
+OnAgitInit2		在服务器请求公会城堡二期的相关信息时执行的事件。用于初始化与公会城堡二期相关的NPC
+OnAgitBreak		破坏华丽金属后，公会城主改变时执行的事件
+OnGuildBreak		公会解散时执行的事件
+OnTimer<Tick>		NPC计时器到tick(毫秒)时执行的事件
+OnTimerQuit		关联玩家的NPC计时器，在玩家退出时执行的事件
+OnWhisperGlobal		密语此npc执行的事件。<NPC:"NPC名"><内容1#内容2#内容3>
+			对NPC名为"NPC名"的NPC进行密语，执行事件时包含变量@whispervar0$为"内容1"，@whispervar1$为"内容2"，以此类推
+OnBuyItem		买到物品时执行的事件，附带变量"@bought_nameid"，"@bought_quantity"
+OnSellItem		卖出物品时执行的事件，附带变量"@sold_nameid"，"@sold_quantity"
+OnTouch			进入范围NPC的有效范围内时执行的事件。
+OnPCDieEvent		玩家死亡时，运行标签下的脚本。如果杀死你的是玩家，可以通过killerrid变量获得其aid，如果是魔物，可以获得gid， 如果是自然死亡，则killerrid值为0
+OnPCKillEvent		玩家杀死玩家时，运行标签下的脚本。可以通过killedrid变量获得被杀死玩家的aid
+OnNPCKillEvent		玩家杀死魔物时，运行标签下的脚本。该脚本仅对本身没有OnMobDead事件的魔物触发。可以通过killedrid变量获得杀死魔物的id
+OnPCLoginEvent		玩家登陆时，运行标签下的脚本。
+OnPCLogoutEvent		玩家登出时，运行标签下的脚本。
+OnPCLoadMapEvent	玩家登陆地图时，运行标签下的脚本，默认情况下只有loadevent标签的地图可以触发该标签下的脚本。misc.conf中的force_loadevent设置可以取消上述要求。
+OnPCBaseLvUpEvent	玩家基本等级上升时，运行标签下的脚本
+OnPCJobLvUpEvent	玩家职业等级上升时，运行标签下的脚本
+OnPCStatCalcEvent	玩家每次进行属性运算时，运行标签下的脚本。
+	举例：
+	-	script	NPC	-1,{
+	OnPCStatCalcEvent:
+		if(isequipped(4001))
+			bonus bStr,10;
+		end;
+	}
+	解释：
+		* 装备波利卡片时str+10。
+		* 此标签，可以永久化使用在道具外的bonus函数效果。
+OnPCPetLvUpEvent	玩家宠物升级时，运行标签下的脚本。
+OnPCHomLvUpEvent	玩家生命体升级时，运行标签下的脚本。
+OnPCSCStartEvent	玩家获得某种状态时，运行标签下的脚本。意在某些状态共存限制。赋予关联者变量@startedsc，表示状态编号
+OnPCSCEndEvent		玩家解除某种状态时，运行标签下的脚本。意在支持无限状态。赋予关联者变量@endedsc，表示状态编号
+OnPCUseSkillEvent	玩家使用某种技能时，运行标签下的脚本。赋予关联者变量@useskill_id，表示技能id
+OnPCUseItemEvent	玩家使用某种物品时，运行标签下的脚本。赋予关联者变量@useitem_pos，表示在物品栏中的位置编号
+OnPCEquipEvent		玩家装备某件道具时，运行标签下的脚本。赋予关联者变量@equip_pos，表示在物品栏中的位置编号
+OnPCUnequipEvent	玩家卸除某件道具时，运行标签下的脚本。赋予关联者变量@unequip_pos，表示在物品栏中的位置编号
+OnPCPartyCreateEvent	玩家创建组队时，运行标签下的脚本。脚本对创建队伍者运行。
+OnPCPartyJoinEvent	玩家加入组队时，运行标签下的脚本。脚本对加入队伍者运行。
+OnPCPartyLeaveEvent	玩家离开组队时，运行标签下的脚本。脚本对离开队伍者运行。
+OnPCGuildCreateEvent	玩家创建公会时，运行标签下的脚本。脚本对创建公会者运行。
+OnPCGuildJoinEvent	玩家加入公会时，运行标签下的脚本。脚本对加入公会者运行。
+OnPCGuildLeaveEvent	玩家离开公会时，运行标签下的脚本。脚本对离开公会者运行。

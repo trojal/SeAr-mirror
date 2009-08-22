@@ -1,0 +1,162 @@
+//===== eAthena Script =======================================
+//= Novice Goods Exchanger
+//===== By: ==================================================
+//= ???, eAthena Team
+//===== Current Version: =====================================
+//= 1.1a
+//===== Compatible With: =====================================
+//= eAthena 1.0+
+//===== Description: =========================================
+//= Exchanges your cheap loot to Red Potions.
+//= Official NPC.
+//===== Additional Comments: =================================
+//= 1.1 Made it as a function. U can add your own Merchs [Lupus]
+//= 1.1a Fixed item select [KarLaeda]
+//= Translated By 45°向上倾斜
+//============================================================
+
+function	script	F_NMerch	{
+	mes "["+getarg(0)+"]";
+	if((Weight*100)/MaxWeight >= 90){
+		mes "哎呀!";
+		mes "既然力气不大，";
+		mes "为什么要带在身上拿着走?";
+		mes "可以寄放在卡普拉的仓库";
+		close;
+	}
+	mes "你好!";
+	mes "你有没有收集一些物品像比如 "+getitemname(getarg(1))+" 或者是 "+getitemname(getarg(3))+"?";
+	if(getarg(5))
+		mes "...又或者是 "+getitemname(getarg(5))+"?..";
+	mes "噢, 是的, 我需要那些.";
+	next;
+	mes "["+getarg(0)+"]";
+	mes "当然我并不是免费要那些东西的!";
+	mes "像比如... 我用 1 瓶 红色药水来";
+	mes "换 "+getarg(2)+" 块 "+getitemname(getarg(1))+" 或者是 "+getarg(4)+" 块 "+getitemname(getarg(3))+"?";
+	if(getarg(5))
+		mes "又或者是 "+getarg(6)+" 块 "+getitemname(getarg(5))+"?";
+	next;
+	switch (select("好吧!:好像我有点吃亏...:不要!")) {
+	case 1:
+		mes "["+getarg(0)+"]";
+		mes "那么你给我带了什么?";
+		mes ""+getitemname(getarg(1))+"?  "+getitemname(getarg(3))+"?";
+		if(getarg(5))
+			mes "或者是 "+getitemname(getarg(5))+"?";
+		next;
+		if(getarg(5))
+			set @i,select("-"+getitemname(getarg(1))+"","-"+getitemname(getarg(3))+"","-"+getitemname(getarg(5))+"","-取消");
+		else
+			set @i,select("-"+getitemname(getarg(1))+"","-"+getitemname(getarg(3))+"","-取消");
+		if(@i==4 || (@i==3 && !getarg(5))) {
+			mes "["+getarg(0)+"]";
+			mes "好吧, 没问题.";
+			close;
+		}
+		set @item,getarg(@i*2-1);
+		set @amount,getarg(@i*2);
+		set @have,countitem(@item);
+		if(@have < @amount) {
+			mes "["+getarg(0)+"]";
+			mes "嘿, 你答应给我的";
+			mes getitemname(@item)+" 呢?";
+			close;
+		}
+		mes "["+getarg(0)+"]";
+		mes "好吧, 让我看看你带的东西.";
+		next;
+		set @max,@have / @amount;
+		mes "["+getarg(0)+"]";
+		mes "你总共有 "+@have+" 块 "+getitemname(@item)+"...";
+		mes "我需要给你";
+		mes "一共 "+@max+" 瓶红色药水.";
+		next;
+		mes "["+getarg(0)+"]";
+		mes "你说什么? 交易么?";
+		next;
+		if(select("要换:不想换")==2) {
+			mes "["+getarg(0)+"]";
+			mes "...没有办法啰!";
+			mes "等你有需要的时候再来找我吧!";
+			close;
+		}
+		mes "["+getarg(0)+"]";
+		mes "你知道 "+getitemname(@item)+" 的数量";
+		mes "来换1瓶红色药水, 不是吗?";
+		next;
+		mes "["+getarg(0)+"]";
+		mes "你可以得到红色药水并且从";
+		mes "1 到 100 一次交换.";
+		mes "如果你改变主意, 输入 '0'";
+		mes "来取消.";
+		while(1) {
+			next;
+			input @val;
+			if(@val<0 || @val>100) {
+				mes "["+getarg(0)+"]";
+				mes "啊哦, 你输入的数字";
+				mes "看起来不正确.";
+				mes "你最好看看你能拿多";
+				mes "少的红色药水.";
+				continue;
+			}
+			break;
+		}
+		mes "["+getarg(0)+"]";
+		if(@val == 0) {
+			mes "什么... 怎么来和我";
+			mes "说话来扰乱我?";
+			mes "滚, 我不想和你这种";
+			mes "善变的人.";
+			close;
+		}
+		if(@val > @max) {
+			mes "啊哦, 你输入的数字";
+			mes "看起来不正确.";
+			mes "你最好看看你能拿多";
+			mes "少的红色药水.";
+			close;
+		}
+		delitem @item,@amount*@val;
+		getitem 501,@val;
+		mes "给你!";
+		mes "谢谢, 完美的交易.";
+		close;
+	case 2:
+		mes "["+getarg(0)+"]";
+		mes "你说吃亏?!!";
+		mes "呵呵..你这就说错了，";
+		mes "论价钱比起你，";
+		mes "应该是我吃亏才对，";
+		mes "不想换就算了..";
+		close;
+	case 3:
+		mes "["+getarg(0)+"]";
+		mes "哼..不想那就下次";
+		mes "再来换吧..";
+		mes "吃!!";
+		close;
+	}
+}
+
+prontera.gat,123,102,5	script	商人#1	85,{
+	callfunc "F_NMerch","商人",935,5,914,10,909,10;
+}
+
+geffen.gat,173,88,5	script	商人#2	85,{
+	callfunc "F_NMerch","商人",935,5,915,6,909,10;
+}
+
+morocc.gat,180,259,3	script	商人#3	85,{
+	callfunc "F_NMerch","商人",935,5,916,7,909,10;
+}
+
+aldebaran.gat,152,63,5	script	商人#4	85,{
+	callfunc "F_NMerch","商人",955,1,916,7,909,10;
+}
+
+payon.gat,200,134,5	script	商人#5	85,{
+	//我们去除了第3个物品, 借由加上了 0,0
+	callfunc "F_NMerch","商人",902,6,909,10,0,0;
+}

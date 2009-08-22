@@ -1,0 +1,113 @@
+//========================
+// [冥] The PlutoEA Project [王]
+// http://opensvn.csie.org/PlutoEA
+// -----------------------------------------
+// - 孙燕姿 脚本 -
+//========================
+
+prontera,146,93,6	script	孙燕姿#son::孙燕姿	756,{
+	cutin "son",2;
+	mes "[孙燕姿]";
+	mes "你好~";
+	mes "我是音乐精灵 ^3355FF孙燕姿^000000";
+	mes "能在仙境传说里";
+	mes "见到你~ 真的很高兴唷!";
+	mes "你要像我一样喜爱仙境传说喔";
+	mes "让我们一起在这个幻想的国度里";
+	mes "留下美好的回忆吧";
+	next;
+	switch (select("请用精灵魔法帮我补充HP与SP:请传送我到紧张危险的地方吧:下一次再麻烦你了")) {
+	case 1:
+		mes "[孙燕姿]";
+		mes "为了让各位的旅途更加顺利";
+		mes "我会使用精灵魔法来为各位服务";
+		next;
+		mes "[孙燕姿]";
+		mes "好的";
+		mes "我会用音乐与存在于";
+		mes "世上的水之精灵们沟通";
+		mes "试着借用他们的力量";
+		mes "为你恢复HP与SP";
+		next;
+		mes "[孙燕姿]";
+		mes "水之精灵们，请听我的倾诉………";
+		mes "请你祝福我的朋友";
+		percentheal 100,100;
+		next;
+		mes "[孙燕姿]";
+		mes "应该有好一点了吧";
+		mes "很高兴能帮上你的忙";
+		mes "也希望你能满意我的服务";
+		next;
+		mes "[孙燕姿]";
+		mes "最后，愿精灵的力量永远与你同在";
+		break;
+	case 2:
+		mes "[孙燕姿]";
+		mes "人们对未知的世界总是充满好奇";
+		mes "内心总是充满着要征服";
+		mes "所有危险区域的热血";
+		mes "我想这是内心中";
+		mes "冒险者的血液在沸腾";
+		mes "这感觉我能深深的体会………";
+		next;
+		mes "[孙燕姿]";
+		mes "我会用音乐与存在于";
+		mes "世上的时空精灵们沟通";
+		mes "试着借用他们的力量，为你传送";
+		next;
+		mes "[孙燕姿]";
+		mes "请问你想要去哪里呢?";
+		next;
+		switch (select("迷宫 密穴:兽人 密穴:蚂蚁 密穴:废矿 密穴:史芬克斯 密穴:克雷斯特汉姆 古城")) {
+		case 1:
+			warp "prt_fild01",136,368;
+			end;
+		case 2:
+			warp "gef_fild10",67,334;
+			end;
+		case 3:
+			warp "moc_fild04",210,329;
+			end;
+		case 4:
+			warp "mjolnir_02",79,361;
+			end;
+		case 5:
+			warp "moc_fild19",105,99;
+			end;
+		case 6:
+			warp "glast_01",198,204;
+			end;
+		}
+	case 3:
+		mes "[孙燕姿]";
+		mes "没关系";
+		mes "有需要的话，请记得找我";
+		mes "我会在此为你服务";
+		next;
+		mes "[孙燕姿]";
+		mes "记得，在美好的仙境里";
+		mes "抛开一切，好好的享受";
+		mes "创造出属于你的浪漫传说";
+		mes "也请大家好好好的爱护我";
+		mes "我也会努力为各位服务的";
+	}
+	close2;
+	cutin "",255;
+	end;
+}
+
+alberta,25,238,3	duplicate(孙燕姿)	孙燕姿#alb	756
+ayothaya,212,192,5	duplicate(孙燕姿)	孙燕姿#ayo	756
+aldebaran,143,116,5	duplicate(孙燕姿)	孙燕姿#alde	756
+amatsu,200,79,5	duplicate(孙燕姿)	孙燕姿#ama	756
+geffen,124,62,8	duplicate(孙燕姿)	孙燕姿#gef	756
+izlude,134,92,4	duplicate(孙燕姿)	孙燕姿#izl	756
+jawaii,223,204,4	duplicate(孙燕姿)	孙燕姿#jawa	756
+morocc,160,97,5	duplicate(孙燕姿)	孙燕姿#moc	756
+payon,190,104,5	duplicate(孙燕姿)	孙燕姿#pay	756
+yuno,164,48,5	duplicate(孙燕姿)	孙燕姿#yuno	756
+gonryun,156,14,5	duplicate(孙燕姿)	孙燕姿#gon	756
+xmas,157,111,5	duplicate(孙燕姿)	孙燕姿#xmas	756
+louyang,224,60,5	duplicate(孙燕姿)	孙燕姿#lou	756
+niflheim,21,159,5	duplicate(孙燕姿)	孙燕姿#nif	756

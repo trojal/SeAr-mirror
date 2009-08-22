@@ -1,0 +1,493 @@
+prontera.gat,164,88,4	script	彩票售卖员	721,{
+	mes "[彩票售卖员]";
+	mes "欢迎光临卡普拉公司总部";
+	mes "本公司新推出福利彩票活动";
+	mes "只要购买本公司的彩票，就有机会赢得巨额奖金!";
+	next;
+LM1:
+	menu "询问有关彩票相关事项",Lmess,"购买彩票",Lbuy,"查询购买情况及奖金",Lbnum,"兑奖",Lget,"取消",Lcancel;
+Lmess:
+		mes "[彩票售卖员]";
+		mes "本活动由卡普拉有限公司特约赞助";
+		mes "彩票购买规则:";
+		mes "每人每天只能购买^0000FF 5^000000次，每次在^0000FF100~999^000000中选择一个号码，";
+		mes "每天中午开奖，中奖的玩家自行来兑奖。";
+		next;
+		mes "[彩票售卖员]";
+		mes "如果购买的号码与开奖的号码相同，就是中头奖";
+		mes "可以取得全部累积奖金";
+		mes "如果购买的号码与开奖的号码相差1，就是中二奖";
+		mes "可以取得奖金10万zeny";
+		next;
+		mes "[彩票售卖员]";
+		mes "初始奖金为^0000FF500^000000万，每增加一个购买者就增加^0000FF1000zeny^000000";
+		mes "越多人买奖金越高。如果没人中奖，奖金的10%将累积至下一期。";
+		mes "奖金累积达到^0000FF2000^000000万后将不再增加";
+		mes "如果中奖者在下一期开奖之前不去领奖，该奖金将累积至下一期。";
+	close;
+Lbuy:
+		if(#TTbuyday < $TTaa) set #TTbuy,0;
+		if (#TTbuy == 5 ) goto Lerr01;
+		if (Zeny <1000 ) goto Lnomon;
+		mes "[彩票售卖员]";
+		mes "请输入你想购买的号码（100 - 999）";
+		next;
+		input @TTtemp;
+		if (@TTtemp <100 || @TTtemp > 999) goto Lerr02;
+		if (Zeny <1000 ) goto Lnomon;
+		set Zeny,Zeny-1000;
+		set #KF_PIT,#KF_PIT+5;		//可以有积分
+		set $TTmon3,$TTmon3+1000;	//本期累积奖金
+		set $TTbnum,$TTbnum+1;		//本期购买人数
+		set $TTanum,$TTanum+1;		//累计总购买人数
+		set #TTbuy,#TTbuy+1;		//该玩家购买次数
+		set #TTbuyday,$TTaa;		//该玩家购买期数
+		mes "[彩票售卖员]";
+		mes "谢谢你支持祖国福利事业。希望你能中奖。";
+		if (@TTtemp == $TTnum2) goto Lgood;
+		if (@TTtemp == $TTnum2+1 || @TTtemp == $TTnum2-1) goto Lgood2;
+	close;
+	Lgood:	//头奖
+		set #KF_PIT,#KF_PIT+50;		//可以有积分
+		set $TTth,$TTth+1;		//本期中奖人数
+		if ($TTget1 == 0) goto Lset01;	//记录中奖者ID
+		if ($TTget2 == 0) goto Lset02;
+		if ($TTget3 == 0) goto Lset03;
+		if ($TTget4 == 0) goto Lset04;
+		if ($TTget5 == 0) goto Lset05;
+		if ($TTget6 == 0) goto Lset06;
+		if ($TTget7 == 0) goto Lset07;
+		if ($TTget8 == 0) goto Lset08;
+		if ($TTget9 == 0) goto Lset09;
+		end;
+	Lset01:
+		set $TTget1,getcharid(0)+$TTa;
+	close;
+	Lset02:
+		set $TTget2,getcharid(0)+$TTa;
+	close;
+	Lset03:
+		set $TTget3,getcharid(0)+$TTa;
+	close;
+	Lset04:
+		set $TTget4,getcharid(0)+$TTa;
+	close;
+	Lset05:
+		set $TTget5,getcharid(0)+$TTa;
+	close;
+	Lset06:
+		set $TTget6,getcharid(0)+$TTa;
+	close;
+	Lset07:
+		set $TTget7,getcharid(0)+$TTa;
+	close;
+	Lset08:
+		set $TTget8,getcharid(0)+$TTa;
+	close;
+	Lset09:
+		set $TTget9,getcharid(0)+$TTa;
+	close;
+	Lgood2:	//二奖
+		set #KF_PIT,#KF_PIT+30;		//可以有积分
+		set $TT2th,$TT2th+1;		//本期中二奖人数
+		if ($TTget21 == 0) goto Lset21;	//记录中奖者ID
+		if ($TTget22 == 0) goto Lset22;
+		if ($TTget23 == 0) goto Lset23;
+		if ($TTget24 == 0) goto Lset24;
+		if ($TTget25 == 0) goto Lset25;
+		if ($TTget26 == 0) goto Lset26;
+		if ($TTget27 == 0) goto Lset27;
+		if ($TTget28 == 0) goto Lset28;
+		if ($TTget29 == 0) goto Lset29;
+		end;
+	Lset21:
+		set $TTget21,getcharid(0)+$TTa;
+	close;
+	Lset22:
+		set $TTget22,getcharid(0)+$TTa;
+	close;
+	Lset23:
+		set $TTget23,getcharid(0)+$TTa;
+	close;
+	Lset24:
+		set $TTget24,getcharid(0)+$TTa;
+	close;
+	Lset25:
+		set $TTget25,getcharid(0)+$TTa;
+	close;
+	Lset26:
+		set $TTget26,getcharid(0)+$TTa;
+	close;
+	Lset27:
+		set $TTget27,getcharid(0)+$TTa;
+	close;
+	Lset28:
+		set $TTget28,getcharid(0)+$TTa;
+	close;
+	Lset29:
+		set $TTget29,getcharid(0)+$TTa;
+	close;
+	Lerr01:
+		mes "[彩票售卖员]";
+		mes "你今天已经购买 5 次了，不能再买了";
+		mes "希望你能中奖!!";
+	close;
+	Lerr02:
+		mes "[彩票售卖员]";
+		mes "你输入的号码不正确，请重新输入";
+		goto Lbuy;
+	Lnomon:
+		mes "[彩票售卖员]";
+		mes "你的钱不够，每张彩票价值^0000FF 1000 ^000000Zeny。";
+	close;
+Lbnum:
+		mes "[彩票售卖员]";
+		mes "第^0000FF"+$TTaa+"^000000期福利彩票售卖情况";
+		mes "到现在为止已有^0000FF"+$TTbnum+"^000000人购买本期彩票。";
+		mes "本期累积奖金为^0000FF"+$TTmon3+"^000000 zeny。";
+		mes "------------------------------";
+		mes "上一期福利彩票售卖情况";
+		mes "总奖金^0000FF"+$TTmon2+"^000000 Zeny。";
+		mes "购买人数是^0000FF"+$TTcnum+"^000000人。";
+		if ($TTth2== 0 ) goto Lnoth2;
+		mes "中大奖^0000FF"+$TTth2+"^000000 名。";
+		mes "每人可得奖金^0000FF"+$TTmon1+"^000000 Zeny。";
+		mes "中二奖^0000FF"+$TT2th2+"^000000 名。";
+		mes "每人可得奖金^0000FF"+$TT2mon+"^000000 Zeny。";
+		if ($TTmon1>0) mes "已有^0000FF"+$TTgetp+"^000000 人领奖了。";
+		if ($TTmon1==0) mes "现在还没有人来领奖。";
+		mes "------------------------------";
+		mes "今年总累计购买人数是^0000FF"+$TTanum+"^000000 人。";
+		mes "    总累计中头奖人数是^0000FF"+$TTLuk+"^000000 人。";
+		mes "    总累计中二奖人数是^0000FF"+$TT2Luk+"^000000 人。";
+		next;
+		goto LM1;
+Lnoth2:
+		mes "没有人中大奖。";
+		mes "------------------------------";
+		mes "今年总累计购买人数是^0000FF"+$TTanum+"^000000 人。";
+		mes "    总累计中头奖人数是^0000FF"+$TTLuk+"^000000 人。";
+		mes "    总累计中二奖人数是^0000FF"+$TT2Luk+"^000000 人。";
+		next;
+		goto LM1;
+
+Lget:
+		if(getcharid(0) == ($TTget1-$TTa2)) goto Lget01;
+		if(getcharid(0) == ($TTget2-$TTa2)) goto Lget02;
+		if(getcharid(0) == ($TTget3-$TTa2)) goto Lget03;
+		if(getcharid(0) == ($TTget4-$TTa2)) goto Lget04;
+		if(getcharid(0) == ($TTget5-$TTa2)) goto Lget05;
+		if(getcharid(0) == ($TTget6-$TTa2)) goto Lget06;
+		if(getcharid(0) == ($TTget7-$TTa2)) goto Lget07;
+		if(getcharid(0) == ($TTget8-$TTa2)) goto Lget08;
+		if(getcharid(0) == ($TTget9-$TTa2)) goto Lget09;
+		if(getcharid(0) == ($TTget21-$TTa2)) goto Lget21;
+		if(getcharid(0) == ($TTget22-$TTa2)) goto Lget22;
+		if(getcharid(0) == ($TTget23-$TTa2)) goto Lget23;
+		if(getcharid(0) == ($TTget24-$TTa2)) goto Lget24;
+		if(getcharid(0) == ($TTget25-$TTa2)) goto Lget25;
+		if(getcharid(0) == ($TTget26-$TTa2)) goto Lget26;
+		if(getcharid(0) == ($TTget27-$TTa2)) goto Lget27;
+		if(getcharid(0) == ($TTget28-$TTa2)) goto Lget28;
+		if(getcharid(0) == ($TTget29-$TTa2)) goto Lget29;
+		mes "[彩票售卖员]";
+		mes "对不起，你没有中奖，请下期继续。";
+close;
+Lget01:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget1,0;		//设为已领奖
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget02:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget2,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget03:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget3,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget04:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget4,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget05:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget5,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget06:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget6,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget07:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget7,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget08:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget8,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget09:
+		if ((Zeny+$TTmon1) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		set Zeny,Zeny+$TTmon1;
+		set $TTget9,0;
+		set $TTgetp,$TTgetp+1;	//领奖人数加1
+		mes "欢迎继续购买。";
+		close;
+Lget21:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget21,0;		//设为已领奖
+		mes "欢迎继续购买。";
+		close;
+Lget22:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget22,0;
+		mes "欢迎继续购买。";
+		close;
+Lget23:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget23,0;
+		mes "欢迎继续购买。";
+		close;
+Lget24:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget24,0;
+		mes "欢迎继续购买。";
+		close;
+Lget25:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget25,0;
+		mes "欢迎继续购买。";
+		close;
+Lget26:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget26,0;
+		mes "欢迎继续购买。";
+		close;
+Lget27:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget27,0;
+		mes "欢迎继续购买。";
+		close;
+Lget28:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget28,0;
+		mes "欢迎继续购买。";
+		close;
+Lget29:
+		if ((Zeny+$TT2mon) >1000000000 ) goto Lmuch;
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中了二奖，这是你的奖金，请拿好。";
+		mes "奖金是^0000FF "+$TT2mon+"^000000 zeny";
+		set Zeny,Zeny+$TT2mon;
+		set $TTget29,0;
+		mes "欢迎继续购买。";
+		close;
+Lmuch:
+		mes "[彩票售卖员]";
+		mes "恭喜你，你中奖了，奖金是^0000FF "+$TTmon1+"^000000 zeny";
+		mes "你身上现金太多，不能再拿了，请存入银行后再来领奖。";
+close;
+Lcancel:
+		mes "[彩票售卖员]";
+		mes "…………";
+		close;
+}
+
+aldeba_in.gat,21,239,4	script	彩票开奖	-1,{
+end;
+OnHour12:
+		set $TT2mon,100000;	//二奖奖金
+		set $TTnum,rand(100,999);
+		set $TTnum1,$TTnum2;				//保留上一期号码
+		set $TTnum2,$TTnum;				//设置本期号码
+		set $TT3th,$TTth+$TT2th;			//设置本期号码
+		announce "第"+$TTaa+"期福利彩票开奖，本期中奖号码是"+$TTnum1+" 共有"+$TT3th+"名玩家中奖",15;
+		set $TTmon4,$TTmon1;				//再上一期每人可得奖金
+		set $TTmon2,$TTmon3;				//上一期总奖金
+		if ( $TTmon2 > 5000000 ) set $TTmon2,5000000;	//设置奖金上限为500万
+		set $TTmon1,$TTmon2;				//上一期每人可以领取的奖金
+//		if ( $TTth > 1 ) set $TTmon1,$TTmon2/$TTth;	//按中奖人数平分奖金
+		set $TTLuk,($TTLuk+$TTth);			//更新累计中奖人数。
+		set $TT2Luk,($TT2Luk+$TT2th);			//更新累计中二奖人数。
+		set $TTa2,$TTa;					//保留上一期的期数
+		set $TTa,$TTa+100000;				//本期期数+1
+		set $TTaa,$TTaa+1;				//本期期数（用于显示）
+		set $TTth3,$TTth2;				//保留再上一期中奖人数
+		set $TTth2,$TTth;				//保留上一期中奖人数
+		set $TTth,0;					//清空本期中奖人数
+		set $TT2th3,$TT2th2;				//保留再上一期中二奖人数
+		set $TT2th2,$TT2th;				//保留上一期中二奖人数
+		set $TT2th,0;					//清空本期中二奖人数
+		set $TTcnum,$TTbnum;				//保留上一期购买人数
+		set $TTbnum,0;					//清空本期购买人数
+		set $TTgetp2,$TTgetp;				//保留上一期领奖人数
+		set $TTgetp,0;					//清空本期领奖人数
+		if ( $TTget1 < $TTa2 ) set $TTget1,0;		//清空中奖名单
+		if ( $TTget2 < $TTa2 ) set $TTget2,0;		//清空中奖名单
+		if ( $TTget3 < $TTa2 ) set $TTget3,0;		//清空中奖名单
+		if ( $TTget4 < $TTa2 ) set $TTget4,0;		//清空中奖名单
+		if ( $TTget5 < $TTa2 ) set $TTget5,0;		//清空中奖名单
+		if ( $TTget6 < $TTa2 ) set $TTget6,0;		//清空中奖名单
+		if ( $TTget7 < $TTa2 ) set $TTget7,0;		//清空中奖名单
+		if ( $TTget8 < $TTa2 ) set $TTget8,0;		//清空中奖名单
+		if ( $TTget9 < $TTa2 ) set $TTget9,0;		//清空中奖名单
+		if ( $TTget21 < $TTa2 ) set $TTget21,0;		//清空中奖名单
+		if ( $TTget22 < $TTa2 ) set $TTget22,0;		//清空中奖名单
+		if ( $TTget23 < $TTa2 ) set $TTget23,0;		//清空中奖名单
+		if ( $TTget24 < $TTa2 ) set $TTget24,0;		//清空中奖名单
+		if ( $TTget25 < $TTa2 ) set $TTget25,0;		//清空中奖名单
+		if ( $TTget26 < $TTa2 ) set $TTget26,0;		//清空中奖名单
+		if ( $TTget27 < $TTa2 ) set $TTget27,0;		//清空中奖名单
+		if ( $TTget28 < $TTa2 ) set $TTget28,0;		//清空中奖名单
+		if ( $TTget29 < $TTa2 ) set $TTget29,0;		//清空中奖名单
+		if ( $TTth2 == 0 ) goto Lgetall;
+		set $TTmon3,$TTmon;
+		if ( $TTgetp2 < $TTth3 ) goto Lnoall;
+	End;
+Lgetall:
+		set $TTmon3,$TTmon2/10+$TTmon2;
+		if ( $TTmon3 > 5000000 ) set $TTmon3,5000000;
+		if ( $TTgetp2 < $TTth3 ) goto Ladnoget;
+	End;
+Ladnoget:
+		set $Tmon,($TTth3-$TTgetp);
+		set $TTmon3,($TTmon4*$Tmon)+$TTmon;
+		if ( $TTmon3 > 5000000 ) set $TTmon3,5000000;
+	End;
+
+OnInit:
+
+		waitingroom "DeepRO彩票购买处",0;
+		if ($TTinit==1) End;
+		set $TTa,100000;	//设定期数为第一期
+		set $TTaa,1;		//期数为第一期（用于显示）
+		set $TTa2,0;		//上一期的期数
+		set $TTmon,1000000;	//设定初始奖金
+		set $TTmon1,0;		//每人可得的奖金
+		set $TTmon2,0;		//上一期总奖金
+		set $TTmon3,$TTmon;	//本期奖金
+		set $TTmon4,0;		//再上一期每人领取奖金
+		set $Tmon,0;		//没有被领取的奖金份数
+		set $TT2mon,100000;	//二奖奖金
+//	Lrenum1:
+		set $TTnum,rand(100,999);	//设定本期号码
+//		if ($TTnum <100 || $TTnum >999 ) goto Lrenum1;
+		set $TTnum2,$TTnum;	//设定第一期中奖号码
+		set $TTnum1,0;		//设定第一期中奖号码
+		set $TTcnum,0;		//上一期购买人数
+		set $TTbnum,0;		//本期购买人数
+		set $TTanum,0;		//总累计购买人数
+		set $TTth,0;		//本期中奖人数
+		set $TTth2,0;		//上一期中奖人数
+		set $TTth3,0;		//再上一期中奖人数
+		set $TT2th,0;		//本期中二奖人数
+		set $TT2th2,0;		//上一期中二奖人数
+		set $TT2th3,0;		//再上一期中二奖人数
+		set $TTLuk,0;		//总累计中奖人数
+		set $TT2Luk,0;		//总累计中二奖人数
+		set $TTgetp2,0;		//上一期领奖人数
+		set $TTgetp,0;		//本期领奖人数
+		set $TTget1,0;		//清空中奖名单
+		set $TTget2,0;
+		set $TTget3,0;
+		set $TTget4,0;
+		set $TTget5,0;
+		set $TTget6,0;
+		set $TTget7,0;
+		set $TTget8,0;
+		set $TTget9,0;
+		set $TTget21,0;		//清空中奖名单
+		set $TTget22,0;
+		set $TTget23,0;
+		set $TTget24,0;
+		set $TTget25,0;
+		set $TTget26,0;
+		set $TTget27,0;
+		set $TTget28,0;
+		set $TTget29,0;
+		set $TTinit,1;		//初始化完成
+End;
+
+}

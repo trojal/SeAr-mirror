@@ -1,0 +1,378 @@
+// Old Card Album Obtainable Items Database
+//
+// Structure of Database:
+// GroupID,ItemID,Rate
+
+3,4001,15	//²¨Àû¿¨Æ¬//Poring Card
+3,4002,17	//ÂÌÃŞ³æ¿¨Æ¬//Fabre Card
+3,4003,6	//³æÓ¼¿¨Æ¬//Pupa Card
+3,4004,18	//ÍÁ²¨Àû¿¨Æ¬//Drops Card
+3,4005,2	//Ê¥µ®²¨Àû¿¨Æ¬//Santa Poring Card
+3,4006,14	//·èÍÃ¿¨Æ¬//Lunatic Card
+3,4007,4	//´ó×ìÄñµ°¿¨Æ¬//Peco Peco Egg Card
+3,4008,10	//Ğ¡¼¦¿¨Æ¬//Picky Card
+3,4009,10	//²ÔÓ¬¿¨Æ¬//Chonchon Card
+3,4010,10	//Ê÷¾«¿¨Æ¬//Willow Card
+3,4011,10	//µ°¿ÇĞ¡¼¦¿¨Æ¬//Picky Egg Card
+3,4012,8	//µÁ³æÂÑ¿¨Æ¬//Thief Bug Egg Card
+3,4013,7	//ÒÏÂÑ¿¨Æ¬//Andre Egg Card
+3,4014,5	//ÂŞ´ïÍÜ¿¨Æ¬//Roda Frog Card
+3,4015,7	//ÍºÓ¥¿¨Æ¬//Condor Card
+3,4016,7	//µÁ³æ¿¨Æ¬//Thief Bug Card
+3,4017,5	//Ğ¡Ò°Öí¿¨Æ¬//Savage Babe Card
+3,4019,5	//·ä±ø¿¨Æ¬//Hornet Card
+3,4020,5	//ÎüÑªòùòğ¿¨Æ¬//Farmiliar Card
+3,4021,5	//Ò¡¹ö»È³æ¿¨Æ¬//Rocker Card
+3,4022,5	//Ä§¹½¿¨Æ¬//Spore Card
+3,4023,5	//É³Ä®Ó×ÀÇ¿¨Æ¬//Baby Desert Wolf Card
+3,4024,5	//Æ¯¸¡³æ¿¨Æ¬//Plankton Card
+3,4025,5	//Ğ°º¡Õ½Ê¿¿¨Æ¬//Skeleton Card
+3,4026,3	//¸¡ÀÕµÁ³æ¿¨Æ¬//Female Thief Bug Card
+3,4027,3	//¿â¿ËÀ×¿¨Æ¬//Kukre Card
+3,4028,3	//°×Êó¿¨Æ¬//Tarou Card
+3,4029,3	//ÀÇ¿¨Æ¬//Wolf Card
+3,4030,3	//ÂüÍÓÂÜÄ§»¨¿¨Æ¬//Mandragora Card
+3,4031,3	//´ó×ìÄñ¿¨Æ¬//Peco Peco Card
+3,4032,3	//ÎÏÅ£¿¨Æ¬//Ambernite Card
+3,4033,3	//²¨²¨Àû¿¨Æ¬//Poporing Card
+3,4034,3	//É­Áé¿¨Æ¬//Wormtail Card
+3,4035,3	//º£¿û¿¨Æ¬//Hydra Card
+3,4036,3	//Ä¦¿¨¿¨Æ¬//Muka Card
+3,4037,3	//ÇàÉß¿¨Æ¬//Snake Card
+3,4038,3	//¸¯Ê¬¿¨Æ¬//Zombie Card
+3,4039,3	//Æ°³æ¿¨Æ¬//Stainer Card
+3,4041,3	//ËÉÊó¿¨Æ¬//Coco Card
+3,4042,3	//ÂÌ²ÔÓ¬¿¨Æ¬//Steel Chonchon Card
+3,4043,3	//°×ÒÏ¿¨Æ¬//Andre Card
+3,4044,3	//ÀêÃ¨¿¨Æ¬//Smokie Card
+3,4045,3	//ÇÂĞÎ³æ¿¨Æ¬//Horn Card
+3,4046,3	//ÍÁ²¦Êó¿¨Æ¬//Martin Card
+3,4048,3	//¶¾Ä§¹½¿¨Æ¬//Poison Spore Card
+3,4049,3	//ó¦Ğ·¿¨Æ¬//Vadon Card
+3,4050,3	//ÂêÀÕµÁ³æ¿¨Æ¬//Male Thief Bug Card
+3,4051,3	//ÁïÁïºï¿¨Æ¬//Yoyo Card
+3,4052,3	//³¤ÀÏÊ÷¾«¿¨Æ¬//Elder Willow Card
+3,4053,1	//ºÚÒÏ¿¨Æ¬//Vitata Card
+3,4055,3	//Ë®Ä¸¿¨Æ¬//Marina Card
+3,4056,3	//ÁÔÓ¬¿¨Æ¬//Dustiness Card
+3,4057,2	//ÖØ½ğÊô»È³æ¿¨Æ¬//Metaller Card
+3,4058,2	//Í»±äÍÜ¿¨Æ¬//Thara Frog Card
+3,4060,2	//¸ç²¼Áé¿¨Æ¬//Goblin Card
+3,4061,2	//¿¨ÄÇ¶àË¹¿¨Æ¬//Cornutus Card
+3,4062,2	//»ÆÉß¿¨Æ¬//Anacondaq Card
+3,4063,2	//´Ìâ¬³æ¿¨Æ¬//Caramel Card
+3,4064,2	//½ÜÂåÃ×¿¨Æ¬//Zerom Card
+3,4065,2	//¿¨ºÆ¿¨Æ¬//Kaho Card
+3,4066,2	//ÊŞÈËÕ½Ê¿¿¨Æ¬//Orc Warrior Card
+3,4067,2	//Ğ°º¡Ê³ÈËÓã¿¨Æ¬//Megalodon Card
+3,4068,2	//Ğ«×Ó¿¨Æ¬//Scorpion Card
+3,4069,2	//ºìòùòğ¿¨Æ¬//Drainliar Card
+3,4070,2	//×ª×ªµ°¿¨Æ¬//Eggyra Card
+3,4071,2	//ÊŞÈË¸¯Ê¬¿¨Æ¬//Orc Zombie Card
+3,4072,2	//¾ŞÊ¯¹Ö¿¨Æ¬//Golem Card
+3,4073,2	//Ğ°º¡º£µÁ¿¨Æ¬//Pirate Skeleton Card
+3,4074,2	//´ó½ÅĞÜ¿¨Æ¬//Bigfoot Card
+3,4075,2	//°¬Ë¹Ö©Öë¿¨Æ¬//Argos Card
+3,4076,2	//Ä§¹øµ°¿¨Æ¬//Magnolia Card
+3,4077,2	//½£Óã¿¨Æ¬//Phen Card
+3,4078,2	//Ò°Öí¿¨Æ¬//Savage Card
+3,4079,2	//ó«òë¿¨Æ¬//Mantis Card
+3,4080,2	//ÊÉÈË»¨¿¨Æ¬//Flora Card
+3,4081,2	//òÇò¾¿¨Æ¬//Hode Card
+3,4082,1	//É³Ä®Ö®ÀÇ¿¨Æ¬//Desert Wolf Card
+3,4083,1	//²İ¾«¿¨Æ¬//Rafflesia Card
+3,4084,1	//ÆøÅİ³æ¿¨Æ¬//Marine Sphere Card
+3,4085,1	//Ğ°º¡ÊŞÈË¿¨Æ¬//Orc Skeleton Card
+3,4086,1	//Ğ°º¡Ê¿±ø¿¨Æ¬//Soldier Skeleton Card
+3,4087,1	//»ù¶ûÉª¿¨Æ¬//Giearth Card
+3,4088,1	//É¡òá¿¨Æ¬//Frilldora Card
+3,4089,1	//Òì±äÓã¿¨Æ¬//Swordfish Card
+3,4090,1	//½©Ê¬¿¨Æ¬//Munak Card
+3,4091,1	//È®Ñı¿¨Æ¬//Kobold Card
+3,4092,1	//Ğ°º¡¿ó¹¤¿¨Æ¬//Skeleton Worker Card
+3,4093,1	//ÈËÓã¿¨Æ¬//Obeaune Card
+3,4094,1	//Ğ°º¡¹­¼ıÊÖ¿¨Æ¬//Archer Skeleton Card
+3,4095,1	//ÎÚÔô¿¨Æ¬//Marse Card
+3,4096,1	//×ÈÅµ¿Ë¿¨Æ¬//Zenorc Card
+3,4097,1	//ºÚºü¿¨Æ¬//Matyr Card
+3,4098,1	//ÍÁÈË¿¨Æ¬//Dokebi Card
+3,4099,1	//ÅÁÉ¯ÄÉ¿¨Æ¬//Pasana Card
+3,4100,1	//¹íÅ®¿¨Æ¬//Sohee Card
+3,4101,1	//ÄàÈË¿¨Æ¬//Sandman Card
+3,4102,1	//°×ÓÄÁé¿¨Æ¬//Whisper Card
+3,4103,1	//¹í»ğ¿¨Æ¬//Horong Card
+3,4104,1	//Åµ¿ÉÒÁ¿¨Æ¬//Requiem Card
+3,4105,1	//Âí¿Ë¿¨Æ¬//Marc Card
+3,4106,1	//Ä¾ÄËÒÁ¿¨Æ¬//Mummy Card
+3,4107,1	//Ä¾ÄËÒÁÈ®¿¨Æ¬//Verit Card
+3,4108,1	//ÂóË¹ÌØ¿¨Æ¬//Myst Card
+3,4109,1	//ÄÏ¹ÏÏÈÉú¿¨Æ¬//Jakk Card
+3,4110,1	//ÂÌ¸¯Ê¬¿¨Æ¬//Ghoul Card
+3,4111,1	//º£Éñ¿¨Æ¬//Strouf Card
+3,4112,1	//Âí¶û¶Å¿Ë¿¨Æ¬//Marduk Card
+3,4113,1	//¿şÀÜÍŞÍŞ¿¨Æ¬//Marionette Card
+3,4114,1	//°¬¼ªÅ·òÚò¼¿¨Æ¬//Argiope Card
+3,4115,1	//³à²ÔÓ¬¿¨Æ¬//Hunter Fly Card
+3,4116,1	//ÉßÅ®ÒÁË¿¿¨Æ¬//Isis Card
+3,4117,1	//ºÚÉß¿¨Æ¬//Sidewinder Card
+3,4118,1	//±ÏµÛÌØµØÁú¿¨Æ¬//Earth Petite Card
+3,4119,1	//Î×ÆÅ¿¨Æ¬//Bathory Card
+3,4120,1	//±ÏµÛÌØ·ÉÁú¿¨Æ¬//Sky Petite Card
+3,4122,1	//Ğ¡¶ñÄ§¿¨Æ¬//Deviruchi Card
+3,4125,1	//µÒ°ÂË¹¿¨Æ¬//Deviace Card
+3,4127,1	//ÃÎ÷Ê¿¨Æ¬//Nightmare Card
+3,4129,1	//Ğ¡°Í·çÌØ¿¨Æ¬//Bapho Jr. Card
+3,4133,1	//ÓÄÁé½£Ê¿¿¨Æ¬//Raydric Card
+3,4136,1	//¿¨ÀûË¹¸ñ¿¨Æ¬//Khalitzburg Card
+3,4141,1	//éœÉñ¹Ù¿¨Æ¬//Evil Druid Card
+3,4149,1	//òùòğ¹­¼ıÊÖ¿¨Æ¬//Gargoyle Card
+3,4150,1	//Ä§Ç¼¿¨Æ¬//Goat Card
+3,4151,1	//¿ñ±©¹í»ğ¿¨Æ¬//Gajomart Card
+3,4152,1	//Æ¡¾ÆÆó¶ì¿¨Æ¬//Galapago Card
+3,4153,1	//¿¨À­Ğ·¿¨Æ¬//Crab Card
+3,4154,1	//ÔªÏüÍ¯×Ó¿¨Æ¬//Dumpling Child Card
+3,4156,1	//ÅçÉä¸ç²¼Áé¿¨Æ¬//Goblin Steamrider Card
+3,4157,1	//¹­¼ı¸ç²¼Áé¿¨Æ¬//Goblin Archer Card
+3,4158,1	//Æß²Ê·ÉÁú¿¨Æ¬//Sky Deleter Card
+3,4159,1	//¾ÅÎ²ºü¿¨Æ¬//Nine Tail Card
+3,4160,1	//ÎäÊ¿»ğÇ¹±ø¿¨Æ¬//Firelock Soldier Card
+3,4161,1	//Æß²Ê´ó×ìÄñ¿¨Æ¬//Grand Peco Card
+3,4162,1	//±©ÑæÒ°ĞÜ¿¨Æ¬//Grizzly Card
+3,4164,1	//¿ñ±©Ò°Öí¿¨Æ¬//Gullinbursti Card
+3,4165,1	//É³Ä®¶¾Ğ«¿¨Æ¬//Gig Card
+3,4166,1	//Æß²ÊÃÎ÷Ê¿¨Æ¬//Nightmare Terror Card
+3,4167,1	//ÄÎÀû³æ¿¨Æ¬//Neraid Card
+3,4170,1	//¾µÑı¿¨Æ¬//Dark Frame Card
+3,4172,1	//Ö½Ñı¿¨Æ¬//The Paper Card
+3,4173,1	//ÌìĞ°¹í¿¨Æ¬//Demon Pungus Card
+3,4175,1	//Å£ÍÜ¿¨Æ¬//Poisonous Toad Card
+3,4176,1	//ÎŞÂ­ÎäÊ¿¿¨Æ¬//Dullahan Card
+3,4177,1	//É­ÁÖÑı¼§¿¨Æ¬//Dryad Card
+3,4178,1	//´ÌÎ²òßòÑ¿¨Æ¬//Dragon Tail Card
+3,4180,1	//±¬×êÉ¡òá¿¨Æ¬//Driller Card
+3,4181,1	//¼ÙÃæ¹í¿¨Æ¬//Disguise Card
+3,4182,1	//³àÑæĞ¡¶ñÄ§¿¨Æ¬//Diabolic Card
+3,4184,1	//ÈÛÑÒ¾ŞÊ¯¿¨Æ¬//Lava Golem Card
+3,4185,1	//·ÉĞĞÄ§Êé¿¨Æ¬//Rideword Card
+3,4186,1	//ÄÎ¼ªÄñ¿¨Æ¬//Raggler Card
+3,4187,1	//ÓÄÁé¹­¼ıÊÖ¿¨Æ¬//Raydric Archer Card
+3,4188,1	//¿ñ±©´ó½ÅĞÜ¿¨Æ¬//Leib Olmai Card
+3,4189,1	//¿ñ±©¶ñÁé¿¨Æ¬//Wraith Dead Card
+3,4190,1	//¶ñÁé¿¨Æ¬//Wraith Card
+3,4191,1	//ÒøÔÂÄ§Å®¿¨Æ¬//Loli Ruri Card
+3,4192,1	//Ö±Éı»ú¸ç²¼Áé¿¨Æ¬//Rotar Zairo Card
+3,4193,1	//ÄÏ¹Ï»ê¿¨Æ¬//Lude Card
+3,4194,1	//Èğ±ÈÅ·¿¨Æ¬//Rybio Card
+3,4195,1	//ÈºÒ¶Ã¨¿¨Æ¬//Leaf Cat Card
+3,4196,1	//±ù²¨Àû¿¨Æ¬//Marin Card
+3,4199,1	//ÈËÓãÊ¿±ø¿¨Æ¬//Merman Card
+3,4200,1	//Ğ°¶ñÄ¦°¬¿¨Æ¬//Megalith Card
+3,4201,1	//¿ñ±©Ã×ÅµË¹¿¨Æ¬//Majoruros Card
+3,4202,1	//ºüÏÉ¿¨Æ¬//Civil Servant Card
+3,4204,1	//¿ñ±©Ğ¡¶ñÄ§¿¨Æ¬//Mini Demon Card
+3,4205,1	//Ğ°¶ñÏä¿¨Æ¬//Mimic Card
+3,4206,1	//Ğ°¶ñÀñºĞ¿¨Æ¬//Myst Case Card
+3,4208,1	//Ã×ÑÅ±Ï¿¨Æ¬//Miyabi Doll Card
+3,4209,1	//Ş±Å·Àò¿¨Æ¬//Violy Card
+3,4210,1	//Ğ°º¡ÀËÈË¿¨Æ¬//Wanderer Card
+3,4212,1	//ÑıµÀ¿¨Æ¬//Bongun Card
+3,4213,1	//ÒÁÌØÆ°³æ¿¨Æ¬//Brilight Card
+3,4214,1	//ÊÈÑª¹ÖÈË¿¨Æ¬//Bloody Murderer Card
+3,4215,1	//»ğÑæÑı¿¨Æ¬//Blazer Card
+3,4216,1	//Ñ©ĞÜ¿¨Æ¬//Sasquatch Card
+3,4217,1	//ºïÌÒÄ¾¿¨Æ¬//Enchanted Peach Tree Card
+3,4218,1	//¶ñÄ§Å®ÆÍ¿¨Æ¬//Succubus Card
+3,4219,1	//ÏÍÕß³æ¿¨Æ¬//Sage Worm Card
+3,4220,1	//ÑÒÊ¯¹ê¿¨Æ¬//Solider Card
+3,4221,1	//Ğ°º¡Õ½Ê¿³¤¿¨Æ¬//Skeleton General Card
+3,4222,1	//Ğ°º¡Õ½·ı¿¨Æ¬//Skeleton Prisoner Card
+3,4223,1	//ÖÓÈé¾ŞÊ¯¹Ö¿¨Æ¬//Stalactic Golem Card
+3,4224,1	//»ÒÉ­Áé¿¨Æ¬//Stem Worm Card
+3,4225,1	//Ê¯ÅÚ»ğÊ÷¿¨Æ¬//Stone Shooter Card
+3,4226,1	//Ê·Í¡¿¨Æ¬//Sting Card
+3,4227,1	//µ¯»ÉÍÃ¿¨Æ¬//Spring Rabbit Card
+3,4228,1	//É³Ñı¿¨Æ¬//Sleeper Card
+3,4229,1	//ÖÓËşÊØ»¤Õß¿¨Æ¬//Clock Tower Manager Card
+3,4230,1	//»ğÈÌÎ÷Å­±Ï¿¨Æ¬//Shinobi Card
+3,4231,1	//Ã×¸â¿¨Æ¬//Increase Soil Card
+3,4232,1	//ÈË²Î¾«¿¨Æ¬//Hermit Plant Card
+3,4233,1	//Ğ¡»¨±ª¿¨Æ¬//Baby Leopard Card
+3,4234,1	//»¢òáÈË¿¨Æ¬//Anolian Card
+3,4235,1	//XMASÌğ±ıÈË¿¨Æ¬//Christmas Cookie Card
+3,4237,1	//û^ôÁÊ×Áì¿¨Æ¬//Owl Duke Card
+3,4238,1	//û^ôÁÄĞ¾ô_¿¨Æ¬//Owl Baron Card
+3,4239,1	//ÌúĞ«¿¨Æ¬//Iron Fist Card
+3,4240,1	//¾í¼×³æ¿¨Æ¬//Arclouze Card
+3,4242,1	//°¢ĞŞÂŞ»úĞµÕ½Ê¿¿¨Æ¬//Apocalipse Card
+3,4244,1	//ÖÓ¹Ö¿¨Æ¬//Alarm Card
+3,4245,1	//¿ñ±©Ğ¡ÍÁÈË¿¨Æ¬//Am Mut Card
+3,4246,1	//·çÁé¹ê¿¨Æ¬//Assaulter Card
+3,4247,1	//º£ĞÇ¿¨Æ¬//Aster Card
+3,4248,1	//¿ñ±©Ä¾ÄËÒÁ¿¨Æ¬//Ancient Mummy Card
+3,4249,1	//¿ñ±©òÚò¼¿¨Æ¬//Ancient Worm Card
+3,4251,1	//Ğ°ÁéÄ§µ¼Ê¿¿¨Æ¬//Elder Card
+3,4252,1	//öùÓãÈË¿¨Æ¬//Alligator Card
+3,4253,1	//°®ÀöË¿Å®ÆÍ¿¨Æ¬//Alice Card
+3,4255,1	//ÊŞÈËÅ®Õ½Ê¿¿¨Æ¬//Orc Lady Card
+3,4256,1	//ÊŞÈË¹­¼ıÊÖ¿¨Æ¬//Orc Archer Card
+3,4257,1	//¿ñ±©Ò°Ã¨¿¨Æ¬//Wild Rose Card
+3,4258,1	//ÑıÏÉÅ®¿¨Æ¬//Evil Nymph Card
+3,4259,1	//»úÄ¾ÈË¿¨Æ¬//Wooden Golem Card
+3,4260,1	//ÎéÌ¹µ¯¹­ÊÖ¿¨Æ¬//Wootan Shooter Card
+3,4261,1	//ÎéÌ¹Õ½Ê¿¿¨Æ¬//Wootan Fighter Card
+3,4262,1	//¶ñÔÆÏÉÈË¿¨Æ¬//Cloud Hermit Card
+3,4264,1	//·çÄ§Î×Ê¦¿¨Æ¬//Wind Ghost Card
+3,4265,1	//±ªÆ¤¹Ö¿¨Æ¬//Li Me Mang Ryang Card
+3,4267,1	//±¬Ñ×òùòğ¿¨Æ¬//Explosion Card
+3,4268,1	//Ğ°¶ñÊ¹Õß¿¨Æ¬//Injustice Card
+3,4269,1	//¶ñÄ§ÊÌÕß¿¨Æ¬//Incubus Card
+3,4270,1	//¿ñ±©Ö©Öë¿¨Æ¬//Giant Spider Card
+3,4271,1	//¿ñ±©·ä±ø¿¨Æ¬//Giant Hornet Card
+3,4272,1	//ÎèÊ¨¿¨Æ¬//Dancing Dragon Card
+3,4273,1	//±´¿ÇÄ§Áé¿¨Æ¬//Shell Fish Card
+3,4274,1	//¸¯Ê¬Ê×Áì¿¨Æ¬//Zombie Master Card
+3,4275,1	//¸¯Ê¬Õ½·ı¿¨Æ¬//Zombie Prisoner Card
+3,4277,1	//°¬Ë¹¶÷Ä§Å®¿¨Æ¬//Zherlthsh Card
+3,4278,1	//¹íÍŞÊ÷¿¨Æ¬//Gibbet Card
+3,4279,1	//Æß²ÊµØÁú¿¨Æ¬//Earth Deleter Card
+3,4280,1	//Ğ°¶ñÏòÈÕ¿û¿¨Æ¬//Geographer Card
+3,4281,1	//À­Á´ĞÜ¿¨Æ¬//Zipper Bear Card
+3,4282,1	//Ìì¹·¿¨Æ¬//Tengu Card
+3,4283,1	//½«¾üÄ§±®¿¨Æ¬//Greatest General Card
+3,4284,1	//Ä§ÁéÍŞÍŞ¿¨Æ¬//Chepet Card
+3,4285,1	//ÇÉ¿Ëºï¿¨Æ¬//Choco Card
+3,4286,1	//É¡Ñı¿¨Æ¬//Karakasa Card
+3,4287,1	//µöÓãºÓÍ¯¿¨Æ¬//Kapha Card
+3,4288,1	//¿¨À­ÌØĞ¡³ó¿¨Æ¬//Carat Card
+3,4289,1	//¿ñ±©ÂÌÃà³æ¿¨Æ¬//Caterpillar Card
+3,4290,1	//¿ñ±©ÔÂÒ¹Ã¨¿¨Æ¬//Cat O' Nine Tails Card
+3,4292,1	//È®Ñı¹­¼ıÊÖ¿¨Æ¬//Kobold Archer Card
+3,4293,1	//Ìğ±ıÈË¿¨Æ¬//Cookie Card
+3,4294,1	//ÍòÊ¥Ä§¿¨Æ¬//Quve Card
+3,4295,1	//¿ËÀ³±¾¿¨Æ¬//Kraben Card
+3,4296,1	//À¶Êó¿¨Æ¬//Cramp Card
+3,4297,1	//Íæ¾ßÊ¿±ø¿¨Æ¬//Cruiser Card
+3,4298,1	//¿ñ±©¿ËÈğÃ×¿¨Æ¬//Creamy Fear Card
+3,4299,1	//¹ÅÖÓÄ§¿¨Æ¬//Clock Card
+3,4300,1	//¿­ÃÀÀ­¿¨Æ¬//Chimera Card
+3,4301,1	//¿ñ±©ó«òë¿¨Æ¬//Killer Mantis Card
+3,4304,1	//Ëşàà°²¿¨Æ¬//Tamruan Card
+3,4307,1	//¾ŞÏó¼×³æ¿¨Æ¬//Beetle King Card
+3,4308,1	//ÈıÒ¶³æ¿¨Æ¬//Tri Joint Card
+3,4309,1	//ÃçÍŞÅåÈğË¿¿¨Æ¬//Parasite Card
+3,4310,1	//¿ñ±©¸ç²¼Áé¿¨Æ¬//Panzer Goblin Card
+3,4311,1	//¹ûÊ÷¹ê¿¨Æ¬//Permeter Card
+3,4312,1	//º£±ª±¦±¦¿¨Æ¬//Seal Card
+3,4313,1	//ĞàÄ§¿¨Æ¬//Punk Card
+3,4314,1	//Ã·ÄÉº£¿û¿¨Æ¬//Penomena Card
+3,4315,1	//µ¥ÑÛ³æ¿¨Æ¬//Pest Card
+3,4316,1	//Î±ÌìÊ¹¿¨Æ¬//False Angel Card
+3,4319,1	//Ë®Áé¹ê¿¨Æ¬//Freezer Card
+3,4321,1	//ÍÃË¹À­¿¨Æ¬//Hylozoist Card
+3,4322,1	//ÊŞÈËÕ½Ê¿³¤¿¨Æ¬//High Orc Card
+3,4323,1	//¿¨ÂØ±¦±¦¿¨Æ¬//Garm Baby Card
+3,4325,1	//ÄñÈË¹ş±È¿¨Æ¬//Harpy Card
+3,4326,1	//º£Ì¡¿¨Æ¬//Sea-Otter Card
+3,4327,1	//Ñªºûµû¿¨Æ¬//Bloody Butterfly Card
+3,4328,1	//Ñı¾ı¿¨Æ¬//Hyegun Card
+3,4329,1	//°¢ĞŞÂŞ¿ñÕ½Ê¿¿¨Æ¬//Phendark Card
+3,4331,1	//»ğÑæ¹ê¿¨Æ¬//Heater Card
+
+//New cards
+3,4332,1	//·ÏÌúÅ¯Â¯¿¨Æ¬//Waste Stove Card
+3,4333,3	//¶¾ÒºÄ§¿¨Æ¬//Venomous Card
+3,4334,1	//·ÏÆøÄ§¿¨Æ¬//Noxious Card
+3,4335,3	//¿ó¹¤Ä§¿¨Æ¬//Pitman Card
+3,4336,1	//ÎÂ¹ÅÁ¦°²ÌØ¿¨Æ¬//Ungoliant Card
+3,4337,1	//ÈıÒ¶Ìú¼×³æ¿¨Æ¬//Porcellio Card
+3,4338,1	//ºÚê×Ê¯¿¨Æ¬//Obsidian Card
+3,4339,1	//¿óÊ¯Ä§¿¨Æ¬//Mineral Card
+3,4340,1	//ÍæÅ¼ĞÜ¿¨Æ¬//Teddy Bear Card
+3,4341,1	//½ğÊô²¨Àû¿¨Æ¬//Metaling Card
+3,4343,1	//Ä¦¶û¿¨Æ¬//Holden Card
+3,4344,3	//Å±ÎÃ¿¨Æ¬//Anopheles Card
+3,4345,3	//Ï£¶ûÊ¿±ø¿¨Æ¬//Hill Wind Card
+3,4346,1	//éœ¡ñ½£Ê¿¿¨Æ¬//Egnigem Cenia Card
+3,4347,3	//éœ¡ñÉÌÈË¿¨Æ¬//Armeyer Dinze Card
+3,4348,1	//éœ¡ñµÁÔô¿¨Æ¬//Wikebine Tres Card
+3,4349,1	//éœ¡ñ·şÊÂ¿¨Æ¬//Errende Ebecee Card
+3,4350,3	//éœ¡ñÄ§·¨Ê¦¿¨Æ¬//Laurell Weinder Card
+3,4351,1	//éœ¡ñ¹­¼ıÊÖ¿¨Æ¬//Kavach Icarus Card
+3,4353,1	//Ïû·ÀÄ§¿¨Æ¬//Remover Card
+3,4354,1	//Ë«×ÓĞÇ-S58¿¨Æ¬//Gemini-S58 Card
+3,4355,3	//Ğ¡Ñı¾«¿¨Æ¬//Gremlin Card
+3,4356,1	//¶ñÄ§Ö®ÑÛ¿¨Æ¬//Beholder Card
+3,4358,1	//éœ¡ñÆïÊ¿ÁìÖ÷¿¨Æ¬//Seyren Windsor Card
+3,4360,3	//éœ¡ñÊ®×Ö´Ì¿Í¿¨Æ¬//Eremes Guile Card
+3,4362,1	//éœ¡ñÉñ¹¤½³¿¨Æ¬//Howard Alt-Eisen Card
+3,4366,1	//éœ¡ñ³¬Ä§µ¼Ê¦¿¨Æ¬//Kathryne Keyron Card
+3,4368,1	//éœ¡ñÉñÉäÊÖ¿¨Æ¬//Cecil Damon Card
+3,4369,1	//ºì·²ÄÈÍ¼¿¨Æ¬//Venatu Card
+3,4370,1	//µÏÃÒ¿Ë¿¨Æ¬//Dimik Card
+3,4371,1	//°¢¿ËÌ¹¿¨Æ¬//Archdam Card
+3,4373,1	//Ğ¡Çà¿¨Æ¬//Chung E Card
+3,4375,1	//ÊŞÈËÓ¤¶ù¿¨Æ¬//Orc Baby Card
+3,4377,3	//ÂÌ±äÉ«Áú¿¨Æ¬//Green Iguana Card
+3,4378,1	//¶íÏ£ÍĞË¹¿¨Æ¬//Gold Acidus Card
+3,4379,1	//»Ò¶íÏ£ÍĞË¹¿¨Æ¬//Blue Acidus Card
+3,4380,3	//ºì±´ÀÕË¹¿¨Æ¬//Red Ferus Card
+3,4381,1	//ÂÌ±´ÀÕË¹¿¨Æ¬//Green Ferus Card
+3,4382,1	//»ÆÅµ²©Ë¹¿¨Æ¬//Yellow Novus Card
+3,4383,3	//Åµ²©Ë¹¿¨Æ¬//Red Novus Card
+3,4384,1	//ÈıÍ·Áú¿¨Æ¬//Hydro Card
+3,4385,3	//Áúµ°¿¨Æ¬//Dragon Egg Card
+3,4387,1	//¿ñ±©Ğ°¶ñÏä¿¨Æ¬//Ancient Mimic Card
+3,4388,3	//ËÀÍöÄ§Êé¿¨Æ¬//Deathword Card
+3,4389,1	//µÈÀë×ÓÌå¿¨Æ¬//Plasma Card
+3,4390,1	//Î¢·ç¿¨Æ¬//Breeze Card
+3,4391,3	//´úĞĞĞÌÕß¿¨Æ¬//Retribution Card
+3,4392,1	//¼àÊÓÕß¿¨Æ¬//Observation Card
+3,4393,1	//°²Ï¢Õß¿¨Æ¬//Shelter Card
+3,4394,1	//Î¿ÀÍÕß¿¨Æ¬//Solace Card
+3,4395,1	//´ïÄÉÍĞË¹µÄ±¯°§¿¨Æ¬//Thanatos Maero Card
+3,4396,1	//´ïÄÉÍĞË¹µÄÔ÷ºŞ¿¨Æ¬//Thanatos Odium Card
+3,4397,1	//´ïÄÉÍĞË¹µÄ¾øÍû¿¨Æ¬//Thanatos Despero Card
+3,4400,1	//°®ÀöÉ¯¿¨Æ¬//Aliza Card
+3,4401,1	//°®ÀöÉª¿¨Æ¬//Alicel Card
+3,4402,1	//°®Àö¶í¿¨Æ¬//Aliot Card
+3,4404,1	//Æ¤Ó°Ä§¿¨Æ¬//Skogul Card
+3,4405,1	//²ÊÉ«Æ¤Ó°Ä§¿¨Æ¬//Frus Card
+3,4409,1	// Agav Card
+3,4410,1	// Echio Card
+3,4411,1	// Vanberk Card
+3,4412,1	// Isilla Card
+3,4413,1	// Hodremlin Card
+3,4414,1	// Seeker Card
+3,4415,2	// Snowier Card
+3,4416,1	// Siroma Card
+3,4417,1	// Ice Titan Card
+3,4418,1	// Gazeti Card
+3,4420,1	// Muscipular Card
+3,4421,2	// Drosera Card
+3,4422,1	// Roween Card
+3,4423,1	// Galion Card
+3,4424,3	// Stapo Card
+3,4426,1	// Byorgue Card
+3,4427,1	// Sword Guardian Card
+3,4428,1	// Bow Guardian Card
+3,4429,1	// Salamander Card
+3,4431,1	// Kasa Card
+3,4432,2	// Magmaring Card
+3,4433,1	// Imp Card
+3,4434,1	// Knocker Card
+3,4435,1	// Zombie Slaughter Card
+3,4436,2	// Ragged Zombie Card
+3,4437,2	// Hell Poodle Card
+3,4438,2	// Banshee Card
+3,4439,1	// Flame Skull Card
+3,4440,1	// Necromancer Card
+3,4442,1	// Tatacho Card
+3,4443,2	// Aqua Elemental Card
+3,4444,2	// Draco Card
+3,4445,1	// Luciola Vespa Card
+3,4447,1	// Centipede Card
+3,4448,1	// Cornus Card
+3,4449,1	// Dark Shadow Card
+3,4451,1	// Entweihen Card
+3,4452,2	// Centipede Larva Card
+3,4453,1	// Hillsrion Card

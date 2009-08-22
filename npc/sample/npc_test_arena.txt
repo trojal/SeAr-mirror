@@ -1,0 +1,104 @@
+// ------------------------------------------------------------------
+// 			?????¡@¤e
+// ------------------------------------------------------------------
+
+// ??????úé???
+//map: prontera.gat
+//map: prt_are_in.gat
+//map: force_1-1.gat
+
+// ???????û¢??
+prt_are_in.gat	mapflag	nomemo	dummy
+prt_are_in.gat	mapflag	noteleport	dummy
+prt_are_in.gat	mapflag	nosave	prontera.gat,156,191
+force_1-1.gat	mapflag	nomemo	dummy
+force_1-1.gat	mapflag	noteleport	dummy
+force_1-1.gat	mapflag	nosave	prontera.gat,156,191
+
+// ??????¦V???£t?
+prontera.gat,160,185,0	script	????¦V??	116,{
+	mes "????¦V???§Š?????";
+	next;
+	menu "§Š?",L_GOARENA,"???",L_YAME;
+L_GOARENA:
+	warp "prt_are_in.gat",31,82;
+	close;
+L_YAME:
+	close;
+}
+
+// ¢r?û¼???§û¼??¤š?
+prt_are_in.gat,29,79,0	script	????????	116,{
+	if( getmapusers("force_1-1.gat")>0 ) goto L_WAIT;
+	mes "??????????Lv1??";
+	mes "Í¡P?????";
+	menu "??",L_GOLV1,"???",L_YAME;
+L_GOLV1:
+	if( getmapusers("force_1-1.gat")>0 ) goto L_WAIT;
+	disablenpc "fc103-1";
+	disablenpc "fc105";
+	disablenpc "fc107";
+	addtimer 5000,"arenatestev0000";
+	warp "force_1-1.gat",99,12;
+	end;
+L_WAIT:
+	mes "??Í¡P??©˜???????";
+	mes "?????¢r??????";
+L_YAME:
+	close;
+}
+
+// ?§û¼???¥ø?§???
+force_1-1.gat,99,12,0	script	arenatestev0000	-1,{
+	announce "??¥ø???úğ???",3;
+	addtimer 10000,"arenatestev0001";
+}
+
+// ûÂ??????¤š??MOB?¡@¤e
+force_1-1.gat,99,12,0	script	arenatestev0001	-1,{
+	killmonster "force_1-1.gat","arenatestev1000";
+	monster "force_1-1.gat",25,25,"--ja--",1002,1,"arenatestev1000";
+	monster "force_1-1.gat",20,25,"--ja--",1002,1,"arenatestev1000";
+	monster "force_1-1.gat",25,20,"--ja--",1002,1,"arenatestev1000";
+	monster "force_1-1.gat",30,25,"--ja--",1002,1,"arenatestev1000";
+	monster "force_1-1.gat",25,30,"--ja--",1002,1,"arenatestev1000";
+	set $arenatest00,5;
+	disablenpc "fc101";
+	disablenpc "fc103";
+	warp "force_1-1.gat",25,26;
+	enablenpc "fc103-1";
+	enablenpc "fc105";
+	enablenpc "fc107";
+	announce "30¥ø?¥›??ş˜??",19;
+	addtimer 30000,"arenatestev8000";
+}
+
+// ¥X????
+force_1-1.gat,25,26,0	script	arenatestev1000	-1,{
+	set $arenatest00, $arenatest00 - 1;
+	if( $arenatest00 > 0 ) goto L_CONT;
+	deltimer "arenatestev8000";
+	announce "?????!!",3;
+	enablenpc "fc101";
+	enablenpc "fc103";
+	areaannounce "prt_are_in.gat",25,75,40,90,
+		strcharinfo(0) + " ????????Lv1????????",0;
+	addtimer 5000,"arenatestev9000";
+L_CONT:
+	end;
+}
+
+// ??????
+force_1-1.gat,25,26,0	script	arenatestev8000	-1,{
+	set $arenatest00,99;
+	killmonster "force_1-1.gat","arenatestev1000";
+	announce "???????!!",3;
+	areaannounce "prt_are_in.gat",25,75,40,90,
+		strcharinfo(0) + " ????????Lv1?ûº¦????",0;
+	addtimer 5000,"arenatestev9000";
+}
+
+// ????????
+force_1-1.gat,25,26,0	script	arenatestev9000	-1,{
+	warp "prontera.gat",156,191;
+}

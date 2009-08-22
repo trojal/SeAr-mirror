@@ -1,0 +1,303 @@
+//===== Athena 文档 =======================================
+//= SeAthena 道具 Bonuses 列表
+//===== 制作 ==============================================
+//= Inkfish
+//===== 版本 ==============================================
+//= 1.1.20090805
+//=========================================================
+//= 1.0.20090803 - 标准化文档 [Inkfish]
+//= 1.1.20090805 - 添加缺失bonus [Inkfish]
+//===== 描述 ==============================================
+//= 主要关于 bonus/bonus2/bonus3/bonus4/bonus5 参数及用法
+//=========================================================
+
+//=========================================================
+//=人物基本属性
+//=========================================================
+bonus bStr,n;				STR + n
+bonus bAgi,n;				AGI + n
+bonus bVit,n;				VIT + n
+bonus bInt,n;				INT + n
+bonus bDex,n;				DEX + n
+bonus bLuk,n;				LUK + n
+bonus bAgiVit	,n;			AGI + n, VIT + n
+bonus bAgiDexStr,n;			AGI + n, DEX + n, STR + n
+bonus bAllStats,n;			STR + n, AGI + n, VIT + n, INT + n, DEX + n, LUK + n
+
+//=========================================================
+//=人物其他属性
+//=========================================================
+bonus bHit,n;				命中 + n
+bonus bHitRate,n;			命中 + n%
+bonus bCritical,n;			爆击 + n
+bonus bCriticalRate,n;			爆击 + n%
+bonus2 bCriticalAddRace,n,r;		对种族 r 增加 n 爆击率 (r值见备注1)
+bonus bFlee,n;				回避 + n
+bonus bFleeRate,n;			回避 + n%
+bonus bFlee2,n;				完全回避 + n
+bonus bFlee2Rate,n;			完全回避 + n%
+bonus bSpeedRate,n;			移动速度 + n% (最大值有效)
+bonus bSpeedAddRate,n;			移动速度 + n% 
+bonus bAspd,n;				攻击速度 + n
+bonus bAspdRate,n;			攻击速度 + n%
+bonus bAtkRange,n;			攻击距离 + n
+bonus bCastrate,n;			咏唱时间 + n%
+bonus2 bCastrate,n,x;			增加 x% 技能 n 的咏唱时间 (支持技能名)
+bonus bDelayrate,n;			延迟时间 + n%
+
+//=========================================================
+//=攻击修正
+//=========================================================
+bonus bAtk,n;				武器攻击力 + n
+bonus bAtk2,n;				精炼攻击力 + n
+bonus bMatk,n;				最大魔法攻击力 + n
+bonus bMatk2,n;				最小魔法攻击力 + n
+bonus bAtkRate,n;			物理攻击力 + n%
+bonus bBaseAtk,n;			基础攻击力 + n
+bonus bMatkRate,n;			魔法攻击力 + n%
+
+//=========================================================
+//=防御修正
+//=========================================================
+bonus bDef,n;				装备防御 + n
+bonus bDef2,n;				VIT防御 + n
+bonus bDefRate,n;			装备防御 + n%
+bonus bDef2Rate,n;			VIT防御 + n%
+bonus bMdef,n;				装备魔法防御 + n
+bonus bMdef2,n;				INT魔法防御 + n
+bonus bMdefRate,n;			装备魔法防御 + n%
+bonus bMdef2Rate,n;			INT魔法防御 + n%
+bonus bIgnoreDefRace,n;			无视 n 种族物理防御 (n值见备注1)
+bonus bIgnoreDefEle,n;			无视 n 属性物理防御 (n值见备注2)
+bonus bIgnoreMDefRace;			无视 n 种族魔法防御 (n值见备注1)
+bonus bIgnoreMDefEle;			无视 n 属性魔法防御 (n值见备注2)
+bonus bIgnoreMdefRate,n;		无视对方 n% 魔法防御
+bonus bDefRatioAtkRace,n;		刺穿 n 种族物理防御 (n值见备注1)
+bonus bDefRatioAtkEle,n;		刺穿 n 属性物理防御 (n值见备注2)
+bonus bIgnoreDefMob,n;			无视 n 魔物防御 (n: 0: 非BOSS, 1: 所有怪)
+bonus2 bIgnoreDefRate,n,x;		无视种族为 n 的对方 x% 的物理防御力 (n值见备注1)
+bonus2 bIgnoreMdefRate,n,x;		无视种族为 n 的对方 x% 的魔法防御力 (n值见备注1)
+
+//=========================================================
+//=HP SP
+//=========================================================
+bonus bMaxHP,n;				HP上限 + n
+bonus bMaxSP,n;				SP上限 + n
+bonus bMaxHPrate,n;			HP上限 + n% 
+bonus bMaxSPrate,n;			SP上限 + n%
+bonus bHPrecovRate,n;			HP自然恢复率 + n%
+bonus bSPrecovRate,n;			SP自然恢复率 + n%
+bonus bSPGainValue,n;			以物理攻击杀死魔物时得到 n SP
+bonus bHPGainValue,n;			以物理攻击杀死魔物时得到 n HP
+bonus bSPDrainValue,n;			物理攻击时，SP 变化 n 
+bonus2 bSPDrainValue,n,x;		物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
+bonus2 bSPVanishRate,n,x;		攻击时 n/10 % 几率减少 x% 对方SP
+bonus2 bHPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到HP
+bonus2 bSPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到SP
+bonus3 bSPDrainRate,n,x,y;		物理攻击时, n 几率把伤害的 x% 应用到 y 的SP (y 0: 自己, 1: 对方)
+bonus2 bSPGainRace,n,x;			物理攻击杀死 n 种族怪物时，得到 x 点SP (种族n在mob_race2_db.txt中定义)
+bonus2 bHPRegenRate,n,x;		每 x 毫秒得到 n HP
+bonus2 bHPLossRate,n,x;			每 x 毫秒失去 n HP
+bonus2 bSPRegenRate,n,x;		每 x 毫秒得到 n SP
+bonus2 bSPLossRate,n,x;			每 x 毫秒失去 n SP
+
+//=========================================================
+//=人物防御性能力
+//=========================================================
+bonus bRestartFullRecover,n;		复活时, HP SP全满。n无意义
+bonus bNoCastCancel,n;			除GVG场地外，咏唱不会中断。n无意义
+bonus bNoCastCancel2,n;			咏唱不会中断。n无意义
+bonus bNoSizeFix,n;			攻击伤害无视体型。n无意义
+bonus bNoWeaponDamage,n;		免疫所有物理攻击。n无意义
+bonus bNoMagicDamage,n;			免疫所有魔法技能。n无意义
+bonus bNoGemStone,n;			除随机技能需要1个黄色魔力矿石外，技能无需魔力矿石。n无意义
+bonus bIntravision,n;			可以看见隐形单位。n无意义
+bonus bNoRegen,n;			阻止 n 再生 (n: 1=HP, 2=SP)
+bonus bNoKnockback,n;			无法被击退。n无意义
+bonus bPerfectHide,n;			不被攻击。n无意义
+bonus bUnstripable,n;			全部装备无法被脱。n无意义
+bonus bUnstripableWeapon,n;		武器无法被脱。n无意义
+bonus bUnstripableArmor,n;		盔甲无法被脱。n无意义
+bonus bUnstripableHelm,n;		头盔无法被脱。n无意义
+bonus bUnstripableShield,n;		盾牌无法被脱。n无意义
+bonus bUnbreakable,n;			全部装备无法损坏。n无意义
+bonus bUnbreakableWeapon,n;		武器无法损坏。n无意义
+bonus bUnbreakableArmor,n;		盔甲无法损坏。n无意义
+bonus bUnbreakableHelm,n;		头盔无法损坏。n无意义
+bonus bUnbreakableShield,n;		盾牌无法损坏。n无意义
+bonus bUnbreakableGarment,n;		披肩无法损坏。n无意义
+bonus bUnbreakableShoes,n;		鞋子无法损坏。n无意义
+bonus bShortWeaponDamageReturn,n;	反射 n% 近距离物理伤害
+bonus bLongWeaponDamageReturn,n;	反射 n% 远距离物理伤害
+bonus bMagicDamageReturn,n;		n% 几率反射全部魔法伤害
+
+//=========================================================
+//=人物攻击性能力
+//=========================================================
+bonus bAtkEle,n;			物理攻击附加属性 n (n值见备注2)
+bonus bDefEle,n;			防御附加属性 n (n值见备注2)
+bonus bSplashRange n;			溅射伤害范围 n (n值见备注3)
+bonus bSplashAddRange n;		溅射伤害范围 + n (n值见备注3)
+bonus bUseSPrate,n;			SP消耗 + n%
+bonus bDoubleRate,n;			二刀连击率 n% (所有武器有效 | 最大值有效)
+bonus bDoubleAddRate,n;			二刀连击率 + n% (所有武器有效)
+bonus bPerfectHitRate,n;		必中攻击率 n% (最大值有效)
+bonus bPerfectHitAddRate,n;		必中攻击率 + n%
+bonus2 bExpAddRace,n,x;			对种族 r 增加 n% 经验 (r值见备注1)
+bonus2 bWeaponComaRace,x,y;		攻击时，y/100% 使种族为 x 的对方得到濒死状态。(x值见备注1)
+bonus2 bWeaponComaEle,x,y;		攻击时，y/100% 使属性为 x 的对方得到濒死状态。(x值见备注2)
+bonus bMonsterAddDropItem,n;		增加 n% 掉率
+bonus bAddStealRate,n;			增加偷窃成功率 n/100%
+bonus2 bAddSkillBlow,x,y;		使用技能 x 时击退 y 格 (支持技能名)
+bonus2 bAddItemHealRate,n,x;		使用 n 类型的物品时，恢复量 +x% (也可以直接使用ItemID代替。n类型在item_group_db.txt中定义)
+bonus bClassChange,n;			n/100% 几率是魔物变形
+bonus bBreakWeaponRate,n;		n% 几率破坏对方武器
+bonus bBreakArmorRate,n;		n% 几率破坏对方盔甲
+bonus2 bRandomAttackIncrease,n,r;	r% 几率增加物理攻击伤害 n%
+
+//=========================================================
+//=伤害修正
+//=========================================================
+bonus2 bAddSize,n,x;			物理攻击时，对体型 n 增加 x% 的伤害 (n值见备注5)
+bonus2 bMagicAddSize,n,x;		魔法攻击时，对体型 n 增加 x% 的伤害 (n值见备注5)
+bonus2 bSubSize,n,x;			减少来自体型 n 的伤害 x% (n值见备注5)
+bonus2 bAddRace,n,x;			物理攻击时，对种族 n 增加 x% 的伤害 (n值见备注1)
+bonus2 bMagicAddRace,n,x;		魔法攻击时，对种族 n 增加 x% 的伤害 (n值见备注1)
+bonus2 bSubRace,n,x;			减少来自种族 n 的伤害 x% (n值见备注1)
+bonus2 bAddEle,n,x;			物理攻击时，对属性 n 增加 x% 的伤害 (n值见备注2)
+bonus2 bMagicAddEle,n,x 		魔法攻击时，对属性 n 增加 x% 的伤害 (n值见备注2)
+bonus2 bSubEle,n,x;			减少来自属性 n 的伤害 x% (n值见备注2)
+bonus2 bAddDamageClass,n,x;		对id为 n 的魔物/职业id为 n 的玩家增加 x% 物理攻击伤害
+bonus2 bAddMagicDamageClass,n,x;	对id为 n 的魔物/职业id为 n 的玩家增加 x% 魔法攻击伤害
+bonus2 bAddDefClass,n,x;		减少id为 n 的魔物/职业id为 n 的玩家给与的物理攻击伤害 x% 
+bonus2 bAddMDefClass,n,x;		减少id为 n 的魔物/职业id为 n 的玩家给与的魔法攻击伤害 x% 
+bonus2 bAddDamageByClass,n,x;		被 n 魔物攻击时增加伤害 x%
+bonus2 bAddRace2,n,x;			对种族 n 的敌人的伤害增加 x% (种族n在mob_race2_db.txt中定义)
+bonus2 bSubRace2,n,x;			对种族 n 的敌人的伤害减少 x% (种族n在mob_race2_db.txt中定义)
+bonus bNearAtkDef,n;			减少 n% 近距离物理攻击伤害
+bonus bLongAtkDef,n;			减少 n% 远距离攻击伤害
+bonus bMagicAtkDef,n;			减少 n% 近距离魔法攻击伤害
+bonus bMiscAtkDef,n;			减少 n% 特殊攻击伤害 (陷阱, 猎鹰, ... 等)
+bonus bLongAtkRate,n;			增加 n% 远距离攻击伤害
+bonus bCritAtkRate,n;			增加 n% 爆击伤害
+bonus bCriticalDef,n;			减少 n% 被爆击几率
+bonus2 bFixDamage,t,n;			在 t 条件下攻击伤害固定为 n (t值见备注10)
+bonus2 bBonusDamage,t,n;		在 t 条件下攻击固定增加伤害 n (t值见备注10)
+bonus2 bFixDamageWhenHit,t,n;		在 t 条件下受到攻击伤害固定为 n (t值见备注10)
+
+//=========================================================
+//=技能效果修正
+//=========================================================
+bonus bHealPower,n;			增加 n% 技能治愈效果
+bonus bHealPower2,n;			增加 n% 被技能治愈效果
+bonus2 bSkillAtk,n,x;			增加技能 n 伤害 x% (支持技能名)
+bonus2 bSkillHeal,n,x;			使用时，增加治愈技能 n 效果 x% (支持技能名)
+bonus2 bSkillHeal2,n,x;			被使用时，增加治愈技能 n 效果 x% (支持技能名)
+
+//=========================================================
+//=魔物死亡奖励
+//=========================================================
+bonus2 bGetZenyNum,n,x;			杀死魔物时, x% 几率掉落 1 ~ n zeny (不可叠加) (x值见备注7)
+bonus2 bAddGetZenyNum,n,x;		杀死魔物时, x% 几率掉落 1 ~ n zeny (可叠加) (x值见备注7)
+bonus2 bAddMonsterDropItem,n,x;		杀死魔物时, x% 几率掉落物品 n (可叠加) (x值见备注6)
+bonus2 bAddMonsterDropItemGroup,n,x;	杀死魔物时, x% 几率得到 n 组道具中的1个 (n类型在item_group_db.txt中定义) (x值见备注6)
+bonus3 bAddMonsterDropItem,n,x,y;	杀死 x 种族魔物时, y% 几率掉落物品 n (可叠加) (x值见备注1，y值见备注6)
+bonus3 bAddMonsterDropItemGroup,n,x,y;	杀死 x 种族魔物时, x% 几率得到 n 组道具中的1个 (n类型在item_group_db.txt中定义) (x值见备注1) (y值见备注6)
+
+//=========================================================
+//=状态
+//=========================================================
+bonus2 bResEff,e,x;			减少 x/100% 产生 e 状态的几率。(e值见备注4)
+bonus2 bAddEff,e,x;			攻击时 x/100% 使对方产生 e 状态。(e值见备注4)
+bonus2 bAddEff2,e,x;			攻击时 x/100% 使自己产生 e 状态。(e值见备注4)
+bonus2 bAddEffWhenHit,e,x;		受到攻击时 x/100% 使对方产生 e 状态。(e值见备注4)
+bonus3 bAddEff,n,x,y;			攻击时 x/100% 几率在 y 条件下产生 n 状态 (n值见备注4)(y值见备注8)
+bonus3 bAddEffWhenHit,n,x,y;		受到攻击时 x/100% 几率在 y 条件下产生 n 状态 (n值见备注4)(y值见备注8)
+bonus3 bAddEffOnSkill,s,x,y;		y/100% 几率在使用 s 技能时对技能对象产生 x 状态 (支持技能名)(x值见备注4)
+bonus4 bAddEffOnSkill,s,x,y,t;		y/100% 几率在使用 s 技能时在 t 条件下产生 x 状态 (支持技能名)(x值见备注4)(t值见备注8)
+
+//=========================================================
+//=自动咏唱
+//=========================================================
+bonus3 bAutoSpell,n,x,y;		攻击时 y/10% 几率自动咏唱等级 x 的技能 n (支持技能名)					
+bonus3 bAutoSpellWhenHit,x,y,n;		被攻击时 y/10% 几率自动咏唱等级 x 的技能 n (支持技能名)
+bonus4 bAutoSpell,n,x,y,i;		攻击时 y/10% 几率在 i 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9)
+bonus4 bAutoSpellWhenHit,n,y,x,i;	被攻击时 y/10% 几率在 i 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9)
+bonus4 bAutoSpellOnSkill,x,y,n,i;	i/10% 几率在使用 x 技能时对技能对象自动咏唱 y 技能 n 级 (支持技能名)
+bonus5 bAutoSpell,n,x,y,t,i;		攻击时 y/10% 几率在 i 和 t 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9) (t值见备注10)					   
+bonus5 bAutoSpellWhenHit,n,x,y,t,i;	被攻击时 y/10% 几率在 i 和 t 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9) (t值见备注10)
+bonus5 bAutoSpellOnSkill,x,y,n,r,i;	r/10% 几率在使用 x 技能时在 i 条件下自动咏唱 y 技能 n 级 (支持技能名) (i值见备注9)
+
+//=========================================================
+//=备注
+//=========================================================
+注1：
+	0=无形系
+	1=不死系
+	2=动物系
+	3=植物系
+	4=昆虫系
+	5=鱼贝系
+	6=恶魔系
+	7=人形系
+	8=天使系
+	9=龙系
+	10=首领级
+	11=非首领级
+注2：
+	0=无属性
+	1=水属性
+	2=地属性
+	3=火属性
+	4=风属性
+	5=毒属性
+	6=圣属性
+	7=暗属性
+	8=念属性
+	9=不死属性
+注3：
+	n 表示 (2*n+1)*(2*n+1)个单元格范围
+注4：
+	Eff_Blind	黑暗
+	Eff_Sleep	睡眠
+	Eff_Poison	中毒
+	Eff_Freeze	冰冻
+	Eff_Silence	沉默
+	Eff_Stun	晕眩
+	Eff_Curse	诅咒
+	Eff_Confusion	混乱
+	Eff_Stone	石化
+	Eff_Bleeding	出血
+注5：
+	0=小  1=中  2=大
+注6：
+	如果x未负数, x = -x*(杀死的魔物等级/10)+1
+注7：
+	如果x未负数, 最大zeny量为 -x*杀死的魔物等级
+注8：
+	ATF_SELF:	作用在自己
+	ATF_TARGET: 	作用在对方(默认激活)
+	ATF_SHORT:	在近距离攻击时(默认激活)
+	ATF_LONG:	在远距离攻击时(默认激活)
+注9：
+	0=作用在自己
+	1=作用在对方
+	2=使用随机技能等级[1~条件等级]
+	3=1+2 (随机等级, 作用在对方)
+注10：
+	第1组:	BF_SHORT:	近距离攻击	
+		BF_LONG:	远距离攻击
+		此组若不定义，则默认BF_SHORT|BF_LONG。						
+	第2组:	BF_WEAPON:	物理攻击	
+		BF_MAGIC:	魔法攻击
+		BF_MISC:	特殊技能
+		此组若不定义，则默认BF_WEAPON。
+	第3组:	BF_NORMAL:	普通攻击	
+		BF_SKILL:	技能攻击
+		此组若不定义，则BF_WEAPON时默认BF_NORMAL，否则BF_SKILL。
+注11：
+	bAddDamageClass相关，bAddMonsterDropItem相关，bAddEff相关，bAutoSpell相关，只能设定10个。超过10个的都被无视。
+注12：
+	箭矢能使用的效果只有 bCritical、bAtkEle、bHit、bAtkRange、bAddEle、bAddRace、bAddEnemy, bAddSize、bAddEff，其他都被无视
+注13：
+	bAutoSpell，bAutoSelfWhenHit，除非是对自己使用的技能或者协助技能(inf = 4/16)，否则都对对方咏唱。

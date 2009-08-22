@@ -1,0 +1,145 @@
+//========================
+// [Ú¤] The PlutoEA Project [Íõ]
+// http://opensvn.csie.org/PlutoEA
+// -----------------------------------------
+// - ÐÅÏä ½Å±¾ -
+//========================
+//= °æ±¾£º1.4
+//========================
+
+// Allow Mail Inbox reading from
+//============================================================
+prontera	mapflag	town
+izlude	mapflag	town
+moc_ruins	mapflag	town
+geffen	mapflag	town
+payon	mapflag	town
+pay_arche	mapflag	town
+alberta	mapflag	town
+aldebaran	mapflag	town
+yuno	mapflag	town
+lighthalzen	mapflag	town
+einbroch	mapflag	town
+einbech	mapflag	town
+comodo	mapflag	town
+umbala	mapflag	town
+amatsu	mapflag	town
+gonryun	mapflag	town
+ayothaya	mapflag	town
+louyang	mapflag	town
+hugel	mapflag	town
+rachel	mapflag	town
+veins	mapflag	town
+
+// Prontera
+//============================================================
+prontera,146,86,0	script	ÓÊµÝÍ²#prt::ÓÊµÝÍ²	888,{
+	mes "[ÓÊµÝÍ²]";
+	mes "ÏëÒªÊ¹ÓÃÓÊµÝÍ²µÄ»°";
+	mes "ÐèÒª130½ð±Ò£¬";
+	mes "ÇëÎÊÄãÒªÊ¹ÓÃÂð?";
+	next;
+	if (select("ÊÇµÄ:²»ÊÇ") == 1) {
+		if (Zeny < 130) {
+			mes "[ÓÊµÝÍ²]";
+			mes "½ð¶î²»×ã°¡£¬";
+			mes "ÏëÒªÊ¹ÓÃÓÊµÝÍ²µÄ»°";
+			mes "ÐèÒª130½ð±Ò£¬";
+			close;
+		}
+		mes "[ÓÊµÝÍ²]";
+		mes "¸ÐÐ»ÄúµÄÊ¹ÓÃ";
+		close2;
+		set Zeny,Zeny-130;
+		openmail;
+		end;
+	}
+	mes "[ÓÊµÝÍ²]";
+	mes "ÒÑ¾­È¡ÏûÁË";
+	close;
+}
+
+prontera,275,213,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2prt	888
+prontera,34,212,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#3prt	888
+
+// Izlude
+//============================================================
+izlude,136,94,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#iz	888
+
+// Morroc
+//============================================================
+moc_ruins,72,166,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#1moc	888
+moc_ruins,156,52,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2moc	888
+
+// Geffen
+//============================================================
+geffen,115,67,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#gef	888
+geffen,199,125,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2gef	888
+
+// Payon
+//============================================================
+payon,191,104,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#pay	888
+payon,171,226,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2pay	888
+pay_arche,55,127,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#3pay	888
+
+// Alberta
+//============================================================
+alberta,90,60,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#alb	888
+alberta,30,240,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2alb	888
+
+// Al De Baran
+//============================================================
+aldebaran,135,122,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#alde	888
+
+// Juno
+//============================================================
+yuno,148,187,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#yuno	888
+yuno,332,108,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2yuno	888
+
+// Lightalzen
+//============================================================
+lighthalzen,164,85,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#lht	888
+lighthalzen,196,320,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2lht	888
+
+// Einbroch and Einbech
+//============================================================
+einbroch,231,215,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#ein	888
+einbroch,77,202,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#2ein	888
+einbech,182,124,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#3ein	888
+
+// Comodo
+//============================================================
+comodo,200,150,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#cmd	888
+
+// Umbala
+//============================================================
+umbala,104,155,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#um	888
+
+// Amatsu
+//============================================================
+amatsu,102,146,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#ama	888
+
+// Gonryun
+//============================================================
+gonryun,152,117,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#gon	888
+
+// Ayothaya
+//============================================================
+ayothaya,205,169,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#ayo	888
+
+// Louyang
+//============================================================
+louyang,204,100,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#lou	888
+
+// Hugel
+//============================================================
+hugel,86,168,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#hu	111
+
+// Rachel
+//============================================================
+rachel,122,146,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#ra	888
+
+// Veins
+//============================================================
+veins,218,123,0	duplicate(ÓÊµÝÍ²)	ÓÊµÝÍ²#ve	888
+

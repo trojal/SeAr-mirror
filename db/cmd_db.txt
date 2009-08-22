@@ -1,0 +1,27 @@
+//自定义玩家指令文件
+//<玩家指令>,<@指令等级>,<#指令等级>,<参数数量>,{脚本}
+//	@cmd_para$[]为参数
+//	参数数量最大值为128,即@cmd_para$[127]
+//	数字参数请使用atoi(@cmd_para$[])
+//举例:
+//provoke,60,60,{ sc_start SC_PROVOKE,30000,1; }
+//testcommand,99,99,{ announce "看到此内容则证明自定义指令系统生效",3; }
+
+//--> 免费版玩家指令上限为5条 <--
+
+//打开悬赏窗口
+w&r,0,99,0,{ if ((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; }
+
+//租赁指令
+rentitem,99,99,2,{ rentitem atoi(@cmd_para$[0]),atoi(@cmd_para$[1]); }
+
+//给全服物品, 仅支持id，不支持物品名
+//@giveall 4001 10 -> 给在线每人10张波利卡片
+//@giveall 1 1000000 -> 给在线每人100W
+//@giveall 2 100 -> 给在线每人100点points
+//@giveall 3 50 -> 给在线每人50点cash
+giveall,99,99,2,{ callfunc "Give_to_All"; }
+
+//设置变量
+//set PC_Score 100000
+set,99,99,2,{ setd @cmd_para$[0],@cmd_para$[1]; }

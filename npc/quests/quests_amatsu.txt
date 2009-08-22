@@ -1,0 +1,1347 @@
+//==================================
+// [冥] The PlutoEA Project [王]
+// http://opensvn.csie.org/PlutoEA
+// ---------------------------------
+// - 摩摩塔乐 任务脚本 - 
+//===================================
+// 版本：1.2
+//===================================
+
+amatsu.gat,223,235,4	script	Publisher	763,{
+	if (event_momo > 4) goto Lfin;
+	if ((event_momo >= 1) && (event_momo <= 4)) goto Lget;
+	mes "[Publisher]";
+	mes "Hello~~!!";
+	mes "Our ^00B6FFScroll Publishing Company^000000";
+	mes "is professionally publishing";
+	mes "tales.";
+	next;
+	mes "[Publisher]";
+	mes "We established";
+	mes "^3366FFMomotaro Field Trip^000000";
+	mes "to celebrate ^00B6FF<Momotaro Story>^000000";
+	mes "selling over a million copies.";
+	next;
+	mes "[Publisher]";
+	mes "Become Momotaro and eliminate";
+	mes "Dokebis, just like in the story!";
+	mes "There will also be rewards.";
+	next;
+	menu "What is Momotaro Story?!",-,"I want to try!",L1,"I'm busy right now...",L2;
+		mes "[Publisher]";
+		mes "Eh~!? How can you not know about";
+		mes "Momotaro? Don't they have this";
+		mes "tale in Rune-Midgard?? Well...";
+		mes "Let me tell you the story.";
+		next;
+		mes "[Publisher]";
+		mes "Long ago, there lived an old";
+		mes "married couple. They were happy,";
+		mes "but didn't have any children.";
+		next;
+		mes "[Publisher]";
+		mes "One day, while old lady was doing";
+		mes "the laundry, she found a humongous";
+		mes "peach. She cut it in half and...";
+		mes "'Poof!' There was a baby inside!";
+		next;
+		mes "[Publisher]";
+		mes "The old man and lady were shocked.";
+		mes "They decided to adopt that baby,";
+		mes "and give him their love...";
+		next;
+		mes "[Publisher]";
+		mes "That baby grew so fast, like that";
+		mes "beanstalk from 'Jack and";
+		mes "Beanstalk' and became a strong boy";
+		mes "in only a few days.";
+		next;
+		mes "[Publisher]";
+		mes "That's boy's name was...";
+		mes "<Momotaro>!!!";
+		mes "Momotaro traveled to eliminate";
+		mes "dokebis that were harassing";
+		mes "the towners.";
+		next;
+		mes "[Publisher]";
+		mes "He became friends with";
+		mes "^3151FFYoyo, Picky, and Desert Wolf^000000";
+		mes "and eliminated all of the Dokebis.";
+		mes "then he lived happily ever after";
+		mes "with the old couple.";
+		next;
+		mes "[Publisher]";
+		mes "How was it?";
+		mes "Great, right?";
+		mes "I mean, this story sold a million";
+		mes "copies!";
+		close;
+L1:
+		mes "[Publisher]";
+		mes "Yay-! You look excited!";
+		mes "You'll be ready to go soon.";
+		mes "Please fill out this registration";
+		mes "card.";
+		next;
+		mes "[Publisher]";
+		mes ".................";
+		mes "......Mm.....Let's see.....";
+		mes ".............Good!";
+		mes "Alright, then!";
+		mes "Let it begin~~~!!!!!!!!!";
+		mes "<Momotaro Field Trip>~!";
+		close2;
+		warp "ama_test",52,35;
+		end;
+L2:
+		mes "[Publisher]";
+		mes "Eh?";
+		mes "...But there are sweet rewards";
+		mes "waiting...";
+		close;
+Lget:
+	mes "[Publisher]";
+	mes "How was it? Did you enjoy the event?";
+	mes "I hope the arrangements at the event hall allowed you to spend an enjoyable time there.";
+	next;
+	if (event_momo >= 1 && event_momo < 4)
+	{
+		switch(rand(1,10))
+		{
+		case 1: getitem 622,1; break; //rainbow carrot
+		case 2: getitem 627,1; break; //sweet milk
+		case 3: getitem 629,1; break; //singing flower
+		case 4: getitem 632,1; break; //fatty chubby earthworm
+		case 5: getitem 623,1; break; //earthworm the dude
+		case 6: getitem 619,1; break; //unripe apple
+		case 7: getitem 621,1; break; //bitter herb
+		case 8: getitem 620,1; break; //orange juice
+		case 9: getitem 625,1; break; //rusty iron
+		case 10: getitem 624,1; break; //rotten fish
+		}
+	}
+
+//Am Mut successful finish unknown
+	if (event_momo == 4)
+	{
+		switch(rand(1,10))
+		{
+		case 1: getitem 659,1; break; //her heart
+		case 2: getitem 633,1; break; //sweet potato
+		case 3: getitem 634,1; break; //tropical banana
+		case 4: getitem 639,1; break; //armlet of obedience
+		case 5: getitem 636,1; break; //no recipient
+		case 6: getitem 628,1; break; //well-dried bone
+		case 7: getitem 637,1; break; //old broom
+		case 8: getitem 635,1; break; //orc trophy
+		case 9: getitem 626,1; break; //monster juice
+		case 10: getitem 641,1; break; //contract in shadow
+		}
+	}
+	set event_momo,5;
+	mes "[Publisher]";
+	mes "Well then, I will give you a small present which I have prepared.";
+	mes "May the legend be widely loved also in the future......";
+	close;
+Lfin:
+	mes "[Publisher]";
+	mes "We have a nice weather today, don't we...... It is a perfect day to dry the futon.";
+	close;
+}
+//=====================================================================
+ama_test.gat,50,44,4	script	Event Hall Staff	109,{
+	mes "[Satoshi]";
+	mes "Welcome to <Momotaro Field Trip>";
+	next;
+	mes "[Satoshi]";
+	mes "I'm Satoshi who is in charge of the";
+	mes "waiting room in <Momotaro Field";
+	mes "Trip>.";
+	next;
+	mes "[Satoshi]";
+	mes "Originally, I was working for the";
+	mes "publishing company, but we lacked";
+	mes "workers for the Field Trip...";
+	mes "But working here is much better!";
+	mes "Now I just watch people trying to";
+	mes "accomplish the mission. Heh hehe~";
+	next;
+	mes "[Satoshi]";
+	mes "..............";
+	mes "Just kidding";
+	mes "^111111*Wipes away sweat*^000000";
+	next;
+	mes "[Satoshi]";
+	mes "Well, let me explain";
+	mes "about the rules in the Field Trip";
+	next;
+	mes "[Satoshi]";
+	mes "First of all...Did you hear";
+	mes "about the story from the";
+	mes "publisher?";
+	next;
+	menu "Yes",L1,"No",-;
+		mes "[Satoshi]";
+		mes "Eh? You can't just";
+		mes "skip the story";
+		mes "when you enter the field";
+		mes "trip! I can't allow you to";
+		mes "do that as a Momotaro's";
+		mes "fan!!!";
+		next;
+		mes "[Satoshi]";
+		mes "Please listen to the story";
+		mes "from the publisher.";
+		mes "Thank you.";
+		mes "Bye~~";
+		close2;
+		warp "amatsu.gat",223,230;
+		end;
+L1:
+		mes "[Satoshi]";
+		mes "Hehe...Good.";
+		mes "Momotaro's Story is our";
+		mes "pride. It's the best story EVER.";
+		mes "Hahaha!!!";
+		next;
+		mes "[Satoshi]";
+		mes "...Hmmhmm.";
+		next;
+		mes "[Satoshi]";
+		mes "The Field Trip is simple.";
+		mes "Go inside and eliminate";
+		mes "Dokebis bravely!!!";
+		mes "Just like Momotaro!!!";
+		mes "Understand? Bravely!!!";
+		next;
+		mes "[Satoshi]";
+		mes "In addition, there are three";
+		mes "things you need to know.";
+		next;
+		mes "[Satoshi]";
+		mes "First....";
+		mes "You can't come back once you clear";
+		mes "the field trip. Keep that in mind.";
+		next;
+		mes "[Satoshi]";
+		mes "Secondly...";
+		mes "Q-pet is prohibited";
+		mes "inside of the field trip.";
+		mes "if you are with a pet,";
+		mes "please change it to egg status.";
+		next;
+		mes "[Satoshi]";
+		mes "And finally...";
+		mes "One person can be on the";
+		mes "field trip for 6 minutes.";
+		next;
+		mes "[Satoshi]";
+		mes "Well then, Please";
+		mes "wait for you turn";
+		mes "in the waitiSng room.";
+		mes "Good luck in fighting!!";
+		close;
+OnInit:
+	waitingroom "Event Hall Waiting Room",1,"Event Hall Staff::OnMax";
+OnInitCopy:
+	enablewaitingroomevent "Event Hall Staff";
+	areawarp "ama_test.gat",30,78,68,120,"amatsu.gat",223,230;
+	disablenpc "Manager#Momotaro";
+	enablenpc "Grandpa#Momotaro";
+	enablenpc "Grandma#Momotaro";
+	donpcevent "#MomotaroTimer::OnStopTimer";
+	killmonsterall "ama_test.gat";
+	end;
+OnMax:
+	warpwaitingpc "ama_test.gat",51,85;
+	disablewaitingroomevent "Event Hall Staff";
+	disablenpc "Manager#Momotaro";
+	enablenpc "Grandpa#Momotaro";
+	enablenpc "Grandma#Momotaro";
+	donpcevent "#MomotaroActivator::OnMomoInit";
+	end;
+}
+
+ama_test.gat,1,1,0	script	#MomotaroTimer	-1,{
+OnStartTimer:
+	initnpctimer;
+	end;
+OnTimer180000:
+	if(!isloggedin($MomotaroRID))goto s_Cleanup;
+	mapannounce "ama_test.gat","Timer: 3 Minutes left.",8;
+	end;
+OnTimer300000:
+	if(!isloggedin($MomotaroRID))goto s_Cleanup;
+	mapannounce "ama_test.gat","Timer: 1 Minute left.",8;
+	end;
+OnTimer360000:
+	if(!isloggedin($MomotaroRID))goto s_Cleanup;
+	mapannounce "ama_test.gat","Timer: Beep- Beep- Beep- Time's up.",8;
+OnTimer362500:
+	areawarp "ama_test.gat",30,78,68,120,"amatsu.gat",223,230;
+	goto s_Cleanup;
+
+
+OnTimer20000:
+OnTimer40000:
+OnTimer60000:
+OnTimer80000:
+OnTimer100000:
+OnTimer120000:
+OnTimer140000:
+OnTimer160000:
+OnTimer200000:
+OnTimer220000:
+OnTimer240000:
+OnTimer260000:
+OnTimer280000:
+OnTimer320000:
+OnTimer340000:
+	if(!isloggedin($MomotaroRID))goto s_Cleanup;
+	end;
+
+OnCleanUp:
+s_Cleanup:
+	stopnpctimer;
+	set $Momotaro,0;
+	set $MomoDokebi,0;
+	set $MomoDokebi2,0;
+	set $MomotaroRID,0;
+	mapannounce "ama_test.gat","The current player has exited. The waiting room will now open again.",8;
+	disablenpc "Manager#Momotaro";
+	donpcevent "Event Hall Staff::OnInitCopy";
+	end;
+
+OnStopTimer:
+	stopnpctimer;
+	end;
+
+}
+
+ama_test.gat,51,85,0	script	#MomotaroActivator	139,1,1,{
+	if($Momotaro)end;
+	set $Momotaro,1;
+	set $MomotaroRID,getcharid(3);
+	areaannounce "ama_test.gat",30,78,68,120,"Timer: The Timer has been activated. You have 6 minutes. Annihilate the monsters in time!",8;
+	donpcevent "#MomotaroTimer::OnStartTimer";
+	mes "[Grandpa]";
+	mes "Arrrk!!!";
+	next;
+	mes "[Grandma]";
+	mes "Honey!! Someone hacked my account";
+	mes "and stole my equipment!!";
+	next;
+	mes "[Grandpa]";
+	mes "Hmm. The Chief said the Dokebi";
+	mes "earned 20 million zeny by hacking";
+	mes "other's accounts...";
+	next;
+	mes "[Grandma]";
+	mes "Dohhhhhhh!!!!";
+	next;
+	mes "[Grandpa]";
+	mes "...Huh I've heard that somewhere";
+	mes "before....";
+	next;
+	mes "[Grandpa]";
+	mes "Anyway, Momotaro...";
+	next;
+	mes "[Grandpa]";
+	mes "As you know, since we towners spends";
+	mes "our time sitting and chatting,";
+	mes "we can't kill Dokebis because we're";
+	mes "low levels, so...Please do it for";
+	mes "us.";
+	next;
+	mes "[Grandma]";
+	mes "Momotaro...";
+	mes "I really wanted to give you";
+	mes "a handmade ^3151FFYummiest Red Poiton in";
+	mes "the whole world^000000 ...but...";
+	mes ".....I failed to make them ....";
+	next;
+	mes "[Grandma]";
+	mes "...I'm sorry. I should have been";
+	mes "leveling up before...^111111*Sob*";
+	next;
+	mes "[Grandma & Grandpa]";
+	mes "So...Do me this favor, kid~";
+	close2;
+	initnpctimer;
+	end;
+
+OnTimer5000:
+	stopnpctimer;
+	set $MomoDokebi,0;
+	set $MomoDokebi2,0;
+	disablenpc "Grandpa#Momotaro";
+	disablenpc "Grandma#Momotaro";
+	monster "ama_test.gat",47,101,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",51,101,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",55,101,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",55,97,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",55,93,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",53,91,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",49,91,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",45,96,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	monster "ama_test.gat",45,99,"Dokebi",1110,1,"mobcount#momotaro::OnMobDead";
+	end;
+
+OnInit:
+	set $Momotaro,0;
+	set $MomoDokebi,0;
+	set $MomoDokebi2,0;
+	set $MomotaroRID,0;
+	end;
+
+}
+
+ama_test.gat,49,95,4	script	Grandpa#Momotaro	766,{
+
+	mes "[Grandpa]";
+	mes "Zzzzzz......";
+	close;
+}
+
+ama_test.gat,51,95,4	script	Grandma#Momotaro	761,{
+
+	mes "[Grandma]";
+	mes "Oh....!?";
+	close;
+
+}
+
+ama_test.gat,50,100,4	script	Manager#Momotaro	762,{
+
+	if (event_momo >= 4) goto LSecondFin;
+	mes "[Manager]";
+	mes "Hoho, you did it...... I'm the manager here...... You are not an ordinary person, right? You did very well.";
+	next;
+	mes "[Manager]";
+	mes "The Momotaro from the legend appears in this world!";
+	mes "Hohohohoho!";
+	next;
+	menu "Is there some extra?",L1,"Thanks for nothing......",L2;
+L1:
+	mes "[Manager]";
+	mes "Hohoho......";
+	mes "This is maybe not really recomending......";
+	mes "I think in your current condition the small demons can twirl you lightly around their fingers.";
+	mes "......Hohoho......";
+	next;
+	mes "[Manager]";
+	mes "......";
+	mes "Just a joke.";
+	next;
+	mes "[Manager]";
+	mes "Well then, you enjoyed the Momotaro Event Hall?";
+	mes "Talk to the staff member, that you have met first, about our premium presents. He will give you some.";
+	next;
+	mes "[Manager]";
+	mes "Whatever you encounter, never loose that strong spirit!";
+	close2;
+	set $Momotaro,0;
+	set $MomoDokebi,0;
+	set $MomoDokebi2,0;
+	set $MomotaroRID,0;
+	set event_momo,1;
+	donpcevent "Event Hall Staff::OnInitCopy";
+	warp "amatsu.gat",223,230;
+	disablenpc "Manager#Momotaro";
+	end;
+L2:
+	mes "[Manager]";
+	mes "!!!!!";
+	mes "......Ho...Hohoho......";
+	mes "You are an amusing fellow......";
+	mes "Well...... One little suggestion from me to you.";
+	next;
+	mes "[Manager]";
+	mes "Normally I would just kick you out, but...... I would like to see your true capabilities... Hohoho.";
+	mes "As if I would look at my own young self. Hohohoho.";
+	next;
+	mes "[Manager]";
+	mes "What do you think? I will give this one nonrecurring chance. It is the challenge of ^3355ffSecond Grade^000000 which is not officially available......";
+	mes "But I warn you, this one will be difficult.";
+	next;
+	menu "Na, it is enough",L2_1,"I take the challenge",L2_2;
+L2_1:
+	mes "[Manager]";
+	mes "Hoho......";
+	mes "You got tired from the last fight?";
+	mes "Well, ok...... Did you enjoy the Momotaro Event Hall? Talk to the staff member, that you have met first, about our premium presents. She will give you some.";
+	next;
+	mes "[Manager]";
+	mes "Whatever you encounter, never loose that strong spirit!";
+	next;
+	set event_momo,2;
+	goto LWarpOut;
+L2_2:
+	mes "[Manager]";
+	mes "Hohoho, You like it more and more, right? This will be the last decisive battle. Show your power without regrets!";
+	initnpctimer;
+	close;
+OnTimer5000:
+	stopnpctimer;
+	if(!isloggedin($MomotaroRID)){ donpcevent "#MomotaroTimer::OnCleanUp"; end; }
+	attachrid($MomotaroRID);
+	monster "ama_test.gat",35,103,"Am Mut",1301,1,"mobcount2#momotaro::OnMobDead";
+	monster "ama_test.gat",56,111,"Am Mut",1301,1,"mobcount2#momotaro::OnMobDead";
+	monster "ama_test.gat",40,91,"Am Mut",1301,1,"mobcount2#momotaro::OnMobDead";
+	misceffect 16;
+	set event_momo,3;
+	disablenpc "Manager#Momotaro";
+	end;
+LSecondFin:
+	mes "[Manager]";
+	mes "You are really strong... Wasn't it thrilling? Momotaro Event Hall can be really enjoyable, right?";
+	mes "Ok now, talk to the staff member, that you have met first, about our premium presents. She will give you some.";
+	close2;	
+	set event_momo,4;
+LWarpOut:
+	mes "[Manager]";
+	mes "Whatever you encounter, never loose that strong spirit!";
+	close2;
+	set $Momotaro,0;
+	set $MomoDokebi,0;
+	set $MomoDokebi2,0;
+	set $MomotaroRID,0;
+	warp "amatsu.gat",223,230;
+	donpcevent "Event Hall Staff::OnInitCopy";
+	disablenpc "Manager#Momotaro";
+	end;
+OnStart:
+	misceffect 215;
+	if(!isloggedin($MomotaroRID)){ donpcevent "#MomotaroTimer::OnCleanUp"; end; }
+	attachrid($MomotaroRID);
+	mes "[Manager]";
+	mes "Hohoho......";
+	close;
+
+}
+//=======================================MobCount===============================-
+ama_test.gat,0,1,0	script	mobcount#momotaro	-1,{
+OnMobDead:
+	if ($MomoDokebi >= 8) goto Lfin;
+	set $MomoDokebi,$MomoDokebi+1;
+	attachrid($MomotaroRID);
+	set @mobrand,rand(4);
+	if (@mobrand == 1) goto Lrand2;
+	if (@mobrand == 2) goto Lrand3;
+	if (@mobrand == 3) goto Lrand4;
+Lrand1:
+	areaannounce "ama_test.gat",30,78,68,120,"Dokebi: I'm sorry~~! Waaaaah~~",8;detachrid;end;
+Lrand2:
+	areaannounce "ama_test.gat",30,78,68,120,"Dokebi: !! IT'S A RAID!!!! RUN!!",8;detachrid;end;
+Lrand3:
+	areaannounce "ama_test.gat",30,78,68,120,"Dokebi: But I didn't even do anything baaaaad~!",8;detachrid;end;
+Lrand4:
+	areaannounce "ama_test.gat",30,78,68,120,"Dokebi: Ow, Ouch!!!",8;detachrid;end;
+Lfin:
+	areaannounce "ama_test.gat",30,78,68,120,"Dokebi: I will be baaack~~~~!!!",8;
+	initnpctimer;
+	end;
+OnTimer5000:
+	donpcevent "mobcount2#momotaro::OnTimer5000";
+	end;
+
+}
+//=======================================MobCount2==============================-
+ama_test.gat,50,101,0	script	mobcount2#momotaro	-1,{
+OnMobDead:
+	if ($MomoDokebi2 == 2) goto Lfin;
+	set $MomoDokebi2,$MomoDokebi2+1;
+	areaannounce "ama_test.gat",30,78,68,120,"Am Mut: Ow, Ouch!!!",8;end;
+Lfin:
+	areaannounce "ama_test.gat",30,78,68,120,"Am Mut: I'm sorry~~! Waaaaah~~",8;
+	set event_momo,4;
+	initnpctimer;
+	end;
+OnTimer5000:
+	stopnpctimer;
+	enablenpc "Manager#Momotaro";
+	donpcevent "Manager#Momotaro::OnStart";
+	end;
+
+}
+
+//=====================================================================
+ama_in01.gat,162,17,0	script	寿司名人	765,{
+	if (ama_sushi == 1) goto LStart2;
+	mes "[麻估麻估]";
+	mes "唉呀～真是糟糕……";
+	mes "每天都有不断的客人聚集，";
+	mes "却完全没有办法搜集";
+	mes "不够的材料…今天也";
+	mes "一定会有吃不的的客人吧？";
+	next;
+	mes "[麻估麻估]";
+	mes "唉呀，是客人吗？欢迎光临，";
+	mes "和以往一样，我家的生鱼片";
+	mes "最潢重新鲜感，来这里有什么事吗…？";
+	next;
+	menu "我要买明虾寿司",L1,"我要买生鱼片",L2,"要我帮忙吗？",L3,"辛苦了",-;
+		mes "[麻估麻估]";
+		mes "随你高兴啰，我生鱼片口味";
+		mes "是天下一品的！它的味道在于新鲜感，是谁也学不来的";
+		mes "下次有机会的话，来享受一下生鱼片吧！";
+		close;
+	L1:
+		mes "[麻估麻估]";
+		mes "好啊…要买多少？";
+		mes "定食是 700Zeny，不过只想要尝一块";
+		mes "的话 74Zeny就好了，";
+		mes "尝了之后觉得不错的话再找我吧";
+		next;
+		menu "我要700Zeny 的定食！",L1_1,"我要74Zeny 的一小块！",L1_2,"下次再吃好了",-;
+			mes "[麻估麻估]";
+			mes "随你高兴啰，我明虾寿司口味";
+			mes "是天下一品的！它的味道在于新鲜感，是谁也学不来的";
+			mes "下次有机会的话，来享受一下明虾寿司吧！";
+			close;
+		L1_1:
+			if (Zeny < 700) goto Lzeny;
+			set Zeny,Zeny-700;
+			getitem 551,10;
+			mes "[麻估麻估]";
+			mes "谢谢您的惠顾";
+			close;
+		L1_2:
+			if (Zeny < 74) goto Lzeny;
+			set Zeny,Zeny-74;
+			getitem 551,1;
+			mes "[麻估麻估]";
+			mes "谢谢您的惠顾";
+			close;
+	L2:
+		mes "[麻估麻估]";
+		mes "好啊…要买多少？";
+		mes "定食是 350Zeny，不过只想尝一小块";
+		mes "的话 37Zeny 就好了，";
+		mes "尝了之后觉得不错的话再找我吧";
+		next;
+		menu "我要350Zeny 的定食！",L2_1,"我要37Zeny 的一小块",L2_2,"下次再吃好了",-;
+			mes "[麻估麻估]";
+			mes "随你高兴啰，我生鱼片口味";
+			mes "是天下一品的！它的味道在于新鲜感，是谁也学不来的";
+			mes "下次有机会的话，来享受一下生鱼片吧！";
+			close;
+		L2_1:
+			if (Zeny < 350) goto Lzeny;
+			set Zeny,Zeny-350;
+			getitem 544,10;
+			mes "[麻估麻估]";
+			mes "谢谢您的惠顾";
+			close;
+		L2_2:
+			if (Zeny < 37) goto Lzeny;
+			set Zeny,Zeny-37;
+			getitem 544,1;
+			mes "[麻估麻估]";
+			mes "谢谢您的惠顾";
+			close;
+		Lzeny:
+			mes "[麻估麻估]";
+			mes "客人您身上的现金不足喔";
+			close;
+L3:
+		mes "[麻估麻估]";
+		mes "唉呦，要帮助当然好啊！！";
+		mes "正好在担心每天的材料不足啊…";
+		mes "你要听听看我的要求吗？";
+		mes "当然不会免费要求你帮忙";
+		next;
+
+		set ama_sushi,1;
+		mes "[麻估麻估]";
+		mes "装饰用的鱼尾";
+		mes "全部没了…现在急着需要";
+		mes "就魔烦你^0000FF鱼尾 10个啰^000000";
+		mes "每当然要时就找不到，真为难…";
+		mes "就拜托你了";
+		next;
+		mes "[麻估麻估]";
+		mes "那么，就辛苦你了…我在这";
+		mes "等你回来，不要忘记我拜托你的喔！";
+		close;
+LStart2:
+	if (countitem(1023)>=10) goto Lok;
+	mes "[麻估麻估]";
+	mes "真是，还有把我要求的准备好";
+	mes "你不会是忘了吧！";
+	next;
+	mes "[麻估麻估]";
+	mes "^0000FF鱼尾 10 个^000000";
+	mes "不要再忘记了";
+	mes "一定要帮我带来！";
+	close;
+Lok:
+	mes "[麻估麻估]";
+	mes "嗯嗯！真是太感谢您了";
+	next;
+	delitem 1023,10;
+	getitem 551,20;
+	mes "[麻估麻估]";
+	mes "这个是我的一点心意，您就收下吧！";
+	set ama_sushi,0;
+//	set event_sushi,0;
+	close;
+
+}
+//=====================================================================
+amatsu.gat,189,166,4	script	克武基	764,{
+	mes "[克武基]";
+	mes "啦啦啦 啦啦啦 啦啦啦啦啦啦..";
+	mes "啦啦啦 啦啦啦 啦啦啦啦啦啦..";
+	next;
+	if (event_amatsu == 2) goto L1;
+	if ((event_amatsu == 3) || (event_amatsu == 4)) goto L2;
+	if (event_amatsu == 5) goto L3;
+	if (event_amatsu == 6) goto L4;
+L0:
+	mes "[克武基]";
+	mes "挂在蓝天的蓝色屋顶";
+	mes "照耀在蓝色湖面的蓝色城墙";
+	mes "蓝色心理装着蓝色愿望";
+	mes "蓝色 蓝色 全部都是蓝色";
+	next;
+	goto LEnd;
+L1:
+	mes "[克武基]";
+	mes "和尚,和尚,狐狸在跟着我来";
+	mes "原来是拿着狐狸喜欢的东西";
+	mes "豆皮拉面是我的最爱";
+	mes "一天可以吃上三次啊";
+	set event_amatsu,3;
+	goto LEnd;
+L2:
+	mes "[克武基]";
+	mes "和尚,和尚,狐狸在跟着我来";
+	mes "大声喊叫把它赶走吧!";
+	mes "声音太小所以它没有逃跑";
+	mes "一直跟到北方的神社来了!";
+	set event_amatsu,4;
+	goto LEnd;
+L3:
+	mes "[克武基]";
+	mes "和尚,和尚,狐狸在跟着我来";
+	mes "豆皮拉面是我最爱";
+	mes "可是现在我也不害怕了？";
+	mes "大声喊叫把它赶走了!";
+	goto LEnd;
+L4:
+	mes "[克武基]";
+	mes "村落港口里有一条被遗弃的船!";
+	mes "人民都遗忘的那条船里";
+	mes "所以有着满满的宝物";
+	mes "所有人都会怕的一条船";
+	goto LEnd;
+
+LEnd:
+	next;
+	mes "[克武基]";
+	mes "啦啦啦 啦啦啦 啦啦啦啦啦啦..";
+	mes "啦啦啦 啦啦啦 啦啦啦啦啦啦..";
+	close;
+}
+
+//=====================================================================
+amatsu.gat,171,174,4	script	守门 士兵#01	767,{
+	if ((event_amatsu == 0) || (event_amatsu == 1)) goto L0;
+	if (event_amatsu == 6) goto L1;
+	if (event_amatsu == 7) goto L2;
+	mes "[守门 士兵]";
+	mes "禁止进入这里";
+	mes "这里是城主的母亲正在";
+	mes "疗养的地方";
+	next;
+	mes "[守门 士兵]";
+	mes "虽然不是什么好张扬的...";
+	mes "不过已经生病好几个月了";
+	mes "并在这里起居";
+	close;
+L0:
+	mes "[守门 士兵]";
+	mes "这里有城主的母亲在";
+	mes "请保持肃静,我们也是";
+	mes "每天看的觉得很焦急";
+	next;
+	mes "[守门 士兵]";
+	mes "为什么会发生在";
+	mes "人品这么好的我们城主身上呢...";
+	mes "真是搞不懂啊,呼呜...";
+	close;
+L1:
+	mes "[守门 士兵]";
+	mes "喔啦? 好像有什么东西往天上";
+	mes "飞过去了... 您没有看到吗? 喔喔";
+	mes "还听到很大声... 吓我一跳";
+	close;
+L2:
+	mes "[守门 士兵]";
+	mes "现在城主应该没事了吧,";
+	mes "我们也了却了一桩心事";
+	mes "不知道有多担心... 呼呼";
+	close;
+}
+//=====================================================================
+amatsu.gat,164,174,4	script	守门 士兵#02	767,{
+//FlagGET
+	if (event_amatsu == 0) goto LOnce;
+	if ((event_amatsu >= 2) && (event_amatsu <= 5)) goto L2;
+	if (event_amatsu == 6) goto L3;
+	if (event_amatsu == 7) goto L4;
+	mes "[守门 士兵]";
+	mes "希望能够赶快恢复健康...";
+	mes "城主已为他";
+	mes "费了很多心";
+	close;
+LOnce:
+	mes "[守门 士兵]";
+	mes "禁止进入这里";
+	mes "这里是城主的母亲正在";
+	mes "疗养的地方";
+	next;
+	mes "[守门 士兵]";
+	mes "虽然不是什么好张扬的...";
+	mes "不过已经生病好几个月了";
+	mes "并在这里起居";
+	set event_amatsu,1;
+	close;
+L2:
+	mes "[守门 士兵]";
+	mes "从城主派去如果 ";
+	mes "请请进入…… ";
+	mes "直到今天也请很多的人来诊察了然而 ";
+	mes "全部徒劳结束了呀… ";
+	close;
+L3:
+	mes "[守门 士兵]";
+	mes" 喂！";
+	mes" 现在的声音是什么 !?";
+	mes" 从哪发出来的!?";
+	close;
+L4:
+	mes "[守门 士兵]";
+	mes "城主的母亲还是";
+	mes "没完全恢复…… ";
+	mes "尽管如此，稍微好转了";
+	mes "然而好像…… ";
+	close;
+}
+
+//=====================================================================
+ama_in01.gat,22,111,0	script	老太太#01	761,{
+	if (event_amatsu == 5) goto LStart2;
+	if (event_amatsu == 6) goto LStart3;
+	if (event_amatsu == 7) goto LStart4;
+	mes "[...]";
+	mes "^FF6060镪镪，镪镪，愚蠢的人类又";
+	mes "镪镪，镪镪，是谁! 是人类吗!?";
+	mes "进来有什么事吗! 还不敢快";
+	mes "出去... 镪镪! 镪镪!^000000";
+	next;
+	mes "[...]";
+	mes "^FF6060我本人打算在宜希答家族";
+	mes "到结束为止要住在这里!";
+	mes "不要妨碍我快出去吧! 镪镪!^000000";
+	next;
+	warp "amatsu",167,197;
+	end;
+LStart2:
+	mes "[...]";
+	mes "^FF0066镪镪,镪镪,又来了一个";
+	mes "愚蠢的人啊! 这次想要怎么样";
+	mes "把我赶走啊!?^000000";
+	next;
+	mes "[...]";
+	mes "^FF0066看来在哪里不知道学了些什么东西,";
+	mes "只拿这样子";
+	mes "是不能把我怎样的!! 镪镪!^000000";
+	next;
+	menu "哈啊啊啊啊!!",-;
+	set @which,rand(2);
+	if (@which == 1) goto Lfail;
+	mes "[...]";
+	mes "^FF0066镪镪! 镪镪! 镪镪! 这个家伙!";
+	mes "既然用这种方式赶我走!";
+	mes "令人厌恶! 不服气!!^000000";
+	next;
+	mes "[...]";
+	mes "^FF0066让我变成这个样子的宜希答家族";
+	mes "我要一辈子诅咒他! 诅咒!";
+	mes "人类啊,您也要小心点!^000000";
+	next;
+//尚未确认
+//	monster "ama_in01.gat",22,111,"狐狸",1180,1;
+//	killmonster "ama_in01.gat";
+	getitem 1022,1;
+	mes "[...]";
+	mes "^FF0066佑罗西那戈所做的所有事情";
+	mes "迟早会带给我";
+	mes "很大的不幸...^000000";
+	mes "^CC3300镪啊啊啊啊啊啊啊啊啊!!^000000";
+	set event_amatsu,6;
+	close;
+Lfail:
+	mes "[...]";
+	mes "^FF0066镪镪! 哈哈! 镪镪! 哈哈哈!";
+	mes "既然敢,想要把我赶出去!";
+	mes "马上给我出去!! 镪镪!^000000";
+	next;
+	warp "amatsu",167,197;
+	end;
+LStart3:
+	mes "[宜希答 撒伍克]";
+	mes "...唉呀哪里的年轻人啊...?";
+	mes "是您把狐狸赶走的吗?";
+	mes "糊里糊涂的没精神,唉呀...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "谢谢您,从别的地方过来";
+	mes "还要受这种苦,";
+	mes "真是不好意思... 辛苦您了...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "我要联络我的儿子";
+	mes "告诉他说已经把狐狸赶走了...";
+	mes "谢谢您,谢谢...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "现在我的精神有点恍惚";
+	mes "我要休息了,年轻人.....";
+	mes "赶快去找我儿子吧...";
+	close;
+LStart4:
+	mes "[宜希答 撒伍克]";
+	mes "唉呀,您是帮忙赶走狐狸的";
+	mes "那位年轻人啊... 欢迎欢迎";
+	mes "方便的话先坐一下吧...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "想想被狐狸上身";
+	mes "也都是我自己的错...";
+	mes "是我没有教好儿子... 哎呀";
+	mes "小时后是个乖乖的家伙";
+	mes "都是我没有教的很严格...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "本来这个村落没有这么大";
+	mes "也没有像东湖城这样大的城,";
+	mes "不过我儿子不知从那里";
+	mes "一直拿些财物来给我呢";
+	mes "不知道做些什么事赚来的钱";
+	mes "连我都要隐瞒着...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "然后又建城堡又增阔村落的,";
+	mes "对村里的人民";
+	mes "心地宽厚... 如果就只是这样";
+	mes "就不会有事发生了,";
+	mes "问题就是生在这家伙";
+	mes "做了奇怪的事之后...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "没错,就是做了让神发怒的事情,";
+	mes "不知道从哪学些奇怪的咒术";
+	mes "在城里做实验,";
+	mes "抓些魔物来";
+	mes "做些坏事...";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "就这样变成魔物们";
+	mes "在东湖城里定居了...";
+	mes "结果神发怒到";
+	mes "连神社的和尚也不知所措了.....";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "结果也对老人家下惩罚...";
+	mes "派送狐狸来";
+	mes "想要给予警告,";
+	mes "可是儿子并没有停止啊";
+	next;
+	mes "[宜希答 撒伍克]";
+	mes "可以的话帮忙阻止我儿子吧,";
+	mes "活不久的我";
+	mes "也不知道该怎么办才好...";
+	mes "请把这和平的村落守好吧,";
+	mes "拜托您了... 不知道儿子";
+	mes "有着什么想法而做出那种事情...";
+	close;
+}
+
+//=====================================================================
+ama_in02.gat,170,62,4	script	士兵#02	767,{
+	mes "[积罗]";
+	mes "我叫积罗,我在这城里";
+	mes "负责各种行政业务,";
+	mes "请问需要什么服务";
+	next;
+	menu "请发通行证给我",L1,"我想要住在这里",L2,"没什么事",L3;
+L1:
+	if (event_amatsu == 7) goto L1_1;
+		mes "[积罗]";
+		mes "城主说大陆来的客人们";
+		mes "可以自由自在的行动,";
+		mes "不需要办理";
+		mes "通行证了";
+		close;
+L1_1:
+	if (countitem(7160) == 0) goto L1_2;
+		mes "[积罗]";
+		mes "通行证已经发给您了";
+		close;
+L1_2:
+		mes "[积罗]";
+		mes "通行证不见了吗？";
+		mes "要再取得通行证的话";
+		mes "得花手续费 10,000Zeny";
+		next;
+		menu "取得通行证",L1_2_1,"下次再说",-;
+			mes "没关系！";
+			mes "有需要的话就再来找我吧！";
+			close;
+L1_2_1:
+	if (Zeny < 10000) goto LError;
+	set Zeny,Zeny-10000;
+	getitem 7160,1;
+	mes "[积罗]";
+	mes "来，就是这个啰";
+	mes "请小心保管不要再遗失了";
+	close;
+LError:
+	mes "[积罗]";
+	mes "您所持的 Zeny 不足喔！";
+	close;
+L2:
+		mes "[积罗]";
+		mes "这有点困难,您可以";
+		mes "自由自在的往来,不过城主";
+		mes "还没有考虑到移民问题";
+		mes "不过,您要待多久之后再离开";
+		mes "都可以的"; 
+		close;
+L3:
+		mes "[积罗]";
+		mes "那么先这样...";
+		mes "有什么事情就说吧";
+		close;
+
+}
+//=====================================================================
+// eAthena Team
+ama_in02.gat,115,177,7	script	兵士	767,{
+	mes "[朱罗]";
+	mes "来这里有什么事情吗?";
+	mes "这里没有什么好看的";
+	next;
+	menu "真的没错耶",L1,"请帮我打开门",L2;
+L1:
+		mes "[朱罗]";
+		mes "村落里有更多好看的";
+		mes "祝您有个愉快的时间...";
+		close;
+L2:
+	if (event_amatsu != 7) goto Lnoflag;
+	if (countitem(7160) < 1) goto Llost;
+		mes "[朱罗]";
+		mes "您已经得到准许了...";
+		mes "您要直接进去吗? 还是";
+		mes "要我帮您解说一下...?";
+		next;
+		menu "直接进去",L2_1,"听解说",L2_2;
+L2_1:
+			mes "[朱罗]";
+			mes "那么,我就帮您开门了";
+			mes "千万好好保重啰...";
+			next;
+			warp "ama_dun01.gat",229,10;
+			end;
+L2_2:
+			mes "[朱罗]";
+			mes "那内部空间好像由特别的";
+			mes "咒术来保护的,";
+			mes "不清楚进去之后会迷路,";
+			mes "而且可能会被不知的人";
+			mes "遭袭击而死亡";
+			next;
+			mes "[朱罗]";
+			mes "我可以告诉您的内容";
+			mes "并不多,";
+			mes "我也并没有去过内部";
+			mes "很远的地方,都是幸幸苦苦回来的";
+			mes "生存者的证言而已";
+			next;
+			mes "[朱罗]";
+			mes "第一个.....";
+			mes "'不要相信眼前所看到的东西,'";
+			mes "我也不知道这是什么意义,";
+			mes "不过好像是说";
+			mes "不能认为看到的就是存在的意思吧";
+			next;
+			mes "[朱罗]";
+			mes "第二个.....";
+			mes "有关咒术有它一定的法则";
+			mes "所有事物都都有它所存在的目的,";
+			mes "咒术也不例外,";
+			mes "会不会找出一些";
+			mes "解答呢?";
+			mes "[朱罗]";
+			mes "那么,我就帮您打开门了";
+			mes "千万好好保啰...";
+			next;
+			warp "ama_dun01.gat",229,10;
+			end;
+Llost:
+		mes "[朱罗]";
+		mes "您手中并没有通行证";
+		mes "所以我没办法帮您开门";
+		mes "还请见谅。";
+		close;
+Lnoflag:
+		mes "[朱罗]";
+		mes "您在说什么门,";
+		mes "像这种夹层不会有";
+		mes "什么门的呀，我看";
+		mes "您可能是搞错了吧";
+		next;
+		mes "[朱罗]";
+		mes "村落里有更多好看的";
+		mes "祝您有个愉快的时间...";
+		close;
+}
+
+ama_dun01.gat,229,7,0	script	士兵#18	767,{
+	mes "[朱罗]";
+	mes "要离开了吗";
+	next;
+	menu "离开",-,"再多停留一会",L1;
+		mes "[朱罗]";
+		mes "走了走了！！";
+		next;
+		warp "ama_in02.gat",119,181;
+		end;
+L1:
+		mes "[朱罗]";
+		mes "自己小心一点啰！";
+		close;
+}
+
+//=====================================================================
+// eAthena Team
+ama_in02.gat,200,176,4	script	城主	768,{
+	if (event_amatsu == 1) goto LStart2;
+	if ((event_amatsu >= 2) && (event_amatsu <=5)) goto LStart3;
+	if (event_amatsu == 6) goto LStart4;
+	if (event_amatsu == 7) goto LStart5;
+	mes "[宜希答 佑西那戈]";
+	mes "什么! 是外地人吗? 找我";
+	mes "有什么事呢,如果不是什么急事";
+	mes "下次再来找我吧...!";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "请出去! 不管您是什么人,";
+	mes "现在本人我";
+	mes "我的心情相当的差!";
+	close;
+LStart2:
+	mes "[宜希答 佑西那戈]";
+	mes "什么! 是外地人吗...? 呼,抱歉";
+	mes "不过今天没有什么心情";
+	mes "见外地人!";
+	next;
+	menu "听说您母亲生病了...",L1,"好漂亮的城喔",L2,"您是谁?",L3;
+L1:
+	mes "[宜希答 佑西那戈]";
+	mes "呵喔... 您对疾病有很了解吗?";
+	mes "对喔,如果是以外地人的知识";
+	mes "还值得让我相信...";
+	mes "应该是吧...";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "欢迎光临,您也知道";
+	mes "我是东湖城的城主";
+	mes "我叫宜希答 佑西那戈,";
+	mes "很开心见到您";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "直接了当地说,我母亲";
+	mes "她身体很不好,";
+	mes "当然是为这个而来的吧";
+	mes "您可以帮我治好我母亲的病吗?";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "到现在为止有很多出名";
+	mes "的名医来拜访过,";
+	mes "不过全部不只是没有把她治好";
+	mes "反而变得更恶化了... 所以";
+	mes "我一直感到很失望";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "外地来的您也许";
+	mes "可以治好我母亲的病,";
+	mes "我会包厚厚的谢礼金给您的...";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "那就拜托您了,我母亲";
+	mes "她住在城外的宅邸,";
+	mes "等治疗成功后";
+	mes "再来找我吧";
+	set event_amatsu,2;
+	close;
+L2:
+	mes "[宜希答 佑西那戈]";
+	mes "对! 很漂亮啊! 所以想要";
+	mes "怎么样呢! 您就看到腻了之后";
+	mes "再回去吧! 真是的!";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "在这种急迫的时候... 呼呜...";
+	mes "随便您玩得愉不愉快";
+	mes "再回去吧!";
+	close;
+L3:
+	mes "[宜希答 佑西那戈]";
+	mes "...说我吗? 您不晓得吗? 哈?";
+	mes "我就是这城的主人";
+	mes "不清楚的话就去问问";
+	mes "外面的士兵吧!";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "在这种急迫的时候... 呼呜...";
+	mes "随便您玩得愉不愉快";
+	mes "再回去吧!";
+	close;
+LStart3:
+	mes "[宜希答 佑西那戈]";
+	mes "我母亲的治疗进度是怎样啊?";
+	mes "如果知道病名是什么";
+	mes "请您马上告诉我";
+	mes "喀喔... 担心的";
+	mes "每晚都睡不好";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "您是其他大陆来的,";
+	mes "所以一定会知道的... 现在";
+	mes "可以相信的也只有您了";
+	close;
+LStart4:
+	mes "[宜希答 佑西那戈]";
+	mes "哇,真厉害,我已经得知";
+	mes "母亲开始好起来了,";
+	mes "到底是什么病啊?";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "狐狸? 是狐狸的原因吗? 呵喔...";
+	mes "原来不是疾病啊...!!";
+	mes "我为什么没有早点想到呢...";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "该死的狐狸,逃跑之后";
+	mes "既然用这种方式报仇...";
+	mes "不过现在已经没有别的";
+	mes "方法了... 哈哈哈! 哈哈哈哈!";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "嗯,呵嗯,嗯...";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "反正,谢谢您的帮忙,";
+	mes "我的母亲现在也应该没事了吧...";
+	mes "想要给您个报答...";
+	mes "什么好呢...";
+	next;
+	mes "[宜希答 佑西那戈]";
+	mes "好吧,我给您一张通行证吧";
+	mes "只要有这张通行证";
+	mes "不管在这村落的哪一个地方";
+	mes "都可以随地通行";
+	next;
+	set event_amatsu,7;
+	getitem 7160,1;
+	mes "[宜希答 佑西那戈]";
+	mes "虽然不是什么大礼,不过";
+	mes "我相信会有用的用到...详细的";
+	mes "去问我的部下 '朱罗'吧";
+	close;
+LStart5:
+	mes "[宜希答 佑西那戈]";
+	mes "呼呼... 祝您在天津町";
+	mes "有着愉快的时间.....";
+	mes "我们随时欢迎外地人";
+	close;
+}
+// eAthena Dev Team
+ama_in01.gat,180,173,2	script	狐狸面具	762,{
+	if (event_amatsu == 4) goto LStart2;
+	if (event_amatsu == 5) goto LStart3;
+	mes "[塔概虎威]";
+	mes "喔呦，是外地人啊，这里的神社";
+	mes "很久之前就没有和尚在了";
+	mes "这里是我跟我朋友托卡科";
+	mes "偶而会来玩的地方";
+	next;
+	mes "[塔概虎威]";
+	mes "是为了躲避魔物们而来的话";
+	mes "请安心吧，任何魔物";
+	mes "都无法进入这里的";
+	mes "休息一下也无妨啊";
+	close;
+LStart2:
+	mes "[塔慨虎威]";
+	mes "喔呦,是外地人啊,到这里来找我";
+	mes "是因为狐狸而遭受苦难";
+	mes "的原因吗? 看您的表情";
+	mes "好像吃了不少苦头啊";
+	next;
+	mes "[塔慨虎威]";
+	mes "照理来说主管和尚";
+	mes "要亲自帮忙,这神社里";
+	mes "从很久以前就空空的了";
+	next;
+	mes "[塔慨虎威]";
+	mes "很难赶走在人身体";
+	mes "里的狐狸,假如有狐狸喜欢的";
+	mes "酒跟豆皮拉面的话可能容易点,";
+	mes "不过很难搜集";
+	next;
+	mes "[塔慨虎威]";
+	mes "还好我对狐狸";
+	mes "有一点了解,讲一些";
+	mes "对您有帮助的好了,狐狸这种动物";
+	mes "很顽皮,虽然喜欢";
+	mes "作弄人类... 不过很少有";
+	mes "怨恨这种事情发生";
+	next;
+	mes "[塔慨虎威]";
+	mes "假如有怨恨发生,换句话说";
+	mes "人类也有做错的地方,";
+	mes "自己本身也会受到伤害,";
+	mes "有时对身边的家人或朋友";
+	mes "也会有痛苦的事情发生";
+	next;
+	mes "[塔慨虎威]";
+	mes "方正,听说看到有着比狐狸";
+	mes "还要强力的动物时,";
+	mes "有时会被气势压迫";
+	mes "而从人身上离走,所以呢";
+	mes "试着用大力,运气看看吧";
+	next;
+	menu "哈啊啊啊啊!!",-;
+	mes "[塔慨虎威]";
+	mes "很好,就这样反覆的";
+	mes "表现出强力的气势给狐狸看,";
+	mes "一定会有好结果的,当然最好是";
+	mes "找出狐狸会进入人类身体里的";
+	mes "原因,不过就算这样做";
+	mes "多多少少还是会有效果的";
+	set event_amatsu,5;
+	close;
+LStart3:
+	mes "[塔慨虎威]";
+	mes "不要忘了,运气的时候";
+	mes "一定要联想到";
+	mes "比狐狸还要强的动物精力";
+	mes "不然是完全没有用的";
+	close;
+}

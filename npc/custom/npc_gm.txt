@@ -1,0 +1,455 @@
+//功能:
+//1.线上GM超级广播
+//2.线上修改定时公告
+//3.时间条件公告(最多4种时间条件)
+//4.检视地图线上,
+//5.管理NPC和开启事件
+//6.区域传送玩家,
+//7.定时提醒公告,
+//==========================//
+//==========================//
+//|脚本名字:GM外挂            |
+//|版本:1.3                   |
+//|作者(BY):Akor              |
+//|来自:http://xwro.vicp.net  |
+//==========================//
+//$testggao: 总时间判断 
+//$tesuggao$:特殊公布内容
+//$ggnian:	年记录
+//$ggyue:月记录
+//$ggri: 日记录
+//$ggxingqi:星期记录
+//$ggitem: 时记录
+
+sec_in01.gat,89,181,3	script	发呆GM管理专员	721,{
+	set @zhd,1;//定义验证方法
+	if(@zhd==1)goto Lsa;//物品
+	if(@zhd==2)goto Lsb;//人物名字
+	if(@zhd==3)goto Lsc;//暗号.
+	goto Lnow;
+//物品判断方式
+Lsa:	if(countitem(30002)>=1)goto Lgmda;
+	goto Lnow; 
+//人物名字判断方式
+Lsb:	if((strcharinfo(0)=="GM01")||(strcharinfo(0)=="GM02"))goto Lgmda;
+	goto Lnow;
+//密码判断方式
+Lsc:	mes "输入暗号";
+	input @dasd$;	if(@dasd$=="dathenagmgl")goto Lgmda;
+	goto Lnow;
+Lnow:	mes "[发呆GM管理专员]";
+	emotion 6;//表情
+	mes "哇卡卡~米见到偶名字叫发呆GM管理专员啊~";
+	mes "别在点我了~，不然偶我打你屁屁喔，嘻嘻";
+	mes "别要再点我了喔，ㄇㄞㄇㄞ啰";
+	close;
+	end;
+Lgmda:
+	mes "[发呆GM管理专员]";
+	mes "欢迎进入GM辅助管理程式";
+	mes "请选择你需要的服务~";
+	mes "(超级广播站由:Akor制作)";
+	mes "1.广播,2检视,3.NPC与事件管理,4.超级传送,大于4或者0为取消";
+	next;
+	input @fdds; //输入数字
+	if((@fdds<=0)||(@fdds>=5))close;
+	if(@fdds==1)goto Ljshfok;
+	if(@fdds==2)goto Look;
+	if(@fdds==3)goto Lnpcgm;
+	if(@fdds==4)goto Lwarp;
+	end;
+
+//==========================查看========================================================
+Look:
+	mes "[发呆GM管理专员]";
+	mes "选择你要检视的项目";
+	next;
+	menu "城市在线情况",deidw,"自定义地图检视",Ldemap,"返回",Lgmda;
+deidw:
+	mes "当前普隆德拉地图有前共有"+getmapusers("prontera.gat")+"人"; 
+	mes "当前依鲁德依地图有前共有"+getmapusers("izlude.gat")+"人";
+	mes "当前吉芬地图有前共有"+getmapusers("geffen.gat")+"人";
+	mes "当前梦罗克地图有前共有"+getmapusers("morocc.gat")+"人";
+	mes "当前斐扬地图有前共有"+getmapusers("payon.gat")+"人";
+	mes "当前艾尔泊兰地图有前共有"+getmapusers("alberta.gat")+"人";
+	mes "当前克魔岛地图有前共有"+getmapusers("aldebaran.gat")+"人";
+	mes "当前昆仑地图有前共有"+getmapusers("comodo.gat")+"人";
+	mes "当前天津城地图有前共有"+getmapusers("gonryun.gat")+"人";
+	mes "当前尤诺地图有前共有"+getmapusers("amatsu.gat")+"人";
+	mes "当前猿人部落地图有前共有"+getmapusers("yuno.gat")+"人";
+	mes "当前姜饼城地图有前共有"+getmapusers("umbala.gat")+"人";
+	mes "当前洛阳地图有前共有"+getmapusers("xmas.gat")+"人";
+	mes "当前死亡之城地图有前共有"+getmapusers("niflheim.gat")+"人";
+	mes "当前古城地图有前共有"+getmapusers("glast_01.gat")+"人";
+	next;
+	menu "城市在线情况",deidw,"自定义地图检视",Ldemap,"返回",Lgmda;
+Ldemap:
+	mes "输入你的自定义查看的地图的名,空格为取消,具体格式如:prontera.gat";
+	next;
+	input @masp$;
+	if(@masp$==" ")close;
+	mes "当前"+@masp$+"共有"+getmapusers(@masp$)+"人";
+	next;
+	menu "城市在线情况",deidw,"自定义地图检视",Ldemap,"返回",Lgmda;
+
+//NPC事件管理
+Lnpcgm:		mes "选择服务";		next;	menu "关闭指定NPC",Loff,"开启指定NPC",Lon,"开启事件",Ldoevent,"返回功能表",Lgmda;
+Loff:		mes "输入NPC名字";	input @npcon$;	mes "关闭成功!!";	disablenpc @npcon$;	close;	end;
+Lon:		mes "输入NPC名字";	input @npcon$;	mes "开启成功!!";	enablenpc @npcon$;	close;	end;
+Ldoevent:
+	mes "输入事件名字";
+	input @doe$; //开启
+	mes "开启事件成功!";
+	doevent @doe$;
+	close;
+	end;
+
+//=================广播==========================================================
+Ljshfok:
+	mes "[发呆GM管理专员]";
+	mes "欢迎来到广播站!";
+	mes "选择你的服务!";
+	next;
+	set @string1$,0;
+	set @string2$,0;
+	set @string2$,0;
+	set @string3$,0;
+	set @string4$,0;
+	set @string5$,0;
+	set @string6$,0;
+	set @string7$,0;
+	set @string8$,0;
+	set @string9$,0;
+	set @string10$,0;//清楚上次输入记录
+	menu "超级即时广播",Ljshf,"定时广播",ldey,"特殊定时广播",LtesjhB,"主功能表",Lgmda;
+
+//===============超级广播
+Ljshf:	set @ldey,1;	mes "GM超级即时广播开始,请输入内容";	goto Ldsd;
+Lgmok:
+	announce "===================G=M=超=级=广=播=====当前时间是:"+gettimestr("%Y-%m/%d %H:%M:%S",19)+"===================",17;
+	announce @string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$+@string8$+@string9$+@string10$,17;
+	announce "========================================================================================",17;
+	mes "资讯成功发布";
+	set @ldey,0;
+	next;
+	menu "完成",-,"重放",Lgmok,"重写",Ljshf,"返回",Ljshfok;
+	close;
+	end;
+//定时广播--------------------------
+ldey:	mes "GM 定时公告修改开始";
+Ldsd:
+	if((@ldey==0)&(@xjda==0))mes "当前定时公告内容是:"+$ggao$+"";
+	if(@ldey==1)mes "当前特殊公告内容:"+$tesuggao$+"";
+	mes "完成请空格?最多10条";
+	input @string1$;
+	next;
+	mes "输入预览:"+@string1$+".目前第2条.最多10条";
+	if(@string1$==" ")set @sa$,@string1$;
+	if(@string1$==" ")goto Lokgg;//如果@string1$是空格就直接完成
+	input @string2$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+".目前第3条.最多10条";
+	if(@string2$==" ")set @sa$,@string1$+@string2$;
+	if(@string2$==" ")goto Lokgg;
+	input @string3$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+@string3$+".目前第4条.最多10条";
+	if(@string3$==" ")set @sa$,@string1$+@string2$+@string3$;
+	if(@string3$==" ")goto Lokgg;
+	input @string4$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+@string3$+@string4$+".目前第5条最.多10条";
+	if(@string4$==" ")set @sa$,@string1$+@string2$+@string3$+@string4$;
+	if(@string4$==" ")goto Lokgg;
+	input @string5$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+@string3$+@string4$+@string5$+".目前第6条.最多10条";
+	if(@string5$==" ")set @sa$,@string1$+@string2$+@string3$+@string4$+@string5$;
+	if(@string5$==" ")goto Lokgg;
+	input @string6$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+".目前第7条.最多10条";
+	if(@string6$==" ")set @sa$,@string1$+@string2$+@string3$+@string4$+@string5$+@string6$;
+	if(@string6$==" ")goto Lokgg;
+	input @string7$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$+".目前第8条.最多10条";
+	if(@string7$==" ")set @sa$,@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$;
+	if(@string7$==" ")goto Lokgg;
+	input @string8$;
+	next;
+	mes "输入预览:"+@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$+@string8$+".目前第9条.最多10条";
+	if(@string8$==" ")set @sa$,@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$+@string8$;
+	if(@string8$==" ")goto Lokgg;
+	input @string9$;
+	next;
+	mes "输入预览 "+@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$+@string8$+@string9$+".目前第10条.最多10条";
+	if(@string9$==" ")set @sa$,@string1$+@string2$+@string3$+@string4$+@string5$+@string6$+@string7$+@string8$+@string9$;
+	if(@string9$==" ")goto Lokgg;
+	input @string10$;
+Lokgg:
+	if(@xjda==1)goto Ltesjhok;
+	menu "确定修改",Ldiyego,"重新来过",ldey,"取消",-;
+	close;
+Ldiyego:
+	if(@ldey!=0)goto Lgmok;
+	mes "修改成功!!";
+	set $ggao$,@sa$;
+	close;
+//------------修改特殊公告------------------------------
+
+LtesjhB:	set $tesuggao$,0;	set $testggao,0;	set $ggnian,0;	set $ggyue,0;	set $ggri,0;	set $ggxingqi,0;	set $ggitem,0;
+Ltesjh:
+	set @dsas,@dsas+1;
+	mes "特殊公告修改开始.请输入指定根据时间值.当前时间是:" + gettimestr("%Y-%m/%d %H:%M:%S",19);
+	mes "^FF0000 当前选择第"+@dsas+"个时间判断条件,最多只能四个,^000000 ";
+	next;
+	menu "完成",Lnwe4,"年份",Lnianfen,"月份",Lyuefen,"日子",Lrizi,"星期",Lxingqi,"时",Lshiqi,"撤销特殊公告",Lallre,"返回",Ljshfok;
+Lnianfen:
+	mes "请输入年份(1900以上)";
+	input $ggnian;
+	if($ggnian<1900)goto Lnianfen;
+	set $testggao,$testggao+95;
+	if(@dsas==4)goto Lnwe4;
+	goto Ltesjh;
+Lyuefen:
+	mes "请输入月份(1~12)";
+	input $ggyue;
+	if($ggyue<=0)goto Lyuefen;
+	if($ggyue>=13)goto Lyuefen;
+	set $testggao,$testggao+47;
+	if(@dsas==4)goto Lnwe4;
+	goto Ltesjh;
+Lrizi:
+	mes "请输入日子(1~31)";
+	input $ggri;
+	if($ggri<=0)goto Lrizi;
+	if($ggri>=32)goto Lrizi;
+	set $testggao,$testggao+23;
+	if(@dsas==4)goto Lnwe4;
+	goto Ltesjh;
+Lxingqi:
+	mes "请输入星期(1~12)";
+	input $ggxingqi;
+	if($ggxingqi<=0)goto Lxingqi;
+	if($ggxingqi>=32)goto Lxingqi;
+	set $testggao,$testggao+11;
+	if(@dsas==4)goto Lnwe4;
+	goto Ltesjh;
+Lshiqi:
+	mes "请输入时间(0~23)";			
+	input $ggitem;
+	if($ggitem<=-1)goto Lshiqi;
+	if($ggitem>=23)goto Lshiqi;
+	set $testggao,$testggao+1;
+	if(@dsas==4)goto Lnwe4;
+	goto Ltesjh;
+Lnwe4:
+	set @dsas,0;
+	menu "确定修改",-,"重新来过",Ltesjh;
+	mes "输入特殊内容";
+	set @xjda,1;
+	mes "修改特殊公告开始!!";
+	goto Ldsd;
+Lallre:
+	set $testggao,0;
+	set $tesuggao$,0;
+	set $ggnian,0;
+	set $ggyue,0;
+	set $ggri,0;
+	set $ggxingqi,0;
+	set $ggitem,0;
+	mes "清除成功!!";
+	close;
+	end;
+Ltesjhok:
+	menu "确定修改",-,"重新来过",ldey;
+	mes "修改成功!!";
+	set $tesuggao$,@sa$;
+	close;
+	end;
+
+// 每个小时的那分钟
+OnMinute00:
+	announce "===================G=M=定=时=公=告=====当前时间是:"+gettimestr("%Y-%m/%d %H:%M:%S",19)+"===================",15;
+	announce $ggao$,15;
+	announce "========================================================================================",15;
+//==================判断特别事件==========================================
+	if($testggao==0)end;
+	if($testggao==1)goto L1;
+	if($testggao==11)goto L11;
+	if($testggao==23)goto L23;
+	if($testggao==47)goto L47;
+	if($testggao==95)goto L95;
+	if($testggao==142)goto L142;
+	if($testggao==118)goto L118;
+	if($testggao==106)goto L106;
+	if($testggao==97)goto L97;
+	if($testggao==70)goto L70;
+	if($testggao==58)goto L58;
+	if($testggao==49)goto L49;
+	if($testggao==34)goto L34;
+	if($testggao==12)goto L12;
+	if($testggao==24)goto L24;
+	if($testggao==165)goto L165;
+	if($testggao==153)goto L153;
+	if($testggao==143)goto L143;
+	if($testggao==129)goto L129;
+	if($testggao==119)goto L119;
+	if($testggao==107)goto L107;
+	if($testggao==71)goto L71;
+	if($testggao==59)goto L59;
+	if($testggao==81)goto L81;
+	if($testggao==166)goto L166;
+	if($testggao==154)goto L154;
+	if($testggao==176)goto L176;
+	if($testggao==82)goto L82;
+	end;
+//一个选择
+L1:			if(gettime(3)!=$ggitem)end;				goto Ltesko;
+L11:		if(gettime(4)!=$ggxingqi)end;			goto Ltesko;
+L23:		if(gettime(5)!=$ggri)end;					goto Ltesko;
+L47:		if(gettime(6)!=$ggyue)end;				goto Ltesko;
+L95:		if(gettime(7)!=$ggnian)end;				goto Ltesko;
+//二个选择
+L142:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue))end;	goto Ltesko;
+L118:	if((gettime(7)!=$ggnian)||(gettime(5)!=$ggri))end;	goto Ltesko;
+L106:	if((gettime(7)!=$ggnian)||(gettime(4)!=$ggxingqi))end;	goto Ltesko;
+L97:	if((gettime(7)!=$ggnian)||(gettime(3)!=$ggitem))end;	goto Ltesko;
+L70:	if((gettime(6)!=$ggnian)||(gettime(5)!=$ggri))end;	goto Ltesko;
+L58:	if((gettime(6)!=$ggnian)||(gettime(4)!=$ggxingqi))end;	goto Ltesko;
+L49:	if((gettime(6)!=$ggnian)||(gettime(3)!=$ggitem))end;	goto Ltesko;
+L34:	if((gettime(4)!=$ggxingqi)||(gettime(5)!=$ggri))end;	goto Ltesko;
+L12:	if((gettime(4)!=$ggxingqi)||(gettime(3)!=$ggitem))end;	goto Ltesko;
+L24:	if((gettime(5)!=$ggri)||(gettime(3)!=$ggitem))end;	goto Ltesko;
+//三个选择
+L165:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue)||(gettime(5)!=$ggri))end;		goto Ltesko;
+L153:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue)||(gettime(4)!=$ggxinqi))end;		goto Ltesko;
+L143:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue)||(gettime(3)!=$ggitem))end;		goto Ltesko;
+L129:	if((gettime(7)!=$ggnian)||(gettime(5)!=$ggri)||(gettime(4)!=$ggxingqi))end;		goto Ltesko;
+L119:	if((gettime(7)!=$ggnian)||(gettime(5)!=$ggri)||(gettime(3)!=$ggitem))end;		goto Ltesko;
+L107:	if((gettime(7)!=$ggnian)||(gettime(4)!=$ggxingqi)||(gettime(3)!=$ggitem))end;		goto Ltesko;
+L71:	if((gettime(6)!=$ggyue)||(gettime(5)!=$ggri)||(gettime(3)!=$ggitem))end;		goto Ltesko;
+L59:	if((gettime(6)!=$ggyue)||(gettime(4)!=$ggxingqi)||(gettime(3)!=$ggitem))end;		goto Ltesko;
+L81:	if((gettime(6)!=$ggyue)||(gettime(4)!=$ggxingqi)||(gettime(5)!=$ggri))end;		goto Ltesko;
+//四个选择
+L166:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue)||(gettime(5)!=$ggri)||(gettime(3)!=$ggitem))end;		goto Ltesko;
+L154:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue)||(gettime(4)!=$ggxinqi)||(gettime(3)!=$ggitem))end;	goto Ltesko;
+L176:	if((gettime(7)!=$ggnian)||(gettime(6)!=$ggyue)||(gettime(5)!=$ggri)||(gettime(4)!=$ggxingqi))end;	goto Ltesko;
+L82:	if((gettime(6)!=$ggyue)||(gettime(5)!=$ggri)||(gettime(4)!=$ggxingqi)||(gettime(3)!=$ggitem))end;	goto Ltesko;
+Ltesko:		announce "【特殊公告】"+$tesuggao$+"",15;	end;
+//------------------------传送---------------------------------------------
+Lwarp:
+	mes "[发呆GM管理专员]";
+	mes "选择你需要得传送服务!";
+	next;
+	menu "区域传送",Lwarpq,"成批召唤",Lwarpor,"返回主功能表",Lgmda;
+Lwarpq:
+	mes "[发呆GM管理专员]";
+	mes "区域传送是把一个地图区域得玩家传送到指定地图得功能";
+	mes "使用前你必须记好传送区域坐标A,和坐标B,然后在记好传动得地图和坐标,下面还是输入,你得数据";
+	next;
+	mes "[发呆GM管理专员]";
+	mes "输入传送区域地图名(记住尾名要带)";
+	next;
+	input @wmap$;
+	mes "[发呆GM管理专员]";
+	mes "输入传送区域1号点X坐标";
+	next;
+	input @warmb;
+	mes "[发呆GM管理专员]";
+	mes "输入传送区域1号点Y坐标";
+	next;
+	input @warmc;
+	mes "[发呆GM管理专员]";
+	mes "输入传送区域2号点X坐标";
+	next;
+	input @warmd;
+	mes "[发呆GM管理专员]";
+	mes "输入传送区域2号点Y坐标";
+	next;
+	input @warme;
+	mes "[发呆GM管理专员]";
+	mes "输入传送区域X坐标";
+	mes "[发呆GM管理专员]";
+	mes "输入传送到的地图名(记住尾名要带)";
+	next;
+	input @wmapf$;
+	mes "[发呆GM管理专员]";
+	mes "输入传送到的X坐标";
+	next;
+	input @warmg;
+	mes "[发呆GM管理专员]";
+	mes "输入传送到的Y坐标";
+	next;
+	input @warmh;
+	mes "[发呆GM管理专员]";
+	mes "是否完成???你要做的是把"+@wmap$+"地图的X"+@warmb+",Y"+@warmc+"点到X"+@warmd+",Y"+@warme+"点区域传送到地图"+@wmapf$+"的X"+@warmg+",Y"+@warmh+"坐标?";
+	next;
+	menu "是的",-,"NO",Lwarpq;
+	areawarp @wmap$,@warmb,@warmc,@warmd,@warme,@wmapf$,@warmg,@warmh;
+	mes "[发呆GM管理专员]";
+	mes "传送完成!!";
+	next;
+	menu "区域传送",Lwarpq,"公会传送",Lwarpg,"成批召唤",Lwarpor,"返回主功能表",Lgmda;
+Lwarpg:	close;
+
+Lwarpor:
+	mes "[发呆GM管理专员]";
+	mes "选择你要使用的方式";
+	mes "1.名字,2.人物ID,3.帐号ID,大于3或者等于0返回.";
+	next;
+	input @ts;
+	if((@ts<=0)||(@ts>=4))goto Lgmda;
+	mes "[发呆GM管理专员]";
+	mes "请键入召唤数量,一次最多10个";
+	next;
+	input @sd;
+	next;
+	mes "[发呆GM管理专员]";
+	mes "请键入召唤对像,你可以一次召唤"+@sd+"个";
+	next;
+Lgo:
+if(@ts==1)input @mena$;	if(@ts!=1)input @mea;	if(@sd==1)goto Ldok;	mes "请输入第二个....";
+if(@ts==1)input @menb$;	if(@ts!=1)input @meb;	if(@sd==2)goto Ldok;	mes "请输入第三个....";
+if(@ts==1)input @menc$;	if(@ts!=1)input @mec;	if(@sd==3)goto Ldok;	mes "请输入第四个....";
+if(@ts==1)input @mend$;	if(@ts!=1)input @med;	if(@sd==4)goto Ldok;	mes "请输入第五个....";
+if(@ts==1)input @mene$;	if(@ts!=1)input @mee;	if(@sd==5)goto Ldok;	mes "请输入第六个....";
+if(@ts==1)input @menf$;	if(@ts!=1)input @mef;	if(@sd==6)goto Ldok;	mes "请输入第七个....";
+if(@ts==1)input @meng$;	if(@ts!=1)input @meg;	if(@sd==7)goto Ldok;	mes "请输入第八个....";
+if(@ts==1)input @menh$;	if(@ts!=1)input @meh;	if(@sd==8)goto Ldok;	mes "请输入第九个....";
+if(@ts==1)input @meni$;	if(@ts!=1)input @mei;	if(@sd==9)goto Ldok;	mes "请输入第十个....";
+if(@ts==1)input @menj$;	if(@ts!=1)input @mej;		
+Ldok:
+	mes "是否确定?";
+	menu "是的",-,"否",Lgo;
+Lreend:
+	mes "[发呆GM管理专员]";
+	mes "召唤完毕!!";
+	next;
+	menu "区域传送",Lwarpq,"公会传送",Lwarpg,"成批召唤",Lwarpor,"返回主功能表",Lgmda;
+
+///-----------------------定点提醒公告----------------------------------
+// 每天8点、12点、18点执行
+OnHour08:
+	announce "【GM公告】早上08点到了！！大家该去吃早饭啰吧",15;
+	end;
+OnHour12:
+	announce "【GM公告】中午12点到了！！大家该去吃午饭啰吧",15;
+	end;
+OnHour18:
+	announce "【GM公告】晚上06点到了！！大家该去吃晚饭啰吧",15;
+	end;
+// 每天23点59分执行
+OnClock2359:
+	announce "【GM公告】还有1分钟就要明天啰喔！！",15;
+	end;
+
+//OnClock00:
+//	if((gettime(4)!=2)||(gettime(4)!=4)||(gettime(4)!=0))end;//每个星期二.四.日.0点维护公告.
+//	announce "【维护公告】又到伺服器维护时间,10分钟以后伺服器关闭,明天早上7点~9点左右开通,请大家自觉下线.",17;
+//	announce "【维护公告】又到伺服器维护时间,10分钟以后伺服器关闭,明天早上7点~9点左右开通,请大家自觉下线.",17;
+//	announce "【维护公告】又到伺服器维护时间,10分钟以后伺服器关闭,明天早上7点~9点左右开通,请大家自觉下线.",17;
+//	end;
+}
+

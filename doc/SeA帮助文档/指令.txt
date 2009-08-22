@@ -1,0 +1,347 @@
+/*=====================================
+ * SeA 新增GM指令
+ *=====================================*/
+- @showtitle
+	作用：显示称号的开关
+	使用方法: @showtitle 1(1为公会名方式，2为聊天室方式，0为关闭)
+- @hidedur、@showdur、@hidecards、@showcards
+	作用：显示耐久度的开关
+	使用方法: @hidedur
+- @petlvlup
+	作用：打开宠物升级系统时，帮助宠物升级。
+	使用方法: @petlvlup <+/-等级>
+- @petinfo
+	作用：打开宠物升级系统时，显示宠物经验，能力值等属性。
+	使用方法: @petinfo
+- @title 
+	作用：让玩家头顶显示称号。
+	使用方法: @title <称号>。称号最长12个字母（6个汉字）。
+- @aura 
+	作用：让玩家永久显示某光环。
+	使用方法: @aura <id> (id详见effect_list.txt)
+- @campon、@campon2、@campoff 
+	作用：打开当前地图的阵营攻击模式，无须按shift攻击。
+- @offline 
+	作用：客户端离线但服务器人物显示在线。
+	使用方法: @offline，默认使用权限为100，请更改atcommand.conf使之生效。（SeA仍不建议您的作假行为）
+- @camp 
+	作用：@camp 0: 退出所有阵营。@camp 1~3:加入代号为1~3的阵营。
+	使用方法: @camp <id>
+- @itemlock 
+	作用：@itemlock "帐号email" 为锁定所有物品，@itemlock "帐号email" "id或物品名" 为锁定指定道具。
+	使用方法: @itemlock email{ <id|name>}
+- @recallmap
+	作用：	召唤当前地图的玩家到自己身边。
+- @alootid
+	作用：	自动拾取指定ID道具。
+	使用方法: @alootid <id|name>
+- @noks 
+	作用：	开启抢怪保护。
+	使用方法: @noks <self|party|guild>
+- @allowks。
+	作用：	允许该地图抢怪行为。
+- @barricade
+	作用：	设置路障。
+	使用方法: @barricade <x> <y> <size> <dir> <killable> <shootable> <event>。
+	dir从正北（上）开始逆时针方向分别为0~7，size表示路障在所给坐标的某方向上扩展多少格。
+	killable表示是否能够攻击，shootable表示是否能够隔开路障攻击或使用技能飞跃。
+	event表示路障死亡后的触发事件。
+- @killbarricade
+	作用：	清除该地图上的路障。(并触发事件)
+
+///////////////////////////////////
+// - @GM指令
+// 翻译by  Dino9021
+//////////////////////////////////
+  1:请在对话框内输入要使用的指令
+ 20:@h|@help - 列出此指令说明表
+ 20:@h2/@help2 - 列出第二指令说明表
+  1: 
+  1:--- 广播系统 ---
+  1:@main [on|off|message] - 开启/关闭全域聊天 (@main must be on to see global chat messages)
+  1:@noask - 自动拒绝交易/邀请
+ 20:@gmotd - 广播motd档案的内容给所有玩家
+ 20:@me <message> - 以以下格式显示正常讯息: *name message* (像mIRC的 /me)
+ 20:@fakename [Name] - 暂时改变你的显示名称
+ 20:@npctalk [NPC Name],[讯息内容] - Forces a NPC to display a message in normal chat.
+ 40:/b|@broadcast <讯息内容> - 含 GM 角色名称 (黄色字体)
+ 40:/nb|@kami <讯息内容> - 不含 GM 角色名称 (黄色字体)
+ 40:@kamib <讯息内容> - 不含 GM 角色名称 (蓝色字体)
+ 40:/lb|@localbroadcast <讯息内容> - 所在地图之广播, 含 GM 角色名称 (黄色字体)
+ 40:/nlb <讯息内容> - 所在地图之广播, 不含 GM 角色名称 (黄色字体)
+  1: 
+  1:--- 资料系统 ---
+/ 0:@ignorelist - 列出拒绝接受密语的名单 (也就是将你拒绝接受密语的所有人物列表)
+  1:@commands - 显示你能使用的指令
+  1:@rates - 显示伺服器目前倍率
+  1:@uptime - 显示伺服器启动时间
+  1:@showdelay - 显示/隐藏 the "there is a delay after this skill" message.
+  1:@exp - 显示目前等级和经验值
+  1:@mobinfo/@monsterinfo/@mi [Mob ID|Part of monster name] - 显示魔物资讯 (rates, stats, drops, MVP stuff)
+  1:@iteminfo/@ii [Item ID|Part of item name] - 显示物品资讯 (类型, 价格, 其他)
+  1:@whodrops [Item ID|Part of item name] - 显示掉落此物品的魔物 (掉落此物最高机率的魔物)
+  1:@version - 显示伺服器版本
+  1:@email <actual@email> <new@email> - 改变你目前的 e-mail (角色保护)
+  1:@where [角色名称] - 显示某角色目前所在位置
+  1:@time/@date/@server_date/@serverdate/@server_time/@servertime - 显示系统日期/时间资料
+ 10:@showexp - 显示/隐藏 所获得的经验值
+ 10:@showzeny - 显示/隐藏 所获得的金钱
+ 10:@mobsearch [Mob ID|Monster Name] - 显示目前所在地图特定魔物的座标
+ 20:@who [关键字] - 列出线上角色含关键字的所有名单与其所在位置 (未输入关键字则为全部的线上使用者)
+ 20:@who2 [关键字] - 列出线上角色含关键字的所有名单与其职业 (未输入关键字则为全部的线上使用者)
+ 20:@who3 [关键字] - 列出线上角色含关键字的所有名单与其队伍与公会 (未输入关键字则为全部的线上使用者)
+ 20:@whomap|@whomap2|@whomap3 [地图名称] - 同 @who|@who2|@who3 但限定于某个地图的资料 (未输入地图名则为 GM 所在地图)
+ 20:@whogm [关键字] - 同 @who+@who2+who3, 但只显示 GM 的资料
+ 40:@charcartlist <角色名称> - 显示某角色手推车中的所有物品
+ 60: 
+ 60:@guildspy <公会名称/公会ID> - 监听某公会的聊天频道 (该公会最少要有一位成员在线上)
+ 60:@partyspy <队伍名称/队伍ID> - 监听某队伍的聊天频道 (该队伍最少要有一位成员在线上)
+ 99:@mapinfo [<0-3> [地图名称]] - 取得某地图的相关讯息列表 (0: 一般资料统计, 1: 角色, 2: NPC, 3: 露店/聊天室)
+  1: 
+  1:--- 状态变更系统 ---
+  1:@die ---- 自杀
+ 10:@go <数字/城市名称> - 瞬移至某一城市
+ 10:  -3: (记忆传点 2)    1: 梦罗克   5: 伊斯鲁得岛     9: 朱诺     13: 尼芙菲姆
+ 10:  -2: (记忆传点 1)    2: 吉芬     6: 艾尔帕兰      10: 天津     14: 洛阳
+ 10:  -1: (记忆传点 0)    3: 裴杨     7: 圣诞村        11: 昆仑     15: 复活点
+ 10:   0: 普隆德拉        4: 艾尔贝塔 8: 克魔岛        12: 汶巴拉   16: 监狱/监牢
+ 10: 
+ 20:/shift|@jumpto|@warpto|@goto <角色名称> - 瞬移至某角色所在地图座标
+/20:@jumptoid|@warptoid|@gotoid <角色 char_id> - 瞬移至某角色所在地图座标 (以 char_id 为目标)
+/20:@jumptoid2|@warptoid2|@gotoid2 <角色 account_id> - 瞬移至某角色所在地图座标 (以 account_id 为目标)
+ 20:@follow <角色名称> - 在某角色的背后跟踪, 输入自己的名字可以解除 (跟随某角色, 即使是瞬移或进传点也照跟不误)
+/20:@followid <角色 char_id> - 自动跟踪某角色 (以 char_id 为目标)
+/20:@followid2 <角色 account_id> - 自动跟踪某角色 (以 account_id 为目标)
+ 20:@mountpeco - 立刻骑上大嘴鸟或立刻将大嘴鸟放生 (会检查职业但不会检查技能)
+ 20:@disguise <魔物名称或ID> - 将外型变为某魔物的样子
+ 20:@undisguise - 将外型变为某原来的样子
+ 20:@model <发型: 0-17> <发色: 0-8> <衣服颜色: 0-4> - 改变角色外观
+ 20:@size <1-3> 改变你的大小 (1-变小 2-变大 3-正常)
+ 40:/hide|@hide - 隐身状态, 再执行一次指令则解除隐身
+ 40:@save - 将目前所在位置储存为复活点
+ 40:@load|@return - 立刻瞬移回复活点
+ 40:/mm|/mapmove|@warp|@rura|@mapmove <地图名称> <x座标> <y座标> - 瞬移至所指定的地图座标
+ 40:@jump [x [y]]- 瞬移至目前所在地图的指定座标处, 不输入座标则为随机瞬移
+ 40:@job|@jobchange <职业代码> - 变更职业
+ 40:   0: 初学者           18: 炼金术士       4015: 圣殿十字军
+ 40:   1: 剑士             19: 吟游诗人       4016: 武术宗师
+ 40:   2: 魔法师           20: 舞娘           4017: 智者
+ 40:   3: 弓箭手           23: 超级初学者     4018: 神行太保
+ 40:   4: 服事           4001: 进阶初学者     4019: 创造者
+ 40:   5: 商人           4002: 进阶剑士       4020: 搞笑艺人
+ 40:   6: 盗贼           4003: 进阶魔法师     4021: 冷艳舞姬
+ 40:   7: 骑士           4004: 进阶弓箭手     4046: 跆拳道少年/少女
+ 40:   8: 祭司           4005: 进阶服事       4047: 拳圣
+ 40:   9: 巫师           4006: 进阶商人       4049: 悟灵士
+ 40:  10: 铁匠           4007: 进阶盗贼       24: 枪手
+ 40:  11: 猎人           4008: 骑士领主       25: 忍者
+ 40:  12: 刺客           4009: 神官
+ 40:  14: 十字军         4010: 超魔导士
+ 40:  15: 武道家         4011: 神工匠
+ 40:  16: 贤者           4012: 神射手
+ 40:  17: 流氓           4013: 十字刺客
+ 40:--宝宝职业--
+ 40: 4023: 宝宝初学者    4024: 宝宝剑士        4025: 宝宝魔法师
+ 40: 4026: 宝宝弓箭手    4027: 宝宝服事        4028: 宝宝商人
+ 40: 4029: 宝宝盗贼      4030: 宝宝骑士        4031: 宝宝祭师
+ 40: 4032: 宝宝巫师      4033: 宝宝铁匠        4034: 宝宝猎人
+ 40: 4035: 宝宝刺客      4037: 宝宝十字军      4038: 宝宝武道家
+ 40: 4039: 宝宝贤者      4040: 宝宝流氓        4041: 宝宝炼金术士
+ 40: 4042: 宝宝吟游诗人  4043: 宝宝舞娘        4045: 宝宝超级初学者
+ 40: 
+ 40:	<参数1>       <参数2>       <参数3>           <参数3>                <参数3>
+ 40:	1 石化        (stackable)   01 火狩            32 骑鸟               2048 欧克头
+ 40:	2 冰冻        01 中毒       02 隐昵            64 GM 完全隐身        4096 结婚造型
+ 40:	3 昏迷        02 诅咒       04 伪装           128 手推车等级2        8192 光猎
+ 40:	4 睡眠        04 沉默       08 手推车等级1    256 手推车等级3
+ 40:	6 暗黑        08 ???        16 带老鹰         512 手推车等级4
+ 40:	              16 暗黑                        1024 手推车等级5
+ 40:
+ 40:@heal [<HP> <SP>] - 恢复 HP/SP (可设定恢复量, 不输入恢复量则为恢复最大值)
+ 40:@option <参数1> <参数2> <参数3> - 变更角色效果 <参数 2,3 效果可重复>
+ 40:@dye/@ccolor <衣服颜色: 0-4> - 改变衣服颜色
+ 40:@hairstyle/@hstyle <发型: 0-17> - 改变发型
+ 40:@haircolor/@hcolor <发色: 0-8> - 改变发色
+ 40:@speed <1-1000> - 变更行走速度, 1 最快, 1000 最慢, 预设值为 150
+ 40:@effect <effect_id> [flag] - 使用一些看得见的效果在自己身上 (不是很明白有哪些效果, 不明)
+ 40:@dropall - 丢掉自己身上所有的道具
+ 40:@storeall - 把自己身上所有的道具存进仓库
+ 40:@killable - 准许其他角色在 PvP 以外的地方攻击得到你
+ 40:@memo [记忆传点] - 指定设置传送之阵所使用的记忆传点 (不指定储存编号: 列出所有储存点)
+ 40:@spiritball <数量: 1-1000> - 蓄气个数 [1-1000] 之间
+ 40:    (若设定数量 > 1000, 伺服器将会不稳定甚至当机)
+ 40:@questskill <技能编号> - 立刻习得某项职业新技能 (若自身职业不可使用该技能则不会显示在技能表中)
+ 40:@lostskill <技能编号> - 删除自身某项技能
+ 40:@skillid <name> - look up a skill by name
+ 40:@useskill <技能ID> <技能等级> <对象> - 使用某技能
+ 40:  初学者                 剑士                       盗贼                 商人
+ 40:  142 = 紧急治疗         144 = 移动时回复 HP        149 = 喷沙           153 = 手推车攻击
+ 40:  143 = 装死             145 = 弱点攻击             150 = 退后回避       154 = 改装手推车
+ 40:  弓箭手                 146 = 自动狂暴             151 = 捡石头         155 = 大声呐喊
+ 40:  147 = 制作箭           服事                       152 = 丢石头         魔法师
+ 40:  148 = 冲锋箭           156 = 神圣之光                                  157 = 能量外套
+ 40: @skilltree <skillnum> <target> 设定某技能所需的前置技能及其等级 (不详)
+ 40: @marry <角色名称-1> <角色名称-2> - 将两个角色结婚
+/40: @rings - 取得两个结婚戒指
+ 40: @divorce <角色名称> - 将该角色与其婚配离婚
+ 60:@alive - 复活
+ 60:@lvup|@blevel|@baselvlup <要升级的数量> - 立刻升级 Base Level 按照你输入的等级累加上去. 最大等级 255 (使用者定义).
+ 60:@joblvup|@jlevel|@joblvlup <要升级的数量> - 立刻升级 Job Level 按照你输入的等级累加上去. 基本职业最大等级 50 进阶职业最大等级 70(使用者定义).
+ 60:@allskill|@allskills|@skillall|@skillsall - 学会所有技能
+ 60:@stpoint <数量> - 增加素质点数
+ 60:@skpoint <数量> - 增加技能点数
+ 60:@zeny <数量> - 增加金钱
+ 60:@cash <数量> - Gives you the specified amount of cash points.
+ 60:@points <数量> - Gives you the specified amount of Kafra Points.
+ 60:@str,@agi,@vit,@int,@dex,@luk <数值> - 增加自身素质. 例: @str 10 将会增加 str 10 点
+ 60:@statall|@statsall|@allstats|@allstat [数值] - 增加自身所有素质, 数值留空将会直接变为最大值
+ 60: @addwarp <地图名称> <x座标> <y座标> 在目前所在地设置一个永久传点至某地图座标 (伺服器重新启动才会消失)
+ 40: 
+ 40:--- 魔物系统 ---
+ 40:@killmonster2 - 消灭目前所在地图所有的魔物 (不会掉东西)
+ 50:/monster <魔物名称> - 召唤一个魔物
+ 50:@spawn|@monster|@summon <魔物名称或ID> [<召唤数量> [<召唤出的魔物名称> [<x座标> [<y座标>]]]]
+ 50:@monster2 <召唤出的魔物名称> <魔物名称或ID> [<召唤数量> [<x座标> [<y座标>]]]
+ 50:@spawn|@monster|@summon|@monster2 "召唤出的魔物名称" <魔物名称或ID> [<召唤数量> [<x座标> [<y座标>]]]
+ 50:@spawn|@monster|@summon|@monster2 <魔物名称或ID> "召唤出的魔物名称" [<召唤数量> [<x座标> [<y座标>]]]
+ 50:    召唤魔物并给他取名字
+ 50:@monstersmall [魔物ID|魔物名称] - 召唤迷你版魔物
+ 50:@monsterbig [魔物ID|魔物名称] - 召唤巨大化的魔物
+ 60:@killmonster [地图名称] - 消灭某地图所有的魔物 (会掉东西, 不输入地图名称则为目前所在地图)
+ 40: 
+ 10:--- MISC CMD ---
+ 10:@autoloot [on|off|#] - 物品直接掉入身上
+ 10:@autotrade/@at - 离线商店
+ 10:@changegm [角色名称] - 更改公会长 (你必须是公会长)
+ 10:@changeleader [角色名称] - 更改组队团长 (你必须是组队团长)
+ 20:@request [讯息内容] - 发送讯息给所有线上GM (透过GM密语系统)
+ 40:@sound [Path way to file in Data or GRF file] - Plays a sound from the data or grf file located on the client.
+ 50:@clone [角色名称] - Spawns a supportive clone of the given player.
+ 50:@slaveclone [角色名称] - Spawns a supportive clone of the given player that follows the creator around.
+ 50:@evilclone [角色名称] - Spawns an agressive clone of the given player.
+ 60:@changesex - 改变你的性别
+ 10: 
+  1:--- 决斗指令 ---
+  1:@duel - 启动决斗
+  1:@invite - 邀请玩家进入决斗
+  1:@accept - 接受邀请进入决斗
+  1:@reject - 拒绝邀请进入决斗
+  1:@leave - 离开决斗
+  1: 
+  1:--- 邮件系统 --- (SQL限定) (必须已经启动)
+  1:@mail - 打开邮箱
+  0:To use one command, type it inside the message window where you usually type to chat.
+  1:--- 物品系统 ---
+  1:@storage - 无论身在何处, 立即开启仓库
+ 40:@itemreset - 删除自身物品栏中所有的岛具
+ 50:@gstorage - 无论身在何处, 立即开启公会仓库
+ 60:@itemcheck - 检查当前装备的合法性.
+ 60:@idsearch <物品关键字> - 依据某物品的关键字搜寻其 item_id
+ 60:@refine <装备位置> <+/- 数值>
+ 60:@produce <装备名称或装备ID> <属性> <星星角的数量>
+ 60:    属性: 0=无 1=冰 2=地 3=火 4=风
+ 60:    星星角的数量与属性并无关系, 故可以制造出三级强悍的属性武器
+ 60:@repairall - 修复身上所有损坏的东西
+ 60:/item <物品ID> - 制造某物品
+ 60:@item <物品名称或ID> <数量> - 制造某数量的某物品
+ 60:@item2 <物品名称或ID> <数量> <鉴定旗标> <精炼等级> <是否损坏> <卡片1> <卡片2> <卡片3> <卡片4> = 制造某复合属性物品
+ 40: 
+ 40:--- PvP 系统 ---
+ 40:@pvpon - 开启目前所在地图的 PvP 模式
+ 40:@pvpoff - 关闭目前所在地图的 PvP 模式
+ 40:@gvgon|@gpvpon - 开启目前所在地图的 GvG 模式
+ 40:@gvgoff|@gpvpoff - 关闭目前所在地图的 GvG 模式
+ 60:@agitstart - 开启攻城战
+ 60:@agitend - 结束攻城战
+  1: 
+  1:--- 团队系统 ---
+  1:@party <队伍名称> - 建立一个组队
+ 50:@guild <公会名称> - 建立一个公会
+ 60:@guildlvup|@guildlvlup <要升级的数量> - 立刻升级公会等级
+ 60:@guildrecall <公会名称或公会ID> - 召唤某公会全部成员到自己身边 (该公会最少要有一位成员在线上)
+ 60:@partyrecall <队伍名称或队伍ID> - 召唤某队伍全部成员到自己身边 (该队伍最少要有一位成员在线上)
+  1: 
+  1:--- 宠物系统 ---
+  1:@petrename - 重新命名宠物
+ 40:@petfriendly <数值> - 设定宠物亲密度 (0-1000) 1000 = 最高
+ 40:@pethungry <数值> - 设定宠物饥饿度 (0-100) 100 = 最高
+ 60:@hatch - 孵化宠物蛋 (免携带用宠物孵蛋器)
+ 60:@makeegg <魔物ID> - 制造宠物蛋 (必须是可以认养为宠物的魔物)
+ 60:
+ 60:--- 生命体系统 ---
+ 60:@makehomun 6001~6016 - 制造人工生命体 
+ 60:@homlvup - 人工生命体升级 
+ 60:@homevolution - 人工生命体进化 
+ 60:@homfriendly 1~1000 - 人工生命体亲密度 
+ 60:@homhungry 1~100 - 人工生命体满足感
+ 20:
+ 20:--- 控制他人角色系统 ---
+ 20:@kick <角色名称> -踢掉线上的某角色
+ 40:@charkillable <角色名称> - 将某角色设定成准许被其他角色杀戮的状态
+ 60:@unjail/@discharge <角色名称> - 释放在监狱里的玩家/逮逋违规的玩家
+ 60:@kill <角色名称> - 杀死某角色
+ 60:@chardropall <角色名称> - 丢掉某角色身上所有的道具
+ 60:@charstoreall <角色名称> - 把某角色身上所有的道具存进仓库
+ 60:/recall|@recall <角色名称> - 召唤某角色到自身所在位置
+ 60:@revive <角色名称> - 复活指定角色并且回复其 HP/SP
+ 20:@charignorelist <角色名称> - 列出某角色拒绝接受密语的名单 (也就是将某角色拒绝接受密语的所有人物列表)
+/20:@inall <角色名称> - 将某角色设定成可接受所有密语的状态
+/20:@exall <角色名称> - 将某角色设定成拒绝所有密语的状态
+ 60:@charblock|@block <角色名称> - 冻结某角色所属帐号 (只有管理者可解除禁止)
+ 60:@charunblock|@unblock <角色名称> - 解冻某角色所属帐号
+ 60:@charban|@ban|@banish|@charbanish <时间> <角色名称> - 冻结某角色所属帐号一段时间 (目前时间到了并不会自动解冻, 所以用处不大)
+ 60:    时间格式: 增加或减少 (+/- 值) 以及单位 (y/a, m, d/j, h, mn, s)
+ 60:    例: @ban +1m-2mn1s-6y TestPlayer
+ 60:@charunban|@unban|@unbanish|@charunbanish <角色名称> - 解除被冻结一段时间的某角色所属帐号
+ 60:@jail <角色名称> - 把某角色送到监狱
+ 60:@trade <角色名称> - 与指定角色进行交易
+ 80:@recallall - 召唤线上所有角色到自己身边
+ 80:@doom - 杀掉伺服器内所有角色
+ 80:@doommap - 杀掉目前所在地图上所有角色
+ 80:@raise - 复活伺服器内所有角色
+ 80:@raisemap - 复活目前所在地图中的所有角色
+ 80: 
+ 80:--- 环境系统 ---
+ 80:@night - 将目前所在地图变更为黑夜 (使用 @option 00 16 00 指令在所有角色身上 -> 暗黑)
+ 80:@day -将目前所在地图变更为白天 (使用 @option 00 00 00 指令在所有角色身上)
+ 80:@skillon - 设定目前所在地图内可以使用某些技能
+ 80:@skilloff - 设定目前所在地图内不能使用某些技能
+ 99:@rain - 设定所有地图为下雨天气效果
+ 99:@snow - 设定所有地图为下雪天气效果
+ 99:@clouds - 设定所有地图为云雾天气效果
+ 99:@clouds2 - 设定所有地图为另一种云雾天气效果
+ 99:@fog - 设定所有地图为迷雾天气效果
+ 99:@fireworks - 设定所有地图为烟火天气效果
+ 99:@sakura - 设定所有地图为樱花天气效果
+ 99:@leaves - 设定所有地图为落叶天气效果
+ 80: 
+ 80:--- 管理系统 ---
+ 80:@shownpc <NPC_name> - 开启1个 NPC (管理命令)
+ 80:@hidenpc <NPC_name> - 关闭1个 NPC (管理命令)
+ 80:@loadnpc <path_to_script> - 读取一个 script (管理命令)
+ 80:@unloadnpc <NPC_name> - 关闭一个 script (管理命令)
+ 99:@adjgmlvl <等级> <角色名称> - 将某角色暂时设定为某等级的 GM (管理命令)
+ 99:@adjcmdlvl <等级> <指令> - 暂时变更某 GM 指令的使用等级 (管理命令)
+ 99:@kickall - 踢掉伺服器中所有角色
+ 99:@mapexit - 踢掉伺服器中所有角色并关闭 Map Server
+ 99:@reloaditemdb - 重新读取 item_db.txt (管理命令)
+ 99:@reloadmobdb - 重新读取 mob_db.txt (管理命令)
+ 99:@reloadskilldb - 重新读取 skill_db.txt (管理命令)
+ 99:@reloadscript - 重新读取所有 Script 脚本 (管理命令,还有小bug)
+ 80: 
+ 99:@gat - 除错用途, 查看周围坐标资料
+ 99:@packet - 除错用途, packet 资料
+ 99: 
+100:@nuke <角色名称> - 杀死自己周围的一切角色,包括玩家和魔物 (原子弹的效果......).
+
+///////////////////////////////////
+// - #玩家指令
+//////////////////////////////////
+所有@指令后插入玩家名即为#指令
+
+例1: 
+	@itemreset		清除所有物品栏道具
+	#itemreset "某某"	清除名字为"某某"的角色所有物品栏道具
+例2:
+	@str 10			自己str+10
+	#str "某某" 10		某某的str+10

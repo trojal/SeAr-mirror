@@ -1,0 +1,1 @@
+ALTER TABLE `pet` ADD COLUMN `exp` int(12) NOT NULL default '0' AFTER `incuvate`;

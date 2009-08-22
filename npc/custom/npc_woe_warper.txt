@@ -1,0 +1,48 @@
+//Custom WOE warper 1.1 [Lupus]
+//you can get to Novice Castles, too
+
+n_castle.gat,102,107,5	script	维姆塔	757,{
+	mes "[维姆塔]";
+	mes "你好, "+ strcharinfo(0) +"! 你想做什么?";
+	next;
+	menu "传送去普隆德拉",-,"取消",LEnd;
+	
+		warp "prontera.gat",155,177+rand(5);
+		close;
+	LEnd:
+		mes "[维姆塔]";
+		mes "好吧，我会一直在这.";
+		close;
+}
+
+prontera.gat,130,217,5	script	维姆塔	757,{
+	mes "[维姆塔]";
+	mes "你好! 我是攻城战代理, 维姆塔.";
+	if (getcharid(2) < 1000 ) mes "你不是公会成员, "+ strcharinfo(0) +"? ";
+	if (getcharid(2) < 1000 ) close;
+	if (agitcheck(0) == 0) mes "当不是攻城时我只能传送你去初学者公会城堡:";
+	if (agitcheck(0) != 0) mes "我能传送任何城堡:";
+	next;
+	if (agitcheck(0) == 0) menu "初学者公会城堡",novice_cas,"取消",-;
+	if (agitcheck(0) != 0) menu "普隆德拉公会城堡",prtg_cas,"斐扬公会城堡",payg_cas,"吉芬公会城堡",gefg_cas,"艾尔帕兰公会城堡",aldeg_cas,"初学者公会城堡",novice_cas,"Cancel",-;
+
+	mes "[维姆塔]";
+	mes "别想那么多啦, 能参加攻城战真是超酷的事啊";
+	close;
+
+	prtg_cas:
+		warp "prt_gld.gat",	159,	38;	close;
+
+
+	payg_cas:
+		warp "pay_gld.gat",	202,	173;	close;
+
+	gefg_cas:
+		warp "gef_fild13.gat",	270,	225;	close;
+
+	aldeg_cas:
+		warp "alde_gld.gat",	186,	157;	close;
+
+	novice_cas:
+		warp "n_castle.gat",	102,	103+rand(5);	close;
+}

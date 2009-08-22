@@ -1,0 +1,117 @@
+prontera.gat,151,189,3	script	初学者任务委托秘书	727,{
+	mes "[初学者任务委托秘书]";
+	mes "你好!!这里是初学者接受任务委托的地";
+	mes "方。请问你有什么事情吗？";
+	next;
+	menu "接受委托",Lgivetask,"完成委托",Lovertask,"没事了",Left;
+	close;
+Lgivetask:
+	if(Class!=Job_Novice) goto Lnotask;
+	if(taskjob!=0) goto Lnotover;
+	mes "[初学者任务委托秘书]";
+	mes "请你稍等一下，我找找现在有哪些需要";
+	mes "处理的任务!!";
+	next;
+	set givejob,rand(4);
+	if(givejob==0) goto Lnotask3;
+	if(givejob==1) goto Ltask1;
+	if(givejob==2) goto Ltask2;
+	if(givejob==3) goto Ltask3;
+	close;
+
+Ltask1:
+	mes "[初学者任务委托秘书]";
+	mes "目前有一个工作:";
+	mes "收集30个 ^313880杰勒比结晶^000000 的工作";
+	mes "酬劳: ^FF00005000z^000000";
+	menu "接受",Ltake;
+	close;
+Ltask2:
+	mes "[初学者任务委托秘书]";
+	mes "目前有一个工作:";
+	mes "收集30个 ^313880羽毛^000000 的工作";
+	mes "酬劳: ^FF00006000z^000000";
+	menu "接受",Ltake;
+	close;
+Ltask3:
+	mes "[初学者任务委托秘书]";
+	mes "目前有一个工作:";
+	mes "收集30个 ^313880粘稠液体^000000 的工作";
+	mes "酬劳: ^FF00007000z^000000";
+	menu "接受",Ltake;
+	close; 
+Ltake:
+	next;
+	mes "[初学者任务委托秘书]";
+	mes "我很期待你的表现唷!!";
+	if(givejob==1) set taskjob,1;
+	if(givejob==2) set taskjob,2;
+	if(givejob==3) set taskjob,3;
+	close;
+Lovertask:
+	if(taskjob==0) goto Lnotask2;
+	if(taskjob==1) goto Levent1;
+	if(taskjob==2) goto Levent2;
+	if(taskjob==3) goto Levent3;
+Levent1:
+	if (countitem(909)<30) goto Lnotover2;
+	mes "[初学者任务委托秘书]";
+	mes "你已经收集完成了呀，真是感谢你！来";
+	mes "这是你的酬劳!!下次有空的话，再来找";
+	mes "我。再见！";
+	delitem 909,30;
+	set Zeny,Zeny+5000;
+	set taskjob,0;
+	close;
+Levent2:
+	if (countitem(916)<30) goto Lnotover2;
+	mes "[初学者任务委托秘书]";
+	mes "你已经收集完成了呀，真是感谢你！来";
+	mes "这是你的酬劳!!下次有空的话，再来找";
+	mes "我。再见！";
+	delitem 916,30;
+	set Zeny,Zeny+6000;
+	set taskjob,0;
+	close;
+Levent3:
+	if (countitem(938)<30) goto Lnotover2;
+	mes "[初学者任务委托秘书]";
+	mes "你已经收集完成了呀，真是感谢你！来";
+	mes "这是你的酬劳!!下次有空的话，再来找";
+	mes "我。再见！";
+	delitem 938,30;
+	set Zeny,Zeny+7000;
+	set taskjob,0;
+	close;
+Lnotask:
+	mes "[初学者任务委托秘书]";
+	mes "你已经不是初学者了，所以无法接任务";
+	mes "。真是抱歉，你可以找一般任务委托秘";
+	mes "书，接任务委托！";
+	close;
+Lnotask2:
+	mes "[初学者任务委托秘书]";
+	mes "你没有接受任何的委托!!>.<。没事的话";
+	mes "，别来烦我，我可是个大忙人。";
+	close;
+Lnotask3:
+	mes "[初学者任务委托秘书]";
+	mes "目前没有适合的工作耶!!请你下次再来";
+	mes "吧!!";
+	close;
+Lnotover:
+	mes "[初学者任务委托秘书]";
+	mes "抱歉！你手上有未完成的委托，请先完";
+	mes "成后，才能接下各委托。";
+	close;
+Lnotover2:
+	mes "[初学者任务委托秘书]";
+	mes "抱歉！你手上的材料不足，请多努力点";
+	mes "吧！收集完成再来我。";
+	close;
+Left:
+	mes "[初学者任务委托秘书]";
+	mes "这样子呀!!那有事在过来吧！希望我能";
+	mes "够帮助你^_^。";
+	close;
+}

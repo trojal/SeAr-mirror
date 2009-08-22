@@ -1,0 +1,64 @@
+//===== Athena 文档 =======================================
+//= SeAthena mapflag列表
+//===== 制作 ==============================================
+//= Inkfish
+//===== 版本 ==============================================
+//= 1.0.20090806
+//=========================================================
+//= 1.0.20090806 - 标准化文档 [Inkfish]
+//===== 描述 ==============================================
+//= 主要关于 mapflag 用法及作用
+//=========================================================
+
+town			城市
+autotrade		可离线挂店
+allowks			允许抢怪
+nomemo			无法记忆地图
+noteleport		无法瞬移
+noreturn		无法使用蝴蝶翅膀
+monster_noteleport	魔物无法瞬移
+nosave			无法储存位置
+nobranch		无法使用树枝
+noexppenalty		死亡没有经验惩罚
+pvp			PVP
+pvp_noparty		PVP不区分组队
+pvp_noguild		PVP不区分公会
+pvp_nightmaredrop	死亡会掉落装备的PVP
+pvp_nocalcrank		不计分PVP
+gvg_castle		公会城堡
+gvg			GVG
+gvg_dungeon		GVG地下公会
+gvg_noparty		GVG不区分组队
+battleground		战场
+nozenypenalty		死亡无金钱惩罚
+notrade			无法交易
+noskill			无法使用全部技能
+nowarp			无法使用传送之阵
+nowarpto		无法进入该地图
+noicewall		无法使用冰墙
+snow			天气效果，下雪
+clouds			天气效果，厚云
+clouds2			天气效果，薄云
+fog			天气效果，烟雾
+fireworks		天气效果，烟花
+sakura			天气效果，樱花
+leaves			天气效果，落叶
+rain			天气效果，雨，未实装
+indoors			室内
+nogo			无法用指令到达
+nobaseexp		没有基本经验
+nojobexp		没有职业经验
+nomobloot		普通魔物不掉落物品
+nomvploot		MVP魔物不掉落物品
+noloot			所有魔物不掉落物品
+nightenabled		黑夜
+restricted		所有列出技能物品受限地图(设置道具或技能id为 -1 时，对所有物品有效)
+unrestricted		只有列出技能物品才不受限地图(设置道具或技能id为 -1 时，对所有物品有效)
+nodrop			无法扔道具
+novending		无法开露天商店
+loadevent		可以触发OnPCLoadMapEvent事件地图
+nochat			无法开聊天室
+partylock		无法加入组队
+guildlock		无法加入公会
+noautoloot		无法自动拾取
+nomobinfo		不显示魔物等级血量等信息

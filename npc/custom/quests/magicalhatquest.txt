@@ -1,0 +1,59 @@
+//===== eAthena Script =======================================
+//= Wizard Hat Custom Quest
+//===== By: ==================================================
+//= Who
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= eAthena
+//===== Description: =========================================
+//= Wizard Hat quest. Harmless, doesn't screw game balance.
+//===== Additional Comments: =================================
+//= 1.1 Reversed ingreadients and the quest result due to
+//= 	treasue boxes drops fix [Lupus] 
+//============================================================
+
+geffen.gat,126,107,5	script	丢德	51,{
+	mes "[丢德]";
+	mes "Huh! 你想要干什么啊?";
+	mes "Ohh, 我明白了, 你想我帮你做东西对吧";
+	emotion e_what;
+	next;
+	mes "好吧你要是想要我这顶魔术师帽的话, 你得先去帮我准备好这些材料:";
+	mes "1 顶魔法帽";
+	mes "1 张巫婆卡片";
+	mes "还有 200,000z 作为辛苦费"; 
+	next;
+	mes "[丢德]";
+	mes ". . . . . .";
+	mes "你准备好了么?";
+	next;
+	menu "当然好了!",-,"这些要求太苛刻了!",M_RIPOFF;
+
+	mes "[丢德]";
+	if(countitem(5045) < 1 || countitem(4119) < 1 || Zeny < 200000) goto L_NotEnough;
+	delitem 5045,1;
+	delitem 4119,1;
+	set Zeny,Zeny-200000;
+	mes "Wow! 你确实很勇敢哦!";
+	emotion e_no1;
+	next;
+	mes "[丢德]";
+	mes ". . . . .";
+	mes "来看看你的魔术师帽吧!";
+	getitem 2252,1;
+	close;
+
+L_NotEnough:
+	mes ". . .很遗憾小子 .. 你的钱跟材料不够哦 ..";
+	mes "我可不是神仙, 能做无米之炊. 请相信这对像你这样的有英雄有百利而无一害!";
+	emotion e_sry;
+	close;
+
+M_RIPOFF:
+	mes "[丢德]";
+	mes "这也叫苛刻..";
+	mes "你要是能弄到这些材料, 你一定会得到更强大的力量!";
+	emotion e_hmm;
+	close;
+}

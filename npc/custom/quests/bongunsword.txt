@@ -1,0 +1,156 @@
+// 忧郁日记脚本 (宠物妖道认养道具)
+// 魔物信件制作脚本
+// 灵幻道士之剑脚本 (宠物妖道装饰品)
+// 
+// 重整作者:		Dino9021
+// 
+// 中文版本编号:	20041210.0.1
+//
+// 原始脚本:		Robert 蝴蝶君 2004-1-20 Mailto:robert_st@21cn.com
+//
+//============================================================
+//===== eAthena Script ======================================= 
+//= Munak and Bongun accessory / Taming items Quest
+//===== By: ================================================== 
+//= eAthena Team
+//===== Current Version: ===================================== 
+//= 1.2
+//===== Compatible With: ===================================== 
+//= eAthena 1.0
+//===== Description: ========================================= 
+//= Quest itms:Sword o'Chinese Exorcist,No Recipient,Her Heart
+//===== Additional Comments: ================================= 
+//= 1.0. merged 3 sep. files, fixed exploits [Lupus]
+//= 1.1	Added missing next;'s [Evera]
+//= 1.2 Added another missing next; [Evera]
+//============================================================ 
+
+
+comodo.gat,135,227,5	script	沙莉	93,{
+	mes "[沙莉]";
+	mes "唉……";
+	next;
+	mes "[沙莉]";
+	mes "你是在和我说话吗？...嗯，我最近正在为撰写一个英俊的男孩的而苦恼...";
+	next;
+	mes "[沙莉]";
+	mes "我担心的是……";
+	mes "我不了解他的性格、脾气究竟是什么样子的，所以......如果你能帮我找到一本关于描述男孩的'少女日记'，我愿意用一本男孩的日记和你交换！";
+	next;
+	mes "[沙莉]";
+	mes "你愿意帮我这个忙吗？";
+	next;
+
+	menu "你需要我帮你做什么呢?",-,"我这正好有你想要的东西",ExCreate,"对不起，我想我帮不上你",ExEnd;
+
+	mes "[沙莉]";
+	mes "我需要的是一本关于描写男孩的'少女日记'...";
+	close;
+
+ExCreate:
+	mes "[沙莉]";
+	mes "真的吗? 那你愿意帮我这个忙吗?";
+	next;
+
+	if(countitem(1558)<1) goto L_NoItem;//Items: Girl's_Diary,
+	delitem 1558,1;//Items: Girl's_Diary,
+	getitem 659,1;//Items: Her_Heart,
+	mes "[沙莉]";
+	mes "那真是太好了! 是的，我当然也不会忘记对你的承诺!";
+	mes " ";
+	mes "这是一本男孩的忧郁日记。再次感谢你，好心人!";
+	next;
+	mes "[沙莉]";
+	mes "哦，等等。我这里还有一把剑，也一起送给你吧! 这是我从日记里发现的，虽然这把剑已经损坏了……我知道在吉芬西部有一个老工匠，你可以去试试找他帮忙，看看能不能将它修复。";
+	getitem 7110,1;//Items: Broken_Sword,
+	close;
+
+L_NoItem:
+	mes "[沙莉]";
+	mes "你...别胡闹了，我可没心情和你玩! 走开!";
+	close;
+ExEnd:
+	mes "[沙莉]";
+	mes "唉……那算了……你走吧。";
+	close;    
+}
+
+izlude_in.gat,115,76,5	script	埃文	47,{
+	mes "[埃文]";
+	mes "唉……";
+	next;
+	mes "[埃文]";
+	mes "嗯？你是在和我说话吗？ ...唉，我最近正在设法装入一个漂亮女孩的灵魂 ...";
+	next;
+	mes "[埃文]";
+	mes "你不懂我说什么？";
+	mes "我也不知道如何描述它，如果你能帮我找到一幅'破旧画像'的话，我将给你一个'魔物信件'！";
+	next;
+	mes "[埃文]";
+	mes "明白了吗？我的朋友！";
+	next;
+
+	menu "我需要做什么吗？",-,"我这里有你需要的",ExCreate,"对不起，我帮不上你",ExEnd;
+
+	mes "[埃文]";
+	mes "一张描绘她的照片...'破旧画像'...";
+	close;
+
+ExCreate:
+	mes "[埃文]";
+	mes "真的吗？那你愿意帮我吗？";
+	next;
+	if(countitem(7014)<1) goto L_NoItem;//Items: Old_Portrait,
+	delitem 7014,1;//Items: Old_Portrait,
+	getitem 636,1;//Items: No_Recipient,
+	mes "[埃文]";
+	mes "对！我不会忘记对你的承诺！";
+	mes " ";
+	mes "这是'魔物信件'，送给你，再次感谢你！";
+	close;
+
+L_NoItem:
+	mes "[埃文]";
+	mes "别和我开玩笑了，走开！";
+	close;
+
+ExEnd:
+	mes "[埃文]";
+	mes "唉……";
+	close;
+}
+
+gef_fild07.gat,183,239,5	script	老铁匠	120,{
+	mes "[老铁匠]";
+	mes "唉，我以前曾是这里著名的锻造公会一名出色的铁匠。战争已经结束了，我的技巧也随着时光而渐渐逊色。";
+	next;
+	if(countitem(7110)<1) goto L_NoItemS;//Items: Broken_Sword,
+	mes "[老铁匠]";
+	mes "唔.....看来你碰到了一些麻烦，可以告诉我吗？";
+	next;
+	menu "你能帮我修复这把剑吗？",-,"没事，只是随便看看而已",ExEnd;
+
+	mes "[老铁匠]";
+	mes "啊！这是一把非常古老而陈旧的古剑，当然，我可以修好它。但是我需要一些'神之金属'。";
+	next;
+	if(countitem(7110)<1 || countitem(984)<1) goto L_NoItem;//Items: Broken_Sword, Oridecon,
+	delitem 7110,1;//Items: Broken_Sword,
+	delitem 984,1;//Items: Oridecon,
+	getitem 10020,1;//Items: Sword_of_Chinese_Exorcist,
+	mes "[老铁匠]";
+	mes "对了，就是这些东西！";
+	mes " ";
+	mes "哈哈！古老魔法的灵气仍旧在这把'灵幻道士之剑'上游荡，原本就是这个样子了！";
+	close;
+
+L_NoItem:
+	mes "[老铁匠]";
+	mes "唔？你似乎没有将需要的东西带来...正确的说，你必须把'神之金属'和那把'坏的剑'一起带来。";
+	close;
+
+L_NoItemS:
+ExEnd:
+	mes "[老铁匠]";
+	mes "年轻人，应该多到外面走走，作用中。否则有一天你也会后悔的。";
+	close;
+}

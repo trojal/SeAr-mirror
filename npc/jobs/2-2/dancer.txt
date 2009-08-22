@@ -1,0 +1,1329 @@
+//==================================
+// [冥] The PlutoEA Project [王]
+// http://opensvn.csie.org/PlutoEA
+// ---------------------------------
+// - 舞娘 转职脚本 - 
+//===================================
+// 版本：3.5
+//===================================
+
+comodo,180,153,4	script	斯诺特拉#1	90,{
+      mes "[阿希娜 斯诺特拉]";
+	mes "这里，克魔导的名胜，休眠已久的舞蹈教";
+	mes "室终于要重新露相了..";
+	next;
+	mes "[阿希娜 斯诺特拉]";
+	mes "啊啊....受到万众注目的普利玛丹娜!";
+	next;
+	mes "[阿希娜 斯诺特拉]";
+	mes "虽然我也想要报名...";
+	mes "可是它的要求条件太麻烦了...";
+	mes "...还是先去申请看看吧...";
+      close;
+}
+
+comodo.gat,193,151,4	script	柏勒 罗本#comodo	86,{
+	mes "[柏勒 罗本]";
+	mes "啊啊...受到万众注目的普利玛丹娜!";
+	mes "可以亲眼看见她们成为舞娘的样子!!...";
+	next;
+	mes "[柏勒 罗本]";
+	mes "出生在这个时代真是太好了!!";
+	mes "克魔岛小剧场万岁!!";
+	next;
+	mes "[柏勒 罗本]";
+	mes "嗯? 你也要一起去吗?";
+	mes "这是可以见识舞娘转职考试的好机会";
+	next;
+	if(select("移动到舞娘转职考场","取消")==2) {
+		mes "[柏勒 罗本]";
+		mes "叽..不想就算了..";
+		close;
+	}
+	mes "[柏勒 罗本]";
+	mes "咦耶~~ 走吧!";
+	close2;
+	warp "job_duncer",70,49;
+	end;
+}
+
+job_duncer,43,93,4	script	耶伊乐#da	724,{
+	if (Upper == 1) {
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "一-二-三-四，";
+		mes "壹-贰-参-转弯，";
+		mes "二-二-三-四，";
+		mes "贰-贰-参-肆";
+		mes "恩?";
+		next;
+		cutin "job_dancer_eir03",2;
+		mes "[耶伊乐]";
+		mes "你要这样继续看我的话";
+		mes "我不能集中精神练习啊!";
+		next;
+		mes "[耶伊乐]";
+		mes "..........";
+		mes ".....好像在哪里看过你耶?";
+		next;
+		mes "[耶伊乐]";
+		mes "不过我怎么都想不起来了....";
+		mes "因为我还在练习的关系，";
+		mes "你能不能先去其他地方呢?";
+		close2;
+		cutin "",255;
+		end;
+	}
+	if (BaseJob != Job_Archer) {
+		if (BaseJob == Job_Bard) {
+			cutin "job_dancer_eir01",2;
+			mes "[耶伊乐]";
+			mes "欢迎光临~";
+			mes "如果有新作曲就麻烦你了..因为我们这次表演里有缺音乐啊..";
+			close2;
+			cutin "",255;
+			end;
+		}
+		else if (BaseJob == Job_Dancer) {
+			cutin "",2;
+			mes "[耶伊乐]";
+			mes "希望你努力学习以后有个成功的表演~";
+			close2;
+			cutin "",255;
+			end;
+		}
+		cutin "job_dancer_eir03",2;
+		mes "[耶伊乐]";
+		mes "游客们，这里除相关人员以外，";
+		mes "是禁止进入的哟";
+		next;
+		mes "[耶伊乐]";
+		mes "舞蹈学校要是谁都能进去的话，那就没有意义了";
+		next;
+		mes "[耶伊乐]";
+		mes "要是参观的话，";
+		mes "请到中间的舞台吧";
+		close2;
+		cutin "",255;
+		end;
+	}
+	if (DANC_Q == 0 && sex == 0 && BaseJob == Job_Archer) {
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "欢迎光临~";
+		mes "这里是'克魔岛舞蹈学校'，";
+		mes "教导各种各样的舞";
+		next;
+		mes "[耶伊乐]";
+		mes "为从各地而来的游客提供最好的舞，";
+		mes "培育的舞娘也能变成名人喔";
+		next;
+		mes "[耶伊乐]";
+		mes "怎么样?";
+		mes "在很多的人们面前，";
+		mes "享受在灯光下跳着艳丽的舞，";
+		mes "不是很棒吗?";
+		next;
+		mes "[耶伊乐]";
+		mes "但是，我们这的跳舞学校与其他不同的地方，";
+		mes "不是谁都能进的";
+		next;
+		mes "[耶伊乐]";
+		mes "像对舞蹈不熟练的人，";
+		mes "校方有事先声明拒绝接收的";
+		next;
+		mes "[耶伊乐]";
+		mes "怎么样呢?";
+		mes "可以感觉的到你的素质不错喔";
+		mes "在这里接受跳舞课程，";
+		mes "好不好呢?";
+		next;
+		cutin "job_dancer_eir02",2;
+		mes "[耶伊乐]";
+		mes "你觉得如何呢??";
+		mes "只要在这张报名表上签名就可以啰!";
+		next;
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "不要考虑了啦~";
+		mes "赶快签名吧";
+		next;
+		if (select("好，试试看吧!","装作没听见") == 1) {
+			if (JobLevel > 39) {
+				cutin "job_dancer_eir02",2;
+				mes "[耶伊乐]";
+				mes "很好，下定决心了!";
+				mes "请填一下那边的申请书";
+				next;
+				mes "....";
+				next;
+				mes "....^3355FF喀哩 喀哩 喀哩^000000....";
+				next;
+				mes "....";
+				next;
+				cutin "job_dancer_eir01",2;
+				mes "[耶伊乐]";
+				mes "你的名字叫....";
+				mes strcharinfo(0)+ "小姐吗?....";
+				mes "真是好名字呀!";
+				mes "一听就知道很会跳舞的样子";
+				next;
+				mes "[耶伊乐]";
+				mes "那么，请稍等一下";
+				mes "我将申请书送给校方";
+				close2;
+				cutin "",255;
+				set DANC_Q,1;
+				end;
+			}
+			else {
+				cutin "job_dancer_eir01",2;
+				mes "[耶伊乐]";
+				mes "噢....";
+				mes "你还没达到上课资格的条件啊，";
+				next;
+				mes "[耶伊乐]";
+				mes "职业等级至少要40以上，";
+				mes "否则无法接受申请的";
+				mes "没办法...";
+				mes "相信我们会再见面的，";
+				mes "非常期待那一天的到来";
+				close2;
+				cutin "",255;
+				end;
+			}
+		}
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "怎会这样啊....真是冷漠耶....";
+		mes "请再靠近一点好吗?";
+		mes "嗯?";
+		close2;
+		cutin "",255;
+		end;
+	}
+	else if (sex == 1) {
+		cutin "job_dancer_eir03",2;
+		mes "[耶伊乐]";
+		mes "欢迎来...到...恩?";
+		mes "先生有走错地方吗?";
+		mes "我们舞蹈学校只收女学生喔";
+		next;
+		mes "[耶伊乐]";
+		mes "不是所有弓箭手都可以成为舞娘的";
+		mes "除非你跑去进行变性手术(汗)";
+		mes "如果对表演有兴趣的话，";
+		mes "建议你可以去当吟游诗人喔!";
+		close2;
+		cutin "",255;
+		end;
+	}
+	else if (DANC_Q == 1) {
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "嗯，已经填好申请书了吧?";
+		mes "在接受课程前必须准备一些东西";
+		next;
+		mes "[耶伊乐]";
+		mes "物品不齐全是不行的....";
+		mes "那些东西是你在课程中需要用到的，";
+		mes "所以请好好准备吧";
+		next;
+		mes "[耶伊乐]";
+		mes "首先是学费^CD688910,000 元^000000，";
+		set .@item_nd,rand(1,10);
+		if (.@item_nd > 0 && .@item_nd < 3) {
+			set DANC_Q,2;
+			mes "要把舞鞋给擦亮，需要^CD688920个 黏稠液体^000000";
+			next;
+			mes "[耶伊乐]";
+			mes "再来是^CD68893个 杰勒比结晶^000000和^CD68895瓶 红色药水^000000，你受伤时可以擦；当然，你还需要^CD68891双 长靴^000000.";
+			next;
+			mes "[耶伊乐]";
+			mes "所以是...";
+			mes "^CD6889学费 10,000元^000000,";
+			mes "^CD6889黏稠液体 20个^000000,";
+			mes "^CD6889杰勒比结晶 3个^000000,";
+			mes "^CD6889红色药水 5瓶^000000以及";
+			mes "^CD6889长靴 1双^000000.";
+		}
+		else if (.@item_nd == 4) {
+			set DANC_Q,3;
+			mes "制作跳舞需要的鞋，";
+			mes "需要^0000FF蚯蚓皮 5个^000000就好了";
+			next;
+			mes "[耶伊乐]";
+			mes "为了不让脚受伤，";
+			mes "还需要^0000FF战士长靴^0000001对";
+			next;
+			mes "[耶伊乐]";
+			mes "所以是...";
+			mes "^CD6889学费 10,000元^000000,";
+			mes "^CD6889蚯蚓皮 5个^000000以及";
+			mes "^CD6889战士长靴 1双^000000.";
+		}
+		else {
+			set DANC_Q,4;
+			mes "衣服上的装饰，需要^0000FF蛤蜊外壳 2个^000000";
+			next;
+			mes "[耶伊乐]";
+			mes "万一脚部受伤的话，";
+			mes "^0000FF黄色药水 5个^000000用来代替疗伤药，";
+			mes "而且还需要^0000FF杰勒比结晶^0000FF20个^000000";
+			next;
+			mes "[耶伊乐]";
+			mes "然后呢....";
+			mes "为了在演出的时候做假发需要^0000FF长发 10个^000000";
+			next;
+			mes "[耶伊乐]";
+			mes "为了不让脚受伤";
+			mes "还需要^0000FF轻便鞋^0000001对";
+			next;
+			mes "[耶伊乐]";
+			mes "^CD6889学费 10,000元^000000,";
+			mes "^CD6889蛤蜊外壳 2个^000000,";
+			mes "^CD6889黄色药水 5个^000000,";
+			mes "^CD6889杰勒比结晶 20个^000000,";
+			mes "^CD6889长发 10束^000000以及";
+			mes "^CD6889轻便鞋 1双^000000.";
+		}
+		next;
+		mes "[耶伊乐]";
+		mes "那么，准备好后请随时告诉我吧!";
+		close2;
+		cutin "",255;
+		end;
+	}
+	else if (DANC_Q >= 2 && DANC_Q <= 4) {
+		switch(DANC_Q) {
+		case 2: 
+			setarray .@item[0], 938,909,501,2403;
+			setarray .@count[0], 20,3,5,1;
+			break;
+		case 3: 
+			setarray .@item[0], 1055,2405;
+			setarray .@count[0], 5,1;
+			break;
+		case 4: 
+			setarray .@item[0], 965,503,909,1020,2401;
+			setarray .@count[0], 2,5,20,10,1;
+			break;
+		}
+		set .@size, getarraysize(.@item);
+		for( set .@i, 0; .@i < .@size; set .@i,.@i+1 ) {
+			if( countitem(.@item[.@i]) < .@count[.@i] ) {
+				break;
+			}
+		}
+		if( .@i == .@size && Zeny > 9999 ) {
+			cutin "job_dancer_eir02",2;
+			mes "[耶伊乐]";
+			mes "啊，全部拿来了";
+			mes "先缴学费吧，放在这边";
+			next;
+			cutin "job_dancer_eir01",2;
+			set zeny,zeny-10000;
+			mes "[耶伊乐]";
+			mes "请你去找一下^0000FF宝罗瓦珠^000000老师吧";
+			mes "只是问几个简单的问题，";
+			mes "请放轻松作答";
+			set DANC_Q,5;
+			close2;
+			cutin "",255;
+			end;
+		}
+		else {
+			cutin "job_dancer_eir01",2;
+			mes "[耶伊乐]";
+			mes "嗯....";
+			mes "材料好像不足啊";
+			mes "这些材料是必须的，请好好准备吧";
+			next;
+			mes "[耶伊乐]";
+			mes "请把这些东西带来..";
+			mes "学费 ^CD688910,000元^000000,";
+			if (DANC_Q == 2) {
+				mes "^CD6889"+.@count[0]+"个"+getitemname(.@item[0])+"^000000、";
+				mes "^CD6889"+.@count[1]+"个"+getitemname(.@item[1])+"^000000、";
+				mes "^CD6889"+.@count[2]+"个"+getitemname(.@item[2])+"^000000以及";
+				mes "^CD6889"+.@count[3]+"个"+getitemname(.@item[3])+"^000000";
+			}
+			else if (DANC_Q == 3) {
+				mes "^CD6889"+.@count[0]+"个"+getitemname(.@item[0])+"^000000以及";
+				mes "^CD6889"+.@count[1]+"个"+getitemname(.@item[1])+"^000000.";
+			}
+			else {
+				mes "^CD6889"+.@count[0]+"个"+getitemname(.@item[0])+"^000000、";
+				mes "^CD6889"+.@count[1]+"个"+getitemname(.@item[1])+"^000000、";
+				mes "^CD6889"+.@count[2]+"个"+getitemname(.@item[2])+"^000000、";
+				mes "^CD6889"+.@count[3]+"个"+getitemname(.@item[3])+"^000000以及";
+				mes "^CD6889"+.@count[4]+"个"+getitemname(.@item[4])+"^000000";
+			}
+			close2;
+			cutin "",255;
+			end;
+		}
+	}
+	else if (DANC_Q == 5) {
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "请你去找一下^0000FF宝罗瓦珠^000000老师吧";
+		mes "只是问几个简单的问题，";
+		mes "请放轻松作答";
+		close2;
+		cutin "",255;
+		end;
+	}
+	else if (DANC_Q > 5) {
+		cutin "job_dancer_eir01",2;
+		mes "[耶伊乐]";
+		mes "让我看看你经过热心练习后的美丽舞姿吧!";
+		close2;
+		cutin "",255;
+		end;
+	}
+	else {
+		cutin "job_dancer_eir03",2;
+		mes "[耶伊乐]";
+		mes "游客们，这里除相关人员以外，";
+		mes "是禁止进入的哟";
+		next;
+		mes "[耶伊乐]";
+		mes "舞蹈学校要是谁都能进去的话，那就没有意义了";
+		next;
+		mes "[耶伊乐]";
+		mes "要是参观的话，";
+		mes "请去村中的舞台吧";
+		close2;
+		cutin "",255;
+		end;
+	}
+}
+
+job_duncer,95,93,4	script	宝罗瓦珠#da	101,{
+	if (SkillPoint) {
+		mes "[宝罗瓦珠]";
+		mes "如果想转职的话";
+		mes "必须先把技能点数点完喔!";
+		close;
+	}
+	if (BaseJob != Job_Archer) {
+		if (BaseJob == Job_Bard) {
+			mes "[宝罗瓦珠]";
+			mes "欢迎光临~";
+			mes "如果有新作曲就麻烦你了..因为我们这次表演里有缺音乐啊..";
+			close;
+		}
+		else if (BaseJob == Job_Dancer) {
+			mes "[宝罗瓦珠]";
+			mes "喔喔! 欢迎光临~";
+			next;
+			mes "[保罗瓦朱]";
+			mes "最近怎么样? 大家都很快乐吗?";
+			mes "总之，不要忘记舞娘的本分啊~";
+			close;
+		}
+		mes "[宝罗瓦珠]";
+		mes "喔喔~ 你是外地人啊~";
+		mes "看来是从老远的地方来观赏我的舞蹈啊~";
+		next;
+		mes "[保罗瓦朱]";
+		mes "真可惜我已经退休了，现在只负责培训新";
+		mes "进人员~";
+		mes "不过，我培养了许多新进人员~";
+		next;
+		mes "[保罗瓦朱]";
+		mes "去中间的舞蹈场，就可以看到继承我舞";
+		mes "蹈的学生~";
+		close;
+	}
+	else if (DANC_Q < 5) {
+		mes "[宝罗瓦珠]";
+		mes "唉呀~你想转职成舞娘吗?";
+		next;
+		mes "[保罗瓦朱]";
+		mes "想要的话，必须先申请转职喔! 在舞台的左方，耶伊乐会为你解说~";
+		close;
+	}
+	else if (DANC_Q > 4 && DANC_Q < 7) {
+		if (DANC_Q == 5) {
+			mes "[宝罗瓦珠]";
+			mes "啊呀，是想成为舞娘的人呢";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "....不要这么紧张，";
+			mes "让身体放松一下";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "你不用这么担心";
+			mes "因为需要调整身体状态的关系，";
+			mes "会有体型矫正的课程的呵呵....";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "那么你先做好成为舞娘的心理准备吧";
+			mes "我想应该会问你一些相关的问题的，";
+			mes "虽然是面试但问题不会很难的";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "准备好了吗?我们开始吧！";
+			next;
+		}
+		else {
+			mes "[宝罗瓦珠]";
+			mes "打起精神来!";
+			next;
+		}
+		switch(rand(1,3)) {
+		case 1:
+			mes "[宝罗瓦珠]";
+			mes "1.";
+			mes "舞娘的舞蹈'女神之吻'所增加的能力是?";
+			next;
+			if(select("INT:DEX:VIT:爆击率")==4)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "2.";
+			mes "下列何者不属于舞蹈?";
+			next;
+			switch(select("探戈:踢踏舞:HIP-HOP:创作舞蹈:雷击术")) {
+			default:
+				set .@da_score,.@da_score-10;
+				break;
+			case 5:
+				set .@da_score,.@da_score+10;
+				break;
+			}
+			mes "[宝罗瓦珠]";
+			mes "3.";
+			mes "下面哪个词用来形容舞娘最合适?";
+			next;
+			if(select("大声说话的人:啰唆的人:跳舞的人:唱歌的人")==3)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "4.";
+			mes "下面哪个不属于克魔岛特征的是?";
+			next;
+			if(select("海边之都:舞娘转职的地方:一直像夜晚一样:周围3个方向都有洞窟:盗贼很多")==5)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "5.";
+			mes "来到克魔岛之前，位于发乐斯灯塔岛，东北方的海边地名是?";
+			next;
+			if(select("耶摩斯 普勒图:克幕克 海边:克克魔 海边:基乃依 沼泽地")==3)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "6.";
+			mes "世上最美丽的舞娘是谁?";
+			next;
+			switch(select("" + strcharinfo(0) + ":宝罗瓦珠:耶伊乐:蔡依林")) {
+			case 1:
+				mes "[宝罗瓦珠]";
+				mes "...";
+				mes "这....";
+				mes "这是^660000明显的错误^000000啊!";
+				mes "难道你没看其他选项吗?";
+				mes "扣分!";
+				set .@da_score,.@da_score-10;
+				next;
+				break;
+			case 2:
+				set .@da_score,.@da_score+10;
+				break;
+			default:
+				break;
+			}
+			mes "[宝罗瓦珠]";
+			mes "7.";
+			mes "下面哪个职业可以和舞娘合奏?";
+			next;
+			if(select("刺客:吟游诗人:炼金术师:贤者")==2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "8.";
+			mes "下面哪个不是克魔岛的特产?";
+			next;
+			if(select("菠色克药水:蛤蜊外壳:螃蟹外壳:闪烁之石")==4)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "9.";
+			mes "克魔岛赌博场的负责人是哪位?";
+			next;
+			if (select("Yoo:Moo:Hoon:Roul") == 2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "10.";
+			mes "接收舞娘转职申请书的人是哪位?";
+			next;
+			if(select("宝罗瓦珠:耶伊乐:阿希娜:斯诺特拉")==2)
+				set .@da_score,.@da_score+10;
+			break;
+		case 2:
+			mes "[宝罗瓦珠]";
+			mes "1.";
+			mes "吟游诗人与舞娘的合奏技能";
+			mes "^CD6889经验值倍增^000000的效果是?";
+			next;
+			if (select("使怪物立即死亡:使怪物受到两倍伤害:获取经验值增加:加快攻击速度") == 3)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "2.";
+			mes "在舞台跳完舞之后，";
+			mes "对舞伴没礼貌的行动是?";
+			next;
+			if(select("跟对方说声谢谢:具体的称赞对方:提议跳其它的舞蹈:批评对方")==4)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "3.";
+			mes "当看到有人在跳舞失误时，";
+			mes "不应该有的反应是哪一个呢?";
+			next;
+			if(select("面不改色的继续跳舞:指出对方的错误:如果对方不知道就当作没事:稍微微笑一下")==2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "4.";
+			mes "舞娘转职完成的所在地是在?";
+			next;
+			if (select("克克魔:山特乐曼:克姆岛:克魔岛") == 4)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "5.";
+			mes "与克魔岛直接连接的密穴总共有几个?";
+			next;
+			if(select("1个:2个:3个:4个")==3)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "6.";
+			mes "下面不能当宠物的是哪一个?";
+			next;
+			if(select("蛇女伊丝:艾吉欧蜈蚣:土人:小恶魔")==2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "7.";
+			mes "哪位舞娘跳舞最优雅呢?";
+			next;
+			switch(select("" + strcharinfo(0) + ":宝罗瓦珠:蛇女伊丝:蔡依林")) {
+			case 1:
+				mes "[宝罗瓦珠]";
+				mes "...";
+				mes "这....";
+				mes "这是^660000明显的错误^000000啊!";
+				mes "难道你没看其他选项吗?";
+				mes "扣分!";
+				set .@da_score,.@da_score-10;
+				next;
+				break;
+			case 2:
+				set .@da_score,.@da_score+10;
+				break;
+			default:
+				break;
+			}
+			mes "[宝罗瓦珠]";
+			mes "8.";
+			mes "下列位于克魔岛的卡普拉正式名称是?";
+			next;
+			if(select("卡普拉总部:卡普拉西部分区:卡普拉服务处:卡普拉西部分社")==4)
+				set .@da_score,.@da_score+10;
+			mes "[......]";
+			mes "9.";
+			mes "我的名字叫什么?";
+			next;
+			if (select("宝儿朱瓦:宝罗朱瓦:宝罗瓦珠:宝儿瓦朱") == 3)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "10.";
+			mes "诗人与舞娘的合奏技能技能'摇篮曲'的效果是?";
+			next;
+			if(select("范围内黑暗效果:范围内睡眠效果:范围内夜晚效果:范围内冰冻效果")==2)
+				set .@da_score,.@da_score+10;
+			break;
+		case 3:
+			mes "[宝罗瓦珠]";
+			mes "1.";
+			mes "舞娘的“练习舞蹈”技能的效果是?";
+			next;
+			if(select("INT上升:增加舞蹈技能的效果:增加鞭子系列的伤害力:范围的晕眩效果")==2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "2.";
+			mes "穿着鞋底会响亮的特殊鞋子";
+			mes "弯动脚并用脚根拍打地板的动作做为节奏";
+			mes "舞蹈是?";
+			next;
+			if(select("踢踏舞:心神凝聚:探戈:二连矢")==1)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "3.";
+			mes "与舞娘的特征无关的是?";
+			next;
+			if(select("用舞技能施展:用远距离攻击:使用鞭子:使用双手剑")==4)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "4.";
+			mes "舞娘最多的是在哪个地方?";
+			next;
+			if(select("艾尔帕兰:朱诺:梦罗克:克魔岛")==4)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "5.";
+			mes "可以跳出最美的舞蹈的舞娘是?";
+			next;
+			switch(select("" + strcharinfo(0) + ":宝罗瓦珠:蛇女伊丝:蔡依林")) {
+			case 1:
+				mes "[宝罗瓦珠]";
+				mes "...";
+				mes "这....";
+				mes "这是^660000明显的错误^000000啊!";
+				mes "难道你没看其他选项吗?";
+				mes "扣分!";
+				set .@da_score,.@da_score-10;
+				next;
+				break;
+			case 2:
+				set .@da_score,.@da_score+10;
+				break;
+			default:
+				break;
+			}
+			mes "[宝罗瓦珠]";
+		mes "6.";
+		mes "舞娘与它职业相比较，";
+		mes "长处是什么?";
+		next;
+		if(select("体力:表演力:舞蹈能力:魔法的实力")==3)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+		mes "7.";
+		mes "克魔岛赌博场的负责人是哪位?";
+			next;
+			if (select("Ryu:Moo:Roul:Hoon") == 2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+		mes "8.";
+		mes "舞娘不能装备的物品是?";
+		next;
+		if(select("猫耳发圈:双手巨剑:轻便鞋:智力耳环")==2)
+				set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "考试很无聊吗?";
+			next;
+			select("是啊:还好啦");
+			set .@da_score,.@da_score+10;
+			mes "[宝罗瓦珠]";
+			mes "发乐斯灯台岛总共有几座灯塔?";
+			next;
+			if (select("1:2:3") == 1)
+				set .@da_score,.@da_score+10;
+		}
+		mes "[宝罗瓦珠]";
+		mes "做得太棒了!";
+		mes "你已经做完所有题目了呢";
+		next;
+		mes "[宝罗瓦珠]";
+		mes "让我算算看啊...";
+		mes "你的分数是" + .@da_score + "分!";
+		if (.@da_score == 100) {
+			set DANC_Q,7;
+			mes "真是太棒了，你合格了!";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "这样的话就可以了";
+			mes "然后要进行舞娘的实习，";
+			mes "只要努力的话一定可以做到的";
+			close;
+		}
+		else if (.@da_score > 70) {
+			set DANC_Q,7;
+			mes "虽然这个分数并不是很好....";
+			mes "不过没关系的";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "这样的话就可以了";
+			mes "然后要进行舞娘的实习，";
+			mes "只要努力的话一定可以做到的";
+			close;
+		}
+		else {
+			set DANC_Q,6;
+			mes "不合格";
+			mes "这可真是麻烦呢";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "问题很困难吗?";
+			mes "那我年轻的时候不是更加困难吗?";
+			mes "你还需要再学习学习啊";
+			close;
+		}
+	}
+	else if (DANC_Q == 7) {
+		mes "[宝罗瓦珠]";
+		mes "那么现在进入实习的阶段了";
+		mes "在这之前要不要我说说注意事项呢?";
+		next;
+		if (select("询问注意事项:直接考试") == 1) {
+			mes "[宝罗瓦珠]";
+			mes "其实这是一次实习哦";
+			mes "限时^0000FF1分钟^000000";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "舞蹈实习是^0000FF一次一位^000000的，";
+			mes "即使没有舞蹈经验也不用担心";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "进入会场就可以看到舞台了，";
+			mes "首先你必须站在^0000FF舞台全体能纵览^000000的位置";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "^0000FF为使前后左右能无误地操控^000000";
+			mes "快点两下滑鼠的右键，";
+			mes "让方向变回初期的设定....";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "刚开始请先进入^0000FF等待室^000000里，";
+			mes "按照顺序等待";
+			mes "如果前面的人实习完毕，";
+			mes "就会轮到你进场";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "如果人多，等待室满员时，";
+			mes "也请按照次序排队等待";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "实习开始以最初站立的位置为基准点，";
+			mes "广播传出，往哪一个的方向移动，";
+			mes "你必需要配合行动";
+			next;
+			mes "[宝罗瓦珠]";
+			mes "^0000FF限定时间内，";
+			mes "如果不能配合好的话，";
+			mes "会马上被传送出去^000000";
+			mes "执行是相当严厉的哟!";
+			close;
+		}
+		mes "[宝罗瓦珠]";
+		mes "那么请加油吧!";
+		set DANC_Q,8;
+		close2;
+		warp "job_duncer",105,109;
+		end;
+	}
+	else if (DANC_Q == 8) {
+		mes "[宝罗瓦珠]";
+		mes "啊呀，是刚才的女孩啊....";
+		mes "来，让我们再一次倾听舞蹈的旋律吧!";
+		close2;
+		warp "job_duncer",105,109;
+		end;
+	}
+	else if (DANC_Q == 9) {
+		if (SkillPoint) {
+			mes "[宝罗瓦珠]";
+			mes "不准有剩余的技能点数!";
+			close;
+		}
+		mes "[宝罗瓦珠]";
+		mes "唉呀，刚才的舞";
+		mes "真是太美了哟~";
+		next;
+		mes "[宝罗瓦珠]";
+		mes "能够跳出那么美的舞，";
+		mes "要想转职是绝对没有问题的";
+		next;
+		mes "[宝罗瓦珠]";
+		mes "你，现在....受到女神的保佑";
+		next;
+		mes "[宝罗瓦珠]";
+		mes "给予全部的人喜悦，";
+		mes "已经成为舞娘....";
+		mes "今后你将踏上舞者的旅途!";
+		next;
+		set .@jlevel,JobLevel;
+		mes "[宝罗瓦珠]";
+		callfunc "Job_Change",Job_Dancer;
+		callfunc "F_ClearJobVar";
+		mes "为了人们的微笑....";
+		next;
+		mes "[宝罗瓦珠]";
+		mes "这是我送给你的礼物";
+		mes "你合格了恭喜恭喜!";
+		if (.@jlevel == 50)
+			getitem 1953,1; //Line_
+		else
+			getitem 1950,1; //Rope
+		close;
+	}
+} 
+
+// Waiting Room
+//============================================================ 
+job_duncer,32,154,1	script	舞娘考试接待员#dance	66,{
+OnInit:
+	waitingroom "等待室",20,"舞娘考试接待员#dance::OnStartArena",1;
+	enablewaitingroomevent;
+	end;
+
+OnStartArena:
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	donpcevent "dance#return::OnDisable";
+	warpwaitingpc "job_duncer",69,110,1;
+	donpcevent "宝罗瓦珠#dance_timer::OnEnable";
+	disablewaitingroomevent;
+	end;
+
+OnEnable:
+	enablewaitingroomevent;
+	end;
+}
+
+job_duncer,32,154,1	script	等待室说明#click	66,{
+	mes "[佩儿锦]";
+	mes "请进入等待室，轮到你的时候会自动把你传到舞台";
+	next;
+	mes "[佩儿锦]";
+	mes "当然，如果你对后台感到好奇的话，可以自己随意逛逛";
+	close;
+}
+
+// Dance Timer
+//============================================================ 
+job_duncer,69,105,0	script	宝罗瓦珠#dance_timer	-1,{
+OnEnable:
+	initnpctimer;
+	end;
+
+OnDisable:
+	stopnpctimer;
+	end;
+
+OnTimer2000:
+	mapannounce "job_duncer","宝罗瓦珠 : 好，要开始了，不要紧张，时间限制是1分钟",bc_map;
+	end;
+
+OnTimer5000:
+	mapannounce "job_duncer","宝罗瓦珠 : 好，往后! : [↑]",bc_map;
+	end;
+
+OnTimer7000:
+	disablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer8000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 前~ : [↓]",bc_map;
+	end;
+
+OnTimer11000:
+	enablenpc "dance#up";
+	disablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer12000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 左~ : [←]",bc_map;
+	end;
+
+OnTimer15000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	disablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer16000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 往右边 : [→]",bc_map;
+	end;
+
+OnTimer19000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	disablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer20000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 回到中间来 : [ ]",bc_map;
+	end;
+
+OnTimer23000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	disablenpc "dance#cen";
+	end;
+
+OnTimer23500:
+	donpcevent "舞者#1::OnSmile";
+	mapannounce "job_duncer","宝罗瓦珠 : 就是这样，休息一下!",bc_map;
+	end;
+
+OnTimer27000:
+	donpcevent "舞者#1::OnSmile";
+	mapannounce "job_duncer","宝罗瓦珠 : 暂停之后，来个“心神凝聚”或即兴演出也行!'",bc_map;
+	end;
+
+OnTimer28500:
+	mapannounce "job_duncer","宝罗瓦珠 : 休息好了吗? 准备开始啰",bc_map;
+	end;
+
+OnTimer30000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 左边~ : [←]",bc_map;
+	end;
+
+OnTimer34000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	disablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer35000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 前~ : [↓]",bc_map;
+	end;
+
+OnTimer38500:
+	mapannounce "job_duncer","宝罗瓦珠 : 往右边! : [→]",bc_map;
+	end;
+
+OnTimer40000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	disablenpc "dance#right";
+	enablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 就是这样，休息一下!",bc_map;
+	end;
+
+OnTimer43000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 左、中、右、后~ : [←][ ][→][↑]",bc_map;
+	end;
+
+OnTimer49000:
+	disablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer50000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : [→]",bc_map;
+	end;
+
+OnTimer53000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	disablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer54000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 左、中、前、后 : [←][ ][↓][↑] ",bc_map;
+	end;
+
+OnTimer60000:
+	disablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer61000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 再一次，左、中、前、后 : [←][ ][↓][↑] ",bc_map;
+	end;
+
+OnTimer66000:
+	disablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer67000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 前~ : [↓]",bc_map;
+	end;
+
+OnTimer69000:
+	enablenpc "dance#up";
+	disablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer70000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 左 : [←]",bc_map;
+	end;
+
+OnTimer74000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	disablenpc "dance#left";
+	enablenpc "dance#right";
+	enablenpc "dance#cen";
+	end;
+
+OnTimer75000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 中间 : [ ]",bc_map;
+	end;
+
+OnTimer80000:
+	enablenpc "dance#up";
+	enablenpc "dance#down";
+	enablenpc "dance#left";
+	enablenpc "dance#right";
+	disablenpc "dance#cen";
+	end;
+
+OnTimer81000:
+	donpcevent "舞者#1::OnSmile";
+	disablenpc "dance#up";
+	disablenpc "dance#down";
+	disablenpc "dance#left";
+	disablenpc "dance#right";
+	disablenpc "dance#cen";
+	mapannounce "job_duncer","宝罗瓦珠 : 快!用箭雨解决掉!",bc_map;
+	end;
+
+OnTimer82000:
+	donpcevent "dance#poring::OnEnable";
+	end;
+
+OnTimer89000:
+	donpcevent "dance#return::OnEnable";
+	donpcevent "dance#poring::OnDisable";
+	stopnpctimer;
+	end;
+}
+
+job_duncer,69,110,0	script	dance#return	-1,1,4,{
+OnTouch:
+	mapannounce "job_duncer","舞者 : 恭喜你都学会! 宝罗瓦珠小姐的教导完成了!",bc_map;
+	set DANC_Q,9;
+	warp "comodo",188,162;
+	end;
+
+OnDisable:
+	disablenpc "dance#return";
+	donpcevent "dance#return#2::OnDisable";
+	donpcevent "dance#return#3::OnDisable";
+	end;
+
+OnEnable:
+	enablenpc "dance#return";
+	donpcevent "dance#return#2::OnEnable";
+	end;
+}
+
+job_duncer,66,110,0	script	dance#return#2	-1,1,1,{
+OnTouch:
+	set DANC_Q,9;
+	warp "comodo",188,162;
+	end;
+
+OnDisable:
+	disablenpc "dance#return#2";
+	end;
+
+OnEnable:
+	enablenpc "dance#return#2";
+	donpcevent "dance#return#3::OnEnable";
+	end;
+}
+
+job_duncer,72,110,0	script	dance#return#3	-1,1,1,{
+OnTouch:
+	set DANC_Q,9;
+	warp "comodo",188,162;
+	end;
+
+OnDisable:
+	disablenpc "dance#return#3";
+	end;
+
+OnEnable:
+	enablenpc "dance#return#3";
+	donpcevent "舞娘考试接待员#dance::OnEnable";
+	end;
+}
+
+// Dance Move Triggers
+//============================================================ 
+-	script	dancestep::StepTrigger	-1,1,1,{
+OnTouch:
+	donpcevent "舞者#1::OnOmg";
+	mapannounce "job_duncer","舞者 : " + strcharinfo(0) + ", ~你太慢了!",bc_map;
+	set DANC_Q,8;
+	donpcevent "舞娘考试接待员#dance::OnEnable";
+	warp "comodo",188,162;
+	end;
+}
+job_duncer,69,113,0	duplicate(StepTrigger)	dance#up	-1,1,1
+job_duncer,69,107,0	duplicate(StepTrigger)	dance#down	-1,1,1
+job_duncer,66,110,0	duplicate(StepTrigger)	dance#left	-1,1,1
+job_duncer,72,110,0	duplicate(StepTrigger)	dance#right	-1,1,1
+job_duncer,69,110,0	duplicate(StepTrigger)	dance#cen	-1,1,1
+
+job_duncer,10,10,0	script	dance#poring	-1,{
+OnEnable:
+	monster "job_duncer",69,106,"波利",1002,1,"dance#poring::OnMyMobDead";
+	end;
+
+OnMyMobDead:
+	mapannounce "job_duncer","宝罗瓦珠 : 很好!就是这样! ",bc_map;
+	end;
+
+OnDisable:
+	killmonsterall "job_duncer";
+	end;
+
+}
+
+// Backup Dancers
+//============================================================ 
+job_duncer,63,110,4	script	舞者#1::舞者	724,{
+	end;
+
+OnSmile:
+	Emotion e_no1;
+	donpcevent "舞者#2::OnSmile";
+	donpcevent "舞者#3::OnSmile";
+	donpcevent "舞者#4::OnSmile";
+	end;
+
+OnOmg:
+	Emotion e_omg;
+	donpcevent "舞者#2::OnOmg";
+	donpcevent "舞者#3::OnOmg";
+	donpcevent "舞者#4::OnOmg";
+	end;
+}
+
+job_duncer,66,113,4	script	舞者#2	724,{
+	end;
+
+OnSmile:
+	Emotion e_no1;
+	end;
+
+OnOmg:
+	Emotion e_omg;
+	end;
+}
+
+job_duncer,72,113,4	script	舞者#3	724,{
+	end;
+
+OnSmile:
+	Emotion e_no1;
+	end;
+
+OnOmg:
+	Emotion e_omg;
+	end;
+}
+
+job_duncer,75,110,4	script	舞者#4	724,{
+	end;
+
+OnSmile:
+	Emotion e_no1;
+	end;
+
+OnOmg:
+	Emotion e_omg;
+	end;
+}

@@ -1,0 +1,24 @@
+//1:zeny
+//2:points
+//3:cash
+function	script	Give_to_All	{
+	set .@para1,atoi(@cmd_para$[0]);
+	if(!existitem(.@para1) && !(.@para1&3)) end;
+	set .@para2,atoi(@cmd_para$[1]);
+	if( set(.@num,query_sql2("select account_id from `char` where online = \"1\"",.@onlineaid)) > 0 )
+		for( set .@i,0; .@i<.@num; set .@i,.@i+1 )
+		{
+			if(isloggedin(getd(".@onlineaid"+.@i)))
+			{
+				attachrid getd(".@onlineaid"+.@i);
+				switch(.@para1)
+				{
+				case 1: set zeny, zeny+.@para2; break;
+				case 2: atcommand "@points "+.@para2; break;
+				case 3: atcommand "@cash "+.@para2; break;
+				default: getitem .@para1,.@para2; break;
+				}
+			}
+			if( !(.@i%100) ) sleep2 1; //prevent from infinite loops
+		}
+}

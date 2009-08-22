@@ -1,0 +1,140 @@
+//===== eAthena Script =======================================
+//= War of Emperium (斐扬)
+//===== By: ==================================================
+//= L0ne_W0lf
+//===== Current Version: =====================================
+//= 1.1-c
+//===== Compatible With: =====================================
+//= eAthena SVN
+//===== Description: =========================================
+//= NPCs that relate to Payon Guild Castle 2
+//===== Additional Comments: =================================
+//= 1.0 First Version. No longer uses functions. [L0ne_W0lf]
+//= 1.1 Corrected flag-in spawn point. [L0ne_W0lf]
+//= 1.1-c 照官方中文化 [笨冰]
+//============================================================
+
+// Guild Flag (Town)
+//============================================================
+payon,166,173,3	script	天坛#f2-1::ScarletPalace	722,{
+	end;
+
+OnRecvCastlePy02:
+	FlagEmblem GetCastleData("payg_cas02",1);
+	end;
+}
+
+payon,97,322,4	duplicate(ScarletPalace)	天坛#f2-2	722
+
+// Guild Flag (Outside Castle)
+//============================================================
+pay_gld,292,112,6	script	天坛#f2-3::ScarletPalace2	722,{
+	set .@GID, GetCastleData("payg_cas02",1);
+	if (.@GID == 0) {
+		mes "　　 [ 普隆德拉王国 公告令 ]";
+		mes " ";
+		mes "1. 根据这里的，普隆德拉王国令";
+		mes "　　把这里认定为";
+		mes "　　没有正式所有权的秘密基地";
+		mes " ";
+		mes "2. 战胜守在这里，可怕的考验后，";
+		mes "　　给破坏华丽金属的人，";
+		mes " ";
+		mes "国王会赐予经国王认证的，秘密基地所有权";
+	}
+	else {
+		if (getcharid(2) == .@GID) {
+			mes "[ 响亮的嗓音 ]";
+			mes "勇敢的人们...";
+			mes "要回到您的名誉之地吗?";
+			next;
+			if (select("回到秘密基地.:放弃") == 1) {
+				if (getcharid(2) == GetCastleData("payg_cas02",1)) {
+					warp "payg_cas02",22,275;
+					end;
+				}
+			}
+			close;
+		}
+		mes "[ 普隆德拉王国 公告令 ]";
+		mes " ";
+		mes "1. 根据这里的，普隆德拉王国令";
+		mes "　　这里被认定为 ^ff0000" + GetGuildName(.@GID) + "^000000工会的";
+		mes "　　私有物";
+		mes " ";
+		mes "2. ^ff0000"+ GetGuildName(.@GID) + "^000000 工会的主人是";
+		mes "　　^ff0000" + GetGuildMaster(.@GID) + "^000000 ， 无论是谁";
+		mes "　　对这件事情有意见者";
+		mes " ";
+		mes "请你举起您的剑，提高自己的名誉吧";
+	}
+	close;
+
+OnRecvCastlePy02:
+	FlagEmblem GetCastleData("payg_cas02",1);
+	end;
+}
+
+pay_gld,292,120,6	duplicate(ScarletPalace2)	天坛#f2-4	722
+pay_gld,291,135,6	duplicate(ScarletPalace2)	天坛#f2-5	722
+pay_gld,271,163,0	duplicate(ScarletPalace2)	天坛#f2-6	722
+
+// Guild Flag (Inside Castle)
+//============================================================
+payg_cas02,254,40,6	script	天坛#f2-7::ScarletPalace3	722,{
+	end;
+
+OnRecvCastlePy02:
+	FlagEmblem GetCastleData("payg_cas02",1);
+	end;
+}
+
+payg_cas02,254,48,6	duplicate(ScarletPalace3)	天坛#f2-8	722
+payg_cas02,202,49,0	duplicate(ScarletPalace3)	天坛#f2-9	722
+payg_cas02,209,49,0	duplicate(ScarletPalace3)	天坛#f2-10	722
+payg_cas02,59,282,4	duplicate(ScarletPalace3)	天坛#f2-11	722
+payg_cas02,70,282,4	duplicate(ScarletPalace3)	天坛#f2-12	722
+
+// AGIT Manager
+//============================================================
+payg_cas02,39,25,0	duplicate(Gld_Agit_Manager)	Agit#payg_cas02	-1
+
+// Steward
+//============================================================
+payg_cas02,22,260,7	duplicate(Gld_Mngr_Template)	蔡丽欧丝#payg_cas02	55
+
+// Guardians
+//============================================================
+payg_cas02,22,260,7	duplicate(Gld_Guard_Template)	Guardian#payg_cas02	-1
+
+// Kafra Staff
+//============================================================
+payg_cas02,22,275,5	duplicate(Gld_Kafra_Template)	卡普拉 职员#payg_cas02	117
+
+// Master's Room Exit
+//============================================================
+payg_cas02,149,148,0	script	#switch_Py02	111,{
+	mes " ";
+	mes "有个某种小的装置 ，请问你要操作吗?";
+	next;
+	switch(select("操作:结束")) {
+	case 1:
+		warp "payg_cas02",22,261;
+		break;
+	case 2:
+		break;
+	}
+	close;
+}
+
+// Guild Treasure Protection
+//============================================================
+payg_cas02,145,144,0	duplicate(Gld_Trea_Protect)	ban_warp#payg_cas02	-1,6,6
+
+// Guild Treasure Spawns
+//============================================================
+payg_cas02,145,144,0	duplicate(Gld_Trea_Spawn)	Treasure#payg_cas02	-1
+
+// Guild Dungeon Switch
+//============================================================
+payg_cas02,278,247,0	duplicate(Gld_Dun_Template)	#payg_cas02	111

@@ -1,0 +1,217 @@
+//===== eAthena Script ======================================= 
+//= * 装备刻字脚本<=给装备写上你的名字 *
+//===== By: ================================================== 
+//= Lupus
+//===== Current Version: ===================================== 
+//= 1.0
+//===== Compatible With: ===================================== 
+//= eAthena 1
+//===== Description: ========================================= 
+//= Write you name on your rare equipment or weapon ^_-
+//= Original X-Mas mini-quest(could be used as a permanent one)
+//===== Additional Comments: ================================= 
+//= 1.0 First release
+//===== 中文化: ================================= 
+//= 守护永恒 2006/02/16
+//============================================================
+
+prt_in.gat,24,61,7	script	被老板抄鱿鱼的谋生者	47,{
+	mes "[被老板抄鱿鱼的谋生者]";
+	if(BaseJob==Job_Novice || BaseLevel<50) {
+		mes "不好意思,我不帮助新人做事,多去练练吧.";
+		emotion e_sry;
+		close;
+	}
+	mes "好啊,我能把 ^000090你的名字刻到^000000 你手中的武器哦!.";
+	next;
+	menu "更多信息...",-, "请给我的武器刻上我的名字",M_DO;
+
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "我可以把任意装备和武器刻上你的名字.";
+	emotion e_ic;
+	next;
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "一周前,我的老板把我解雇了,我不知道怎么回事.";
+	next;
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "我的工作是以 ^0000803 礼物箱^000000";
+	mes "加上 ^FF00005000z^000000 来给武器刻字.";
+	next;
+	emotion e_cry;
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "求求你了 我还有12个饥饿的孩子";
+	mes "和一个生气的老婆.";
+	next;
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "哦...错了,是12个生气的孩子";
+	mes "和十分饥饿的老婆...";
+	emotion e_hmm;
+	close;
+
+M_DO:
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "给我看看你带来的东西...";
+M_MENU:
+	next;
+	menu getequipname(1),M_PART1,getequipname(9),M_PART9,getequipname(10),M_PART10,getequipname(2),M_PART2,getequipname(4),M_PART4,
+	     getequipname(3),M_PART3,getequipname(5),M_PART5,getequipname(6),M_PART6,getequipname(7),M_PART7,getequipname(8),M_PART8;
+
+	//Head Gear
+	M_PART1:
+		set @part,1;
+		if (getequipisequiped(1)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "秃头佩戴着廉价的假发... 没什么值得去写上名字的.";
+		emotion 6;
+		goto M_MENU;
+	M_PART9:
+		set @part,9;
+		if (getequipisequiped(9)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "你有戴上眼镜之类的东西吗...";
+		emotion 20;
+		goto M_MENU;
+	M_PART10:
+		set @part,10;
+		if (getequipisequiped(10)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "嘿,你的面具呢.";
+		emotion 20;
+		goto M_MENU;
+	//Armor
+	M_PART2:
+		set @part,2;
+		if (getequipisequiped(2)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "你的腹部?有小肥肚哦!.";
+		emotion 6;
+		goto M_MENU;
+	//Left Hand
+	M_PART3:
+		set @part,3;
+		if (getequipisequiped(3)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "给你左手刻字? 我不是搞纹身的,你知道...";
+		emotion 4;
+		goto M_MENU;
+	//Right Hand
+	M_PART4:
+		set @part,4;
+		if (getequipisequiped(4)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "没有任何东西,只有泥!请好好洗手!!.";
+		emotion 4;
+		goto M_MENU;
+	//Garment
+	M_PART5:
+		set @part,5;
+		if (getequipisequiped(5)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "看!空空如也...";
+		goto M_MENU;
+	//Foot Gear
+	M_PART6:
+		set @part,6;
+		if (getequipisequiped(6)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "哦!我不喜欢臭脚.";
+		emotion 16;
+		goto M_MENU;
+	//Accessory1
+	M_PART7:
+		set @part,7;
+		if (getequipisequiped(7)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "诶?你的口袋里有个大洞...";
+		emotion 20;
+		goto M_MENU;
+	//Accessory2
+	M_PART8:
+		set @part,8;
+		if (getequipisequiped(8)) goto L_CHECK1;
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "我看见你的小肥肚了...";
+		emotion 20;
+		goto M_MENU;
+
+L_CHECK1:
+	set @ref,0;
+	set @id,getequipid(@part);
+	if(getequipisidentify(@part)) goto L_CHECK2;
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "你怎么装备了那么多未知道具?";
+	npctalk "我要狠狠的BS你!";
+	emotion e_wah;
+	close;
+
+L_CHECK2:
+	set @ref,getequiprefinerycnt(@part);
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "你想给 "+getitemname(@id)+"刻上字?...";
+	if(BaseJob==Job_Novice) {
+		mes "但我从来不给初学者搞这种玩意.";
+		emotion e_sry;
+		goto M_MENU;
+	}
+	set @slot0,getequipcardid(@part,0);
+	set @slot1,getequipcardid(@part,1);
+	set @slot2,getequipcardid(@part,2);
+	set @slot3,getequipcardid(@part,3);
+
+	if(@slot0==255 || @slot0==254 || @slot0<0) {
+		mes "好了,完毕.";
+		mes "看来我可以正式脱离被解雇的苦海了.";
+		emotion e_hmm;
+		goto M_MENU;
+	}
+	if(@slot0>4000 && @slot0<5000) {
+		mes "这里有卡?!";
+		mes "我是不是说过,我从不给有卡的装备刻字.";
+		emotion e_hmm;
+		goto M_MENU;
+	}
+	if(getiteminfo(@id,10)) {
+		mes "不好意思,我不给有洞的装备刻字.";
+		emotion e_sry;
+		goto M_MENU;
+	}
+
+	if(@ref)mes "他需要 "+@ref+" 时间... 每分钟增加 ^FF00005000z^000000.";
+	mes "给我 ^0000803 礼物箱^000000";
+	if(@ref)mes "和 ^FF0000"+(5000*@ref)+"z^000000.";
+	next;
+	menu "好!",-, "离开",M_END;
+	if(Zeny>=(5000*@ref) && countitem(644)>=3) {
+		delitem 644,3;
+		set Zeny,Zeny-(5000*@ref);
+		goto L_MAKE;
+	}
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "我工作从不说谢谢.";
+	emotion e_sry;
+	close;
+
+L_MAKE:
+	if(countitem2(@id,1,@ref,0,@slot0,@slot1,@slot2,@slot3)==0) {
+		mes "[被老板抄鱿鱼的谋生者]";
+		mes "哪里有... "+getitemname(@id)+"?";
+		npctalk "我要狠狠的BS你!";
+		logmes "CHEATER: 尝试给他没有的东西刻字: "+getitemname(@id);
+		emotion e_wah;
+		close;
+	}
+	delitem2 @id,1,1,@ref,0,@slot0,@slot1,@slot2,@slot3;
+
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "好了!";
+	emotion e_proud;
+
+	getitem2 @id,1,1,@ref,0,254,0,getcharid(0)&0xffff,(getcharid(0)>>16)&0xffff;
+	close;
+
+M_END:
+	mes "[被老板抄鱿鱼的谋生者]";
+	mes "再见...";
+	emotion e_yawn;
+	close;
+}

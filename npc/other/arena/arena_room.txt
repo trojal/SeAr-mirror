@@ -1,0 +1,1334 @@
+//===== eAthena Script ========================================
+//= Izlude Arena Room
+//===== By: ==================================================
+//= SinSloth
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Izlude Battle Arena Main Room
+//===== Additional Comments: =================================
+//= 1.0 First version.
+//= 1.1 Fixed a small reward typo (was giving potato.) [L0ne_W0lf]
+//============================================================
+
+arena_room,94,93,5	script	半迪酷司	97,{
+
+	mes "[半迪酷司]";
+	mes "与时间之间的战斗! 欢迎来到Arena的世界，";
+	mes "我是负责介绍这里的半迪酷司";
+	next;
+	mes "[半迪酷司]";
+	mes "有什么疑问的话尽管说吧";
+L_Menu:
+	next;
+	switch( select( "要挑战Arena的话?:Arena点数是什么?:查询Arena点数:结束对话" ) )
+	{
+		case 1:
+			mes "[半迪酷司]";
+			mes "Arena可分为^3131FF个人挑战模式^000000及 ^3131FF组队挑战模式^000000 两种";
+			next;
+			mes "[半迪酷司]";
+			mes "^3131FF个人挑战模式^000000为 Lv50/ Lv60/ Lv70/ Lv80 以上的限制模式，";
+			mes "^3131FF组队挑战模式^000000为5人一组挑战的方式.";
+			next;
+			mes "[半迪酷司]";
+			mes "往逆时钟方向，在各房间内会有各等级别的Arena NPC开设聊天室，";
+			mes "进入聊天室里稍等一下，即可按照顺序使用Arena";
+			break;
+		
+		case 2:
+			mes "[半迪酷司]";
+			mes "我来说明^3131FFArena点数^000000的相关内容，";
+			mes "Arena点数是指 挑战各种等级别的Arena时所发给的Arena点数，最多可累积3万点数";
+			next;
+			mes "[半迪酷司]";
+			mes "当时间超过而无法闯关成功时，也会发Arena点数，不过只会发给少量的点数喔";
+			next;
+			mes "[半迪酷司]";
+			mes "有关Arena点数的使用，";
+			mes "目前正在准备拍照纪念模式等方案";
+			break;
+
+		case 3:
+			mes "[半迪酷司]";
+			mes "正在查询"+strcharinfo(0)+"先生/小姐的Arena点数";
+			next;
+			mes "[半迪酷司]";
+			mes ""+strcharinfo(0)+"先生/小姐所拥有的Arena点数是..^3131FF"+arena_point+"^000000点";
+			next;
+			mes "[半迪酷司]";
+			mes "有关Arena点数的使用方式，请参考上一选择区的'^3131FFArena点数是什么^000000里的说明";
+			break;
+
+		case 4:
+			mes "[半迪酷司]";
+			mes "那么祝您有个愉快的时间";
+			close;
+	}
+	next;
+	mes "[半迪酷司]";
+	mes "还有其他疑问吗?";
+	goto L_Menu;
+	
+Onlinerec_50:
+	mapannounce "arena_room",""+$arena_50topn$+" has renewed the top record in the Arena Time Force Battle level 50. Congratulations!",0;
+	end;
+	
+Onlinerec_60:
+	mapannounce "arena_room",""+$arena_60topn$+" has renewed the top record in the Arena Time Force Battle level 60. Congratulations!",0;
+	end;
+	
+Onlinerec_70:
+	mapannounce "arena_room",""+$arena_70topn$+" has renewed the top record in the Arena Time Force Battle level 70. Congratulations!",0;
+	end;
+Onlinerec_80:
+	mapannounce "arena_room",""+$arena_80topn$+" has renewed the top record in the Arena Time Force Battle level 80. Congratulations!",0;
+	end;
+	
+Onlinerec_pt:
+	mapannounce "arena_room","Party "+$arena_pttopn$+" has renewed the top record in the Arena Time Force Battle. Congratulations!",0;
+	end;
+
+//OnCommand: "linerec_vs"
+// var vs_winner = GetGlobalStr "040611_arn_vstopn"
+// broadcastinmap "Party "+vs_winner+" has renewed the top record in the Arena Time Force Battle. Congratulations!"
+// end;
+
+}
+
+arena_room,105,82,5	script	Arena记录负责人	57,{
+
+	mes "[阿抆坡]";
+	mes "您好，";
+	mes "我是管理/介绍各种Arena纪录的阿抆坡";
+	next;
+	mes "[阿抆坡]";
+	mes "想要知道创下各部门最短纪录的勇士名字吗?";
+	mes "请选择想要查询的模式";
+	next;
+	switch( select( "个人战LV50～69","个人战LV60～79","个人战LV70～89","个人战LV80～99","团体战" ) )
+	{
+		case 1:
+			mes "[阿抆坡]";
+			mes "目前个人战LV50～69第一名是";
+			mes "^3131FF"+$arena_50topn$+"^000000先生/小姐";
+			mes "此记录为^3131FF"+$top_50min+"^000000分^3131FF"+$top_50sec+"^000000秒";
+			close;
+
+		case 2:
+			mes "[阿抆坡]";
+			mes "目前个人战LV60～79第一名是";
+			mes "^3131FF"+$arena_60topn$+"^000000先生/小姐";
+			mes "此记录为^3131FF"+$top_60min+"^000000分^3131FF"+$top_60sec+"^000000秒";
+			close;
+
+		case 3:
+			mes "[阿抆坡]";
+			mes "目前个人战LV70～89第一名是";
+			mes "^3131FF"+$arena_70topn$+"^000000先生/小姐";
+			mes "此记录为^3131FF"+$top_70min+"^000000分^3131FF"+$top_70sec+"^000000秒";
+			close;
+
+		case 4:
+			mes "[阿抆坡]";
+			mes "目前个人战LV80～99第一名是";
+			mes "^3131FF"+$arena_80topn$+"^000000先生/小姐";
+			mes "此记录为^3131FF"+$top_80min+"^000000分^3131FF"+$top_80sec+"^000000秒";
+			close;
+
+		case 5:
+			mes "[阿抆坡]";
+			mes "目前团体战第一名是";
+			mes "^3131FF"+$arena_pttopn$+"^000000";
+			mes "此记录为^3131FF"+$top_ptmin+"^000000分^3131FF"+$top_ptsec+"^000000秒";
+			close;
+	}
+}
+
+arena_room,68,135,3	script	服务人员 彼思	726,{
+
+	mes "[彼思]";
+	mes "欢迎!";
+	mes "个人战 LV50～69 的竞技场";
+	mes "让我来为您解说申请说明!";
+	next;
+	mes "[彼思]";
+	mes "^3131FF 个人战LV50～69 ^000000 是";
+	mes "^FF0000 等级 50^000000 到 ^FF0000 等级 69^000000 可以参加";
+	next;
+	mes "[彼思]";
+	mes "由高水准玩家带来低水准";
+	mes "为了防止在竞技场的名次被获得";
+	mes "而设立等级限制。请谅解!";
+	next;
+	mes "[彼思]";
+	mes "个人战参加费用是 1000 zeny ";
+	next;
+	mes "[彼思]";
+	mes "关于竞技场的进行方法内容!";
+	mes "谨此邀请";
+	next;
+	mes "[彼思]";
+	mes "成为加入控室塑^3131FF 聊天室　面";
+	mes "请等待自已的顺序 ^000000";
+	mes "等到轮到自已顺序的话，会自动往活动竞技场内";
+	mes "移动至场地!";
+	next;
+	mes "[彼思]";
+	mes "进入竞技场后并且开始倒数计时";
+	mes "主持人由^3131FF 赫特 ^000000担任，会有过关提示";
+	mes "请依照条件所指的过关条件闯关";
+	next;
+	mes "[彼思]";
+	mes "限间限制^3131FF 5分 ^000000钟";
+	mes "把这个时间当作目标的话，时间控制";
+	mes "得当是非常重要的";
+	next;
+	mes "[彼思]";
+	mes "打倒最后的BOSS关的话";
+	mes "^3131FF 闯关成功 ^000000 会自动移动到下个场地";
+	mes "^3131FF 闯关成功 ^000000 只有1分钟可以记录";
+	mes "如果没在时限内记录完成一样会被送出";
+	mes "完成后会自动离开!";
+	next;
+	mes "[彼思]";
+	mes "在结束控室接受竞技场点数";
+	mes "如果没有完成情况，竞场场也会";
+	mes "给您1点的点数当作补偿!";
+	next;
+	mes "[彼思]";
+	mes "以上，关资个人战 LV50～69 指南说明结束!";
+	mes "立即参加竞技场";
+	mes "刷新新记录，下个幸运儿就是你!";
+	close;
+}
+
+arena_room.gat,41,93,5	script	服务人员 彼恩	750,{
+	mes "[彼恩]";
+	mes "欢迎!";
+	mes "个人战 LV60～79 的竞技场";
+	mes "让我来为您解说申请说明!";
+	next;
+	mes "[彼恩]";
+	mes "^3131FF 个人战LV60～79 ^000000 是";
+	mes "^FF0000 等级60 ^000000 到 ^FF0000 等级79 ^000000 可以参加";
+	next;
+	mes "[彼恩]";
+	mes "由高水准玩家带来低水准";
+	mes "为了防止在竞技场的名次被获得";
+	mes "而设立等级限制";
+	mes "请谅解!";
+	next;
+	mes "[彼恩]";
+	mes "战人战参加费用是 1000z。";
+	next;
+	mes "[彼恩]";
+	mes "要是那样的话，关于竞技场的进行方法内容!";
+	mes "谨此邀请";
+	next;
+	mes "成为加入控室塑^3131FF 聊天室　面";
+	mes "请等待自已的顺序 ^000000";
+	mes "等到轮到自已顺序的话，会自动往活动竞技场内";
+	mes "移动至场地!";
+	next;
+	mes "[彼恩]";
+	mes "进入竞技场后并且开始倒数计时";
+	mes "主持人由^3131FF 迷尼罗伯 ^000000 担任，会有过关提示";
+	mes "请依照条件所指的过关条件闯关";
+	next;
+	mes "[彼恩]";
+	mes "限间限制^3131FF 6分 ^000000 钟";
+	mes "把这个时间当作目标的话，时间控制";
+	mes "得当是非常重要的";
+	next;
+	mes "[彼恩]";
+	mes "打倒最后的BOSS关的话";
+	mes "^3131FF 闯关成功 ^000000 会自动移动到下个场地";
+	mes "^3131FF 闯关成功 ^000000 只有1分钟可以记录";
+	mes "如果没在时限内记录完成一样会被送出";
+	mes "完成后会自动离开!";
+	next;
+	mes "[彼恩]";
+	mes "在结束控室接受竞技场点数";
+	mes "如果没有完成情况，竞场场也会";
+	mes "给您1点的点数当作补偿!";
+	next;
+	mes "[彼恩]";
+	mes "以上，关资个人战LV60～79指南说明结束!";
+	mes "立即参加竞技场";
+	mes "刷新新记录，下个幸运儿就是你!";
+	close;
+}
+
+arena_room.gat,53,48,2	script	服务人员 比修司	730,{
+	mes "[比修司]";
+	mes "欢迎!";
+	mes "个人战 LV70～89 的竞技场";
+	mes "让我 比修司 来为您解说申请说明!";
+	mes "(...为什么要我这作种事情)";
+	mes "(...彼西司...)";
+	next;
+	mes "[比修司]";
+	mes "^3131FF 个人战 LV70～89 ^000000 是";
+	mes "^FF0000 等级70 ^000000 到 ^FF0000 等级89 ^000000 可以参加";
+	next;
+	mes "[比修司]";
+	mes "由高水准玩家带来低水准";
+	mes "为了防止在竞技场的名次被获得";
+	mes "而设立等级限制";
+	mes "请谅解!";
+	next;
+	mes "[比修司]";
+	mes "战人战参加费用是 1000 zeny。";
+	next;
+	mes "[比修司]";
+	mes "要是那样的话，关于竞技场的进行方法内容!";
+	mes "谨此邀请";
+	next;
+	mes "[比修司]";
+	mes "成为加入控室塑^3131FF 聊天室　面";
+	mes "请等待自已的顺序 ^000000";
+	mes "等到轮到自已顺序的话，会自动往活动竞技场内";
+	mes "移动至场地!";
+	next;
+	mes "[比修司]";
+	mes "进入竞技场后并且开始倒数计时";
+	mes "主持人由 ^3131FF 杰斯卡 ^000000 担任，会有过关提示";
+	mes "请依照条件所指的过关条件闯关";
+	next;
+	mes "[比修司]";
+	mes "限间限制^3131FF 7分 ^000000 钟";
+	mes "把这个时间当作目标的话，时间控制";
+	mes "得当是非常重要的";
+	next;
+	mes "[比修司]";
+	mes "打倒最后的BOSS关的话";
+	mes "^3131FF 闯关成功 ^000000 会自动移动到下个场地";
+	mes "^3131FF 闯关成功 ^000000 只有1分钟可以记录";
+	mes "如果没在时限内记录完成一样会被送出";
+	mes "完成后会自动离开!";
+	next;
+	mes "[比修司]";
+	mes "在结束控室接受竞技场点数";
+	mes "如果没有完成情况，竞场场也会";
+	mes "给您1点的点数当作补偿!";
+	next;
+	mes "[比修司]";
+	mes "说明到此结束!";
+	mes "要离开了吗?";
+	close;
+}
+
+arena_room.gat,147,49,2	script	伊本	727,{
+	mes "[伊本]";
+	mes "欢迎~!!";
+	mes "个人战 LV80～99 的竞技场";
+	mes "让我 伊本 来为您解说申请说明!";
+	mes "不想听说明??";
+	next;
+	emotion 28;
+	mes "[伊本]";
+	mes "说明一定要听，明白了吗?...";
+	mes "...无聊哟￣...";
+	next;
+	mes "[伊本]";
+	mes "^3131FF 个人战 LV80～99 ^000000 是";
+	mes "^FF0000 等级80 ^000000 到 ^FF0000 等级99 ^000000 可以参加";
+	next;
+	mes "[伊本]";
+	mes "个人战参加费用是 1000 zeny。";
+	next;
+	mes "[伊本]";
+	mes "成为加入控室塑^3131FF 聊天室　面";
+	mes "请等待自已的顺序 ^000000";
+	mes "等到轮到自已顺序的话，会自动往活动竞技场内";
+	mes "移动至场地!";
+	next;
+	mes "[伊本]";
+	mes "进入竞技场后并且开始倒数计时";
+	mes "主持人由 ^3131FF 阿托思 ^000000 担任，会有过关提示";
+	mes "请依照条件所指的过关条件闯关";
+	next;
+	mes "[伊本]";
+	mes "限间限制^3131FF 8分 ^000000 钟";
+	mes "把这个时间当作目标的话，时间控制";
+	mes "得当是非常重要的";
+	next;
+	mes "[伊本]";
+	mes "打倒最后的BOSS关的话";
+	mes "^3131FF 结束等候室 ^000000 会自动移动到下个场地";
+	mes "^3131FF 结束等候室 ^000000 只有1分钟可以记录";
+	mes "如果没在时限内记录完成一样会被送出";
+	mes "完成后会自动离开!";
+	next;
+	mes "[伊本]";
+	mes "在结束控室接受竞技场点数";
+	mes "如果没有完成情况，竞场场也会";
+	mes "给您1点的点数当作补偿!";
+	next;
+	mes "[伊本]";
+	mes "说明到此结束!";
+	mes "要离开了吗?";
+	close;
+}
+
+arena_room.gat,158,93,4	script	服务人员 露库	828,{
+	mes "[露库]";
+	mes "你好";
+	mes "我是担任组队挑战模式的";
+	mes "说明人员露库哦!!";
+	mes "因为组队挑战与个人力量相当不同";
+	mes "请好好地听";
+	next;
+	mes "[露库]";
+	mes "^3131FF 组队挑战 000000 啊、";
+	mes "^FF0000 等级10 ^000000 到 ^FF0000 等级99 ^000000 嘛";
+	mes "都可以参加的";
+	next;
+	mes "[露库]";
+	mes "如果5人组成队伍";
+	mes "就能参加";
+	mes "参加费用是1人是 1000 zeny。";
+	next;
+	mes "[露库]";
+	mes "那么，有关Arena竞技场进行";
+	mes "做个说明";
+	next;
+	mes "[露库]";
+	mes "首先，^3131FF 与朋友组成队伍 ^000000";
+	mes "候补室的^3131FF 聊天室 ^000000等候顺序";
+	mes "好吗?^3131FF 必需 ^000000 队伍";
+	mes "组成一队才能参加。组队";
+	mes "由于不是同一队的参加也发生纠纷";
+	mes "这难以处理";
+	next;
+	mes "[露库]";
+	mes "聊天室内，队伍组队";
+	mes "^3131FF5 全体人员 ^000000要进入聊天室内";
+	next;
+	mes "[露库]";
+	mes "在这里要注意的是，聊天室内的顺序";
+	mes "组队成员以外";
+	mes "途中混杂着其他人，那也会一起";
+	mes "被传送到目的地";
+	mes "这点请注意!";
+	next;
+	mes "[露库]";
+	mes "在聊天室等候中，如果顺序轮到你了，";
+	mes "就会往担任活动主持人的地图移动过去";
+	mes "队伍人数顺序不一的话";
+	mes "如果移动了，非同一队队伍会直接从";
+	mes "地图传送回候补室的地方";
+	next;
+	mes "[露库]";
+	mes "开始组队挑战模式的时候，";
+	mes "主持人会跟您说明怎么进行。担当者ズゾ";
+	mes "主持人是随着活动场地的不同而不一样^FF0000 如果1人 ^000000";
+	mes "在说明时那是不要紧的!";
+	next;
+	mes "[露库]";
+	mes "开始组队模式挑战，";
+	mes "那个场地的全体队员在Arena竞技场内移动";
+	mes "^3131FF 未缴交参加费 ^000000不能参加";
+	next;
+	mes "[露库]";
+	mes "Arena竞技场前的候补室的时间为^FF0000 1分钟 ^000000";
+	mes "这个请注意";
+	next;
+	mes "[露库]";
+	mes "Arena竞技场入场同时，";
+	mes "时间开始计时";
+	mes "^3131FF 苏 罗蓝 ^000000会提示过关条件";
+	mes "务必达到指定条件";
+	mes "以最后的出口为目标";
+	next;
+	mes "[露库]";
+	mes "过关时间为^3131FF 10分钟 ^000000内哦";
+	mes "没有多余的时间可以浪费";
+	mes "这点请注意一下";
+	next;
+	mes "[露库]";
+	mes "如果有打到最后的BOSS房间并过关";
+	mes "就会往^3131FF 结束等候室 ^000000移动";
+	mes "^3131FF 结束等候室 ^000000 有1分钟的时间可以快速";
+	mes "从Arena竞技场中";
+	mes "领取点数";
+	next;
+	mes "[露库]";
+	mes "在结束等候室领取Arena竞技场点数";
+	mes "如果是未领取的情况离开，";
+	mes "Arena竞技场点将不会另外补偿";
+	mes "这点请特别注意";
+	next;
+	mes "[露库]";
+	mes "如果组队模式达成了新记录，";
+	mes "^3131FF 队伍名 ^000000将";
+	mes "记录在Arena记录人员内";
+	next;
+	mes "[露库]";
+	mes "组队人员缺少的话";
+	mes "将^FF0000 不能正常的记录 ^000000哦";
+	mes "必需时一开始组队的所有成员，";
+	mes "全体人员都要参加才行";
+	next;
+	mes "[露库]";
+	mes "以上是关于组队模式的说明";
+	mes "期待您的参加";
+	close;
+}
+
+arena_room,158,82,1	script	Helper Lonik	828,{
+
+	emotion e_no1,0;
+	mes "[罗尼]";
+	mes "太好了!";
+	mes "欢迎你来!!!";
+	next;
+	mes "[罗尼]";
+	mes "现在人还不够吗?";
+	mes "不明白组队是什么?";
+	mes "好的，请'露库'告诉你!!";
+	next;
+	mes "[罗尼]";
+	mes "选哪个?...";
+	next;
+	if(getmapusers("force_1-2"))
+	{
+		emotion e_oh,0;
+		mes " Y E S - !!";
+		mes "像~你在某人里头!";
+		next;
+		mes "[罗尼]";
+		mes "在等一会看有没有人要跟你组队的，";
+		mes "感觉吧";
+	}
+	else
+	{
+		emotion e_x,0;
+		mes " N O - !!!!!!!";
+		mes "无论谁都没有。要挑战了?";
+	}
+	close;
+}
+
+sec_in02,72,180,3	script	Arena Manager#arena	802,{
+
+	input .@arena;
+	if(!.@arena)
+	{
+		mes "[Arena Manager]";
+		mes "Command has been canceled.";
+		close;
+	}
+	else if(.@arena == 1357)
+	{
+		mes "[Arena Manager]";
+		mes "Select an option.";
+		next;
+		switch( select( "Restart arena","Rearrange the Ranking Time" ) )
+		{
+			case 1:
+				switch( select( "lvl 50","lvl 60","lvl 70","lvl 80","Party Mode" ) ) 
+				{
+					case 1:
+						set .@arena,50;
+						break;
+					case 2:
+						set .@arena,60;
+						break;
+					case 3:
+						set .@arena,70;
+						break;
+					case 4:
+						set .@arena,80;
+						break;
+					case 5:
+						mes "[Arena Manager]";
+						mes "== Caution ==";
+						mes "You have chosen to restart party arena stage.";
+						mes "Do you wish to proceed?";
+						next;
+						switch( select( "Yes","No" ) )
+						{
+							case 1:
+								donpcevent "Ponox::Onstart";
+								mes "[Arena Manager]";
+								mes "The arena stage has been successfuly reactivated.";
+								close;
+
+							case 2:
+								mes "[Arena Manager]";
+								mes "Command has been canceled.";
+								close;
+						}
+				}
+				mes "[Arena Manager]";
+				mes "== Caution ==";
+				mes "You have chosen to restart lvl "+.@arena+" arena stage.";
+				mes "Do you wish to proceed?";
+				next;
+				switch( select( "Yes","No" ) )
+				{
+					case 1:
+						donpcevent "lvl "+.@arena+"s Waiting Room::Onstart";
+						mes "[Arena Manager]";
+						mes "The arena stage has been successfuly reactivated.";
+						close;
+					
+					case 2:
+						mes "[Arena Manager]";
+						mes "Command has been canceled.";
+						close;
+				}
+				
+			case 2:
+				mes "[Arena Manager]";
+				mes "== Caution ==";
+				mes "^CE0000You have chosen to rearrange the ranking time. Make sure this is not a good decision unless if something serious was happened!^000000";
+				next;
+				mes "[Arena Manager]";
+				mes "Are you sure you want to rearrange the ranking time?";
+				next;
+				switch( select( "No","Yes" ) )
+				{
+					case 1:
+						mes "[Arena Manager]";
+						mes "Phew~ :)";
+						close;
+
+					case 2:
+						switch( select( "lvl 50","lvl 60","lvl 70","lvl 80","Party Mode" ) )
+						{
+							case 1:
+								mes "[Arena Manager]";
+								mes "Please enter 0 to cancel.";
+								mes "If not, please write within 400 letters.";
+								next;
+								input .@arenamin;
+								set $top_50min,.@arenamin;
+								input .@arenasec;
+								set $top_50sec,.@arenasec;
+								mes "[Arena Manager]";
+								mes "Current lvl 50 ranker's play time has been rearranged to ^FF0000"+$top_50min+"^000000 minutes and ^FF0000"+$top_50sec+"^000000 seconds.";
+								close;
+							case 2:
+								mes "[Arena Manager]";
+								mes "Please enter 0 to cancel.";
+								mes "If not, please write within 400 letters.";
+								next;
+								input .@arenamin;
+								set $top_60min,.@arenamin;
+								input .@arenasec;
+								set $top_60sec,.@arenasec;
+								mes "[Arena Manager]";
+								mes "Current lvl 60 ranker's play time has been rearranged to ^FF0000"+$top_60min+"^000000 minutes and ^FF0000"+$top_60sec+"^000000 seconds.";
+								close;
+							case 3:
+								mes "[Arena Manager]";
+								mes "Please enter 0 to cancel.";
+								mes "If not, please write within 400 letters.";
+								next;
+								input .@arenamin;
+								set $top_70min,.@arenamin;
+								input .@arenasec;
+								set $top_70sec,.@arenasec;
+								mes "[Arena Manager]";
+								mes "Current lvl 70 ranker's play time has been rearranged to ^FF0000"+$top_70min+"^000000 minutes and ^FF0000"+$top_70sec+"^000000 seconds.";
+								close;
+							case 4:
+								mes "[Arena Manager]";
+								mes "Please enter 0 to cancel.";
+								mes "If not, please write within 400 letters.";
+								next;
+								input .@arenamin;
+								set $top_80min,.@arenamin;
+								input .@arenasec;
+								set $top_80sec,.@arenasec;
+								mes "[Arena Manager]";
+								mes "Current lvl 80 ranker's play time has been rearranged to ^FF0000"+$top_80min+"^000000 minutes and ^FF0000"+$top_80sec+"^000000 seconds.";
+								close;
+							case 5:
+								mes "[Arena Manager]";
+								mes "Please enter 0 to cancel.";
+								mes "If not, please write within 400 letters.";
+								next;
+								input .@arenamin;
+								set $top_ptmin,.@arenamin;
+								input .@arenasec;
+								set $top_ptsec,.@arenasec;
+								mes "[Arena Manager]";
+								mes "Current party ranker's play time has been rearranged to ^FF0000"+$top_ptmin+"^000000 minutes and ^FF0000"+$top_ptsec+"^000000 seconds.";
+								close;
+						}
+				}
+		}
+	}
+	mes "Password is incorrect.";
+	close;
+}
+
+sec_in02,79,171,3	script	Reward Manager#arena	802,{
+
+	input .@arena;
+	if(!.@arena)
+	{
+		mes "[Reward Manager]";
+		mes "Command has been canceled.";
+		close;
+	}
+	else if(.@arena == 1357)
+	{
+		mes "[Reward Manager]";
+		mes "You have chosen to hide the teleporter NPC.";
+		next;
+		switch( select( "Cancel","Yes","Turn on" ) )
+		{
+			case 1:
+				mes "[Reward Manager]";
+				mes "You have canceled the command.";
+				close;
+		
+			case 2:
+				mes "[Reward Manager]";
+				mes "NPC has been hidden";
+				disablenpc "Teleporter#arena";
+				close;
+				
+			case 3:
+				mes "[Reward Manager]";
+				mes "NPC has been enabled.";
+				enablenpc "Teleporter#arena";
+				close;
+		}
+	}
+	mes "[Reward Manager]";
+	mes "Password is incorrect.";
+	close;
+}
+
+arena_room.gat,105,93,2	script	空间移动师#arena	55,{
+	mes "[空间移动师]";
+	mes "为您移动到Arena的其他空间，";
+	mes "您要去吗?";
+	next;
+	if(select("去","不去")==1) {
+		mes "[空间移动师]";
+		mes "好.. 那好好跟着我吧";
+		close2;
+		warp "prt_are_in",60,14;
+		end;
+	}
+	mes "[空间移动师]";
+	mes "改变心意的话，随时来找我吧";
+	close;
+}
+
+prt_are_in,98,14,3	script	洁妮#arena	728,{
+
+	if(checkweight(526,5) != 1)
+	{
+		mes "- 请等一下! -";
+		mes "- 您身上携带太多东西了! -";
+		mes "- 请确定一下负重量! -";
+		close;
+	}
+	mes "[洁妮]";
+	mes "您好!";
+	mes "我是Arena点数的交换";
+	mes "负责人的 洁妮 ";
+	next;
+	mes "[洁妮]";
+	mes "只有这里，您取得的Arena点数";
+	mes "可以交换如项目的点数";
+	mes "说明完了!";
+	mes "您希望哪个服务吗?";
+	next;
+	switch( select( "物品交换:经验值交换:想摄影纪念:确认Arena点数" ) )
+	{
+		case 1:
+			mes "[洁妮]";
+				mes "哪个物品要交换的??";
+			next;
+			switch( select( "蜂蜜:蜂胶:玛丝黛拉果实:白色纤细药水:曼特疗伤药:天地树芽:天地树果实:神秘箱子:神秘紫箱:老旧收集册" ) )
+			{
+				case 1: callfunc "Func_Are_Rew",518,5,20;
+				case 2: callfunc "Func_Are_Rew",526,5,30;
+				case 3: callfunc "Func_Are_Rew",522,5,30;
+				case 4: callfunc "Func_Are_Rew",547,8,30;
+				case 5: callfunc "Func_Are_Rew",605,3,20;
+				case 6: callfunc "Func_Are_Rew",608,1,20;
+				case 7: callfunc "Func_Are_Rew",607,1,40;
+				case 8: callfunc "Func_Are_Rew",603,1,100;
+				case 9: callfunc "Func_Are_Rew",617,1,300;
+				case 10: callfunc "Func_Are_Rew",616,1,1000;
+			}
+			
+		case 2:
+			mes "[洁妮]";
+			mes "把Arena点数当作经验值换算啊!";
+			mes "在换算时需要40点的Arena点数";
+			next;
+			switch( select( "取消:确定" ) )
+			{
+				case 1:
+					mes "[洁妮]";
+					mes "取消交换程序了!";
+					close;
+				
+				case 2:
+					if(arena_point < 40)
+					{
+						mes "[洁妮]";
+						mes "Arena点数不足";
+						mes "请确认所有点数";
+						close;
+					}
+					set arena_point,arena_point -40;
+					if(BaseLevel < 70) getexp 3000,0;
+					else if(BaseLevel < 80) getexp 9000,0;
+					else if(BaseLevel < 90) getexp 10000,0;
+					else if(BaseLevel < 100) getexp 30000,0;
+					mes "[洁妮]";	
+					mes "Arena点数已经";
+					mes "换算成经验值了!";
+					close;
+			}
+
+		case 3:
+			mes "[洁妮]";
+			mes "希望摄影纪念啊 !";
+			next;
+			switch( select( "什么是摄影纪念?:摄影纪念啰" ) )
+			{
+				case 1:
+					mes "[洁妮]";
+					mes "在我右边看得见有楼梯吗?";
+					next;
+					mes "[洁妮]";
+					mes "在那个楼梯与希望的 NPC 招呼";
+					mes "因为在 1分钟 之内，可以自由的";
+					mes "尽情使用拍摄功能之后";
+					mes "享受拍摄的乐趣!";
+					next;
+					mes "[洁妮]";
+					mes "摄影时，NPC会摆出各种不同表情";
+					mes "所以请抓准时间，";
+					mes "按下快门拍下你跟NPC的合照!";
+					close;
+					close;
+
+				case 2:
+					if($arenapic)
+					{
+						mes "[洁妮]";
+						mes "照片摄影中。请稍微等待";
+						close;
+					}
+					mes "[洁妮]";
+					mes "想跟那一个摄影的，请选译NPC.";
+					mes "NPC只出现1分钟，";
+					mes "需要10点的Arena点数!";
+					next;
+					switch( select( "巴风特:黑暗之王:死灵:虎王:德古拉男爵:元灵武士:冰暴骑士:皮里恩:小女孩:巴力基" ) )
+					{
+						case 1: set $@arenapic,1039; break;
+						case 2: set $@arenapic,1272; break;
+						case 3: set $@arenapic,1046; break;
+						case 4: set $@arenapic,1115; break;
+						case 5: set $@arenapic,1389; break;
+						case 6: set $@arenapic,1492; break;
+						case 7: set $@arenapic,1251; break;
+						case 8: set $@arenapic,1159; break;
+						case 9: set $@arenapic,6969; break;
+						case 10: set $@arenapic,7777; break;
+					}
+					if(arena_point < 10)
+					{
+						mes "[洁妮]";
+						mes "Arena点数不足";
+						mes "请确认所有点数";
+						close;
+					}
+					mes "[洁妮]";
+					if($@arenapic == 6969) mes "要跟可爱的小女孩们打个招呼吗?";
+					else if($@arenapic == 7777) mes "要跟女武神打个招呼吗?";
+					else mes "要跟"+getmonsterinfo($@arenapic,0)+"打个招呼吗?";
+					next;
+					switch( select( "是的:取消" ) )
+					{
+						case 1:
+							set arena_point,arena_point -10;
+							set $arenapic,1;
+							enablenpc "#arena_"+$@arenapic+"";
+							movenpc "#arena_"+$@arenapic+"",96,28;
+							if($@arenapic == 6969)
+							{
+								enablenpc "#arena_ss_2";
+								enablenpc "#arena_ss_3";
+								enablenpc "#arena_ss_4";
+							}
+							donpcevent "npctime#arena::OnStart";
+							mes "[洁妮]";
+							mes "Thank you.";
+							close;
+
+						case 2:
+							mes "[洁妮]";
+							mes "Would you like to consider a little longer?";
+							close;
+					}
+			}
+			
+		case 4:
+			mes "[洁妮]";
+			mes "Let me check "+strcharinfo(0)+"'s current arena points.";
+			next;
+			mes "[洁妮]";
+			mes ""+strcharinfo(0)+" has total ^3131FF"+arena_point+"^000000 points.";
+			close;
+	}
+
+OnInit:
+	set $arenapic,0;
+	end;
+}
+
+prt_are_in,1,1,5	script	#arena_1039	1039,{
+	end;
+	
+OnInit:
+	disablenpc "#arena_6969";
+	disablenpc "#arena_ss_2";
+	disablenpc "#arena_ss_3";
+	disablenpc "#arena_ss_4";
+	disablenpc "#arena_1272";
+	disablenpc "#arena_1046";
+	disablenpc "#arena_1115";
+	disablenpc "#arena_1389";
+	disablenpc "#arena_1492";
+	disablenpc "#arena_1251";
+	disablenpc "#arena_1159";
+	disablenpc "#arena_7777";
+	disablenpc "#arena_1039";
+	end;
+
+OnHeart:
+	emotion e_lv,0;
+	end;
+OnSci:
+	emotion e_scissors,0;
+	end;
+OnBest:
+	emotion e_no1,0;
+	end;
+OnOmg:
+	emotion e_omg,0;
+	end;
+OnKik:
+	emotion e_gg,0;
+	end;
+OnKis:
+	emotion e_kis,0;
+	end;
+}
+
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_6969	714
+prt_are_in,94,26,5	duplicate(#arena_1039)	#arena_ss_2	714
+prt_are_in,100,28,3	duplicate(#arena_1039)	#arena_ss_3	714
+prt_are_in,102,26,3	duplicate(#arena_1039)	#arena_ss_4	714
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1272	1272
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1046	1046
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1115	1115
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1389	1389
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1492	1492
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1251	1251
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_1159	1159
+prt_are_in,1,1,5	duplicate(#arena_1039)	#arena_7777	811
+
+prt_are_in,130,30,3	script	npctime#arena	139,{
+
+OnStop:
+	stopnpctimer;
+	end;
+	
+OnStart:
+	initnpctimer;
+	end;
+	
+OnTimer2000:
+	mapannounce "prt_are_in","洁妮 : You should keep time with popping emotion icons~",1,0xFFCE00;
+	end;
+	
+OnTimer5000:
+	mapannounce "prt_are_in","Emoticon : /lv",1,0xFFCE00;
+	end;
+	
+OnTimer7000:
+	mapannounce "prt_are_in"," 3 ",1,0xFFCE00;
+	end;
+	
+OnTimer8000:
+	mapannounce "prt_are_in"," 2 ",1,0xFFCE00;
+	end;
+	
+OnTimer9000:
+	mapannounce "prt_are_in"," 1 ",1,0xFFCE00;
+	end;
+	
+OnTimer10000:
+	mapannounce "prt_are_in"," ",1,0xFFCE00;
+	donpcevent "#arena_"+$@arenapic+"::OnHeart";
+	if($@arenapic == 6969)
+	{
+		donpcevent "#arena_ss_2::OnHeart";
+		donpcevent "#arena_ss_3::OnHeart";
+		donpcevent "#arena_ss_4::OnHeart";
+	}
+	end;
+	
+OnTimer15000:
+	mapannounce "prt_are_in","Emoticon : /gawi",1,0xFFCE00;
+	end;
+	
+OnTimer17000:
+	mapannounce "prt_are_in"," 3 ",1,0xFFCE00;
+	end;
+	
+OnTimer18000:
+	mapannounce "prt_are_in"," 2 ",1,0xFFCE00;
+	end;
+	
+OnTimer19000:
+	mapannounce "prt_are_in"," 1 ",1,0xFFCE00;
+	end;
+	
+OnTimer20000:
+	mapannounce "prt_are_in"," ",1,0xFFCE00;
+	donpcevent "#arena_"+$@arenapic+"::OnSci";
+	if($@arenapic == 6969)
+	{
+		donpcevent "#arena_ss_2::OnSci";
+		donpcevent "#arena_ss_3::OnSci";
+		donpcevent "#arena_ss_4::OnSci";
+	}
+	end;
+	
+OnTimer25000:
+	mapannounce "prt_are_in","Emoticon : /no1",1,0xFFCE00;
+	end;
+	
+OnTimer27000:
+	mapannounce "prt_are_in"," 3 ",1,0xFFCE00;
+	end;
+	
+OnTimer28000:
+	mapannounce "prt_are_in"," 2 ",1,0xFFCE00;
+	end;
+	
+OnTimer29000:
+	mapannounce "prt_are_in"," 1 ",1,0xFFCE00;
+	end;
+	
+OnTimer30000:
+	mapannounce "prt_are_in"," ",1,0xFFCE00;
+	donpcevent "#arena_"+$@arenapic+"::OnBest";
+	if($@arenapic == 6969)
+	{
+		donpcevent "#arena_ss_2::OnBest";
+		donpcevent "#arena_ss_3::OnBest";
+		donpcevent "#arena_ss_4::OnBest";
+	}
+	end;
+	
+OnTimer35000:
+	mapannounce "prt_are_in","Emoticon : /huk",1,0xFFCE00;
+	end;
+	
+OnTimer37000:
+	mapannounce "prt_are_in"," 3 ",1,0xFFCE00;
+	end;
+	
+OnTimer38000:
+	mapannounce "prt_are_in"," 2 ",1,0xFFCE00;
+	end;
+	
+OnTimer39000:
+	mapannounce "prt_are_in"," 1 ",1,0xFFCE00;
+	end;
+	
+OnTimer40000:
+	mapannounce "prt_are_in"," ",1,0xFFCE00;
+	donpcevent "#arena_"+$@arenapic+"::OnOmg";
+	if($@arenapic == 6969)
+	{
+		donpcevent "#arena_ss_2::OnOmg";
+		donpcevent "#arena_ss_3::OnOmg";
+		donpcevent "#arena_ss_4::OnOmg";
+	}
+	end;
+	
+OnTimer45000:
+	mapannounce "prt_are_in","Emoticon : /gg",1,0xFFCE00;
+	end;
+	
+OnTimer47000:
+	mapannounce "prt_are_in"," 3 ",1,0xFFCE00;
+	end;
+	
+OnTimer48000:
+	mapannounce "prt_are_in"," 2 ",1,0xFFCE00;
+	end;
+	
+OnTimer49000:
+	mapannounce "prt_are_in"," 1 ",1,0xFFCE00;
+	end;
+	
+OnTimer50000:
+	mapannounce "prt_are_in"," ",1,0xFFCE00;
+	donpcevent "#arena_"+$@arenapic+"::OnKik";
+	if($@arenapic == 6969)
+	{
+		donpcevent "#arena_ss_2::OnKik";
+		donpcevent "#arena_ss_3::OnKik";
+		donpcevent "#arena_ss_4::OnKik";
+	}
+	end;
+	
+OnTimer55000:
+	mapannounce "prt_are_in","Emoticon : /kis",1,0xFFCE00;
+	end;
+	
+OnTimer57000:
+	mapannounce "prt_are_in"," 3 ",1,0xFFCE00;
+	end;
+
+OnTimer58000:
+	mapannounce "prt_are_in"," 2 ",1,0xFFCE00;
+	end;
+	
+OnTimer59000:
+	mapannounce "prt_are_in"," 1 ",1,0xFFCE00;
+	end;
+	
+OnTimer60000:
+	mapannounce "prt_are_in"," ",1,0xFFCE00;
+	donpcevent "#arena_"+$@arenapic+"::OnKis";
+	if($@arenapic == 6969)
+	{
+		donpcevent "#arena_ss_2::OnKis";
+		donpcevent "#arena_ss_3::OnKis";
+		donpcevent "#arena_ss_4::OnKis";
+	}
+	end;
+	
+OnTimer62000:
+	mapannounce "prt_are_in","Time is over. Thank you for using my services.",1,0xFFCE00;
+	movenpc "#arena_"+$@arenapic+"",1,1;
+	donpcevent "#arena_1039::OnInit";
+	set $arenapic,0;
+	stopnpctimer;
+	end;
+}
+
+sec_in02,72,171,3	script	Picture Manager#arena	802,{
+
+	input .@arena;
+	if(!.@arena)
+	{
+		mes "[Picture Manager]";
+		mes "Command has been canceled.";
+		close;
+	}
+	else if(.@arena == 1357)
+	{
+		mes "[Picture Manager]";
+		mes "Would you like to reset Picture Reward variable to 0?";
+		next;
+		switch( select( "Cancel","Yes" ) )
+		{
+			case 1:
+				mes "[Picture Manager]";
+				mes "You have canceled your request.";
+				close;
+
+			case 2:
+				mes "[Picture Manager]";
+				mes "Picture rewarding reseted.";
+				set $arenapic,0;
+				close;
+		}
+	}
+	mes "[Picture Manager]";
+	mes "Password is incorrect.";
+	close;
+}
+
+sec_in02,76,176,5	script	Live Broadcast#arena	802,{
+
+	mes "[Live Broadcast]";
+	mes "Currently there are "+getmapusers("force_1-1")+" people in lvl 50s map.";
+	mes "Currently there are "+getmapusers("force_2-1")+" people in lvl 60s map.";
+	mes "Currently there are "+getmapusers("force_3-1")+" people in lvl 70s map.";
+	mes "Currently there are "+getmapusers("force_4-1")+" people in lvl 80s map.";
+	mes "Currently there are "+getmapusers("force_1-2")+" people in party map.";
+	mes "Currently there are "+getmapusers("arena_room")+" people in the waiting room.";
+	close;
+}
+
+function	script	Func_Are_Rew	{
+				
+	mes "[洁妮]";
+	mes "Would you like to exchange your arena points with "+getitemname(getarg(0))+"?";
+	mes "You can exchange ^3131FF"+getarg(2)+" arena points with "+getarg(1)+" "+getitemname(getarg(0))+"^000000.";
+	mes "If you wish to cancel, please enter 0. If you don't, please enter how many ^3131FFtimes^000000 of arena points you wish to spend.";
+	next;
+	input .@reward;
+	if(!.@reward)
+	{
+		mes "[洁妮]";
+		mes "You have canceled your request.";
+		close;
+	
+	}
+	else if(.@reward > 1500)
+	{
+		mes "[洁妮]";
+		mes "You have exceeded the maximum capacity.";
+		close;
+	}
+	if(arena_point < .@reward * getarg(2))
+	{
+		mes "[洁妮]";
+		mes "You do not have enough arena points.";
+		mes "Please check the total amount of arena points you have.";
+		close;
+	}
+	set arena_point,arena_point - (.@reward * getarg(2));
+	getitem getarg(0),.@reward * getarg(1);
+	mes "[洁妮]";
+	mes "Thank you, please come again.";
+	close;
+}
+
+arena_room,63,126,0	script	LevelCheck#50	139,5,5,{
+
+OnTouch:
+	if(BaseLevel < 50 || BaseLevel > 69)
+	{
+		mes "[服务人员 彼思]";
+		mes "I'm sorry but that place is";
+		mes "only available to people from";
+		mes "level ^FF000050^000000 to ^FF000069^000000. I'm afraid you";
+		mes "have to leave immediately.";
+		mes "Please proceed to your proper";
+		mes "arenas. Have fun !";
+		close2;
+		warp "arena_room",100,75;
+	}
+	else if(Zeny < 1000)
+	{
+		mes "[服务人员 彼思]";
+		mes "Oh! That's too bad!";
+		mes "You have the required level";
+		mes "to attempt this arena but";
+		mes "it costs 1000 zeny to enter.";
+		mes "Please come back when you'll";
+		mes "have them!";
+		close2;
+		warp "arena_room",100,75;
+	}
+	end;
+}
+
+arena_room,49,87,0	script	LevelCheck#60	139,5,5,{
+
+OnTouch:
+	if(BaseLevel < 60 || BaseLevel > 79)
+	{
+		mes "[Helper Ben]";
+		mes "I'm sorry but that place is";
+		mes "only available to people from";
+		mes "level ^FF000060^000000 to ^FF000079^000000. I'm afraid you";
+		mes "have to leave immediately.";
+		mes "Please proceed to your proper";
+		mes "arenas. Have fun !";
+		close2;
+		warp "arena_room",100,75;
+	}
+	else if(Zeny < 1000)
+	{
+		mes "[Helper Ben]";
+		mes "Oh! That's too bad!";
+		mes "You have the required level";
+		mes "to attempt this arena but";
+		mes "it costs 1000 zeny to enter.";
+		mes "Please come back when you'll";
+		mes "have them!";
+		close2;
+		warp "arena_room",100,75;
+	}
+	end;
+}
+
+arena_room,63,53,0	script	LevelCheck#70	139,5,5,{
+
+OnTouch:
+	if(BaseLevel < 70 || BaseLevel > 89)
+	{
+		mes "[Helper Vicious]";
+		mes "I'm sorry but that place is";
+		mes "only available to people from";
+		mes "level ^FF000070^000000 to ^FF000089^000000. I'm afraid you";
+		mes "have to leave immediately.";
+		mes "Please proceed to your proper";
+		mes "arenas. Have fun !";
+		close2;
+		warp "arena_room",100,75;
+	}
+	else if(Zeny < 1000)
+	{
+		mes "[Helper Vicious]";
+		mes "Oh! That's too bad!";
+		mes "You have the required level";
+		mes "to attempt this arena but";
+		mes "it costs 1000 zeny to enter.";
+		mes "Please come back when you'll";
+		mes "have them!";
+		close2;
+		warp "arena_room",100,75;
+	}
+	end;
+}
+
+arena_room,136,53,0	script	LevelCheck#80	139,5,5,{
+
+OnTouch:
+	if(BaseLevel < 80)
+	{
+		mes "[Helper Epin]";
+		mes "I'm sorry but that place is";
+		mes "only available to people from";
+		mes "level ^FF000080^000000 to ^FF000099^000000. I'm afraid you";
+		mes "have to leave immediately.";
+		mes "Please proceed to your proper";
+		mes "arenas. Have fun !";
+		close2;
+		warp "arena_room",100,75;
+	}
+	else if(Zeny < 1000)
+	{
+		mes "[Helper Epin]";
+		mes "Oh! That's too bad!";
+		mes "You have the required level";
+		mes "to attempt this arena but";
+		mes "it costs 1000 zeny to enter.";
+		mes "Please come back when you'll";
+		mes "have them!";
+		close2;
+		warp "arena_room",100,75;
+	}
+	end;
+
+}

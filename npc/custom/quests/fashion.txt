@@ -1,0 +1,69 @@
+//===== eAthena Script =======================================
+//= Quest for Fashion Glasses (Daily Job Quest)
+//===== By: ==================================================
+//= 1.1 None
+//===== Current Version: =====================================
+//= Any
+//===== Compatible With: =====================================
+//= eAthena
+//===== Description: =========================================
+//= Quest for Fashion Glasses
+//===== Additional Comments: =================================
+//= 1.0 Fully Working [Lupus]
+//= 1.1 fixed exploit [Lupus]
+//============================================================
+
+izlude.gat,135,96,5	script	时尚太阳眼镜兑换处	76,{
+	mes "[工作人员]"; 
+	mes "Hi, 今天的任务是...."; 
+	mes "Ah, ^CC6633时尚太阳眼镜 ^000000任务!"; 
+	next; 
+	menu "任务要求",M_INFO,"制作太阳眼镜",-,"取消",M_CANCEL;
+
+	mes "[工作人员]";
+	mes "好很好, 让我先来检查一下你带来的材料";
+	next;
+	if(countitem(2271)<1 || countitem(975)<1) goto M_NOITEMS;
+	delitem 2271,1;
+	delitem 975,1;
+	mes "[工作人员]";
+	mes "稍等片刻.....";
+	next;
+	getitem 5047,1;
+	mes "[工作人员]";
+	mes "完成了!";
+	close;
+
+M_NOITEMS:
+	mes "[工作人员]";
+	mes "你还没收集齐所有的道具哦.";
+	mes "请下次再来吧...";
+	close;
+
+M_INFO: 
+	mes "[工作人员]";
+	mes "Ok 你所要做的就是";
+	mes "收集材料-";
+	mes "^CC66331 眼镜头饰^000000"; 
+	mes "和 ^CC66331 红色染料^000000.";
+	next;
+	menu "接受任务",-,"离开",M_LEAVE;
+
+	mes "[工作人员]";
+	mes "如果你完成任务了, 就把那些道具拿来给我哦,";
+	mes "Ok 祝你好运.";
+	close;
+
+M_LEAVE:
+	mes "[工作人员]";
+	mes "或许下次有机会吧?";
+	close;
+
+M_CANCEL:
+	mes "[工作人员]";
+	mes "Aw, 太可惜了";
+	mes "就这么放弃了?";
+	mes "Oh 好吧你也可以明天来";
+	mes "参加任务";
+	close;
+}
