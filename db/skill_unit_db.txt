@@ -113,3 +113,6 @@
 2252,0xd5,    , 0, 1,1000,enemy, 0x006	//RA_VERDURETRAP
 2253,0xd6,    , 0, 1,1000,enemy, 0x006	//RA_FIRINGTRAP
 2254,0xd7,    , 0, 1,1000,enemy, 0x006	//RA_ICEBOUNDTRAP
+2213,0x86,    , 0, 5,1000,enemy, 0x010	//WL_COMET
+2216,0xcb,    , 0, 5,1000,enemy, 0x018	//WL_EARTHSTRAIN
+//2217,0x86,    , 0, 5,1000,enemy, 0x808	//WL_TETRAVORTEX
