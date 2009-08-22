@@ -474,7 +474,7 @@ OnGuardianDied:
 	set .MyMobCount,.MyMobCount-1;
 	if (.MyMobCount < 2) {
 		set .MyMobCount,.MyMobCount+1;
-		guardian "schg_cas03",120,37,"剑士监护人魔物",1899,"#sch03_gard01::OnGuardianDied"; //10;
+		guardian "schg_cas03",273,309,"剑士监护人魔物",1899,"#sch03_gard01::OnGuardianDied"; //10;
 	}
 	end;
 
