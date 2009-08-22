@@ -89,6 +89,8 @@ bonus bHPrecovRate,n;			HP自然恢复率 + n%
 bonus bSPrecovRate,n;			SP自然恢复率 + n%
 bonus bSPGainValue,n;			以物理攻击杀死魔物时得到 n SP
 bonus bHPGainValue,n;			以物理攻击杀死魔物时得到 n HP
+bonus bMagicSPGainValue,n;		以魔法攻击杀死魔物时得到 n SP
+bonus bMagicHPGainValue,n;		以魔法攻击杀死魔物时得到 n HP
 bonus bSPDrainValue,n;			物理攻击时，SP 变化 n 
 bonus2 bSPDrainValue,n,x;		物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
 bonus2 bSPVanishRate,n,x;		攻击时 n/10 % 几率减少 x% 对方SP

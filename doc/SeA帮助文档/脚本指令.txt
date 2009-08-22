@@ -2043,6 +2043,8 @@ account ID.
 This function returns 1 if the specified account is logged in and 0 if they 
 aren't. You can also pass the char_id to check for both account and char id.
 
+会返回2，如果该玩家是离线挂店；返回3，如果玩家使用了@offline指令。
+
 ---------------------------------------
 
 *checkweight(<item id>,<amount>)
