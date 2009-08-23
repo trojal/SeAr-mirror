@@ -1,3 +1,6 @@
+2009/08/23[SeAr_1.0.18]
+- 源码:		修正cash物品贩卖价格低于NPC收取价时会自动取0。
+
 2009/08/23[SeAr_1.0.17]
 - DOC:		修正killmonsterall和killmonster的说明。
 
