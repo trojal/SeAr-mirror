@@ -1,3 +1,6 @@
+2009/08/23[SeAr_1.0.17]
+- DOC:		修正killmonsterall和killmonster的说明。
+
 2009/08/21[SeAr_1.0.16]
 - 源码、DOC:	扩展指令isloggedin。
 - 源码、DB、DOC:

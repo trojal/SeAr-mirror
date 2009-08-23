@@ -3793,18 +3793,18 @@ Example:
 ---------------------------------------
 
 - killmonster, killmonsterall
-	killmonsterall,<mapname>,3;为杀死所有魔物，但不杀死玩家召唤魔物，且会触发魔物死亡事件。
-	killmonsterall,<mapname>,2;为杀死所有魔物，但不杀死玩家召唤魔物，且不会触发魔物死亡事件。
-	killmonsterall,<mapname>,1;为杀死所有魔物，且会触发魔物死亡事件。
-	killmonsterall,<mapname>;为杀死所有魔物，且不会触发魔物死亡事件。
-	killmonster,<mapname>,<eventlabel>;为杀死会触发<eventlabel>事件的魔物，且不触发该事件。
-	killmonster,<mapname>,<eventlabel>,1;为杀死会触发<eventlabel>事件的魔物，并触发该事件。
-	killmonster,<mapname>,<eventlabel>,2;为杀死会触发<eventlabel>事件的魔物，但不杀死玩家召唤魔物，但不触发该事件。
-	killmonster,<mapname>,<eventlabel>,3;为杀死会触发<eventlabel>事件的魔物，但不杀死玩家召唤魔物，并触发该事件。
-	killmonster,<mapname>,"All";为杀死所有不会重生魔物，并不触发任何事件。
-	killmonster,<mapname>,"All",1;为杀死所有不会重生魔物，并触发死亡事件。
-	killmonster,<mapname>,"All",2;为杀死所有不会重生魔物，但不杀死玩家召唤魔物，并不触发任何事件。
-	killmonster,<mapname>,"All",3;为杀死所有不会重生魔物，但不杀死玩家召唤魔物，且触发死亡事件。
+	killmonsterall <mapname>,3;为杀死所有魔物，但不杀死玩家召唤魔物，且会触发魔物死亡事件。
+	killmonsterall <mapname>,2;为杀死所有魔物，但不杀死玩家召唤魔物，且不会触发魔物死亡事件。
+	killmonsterall <mapname>,1;为杀死所有魔物，且会触发魔物死亡事件。
+	killmonsterall <mapname>;为杀死所有魔物，且不会触发魔物死亡事件。
+	killmonster <mapname>,<eventlabel>;为杀死会触发<eventlabel>事件的魔物，且不触发该事件。
+	killmonster <mapname>,<eventlabel>,1;为杀死会触发<eventlabel>事件的魔物，并触发该事件。
+	killmonster <mapname>,<eventlabel>,2;为杀死会触发<eventlabel>事件的魔物，但不杀死玩家召唤魔物，但不触发该事件。
+	killmonster <mapname>,<eventlabel>,3;为杀死会触发<eventlabel>事件的魔物，但不杀死玩家召唤魔物，并触发该事件。
+	killmonster <mapname>,"All";为杀死所有不会重生魔物，并不触发任何事件。
+	killmonster <mapname>,"All",1;为杀死所有不会重生魔物，并触发死亡事件。
+	killmonster <mapname>,"All",2;为杀死所有不会重生魔物，但不杀死玩家召唤魔物，并不触发任何事件。
+	killmonster <mapname>,"All",3;为杀死所有不会重生魔物，但不杀死玩家召唤魔物，且触发死亡事件。
 
 ---------------------------------------
 
