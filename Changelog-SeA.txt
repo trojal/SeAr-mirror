@@ -1,3 +1,6 @@
+2009/08/24[SeAr_1.0.23]
+- DB:		修正蛇帽(5388)二刀连击几率。(r14029)
+
 2009/08/26[SeAr_1.0.22]
 - 源码、DB、DOC:
 		添加bonus: bSPGainValueOnSkill，bHPGainValueOnSkill。
