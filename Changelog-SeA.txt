@@ -1,4 +1,12 @@
-2009/08/24[SeAr_1.0.21]
+2009/08/26[SeAr_1.0.22]
+- 源码、DB、DOC:
+		添加bonus: bSPGainValueOnSkill，bHPGainValueOnSkill。
+- 源码:		添加bAddEffOnSkill支持无伤害技能。(但是有伤害技能不命中也会触发，错？)
+- DB:		实装EP13.2道具。(防具部分照搬5511版本)
+- 源码:		修正autobonus有时候不会触发。
+- 源码:		修正吸血鬼的礼物无显示治愈动画。
+
+2009/08/26[SeAr_1.0.21]
 - 源码、DOC:	实装进度条。
 
 2009/08/24[SeAr_1.0.20]

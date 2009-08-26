@@ -92,6 +92,8 @@ bonus bHPGainValue,n;			以物理攻击杀死魔物时得到 n HP
 bonus bMagicSPGainValue,n;		以魔法攻击杀死魔物时得到 n SP
 bonus bMagicHPGainValue,n;		以魔法攻击杀死魔物时得到 n HP
 bonus bSPDrainValue,n;			物理攻击时，SP 变化 n 
+bonus2 bSPGainValueOnSKill,x,n;		使用技能 x 后得到SP n
+bonus2 bHPGainValueOnSKill,x,n;		使用技能 x 后得到HP n
 bonus2 bSPDrainValue,n,x;		物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
 bonus2 bSPVanishRate,n,x;		攻击时 n/10 % 几率减少 x% 对方SP
 bonus2 bHPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到HP
@@ -222,9 +224,9 @@ bonus4 bAddEffOnSkill,s,x,y,t;		y/100% 几率在使用 s 技能时在 t 条件下产生 x 状态
 //=自动咏唱
 //=========================================================
 bonus3 bAutoSpell,n,x,y;		攻击时 y/10% 几率自动咏唱等级 x 的技能 n (支持技能名)					
-bonus3 bAutoSpellWhenHit,x,y,n;		被攻击时 y/10% 几率自动咏唱等级 x 的技能 n (支持技能名)
+bonus3 bAutoSpellWhenHit,x,n,y;		被攻击时 y/10% 几率自动咏唱等级 x 的技能 n (支持技能名)
 bonus4 bAutoSpell,n,x,y,i;		攻击时 y/10% 几率在 i 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9)
-bonus4 bAutoSpellWhenHit,n,y,x,i;	被攻击时 y/10% 几率在 i 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9)
+bonus4 bAutoSpellWhenHit,n,x,y,i;	被攻击时 y/10% 几率在 i 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9)
 bonus4 bAutoSpellOnSkill,x,y,n,i;	i/10% 几率在使用 x 技能时对技能对象自动咏唱 y 技能 n 级 (支持技能名)
 bonus5 bAutoSpell,n,x,y,t,i;		攻击时 y/10% 几率在 i 和 t 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9) (t值见备注10)					   
 bonus5 bAutoSpellWhenHit,n,x,y,t,i;	被攻击时 y/10% 几率在 i 和 t 条件下自动咏唱等级 x 的技能 n (支持技能名) (i值见备注9) (t值见备注10)
