@@ -1,3 +1,6 @@
+2009/08/27[SeAr_1.0.28]
+- 源码:		优化bSPGainValueOnSkill，bHPGainValueOnSkill代码。
+
 2009/08/27[SeAr_1.0.27]
 - 源码:		修正负重超过最大负重时收取邮件导致物品丢失。(r14034)
 
