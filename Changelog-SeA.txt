@@ -1,3 +1,6 @@
+2009/08/29[SeAr_1.1.00]
+- 源码、DOC:	实装副本系统。
+
 2009/08/27[SeAr_1.0.28]
 - 源码:		优化bSPGainValueOnSkill，bHPGainValueOnSkill代码。
 

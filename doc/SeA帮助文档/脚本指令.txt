@@ -16,7 +16,7 @@
 4.- 玩家相关之类.
 5.- 魔物相关指令.
 6.- 其他指令.		(已汉化)
-7.- 副本系统指令.	(未添加)
+7.- 副本系统指令.
 8.- 任务系统指令.	(已汉化)
 9.- SeA指令.		(已汉化)
 
@@ -5357,6 +5357,94 @@ OnBarricadeBreak:
 进度条进行中时，无法使用技能；移动将取消进度条，终结脚本。
 
 --------------------------------------- 
+
+========================
+|7.- 副本系统指令.|
+========================
+---------------------------------------
+
+*instance_create("<副本名>",<队伍ID>,<副本>)
+
+以副本名 "<副本名>" 为队伍ID为 <队伍 ID>的队伍创建副本.
+当前副本ID只有 ID_ENDLESS (5) 或 ID_CATACOMBS (6)
+Most Instance_* commands are used in conjunction with this command and depend
+on the ID this command returns.
+
+Example: 
+	// Store the Party ID of the invoking character.
+	set .@party_id, getcharid(1);
+	// Atempt to create an instance using that party ID.
+	set .@id, instance_create("Endless Tower", .@party_id, ID_ENDLESS);
+	if (.@id == -1) { // Party ID is in use by another instance.
+		...
+	}
+	else (.@id < 0) { // Unspecified error while queuing instance.
+		...
+	}
+---------------------------------------
+
+*instance_destroy(<副本 ID>)
+
+销毁ID为 <副本 ID> 的副本.
+
+---------------------------------------
+
+*instance_attachmap(<副本 ID>,"<Map Name>")
+*instance_detachmap(<副本 ID>,"<Map Name>")
+
+关联或解除关联地图名为 "<Map Name>" 到id为 <副本 ID>的副本.
+
+---------------------------------------
+
+*instance_init(<副本 ID>);
+
+初始化id为 <副本 ID> 的副本.
+
+---------------------------------------
+
+*instance_announce <副本 ID>,"<文本>",<标签>{,<颜色>};
+
+像announce指令一样, 但拥有参数 <副本 ID> , 当值为 0 时为所有激活副本？
+
+---------------------------------------
+
+*instance_attach(<副本 ID>);
+
+将脚本关联到id为 <副本 ID> 的副本？
+
+---------------------------------------
+
+*instance_npcname("<NPC Name>",<副本 ID>)
+
+获取副本中被复制的npc的唯一名.
+给与的 "<NPC Name>" 属于id为 <副本 ID> 的副本. 
+可以使用此命令来 enablenpc, disablenpc, donpcevent, 等等.
+
+---------------------------------------
+
+*has_instance("<Map Name>")
+
+检查玩家是否在地图 <Map Name> 上有副本.
+
+---------------------------------------
+
+*instance_id(<?>)
+
+返回当前玩家关联的副本id
+
+---------------------------------------
+
+*instance_warpall "<Map Name>",<x>,<y>;
+
+传送所有在副本中的玩家到地图 <map name> 的指定坐标.
+
+---------------------------------------
+
+*instance_set_timeout <Time1>,<Time2>,<Instance ID>;
+
+<Time1> 为副本 <副本 ID> 的存在时间, <Time2> 是冷却时间
+
+---------------------------------------
 
 ========================
 |8.- Quest Log commands.|
