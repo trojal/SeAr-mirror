@@ -132,3 +132,13 @@
 //1239,»ðÑæ²¨Àû@RG_STRIPWEAPON,attack,215,5,2000,0,3000,yes,target,always,0,,,,,,
 
 // Here you can place your custom mob skills
+
+//FAWs
+//2043,Magic Decoy Fire@NPC_FIREATTACK,attack,184,10,10000,2000,1000,yes,target,always,0,,,,,,
+2043,Magic Decoy Fire@MG_FIREBOLT,attack,19,10,10000,2000,1000,yes,target,always,0,,,,,,
+//2044,Magic Decoy Earth@WZ_EARTHSPIKE,attack,90,5,5000,2000,1000,yes,target,always,0,,,,,,
+2044,Magic Decoy Earth@WZ_HEAVENSDRIVE,attack,91,5,10000,2000,1000,yes,target,always,0,,,,,,
+2045,Magic Decoy Wind@MG_LIGHTNINGBOLT,attack,20,10,10000,2000,1000,yes,target,always,0,,,,,,
+//2045,Magic Decoy wind@MG_THUNDERSTORM,attack,21,5,5000,2000,1000,yes,target,always,0,,,,,,
+//2046,Magic Decoy Water@WZ_STORMGUST,attack,89,5,5000,2000,1000,yes,target,always,0,,,,,,
+2046,Magic Decoy Water@MG_COLDBOLT,attack,14,10,10000,2000,1000,yes,target,always,0,,,,,,
