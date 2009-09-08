@@ -680,95 +680,95 @@
 2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,	RK_ABUNDANCE,³äÔ£
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,»ÃÓ°»÷´Ì
 //Ê®×ÖÇÐ¸îÕß
-2021,9,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,Venom Impress	
-2022,3,8,1,-1,0,0,5,7,no,0,0,0,weapon,0,	GC_CROSSIMPACT,Cross Impact
-2023,3:4:5:6:7,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	GC_DARKILLUSION,Dark Illusion
-2024,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GC_RESEARCHNWPOISON,Research New Poison
-2025,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		GC_CREATENEWPOISON,Create New Poison
-2026,9,6,16,5,0x1,0,1,1,no,0,0,0,weapon,0,	GC_ANTIDOTE,Antidote
-2027,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		GC_POISONINGWEAPON,Poisoning Weapon	
-2028,0,0,4,0,0,0,5,1,yes,0,0,0,weapon,0,	GC_WEAPONBLOCKING,Weapon Blocking
-2029,0,6,4,-1,0x2,1,5,1,no,0,0,0,weapon,1,	GC_COUNTERSLASH,Counter Slash
-2030,0,6,4,-1,0x2,1,5,1,no,0,0,0,none,0,	GC_WEAPONCRUSH,Weapon Crush
-2031,-1,6,1,5,0,0,5,1,no,0,0,0,weapon,0,	GC_VENOMPRESSURE,Venom Pressure
-2032,0,8,4,3,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,Poison Smoke
-2033,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	GC_CLOAKINGEXCEED,Cloaking Exceed
-2034,5,6,1,-1,0x02,3,1,1,no,0,0,0,weapon,0,	GC_PHANTOMMENACE,Phantom Menace
-2035,0,6,4,0,0x01,0,5,0,no,0,0,0,none,0,	GC_HALLUCINATIONWALK,Hallucination Walk
-2036,0,6,4,-1,0x02,2,5,0,no,0,0,0,weapon,0,	GC_ROLLINGCUTTER,Rolling Cutter
-2037,7,8,1,-1,0,0,5,10,no,0,0,0,weapon,0,	GC_CROSSRIPPERSLASHER,Cross Ripper Slasher
+2021,9,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,¶¾ÄÍÐÔÈõ»¯
+2022,3,8,1,-1,0,0,5,7,no,0,0,0,weapon,0,	GC_CROSSIMPACT,Ê®×ÖÕ¶
+2023,3:4:5:6:7,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	GC_DARKILLUSION,ºÚ°µ»ÃÓ°
+2024,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GC_RESEARCHNWPOISON,ÐÂ¶¾ÑÐ¾¿
+2025,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		GC_CREATENEWPOISON,ÐÂ¶¾ÖÆÔì
+2026,9,6,16,5,0x1,0,1,1,no,0,0,0,weapon,0,	GC_ANTIDOTE,½â¶¾¼Á
+2027,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		GC_POISONINGWEAPON,¾ç¶¾ÎäÆ÷
+2028,0,0,4,0,0,0,5,1,yes,0,0,0,weapon,0,	GC_WEAPONBLOCKING,ÎäÆ÷·ÀÓù
+2029,0,6,4,-1,0x2,1,5,1,no,0,0,0,weapon,1,	GC_COUNTERSLASH,·´»÷Õ¶
+2030,0,6,4,-1,0x2,1,5,1,no,0,0,0,none,0,	GC_WEAPONCRUSH,ÎäÆ÷Ñ¹ÖÆ
+2031,-1,6,1,5,0,0,5,1,no,0,0,0,weapon,0,	GC_VENOMPRESSURE,¶¾Ñ¹
+2032,0,8,4,3,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,¶¾Îí
+2033,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	GC_CLOAKINGEXCEED,³¬¼¶Î±×°
+2034,5,6,1,-1,0x02,3,1,1,no,0,0,0,weapon,0,	GC_PHANTOMMENACE,ÍöÁé¿ÖÏÅ
+2035,0,6,4,0,0x01,0,5,0,no,0,0,0,none,0,	GC_HALLUCINATIONWALK,»ÃÓ°²½
+2036,0,6,4,-1,0x02,2,5,0,no,0,0,0,weapon,0,	GC_ROLLINGCUTTER,Ðý×ªÀûÈÐ
+2037,7,8,1,-1,0,0,5,10,no,0,0,0,weapon,0,	GC_CROSSRIPPERSLASHER,»ØÐýÊ®×ÖÕ¶
 //´óÖ÷½Ì
-2038,9,8,1,6,0x2,1,5,3,no,0,0,0,magic,0,	AB_JUDEX,Judex
-2039,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		AB_ANCILLA,Ancilla
-2040,9,8,1,6,0,0,10,10,yes,0,0,0,magic,0,	AB_ADORAMUS,Adoramus	
-2041,9,6,16,0,0x3,3:7:15,3,1,yes,0,0,0,magic,0,	AB_CLEMENTIA,Clementia
-2042,9,6,16,0,0x3,3:7:15,3,1,yes,0,0,0,magic,0,	AB_CANTO,Canto Candidus
-2043,9,6,16,6,0x21,3:5:7,3,1,yes,0,0,0,magic,0, AB_CHEAL,Coluceo Heal 
-2044,9,6,2,6,0x21,3,5,1,yes,0,0,0,magic,0,	AB_EPICLESIS,Epiclesis 
-2045,0,6,4,0,0x1,0,10,1,yes,0,0,0,magic,0,	AB_PRAEFATIO,Praefatio
-2046,0,6,4,0,0x3,10,10,1,yes,0,0,0,magic,0,	AB_ORATIO,Oratio
-2047,0,6,4,0,0x3,0,4,1,yes,0,0,0,magic,0, 	AB_LAUDAAGNUS,Lauda Agnus 
-2048,0,6,4,0,0x3,0,4,1,yes,0,0,0,magic,0, 	AB_LAUDARAMUS,Lauda Ramus 
-2049,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		AB_EUCHARISTICA,Eucharistica
-2050,9,6,16,6,0,0,1,1,no,0,0,0,magic,0,		AB_RENOVATIO,Renovatio
-2051,9,6,16,6,0,1,5,1,no,0,0,0,magic,0,		AB_HIGHNESSHEAL,Highness Heal
-2052,0,6,4,0,0x3,-9,5,1,yes,0,0,0,magic,0,	AB_CLEARANCE,Clearance
-2053,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	AB_EXPIATIO,Expiatio
-2054,0,6,4,0,0x1,1,10,1,yes,0,0,0,magic,0,	AB_DUPLELIGHT,Duple Light
+2038,9,8,1,6,0x2,1,5,3,no,0,0,0,magic,0,	AB_JUDEX,ÉóÅÐ
+2039,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		AB_ANCILLA,¸¨ÖúÕß
+2040,9,8,1,6,0,0,10,10,yes,0,0,0,magic,0,	AB_ADORAMUS,ÔÞÃÀ¸è
+2041,9,6,16,0,0x3,3:7:15,3,1,yes,0,0,0,magic,0,	AB_CLEMENTIA,´È±¯
+2042,9,6,16,0,0x3,3:7:15,3,1,yes,0,0,0,magic,0,	AB_CANTO,´¿°×µÄ°ÙºÏ
+2043,9,6,16,6,0x21,3:5:7,3,1,yes,0,0,0,magic,0, AB_CHEAL,ÖÎÓúµ»ÑÔ
+2044,9,6,2,6,0x21,3,5,1,yes,0,0,0,magic,0,	AB_EPICLESIS,Ê¥Áé½µÁÙµÄÆíµ»
+2045,0,6,4,0,0x1,0,10,1,yes,0,0,0,magic,0,	AB_PRAEFATIO,ËÌÐ»´Ê
+2046,0,6,4,0,0x3,10,10,1,yes,0,0,0,magic,0,	AB_ORATIO,µ»ÑÔ
+2047,0,6,4,0,0x3,0,4,1,yes,0,0,0,magic,0, 	AB_LAUDAAGNUS,¸áÑòÔÞËÌ
+2048,0,6,4,0,0x3,0,4,1,yes,0,0,0,magic,0, 	AB_LAUDARAMUS,ÈºÌåÔÞËÌ
+2049,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		AB_EUCHARISTICA,Ê¥²Í
+2050,9,6,16,6,0,0,1,1,no,0,0,0,magic,0,		AB_RENOVATIO,¾»»¯
+2051,9,6,16,6,0,1,5,1,no,0,0,0,magic,0,		AB_HIGHNESSHEAL,¸ß¼¶ÖÎÓú
+2052,0,6,4,0,0x3,-9,5,1,yes,0,0,0,magic,0,	AB_CLEARANCE,Çå³ý
+2053,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	AB_EXPIATIO,Êê×ï
+2054,0,6,4,0,0x1,1,10,1,yes,0,0,0,magic,0,	AB_DUPLELIGHT,Ë«ÖØÊ¥¹â
 2055,-1,6,1,6,0,1,10,1,no,0,0,0,weapon,0,	AB_DUPLELIGHT_MELEE,Duple Light
 2056,-1,6,1,6,0,1,10,1,no,0,0,0,magic,0,	AB_DUPLELIGHT_MAGIC,Duple Light
-2057,0,6,4,0,0x3,4:5:6:7:8,5,1,no,0,0,0,magic,0,	AB_SILENTIUM,Silentium
-2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,Sacrament
+2057,0,6,4,0,0x3,4:5:6:7:8,5,1,no,0,0,0,magic,0,	AB_SILENTIUM,¼Åìo
+2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,Ê¥Àñ
 //ÓÎÏÀ
-2233,-9,8,1,-1,0x02,2,10,10,no,0,0,0,weapon,0,	RA_ARROWSTORM,Arrow Storm
-2234,0,6,4,0,0x3,3,5,2:2:3:4:5,no,0,0,0,weapon,0,		RA_FEARBREEZE,Fear Breeze
-2235,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_RANGERMAIN,Ranger Main
-2236,-9,8,1,-1,0,0,10,4,no,0,0,0,weapon,0,	RA_AIMEDBOLT,Aimed Bolt 
-2237,7,6,2,0,0x3,6,1,1,no,0,0,0,none,0,		RA_DETONATOR,Detonator
-2238,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,0,	RA_ELECTRICSHOCKER,Electric Shocker
-2239,3,6,2,0,0x2,2,5,1,no,0,0x80,3,misc,0,	RA_CLUSTERBOMB,Cluster Bomb
-2240,0,0,4,0,0,0,1,0,no,0,0,0,misc,0,		RA_WUGMASTERY,Warg Mastery
-2241,0,0,4,0,0,0,3,0,no,0,0,0,misc,0,		RA_WUGRIDER,Warg Rider
-2242,3,6,4,0,0x2,1,1,0,no,0,0,0,weapon,0,	RA_WUGDASH,Warg Dash
-2243,-9,6,1,0,0,0,5,1,no,0,0,0,misc,0,		RA_WUGSTRIKE,Warg Strike
-2244,-9,8,1,0,0x02,1,5,1:2:3:4:5,no,0,0,0,weapon,0,		RA_WUGBITE,Warg Bite
-2245,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_TOOTHOFWUG,Tooth of Warg
-2246,0,6,4,3,0x2,3,5,1,no,0,0,0,weapon,0,		RA_SENSITIVEKEEN,Sensitive Keen
-2247,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		RA_CAMOUFLAGE,Camouflage
-2248,0,0,0,0,0,0,5,0,no,0,0,0,misc,0,		RA_RESEARCHTRAP,Research Trap
-2249,3,6,2,3,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_MAGENTATRAP,Magenta Trap
-2250,3,6,2,1,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_COBALTTRAP,Cobalt Trap
-2251,3,6,2,2,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_MAIZETRAP,Maize Trap
-2252,3,6,2,4,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_VERDURETRAP,Verdure Trap
-2253,3,6,2,3,0x42,2,5,1,no,0,0x80,0,misc,0,	RA_FIRINGTRAP,Firing Trap
-2254,3,6,2,1,0x42,2,5,1,no,0,0x80,0,misc,0,	RA_ICEBOUNDTRAP,Ice Bound Trap
+2233,-9,8,1,-1,0x02,2,10,10,no,0,0,0,weapon,0,	RA_ARROWSTORM,¼ýÊ¸±©·ç
+2234,0,6,4,0,0x3,3,5,2:2:3:4:5,no,0,0,0,weapon,0,		RA_FEARBREEZE,Î¢·ç¿Ö²À
+2235,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_RANGERMAIN,ÓÎÏÀÐÄµÃ
+2236,-9,8,1,-1,0,0,10,4,no,0,0,0,weapon,0,	RA_AIMEDBOLT,¼¯ÖÐÄ¿±ê
+2237,7,6,2,0,0x3,6,1,1,no,0,0,0,none,0,		RA_DETONATOR,Æð±¬×°ÖÃ
+2238,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,0,	RA_ELECTRICSHOCKER,µç³å»÷ÏÝÚå
+2239,3,6,2,0,0x2,2,5,1,no,0,0x80,3,misc,0,	RA_CLUSTERBOMB,¼¯ÊøÕ¨µ¯
+2240,0,0,4,0,0,0,1,0,no,0,0,0,misc,0,		RA_WUGMASTERY,ÀÇÑµÁ·
+2241,0,0,4,0,0,0,3,0,no,0,0,0,misc,0,		RA_WUGRIDER,ÆïÀÇ
+2242,3,6,4,0,0x2,1,1,0,no,0,0,0,weapon,0,	RA_WUGDASH,ÀÇ¼²×ß
+2243,-9,6,1,0,0,0,5,1,no,0,0,0,misc,0,		RA_WUGSTRIKE,ÀÇÍ»»÷
+2244,-9,8,1,0,0x02,1,5,1:2:3:4:5,no,0,0,0,weapon,0,		RA_WUGBITE,ÀÇËºÒ§
+2245,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_TOOTHOFWUG,ÀÇÑÀ
+2246,0,6,4,3,0x2,3,5,1,no,0,0,0,weapon,0,	RA_SENSITIVEKEEN,ÃôÈñÐá¾õ
+2247,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		RA_CAMOUFLAGE,Î±×°Õ½Êõ
+2248,0,0,0,0,0,0,5,0,no,0,0,0,misc,0,		RA_RESEARCHTRAP,ÏÝÚåÑÐ¾¿
+2249,3,6,2,3,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_MAGENTATRAP,×ÏºìÏÝÚå
+2250,3,6,2,1,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_COBALTTRAP,ÉîÀ¶ÏÝÚå
+2251,3,6,2,2,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_MAIZETRAP,µ­»ÆÏÝÚå
+2252,3,6,2,4,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_VERDURETRAP,ÇàÂÌÏÝÚå
+2253,3,6,2,3,0x42,2,5,1,no,0,0x80,0,misc,0,	RA_FIRINGTRAP,Ñæ»ðÏÝÚå
+2254,3,6,2,1,0x42,2,5,1,no,0,0x80,0,misc,0,	RA_ICEBOUNDTRAP,±ù·âÏÝÚå
 //ÊõÊ¿
-2201,6,6,16,0,0x1,0,5,1,yes,0,0,0,none,0,	WL_WHITEIMPRISON,White Imprison
-2202,9,6,1,8,0,0,1,1,yes,0,0,0,magic,0,		WL_SOULEXPANSION,Soul Expansion
-2203,5,6,1,1,0x3,15,5,1,yes,0,0,0,magic,0,	WL_FROSTMISTY,Frost Misty
-2204,0,8,4,1,0x2,27,5,1:2:3:4:5,yes,0,0,0,magic,0,	WL_JACKFROST,Jack Frost
-2205,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	WL_MARSHOFABYSS,Marsh of Abyss
-2206,0,6,4,0,0x1,0,10,1,no,0,0,0,magic,0,	WL_RECOGNIZEDSPELL,Recognized Spell
-//2207,2,6,1,2,0x3,3:5:5:7:7,5,1,yes,0,0,0,magic,0,	WL_SIENNAEXECRATE,Sienna Execrate
-//2208,0,0,0,0,0,0,3,0,no,0,0,0,weapon,0,		WL_RADIUS,Radius
-//2209,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_STASIS,Statis
-2210,9,6,1,0,0x20,0,5,1,yes,0,0,0,magic,0,	WL_DRAINLIFE,Drain Life
-2211,9,8,1,3,0x2,2:2:3:3:4,5,-10,yes,0,0,1,magic,5,	WL_CRIMSONROCK,Crimson Rock
-2212,9,8,1,3,0,0,5,-1:-2:-3:-4:-5,yes,0,0,0,magic,0,	WL_HELLINFERNO,Hell Inferno
-2213,9,8,2,3,0x2,15,5,-10,yes,0,0x100,0,magic,0,	WL_COMET,Comet
-//2216,9,6,2,2,0x2,-1,5,1,yes,1,0,0,magic,0,	WL_EARTHSTRAIN,Earth Strain
-2217,8,6,1,0,0,0,5,1,no,0,0,0,magic,0,    	WL_TETRAVORTEX,Tetra Vortex
+2201,6,6,16,0,0x1,0,5,1,yes,0,0,0,none,0,	WL_WHITEIMPRISON,°×É«¼àÓü
+2202,9,6,1,8,0,0,1,1,yes,0,0,0,magic,0,		WL_SOULEXPANSION,»ê±¬·¢
+2203,5,6,1,1,0x3,15,5,1,yes,0,0,0,magic,0,	WL_FROSTMISTY,±ùÎí
+2204,0,8,4,1,0x2,27,5,1:2:3:4:5,yes,0,0,0,magic,0,	WL_JACKFROST,¶¬½«¾ü
+2205,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	WL_MARSHOFABYSS,ÉîÔ¨ÄàÕÓ
+2206,0,6,4,0,0x1,0,10,1,no,0,0,0,magic,0,	WL_RECOGNIZEDSPELL,Ä§·¨Àí½â
+//2207,2,6,1,2,0x3,3:5:5:7:7,5,1,yes,0,0,0,magic,0,	WL_SIENNAEXECRATE,»ÆÍÁ×çÖä
+//2208,0,0,0,0,0,0,3,0,no,0,0,0,weapon,0,		WL_RADIUS,°ë¾¶·øÉä
+//2209,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_STASIS,Ä§Á¦¶³½á
+2210,9,6,1,0,0x20,0,5,1,yes,0,0,0,magic,0,	WL_DRAINLIFE,ÉúÃüÎüÊÕ
+2211,9,8,1,3,0x2,2:2:3:3:4,5,-10,yes,0,0,1,magic,5,	WL_CRIMSONROCK,ÉîºìÑÒÊ¯
+2212,9,8,1,3,0,0,5,-1:-2:-3:-4:-5,yes,0,0,0,magic,0,	WL_HELLINFERNO,µØÓü»ðÑæ
+2213,9,8,2,3,0x2,15,5,-10,yes,0,0x100,0,magic,0,	WL_COMET,ÆÆ»µµÄåçÐÇ
+//2216,9,6,2,2,0x2,-1,5,1,yes,1,0,0,magic,0,	WL_EARTHSTRAIN,´óµØÅ¤Çú
+2217,8,6,1,0,0,0,5,1,no,0,0,0,magic,0,    	WL_TETRAVORTEX,ËÄÏàäöÎÐ
 2218,8,6,1,3,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_FIRE,Tetra Vortex Fire
 2219,8,6,1,1,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_WATER,Tetra Vortex Water
 2220,8,6,1,4,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_WIND,Tetra Vortex Wind
 2221,8,6,1,2,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_GROUND,Tetra Vortex Earth
-//2222,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONFB,Summon Fireball
-//2223,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONBL,Summon Ball Lightning
-//2224,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONWB,Summon Water Ball
-//2229,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONSTONE,Summon Stone
-2230,9,6,1,0,0,0,1,1,yes,0,0,0,magic,0,		WL_RELEASE,Release
-2231,0,6,4,0,0x1,1,0,1,no,0,0,0,none,0,		WL_READING_SB,Reading Spell Book
-2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SB,Freezing Spell Book
+//2222,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONFB,ÕÙ»½»ðÇò
+//2223,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONBL,ÕÙ»½Ë®Çò
+//2224,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONWB,ÕÙ»½µçÇò
+//2229,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONSTONE,ÕÙ»½Ê¯¿é
+2230,9,6,1,0,0,0,1,1,yes,0,0,0,magic,0,		WL_RELEASE,½â·Å
+2231,0,6,4,0,0x1,1,0,1,no,0,0,0,none,0,		WL_READING_SB,ÔÄ¶ÁÄ§·¨Êé
+2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SP,Ä§·¨±£´æ
 //»úÐµÊ¦
 //2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,Magic Gear Licence
 //2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_BOOSTKNUCKLE,Boost Knuckle
