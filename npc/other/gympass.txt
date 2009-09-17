@@ -73,8 +73,8 @@ prontera,160,136,4	script	重力圣人#GymPass	899,{
 			next;
 			specialeffect2 62;
 			next;
-			skill 681,getskilllv(681)+1,0;
 			delitem 7776,1;
+			skill 681,getskilllv(681)+1,0;
 			set gympassmemory,gympassmemory+1;
 			mes "[圣人]";
 			mes "Oh~ 你现在已经施展到了";

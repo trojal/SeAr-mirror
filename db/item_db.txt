@@ -1431,7 +1431,7 @@
 2611,Silver_Ring,Òø½äÖ¸,5,20000,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{},{},{}
 2612,Flower_Ring,»¨½äÖ¸,5,1500,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{},{},{}
 2613,Diamond_Ring,×êÊ¯½äÖ¸,5,45000,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{},{},{}
-2614,An_Eye_Of_Dullahan,ÓÀºã½äÖ¸,5,90000,,100,,0,,0,0xFFFFFFFE,7,2,136,,50,0,0,{},{},{}
+2614,An_Eye_Of_Dullahan,ÓÀºã½äÖ¸,5,90000,,100,,0,,0,0xFFFFFFFE,7,2,136,,50,0,0,{ bonus2 bResEff,Eff_Poison,10000; bonus2 bSubRace,RC_Undead,4; bonus2 bSubRace,RC_Demon,4; },{},{}
 2615,Safety_Ring,·ÀÓù½äÖ¸,5,75000,,100,,3,,0,0xFFFFFFFE,7,2,136,,40,0,0,{ bonus bMdef,3; },{},{}
 2616,Critical_Ring,Ç±ÄÜ½äÖ¸,5,75000,,100,,0,,0,0xFFFFFFFE,7,2,136,,40,0,0,{ bonus bCritical,5; },{},{}
 2617,Mitten_Of_Presbyter,ÖÇ»ÛÊÖÌ×,5,2,,100,,1,,0,0xFFFFFFFE,7,2,136,,35,0,0,{ bonus bInt,1; },{},{}
@@ -2079,7 +2079,7 @@
 4448,Cornus_Card,·ÉÂí¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Holy,15; },{},{} 
 4449,Dark_Shadow_Card,ÓÄÚ¤»ğÇò¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Dark,15; },{},{} 
 4450,Banshee_Master_Card,Å®ÑıÊ×Áì¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bInt,1; bonus bMatk,10; bonus bMatk2,10; },{},{} 
-4451,Entweihen_Card,ËÀÍöÌÙÂû¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bMatk,100; bonus bMatk2,100; },{},{} 
+4451,Entweihen_Card,ËÀÍöÌÙÂû¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bMatk,100; bonus bMatk2,100; },{},{} 
 4452,Centipede_Larva_Card,±äÒìòÚò¼Ó×³æ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bInt,1; bonus bMatk,3; bonus bMatk2,3; },{},{} 
 4453,Hillsrion_Card,Ï£Ë¹Àû°²¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bAtk,25; },{},{} 
 
@@ -2789,7 +2789,7 @@
 6076,Portable_Toolbox,Portable Toolbox,3,0,,10,,,,,,,,,,,,,{},{},{}
 6077,Rough_Mineral,Rough Mineral,3,0,,10,,,,,,,,,,,,,{},{},{}
 6078,Stone_Fragments,Stone Fragments,3,0,,10,,,,,,,,,,,,,{},{},{}
-6079,Flower_Of_Alfheim,FLower of Alfheim,3,0,,10,,,,,,,,,,,,,{},{},{}
+6079,Flower_Of_Alfheim,Flower of Alfheim,3,0,,10,,,,,,,,,,,,,{},{},{}
 6080,Manuk_Coin,Manuk Coin,3,0,,10,,,,,,,,,,,,,{},{},{}
 6081,Splendide_Coin,Splendide Coin,3,0,,10,,,,,,,,,,,,,{},{},{}
 6082,Spirit_Of_Alfheim,Spirit of Alfheim,3,0,,10,,,,,,,,,,,,,{},{},{}

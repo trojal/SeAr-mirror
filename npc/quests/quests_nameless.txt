@@ -11661,8 +11661,8 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 				mes "of a trip for me, so get";
 				mes "some provisions ready, yeah?";
 				set rumour_nd,2;
-				close;
 			}
+			close;
 		}
 	}
 	else if (rumour_nd == 2) {

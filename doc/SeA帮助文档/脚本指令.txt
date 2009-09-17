@@ -4152,20 +4152,32 @@ Since trunk r11779
 *deltimer "<NPC object name>::<event label>";
 *addtimercount <ticks>,"<NPC object name>::<event label>";
 
-These commands will create, destroy, and delay a countdown timer - 'addtimer' to 
+These commands will create and manage a player-based timer: 'addtimer' to 
 create, 'deltimer' to destroy and 'addtimercount' to delay it by the specified 
 number of ticks. For all three cases, the event label given is the identifier of 
-that timer.
+that timer. A player can have multiple timers running at the same time, and 
+there can even be multiple timers referencing the same label.
 
 When this timer runs out, a new execution thread will start in the specified NPC 
-object at the specified label. If no such label is found in the NPC object, it 
-will run as if clicked. In either case, the script runs with no RID attached.
+object at the specified label, and the script will run attached to that player. 
+If the specified label is not found, the map server will happily print an error.
 
 The ticks are given in 1/1000ths of a second.
 
 One more thing. These timers are stored as part of player data. If the player
 logs out, all of these get immediately deleted, without executing the script.
 If this behavior is undesirable, use some other timer mechanism (like 'sleep').
+
+Example 1:
+<NPC Header> {
+	dispbottom "Starting a 5 second timer...";
+	addtimer 5000, strnpcinfo(3)+"::On5secs";
+	end;
+On5secs:
+	dispbottom "5 seconds have passed!";
+	end;
+}
+
 
 ---------------------------------------
 
@@ -5332,14 +5344,11 @@ OnBarricadeBreak:
 	}
 
 ---------------------------------------
-*setwall "<地图名>",<x>,<y>,<大小>,<方向>,<shootable>,"<名称>";  
+*setwall "<地图名>",<x>,<y>,<大小>,<方向>,<可远程攻击>,"<名称>";  
 *delwall "<名称>";  
 
 创建一个无形的墙，从指定坐标、在指定方向建立一排指定大小的单元。与setcell的不
 同点在于，此命令同时更新客户端部分，以防出错。
-
-关于shootable的翻译：shootable在这里具体表现为无法行走穿越但攻击可以穿越，我找不到中文
-里的词汇，所以暂不翻译
 
 --------------------------------------- 
 
