@@ -30,7 +30,7 @@
 362,4	//神圣殿堂
 395,4	//落花伴着月光下的水车小屋
 491,4	//植物栽培
-691,4;  //CASH_ASSUMPITO
+691,4	//CASH_ASSUMPITO
 
 //BATTLEGROUND  
 26,8	//AL_TELEPORT  
