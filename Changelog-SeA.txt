@@ -1,3 +1,6 @@
+2009/10/04[SeAr_1.2.07]
+- 源码、CONF:	添加设置pvp.max.aspd。
+
 2009/10/05[SeAr_1.2.06]
 - DB:		删除item_trade里的重复项目。(r14081)
 - NPC:		修正TurboTrack2个拼写错误。(r14081)
