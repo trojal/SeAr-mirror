@@ -1,3 +1,7 @@
+2009/10/05[SeAr_1.2.06]
+- DB:		删除item_trade里的重复项目。(r14081)
+- NPC:		修正TurboTrack2个拼写错误。(r14081)
+
 2009/10/05[SeAr_1.2.05]
 - NPC:		添加Ravies sisters任务。(r14080)
 
