@@ -772,72 +772,36 @@
 2231,0,6,4,0,0x1,1,0,1,no,0,0,0,none,0,		WL_READING_SB,阅读魔法书
 2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SP,魔法保存
 //机械师
-//2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,Magic Gear Licence
-//2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_BOOSTKNUCKLE,Boost Knuckle
-//2257,-5,6,1,-1,0,0,3,1,no,0,0,0,magic,0,	NC_PILEBUNKER,Pile Bunker
-//2258,13,8,1,-1,0,0,3,5,no,0,0,0,weapon,0,	NC_VULCANARM,Vulcan Arm
-//2259,-5,6,1,3,0x2,1,3,1,no,0,0,0,weapon,0,	NC_FLAMELAUNCHER,Flame Launcher	
-//2260,0,6,4,1,0x2,2:3:4,3,1,no,0,0,0,weapon,0,	NC_COLDSLOWER,Cold Slower
-//2261,9,6,1,-1,0x2,3:2:1,3,1,no,0,0,0,weapon,0,	NC_ARMSCANNON,Arms Cannon
-//2262,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_ACCELERATION,Acceleratio
-//2263,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_HOVERING,Hovering
-//2264,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,7,	NC_F_SIDESLIDE,Front Side Slide
-//2265,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,7,	NC_B_SIDESLIDE,Back Side Slide
-//2266,0,0,0,0,0,0,4,0,no,0,0,0,none,0,		NC_MAINFRAME,Mainframe Restructure
-//2267,0,6,4,0,0x2,2:3:4,3,1,no,0,0,0,misc,0,	NC_SELFDESTRUCTION,Self Destruction
-//2268,0,6,4,3:2:4:1,0x1,0,4,0,no,0,0,0,none,0,	NC_SHAPESHIFT,Shape Shift
-//2269,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_EMERGENCYCOOL,Emergency Cool
-//2270,0,6,4,0,0x3,7,1,0,no,0,0,0,weapon,0,	NC_INFRAREDSCAN,Infrared Scan
-//2271,7,6,1,0,0x3,3,3,0,no,0,0,0,none,0,		NC_ANALYZE,Analyze
-//2272,0,6,4,0,0x3,1:2:3,3,0,no,0,0,0,weapon,0,	NC_MAGNETICFIELD,Magnetic Field
-//2273,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_NEUTRALBARRIER,Neutral Barrier
-//2274,3,6,4,0,0x2,3,3,0,no,0,0,0,none,0,		NC_STEALTHFIELD,Stealth Field
-//2275,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,	NC_REPAIR,Repair
-//2276,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		NC_TRAININGAXE,Training Axe
-//2277,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_RESEARCHFE,Reasearch Fire/Earth
-//2278,4:5:6:7:8,6,1,-1,0,0,5,1,no,0,0,0,weapon,1,	NC_AXEBOOMERANG,Axe Boomerang
-//2279,-4,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_POWERSWING,Power Swing
-//2280,0,8,4,-1,0x2,2,5,5,no,0,0,0,weapon,0,	NC_AXETORNADO,Axe Tornado
-//2281,1,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_SILVERSNIPER,FAW - Silver Sniper
-//2282,1,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW - Magic Decoy
-//2283,1,6,16,0,0,0,1,0,no,0,0,0,none,0,		NC_DISJOINT,FAW - Removal
-//修罗
-//2326,-1,8,1,0,0,0,10,-2,no,0,0,0,weapon,0,	SR_DRAGONCOMBO,Dragon Combo
-//2327,-3,8,1,0,0x2,2,5,-3,no,0,0x0008,0,magic,3,	SR_SKYNETBLOW,Sky Net Blow
-//2328,0,6,4,0,0x2,5,5,1,no,0,0x0008,0,magic,0,	SR_EARTHSHAKER,Earth Shaker
-//2329,-1,6,1,0,0,0,5,1,no,0,0,0,weapon,0,	SR_FALLENEMPIRE,Fallen Empire
-//2330,-1,6,1,0,0,0,10,1,no,0,0x0008,0,magic,0,	SR_TIGERCANNON,Tiger Cannon
-//2331,-1,6,1,0,0,0,10,1,no,0,0x0008,0,magic,0,	SR_HELLGATE,Gate of Hell
-//2332,0,6,4,0,0x2,3,5,1,no,0,0x0008,0,magic,0,	SR_RAMPAGEBLASTER,Rampage Blaster
-//2333,0,6,4,0,0x1,0,5,1,no,0,0x0008,0,magic,0,	SR_CRESCENTELBOW,Crescent Elbow
-//2334,0,6,4,0,0x1,0,5,1,no,0,0x0008,0,magic,0,	SR_CURSEDCIRCLE,Cursed Circle
-//2335,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_LIGHTNINGWALK,Lightning Walk
-//2336,5,6,1,0,0,0,5,1,no,0,0x0008,0,magic,3,	SR_KNUCKLEARROW,Knuckle Arrow
-//2337,0,6,4,0,0x2,2,1,1,no,0,0,0,weapon,0,	SR_WINDMILL,Windmill
-//2338,0,6,4,0,0x1,0,10,1,no,0,0,0,magic,0,	SR_RAISINGDRAGON,Rising Dragon
-//2339,5,6,16,0,0,0,5,1,no,0,0,0,magic,0,		SR_GENTLETOUCH,Gentle Touch
-//2340,0,6,4,0,0x1,5,1,1,no,0,0,0,magic,0,	SR_ASSIMILATEPOWER,Assimilate Power
-//2341,5,6,16,0,0x1,0,1,1,no,0,0x0008,0,magic,0,	SR_POWERVELOCITY,Power Velocity
-//2342,0,6,1,0,0,0,5,1,no,0,0,0,magic,5,		SR_CRESCENTELBOW_AUTOSPELL,Crescent Elbow
-//2343,-1,6,1,0,0,0,10,1,no,0,0x0008,0,magic,0,	SR_GATEOFHELL,Gate of Hell
-//2344,2,6,1,0,0,0,5,1,no,0,0x0008,0,magic,0,	SR_GENTLETOUCH_QUIET,Gentle Touch - Quiet
-//2345,2,6,16,0,0x1,0,5,1,no,0,0x0008,0,magic,0,	SR_GENTLETOUCH_CURE,Gentle Touch - Cure
-//2346,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	SR_GENTLETOUCH_ENERGYGAIN,Gentle Touch - Energy Gain
-//2347,0,6,4,0,0x1,0,5,1,no,0,0x0008,0,magic,0,	SR_GENTLETOUCH_CHANGE,Gentle Touch - Change
-//2348,0,6,4,0,0x1,0,5,1,no,0,0x0008,0,magic,0,	SR_GENTLETOUCH_REVITALIZE,Gentle Touch - Revitalize
-//2517,0,6,4,0,0x2,5:5:6:6:7,5,1,no,0,0,0,magic,0,	SR_HOWLINGOFLION,Howling of Lion
-//2518,0,6,4,0,0x2,2:2:3:3:4,5,1,no,0,0x0008,0,magic,0,	SR_RIDEINLIGHTNING,Ride In Lightening
-
-//2284,1,6,4,-1,0x02,2,5,1,no,0,0,0,weapon,0,	SC_FATALMENACE,Fatal Menace
-//2285,0,6,4,0,0x01,0,10,1,no,0,0,0,none,0,	SC_REPRODUCE,Reproduce
-//2286,0,6,4,0,0x01,0,10,1,no,0,0,0,none,0,	SC_AUTOSHADOWSPELL,Auto Shadow Spell
-//2287,5,6,1,0,0x01,1,5,0,no,0,0,0,misc,0,	SC_SHADOWFORM,Shadow Form
-//2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,3,no,0,0,0,weapon,3,		SC_TRIANGLESHOT,Triangle Shot
-//2289,0,6,4,0,0x3,2,5,1,no,0,0,0,none,0,		SC_BODYPAINT,Body Painting
-//2290,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_INVISIBLITY, Invisibility	
-//2291,9,6,1,0,0x1,2,5,1,no,0,0,0,none,0,		SC_DEADLYINFECT, Deadly Infect	
-//2298,1,6,1,0,0x1,0,5,1,no,0,0,0,weapon,0,	SC_STRIPACCESSORY,Strip Accessory 
-//2299,7,6,1,0,0x1,0,1,1,no,0,0,0,magic,0,	SC_MANHOLE,Man Hole
+//Mechanic
+2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,魔导装置认证
+2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_BOOSTKNUCKLE,喷射飞拳
+2257,-5,6,1,-1,0,0,3,1,no,0,0,0,magic,0,	NC_PILEBUNKER,冲击锥
+2258,13,8,1,-1,0,0,3,5,no,0,0,0,weapon,0,	NC_VULCANARM,火神炮
+2259,-5,6,1,3,0x2,1,3,1,no,0,0,0,weapon,0,	NC_FLAMELAUNCHER,火焰喷射器
+2260,0,6,4,1,0x2,2:3:4,3,1,no,0,0,0,weapon,0,	NC_COLDSLOWER,缓慢冷冻
+2261,9,6,1,-1,0x2,3:2:1,3,1,no,0,0,0,weapon,0,	NC_ARMSCANNON,激光炮
+2262,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_ACCELERATION,增速
+2263,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_HOVERING,悬浮
+2264,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,7,	NC_F_SIDESLIDE,前侧滑
+2265,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,7,	NC_B_SIDESLIDE,后侧滑
+2266,0,0,0,0,0,0,4,0,no,0,0,0,none,0,		NC_MAINFRAME,主机改造
+2267,0,6,4,0,0x2,2:3:4,3,1,no,0,0,0,misc,0,	NC_SELFDESTRUCTION,自爆
+2268,0,6,4,3:2:4:1,0x1,0,4,0,no,0,0,0,none,0,	NC_SHAPESHIFT,变形
+2269,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_EMERGENCYCOOL,速冻
+2270,0,6,4,0,0x3,7,1,0,no,0,0,0,weapon,0,	NC_INFRAREDSCAN,红外扫描
+2271,7,6,1,0,0x3,3,3,0,no,0,0,0,none,0,		NC_ANALYZE,分析
+//2272,0,6,4,0,0x3,1:2:3,3,0,no,0,0,0,weapon,0,	NC_MAGNETICFIELD,磁场
+2273,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_NEUTRALBARRIER,中立屏障
+//2274,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		NC_STEALTHFIELD,隐形力场
+2275,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,	NC_REPAIR,维修
+2276,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		NC_TRAININGAXE,斧修炼
+2277,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_RESEARCHFE,火热大地研究
+2278,4:5:6:7:8,6,1,-1,0,0,5,1,no,0,0,0,weapon,1,NC_AXEBOOMERANG,回旋斧
+2279,-4,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_POWERSWING,强力回旋
+2280,0,8,4,-1,0x2,2,5,5,no,0,0,0,weapon,0,	NC_AXETORNADO,旋风斧
+2281,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_SILVERSNIPER,FAW 银色狙击手
+2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法置物
+2283,-5,6,16,0,0,0,1,0,no,0,0x0,2,weapon,0,	NC_DISJOINT,FAW 解除
 
 8001,9,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,         HLIF_HEAL,治愈之手
 8002,0,6,4,0,0x3,-1,5,1,no,0,0,0,none,0,         HLIF_AVOID,轻捷移动

@@ -31,6 +31,7 @@
 395,4	//落花伴着月光下的水车小屋
 491,4	//植物栽培
 691,4	//CASH_ASSUMPITO
+2044,4;	//AB_EPICLESIS
 
 //BATTLEGROUND  
 26,8	//AL_TELEPORT  
