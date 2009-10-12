@@ -772,7 +772,6 @@
 2231,0,6,4,0,0x1,1,0,1,no,0,0,0,none,0,		WL_READING_SB,阅读魔法书
 2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SP,魔法保存
 //机械师
-//Mechanic
 2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,魔导装置认证
 2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_BOOSTKNUCKLE,喷射飞拳
 2257,-5,6,1,-1,0,0,3,1,no,0,0,0,magic,0,	NC_PILEBUNKER,冲击锥
