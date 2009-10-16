@@ -4964,17 +4964,22 @@ rand(2,10) 的结果会是 2,3,4,5,6,7,8,9 or 10
 
 ---------------------------------------
 
-*atcommand "<command line>";
+*atcommand "<command line>",<标记>;
 
 这条命令会运行制定命令，就好像是99级的GM在键盘上输入一样。
 
-    // 无条件杀死该玩家
-    input @player$;
-    atcommand "@nuke "+@player$;
+	// 无条件杀死该玩家
+	input @player$;
+	atcommand "@nuke "+@player$;
+
+使用标记后，将使用静默默示，不会显示平时使用指令时的信息。
+
+	//将不会给玩家显示"人物光环已显示。"
+	atcommand "@aura 675",1;
 
 ---------------------------------------
 
-*charcommand <command>;
+*charcommand <command>,<标记>;
 
 根据Lance所说该命令无需玩家关联。
 
