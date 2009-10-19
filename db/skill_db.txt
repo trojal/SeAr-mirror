@@ -721,7 +721,7 @@
 2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,圣礼
 //术士
 2201,6,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_WHITEIMPRISON,白色监狱
-2202,9,6,1,8,0,0,1,1,yes,0,0,0,magic,0,		WL_SOULEXPANSION,魂爆发
+2202,9,6,1,8,0,0,-2,1,yes,0,0,0,magic,0,		WL_SOULEXPANSION,魂爆发
 2203,5,6,4,1,0x3,13,5,1,yes,0,0,0,magic,0,	WL_FROSTMISTY,冰雾
 2204,0,8,4,1,0x2,13,5,1,yes,0,0,0,magic,0,	WL_JACKFROST,冬将军
 2205,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	WL_MARSHOFABYSS,深渊泥沼
@@ -741,12 +741,16 @@
 2219,8,6,1,1,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_WATER,Tetra Vortex Water
 2220,8,6,1,4,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_WIND,Tetra Vortex Wind
 2221,8,6,1,2,0x2,3:5:7:7:7,5,1,no,0,0,1,magic,0,    WL_TETRAVORTEX_GROUND,Tetra Vortex Earth
-2222,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONFB,召唤火球
-2223,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONBL,召唤水球
-2224,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONWB,召唤电球
-2229,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	WL_SUMMONSTONE,召唤石块
-2230,9,6,1,0,0,0,1,1,yes,0,0,0,magic,0,		WL_RELEASE,解放
-2231,0,6,4,0,0x1,1,0,1,no,0,0,0,none,0,		WL_READING_SB,阅读魔法书
+2222,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONFB,召唤火球
+2223,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONBL,召唤水球
+2224,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONWB,召唤电球
+2225,9,6,4,3,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_FIRE,召唤火球ATK
+2226,9,6,4,1,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_WATER,召唤水球ATK
+2227,9,6,4,4,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_WIND,召唤电球ATK
+2228,9,6,4,2,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_GROUND,召唤石块ATK
+2229,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONSTONE,召唤石块
+2230,9,6,1,0,0,0,1,1,yes,0,0,0,magic,0,		WL_RELEASE,释放
+2231,0,6,4,0,0x1,0,1,1,yes,0,0,0,none,0,	WL_READING_SB,阅读魔法书
 2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SP,魔法保存
 //游侠
 2233,-9,8,1,-1,0x02,2,10,10,no,0,0,0,weapon,0,	RA_ARROWSTORM,箭矢暴风
