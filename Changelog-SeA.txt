@@ -1,3 +1,7 @@
+2009/10/21[SeAr_1.2.30]
+- 源码:		修正转生三转职业无法使用三转专用道具。
+- 源码:		扩展属性球显示支持非玩家。
+
 2009/10/20[SeAr_1.2.29]
 - 源码:		去除setridingdragon脚本指令，请使用setriding。
 - 源码:		去除bonusautoscript脚本指令，请使用autobonus。
