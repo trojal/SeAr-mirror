@@ -723,7 +723,7 @@
 2201,6,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_WHITEIMPRISON,白色监狱
 2202,9,8,1,8,0,1:1:1:2:2,5,1,yes,0,0,0,magic,0,		WL_SOULEXPANSION,魂爆发
 2203,5,8,4,1,0x3,13,5,-3:-4:-5:-6:-7,yes,0,0,0,magic,0,	WL_FROSTMISTY,冰雾
-2204,0,8,4,1,0x2,13,5,1,yes,0,0,0,magic,0,	WL_JACKFROST,冬将军
+2204,0,8,4,1,0x2,13,5,-5,yes,0,0,0,magic,0,	WL_JACKFROST,冬将军
 2205,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	WL_MARSHOFABYSS,深渊泥沼
 2206,0,6,4,0,0x1,0,10,1,no,0,0,0,magic,0,	WL_RECOGNIZEDSPELL,魔法理解
 2207,2,6,1,2,0x3,1:2:2:3:3,5,1,yes,0,0,0,magic,0,	WL_SIENNAEXECRATE,黄土诅咒
