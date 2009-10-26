@@ -156,7 +156,7 @@
 113,0,6,4,0,0x3,-1,5,1,no,0,0,0,weapon,0,	BS_OVERTHRUST,凶砍
 114,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		BS_MAXIMIZE,武器值最大化
 115,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,6:7:8:9:10,	HT_SKIDTRAP,滑动陷阱
-116,3,6,2,2,0x40,1,5,1,no,0,0x80,0,misc,0,	HT_LANDMINE,地雷陷阱
+116,3,6,2,2,0x42,1,5,1,no,0,0x80,0,misc,0,	HT_LANDMINE,地雷陷阱
 117,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,0,	HT_ANKLESNARE,定位陷阱
 118,3,6,2,0,0x2,1,5,1,no,0,0x80,0,misc,0,	HT_SHOCKWAVE,魔耗陷阱
 119,3,6,2,0,0x3,2,5,1,no,0,0x80,0,misc,0,	HT_SANDMAN,睡魔陷阱
@@ -613,8 +613,8 @@
 676,0,6,4,0,0x1,0,5,1,no,0,0x2,0,magic,0,	NPC_ANTIMAGIC,抵抗魔法
 677,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDECURSE,范围诅咒
 678,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDESTUN,范围晕眩
-679,0,6,4,0,0x1,1:2:3:4:5:6:7:8:9:10,10,1,no,0,0x2,0,weapon,0,	NPC_VAMPIRE_GIFT,吸血鬼的礼物
-680,0,6,4,0,0x3,1:2:3:4:5:6:7:8:9:10,10,1,no,0,0x2,0,none,0,	NPC_WIDESOULDRAIN,范围吸魂术
+679,0,6,4,0,0x2,5:7:9:11:13:13:13:13:13:13,10,1,no,0,0x2,0,weapon,0,	NPC_VAMPIRE_GIFT,吸血鬼的礼物
+680,0,6,4,0,0x3,5:7:9:11:13:13:13:13:13:13,10,1,no,0,0x2,0,none,0,	NPC_WIDESOULDRAIN,范围吸魂术
 
 // Cash Shop Skill
 681,0,0,0,0,0,0,10,0,no,0,0x1,0,none,0,		ALL_INCCARRY,负重量上升R
@@ -806,16 +806,17 @@
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法置物
 2283,-5,6,16,0,0,0,1,0,no,0,0x0,2,weapon,0,	NC_DISJOINT,FAW 解除
 //皇家护卫
-2307,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_CANNONSPEAR,Cannon Spear
-2308,7,6,1,0,0,0,10,1,no,0,0,0,none,0,		LG_BANISHINGPOINT,Banishing Point
-2309,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		LG_TRAMPLE,Trample
+2307,11,6,1,0,0,2,5,0,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,Cannon Spear
+2308,7,6,1,0,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,Banishing Point
+2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,Trample
+2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,Exceed Break
+
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,Shield Press
 2311,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_REFLECTDAMAGE,Reflect Damage
 2312,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PINPOINTATTACK,Pinpoint Attack
 2313,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_FORCEOFVANGUARD,Force of Vanguard
 2314,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		LG_RAGEBURST,Rage Burst
 2315,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		LG_SHIELDSPELL,Shield Spell
-2316,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_EXEEDBREAK,Exceed Break
 2317,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_OVERBRAND,Over Brand
 2318,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PRESTIGE,Prestige
 2319,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_BANDING,Banding
