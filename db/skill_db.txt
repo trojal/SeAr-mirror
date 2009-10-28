@@ -804,12 +804,14 @@
 2280,0,8,4,-1,0x2,2,5,5,no,0,0,0,weapon,0,	NC_AXETORNADO,旋风斧
 2281,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_SILVERSNIPER,FAW 银色狙击手
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法置物
-2283,-5,6,16,0,0,0,1,0,no,0,0x0,2,weapon,0,	NC_DISJOINT,FAW 解除
+2283,-5,6,16,0,0,0,1,0,no,0,0,2,weapon,0,	NC_DISJOINT,FAW 解除
 //皇家护卫
 2307,11,6,1,0,0,2,5,0,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,Cannon Spear
 2308,7,6,1,0,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,Banishing Point
 2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,Trample
 2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,Exceed Break
+2317,0,6,4,0,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,Over Brand
+2322,9,0,16,0,0x3,1,5,0,yes,0,0,0,none,0,	LG_PIETY,Piety
 
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,Shield Press
 2311,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_REFLECTDAMAGE,Reflect Damage
@@ -817,12 +819,10 @@
 2313,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_FORCEOFVANGUARD,Force of Vanguard
 2314,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		LG_RAGEBURST,Rage Burst
 2315,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		LG_SHIELDSPELL,Shield Spell
-2317,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_OVERBRAND,Over Brand
 2318,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PRESTIGE,Prestige
 2319,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_BANDING,Banding
 2320,0,6,4,0,0x2,3,5,0,no,0,0,0,weapon,0,		LG_MOONSLASHER,Moon Slasher
 2321,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_RAYOFGENESIS,Ray of Genesis
-2322,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PIETY,Piety
 2323,0,8,4,2,0x2,2,5,-5,no,0,0,0,weapon,0,		LG_EARTHDRIVE,Earth Drive
 2324,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_HESPERUSLIT,Hesperus Lit
 2325,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_INSPIRATION,Inspiration
