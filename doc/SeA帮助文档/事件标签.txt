@@ -36,6 +36,8 @@ OnWhisperGlobal		密语此npc执行的事件。<NPC:"NPC名"><内容1#内容2#内容3>
 OnBuyItem		买到物品时执行的事件，附带变量"@bought_nameid"，"@bought_quantity"
 OnSellItem		卖出物品时执行的事件，附带变量"@sold_nameid"，"@sold_quantity"
 OnTouch			进入范围NPC的有效范围内时执行的事件。
+OnTouch_		进入范围NPC的有效范围内时执行的事件，
+			该事件不对隐匿、伪装玩家执行，且一次只关联一个玩家直到该玩家隐匿/登出/走出范围后，自动关联范围内的下一个玩家。
 OnPCDieEvent		玩家死亡时，运行标签下的脚本。如果杀死你的是玩家，可以通过killerrid变量获得其aid，如果是魔物，可以获得gid， 如果是自然死亡，则killerrid值为0
 OnPCKillEvent		玩家杀死玩家时，运行标签下的脚本。可以通过killedrid变量获得被杀死玩家的aid
 OnNPCKillEvent		玩家杀死魔物时，运行标签下的脚本。该脚本仅对本身没有OnMobDead事件的魔物触发。可以通过killedrid变量获得杀死魔物的id
