@@ -812,6 +812,7 @@
 2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,Exceed Break
 2317,0,6,4,0,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,Over Brand
 2322,9,0,16,0,0x3,1,5,0,yes,0,0,0,none,0,	LG_PIETY,Piety
+2323,0,8,4,2,0x2,2,5,-5,yes,0,0,0,weapon,0,	LG_EARTHDRIVE,Earth Drive
 
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,Shield Press
 2311,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_REFLECTDAMAGE,Reflect Damage
@@ -823,7 +824,6 @@
 2319,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_BANDING,Banding
 2320,0,6,4,0,0x2,3,5,0,no,0,0,0,weapon,0,		LG_MOONSLASHER,Moon Slasher
 2321,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_RAYOFGENESIS,Ray of Genesis
-2323,0,8,4,2,0x2,2,5,-5,no,0,0,0,weapon,0,		LG_EARTHDRIVE,Earth Drive
 2324,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_HESPERUSLIT,Hesperus Lit
 2325,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_INSPIRATION,Inspiration
 
