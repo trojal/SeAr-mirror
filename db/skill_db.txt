@@ -830,7 +830,7 @@
 2443,0,6,4,3,0,0,5,0,yes,0,0,0,magic,0,		SO_FIREWALK,火焰步
 2444,0,6,4,4,0,0,5,0,yes,0,0,0,magic,0,		SO_ELECTRICWALK,电流步
 2446,9,8,2,2,0x2,3:3:3:4:4,5,-5,yes,0,0,0,magic,0,	SO_EARTHGRAVE,地底墓穴
-2453,8,6,2,0,0x1,0,5,1,yes,0,0,1,none,0,	SO_VACUUM_EXTREME,Vacuum Extreme
+2453,8,6,2,0,0x1,0,5,1,yes,0,0,0,none,0,	SO_VACUUM_EXTREME,Vacuum Extreme
 
 8001,9,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,         HLIF_HEAL,治愈之手
 8002,0,6,4,0,0x3,-1,5,1,no,0,0,0,none,0,         HLIF_AVOID,轻捷移动
