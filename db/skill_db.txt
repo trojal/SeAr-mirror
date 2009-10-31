@@ -806,13 +806,13 @@
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法置物
 2283,-5,6,16,0,0,0,1,0,no,0,0,2,weapon,0,	NC_DISJOINT,FAW 解除
 //皇家护卫
-2307,11,6,1,0,0,2,5,0,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,Cannon Spear
-2308,7,6,1,0,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,Banishing Point
-2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,Trample
-2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,Exceed Break
-2317,0,6,4,0,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,Over Brand
-2322,9,0,16,0,0x3,1,5,0,yes,0,0,0,none,0,	LG_PIETY,Piety
-2323,0,8,4,2,0x2,2,5,-5,yes,0,0,0,weapon,0,	LG_EARTHDRIVE,Earth Drive
+2307,11,6,1,-1,0x2,2,5,1,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,加农矛
+2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,尖端驱逐
+2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,践踏
+2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,超越破坏
+2317,0,6,4,-1,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,烙印
+2322,9,0,16,0,0x3,1,5,0,yes,0,0,0,none,0,	LG_PIETY,虔诚
+2323,0,8,4,2,0x2,2,5,-5,yes,0,0,0,weapon,0,	LG_EARTHDRIVE,大地驱使
 //Unfinished
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,Shield Press
 2311,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_REFLECTDAMAGE,Reflect Damage
