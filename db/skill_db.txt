@@ -813,7 +813,7 @@
 2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,3,yes,0,0,0,weapon,4,		SC_TRIANGLESHOT,三连矢
 2289,9,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
 2290,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_INVISIBILITY,隐形
-2291,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SC_DEADLYINFECT,致命感染
+//2291,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SC_DEADLYINFECT,致命感染
 2292,9,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_ENERVATION,假面-脱力
 2293,9,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_GROOMY,假面-忧郁
 2294,9,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_IGNORANCE,假面-无知
