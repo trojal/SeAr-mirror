@@ -117,8 +117,16 @@
 2213,0x86,    , 0, 7,1000,enemy, 0x010	//WL_COMET
 2216,0xcb,    ,-1, 2,1000,enemy, 0x018	//WL_EARTHSTRAIN
 
+2289,0x86,   ,  0, 1,1000,enemy, 0x000	//SC_BODYPAINT
+2299,0xcc,   ,  0, 1,1000,all,   0x000	//SC_MANHOLE
+2300,0xcd,   ,  0, 1,1000,all,   0x000	//SC_DIMENSIONDOOR
+2301,0xcf,   ,  0, 1,1000,all,   0x000	//SC_CHAOSPANIC
+2303,0xce,   ,  0, 1,1000,all,   0x000	//SC_BLOODYLUST
+2334,0x86,   ,  0, 5,1000,enemy, 0x000	//SR_CURSEDCIRCLE
+
 2443,0xdc,    , 0, 1,1000,enemy, 0x010	//SO_FIREWALK
 2444,0xdd,    , 0, 1,1000,enemy, 0x010	//SO_ELECTRICWALK
 2446,0x86,    , 0, 4:4:4:5:5,1000,enemy, 0x018	//SO_EARTHGRAVE
 2449,0x86,    , 0, 3:3:4:4:5,1000,enemy, 0x018	//SO_PSYCHIC_WAVE
 2453,0xeb,    , 0, 3, 100,enemy, 0x018	//SO_VACUUM_EXTREME
+
