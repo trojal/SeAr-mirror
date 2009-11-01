@@ -103,7 +103,9 @@
 
 //[The Quality Maker]
 2032,0xe1,    , 2, 0,  -1,enemy, 0x010	//GC_POISONSMOKE
+
 2044,0xca,    , 0, 5,1000,all,   0x018	//AB_EPICLESIS
+
 //2237,0x86,    ,  0, 2,1000,enemy, 0x080	//RA_DETONATOR
 2239,0xd9,    , 0, 1,1000,enemy, 0x006	//RA_CUSTERBOMB
 2238,0xd8,    , 0, 1,1000,enemy, 0x006	//RA_ELECTRICSHOCKER
@@ -113,6 +115,7 @@
 2252,0xd5,    , 0, 1,1000,enemy, 0x006	//RA_VERDURETRAP
 2253,0xd6,    , 0, 1,1000,enemy, 0x006	//RA_FIRINGTRAP
 2254,0xd7,    , 0, 1,1000,enemy, 0x006	//RA_ICEBOUNDTRAP
+
 2209,0x86,    , 0, 9:10:11:12:13,-1,enemy, 0x000	//WL_STASIS
 2213,0x86,    , 0, 7,1000,enemy, 0x010	//WL_COMET
 2216,0xcb,    ,-1, 2,1000,enemy, 0x018	//WL_EARTHSTRAIN
@@ -122,7 +125,16 @@
 2300,0xcd,   ,  0, 1,1000,all,   0x000	//SC_DIMENSIONDOOR
 2301,0xcf,   ,  0, 1,1000,all,   0x000	//SC_CHAOSPANIC
 2303,0xce,   ,  0, 1,1000,all,   0x000	//SC_BLOODYLUST
+
 2334,0x86,   ,  0, 5,1000,enemy, 0x000	//SR_CURSEDCIRCLE
+
+2414,0xda,   ,  0, 1,1000,enemy, 0x010	//WM_REVERBERATION
+2417,0x86,   ,  0, 5,1000,enemy, 0x080	//WM_DOMINION_IMPULSE
+2418,0xdb,   ,  0,11, 300,enemy, 0x800	//WM_SEVERE_RAINSTORM
+2419,0x86,   ,  0, 3,1000,enemy, 0x000	//WM_POEMOFNETHERWORLD
+2422,0x86,   ,  0, 5:6:7:8:9,1000,enemy,0x000	//WM_LULLABY_DEEPSLEEP
+2426,0x86,   ,  0, 2:3:3:5:5,1000,enemy,0x000	//WM_GREAT_ECHO
+2429,0x86,   ,  0, 5:7:7:9:9,1000,enemy,0x000	//WM_SOUND_OF_DESTRUCTION
 
 2443,0xdc,    , 0, 1,1000,enemy, 0x010	//SO_FIREWALK
 2444,0xdd,    , 0, 1,1000,enemy, 0x010	//SO_ELECTRICWALK
