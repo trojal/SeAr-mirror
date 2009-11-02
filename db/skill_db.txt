@@ -718,7 +718,6 @@
 2055,-1,6,1,6,0,1,10,1,no,0,0,0,weapon,0,	AB_DUPLELIGHT_MELEE,Duple Light
 2056,-1,6,1,6,0,1,10,1,no,0,0,0,magic,0,	AB_DUPLELIGHT_MAGIC,Duple Light
 2057,0,6,4,0,0x3,4:5:6:7:8,5,1,no,0,0,0,magic,0,	AB_SILENTIUM,寂靜
-2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,圣礼
 //术士
 2201,6,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_WHITEIMPRISON,白色监狱
 2202,9,8,1,8,0,1:1:1:2:2,5,1,yes,0,0,0,magic,0,		WL_SOULEXPANSION,魂爆发
@@ -831,12 +830,12 @@
 2307,11,6,1,-1,0x2,2,5,1,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,加农矛
 2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,尖端驱逐
 2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,践踏
+2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,盾压
 2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,超越破坏
 2317,0,6,4,-1,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,烙印
 2322,9,0,16,0,0x3,1,5,0,yes,0,0,0,none,0,	LG_PIETY,虔诚
 2323,0,8,4,2,0x2,2,5,-5,yes,0,0,0,weapon,0,	LG_EARTHDRIVE,大地驱使
 //Unfinished
-//2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,Shield Press
 //2311,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_REFLECTDAMAGE,Reflect Damage
 //2312,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PINPOINTATTACK,Pinpoint Attack
 //2313,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_FORCEOFVANGUARD,Force of Vanguard
@@ -854,66 +853,60 @@
 2328,0,6,4,0,0x2,11,5,1,no,0,0,0,weapon,0,	SR_EARTHSHAKER,地雷震
 2329,4,8,1,0,0,0,5,3,yes,0,0,0,weapon,0,	SR_FALLENEMPIRE,大缠崩裂
 2330,4,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,	SR_TIGERCANNON,号炮
-//2331,0,0,0,0,0,0,10,0,no,0,0,0,none,0,	SR_HELLGATE,杀破凰击
+//2331,0,0,0,0,0,0,10,0,no,0,0,0,none,0,	SR_HELLGATE,Gate of Hell
 2332,0,8,4,0,0x2,7,5,1,no,0,0,0,weapon,0,	SR_RAMPAGEBLASTER,爆气散弹
 2333,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_CRESCENTELBOW,破碎柱
 2334,0,6,4,0,0x2,5,5,1,no,0,0,0,weapon,0,	SR_CURSEDCIRCLE,束缚阵
-//Unfinished
-//2335,0,6,4,0,0x1,0,5,1,yes,0,0,0,weapon,0,	SR_LIGHTNINGWALK,Lightning Walk
-//2336,9,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		SR_KNUCKLEARROW,Knuckle Arrow
-//2337,0,6,4,0,0x2,5,1,1,no,0,0,0,weapon,0,	SR_WINDMILL,Windmill
-//2338,0,6,4,0,0x1,0,10,1,yes,0,0,0,weapon,0,	SR_RAISINGDRAGON,Raising Dragon
-//2339,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SR_GENTLETOUCH,Gentle Touch
-//2340,0,6,4,0,0x3,5,1,1,yes,0,0,0,weapon,0,	SR_ASSIMILATEPOWER,Assimilate Power
-//2341,9,6,16,0,0x1,0,1,1,yes,0,0x200,0,none,0,	SR_POWERVELOCITY,Power Velocity
-2342,4,6,1,0,0x20,0,5,1,no,0,0,0,weapon,3,	SR_CRESCENTELBOW_AUTOSPELL,Crescent Elbow Autospell
-//2343,4,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,	SR_GATEOFHELL,Gate of Hell
-//2344,2,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_QUIET,Gentle Touch - Quiet
-//2345,2,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,	SR_GENTLETOUCH_CURE,Gentle Touch - Cure
-//2346,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_ENERGYGAIN,Gentle Touch - Energy Drain
-//2347,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_CHANGE,Gentle Touch - Change
-//2348,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_REVITALIZE,Gentle Touch - Revitalize
-//2517,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SR_HOWLINGOFLION,Howling of Lion
-//2518,3,6,2,-1,0x2,5:5:7;9:9,5,1,no,0,0,0,weapon,0,	SR_RIDEINLIGHTNING,Ride In Lightening
-//流浪舞者
+2335,0,6,4,0,0x1,0,5,1,yes,0,0,0,weapon,0,	SR_LIGHTNINGWALK,閃電步
+2336,9,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		SR_KNUCKLEARROW,修羅身彈
+2337,0,6,4,0,0x2,5,1,1,no,0,0,0,weapon,0,	SR_WINDMILL,旋風腿
+2338,0,6,4,0,0x1,0,10,1,yes,0,0,0,weapon,0,	SR_RAISINGDRAGON,潛龍昇天
+//2339,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SR_GENTLETOUCH,點穴
+2340,0,6,4,0,0x3,5,1,1,yes,0,0,0,weapon,0,	SR_ASSIMILATEPOWER,吸氣攻
+2341,9,6,16,0,0x1,0,1,1,yes,0,0x200,0,none,0,	SR_POWERVELOCITY,全氣注入
+2342,4,6,1,0,0x20,0,5,1,no,0,0,0,weapon,3,	SR_CRESCENTELBOW_AUTOSPELL,破碎柱Autospell
+2343,4,8,1,0,0,0,10,-7,yes,0,0,0,weapon,0,	SR_GATEOFHELL,刹破凰擊
+2344,2,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_QUIET,點穴-默
+2345,2,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,	SR_GENTLETOUCH_CURE,點穴-快
+2346,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_ENERGYGAIN,點穴-救
+//2347,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_CHANGE,點穴-反
+//2348,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_REVITALIZE,點穴-活
+//流浪舞者/宫廷乐师
 2350,0,6,4,0,0x3,-1,5,1,yes,0,0,0,weapon,0,	WA_SWING_DANCE,摇摆舞
 2351,0,6,4,0,0x3,-1,5,1,yes,0,0,0,weapon,0,	WA_SYMPHONY_OF_LOVER,爱人的交响曲
 2352,0,6,4,0,0x3,-1,5,1,yes,0,0,0,weapon,0,	WA_MOONLIT_SERENADE,月光小夜曲
-//宫廷乐师
 2381,0,6,4,0,0x3,-1,5,1,yes,0,0,0,weapon,0,	MI_RUSH_WINDMILL,风车突袭
 2382,0,6,4,0,0x3,-1,5,1,yes,0,0,0,weapon,0,	MI_ECHOSONG,回音曲
 2383,0,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	MI_HARMONIZE,和声
-//宫廷乐师/流浪舞者 Unfinished
-//2412,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		WM_LESSON,Lesson
-//2413,9,6,1,0,0,0,5,1,yes,0,0,0,weapon,0,	WM_METALICSOUND,Metallic Sound
-//2414,9,6,2,0,0,0,5,1,yes,0,0,3,misc,0,		WM_REVERBERATION,Reverberation
-//2415,3,6,1,0,0x2,3,5,1,no,0,0,0,weapon,0,	WM_REVERBERATION_MELEE,Reverberation Melee
-//2416,3,6,1,0,0x2,3,5,1,no,0,0,0,magic,0,	WM_REVERBERATION_MAGIC,Reverberation Magic
-//2417,9,6,2,0,0,0,1,0,yes,0,0,0,weapon,0,	WM_DOMINION_IMPULSE,Dominion Impulse
-//2418,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	WM_SEVERE_RAINSTORM,Severe Rainstorm
-//2419,9,6,2,0,0,0,5,1,yes,0,0,5,misc,0,		WM_POEMOFNETHERWORLD,Poem of The Netherworld
-//2420,9,6,4,0,0x2,5,5,1,yes,0,0,0,misc,0,	WM_VOICEOFSIREN,Voice of Siren
-//2421,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_DEADHILLHERE,Valley of Death
-//2422,9,6,2,0,0,0,5,1,yes,0,0,0,misc,0,		WM_LULLABY_DEEPSLEEP,Deep Sleep Lullaby
-//2423,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SIRCLEOFNATURE,Circle of Nature's Sound
-//2424,0,6,4,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_RANDOMIZESPELL,Improvised Song
-//2425,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_GLOOMYDAY,Gloomy Day
-//2426,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	WM_GREAT_ECHO,Great Echo
-//2427,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SONG_OF_MANA,Song of Mana
-//2428,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_DANCE_WITH_WUG,Dance With A Warg
-//2429,9,6,1,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_SOUND_OF_DESTRUCTION,Sound of Destruction
-//2430,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SATURDAY_NIGHT_FEVER,Saturday Night Fever
-//2431,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_LERADS_DEW,Lerad's Dew
-//2432,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,Melody of Sink
-//2433,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_BEYOND_OF_WARCRY,Warcry of Beyond
-//2434,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_UNLIMITED_HUMMING_VOICE,Unlimited Humming Voice
-//2516,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		WM_SEVERE_RAINSTORM_MELEE,Severe Rainstorm Melee
+2412,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		WM_LESSON,课程
+2413,9,6,1,0,0,0,5,1,yes,0,0,0,weapon,0,	WM_METALICSOUND,金属音
+2414,9,6,2,0,0,0,5,1,yes,0,0,3,misc,0,		WM_REVERBERATION,混响
+2415,3,6,1,0,0x2,3,5,1,no,0,0,0,weapon,0,	WM_REVERBERATION_MELEE,混响Melee
+2416,3,6,1,0,0x2,3,5,1,no,0,0,0,magic,0,	WM_REVERBERATION_MAGIC,混响Magic
+2417,9,6,2,0,0,0,1,0,yes,0,0,0,weapon,0,	WM_DOMINION_IMPULSE,脉冲领土
+2418,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	WM_SEVERE_RAINSTORM,狂风暴雨
+2419,9,6,2,0,0,0,5,1,yes,0,0,5,misc,0,		WM_POEMOFNETHERWORLD,地狱诗歌
+2420,9,6,4,0,0x2,5,5,1,yes,0,0,0,misc,0,	WM_VOICEOFSIREN,塞壬之声
+2421,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_DEADHILLHERE,死亡峡谷
+2422,9,6,2,0,0,0,5,1,yes,0,0,0,misc,0,		WM_LULLABY_DEEPSLEEP,安息摇篮曲
+2423,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SIRCLEOFNATURE,循环的自然之声
+2424,0,6,4,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_RANDOMIZESPELL,即兴曲
+2425,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_GLOOMYDAY,阴郁天
+2426,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	WM_GREAT_ECHO,大回音
+2427,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SONG_OF_MANA,魔力之歌
+2428,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_DANCE_WITH_WUG,与狼共舞
+2429,9,6,1,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_SOUND_OF_DESTRUCTION,毁灭之歌
+2430,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SATURDAY_NIGHT_FEVER,周末狂热夜
+2431,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_LERADS_DEW,雷拉兹露水
+2432,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,夕阳曲
+2433,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_BEYOND_OF_WARCRY,远方呐喊
+2434,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_UNLIMITED_HUMMING_VOICE,无限哼唱
 //召唤士
 2443,0,6,4,3,0,0,5,0,yes,0,0,0,magic,0,		SO_FIREWALK,火焰步
 2444,0,6,4,4,0,0,5,0,yes,0,0,0,magic,0,		SO_ELECTRICWALK,电流步
 2445,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	SO_SPELLFIST,咒拳
 2446,9,8,2,2,0x2,3:3:3:4:4,5,-5,yes,0,0,0,magic,0,	SO_EARTHGRAVE,地底墓穴
-2449,9,8,2,2,0,0,5,-3:-4:-5:-6:-7,yes,0,0,0,magic,0,	SO_PSYCHIC_WAVE,精神波
+2449,9,8,2,0,0,0,5,3:4:5:6:7,yes,0,0,0,magic,0,	SO_PSYCHIC_WAVE,精神波
 2453,8,6,2,0,0x1,0,5,1,yes,0,0,0,none,0,	SO_VACUUM_EXTREME,真空极限
 //基因学家
 //2474,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_TRAINING_SWORD,Sword Training
@@ -942,6 +935,10 @@
 //2497,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GN_S_PHARMACY,Special Pharmacy
 //2498,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_SLINGITEM_RANGEMELEEATK,Sling Item Attack
 
+2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,圣礼
+//2516,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		WM_SEVERE_RAINSTORM_MELEE,狂风暴雨Melee
+//2517,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SR_HOWLINGOFLION,Howling of Lion
+2518,3,6,2,-1,0x2,5:5:7;9:9,5,1,no,0,0,0,weapon,0,	SR_RIDEINLIGHTNING,Ride In Lightening
 //2533,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	ALL_ODINS_RECALL,Odin's Recall
 
 8001,9,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,         HLIF_HEAL,治愈之手
