@@ -3852,6 +3852,7 @@ veins,181,166,3	script	Lockenlock	900,{
 			mes "the key, so I can get it done";
 			mes "as soon as you can bring";
 			mes "me the Steel. I'll be waiting.";
+			close;
 		}
 	}
 	else if (rachel_camel == 23) {
