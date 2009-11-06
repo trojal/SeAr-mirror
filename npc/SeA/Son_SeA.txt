@@ -213,7 +213,7 @@ prontera,146,92,5	script	SeA·þÎñÔ±::Son_SeA	756,15,15,{
 							jobchange BaseClass+4053, Upper;
 						}
 						else
-							jobchange BaseClass+4065, Upper;
+							jobchange (BaseClass<=2?BaseClass:BaseClass+1)+4065, Upper;
 					}
 					else if ( Upper==1 )
 						jobchange BaseJob?Ex_Cl:Ex_BC,Upper;
