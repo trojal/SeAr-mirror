@@ -9767,7 +9767,7 @@ mid_camp,69,144,0	script	Ferocious Gorurug	421,{
 			next;
 			select("Gyaruk has sent me.");
 			mes "[Ferocious Gorurug]";
-			mes "Gyaruk sent you??;
+			mes "Gyaruk sent you??";
 			mes "Oh, you are here to fish? *Purr*";
 			next;
 			select("What should I do?");
