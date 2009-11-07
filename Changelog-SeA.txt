@@ -1,3 +1,7 @@
+2009/11/07[SeAr_1.2.73]
+- 源码:		修正Dragon Training负重增加量。
+- 源码:		修正Death Bound对远程攻击有效。
+
 2009/11/07[SeAr_1.2.72]
 - 源码:		优化精炼对autobonus的影响。
 
