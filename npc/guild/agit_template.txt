@@ -126,7 +126,7 @@ OnAgitBreak:
 	SetCastleData strnpcinfo(2),1, .@GID;
 
 	// Announce that the Emperium is destroyed, and respawn all but new castle-occupants.
-	mapannounce strnpcinfo(2),strcharinfo(0) + "华丽金属被破坏了",bc_map,"0x00FF00";
+	mapannounce strnpcinfo(2),strcharinfo(0) + "华丽金属被破坏了",bc_map|bc_woe,"0x00CCFF",FW_NORMAL,12;
 	MapRespawnGuildID strnpcinfo(2),.@GID,2;
 
 	// Refresh castle data, disable Kafra and reset Invest information.
@@ -147,7 +147,7 @@ OnAgitBreak:
 		donpcevent "Agit#"+strnpcinfo(2)+"::OnStartArena";
 	}
 	sleep getbattleflag("gvg_eliminate_time");
-	announce "秘密基地 [" + getcastlename(strnpcinfo(2)) + "]被 [" + getguildName(.@GID) + "] 工会占领了",bc_all;
+	announce "秘密基地 [" + getcastlename(strnpcinfo(2)) + "]被 [" + getguildName(.@GID) + "] 工会占领了",bc_all|bc_woe;
 	end;
 
 // War of Emperium has ended.

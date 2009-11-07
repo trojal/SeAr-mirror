@@ -2388,12 +2388,12 @@ OnStartArena:
 
 	set .msg,2;
 	if (.msg == 1) {
-		announce "秘密基地 [" + GetCastleName("arug_cas02") + "]的 '希乐'被 [" + getguildname(.@gid) + "] 公会所占领了",bc_all;
+		announce "秘密基地 [" + GetCastleName("arug_cas02") + "]的 '希乐'被 [" + getguildname(.@gid) + "] 公会所占领了",bc_all|bc_woe;
 		donpcevent "Manager#aru02_02::Onstart";
 	}
 	else if (.msg == 2) {
-		announce "秘密基地 [" + GetCastleName("arug_cas02") + "]的 '希乐'被 [" + getguildname(.@gid) + "] 公会所占领了",bc_all;
-		mapannounce "arug_cas02","华丽金属已被破坏掉了",bc_map,"0x00FF00";
+		announce "秘密基地 [" + GetCastleName("arug_cas02") + "]的 '希乐'被 [" + getguildname(.@gid) + "] 公会所占领了",bc_all|bc_woe;
+		mapannounce "arug_cas02","华丽金属已被破坏掉了",bc_map,"0x00FF00",FW_NORMAL,20,0,40;
 		if (agitcheck2()) {
 			donpcevent "Manager#aru02_02::Onreset";
 			initnpctimer;
@@ -2404,7 +2404,7 @@ OnStartArena:
 		}
 	}
 	else if (.msg == 0) {
-		announce "秘密基地 [" + GetCastleName("arug_cas02") + "]的 '希乐'被 [" + getguildname(.@gid) + "] 公会所占领了",bc_all;
+		announce "秘密基地 [" + GetCastleName("arug_cas02") + "]的 '希乐'被 [" + getguildname(.@gid) + "] 公会所占领了",bc_all|bc_woe;
 		donpcevent "Manager#aru02_02::Onreset";
 		stopnpctimer;
 		end;
@@ -2415,7 +2415,7 @@ OnStartArena:
 
 OnTimer10000:
 	donpcevent "Manager#aru02_02::Onchange";
-	mapannounce "arug_cas02","在各个据点和防御线的修复点数 已登场了",bc_map,"0x00FF00";
+	mapannounce "arug_cas02","在各个据点和防御线的修复点数 已登场了",bc_map,"0x00FF00",FW_NORMAL,20,0,40;
 	end;
 }
 
