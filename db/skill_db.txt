@@ -831,22 +831,21 @@
 2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,¼â¶ËÇýÖð
 2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,¼ùÌ¤
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,¶ÜÑ¹
+2311,0,0,4,0,0x01,5,5,0,yes,0,0x0,0,none,0,	LG_REFLECTDAMAGE,·´ÉäÉËº¦
+2312,4,6,1,-1,0x0,0,5,1,yes,0,0x0,0,weapon,0,	LG_PINPOINTATTACK,Pinpoint Attack
+2313,0,0,4,0,0x01,0,5,0,yes,0,0x0,0,none,0,	LG_FORCEOFVANGUARD,Force of Vanguard
+2314,2,6,1,-1,0x0,0,1,1,yes,0,0x0,0,weapon,0,	LG_RAGEBURST,Rage Burst
+//2315,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		LG_SHIELDSPELL,Shield Spell
 2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,	LG_EXEEDBREAK,³¬Ô½ÆÆ»µ
 2317,0,6,4,-1,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,ÀÓÓ¡
+2318,0,0,4,0,0x01,0,5,0,yes,0,0x0,0,none,0,	LG_PRESTIGE,Prestige
+2319,0,0,4,0,0x01,0,5,0,yes,0,0x0,0,none,0,	LG_BANDING,Banding
+2320,0,6,4,0,0x02,3,5,1,yes,0,0x0,0,weapon,0,	LG_MOONSLASHER,Moonslasher
+2321,0,6,4,6,0x01,5,5,1,yes,0,0x0,0,weapon,0,	LG_RAYOFGENESIS,Ray of Genesis
 2322,9,0,16,0,0x3,1,5,0,yes,0,0,0,none,0,	LG_PIETY,ò¯³Ï
 2323,0,8,4,2,0x2,2,5,-5,yes,0,0,0,weapon,0,	LG_EARTHDRIVE,´óµØÇýÊ¹
-//Unfinished
-//2311,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_REFLECTDAMAGE,Reflect Damage
-//2312,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PINPOINTATTACK,Pinpoint Attack
-//2313,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_FORCEOFVANGUARD,Force of Vanguard
-//2314,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		LG_RAGEBURST,Rage Burst
-//2315,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		LG_SHIELDSPELL,Shield Spell
-//2318,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_PRESTIGE,Prestige
-//2319,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_BANDING,Banding
-//2320,0,6,4,0,0x2,3,5,0,no,0,0,0,weapon,0,		LG_MOONSLASHER,Moon Slasher
-//2321,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_RAYOFGENESIS,Ray of Genesis
-//2324,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_HESPERUSLIT,Hesperus Lit
-//2325,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		LG_INSPIRATION,Inspiration
+2324,4,6,1,-1,0x0,0,5,1,yes,0,0x0,0,none,0,	LG_HESPERUSLIT,Hesperus Lit
+2325,0,6,4,0,0x01,0,5,1,yes,0,0x0,0,none,0,	LG_INSPIRATION,Inspiration
 //ÐÞÂÞ
 2326,4,8,1,0,0,0,10,2,yes,0,0,0,weapon,0,	SR_DRAGONCOMBO,Ë«Áú½Å
 2327,0,8,4,0,0x2,3,5,3,yes,0,0,0,weapon,3,	SR_SKYNETBLOW,ÌìÂÞµØÍø
@@ -937,9 +936,9 @@
 
 2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,Ê¥Àñ
 //2516,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		WM_SEVERE_RAINSTORM_MELEE,¿ñ·ç±©ÓêMelee
-2517,0,6,4,-1,0x2,5:5:6:6:7,5,1,yes,0,0x0,0,weapon,0,	SR_HOWLINGOFLION,Howling of Lion
-2518,3,6,2,-1,0x2,5:5:7;9:9,5,1,no,0,0,0,weapon,0,	SR_RIDEINLIGHTNING,Ride In Lightening
-//2533,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	ALL_ODINS_RECALL,Odin's Recall
+2517,0,6,4,-1,0x2,5:5:6:6:7,5,1,yes,0,0x0,0,weapon,0,	SR_HOWLINGOFLION,Ê¨×Óºð
+2518,3,6,2,-1,0x2,5:5:7;9:9,5,1,no,0,0,0,weapon,0,	SR_RIDEINLIGHTNING,À×¹âµ¯
+//2533,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	ALL_ODINS_RECALL,°Â¶¡µÄÕÙ»½
 
 8001,9,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,         HLIF_HEAL,ÖÎÓúÖ®ÊÖ
 8002,0,6,4,0,0x3,-1,5,1,no,0,0,0,none,0,         HLIF_AVOID,Çá½ÝÒÆ¶¯
