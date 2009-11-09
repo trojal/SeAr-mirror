@@ -2217,7 +2217,7 @@ schg_cas03,88,90,3	script	管理人#sch03	55,{
 			if (Zeny < .@eco_invest) {
 				mes "[ 管理人 ]";
 				mes "主人,你没有足够的资金可以投资商业发展度";
-				end;
+				close;
 			}
 			set zeny,zeny-.@eco_invest;
 			SetCastleData "schg_cas03",4,GetCastleData("schg_cas03",4)+1;
