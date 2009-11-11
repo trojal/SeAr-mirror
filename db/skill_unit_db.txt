@@ -141,3 +141,5 @@
 2446,0x86,    , 0, 4:4:4:5:5,1000,enemy, 0x018	//SO_EARTHGRAVE
 2449,0x86,    , 0, 3:3:4:4:5,400,enemy, 0x018	//SO_PSYCHIC_WAVE
 2453,0xeb,    , 0, 3, 100,enemy, 0x018	//SO_VACUUM_EXTREME
+
+2482,0xe6,   ,  2, 2,500,enemy, 0x80A	//GN_WALLOFTHORN

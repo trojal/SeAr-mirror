@@ -908,31 +908,32 @@
 2449,9,6,2,0,0,0,5,1,yes,0,0,0,magic,0,	SO_PSYCHIC_WAVE,精神波
 2453,8,6,2,0,0x1,0,5,1,yes,0,0,0,none,0,	SO_VACUUM_EXTREME,真空极限
 //基因学家
-//2474,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_TRAINING_SWORD,Sword Training
-//2475,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_REMODELING_CART,Cart Remodeling
-//2476,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_CART_TORNADO,Cart Tornado
-//2477,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_CARTCANNON,Cart Cannon
-//2478,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_CARTBOOST,Cart Boost
-//2479,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_THORNS_TRAP,Thorn Trap
-//2480,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_BLOOD_SUCKER,Blood Sucker
-//2481,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_SPORE_EXPLOSION,Spore Explosion
-//2482,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_WALLOFTHORN,Wall of Thorns
-//2483,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GN_CRAZYWEED,Crazy Weed
+2474,0,0,0,0,0,0,5,0,no,0,0,0,weapon,0,		GN_TRAINING_SWORD,单手剑熟练度
+2475,0,0,0,0,0,0,5,0,no,0,0,0,weapon,0,		GN_REMODELING_CART,手推车改型
+2476,0,6,4,0,0x2,2,5,0,no,0,0,0,weapon,2,	GN_CART_TORNADO,手推车龙卷风
+2477,7,6,1,0,0,0,5,0,yes,0,0,0,weapon,0,	GN_CARTCANNON,手推车加农炮
+2478,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	GN_CARTBOOST,手推车增速
+2479,6,6,2,0,0x1,0,5,1,yes,0,0x80,0,magic,0,	GN_THORNS_TRAP,Thorn Trap
+2480,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_BLOOD_SUCKER,Blood Sucker
+2481,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_SPORE_EXPLOSION,Spore Explosion
+2482,0,8,4,0,0x1,0,5,1,yes,0,0,1,magic,1,	GN_WALLOFTHORN,Wall of Thorns
+2483,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GN_CRAZYWEED,Crazy Weed
 //2484,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_CRAZYWEED_ATK,Crazy Weed Attack
-//2485,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_DEMONIC_FIRE,Demonic Fire
-//2486,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_FIRE_EXPANSION,Fire Expansion
+2485,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_DEMONIC_FIRE,Demonic Fire
+2486,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_FIRE_EXPANSION,Fire Expansion
 //2487,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_FIRE_EXPANSION_SMOKE_POWDER,Fire Expansion Smoke Powder
 //2488,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_FIRE_EXPANSION_TEAR_GAS,Fire Expansion Tear Gas
 //2489,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_FIRE_EXPANSION_ACID,Fire Expansion Acid
-//2490,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_HELLS_PLANT,Hell's Plant
+2490,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_HELLS_PLANT,Hell's Plant
 //2491,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_HELLS_PLANT_ATK,Hell's Plant Attack
-//2492,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_MANDRAGORA,Howling of Mandragora
-//2493,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		GN_SLINGITEM,Sling Item
-//2494,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		GN_CHANGEMATERIAL,Change Material
-//2495,0,0,0,0,0,0,2,0,no,0,0,0,none,0,		GN_MIX_COOKING,Mix Cooking
-//2496,0,0,0,0,0,0,2,0,no,0,0,0,none,0,		GN_MAKEBOMB,Create Bomb
-//2497,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GN_S_PHARMACY,Special Pharmacy
+2492,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		GN_MANDRAGORA,Howling of Mandragora
+2493,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		GN_SLINGITEM,Sling Item
+2494,0,0,0,0,0,0,1,0,no,0,0,0,none,0,		GN_CHANGEMATERIAL,Change Material
+2495,0,0,0,0,0,0,2,0,no,0,0,0,none,0,		GN_MIX_COOKING,Mix Cooking
+2496,0,0,0,0,0,0,2,0,no,0,0,0,none,0,		GN_MAKEBOMB,Create Bomb
+2497,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GN_S_PHARMACY,Special Pharmacy
 //2498,0,0,0,0,0,0,??,0,no,0,0,0,none,0,	GN_SLINGITEM_RANGEMELEEATK,Sling Item Attack
+
 
 2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,圣礼
 //2516,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		WM_SEVERE_RAINSTORM_MELEE,狂风暴雨Melee
