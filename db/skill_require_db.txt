@@ -3,7 +3,7 @@
 // Structure of Database:
 // SkillID,HPCost,MaxHPTrigger,SPCost,HPRateCost,SPRateCost,ZenyCost,RequiredWeapons,RequiredAmmoTypes,RequiredAmmoAmount,RequiredState,SpiritSphereCost,RequiredItemID1,RequiredItemAmount1,RequiredItemID2,RequiredItemAmount2,RequiredItemID3,RequiredItemAmount3,RequiredItemID4,RequiredItemAmount4,RequiredItemID5,RequiredItemAmount5,RequiredItemID6,RequiredItemAmount6,RequiredItemID7,RequiredItemAmount7,RequiredItemID8,RequiredItemAmount8,RequiredItemID9,RequiredItemAmount9,RequiredItemID10,RequiredItemAmount10
 //
-// If HP/SPratecost is positive, it is a percent of your current life, otherwise it is a percent of your max life.
+// 如果 HP/SPratecost 为正, 表示当前值的百分比, 否则表示最大值的百分比。
 //
 // 'RequiredState'栏位:
 //  none = 正常
@@ -19,9 +19,9 @@
 //  explosionspirits = 发动暴气技能后才能使用
 //  cartboost = 装备手推车并且发动手推车加速后才能使用(比如手推车终结技)
 //  shield = 装备盾牌的时候才能使用
-//  ridingdragon = Requires to ride a dragon 
-//  warg = Requires warg
-//  gear = Requires a Magic Gear
+//  ridingdragon = 需要骑龙 
+//  warg = 需要召唤狼
+//  gear = 需要骑机器人
 
 5,0,0,8:8:8:8:8:15:15:15:15:15,0,0,0,0:1:2:3:4:5:6:7:8:9:10:12:13:14:15:16:17:18:19:20:21:22,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//狂击
 6,0,0,4:5:6:7:8:9:10:11:12:13,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//挑衅
@@ -564,12 +564,12 @@
 2268,0,0,100,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0			//NC_SHAPESHIFT#Shape Shift#
 2269,0,0,20,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0			 	//NC_EMERGENCYCOOL#Emergency Cool#
 2270,0,0,45,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		 		//NC_INFRAREDSCAN#Infrared Scan#
-2271,0,0,30,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		 		//NC_ANALYZE#Analyze#
+2271,0,0,30,0,0,0,99,0,0,gear,0,6146,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		 		//NC_ANALYZE#Analyze#
 2272,0,0,17:20:23,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0			//NC_MAGNETICFIELD#Magnetic Field#
 2273,0,0,90,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		 		//NC_NEUTRALBARRIER#Neutral Barrier#
 2275,0,0,25:30:35:40:45,0,0,0,99,0,0,gear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//NC_REPAIR#Repair#
 2278,0,0,20:22:24:26:28,0,0,0,6:7,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//NC_AXEBOOMERANG#Axe Boomerang#
-2279,0,0,20:23:26:29:32,0,0,0,6:7,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//NC_POWERSWING#Power Swing#
+2279,0,0,20:23:26:29:32,0,0,0,6:7:8:9,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//NC_POWERSWING#Power Swing#
 2280,0,0,32:38:44:50:56,0,0,0,6:7,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//NC_AXETORNADO#Axe Tornado#
 2281,0,0,25:30:35:40:45,0,0,0,99,0,0,none,0,999,2,998,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//NC_SILVERSNIPER
 2282,0,0,40:45:50:55:60,0,0,0,99,0,0,none,0,998,2,7054,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//NC_MAGICDECOY

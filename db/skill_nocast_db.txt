@@ -5,21 +5,21 @@
 //
 //  'Flag'栏位 (bitmask):
 //  1 = 不能在普通地图使用
-//  2 = 不能在PvP地图使用 (use this instead of 1 for PK-mode servers)
+//  2 = 不能在PvP地图使用 (PK服务器使用此项而不是1)
 //  4 = 不能在GvG地图使用
 //  8 = 不能在战场地图使用
-//  16 = Cannot be cloned (clones will not copy this skill)
-//  Restricted zones - they're configured by 'restricted <number>' mapflag
-//  32 = Cannot be used in zone 1 maps
-//  64 = Cannot be used in zone 2 maps
-//  128 = Cannot be used in zone 3 maps
-//  256 = Cannot be used in zone 4 maps
-//  512 = Cannot be used in zone 5 maps
-//  1024 = Cannot be used in zone 6 maps
-//  2048 = Cannot be used in zone 7 maps
+//  16 = 无法被复制 (复制人不会复制这个技能(不是抄袭技能))
+//  限制区域 - 在 'restricted <number>' mapflag 中设置
+//  32 = 无法在区域1地图使用
+//  64 = 无法在区域2地图使用
+//  128 = 无法在区域3地图使用
+//  256 = 无法在区域4地图使用
+//  512 = 无法在区域5地图使用
+//  1024 = 无法在区域6地图使用
+//  2048 = 无法在区域7地图使用
 //
 // Example:
-// 8,6 = Endure cannot be used in PvP and GvG maps (2+4)
+// 8,6 = 霸体无法在PVP和GVG地图使用 (2+4)
 
 //GVG
 26,4	//瞬间移动

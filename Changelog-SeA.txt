@@ -1,3 +1,10 @@
+2009/11/16[SeAr_1.2.97]
+- DB:		分析需要道具油罐。
+- DB:		修正Wanderer/Minstrel各自独立技能影响整个地图的组队玩家。
+- DB:		使用钝器能使用Power Swing。
+- DB:		修正Repair延时和咏唱。
+- DB:		修正ADORAMUS延时。
+
 2009/11/14[SeAr_1.2.96]
 - 源码:		修正指令hidenpc, shownpc, tonpc无法处理名字长度大于23字节的NPC。(r14142)
 - DB:		修正道具草莓蛋糕属性。(r14142)

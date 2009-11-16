@@ -1,21 +1,21 @@
 // ID,unit ID,unit ID 2,layout,range,interval,target,flag
 //
 // layout = -1:特殊, 0:1*1, 1:3*3, 2:5*5, up to 5:11*11
-// target = friend (party +guildmates +neutral players) / party /
-//          ally (party +guildmates) / all / enemy
+// target = friend (组队 +公会 +普通玩家) / party /
+//          ally (组队 +公会) / all / enemy
 // flag 0x001(UF_DEFNOTENEMY)		如果在客户端设置了'/noshift[强制攻击]'(defunit_not_enemy),对于敌人的目标将转为友方
 //      0x002(UF_NOREITERRATION)	该技能不允许重叠
 //      0x004(UF_NOFOOTSET)		该技能不允许施放在靠近目标或者处于目标所在坐标范围
 //      0x008(UF_NOOVERLAP)		该技能效果不允许重叠
-//      0x010(UF_PATHCHECK)	Only cells with a shootable path will be placed
-//      0x020(UF_NOPC)		Spell cannot affect players.
-//      0x040(UF_NOMOB)		Spell cannot affect mobs.
-//      0x080(UF_SKILL)		Spell CAN affect skills.
+//      0x010(UF_PATHCHECK)	仅放置在可被攻击穿越的单元格
+//      0x020(UF_NOPC)		不影响玩家
+//      0x040(UF_NOMOB)		不影响魔物
+//      0x080(UF_SKILL)		影响技能
 //      0x100(UF_DANCE)		舞蹈技能
-//      0x200(UF_ENSEMBLE)	合体技能
-//      0x400(UF_SONG)		Song skill
-//      0x800(UF_DUALMODE)	Spell has effects both at an interval and when you step in/out
-// 	Example: 0x006 = 0x002+0x004 -> Cannot be stacked nor cast near targets
+//      0x200(UF_ENSEMBLE)	合作技能
+//      0x400(UF_SONG)		歌曲技能
+//      0x800(UF_DUALMODE)	在每个时间间隔和走入走出时都有效
+// 	Example: 0x006 = 0x002+0x004 -> 无法重叠无法靠近对象释放
 //
 // Notes:
 // ------
