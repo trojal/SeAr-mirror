@@ -35,7 +35,7 @@
 //    0x0800- 仅公会可用技能 (攻击技能：则仅敌人有效)
 //    0x1000- 禁止使用在敌人身上 (仅非攻击能有效).
 // 13 最大施放数量: 
-      在(玩家允许施放数量)player_land_skill_limit/(魔物允许施放数量)monster_land_skill_limit
+//    在(玩家允许施放数量)player_land_skill_limit/(魔物允许施放数量)monster_land_skill_limit
 //    在battle_athena.conf中启用时, 限制发动个数
 // 14 技能类型 (none无, weapon武器, magic魔法, misc特殊)
 // 15 强制弹开 (发动技能后目标强制弹开格数,比如:怒暴,雷鸣)
