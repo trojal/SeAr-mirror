@@ -691,7 +691,7 @@
 2029,0,6,4,-1,0x2,1,5,1,no,0,0,0,weapon,1,	GC_COUNTERSLASH,反击斩
 2030,0,6,4,-1,0x2,1,5,1,no,0,0,0,none,0,	GC_WEAPONCRUSH,武器压制
 2031,-1,6,1,5,0,0,5,1,no,0,0,0,weapon,0,	GC_VENOMPRESSURE,毒压
-2032,0,8,4,3,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,毒雾
+2032,5,8,2,5,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,毒雾
 2033,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	GC_CLOAKINGEXCEED,超级伪装
 2034,5,6,1,-1,0x02,3,1,1,no,0,0,0,weapon,0,	GC_PHANTOMMENACE,亡灵恐吓
 2035,0,6,4,0,0x01,0,5,0,no,0,0,0,none,0,	GC_HALLUCINATIONWALK,幻影步
@@ -808,7 +808,7 @@
 2284,1,6,1,-1,0x2,3,5,0,no,0,0,0,weapon,0,	SC_FATALMENACE,致命恐吓
 2285,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,	SC_REPRODUCE,复制
 2286,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,	SC_AUTOSHADOWSPELL,自动影咒
-2287,9,6,1,0,0x1,0,5,0,no,0,0,0,none,0,		SC_SHADOWFORM,影形态
+2287,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,		SC_SHADOWFORM,影形态
 2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,3,yes,0,0,0,weapon,4,		SC_TRIANGLESHOT,三连矢
 2289,9,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
 2290,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_INVISIBILITY,隐形
