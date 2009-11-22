@@ -866,10 +866,10 @@
 2342,4,6,1,0,0x20,0,5,1,no,0,0,0,weapon,3,	SR_CRESCENTELBOW_AUTOSPELL,破碎柱Autospell
 2343,4,8,1,0,0,0,10,-7,yes,0,0,0,weapon,0,	SR_GATEOFHELL,刹破凰擊
 2344,2,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_QUIET,點穴-默
-2345,2,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,		SR_GENTLETOUCH_CURE,點穴-快
+2345,2,6,16,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_CURE,點穴-快
 2346,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_ENERGYGAIN,點穴-救
-//2347,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_CHANGE,點穴-反
-//2348,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_REVITALIZE,點穴-活
+2347,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_CHANGE,點穴-反
+2348,2,6,16,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_REVITALIZE,點穴-活
 //流浪舞者/宫廷乐师
 2350,0,6,4,0,0x3,7,5,1,yes,0,0,0,weapon,0,	WA_SWING_DANCE,摇摆舞
 2351,0,6,4,0,0x3,7,5,1,yes,0,0,0,weapon,0,	WA_SYMPHONY_OF_LOVER,爱人的交响曲
