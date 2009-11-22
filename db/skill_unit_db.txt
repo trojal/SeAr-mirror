@@ -116,9 +116,12 @@
 2253,0xd6,    , 0, 1,1000,enemy, 0x006	//RA_FIRINGTRAP
 2254,0xd7,    , 0, 1,1000,enemy, 0x006	//RA_ICEBOUNDTRAP
 
-2209,0x86,    , 0, 9:10:11:12:13,-1,enemy, 0x000	//WL_STASIS
+2209,0x86,    , 0, 9:10:11:12:13,1000,enemy, 0x000	//WL_STASIS
 2213,0x86,    , 0, 7,1000,enemy, 0x010	//WL_COMET
 2216,0xcb,    ,-1, 2,1000,enemy, 0x018	//WL_EARTHSTRAIN
+
+2272,0x86,   ,1:2:3,0,1000,enemy,0x002	//NC_MAGNETICFIELD
+2274,0xa1,   ,  1, 0,1000,ally,  0x002	//NC_STEALTHFIELD
 
 2289,0x86,   ,  0, 1,1000,enemy, 0x000	//SC_BODYPAINT
 2299,0xcc,   ,  0, 1,1000,all,   0x000	//SC_MANHOLE
