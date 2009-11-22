@@ -104,9 +104,8 @@
 //[The Quality Maker]
 2032,0xe1,    , 2, 0,  -1,enemy, 0x010	//GC_POISONSMOKE
 
-2044,0xca,    , 0, 5,1000,all,   0x018	//AB_EPICLESIS
+2044,0xca,    , 0, 5,3000,all,   0x018	//AB_EPICLESIS
 
-//2237,0x86,    ,  0, 2,1000,enemy, 0x080	//RA_DETONATOR
 2239,0xd9,    , 0, 1,1000,enemy, 0x006	//RA_CUSTERBOMB
 2238,0xd8,    , 0, 1,1000,enemy, 0x006	//RA_ELECTRICSHOCKER
 2249,0xd2,    , 0, 1,1000,enemy, 0x006	//RA_MAGENTATRAP
@@ -121,7 +120,7 @@
 2216,0xcb,    ,-1, 2,1000,enemy, 0x018	//WL_EARTHSTRAIN
 
 2272,0x86,   ,1:2:3,0,1000,enemy,0x002	//NC_MAGNETICFIELD
-2274,0xa1,   ,  1, 0,1000,ally,  0x002	//NC_STEALTHFIELD
+2274,0x86,   ,  1, 0,1000,all,   0x000	//NC_STEALTHFIELD
 
 2289,0x86,   ,  0, 1,1000,enemy, 0x000	//SC_BODYPAINT
 2299,0xcc,   ,  0, 1,1000,all,   0x000	//SC_MANHOLE
