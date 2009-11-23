@@ -201,6 +201,7 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 					mes "[SeA服务员]";
 					mes "你的Job等级不够或者技能点数没有加完";
 				} else {
+					if(Class >= 4054) break;
 					if( BaseJob >= 7 && BaseJob <= 21 ) {
 						if ( BaseLevel < 99 ) {
 							mes "[SeA服务员]";
