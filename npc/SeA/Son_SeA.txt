@@ -201,7 +201,11 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 					mes "[SeA服务员]";
 					mes "你的Job等级不够或者技能点数没有加完";
 				} else {
-					if(Class >= 4054) break;
+					if(Class >= 4054) {
+						mes "[SeA服务员]";
+						mes "您的职业不能转职了";
+						break;
+					}
 					if( BaseJob >= 7 && BaseJob <= 21 ) {
 						if ( BaseLevel < 99 ) {
 							mes "[SeA服务员]";
@@ -209,10 +213,7 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 							break;
 						}
 						if( BaseJob <= 13 )
-						{
-							if(checkriding()) setriding 0;
 							jobchange BaseClass+4053, Upper;
-						}
 						else
 							jobchange (BaseClass<=2?BaseClass:BaseClass+1)+4065, Upper;
 					}
