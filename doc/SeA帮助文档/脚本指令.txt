@@ -2192,6 +2192,22 @@ and 0 if they don't.
 
 ---------------------------------------
 
+*setwarg {<标记>};
+*checkwarg()
+
+If <标记> is 0 this command will remove the warg from the character.
+Otherwise it gives the invoking character a warg. The warg will be there 
+regardless of whether the character is a ranger or not. It will (probably) not 
+have any useful effects for non-rangers though.
+Note: the character needs to have the skill 狼训练 to gain a warg
+
+The accompanying function will return 1 if the invoking character has a warg
+and 0 if they don't.
+
+    if (checkwarg()) mes "But you already have a warg!";
+
+---------------------------------------
+
 *setriding {<标记>};
 *checkriding()
 
@@ -2937,6 +2953,20 @@ This item will still disappear just like any other dropped item. Like 'getitem',
 it also accepts an 'english name' field from the database and creates apples if 
 the name isn't found.
 If the map name is given as "this", the map the invoking character is on will be used.
+
+---------------------------------------
+
+*searchitem <array name>,"<item name>";
+
+This command will fill the given array with the ID of items whose name matches the given one. It returns the number of items found. For performance reasons, the results array is limited to 10 items.
+
+	mes "What item are you looking for?";
+	input @name$;
+	set @qty, searchitem(@matches[0],@name$);
+	mes "I found "+@qty+" items:";
+	for (set @i, 0; @i < @qty; set @i, @i+1)
+		//Display name (eg: "Apple[0]")
+		mes getitemname(@matches[@i])+"["+getitemslots(@matches[@i])+"]";
 
 ---------------------------------------
 
@@ -3728,9 +3758,6 @@ specified NPC object starting from the label given. The RID of the player
 attached at this execution will be the RID of the killing character.
 
     monster "place",60,100,"Poring",1002,1,"NPCNAME::OnLabel";
-
-If you do not specify any event label, a label in the NPC object that ran this 
-command, called 'OnMyMobDead:' will execute anyway, if present.
 
 The coordinates of 0,0 will spawn the monster on a random place on the map.
 
@@ -5396,6 +5423,7 @@ OnBarricadeBreak:
 --------------------------------------- 
 
 *questnotify <类型1>, <类型2>;
+*showevent <类型1>, <类型2>;
 
 显示NPC坐标在小地图中，并在NPC头上显示表情。
 

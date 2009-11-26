@@ -165,7 +165,7 @@
 122,3,6,2,4,0x42,1,5,1,no,0,0x80,0,misc,0,	HT_BLASTMINE,定时爆炸陷阱
 123,3,6,2,3,0x42,2,5,1,no,0,0x80,0,misc,0,	HT_CLAYMORETRAP,爆散陷阱
 124,2,6,32,0,0x1,0,1,1,no,0,0,0,misc,0,		HT_REMOVETRAP,陷阱移除
-125,3,6,2,0,0x1,0,1,1,no,0,0,0,misc,0,		HT_TALKIEBOX,陷阱探查
+125,3,6,2,0,0x1,0,1,1,no,0,0x80,0,misc,0,		HT_TALKIEBOX,陷阱探查
 126,0,0,0,0,0,0,10,0,no,0,0,0,weapon,0,		HT_BEASTBANE,动物杀手
 127,0,0,0,0,0,0,1,0,no,0,0,0,misc,0,		HT_FALCON,驯鹰术
 128,0,0,0,0,0,0,10,0,no,0,0,0,misc,0,		HT_STEELCROW,钢制喙
