@@ -1,9 +1,22 @@
+2009/11/27[SeAr_1.2.117]
+- 源码:		新毒制造可以创造多于1个成品。
+- 源码:		霸王魂对双手武器也有效。
+- 源码:		添加致命涂毒的Renewal特性，见conf。
+- DB:		修正Fear Breeze的武器需求。
+- DB:		修正Tiger Canon有视Flee。
+- DB:		修正Rampage Blaster伤害范围。
+- DB:		修正Arms Cannon需要箭矢而不是子弹。
+- 源码、DOC:	添加脚本指令getbattlestatus。
+- 源码:		重写卢恩石技能的独立延时系统。
+- 源码:		修正Shadow Spell不需要满足技能需求。
+- 源码:		修正Reproduce可以被新技能覆盖。
+
 2009/11/27[SeAr_1.2.116]
 - 源码:		修正PCDieEvent中传送玩家会复活为0HP。
 - 源码:		移植eA更新14069、14094。
 
 2009/11/26[SeAr_1.2.115]
-- 源码、CONF:	添加脚本指令checkwarg, setwarg。
+- 源码、DOC:	添加脚本指令checkwarg, setwarg。
 - 源码:		修正宠物贡献给玩家的经验可能溢出。
 - 源码、DB、CONF:
 		移植eA更新r14155、r14158、r14161、14165、14167、14168、14170、14172。
