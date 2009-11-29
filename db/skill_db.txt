@@ -926,7 +926,6 @@
 2482,0,8,4,0,0x1,0,5,1,yes,0,0,1,magic,1,		GN_WALLOFTHORN,荆棘墙
 2483,9,6,2,0,0,0,10,1,yes,0,0,0,weapon,0,		GN_CRAZYWEED,疯草
 2484,0,6,1,2,0,0,10,0,no,0,0,0,weapon,0,		GN_CRAZYWEED_ATK,疯草
-//Unfinished
 2485,9,6,2,3,0,0,5,1,yes,0,0,0,magic,0,			GN_DEMONIC_FIRE,恶魔火焰
 2486,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION,火焰膨胀
 2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_SMOKE_POWDER,火焰膨胀 Smoke Powder
@@ -934,7 +933,8 @@
 2489,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_ACID,火焰膨胀 Acid
 2490,9,6,2,0,0,0,5,1,yes,0,0,2:3:4:5:6,none,0,		GN_HELLS_PLANT,地狱植物
 2491,0,6,1,0,0,0,5,1,no,0,0,0,weapon,0,			GN_HELLS_PLANT_ATK,地狱植物 Attack
-2492,0,0,0,0,0,0,5,0,no,0,0,0,none,0,			GN_MANDRAGORA,曼陀罗种植
+2492,9,6,4,0,0x1,0,5,1,yes,0,0,0,none,0,			GN_MANDRAGORA,曼陀罗种植
+//Unfinished
 2493,0,0,0,0,0,0,1,0,no,0,0,0,none,0,			GN_SLINGITEM,道具投掷
 2494,0,0,0,0,0,0,1,0,no,0,0,0,none,0,			GN_CHANGEMATERIAL,变换材料
 2495,0,0,0,0,0,0,2,0,no,0,0,0,none,0,			GN_MIX_COOKING,混合烹饪
