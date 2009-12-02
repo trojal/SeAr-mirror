@@ -1170,7 +1170,7 @@ OnDisable:
 	end;
 }
 
-arug_cas04,143,158,0	script	控制装置01#aru04	111,{
+arug_cas04,136,158,0	script	控制装置01#aru04	111,{
 	set .@GID, GetCastleData("arug_cas04",1);
 	if (getcharid(2) == .@GID) {
 		if (strcharinfo(0) == getguildmaster(.@GID)) {

@@ -65,91 +65,91 @@
 16003,Kalga_Mace,Kalga Mace,4,10,,1500,175,,1,2,0x0004C580,24,2,2,3,100,1,8,{},{},{}
 
 // Mechanic Mado Weapons
-1549,Pile_Bunker,Pile Bunker,4,10,,3000,450,,1,0,0xFFFFFFFF,24,2,2,3,99,0,23,{},{},{}
+1549,穿甲撞针,Pile Bunker,4,10,,3000,450,,1,0,0xFFFFFFFF,24,2,2,3,99,0,23,{},{},{}
 
 // Mechanic Mado Side Arm Weapons
-2139,Flame_Thrower,Flame Thrower,5,20000,,2000,,5,,0,0xFFFFFFFF,24,2,32,,99,0,5,{},{},{}
-2140,Energy_Rune_Guard,Energy Rune Guard,3,10,,10,,,,,,,,,,,,,{},{},{}
+2139,火焰喷射器,Flame Thrower,5,20000,,2000,,5,,0,0xFFFFFFFF,24,2,32,,99,0,5,{},{},{}
+2140,卢恩能量盾,Energy Rune Guard,3,10,,10,,,,,,,,,,,,,{},{},{}
 
-//2794,Magic_Stone_Ring,Magic Stone Ring,3,10,,10,,,,,,,,,,,,,{},{},{}
-//2795,Immature_Apple_Ring,Immature Apple Ring,3,10,,10,,,,,,,,,,,,,{},{},{}
+//2794,魔力的戒指,Magic Stone Ring,3,10,,10,,,,,,,,,,,,,{},{},{}
+2795,青苹果戒指,Immature Apple Ring,3,10,,10,,,,,,,,,,,,,{},{},{}
 //2796,Rocks,Rocks,3,10,,10,,,,,,,,,,,,,{},{},{}
 //2797,Rocks,Rocks,3,10,,10,,,,,,,,,,,,,{},{},{}
 //2798,Test_Item_1,Test Item 1,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Mechanic Mado Accessorys
-2800,Acceleration_Gear,Acceleration Gear,5,100000,,100,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bAgi,2; },{},{}
-2801,Hovering_Booster,Hovering Booster,5,100000,,100,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bAgi,1; },{},{}
-2802,Self_Destruct_Device,Self Destruct Device,5,500000,,1000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{},{},{}
-2803,Shape_Shift,Shape Shift,5,100000,,500,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bInt,3; },{},{}
-2804,Cooling_System,Cooling System,5,100000,,2500,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2805,Magnetic_Field_Generator,Magnetic Field Generator,5,100000,,6000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2806,Barrier_Device,Barrier Device,5,150000,,8000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2807,Repair_Kit,Repair Kit,5,200000,,400,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{},{},{}
-2808,Optical_Camouflage_Generator,Optical Camouflage Generator,5,10,,1000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bAgi,3; },{},{}
-2809,Advanced_Cooling_System,Advanced Cooling System,5,10,,10,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2810,Special_Cooling_System,Special Cooling System,5,10,,10,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2800,加速装置,Acceleration Gear,5,100000,,100,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bAgi,2; },{},{}
+2801,悬浮推进器,Hovering Booster,5,100000,,100,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bAgi,1; },{},{}
+2802,自爆装置,Self Destruct Device,5,500000,,1000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{},{},{}
+2803,变形装置,Shape Shift,5,100000,,500,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bInt,3; },{},{}
+2804,冷却系统,Cooling System,5,100000,,2500,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2805,磁场发生器,Magnetic Field Generator,5,100000,,6000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2806,防御罩,Barrier Device,5,150000,,8000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2807,维修组件,Repair Kit,5,200000,,400,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{},{},{}
+2808,光学迷彩发生器,Optical Camouflage Generator,5,10,,1000,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bAgi,3; },{},{}
+2809,高级冷却系统,Advanced Cooling System,5,10,,10,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2810,特殊冷却系统,Special Cooling System,5,10,,10,,0,,1,0xFFFFFFFF,24,2,136,,99,0,0,{ bonus bDex,1; },{},{}
 
-5516,Hawkeye_1,Hawkeye 1,3,10,,10,,,,,,,,,,,,,{},{},{}
-5517,Hawkeye_2,Hawkeye 2,3,10,,10,,,,,,,,,,,,,{},{},{}
+5516,锐利之眼1,Hawkeye 1,3,10,,10,,,,,,,,,,,,,{},{},{}
+5517,锐利之眼2,Hawkeye 2,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Shadow Chaser Paint And Brushes
-6120,Face_Paint,Face Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
-6121,Makeup_Brush,Makeup Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
-6122,Paint_Brush,Paint Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
-6123,Surface_Paint,Surface Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
+6120,颜面涂料,Face Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
+6121,化妆笔,Makeup Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
+6122,颜料笔,Paint Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
+6123,地面涂料,Surface Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Ranger Flute
-6124,Wolf_Flute,Wolf Flute,3,250,,10,,,,,,,,,,,,,{},{},{}
+6124,狼笛,Wolf Flute,3,250,,10,,,,,,,,,,,,,{},{},{}
 
 // Guillotine Cross Poison Antidote
-6128,Antidote,Antidote,3,10,,10,,,,,,,,,,,,,{},{},{}
+6128,解毒剂,Antidote,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 6144,Something_Tear,Something Tear,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Mechanic Mado Gear Skill Required Items
-6145,Vulcan_Bullet,Vulcan Bullet,3,10,,3,,,,,,,,,,,,,{},{},{}
-6146,Mado/Magic_Gear_Fuel,Mado/Magic Gear Fuel,3,300,,30,,,,,,,,,,,,,{},{},{}
-6147,Liquid_Cold_Bullet,Liquid Cold Bullet,3,100,,10,,,,,,,,,,,,,{},{},{}
+6145,火神子弹,Vulcan Bullet,3,10,,3,,,,,,,,,,,,,{},{},{}
+6146,魔导装甲燃料,Mado/Magic Gear Fuel,3,300,,30,,,,,,,,,,,,,{},{},{}
+6147,液冷子弹,Liquid Cold Bullet,3,100,,10,,,,,,,,,,,,,{},{},{}
 
-6150,House_Key,House Key,3,10,,10,,,,,,,,,,,,,{},{},{}
-6151,Test_Item_2,Test Item 2,3,10,,10,,,,,,,,,,,,,{},{},{}
-6152,Test_Item_3,Test Item 3,3,10,,10,,,,,,,,,,,,,{},{},{}
-6153,Test_Item_4,Test Item 4,3,10,,10,,,,,,,,,,,,,{},{},{}
-6154,Fragmented_Horn_Flute,Fragmented Horn Flute,3,10,,10,,,,,,,,,,,,,{},{},{}
+6150,御宅的钥匙,House Key,3,10,,10,,,,,,,,,,,,,{},{},{}
+6151,巨大镭矿的碎块,Test Item 2,3,10,,10,,,,,,,,,,,,,{},{},{}
+6152,闪亮的水晶,Test Item 3,3,10,,10,,,,,,,,,,,,,{},{},{}
+6153,特别的交换卷轴,Test Item 4,3,10,,10,,,,,,,,,,,,,{},{},{}
+6154,角笛的碎块,Fragmented Horn Flute,3,10,,10,,,,,,,,,,,,,{},{},{}
 
-6156,Payment_Waiting_Report,Payment Waiting Report,3,10,,10,,,,,,,,,,,,,{},{},{}
+6156,等候领取报告,Payment Waiting Report,3,10,,10,,,,,,,,,,,,,{},{},{}
 
-6186,Monkey_Wrench,Monkey Wrench,3,500,,10,,,,,,,,,,,,,{},{},{}
+6186,活动扳手,Monkey Wrench,3,500,,10,,,,,,,,,,,,,{},{},{}
 
 // Warlock's Magic Spellbooks
-6189,Magic_Book_(Fire_Bolt),Magic Book (Fire Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
-6190,Magic_Book_(Cold_Bolt),Magic Book (Cold Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
-6191,Magic_Book_(Lightning_Bolt),Magic Book (Lightning Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
-6192,Magic_Book_(Storm_Gust),Magic Book (Storm Gust),3,10,,10,,,,,,,,,,,,,{},{},{}
-6193,Magic_Book_(Lord_Of_Vermillion),Magic Book (Lord Of Vermillion),3,10,,10,,,,,,,,,,,,,{},{},{}
-6194,Magic_Book_(Meteor_Storm),Magic Book (Meteor Storm),3,10,,10,,,,,,,,,,,,,{},{},{}
-6195,Magic_Book_(Comet),Magic Book (Comet),3,10,,10,,,,,,,,,,,,,{},{},{}
-6196,Magic_Book_(Tetra_Vortex),Magic Book (Tetra Vortex),3,10,,10,,,,,,,,,,,,,{},{},{}
-6197,Magic_Book_(Thunder_Storm),Magic Book (Thunder Storm),3,10,,10,,,,,,,,,,,,,{},{},{}
-6198,Magic_Book_(Jupitel_Thunder),Magic Book (Jupitel Thunder),3,10,,10,,,,,,,,,,,,,{},{},{}
-6199,Magic_Book_(Water_Ball),Magic Book (Water_Ball),3,10,,10,,,,,,,,,,,,,{},{},{}
-6200,Magic_Book_(Heaven's_Drive),Magic Book (Heaven's Drive),3,10,,10,,,,,,,,,,,,,{},{},{}
-6201,Magic_Book_(Earth_Spike),Magic Book (Earth Spike),3,10,,10,,,,,,,,,,,,,{},{},{}
-6202,Magic_Book_(Earth_Strain),Magic Book (Earth Strain),3,10,,10,,,,,,,,,,,,,{},{},{}
-6203,Magic_Book_(Chain_Lightning),Magic Book (Chain Lightning),3,10,,10,,,,,,,,,,,,,{},{},{}
-6204,Magic_Book_(Crimson_Rock),Magic Book (Crimson_Rock),3,10,,10,,,,,,,,,,,,,{},{},{}
-6205,Magic_Book_(Drain_Life),Magic Book (Drain Life),3,10,,10,,,,,,,,,,,,,{},{},{}
+6189,魔法书(火箭术),Magic Book (Fire Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
+6190,魔法书(冰箭术),Magic Book (Cold Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
+6191,魔法书(雷击术),Magic Book (Lightning Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
+6192,魔法书(暴风雪),Magic Book (Storm Gust),3,10,,10,,,,,,,,,,,,,{},{},{}
+6193,魔法书(怒雷强击),Magic Book (Lord Of Vermilion),3,10,,10,,,,,,,,,,,,,{},{},{}
+6194,魔法书(陨石术),Magic Book (Meteor Storm),3,10,,10,,,,,,,,,,,,,{},{},{}
+6195,魔法书(破坏的彗星),Magic Book (Comet),3,10,,10,,,,,,,,,,,,,{},{},{}
+6196,魔法书(四相漩涡),Magic Book (Tetra Vortex),3,10,,10,,,,,,,,,,,,,{},{},{}
+6197,魔法书(雷爆术),Magic Book (Thunder Storm),3,10,,10,,,,,,,,,,,,,{},{},{}
+6198,魔法书(雷鸣术),Magic Book (Jupitel Thunder),3,10,,10,,,,,,,,,,,,,{},{},{}
+6199,魔法书(水球术),Magic Book (Water_Ball),3,10,,10,,,,,,,,,,,,,{},{},{}
+6200,魔法书(崩裂术),Magic Book (Heaven's Drive),3,10,,10,,,,,,,,,,,,,{},{},{}
+6201,魔法书(地震术),Magic Book (Earth Spike),3,10,,10,,,,,,,,,,,,,{},{},{}
+6202,魔法书(大地的扭曲),Magic Book (Earth Strain),3,10,,10,,,,,,,,,,,,,{},{},{}
+6203,魔法书(连锁闪电),Magic Book (Chain Lightning),3,10,,10,,,,,,,,,,,,,{},{},{}
+6204,魔法书(猩红岩石),Magic Book (Crimson_Rock),3,10,,10,,,,,,,,,,,,,{},{},{}
+6205,魔法书(生命吸收),Magic Book (Drain Life),3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Genetic Skill Required Items
-6210,Thorny_Seed,Thorny Seed,3,10,,10,,,,,,,,,,,,,{},{},{}
-6211,Bloodsucker_Seed,Bloodsucker Seed,3,10,,10,,,,,,,,,,,,,{},{},{}
-6212,Bomb_Mushroom_Spores,Bomb Mushroom Spores,3,10,,10,,,,,,,,,,,,,{},{},{}
-6213,Explosive_Powder,Explosive Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
-6214,Smokescreen_Powder,Smokescreen Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
-6215,Tear_Gas,Tear Gas,3,10,,10,,,,,,,,,,,,,{},{},{}
-6216,Oil_Bottle,Oil Bottle,3,10,,10,,,,,,,,,,,,,{},{},{}
-6217,Mandragora_Flowerpot,Mandragora Flowerpot,3,10,,10,,,,,,,,,,,,,{},{},{}
+6210,刺藤的种子,Thorny Seed,3,10,,10,,,,,,,,,,,,,{},{},{}
+6211,吸血植物的种子,Bloodsucker Seed,3,10,,10,,,,,,,,,,,,,{},{},{}
+6212,炸弹香菇的种子,Bomb Mushroom Spores,3,10,,10,,,,,,,,,,,,,{},{},{}
+6213,爆炸粉,Explosive Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+6214,烟雾粉,Smokescreen Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+6215,催泪瓦斯,Tear Gas,3,10,,10,,,,,,,,,,,,,{},{},{}
+6216,油瓶,Oil Bottle,3,10,,10,,,,,,,,,,,,,{},{},{}
+6217,曼陀萝盆栽,Mandragora Flowerpot,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // New Refine Items
 //6223,Kalunium,
@@ -158,28 +158,28 @@
 //6226,High_Density_Bradium,
 
 // Genetic Item Creation Ingredients
-6244,Dark_Powder,Dark Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
-6245,Black_Powder,Black Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
-6246,Yellow_Powder,Yellow Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
-6247,White_Powder,White Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
-6248,Stew_Pot,Stew Pot,3,10,,10,,,,,,,,,,,,,{},{},{}
-6249,Savage_Meat,Savage Meat,3,10,,10,,,,,,,,,,,,,{},{},{}
-6250,Iron_Cooking_Skewer,Iron Cooking Skewer,3,10,,10,,,,,,,,,,,,,{},{},{}
-6251,Bituminous_Coal,Bituminous Coal,3,10,,10,,,,,,,,,,,,,{},{},{}
-6252,Wolf's_Blood,Wolf's Blood,3,10,,10,,,,,,,,,,,,,{},{},{}
-6253,Cold_Ice,Cold Ice,3,10,,10,,,,,,,,,,,,,{},{},{}
-6254,Seasoned_Tough_Meat,Seasoned Tough Meat,3,10,,10,,,,,,,,,,,,,{},{},{}
-6255,Large_Pan,Large Pan,3,10,,10,,,,,,,,,,,,,{},{},{}
-6256,Powdered_Ice,Powdered Ice,3,10,,10,,,,,,,,,,,,,{},{},{}
-6257,Ice_Crystal,Ice Crystal,3,10,,10,,,,,,,,,,,,,{},{},{}
-6258,Comodo_Tropical_Fruit,Comodo Tropical Fruit,3,10,,10,,,,,,,,,,,,,{},{},{}
-6259,Drosera_Feeler,Drosera Feeler,3,10,,10,,,,,,,,,,,,,{},{},{}
-6260,Petite_Tail,Petite Tail,3,10,,10,,,,,,,,,,,,,{},{},{}
-6261,Fine_Noodles,Fine Noodles,3,10,,10,,,,,,,,,,,,,{},{},{}
-6262,Cold_Broth,Cold Broth,3,10,,10,,,,,,,,,,,,,{},{},{}
-6263,Coconut,Coconut,3,10,,10,,,,,,,,,,,,,{},{},{}
-6264,Melon,Melon,3,10,,10,,,,,,,,,,,,,{},{},{}
-6265,Pineapple,Pineapple,3,10,,10,,,,,,,,,,,,,{},{},{}
+6244,火药粉,Dark Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+6245,黑炭粉,Black Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+6246,黄色粉末,Yellow Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+6247,白色粉末,White Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+6248,杂烩菜,Stew Pot,3,10,,10,,,,,,,,,,,,,{},{},{}
+6249,野猪肉,Savage Meat,3,10,,10,,,,,,,,,,,,,{},{},{}
+6250,料理用铁串_Skewer,Iron Cooking Skewer,3,10,,10,,,,,,,,,,,,,{},{},{}
+6251,黑炭,Bituminous Coal,3,10,,10,,,,,,,,,,,,,{},{},{}
+6252,野狼的血,Wolf's Blood,3,10,,10,,,,,,,,,,,,,{},{},{}
+6253,寒冷的冰块,Cold Ice,3,10,,10,,,,,,,,,,,,,{},{},{}
+6254,药味的牛肉,Seasoned Tough Meat,3,10,,10,,,,,,,,,,,,,{},{},{}
+6255,大锅子,Large Pan,3,10,,10,,,,,,,,,,,,,{},{},{}
+6256,冰的碎片,Powdered Ice,3,10,,10,,,,,,,,,,,,,{},{},{}
+6257,冰的结晶,Ice Crystal,3,10,,10,,,,,,,,,,,,,{},{},{}
+6258,克魔岛热带水果,Comodo Tropical Fruit,3,10,,10,,,,,,,,,,,,,{},{},{}
+6259,捕虫草的触手,Drosera Feeler,3,10,,10,,,,,,,,,,,,,{},{},{}
+6260,毕帝特龙的尾巴,Petite Tail,3,10,,10,,,,,,,,,,,,,{},{},{}
+6261,素面,Fine Noodles,3,10,,10,,,,,,,,,,,,,{},{},{}
+6262,冰冷的肉汁,Cold Broth,3,10,,10,,,,,,,,,,,,,{},{},{}
+6263,椰子,Coconut,3,10,,10,,,,,,,,,,,,,{},{},{}
+6264,哈密瓜,Melon,3,10,,10,,,,,,,,,,,,,{},{},{}
+6265,菠萝,Pineapple,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // 3-2 Jobs Quest Items ???
 //6266,Test_Item_27,Test Item 27,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -197,15 +197,15 @@
 //6278,Test_Item_39,Test Item 39,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Genetic Guide's And Manurals
-6279,Apple_Bomb_Guidebook,Apple Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
-6280,Pineapple_Bomb_Guidebook,Pineapple Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
-6281,Coconut_Bomb_Guidebook,Coconut Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
-6282,Melon_Bomb_Guidebook,Melon Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
-6283,Banana_Bomb_Guidebook,Banana Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
-6284,Plant_Genetic_Cultivation_Guide,Plant Genetic Cultivation Guide,3,10,,10,,,,,,,,,,,,,{},{},{}
-6285,Improved_Potion_Creation_Manual,Improved Potion Creation Manual,3,10,,10,,,,,,,,,,,,,{},{},{}
+6279,苹果炸弹制作说明书,Apple Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
+6280,菠萝炸弹制作说明书Pineapple_Bomb_Guidebook,Pineapple Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
+6281,椰子炸弹制作说明书Coconut_Bomb_Guidebook,Coconut Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
+6282,哈密瓜炸弹制作说明书Melon_Bomb_Guidebook,Melon Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
+6283,香蕉炸弹制作说明书Banana_Bomb_Guidebook,Banana Bomb Guidebook,3,10,,10,,,,,,,,,,,,,{},{},{}
+6284,植物种子制作说明书Plant_Genetic_Cultivation_Guide,Plant Genetic Cultivation Guide,3,10,,10,,,,,,,,,,,,,{},{},{}
+6285,高级药水制作说明书Improved_Potion_Creation_Manual,Improved Potion Creation Manual,3,10,,10,,,,,,,,,,,,,{},{},{}
 
-6297,Empty_Potion_Bottle,Empty Potion Bottle,3,10,,10,,,,,,,,,,,,,{},{},{}
+6297,空药水瓶,Empty Potion Bottle,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Guillotine Cross Poison Ingredients
 7931,Poison_Kit,Poison Manufacture Kit,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -217,45 +217,45 @@
 7937,Poison_Herb_Amoena,Amoena,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Rune Knight Rune Stone Ingredients
-7938,Light_Granule,Light Partacle,3,10,,10,,,,,,,,,,,,,{},{},{}
-7939,Elder_Branch,Elder's Branch,3,10,,10,,,,,,,,,,,,,{},{},{}
+7938,光的粒子,Light Partacle,3,10,,10,,,,,,,,,,,,,{},{},{}
+7939,长老树枝,Elder's Branch,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Ranger Special Alloy Trap
-7940,Special_Alloy_Trap,Special Alloy Trap,3,10,,10,,,,,,,,,,,,,{},{},{}
+7940,特殊合金陷阱,Special Alloy Trap,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Genetic Books And Formula's
-11022,Mix_Cooking_Ingredient_Book_1,Mix Cooking Ingredient Book 1,3,10,,10,,,,,,,,,,,,,{},{},{}
-11023,Vitality_Boost_Research_Book,Vitality Boost Research Book,3,10,,10,,,,,,,,,,,,,{},{},{}
-11024,Energy_Drink_Formula,Energy Drink Formula,3,10,,10,,,,,,,,,,,,,{},{},{}
+11022,组合料理制作说明书,Mix Cooking Ingredient Book 1,3,10,,10,,,,,,,,,,,,,{},{},{}
+11023,(HP/SP)增加药水制作说明书,Vitality Boost Research Book,3,10,,10,,,,,,,,,,,,,{},{},{}
+11024,能量饮料制作说明书,Energy Drink Formula,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Minstrel And Wanderer Cough Drop
-11513,Cough_Drop,Cough Drop,3,10,,10,,,,,,,,,,,,,{},{},{}
+11513,润喉糖,Cough Drop,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Genetic Cure Free
-//11518,Cure_Free,Cure Free,3,10,,10,,,,,,,,,,,,,{},{},{}
+11518,大治愈药水,Cure Free,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Arch Bishop Ancilla
-12333,Ancilla,Ancilla,0,100,,10,,,,,0x00000100,24,2,,,,,,{ percentheal 0,15; },{},{}
+12333,魔力石,Ancilla,0,100,,10,,,,,0x00000100,24,2,,,,,,{ percentheal 0,15; },{},{}
 
 // Ranger Special Alloy Trap Box
-12341,Special_Alloy_Trap_Box,Special Alloy Trap Box,2,,,10,,,,,0xFFFFFFFF,24,2,,,,,,{ getitem 7940,100; },{},{}
+12341,特殊合金陷阱箱子,Special Alloy Trap Box,2,,,10,,,,,0xFFFFFFFF,24,2,,,,,,{ getitem 7940,100; },{},{}
 
-12380,Former_Experimental_Flute,Former Experimental Flute,3,10,,10,,,,,,,,,,,,,{},{},{}
-12381,Ancient_Language_Scroll_1,Ancient Language Scroll 1,3,10,,10,,,,,,,,,,,,,{},{},{}
-12382,Ancient_Language_Scroll_2,Ancient Language Scroll 2,3,10,,10,,,,,,,,,,,,,{},{},{}
-12383,Vulcan_Bullet_Magazine,Vulcan Bullet Magazine,2,10,,500,,,,,,,,,,,,,{ getitem 6145,1000; },{},{}
-12384,Magical_Ruby_1,Magical Ruby 1,3,10,,10,,,,,,,,,,,,,{},{},{}
-12385,Magical_Ruby_2,Magical Ruby 2,3,10,,10,,,,,,,,,,,,,{},{},{}
-12386,Magical_Ruby_3,Magical Ruby 3,3,10,,10,,,,,,,,,,,,,{},{},{}
-12387,Magical_Ruby_4,Magical Ruby 4,3,10,,10,,,,,,,,,,,,,{},{},{}
+12380,沙漠幼狼召唤书,Former Experimental Flute,3,10,,10,,,,,,,,,,,,,{},{},{}
+12381,古代语言卷轴1,Ancient Language Scroll 1,3,10,,10,,,,,,,,,,,,,{},{},{}
+12382,古代语言卷轴2,Ancient Language Scroll 2,3,10,,10,,,,,,,,,,,,,{},{},{}
+12383,火神子弹盒,Vulcan Bullet Magazine,2,10,,500,,,,,,,,,,,,,{ getitem 6145,1000; },{},{}
+12384,彩虹宝石1,Magical Ruby 1,3,10,,10,,,,,,,,,,,,,{},{},{}
+12385,彩虹宝石2,Magical Ruby 2,3,10,,10,,,,,,,,,,,,,{},{},{}
+12386,彩虹宝石3,Magical Ruby 3,3,10,,10,,,,,,,,,,,,,{},{},{}
+12387,彩虹宝石4,Magical Ruby 4,3,10,,10,,,,,,,,,,,,,{},{},{}
 //12388,Something_Something_Rune_Stone_1,Something Something Rune Stone 1,3,10,,10,,,,,,,,,,,,,{},{},{}
 //12389,Something_Something_Rune_Stone_2,Something Something Rune Stone 2,3,10,,10,,,,,,,,,,,,,{},{},{}
 //12390,Something_Something_Rune_Stone_3,Something Something Rune Stone 3,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Mechanic Mado Gear Repair Items
-12392,Repair_A,Repair A,3,10,,100,,,,,,,,,,,,,{},{},{}
-12393,Repair_B,Repair B,3,10,,140,,,,,,,,,,,,,{},{},{}
-12394,Repair_C,Repair C,3,10,,180,,,,,,,,,,,,,{},{},{}
+12392,修理道具A,Repair A,3,10,,100,,,,,,,,,,,,,{},{},{}
+12393,修理道具B,Repair B,3,10,,140,,,,,,,,,,,,,{},{},{}
+12394,修理道具C,Repair C,3,10,,180,,,,,,,,,,,,,{},{},{}
 
 // Genetic Created Boosting Items
 12417,Boost_500,Boost 500,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -279,6 +279,7 @@
 12435,Black_Mass,Black Mass,3,10,,10,,,,,,,,,,,,,{},{},{}
 12436,Vitata_500,Vitata 500,3,10,,10,,,,,,,,,,,,,{},{},{}
 12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,3,10,,10,,,,,,,,,,,,,{},{},{}
+
 12475,Cure_Photo,Cure Photo,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Guillotine Cross Poisons
@@ -310,15 +311,15 @@
 12738,Runstone_Rare,Rare Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 25; },{},{}
 
 // Genetic Created Bombs And Lumps
-13260,Apple_Bomb,Apple Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
-13261,Coconut_Bomb,Coconut Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
-13262,Melon_Bomb,Melon Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
-13263,Pineapple_Bomb,Pineapple Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
-13264,Banana_Bomb,Banana Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
-13265,Black_Lump,Black Lump,3,10,,10,,,,,,,,,,,,,{},{},{}
-13266,Hard_Black_Lump,Hard Black Lump,3,10,,10,,,,,,,,,,,,,{},{},{}
-13267,Extremely_Hard_Black_Lump,Extremely Hard Black Lump,3,10,,10,,,,,,,,,,,,,{},{},{}
-13268,Mysterious_Powder,Mysterious Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
+13260,苹果炸弹,Apple Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
+13261,椰子炸弹_Bomb,Coconut Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
+13262,哈密瓜炸弹,Melon Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
+13263,菠萝炸弹,Pineapple Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
+13264,香蕉炸弹,Banana Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
+13265,黑色块,Black Lump,3,10,,10,,,,,,,,,,,,,{},{},{}
+13266,坚硬的黑色块,Hard Black Lump,3,10,,10,,,,,,,,,,,,,{},{},{}
+13267,非常坚硬的黑色块,Extremely Hard Black Lump,3,10,,10,,,,,,,,,,,,,{},{},{}
+13268,神秘粉末,Mysterious Powder,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Generic Created Throwable Booster Items
 13269,Throwing_Boost_500,Throwing Boost 500,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -345,7 +346,7 @@
 13290,Throwing_Black_Mass,Throwing Black Mass,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Unknown Item. Rune Knight Armor???
-15002,Rune_Plate,Rune Plate,3,10,,10,,,,,,,,,,,,,{},{},{}
+15002,卢恩铠甲,Rune Plate,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // New Refine Item Boxes
 //16258,High_Density_Bradium_Box(5),
@@ -358,9 +359,9 @@
 //16265,High_Density_Kalunium(10),
 
 // Mechanic Mado Gear Cannonball Ammo
-18000,Cannon_Ball,Cannon Ball,10,100,,10,100,,,,0xFFFFFFFF,24,2,32768,,1,,3,{},{},{}
-18001,Holy_Cannon_Ball,Holy Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Holy; },{},{}
-18002,Dark_Cannon_Ball,Dark Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Dark; },{},{}
-18003,Soul_Cannon_Ball,Soul Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Ghost; },{},{}
-18004,Iron_Cannon_Ball,Iron Cannon Ball,10,500,,10,250,,,,0xFFFFFFFF,24,2,32768,,1,,3,{},{},{}
+18000,加农炮弹,Cannon Ball,10,100,,10,100,,,,0xFFFFFFFF,24,2,32768,,1,,3,{},{},{}
+18001,圣_加农炮弹,Holy Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Holy; },{},{}
+18002,暗_加农炮弹,Dark Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Dark; },{},{}
+18003,念_加农炮弹,Soul Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Ghost; },{},{}
+18004,钢_加农炮弹,Iron Cannon Ball,10,500,,10,250,,,,0xFFFFFFFF,24,2,32768,,1,,3,{},{},{}
 

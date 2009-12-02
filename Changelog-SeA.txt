@@ -1,5 +1,10 @@
+2009/12/02[SeAr_1.2.128]
+- DB:		汉化部分三转道具DB。
+- DB:		修正一些DB错误。
+- 源码:		修正城堡投资效果。
+
 2009/12/01[SeAr_1.2.127]
-- 源码:		修正Pinpoint Attack没有增加Hit。
+- 源码:		修正Pinpoint Attack没有增加Cri。
 - 源码:		心神凝聚不再自动咏唱Sensitive Keen。
 
 2009/12/01[SeAr_1.2.126]
