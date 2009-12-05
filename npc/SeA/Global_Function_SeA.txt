@@ -22,3 +22,22 @@ function	script	Give_to_All	{
 			if( !(.@i%100) ) sleep2 1; //prevent from infinite loops
 		}
 }
+
+function	script	cmd_mapmove	{
+	set .@m$,@cmd_para$[0];
+	set .@x,atoi(@cmd_para$[1]);
+	set .@y,atoi(@cmd_para$[2]);
+	if( checkcell(.@m$,.@x,.@y,cell_chknopass) ) {
+		dispmes 2;
+		end;
+	}
+	if( getmapflag(.@m$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes 247;
+		end;
+	}
+	if( getmapflag(.@m$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes 248;
+		end;
+	}
+	warp .@m$,.@x,.@y;
+}
