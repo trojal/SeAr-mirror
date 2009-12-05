@@ -1,3 +1,8 @@
+2009/12/05[SeAr_1.2.132]
+- 源码: 	修正Enchant Blade只影响技能攻击。
+- 源码: 	修正Deep Sleep中可以移动、攻击、使用道具，没有状态显示。
+- 源码: 	修正Arrullo没有Deep Sleep效果。
+
 2009/12/04[SeAr_1.2.131]
 - 源码: 	实装Autobonus缓存。
 - CONF、PLUGINS:
