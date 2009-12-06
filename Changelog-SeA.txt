@@ -1,3 +1,9 @@
+2009/12/06[SeAr_1.3.04]
+- 源码、DB、NPC、CONF:
+		GM指令脚本化第四轮。
+- 源码、CONF:	删除非sql log功能
+- 源码:		修正修改指令头后/mm, /shift无法使用
+
 2009/12/06[SeAr_1.3.03]
 - 源码、DB、NPC、CONF:
 	 	GM指令脚本化——去除barricade指令；转化save, load。

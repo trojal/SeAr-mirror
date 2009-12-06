@@ -5,37 +5,65 @@
 // 参数数量最大值为128,即@cmd_para$[127]
 // 数字参数请使用atoi(@cmd_para$[])
 
-//打开悬赏窗口
-w&r,0,99,0,0,{ if ((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; }
+// 打开悬赏窗口
+w&r,0,99,0,0,{ if((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }
 
-//租赁指令
+// 租赁指令
 rentitem,99,99,2,2,{ rentitem atoi(@cmd_para$[0]),atoi(@cmd_para$[1]); }
 
-//给全服物品, 仅支持id，不支持物品名
-//	@giveall 4001 10	-> 给在线每人10张波利卡片
-//	@giveall 1 1000000	-> 给在线每人100W
-//	@giveall 2 100		-> 给在线每人100点points
-//	@giveall 3 50		-> 给在线每人50点cash
+// 给全服物品, 仅支持id，不支持物品名
+// @giveall 4001 10	-> 给在线每人10张波利卡片
+// @giveall 1 1000000	-> 给在线每人100W
+// @giveall 2 100		-> 给在线每人100点points
+// @giveall 3 50		-> 给在线每人50点cash
 giveall,99,99,2,2,{ callfunc "Give_to_All"; }
 
-//设置变量
-//	set PC_Score 100000
+// 设置变量
+// set PC_Score 100000
 set,99,99,2,2,{ setd @cmd_para$[0],@cmd_para$[1]; }
 
 // 传送你到指定地图指定坐标 (同 /mm)
-//rura,40,40,1,3,{ callfunc "cmd_mapmove"; }
-//warp,40,40,1,3,{ callfunc "cmd_mapmove"; }
+// rura,40,40,1,3,{ callfunc "cmd_mapmove"; }
+// warp,40,40,1,3,{ callfunc "cmd_mapmove"; }
 mapmove,40,40,1,3,{ callfunc "cmd_mapmove"; }
+
 // 传送自己到某人的位置 (同 /shift)
+// warpto,20,20,1,1,{ callfunc "cmd_jumpto"; }
+// goto,20,20,1,1,{ callfunc "cmd_jumpto"; }
 jumpto,20,20,1,1,{ callfunc "cmd_jumpto"; }
-//warpto,20,20,1,1,{ callfunc "cmd_jumpto"; }
-//goto,20,20,1,1,{ callfunc "cmd_jumpto"; }
+
 // 瞬移到地图的其他地方
 jump,40,40,0,2,{ callfunc "cmd_jump"; }
+
 // 查找某人所在的地图，如果没有目标玩家则返回自身坐标
 where,1,1,1,1,{ callfunc "cmd_where"; }
+
 // 设置你的重生点
 save,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; save .@m$,.@x,.@y; dispmes msg(6); }
+
 // 传送到你最后保存的地方
+// return,40,40,0,0,{ callfunc "cmd_load"; }
 load,40,40,0,0,{ callfunc "cmd_load"; }
-//return,40,40,0,0,{ callfunc "cmd_load"; }
+
+// 开始结束公会战
+agitstart,60,60,0,0,{ if( agitstart() ) dispmes msg(72); else dispmes msg(73); }
+agitstart2,60,60,0,0,{ if( agitstart2() ) dispmes msg(403); else dispmes msg(404); }
+agitend,60,60,0,0,{ if( agitend() ) dispmes msg(74); else dispmes msg(75); }
+agitend2,60,60,0,0,{ if( agitend2() ) dispmes msg(405); else dispmes msg(406); }
+
+// PVP/GVG/CAMP开启关闭
+gvgon,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; if( gvgon(.@m$) ) dispmes msg(34); else dispmes msg(163); }
+pvpon,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; if( pvpon(.@m$) ) dispmes msg(32); else dispmes msg(161); }
+gvgoff,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; if( gvgoff(.@m$) ) dispmes msg(33); else dispmes msg(162); }
+pvpoff,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; if( pvpoff(.@m$) ) dispmes msg(31); else dispmes msg(160); }
+campon,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; campon(.@m$); dispmes "阵营模式已经打开"; }
+campon2,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; campon(.@m$,2); dispmes "阵营模式(显伤害)已经打开"; }
+campoff,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; campoff(.@m$); dispmes "阵营模式已经关闭"; }
+
+// 设定当前地图内是否可以使用某些技能
+skillon,80,80,0,0,{ getmapxy .@m$,.@x,.@y,0; setmapflag(.@m$,mf_noskill); dispmes msg(244); }
+skilloff,80,80,0,0,{ getmapxy .@m$,.@x,.@y,0; removemapflag(.@m$,mf_noskill); dispmes msg(243); }
+
+// 增加/减少你的现金点或者卡普拉点
+cash,60,60,0,0,{ set .@i, atoi(@cmd_para$[0]); set #CASHPOINTS, #CASHPOINTS+.@i; dispmes "得到"+.@i+"现金点数"; }
+points,60,60,0,0,{ set .@i, atoi(@cmd_para$[0]); set #KAFRAPOINTS, #KAFRAPOINTS+.@i; dispmes "得到"+.@i+"卡普拉点数"; }
