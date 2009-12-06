@@ -8,7 +8,7 @@ function	script	Give_to_All	{
 	if( set(.@num,query_sql2("select account_id from `char` where online = \"1\"",.@onlineaid)) > 0 )
 		for( set .@i,0; .@i<.@num; set .@i,.@i+1 )
 		{
-			if(isloggedin(getd(".@onlineaid"+.@i)))
+			if(isloggedin(getd(".@onlineaid"+.@i)) == 1)
 			{
 				attachrid getd(".@onlineaid"+.@i);
 				switch(.@para1)
@@ -27,17 +27,102 @@ function	script	cmd_mapmove	{
 	set .@m$,@cmd_para$[0];
 	set .@x,atoi(@cmd_para$[1]);
 	set .@y,atoi(@cmd_para$[2]);
+	if( !.@x && !.@y ) ; else
 	if( checkcell(.@m$,.@x,.@y,cell_chknopass) ) {
-		dispmes 2;
-		end;
+		dispmes msg(2);
+		set .@x,0;
+		set .@y,0;
 	}
 	if( getmapflag(.@m$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
-		dispmes 247;
+		dispmes msg(247);
 		end;
 	}
 	if( getmapflag(.@m$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
-		dispmes 248;
+		dispmes msg(248);
 		end;
 	}
-	warp .@m$,.@x,.@y;
+	if( warp(.@m$,.@x,.@y) ) {
+		dispmes msg(1);
+		end;
+	}
+	dispmes msg(0);	
+}
+
+function	script	cmd_jumpto	{
+	set .@n$,@cmd_para$[0];
+	set .@i,getcharid(3,.@n$);
+	if( HP == 0 ) {
+		dispmes "死亡时无法传送";
+		end;
+	}
+	if( !isloggedin(.@i) ) {
+		dispmes msg(3);
+		end;
+	}
+	getmapxy .@m1$,.@x,.@y,0;
+	if( getmapflag(.@m1$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes msg(248);
+		end;
+	}
+	set .@j,getcharid(3);
+	attachrid .@i;
+	set .@n$, strcharinfo(0);
+	getmapxy .@m2$,.@x,.@y,0;
+	attachrid .@j;
+	if( getmapflag(.@m2$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes msg(247);
+		end;
+	}
+	if( warp(.@m2$,.@x,.@y) ) {
+		dispmes msg(1);
+		end;
+	}
+	dispmes msg(4,.@n$);
+}
+
+function	script	cmd_jump	{
+	set .@x,atoi(@cmd_para$[0]);
+	set .@y,atoi(@cmd_para$[1]);
+	if( HP == 0 ) {
+		dispmes "死亡时无法传送";
+		end;
+	}
+	getmapxy .@m$,.@i,.@j,0;
+	if( !.@x && !.@y ) ; else
+	if( checkcell(.@m$,.@x,.@y,cell_chknopass) ) {
+		dispmes msg(2);
+		set .@x,0;
+		set .@y,0;
+	}
+	if( getmapflag(.@m$,mf_noteleport) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes msg(248);
+		end;
+	}
+	if( warp(.@m$,.@x,.@y) ) {
+		dispmes msg(1);
+		end;
+	}
+	getmapxy .@m$,.@x,.@y,0;
+	dispmes msg(5,.@x,.@y);
+}
+
+function	script	cmd_where	{
+	set .@n$,@cmd_para$[0];
+	set .@i,getcharid(3,.@n$);
+	if( !isloggedin(.@i) ) {
+		dispmes msg(3);
+		end;
+	}
+	if( getbattleflag("hide_GM_session") && getgmlevel() < getgmlevel(.@i) &&
+		!(getbattleflag("who_display_aid") && getgmlevel() >= getbattleflag("who_display_aid"))
+	) {
+		dispmes msg(3);
+		end;
+	}
+	set .@j,getcharid(3);
+	attachrid .@i;
+	set .@n$, strcharinfo(0);
+	getmapxy .@m$,.@x,.@y,0;
+	attachrid .@j;
+	dispmes .@n$+" "+.@m$+" "+.@x+" "+.@y;
 }

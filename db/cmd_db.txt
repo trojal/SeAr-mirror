@@ -22,7 +22,15 @@ giveall,99,99,2,2,{ callfunc "Give_to_All"; }
 //	set PC_Score 100000
 set,99,99,2,2,{ setd @cmd_para$[0],@cmd_para$[1]; }
 
-// 传送你到指定地图指定坐标 (also /mm or /mapmove)
-rura,40,40,1,3,{ callfunc "cmd_mapmove"; }
-warp,40,40,1,3,{ callfunc "cmd_mapmove"; }
+// 传送你到指定地图指定坐标 (同 /mm)
+//rura,40,40,1,3,{ callfunc "cmd_mapmove"; }
+//warp,40,40,1,3,{ callfunc "cmd_mapmove"; }
 mapmove,40,40,1,3,{ callfunc "cmd_mapmove"; }
+// 传送自己到某人的位置 (同 /shift)
+jumpto,20,20,1,1,{ callfunc "cmd_jumpto"; }
+//warpto,20,20,1,1,{ callfunc "cmd_jumpto"; }
+//goto,20,20,1,1,{ callfunc "cmd_jumpto"; }
+// 瞬移到地图的其他地方
+jump,40,40,0,2,{ callfunc "cmd_jump"; }
+// 查找某人所在的地图，如果没有目标玩家则返回自身坐标
+where,1,1,1,1,{ callfunc "cmd_where"; }
