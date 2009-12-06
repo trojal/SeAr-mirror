@@ -34,3 +34,8 @@ jumpto,20,20,1,1,{ callfunc "cmd_jumpto"; }
 jump,40,40,0,2,{ callfunc "cmd_jump"; }
 // 查找某人所在的地图，如果没有目标玩家则返回自身坐标
 where,1,1,1,1,{ callfunc "cmd_where"; }
+// 设置你的重生点
+save,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; save .@m$,.@x,.@y; dispmes msg(6); }
+// 传送到你最后保存的地方
+load,40,40,0,0,{ callfunc "cmd_load"; }
+//return,40,40,0,0,{ callfunc "cmd_load"; }

@@ -126,3 +126,17 @@ function	script	cmd_where	{
 	attachrid .@j;
 	dispmes .@n$+" "+.@m$+" "+.@x+" "+.@y;
 }
+
+function	script	cmd_load	{
+	if( getmapflag(getsavepoint(0), mf_nowarpto) &&  getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes msg(249);
+		end;
+	}
+	getmapxy .@m$,.@x,.@y,0;
+	if ( getmapflag(.@m$, mf_nowarp) &&  getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+		dispmes msg(248);
+		end;
+	}
+	warp(getsavepoint(0),getsavepoint(1),getsavepoint(2));
+	dispmes msg(7);
+}

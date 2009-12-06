@@ -1,3 +1,7 @@
+2009/12/06[SeAr_1.3.03]
+- 源码、DB、NPC、CONF:
+	 	GM指令脚本化——去除barricade指令；转化save, load。
+
 2009/12/06[SeAr_1.3.02]
 - 源码、DB、NPC、CONF:
 	 	GM指令脚本化——/shift, @jump, @where指令。
