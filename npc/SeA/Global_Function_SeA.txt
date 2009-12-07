@@ -27,6 +27,10 @@ function	script	cmd_mapmove	{
 	set .@m$,@cmd_para$[0];
 	set .@x,atoi(@cmd_para$[1]);
 	set .@y,atoi(@cmd_para$[2]);
+	if( !existmap(.@m$) ) {
+		dispmes msg(1);
+		end;
+	}
 	if( !.@x && !.@y ) ; else
 	if( checkcell(.@m$,.@x,.@y,cell_chknopass) ) {
 		dispmes msg(2);
