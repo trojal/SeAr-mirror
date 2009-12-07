@@ -753,9 +753,28 @@ spl_in02
 bat_c01 
 bat_c02 
 bat_c03
+brasilis
+job3_war02
+job3_war01
+job3_rune02
+job3_rune01
+job3_rang02
+job3_rang01
+job3_guil03
+job3_guil02
+job3_guil01
+job3_arch02
+job3_arch01
+moc_para01
+bra_dun02
+bra_dun01
+bra_fild01
+bra_in01
+s_atelier
+job3_gen01
+siege_test
 
 // Only add maps under this line if they are not standard maps!
-
 
 //======================================================================================
 // - Other/Extra maps -
