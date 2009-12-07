@@ -666,7 +666,7 @@
 2005,-2,6,1,4,0x02,3,5,1,no,0,0,0,weapon,2,	RK_WINDCUTTER,裂风	
 2006,-5,6,1,0,0x2,3,5,1,no,0,0,0,weapon,1,	RK_IGNITIONBREAK,引爆
 2007,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		RK_DRAGONTRAINING,训龙熟练度
-2008,-2,6,1,3,0x02,2,10,1,no,0,0,0,weapon,0,	RK_DRAGONBREATH,龙息术
+2008,-2,6,1,3,0x42,2,10,1,no,0,0,0,weapon,0,	RK_DRAGONBREATH,龙息术
 2009,0,6,4,0,0x3,3:4:5:6:7,5,1,no,0,0,0,none,2,	RK_DRAGONHOWLING,龙咆哮
 2010,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RK_RUNEMASTERY,符文使用熟练度
 2011,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_MILLENNIUMSHIELD,千禧盾
