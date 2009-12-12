@@ -10,7 +10,7 @@
 // 登记处NPC事项
 // *********************************************************************
 
-bat_room,57,97,4	script	霍厄斯战场-02登记处::Fl2R_吉永军	418,{
+bat_room,57,97,4	script	霍厄斯战场-02登记处::Fl2R_Guillaume	418,{
 	end;
 OnInit:
 	waitingroom "战区 10 玩家",10,"Flavius_BG2::OnGuillaumeJoin",1;
@@ -20,7 +20,7 @@ OnEnterBG:
 	end;
 }
 
-bat_room,57,74,0	script	霍厄斯战场-02登记处::Fl2R_克勒亚军	414,{
+bat_room,57,74,0	script	霍厄斯战场-02登记处::Fl2R_Croix	414,{
 	end;
 OnInit:
 	waitingroom "战区 10 玩家",10,"Flavius_BG2::OnCroixJoin",1;

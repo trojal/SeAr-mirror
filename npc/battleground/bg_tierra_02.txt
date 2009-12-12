@@ -10,7 +10,7 @@
 // 登记处NPC事项
 // *********************************************************************
 
-bat_room,85,97,4	script	提尔雅峡谷-02登记处::TV2R_吉永军	418,{
+bat_room,85,97,4	script	提尔雅峡谷-02登记处::TV2R_Guillaume	418,{
 	end;
 OnInit:
 	waitingroom "战区 10 玩家",10,"Tierra_BG2::OnGuillaumeJoin",1;
@@ -20,7 +20,7 @@ OnEnterBG:
 	end;
 }
 
-bat_room,85,74,0	script	提尔雅峡谷-02登记处::TV2R_克勒亚军	414,{
+bat_room,85,74,0	script	提尔雅峡谷-02登记处::TV2R_Croix	414,{
 	end;
 OnInit:
 	waitingroom "战区 10 玩家",10,"Tierra_BG2::OnCroixJoin",1;
