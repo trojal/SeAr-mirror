@@ -1,3 +1,8 @@
+2009/12/12[SeAr_1.3.10]
+- 源码:		Reflect Damage每10秒扣14SP。
+- 源码:		Warmer取消Diamond Dust的状态。
+- 源码:		修正Fire/Eletric Walk表现。
+
 2009/12/08[SeAr_1.3.09]
 - 源码:		修正反射伤害不反射范围魔法。
 - NPC:		添加一些新地图传送。
