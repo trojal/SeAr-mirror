@@ -99,3 +99,10 @@
 219,512 //Snatch 
 361,512 //HP_ASSUMPTIO 
 691,512 //CASH_ASSUMPTIO
+
+//Zone 6 - Endless Tower
+26,2048	// Teleport
+219,2048// Snatch
+27,2048	// Warp Portal
+87,2048	// Ice Wall
+405,2048// Fiber Lock
