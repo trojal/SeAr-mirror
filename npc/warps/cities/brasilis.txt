@@ -1,0 +1,4 @@
+brasilis,309,336,0	warp	brasiliswarp0001	1,1,bra_fild01,75,31
+bra_fild01,72,34,0	warp	brasiliswarp0002	1,1,brasilis,310,333
+bra_dun01,199,35,0	warp	brasiliswarp0003	1,1,bra_dun02,262,261
+bra_dun02,262,265,0	warp	brasiliswarp0004	1,1,bra_dun01,199,39
