@@ -1,4 +1,9 @@
 2009/12/14[SeAr_1.3.14]
+- 源码:		修正Vonem Pressure伤害公式。
+- 源码:		降低THURISAZ卢恩石损坏武器几率。
+- DB:		Sonic Wave伤害使用武器属性。
+
+2009/12/14[SeAr_1.3.14]
 - 源码:		重写Renewal咏唱公式。
 - 源码:		修正克隆人使用Power Velocity当机。
 - NPC、DB:	添加巴西传送和魔物。(小爱制作)
