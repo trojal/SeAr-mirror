@@ -65,5 +65,17 @@ pvpoff,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; if( pvpoff(.@m$) ) dispmes msg(31); 
 //skilloff,80,80,0,0,{ getmapxy .@m$,.@x,.@y,0; removemapflag(.@m$,mf_noskill); dispmes msg(243); }
 
 // 增加/减少你的现金点或者卡普拉点
-cash,60,60,0,0,{ set .@i, atoi(@cmd_para$[0]); set #CASHPOINTS, #CASHPOINTS+.@i; dispmes "得到"+.@i+"现金点数"; }
-points,60,60,0,0,{ set .@i, atoi(@cmd_para$[0]); set #KAFRAPOINTS, #KAFRAPOINTS+.@i; dispmes "得到"+.@i+"卡普拉点数"; }
+cash,60,60,1,1,{ set .@i, atoi(@cmd_para$[0]); set #CASHPOINTS, #CASHPOINTS+.@i; dispmes "得到"+.@i+"现金点数"; }
+points,60,60,1,1,{ set .@i, atoi(@cmd_para$[0]); set #KAFRAPOINTS, #KAFRAPOINTS+.@i; dispmes "得到"+.@i+"卡普拉点数"; }
+
+// 增加金钱
+zeny,60,60,1,1,{ set .@i, atoi(@cmd_para$[0]); set ZENY, ZENY + .@i; dispmes msg(176); }
+
+// 创造一个道具，用名称或者ID都可以
+item,60,60,1,2,{ set .@i, atoi(@cmd_para$[0]); set .@j, atoi(@cmd_para$[1]); if(.@j < 1) set .@j, 1; if( existitem(.@i) ) getitem .@i, .@j; else if( existitem(@cmd_para$[0]) ) getitem @cmd_para$[0], .@j; else { dispmes msg(19); end; } dispmes msg(18); }
+
+// 创造一个附带条件的道具，可以设定刷新的数量、鉴定、精炼值、是否破坏、卡片1、卡片2、卡片3、卡片4
+item2,60,60,9,9,{ set .@i, atoi(@cmd_para$[0]); if( existitem(.@i) ) getitem2 .@i, atoi(@cmd_para$[1]), atoi(@cmd_para$[2]), atoi(@cmd_para$[3]), atoi(@cmd_para$[4]), atoi(@cmd_para$[5]), atoi(@cmd_para$[6]), atoi(@cmd_para$[7]), atoi(@cmd_para$[8]); else if( existitem(@cmd_para$[0]) ) getitem2 @cmd_para$[0], atoi(@cmd_para$[1]), atoi(@cmd_para$[2]), atoi(@cmd_para$[3]), atoi(@cmd_para$[4]), atoi(@cmd_para$[5]), atoi(@cmd_para$[6]), atoi(@cmd_para$[7]), atoi(@cmd_para$[8]); else { dispmes msg(19); end; } dispmes msg(18); }
+
+// 删除一个道具，用名称或者ID都可以
+delitem,60,60,2,2,{ callfunc "cmd_delitem"; }

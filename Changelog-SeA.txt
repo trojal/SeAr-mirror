@@ -1,4 +1,8 @@
-2009/12/14[SeAr_1.3.14]
+2009/12/15[SeAr_1.3.16]
+- 源码、DB、NPC、CONF:
+		GM指令脚本化zeny, item, item2, delitem。
+
+2009/12/14[SeAr_1.3.15]
 - 源码:		修正Vonem Pressure伤害公式。
 - 源码:		降低THURISAZ卢恩石损坏武器几率。
 - DB:		Sonic Wave伤害使用武器属性。

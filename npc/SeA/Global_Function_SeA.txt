@@ -144,3 +144,28 @@ function	script	cmd_load	{
 	warp(getsavepoint(0),getsavepoint(1),getsavepoint(2));
 	dispmes msg(7);
 }
+
+function	script	cmd_delitem	{
+	set .@i, atoi(@cmd_para$[0]);
+	set .@j, atoi(@cmd_para$[1]);
+	if(.@j < 1) set .@j, 1; 
+
+	if( existitem(.@i) )
+	{
+		set .@k, countitem(.@i);
+		if( .@k > .@j ) set .@k, .@j;
+		dispmes msg(113,.@k);
+		delitem .@i, .@k;
+		end;
+	}
+	else if( existitem(@cmd_para$[0]) )
+	{
+		set .@k, countitem(@cmd_para$[0]);
+		if( .@k > .@j ) set .@k, .@j;
+		dispmes msg(113,.@k);
+		delitem @cmd_para$[0], .@k;
+		end;
+	}
+	dispmes msg(19);
+	end;
+}
