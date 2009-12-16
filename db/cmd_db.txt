@@ -79,3 +79,9 @@ item2,60,60,9,9,{ set .@i, atoi(@cmd_para$[0]); if( existitem(.@i) ) getitem2 .@
 
 // 删除一个道具，用名称或者ID都可以
 delitem,60,60,2,2,{ callfunc "cmd_delitem"; }
+
+// 刷新指定数量的魔物
+monster,50,50,1,2,{ callfunc "cmd_monster",0; }
+//spawn,50,50,1,2,{ callfunc "cmd_monster",0; }
+monsterbig,50,50,1,2,{ callfunc "cmd_monster",2; }
+monstersmall,50,50,1,2,{ callfunc "cmd_monster",1; }

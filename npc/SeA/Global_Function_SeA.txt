@@ -169,3 +169,33 @@ function	script	cmd_delitem	{
 	dispmes msg(19);
 	end;
 }
+
+function	script	cmd_monster	{
+	if( existmob(atoi(@cmd_para$[0])) ) 
+		set .@id, atoi(@cmd_para$[0]); 
+	else if( existmob(@cmd_para$[0]) ) 
+		set .@id, existmob(@cmd_para$[0]); 
+	else
+	{ 
+		dispmes msg(40); 
+		end; 
+	} 
+
+	if( .@id == 1288 )
+	{ 
+		dispmes msg(83); 
+		end; 
+	} 
+	
+	set .@id, .@id+getarg(0)*MAX_MOB_DB;
+
+	set .@i,atoi(@cmd_para$[1]); 
+	if(.@i < 1)
+		set .@i, 1;
+	if( set(.@j,getbattleflag("atc_spawn_quantity_limit")) && .@i > .@j ) 
+		set .@i,.@j; 
+
+	getmapxy .@m$,.@x,.@y,0; 
+	areamonster .@m$, .@x-sqrt(.@i)-2, .@y-sqrt(.@i)-2, .@x+sqrt(.@i)+2, .@y+sqrt(.@i)+2, "--ja--", .@id, .@i; 
+	dispmes msg(39);
+}
