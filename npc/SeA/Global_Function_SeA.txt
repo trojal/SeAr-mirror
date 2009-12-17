@@ -195,7 +195,8 @@ function	script	cmd_monster	{
 	if( set(.@j,getbattleflag("atc_spawn_quantity_limit")) && .@i > .@j ) 
 		set .@i,.@j; 
 
-	getmapxy .@m$,.@x,.@y,0; 
-	areamonster .@m$, .@x-sqrt(.@i)-2, .@y-sqrt(.@i)-2, .@x+sqrt(.@i)+2, .@y+sqrt(.@i)+2, "--ja--", .@id, .@i; 
+	getmapxy .@m$,.@x,.@y,0;
+	set .@j, sqrt(.@i);
+	areamonster .@m$, .@x-.@j-2, .@y-.@j-2, .@x+.@j+2, .@y+.@j+2, "--ja--", .@id, .@i; 
 	dispmes msg(39);
 }

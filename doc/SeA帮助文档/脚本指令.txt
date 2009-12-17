@@ -3820,10 +3820,11 @@ Example:
 ---------------------------------------
 
 - killmonster, killmonsterall
-	killmonsterall <mapname>,3;为杀死所有魔物，但不杀死玩家召唤魔物，且会触发魔物死亡事件。
-	killmonsterall <mapname>,2;为杀死所有魔物，但不杀死玩家召唤魔物，且不会触发魔物死亡事件。
-	killmonsterall <mapname>,1;为杀死所有魔物，且会触发魔物死亡事件。
-	killmonsterall <mapname>;为杀死所有魔物，且不会触发魔物死亡事件。
+	killmonsterall <mapname>,8;为杀死所有魔物，掉落经验和物品。
+	killmonsterall <mapname>,4;为杀死所有魔物，但不杀死WoE魔物。
+	killmonsterall <mapname>,2;为杀死所有魔物，但不杀死玩家召唤魔物。
+	killmonsterall <mapname>,1;为杀死所有魔物，触发魔物死亡事件。
+	killmonsterall <mapname>;为杀死所有魔物。
 	killmonster <mapname>,<eventlabel>;为杀死会触发<eventlabel>事件的魔物，且不触发该事件。
 	killmonster <mapname>,<eventlabel>,1;为杀死会触发<eventlabel>事件的魔物，并触发该事件。
 	killmonster <mapname>,<eventlabel>,2;为杀死会触发<eventlabel>事件的魔物，但不杀死玩家召唤魔物，但不触发该事件。

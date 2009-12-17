@@ -1,3 +1,8 @@
+2009/12/17[SeAr_1.3.19]
+- 源码、DB、NPC、CONF:
+		GM指令脚本化killmonster, killmonster2。
+- 源码、DB:	重写Warmer技能。
+
 2009/12/16[SeAr_1.3.18]
 - 源码、DB、NPC、CONF:
 		GM指令脚本化monster, spawn, monstersmall, monsterbig。

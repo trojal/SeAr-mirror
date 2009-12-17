@@ -85,3 +85,9 @@ monster,50,50,1,2,{ callfunc "cmd_monster",0; }
 //spawn,50,50,1,2,{ callfunc "cmd_monster",0; }
 monsterbig,50,50,1,2,{ callfunc "cmd_monster",2; }
 monstersmall,50,50,1,2,{ callfunc "cmd_monster",1; }
+
+// 杀死地图上所有魔物(掉落道具)
+killmonster,60,60,0,0,{ getmapxy .@m$,.@x,.@y,0; killmonsterall .@m$,13; dispmes msg(165); }
+
+// 杀死地图上所有魔物(不掉落物品)
+killmonster2,40,40,0,0,{ getmapxy .@m$,.@x,.@y,0; killmonsterall .@m$,5; dispmes msg(165); }
