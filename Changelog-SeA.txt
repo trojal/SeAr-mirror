@@ -1,3 +1,6 @@
+2009/12/17[SeAr_1.3.20]
+- 源码、DB:	Ignition Break不是目标技能。
+
 2009/12/17[SeAr_1.3.19]
 - 源码、DB、NPC、CONF:
 		GM指令脚本化killmonster, killmonster2。
