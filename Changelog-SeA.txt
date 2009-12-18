@@ -1,3 +1,8 @@
+2009/12/18[SeAr_1.3.21]
+- DB:		Cart Tornado即时咏唱。
+- DB:		修正Cheal作用范围。
+- DB:		Trample无需坐骑。
+
 2009/12/17[SeAr_1.3.20]
 - 源码、DB:	Ignition Break不是目标技能。
 
