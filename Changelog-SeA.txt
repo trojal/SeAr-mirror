@@ -1,3 +1,7 @@
+2009/12/18[SeAr_1.3.22]
+- 源码:		修正Faw无法被攻击。
+- 源码:		修正Crush Strike和Dragon Breath公式。
+
 2009/12/18[SeAr_1.3.21]
 - DB:		Cart Tornado即时咏唱。
 - DB:		修正Cheal作用范围。
