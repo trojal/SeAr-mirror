@@ -1,3 +1,7 @@
+2009/12/18[SeAr_1.3.23]
+- 源码、DB、NPC、CONF:
+		GM指令脚本化summon, clone, slaveclone, evilclone。
+
 2009/12/18[SeAr_1.3.22]
 - 源码:		修正Faw无法被攻击。
 - 源码:		修正Crush Strike和Dragon Breath公式。

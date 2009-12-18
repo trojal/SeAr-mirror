@@ -173,9 +173,7 @@ function	script	cmd_delitem	{
 function	script	cmd_monster	{
 	if( existmob(atoi(@cmd_para$[0])) ) 
 		set .@id, atoi(@cmd_para$[0]); 
-	else if( existmob(@cmd_para$[0]) ) 
-		set .@id, existmob(@cmd_para$[0]); 
-	else
+	else if( !set(.@id, existmob(@cmd_para$[0])) ) 
 	{ 
 		dispmes msg(40); 
 		end; 
@@ -192,11 +190,59 @@ function	script	cmd_monster	{
 	set .@i,atoi(@cmd_para$[1]); 
 	if(.@i < 1)
 		set .@i, 1;
-	if( set(.@j,getbattleflag("atc_spawn_quantity_limit")) && .@i > .@j ) 
+	if( set(.@j,getbattleflag("atcommand_spawn_quantity_limit")) && .@i > .@j ) 
 		set .@i,.@j; 
 
 	getmapxy .@m$,.@x,.@y,0;
 	set .@j, sqrt(.@i);
 	areamonster .@m$, .@x-.@j-2, .@y-.@j-2, .@x+.@j+2, .@y+.@j+2, "--ja--", .@id, .@i; 
 	dispmes msg(39);
+}
+
+function	script	cmd_clone	{
+	if( !isloggedin(set(.@id, atoi(@cmd_para$[0]))) ) 
+	{
+		if( !isloggedin(set(.@id, getcharid(3,@cmd_para$[0]))) )
+		{
+			dispmes msg(3);
+			end;
+		}
+	}
+
+	set .@id2, getcharid(3);
+	attachrid .@id;
+	set .@id3, getcharid(0);
+	attachrid .@id2;
+	if(getgmlevel(.@id) > getgmlevel(.@id2)) {
+		dispmes msg(126);
+		end;
+	}
+
+	if( set(.@flag,getarg(0)) == 2 )
+	{
+		if( set(.@j,getbattleflag("atcommand_slave_clone_limit")) && countslave(.@id2) > .@j ) 
+		{
+			dispmes msg(127);
+			end;
+		}
+		set .@master, getcharid(0);
+	}
+
+	getmapxy .@m$,.@x,.@y,0;
+	do {
+		set .@x1,.@x + (rand(10) - 5);
+		set .@y1,.@y + (rand(10) - 5);
+		if (set(.@i,.@i+1) >= 10) {
+			set .@x1,.@x;
+			set .@x1,.@x;
+			break;
+		}
+	} while( checkcell(.@m$,.@x1,.@y1,cell_chknopass) );
+
+	if( clone(.@m$,.@x1,.@y1,"",.@id3,.@master,0,.@flag?1:0,0) )
+	{
+		dispmes msg(128+.@flag*2);
+		end;
+	}
+	dispmes msg(129+.@flag*2);
 }
