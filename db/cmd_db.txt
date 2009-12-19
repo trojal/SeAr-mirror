@@ -1,5 +1,5 @@
-//-->	自定义玩家指令DB文件	<--
-//-->	免费版玩家指令上限为29条	<--
+//-->	自定义玩家指令DB文件		<--
+//-->	免费版玩家指令上限为31条	<--
 // <玩家指令>,<@指令等级>,<#指令等级>,<最少参数数量>,<最大参数数量>,{脚本}
 // @cmd_para$[]为脚本可用参数
 // 参数数量最大值为128,即@cmd_para$[127]
@@ -99,3 +99,10 @@ summon,50,50,1,2,{ if( existmob(atoi(@cmd_para$[0])) ) set .@id, atoi(@cmd_para$
 clone,50,50,1,1,{ callfunc "cmd_clone",1; }
 slaveclone,50,50,1,1,{ callfunc "cmd_clone",2; }
 evilclone,50,50,1,1,{ callfunc "cmd_clone",0; }
+
+// 让你免受攻击(魔物/玩家/技能无法以你为目标，管理指令)
+battleignore,99,99,0,0,{ if( battleignore(2) ) dispmes "你不会受到攻击"; else dispmes "回到正常状态"; }
+//monsterignore,99,99,0,0,{ if( battleignore(2) ) dispmes "你不会受到攻击"; else dispmes "回到正常状态"; }
+
+// 不需重启服务器的情况下改变battle_config标签
+setbattleflag,99,99,2,2,{ setbattleflag @cmd_para$[0],@cmd_para$[1]; dispmes "战斗设置已按要求更改"; }

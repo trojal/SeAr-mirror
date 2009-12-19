@@ -1,3 +1,7 @@
+2009/12/19[SeAr_1.3.27]
+- 源码、DB、CONF:
+		GM指令脚本化setbattleflag, battleignore, monsterignore。
+
 2009/12/19[SeAr_1.3.26]
 - DB、CONF、NPC、PLUGINS:
 		EP13.3新地图，EP13.2新怪物。
