@@ -1,3 +1,6 @@
+2009/12/19[SeAr_1.3.24]
+- 源码:		Fire Walk和Electric Walk的限制数量分开计算。
+
 2009/12/18[SeAr_1.3.23]
 - 源码、DB、NPC、CONF:
 		GM指令脚本化summon, clone, slaveclone, evilclone。
