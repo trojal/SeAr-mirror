@@ -219,6 +219,8 @@ prt_fild08
 prt_fild09
 prt_fild10
 prt_fild11
+poring_c01
+poring_c01
 prt_in
 prt_maze01
 prt_maze02
@@ -773,8 +775,16 @@ bra_in01
 s_atelier
 job3_gen01
 siege_test
+dic_dun01
+dic_dun02
+dic_fild01
+dic_fild02
+dicastes01
+dicastes02
+
 
 // Only add maps under this line if they are not standard maps!
+
 
 //======================================================================================
 // - Other/Extra maps -

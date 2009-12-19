@@ -5547,6 +5547,105 @@
 2010,Majoruros@WZ_HEAVENDRIVE,attack,91,5,500,1200,5000,yes,target,always,0,,,,,,2
 2010,Majoruros@WZ_HEAVENDRIVE,chase,91,5,500,1200,5000,yes,target,always,0,,,,,,2
 
+//EP13.2
+2013,Draco@UKNW,idle,152,1,4000,0,10000,no,target,always,0,,,,,,
+2013,Draco@UKNW,attack,6,10,2000,0,15000,no,target,always,0,,,,,,
+2013,Draco@UKNW,attack,185,5,4000,0,2000,no,target,always,0,,,,,,,
+2013,Draco@UKNW,attack,171,5,4000,0,10000,no,target,always,0,,,,,,
+2013,Draco@UKNW,attack,185,1,5000,0,5000,no,target,always,0,,,,,,
+2013,Draco@UKNW,chase,654,5,3000,0,13000,no,target,always,0,,,,,,
+2016,Aqua Elemental@UKNW,attack,15,10,2000,0,5000,yes,target,always,0,,,,,,
+2016,Aqua Elemental@UKNW,chase,86,3,2000,1000,5000,no,target,always,0,,,,,,
+2016,Aqua Elemental@UKNW,attack,86,5,1000,0,5000,yes,target,always,0,,,,,,
+2016,Aqua Elemental@UKNW,attack,182,3,500,0,5000,yes,target,always,0,,,,,,
+2016,Aqua Elemental@UKNW,chase,14,2,2000,0,5000,no,target,always,0,,,,,,0
+2016,Aqua Elemental@UKNW,chase,14,2,4000,0,5000,no,target,skillused,18,,,,,,0
+2016,Aqua Elemental@UKNW,chase,672,1,2000,300,30000,no,self,always,0,,,,,,36
+2016,Aqua Elemental@UKNW,chase,88,3,5000,0,10000,yes,self,always,0,,,,,,
+2016,Aqua Elemental@UKNW,attack,88,5,5000,0,20000,yes,self,always,0,,,,,,
+2017,Rata@UKNW,attack,84,10,1000,500,5000,no,target,always,0,,,,,, 2017,Rata@UKNW,idle,152,30,4000,0,10000,no,target,always,0,,,,,,
+2017,Rata@UKNW,chase,264,1,2000,0,5000,no,target,always,0,,,,,,28
+2017,Rata@UKNW,chase,340,10,2000,0,1000,yes,target,always,0,,,,,,2017,Rata@UKNW,attack,61,5,500,0,5000,yes,self,always,0,,,,,,
+2017,Rata@UKNW,angry,174,1,2000,0,5000,yes,target,attackpcge,2,,,,,,2017,Rata@UKNW,attack,136,10,2000,0,5000,yes,target,always,0,,,,,,6
+2017,Rata@UKNW,attack,217,5,2000,0,3000,yes,target,always,0,,,,,,
+2017,Rata@UKNW,chase,90,5,3000,0,10000,yes,target,always,0,,,,,,
+2017,Rata@UKNW,attack,158,5,500,0,5000,yes,target,always,0,,,,,,
+2017,Rata@UKNW,attack,7,20,10000,0,5000,yes,self,attackpcge,2,,,,,,2017,Rata@UKNW,attack,185,1,1000,0,5000,yes,randomtarget,always,0,,,,,,
+2017,Rata@UKNW,attack,181,10,2000,0,5000,no,randomtarget,always,0,,,,,,2017,Rata@UKNW,idle,181,10,2000,0,5000,no,randomtarget,always,0,,,,,,
+2017,Rata@UKNW,attack,188,10,1000,0,5000,yes,target,always,,,,,,,
+2017,Rata@UKNW,attack,171,5,1000,700,5000,no,target,always,0,,,,,,36
+2017,Rata@UKNW,attack,406,2,500,0,5000,yes,self,always,,,,,,,
+2018,Duneyrr@UKNW,attack,347,10,2000,0,5000,no,target,always,0,,,,,,2018,Duneyrr@UKNW,angry,347,10,2000,0,5000,no,target,always,0,,,,,,
+2018,Duneyrr@UKNW,attack,60,20,10000,0,120000,no,self,myhpltmaxrate,50,,,,,,62018,Duneyrr@UKNW,attack,84,18,1000,500,5000,no,target,always,0,,,,,, 2018,Duneyrr@UKNW,attack,21,10,2000,0,3000,no,target,always,0,,,,,,
+//2018,Duneyrr@UKNW,idle,28,10,6000,0,0,300,no,target,always,0,,,,,, 2018,Duneyrr@UKNW,attack,28,10,6000,0,0,300,no,target,always,0,,,,,, 2018,Duneyrr@UKNW,attack,136,10,2000,0,5000,no,target,always,0,,,,,,18
+2018,Duneyrr@UKNW,attack,673,6,500,0,5000,yes,target,always,0,,,,,,
+2018,Duneyrr@UKNW,chase,340,10,2000,0,5000,no,target,always,0,,,,,,
+2018,Duneyrr@UKNW,attack,340,10,2000,0,5000,no,target,always,0,,,,,,
+2018,Duneyrr@UKNW,idle,405,3,3000,0,10000,yes,target,always,0,,,,,,2018,Duneyrr@UKNW,attack,405,3,2000,0,10000,yes,target,always,0,,,,,,
+2018,Duneyrr@UKNW,chase,177,3,2000,0,5000,yes,target,always,0,,,,,,2018,Duneyrr@UKNW,attack,181,3,500,800,5000,no,target,always,0,,,,,,
+2018,Duneyrr@NPC_SUMMONSLAVE,idle,196,3,10000,700,10000,no,self,slavele,3,2017,,,,,
+2018,Duneyrr@NPC_SUMMONSLAVE,idle,196,2,10000,0,0,no,self,onspawn,0,2017,,,,,
+//2019,Ancient Tree@UKNW,28,10,6000,0,0,300,no,target,always,0,,,,,, 
+2019,Ancient Tree@°ÌUKNW,attack,174,1,1000,0,0,yes,target,attackpcge,2,,,,,,
+2019,Ancient Tree@UKNW,attack,179,5,1000,0,5000,yes,target,always,0,,,,,,
+2019,Ancient Tree@UKNW,attack,185,1,5000,0,5000,no,target,always,0,,,,,,
+2020,Rhyncho@UKNW,chase,264,1,2000,500,5000,no,target,always,0,,,,,,28
+2020,Rhyncho@UKNW,attack,179,5,500,1500,5000,no,target,always,0,,,,,,
+2020,Rhyncho@UKNW,attack,170,1,500,0,10000,yes,target,always,0,,,,,,
+2020,Rhyncho@UKNW,attack,207,1,500,500,5000,yes,target,always,0,,,,,,29
+2020,Rhyncho@UKNW,chase,207,1,500,500,5000,yes,target,always,0,,,,,,29
+2021,Phylla@UKNW,chase,76,10,2000,0,5000,yes,target,always,,,,,,,18
+2021,Phylla@UKNW,idle,76,10,10000,0,5000,yes,target,casttargeted,,,,,,,18
+2021,Phylla@UKNW,attack,14,10,3000,1000,10000,no,target,always,0,,,,,,
+2021,Phylla@UKNW,chase,14,10,3000,1000,10000,no,target,always,0,,,,,,
+2021,Phylla@UKNW,attack,184,10,1000,0,5000,yes,target,always,0,,,,,,
+2021,Phylla@UKNW,attack,86,5,5000,0,3000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,idle,687,5,10000,0,120000,no,self,always,,,,,,,
+2022,Nidhogg@UKNW,attack,196,6,10000,500,30000,no,self,slavele,4,2023,,,,,
+2022,Nidhogg@UKNW,chase,352,1,10000,0,15000,yes,self,always,0,,,,,,
+2022,Nidhogg@UKNW,idle,352,1,10000,0,15000,yes,self,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,83,11,1000,500,30000,no,target,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,677,10,2000,500,30000,no,self,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,668,10,1000,500,20000,no,self,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,92,5,2000,0,10000,no,target,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,186,10,2000,0,20000,no,target,always,,,,,,,
+2022,Nidhogg@UKNW,chase,659,5,10000,0,10000,yes,self,always,,,,,,,
+2022,Nidhogg@UKNW,attack,189,10,1000,0,20000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,170,1,500,0,10000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,chase,662,5,500,700,20000,no,self,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,662,5,500,700,20000,no,self,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,671,5,2000,0,30000,no,self,always,,,,,,,9
+2022,Nidhogg@UKNW,attack,675,2,500,700,60000,no,self,always,,,,,,,
+2022,Nidhogg@UKNW,attack,349,5,10000,0,30000,yes,self,myhpltmaxrate,30,,,,,,6
+2022,Nidhogg@UKNW,attack,670,10,10000,1000,50000,no,target,myhpltmaxrate,50,,,,,
+2022,Nidhogg@UKNW,chase,653,5,10000,500,20000,no,self,myhpltmaxrate,40,,,,,,
+2022,Nidhogg@UKNW,attack,653,5,10000,500,20000,no,self,myhpltmaxrate,40,,,,,,
+2022,Nidhogg@UKNW,attack,353,1,500,0,5000,yes,self,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,658,10,500,500,20000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,chase,672,5,2000,300,30000,no,self,always,0,,,,,,36
+2022,Nidhogg@UKNW,attack,672,5,2000,300,30000,no,self,always,0,,,,,,36
+2022,Nidhogg@UKNW,attack,661,5,1000,500,10000,no,self,always,,,,,,,
+2022,Nidhogg@UKNW,attack,654,10,2000,500,5000,no,target,myhpltmaxrate,80,,,,,,
+2022,Nidhogg@UKNW,attack,668,5,2000,500,5000,no,self,always,0,,,,,,2
+2022,Nidhogg@UKNW,chase,289,5,100,0,30000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,289,5,100,0,30000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,chase,17,20,2000,0,10000,yes,target,always,0,,,,,,
+2022,Nidhogg@UKNW,attack,673,4,1000,0,5000,yes,target,always,0,,,,,,
+2022,Nidhogg@NPC_SUMMONSLAVE,idle,196,5,10000,700,10000,no,self,slavele,3,2013,,,,,
+2022,Nidhogg@NPC_SUMMONSLAVE,idle,196,3,10000,0,0,no,self,onspawn,0,2013,,,,,
+2023,Dark Shadow@UKNW,attack,658,5,1000,1000,30000,yes,target,always,0,,,,,,
+2023,Dark Shadow@UKNW,attack,186,5,500,0,30000,no,target,always,,,,,,,
+2023,Dark Shadow@UKNW,chase,340,10,2000,0,1000,yes,target,always,0,,,,,,
+2024,Bradium Golem@UKNW,attack,179,10,500,1500,5000,no,target,always,0,,,,,,
+2024,Bradium Golem@UKNW,chase,8,1,5000,0,10000,yes,self,longrangeattacked,,,,,,,6
+2024,Bradium Golem@UKNW,attack,204,1,2000,3000,60000,no,self,always,0,,,,,,
+//2024,Bradium Golem@UKNW,idle,28,10,6000,0,0,300,no,target,always,0,,,,,, 
+2024,Bradium Golem@UKNW,attack,199,1,3000,0,0,yes,target,always,0,,,,,,
+2024,Bradium Golem@UKNW,attack,174,2,2000,0,5000,yes,target,attackpcge,2,,,,,,9
+2024,Bradium Golem@UKNW,angry,185,5,500,500,5000,no,target,always,0,,,,,,
+2024,Bradium Golem@UKNW,attack,179,7,500,1500,5000,no,target,always,0,,,,,,
+2024,Bradium Golem@UKNW,attack,182,8,500,0,5000,yes,randomtarget,always,0,,,,,,
+
 //FAWs
 //2043,Magic Decoy Fire@NPC_FIREATTACK,attack,184,10,10000,2000,1000,yes,target,always,0,,,,,,
 2043,Magic Decoy Fire@MG_FIREBOLT,attack,19,10,10000,2000,1000,yes,target,always,0,,,,,,

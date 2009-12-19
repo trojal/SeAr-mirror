@@ -1,0 +1,6 @@
+dic_fild02,71,372,0	warp	dicasteswarp0001	1,1,dic_fild01,69,33
+dic_fild01,69,27,0	warp	dicasteswarp0002	1,1,dic_fild02,71,368
+dic_fild01,150,280,0	warp	dicasteswarp0003	1,1,dicastes01,199,43
+dicastes01,200,34,0	warp	dicasteswarp0004	1,1,dic_fild01,150,277
+dicastes01,197,340,0	warp	dicasteswarp0005	1,1,dicastes02,119,92
+dicastes02,119,85,0	warp	dicasteswarp0006	1,1,dicastes01,197,333
