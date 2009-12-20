@@ -1,3 +1,6 @@
+2009/12/20[SeAr_1.3.32]
+- 源码、DB:	修正Pile Bunker伤害公式，延迟，Debuff效果。
+
 2009/12/20[SeAr_1.3.31]
 - 源码、DB:	修正Boost Knuckle伤害公式，延迟，SP需求。
 
