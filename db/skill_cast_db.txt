@@ -1201,6 +1201,8 @@
 //-- RA_ICEBOUNDTRAP  [Unfinished] 
 2254,0,0,0,10000,0       
 //-- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+//-- NC_BOOSTKNUCKLE
+2256,500,0,0,0,0
 //-- NC_VULCANARM
 2258,0,500,0,0,0
 //-- NC_FLAMELAUNCHER
