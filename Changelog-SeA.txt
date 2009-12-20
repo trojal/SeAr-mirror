@@ -1,5 +1,11 @@
+2009/12/20[SeAr_1.3.29]
+- 源码、DB、NPC、CONF:
+		GM指令脚本化disguise系列。
+- 源码:		修正getnpcdata，setnpcdata无法读取字符变量。
+- 源码:		官方指令不再占用自定义指令条数，上限调回5条。
+
 2009/12/19[SeAr_1.3.28]
-- 源码、DOC:	添加脚本指令script4count。
+- 源码、DOC:	添加脚本指令script4each。
 - NPC:		重写指令giveall脚本。
 - 源码:		修正atcommand对自定义指令无效。
 

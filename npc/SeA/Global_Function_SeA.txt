@@ -237,3 +237,51 @@ function	script	cmd_clone	{
 	}
 	dispmes msg(129+.@flag*2);
 }
+
+function	script	cmd_disguise	{
+	if(getarg(0)&1)
+	{
+		if( existmob(atoi(@cmd_para$[0])) ) 
+			set .@id, atoi(@cmd_para$[0]); 
+		else if( !set(.@id, existmob(@cmd_para$[0])) ) 
+		{ 
+			if( set(.@id, getnpcdata(10,@cmd_para$[0])) == -1 )
+			{
+				dispmes msg(123); 
+				end; 
+			}
+		} 
+		if( checkriding() )
+		{ 
+			dispmes "坐骑时无法伪装。"; 
+			end; 
+		} 
+	}
+
+	if( getarg(0)&2 )
+	{
+		if(getarg(0)&1)
+		{
+			set $@id,.@id;
+			script4each "{ disguise $@id; }",0;
+			dispmes msg(122);
+			end;
+		}
+		script4each "{ undisguise; }",0;
+	}
+	else
+	{
+		if(getarg(0)&1)
+		{
+			disguise .@id;
+			dispmes msg(122);
+			end;
+		}
+		if( undisguise() )
+		{
+			dispmes msg(125);
+			end;
+		}
+	}
+	dispmes msg(124);
+}
