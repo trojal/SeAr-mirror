@@ -4,20 +4,42 @@
 // ---------------------------------
 // - 梦罗克 地区任务脚本 - 
 //===================================
-// 版本：2.55
+// 版本：2.8
 //===================================
 //= [Aegis Conversion] 
-//= - Stop Post 
-//= - Binoculars Quest 
-//= - Assassin Pub NPCs/supporting quest NPCS. 
-//= - Resurrection of Satan Morroc 
-//= - The Crow of the Fate 
-//= - Succession of the Prince
+//= - 停止布告牌
+//= - 双筒望远镜任务
+//= - 刺客公会酒吧NPC / 其他NPC
+//= - 魔王梦罗克的复活
+//= - 命运的乌鸦
+//= - 王位继承者
 //===================================
-//= 2.6 Added quest log commands for Resurrection of Satan Morroc. [L0ne_W0lf] 
-//=     Added the two remaining episode 12.1 quests.  
-//=     Updated Satan Morroc Quest to allow peopel who have 
+//= 1.1 Fixed exploits [Lupus]
+//= 1.2 Added Dandelion's Request / Morroc Invasion quest. [SinSloth]
+//= 1.3 Updated dialogs from Binoculars Quest. [Samuray22]
+//= 1.3a added GM lvl check as in other invansion quests [Lupus]
+//= 1.4 Fixed a small bug in Dandelion's Request. [SinSloth]
+//= 1.5 Fixed a little bug with "Job_Alchemist" changed to "Job_Alchem". [Samuray22]
+//= 1.6 Fixed a nasty bug in last part of the quest. [SinSloth]
+//= 1.6a replaced item "names" with item id. [Lupus]
+//= 1.7 Fixed a bug with XP rewards. [SinSloth]
+//= 1.8 Fixed a bug which prevented reset of events. [SinSloth]
+//= 1.9 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
+//= 2.0 Fixed bad NPC header data to comply with rev. 11603. [L0ne_W0lf]
+//= 2.0a Corrected a Typo error ";;". [Samuray22]
+//= 2.1 Assassins will now get their request item. (bugreport:1220) [L0ne_W0lf]
+//= 2.2 Updated Binocular and Stop Post quests. [L0ne_W0lf]
+//= 2.3 Replaced effect numerics with constants. [Samuray22]
+//= 2.4 Implemented Ep. 12.1 Continental Guard Quest. [L0ne_W0lf]
+//=     Moved Dandelion's Request to a it's own file.
+//=     Added support NPCs required to finish Gaebolg quest.
+//= 2.5 Fixed Group of Evil never re-enabling. [L0ne_W0lf]
+//= 2.6 Added quest log commands for Resurrection of Satan Morroc. [L0ne_W0lf]
+//=     Added the two remaining episode 12.1 quests. 
+//=     Updated Satan Morroc Quest to allow peopel who have
 //=     finished it to return to the previous map.
+//= 2.7 Corrected weight checks, they only check for inventory slots. [L0ne_W0lf]
+//= 2.8 Disabled Assassin bar pub NPCs, as they are included in the 13.1 quests file. [L0ne_W0lf]
 //===================================
 
 //停止标志头饰制作任务
@@ -127,6 +149,7 @@ moc_ruins,118,176,4	script	炼金术公会	64,{
 
 // Morroc Assassin Guild Bar
 // ============================================================
+/*
 morocc,43,108,5	script	锐利印象的少年#dan_07	82,{
 	if (BaseClass == Job_Assassin) {
 		mes "[Jack]";
@@ -783,6 +806,7 @@ OnDisable:
 	disablenpc "Valdes#moc_master_1";
 	end;
 }
+*/
 
 yuno_in04,180,106,3	script	Reading Girl#moc_girl1	73,{
 	mes "[" + strcharinfo(0) + "]";
