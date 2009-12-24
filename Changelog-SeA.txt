@@ -1,3 +1,7 @@
+2009/12/24[SeAr_1.3.37]
+- 源码、CONF、SQL:
+		增加设置usercountlog表记录在线人数方便网页读取。
+
 2009/12/24[SeAr_1.3.36]
 - 源码、CONF:	增加设置max_eventqueue于script_athena.conf中。
 
