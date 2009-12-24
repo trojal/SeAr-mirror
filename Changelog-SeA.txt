@@ -1,3 +1,6 @@
+2009/12/24[SeAr_1.3.36]
+- 源码、CONF:	增加设置max_eventqueue于script_athena.conf中。
+
 2009/12/22[SeAr_1.3.35]
 - 源码、DB:	修正Arms Canon, Power Swing, Axe Tronado伤害公式及延时。
 
