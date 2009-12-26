@@ -839,7 +839,7 @@
 2312,7,6,1,-1,0x0,0,5,1,yes,0,0x0,0,weapon,0,	LG_PINPOINTATTACK,精确攻击
 2313,0,0,4,0,0x1,0,5,0,yes,0,0x0,0,none,0,	LG_FORCEOFVANGUARD,先锋力量
 2314,2,6,1,-1,0x0,0,1,1,yes,0,0x0,0,weapon,0,	LG_RAGEBURST,狂怒爆裂
-//2315,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		LG_SHIELDSPELL,Shield Spell
+2315,0,6,4,-1,0x2,3,3,1,yes,0,0,0,weapon,1,	LG_SHIELDSPELL,盾咒
 2316,0,0,4,0,0x1,0,5,0,yes,0,0,0,none,0,		LG_EXEEDBREAK,超越破坏
 2317,0,6,4,-1,0x2,6,5,1,yes,0,0,0,weapon,2,	LG_OVERBRAND,烙印
 2318,0,0,4,0,0x1,0,5,0,yes,0,0x0,0,none,0,	LG_PRESTIGE,威望
