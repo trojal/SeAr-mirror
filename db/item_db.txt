@@ -5850,3 +5850,62 @@
 18002,暗_加农炮弹,Dark Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Dark; },{},{}
 18003,念_加农炮弹,Soul Cannon Ball,10,200,,10,120,,,,0xFFFFFFFF,24,2,32768,,1,,3,{ bonus bAtkEle,Ele_Ghost; },{},{}
 18004,钢_加农炮弹,Iron Cannon Ball,10,500,,10,250,,,,0xFFFFFFFF,24,2,32768,,1,,3,{},{},{}
+
+// 13.3物品
+4760,Unknown,MATK+1%,0,10,,10,,,,,,,,,,,,,{},{},{}
+4761,Unknown,MATK+2%,0,10,,10,,,,,,,,,,,,,{},{},{}
+4762,Unknown,FLEE+6,0,10,,10,,,,,,,,,,,,,{},{},{}
+4763,Unknown,FLEE+12,0,10,,10,,,,,,,,,,,,,{},{},{}
+4764,Unknown,CRI+5,0,10,,10,,,,,,,,,,,,,{},{},{}
+4765,Unknown,CRI+7,0,10,,10,,,,,,,,,,,,,{},{},{}
+4766,Unknown,ATK+2%,0,10,,10,,,,,,,,,,,,,{},{},{}
+4767,Unknown,ATK+3%,0,10,,10,,,,,,,,,,,,,{},{},{}
+5742,Unknown,Rune Plate,3,10,,10,,,,,,,,,,,,,{},{},{}
+6304,Unknown,邪派功动证,3,10,,0,,,,,,,,,,,,,{},{},{}
+6305,Unknown,结冻的皮肤碎片,3,10,,0,,,,,,,,,,,,,{},{},{}
+6306,Unknown,坚硬的血痕,3,10,,0,,,,,,,,,,,,,{},{},{}
+6307,Unknown,被诅咒的魔力石,3,10,,0,,,,,,,,,,,,,{},{},{}
+6308,Unknown,未确认遗物,3,10,,0,,,,,,,,,,,,,{},{},{}
+6319,Unknown,微小的精制钸镭,3,10,,0,,,,,,,,,,,,,{},{},{}
+6321,Unknown,耙角头盔,3,10,,1,,,,,,,,,,,,,{},{},{}
+6322,Unknown,鹿角头盔,3,10,,1,,,,,,,,,,,,,{},{},{}
+6323,Unknown,双角头盔,3,10,,1,,,,,,,,,,,,,{},{},{}
+6324,Unknown,独角头盔,3,10,,1,,,,,,,,,,,,,{},{},{}
+6325,Unknown,白蜘蛛的脚,3,10,,1,,,,,,,,,,,,,{},{},{}
+6326,Unknown,女皇翅膀的碎片,3,10,,1,,,,,,,,,,,,,{},{},{}
+6328,Unknown,1月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6329,Unknown,2月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6330,Unknown,3月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6331,Unknown,4月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6332,Unknown,5月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6333,Unknown,6月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6334,Unknown,7月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6335,Unknown,8月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6336,Unknown,9月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6337,Unknown,10月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6338,Unknown,11月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+6339,Unknown,12月的日历,3,10,,0,,,,,,,,,,,,,{},{},{}
+12492,Unknown,1,3,10,,10,,,,,,,,,,,,,{},{},{}
+// 13.3武器
+1196,Unknown,铬金属双手剑,4,10,,40,280,,,,0x002464A2,2,2,34,3,110,1,3,{bonus bAgi,3;bonus bMaxHPrate,-10;bonus bUnbreakableWeapon,0;},{},{}
+1433,Unknown,帝国长枪,4,10,,180,180,,4,1,0x00204000,3,2,2,3,102,1,4,{bonus bMatk,40; bonus2 bSkillAtk,"LG_CANNONSPEAR",20+(getrefine()/2)*2; bonus2 bSkillAtk,"LG_BANISHINGPOINT",20+(getrefine()/2)*2;if(isequipped(2153)) { bonus2 bSkillAtk,"LG_RAYOFGENESIS",10;bonus2 bSkillAtk,"CR_GRANDCROSS",10; }},{},{}
+//1654,Unknown,精神法杖,4,10,,50,40,,,1,0x00010000,3,2,2,3,102,1,10,{bonus bMatk,170;bonus2 bCastrate,2449,-3;bonus2 bSPGainValueOnSKill,"SO_PSYCHIC_WAVE",-60; if(getrefine() >= 6) {bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",(getrefine()-5)*2;}},{},{heal 0,-100;}
+1830,Unknown,霸王乱舞,4,10,,50,142,,,1,0x00008000,3,2,2,3,102,1,12,{bonus2 bSkillAtk,"SR_SKYNETBLOW",20;bonus2 bSkillAtk,"SR_EARTHSHAKER",20; bonus bUseSPrate,5;if(getrefine() >= 6) {bonus bUseSPrate,-(getrefine()-5);}},{},{}
+1930,Unknown,翠绿草笛,4,10,,80,170,,,1,0x00080000,3,0,2,3,102,1,13,{bonus bMatk,50;bonus2 bCastrate,2422,-2;bonus2 bCastrate,2381,-2;if(getrefine() >= 6) {bonus2 bSPGainValueOnSKill,"WM_LULLABY_DEEPSLEEP",(getrefine()-5)*4;bonus2 bSPGainValueOnSKill,"MI_RUSH_WINDMILL",(getrefine()-5)*4;}},{},{}
+1984,Unknown,长梗鞭子,4,10,,80,170,,,1,0x00100000,3,1,2,3,102,1,14,{bonus bMatk,50;bonus2 bCastrate,2422,-2;bonus2 bCastrate,2350,-2;if(getrefine() >= 6) {bonus2 bSPGainValueOnSKill,"WM_LULLABY_DEEPSLEEP",(getrefine()-5)*4;bonus2 bSPGainValueOnSKill,"WA_SWING_DANCE",(getrefine()-5)*4;}},{},{}
+1985,Unknown,蔷薇鞭子,4,10,,100,100,,,,0x00100000,3,1,2,4,110,1,14,{bonus bMatk,170;bonus bAgi,-2;bonus bInt,2;bonus3 bAutoSpell,"WM_VOICEOFSIREN",1,10;},{},{}
+13061,Unknown,黑翼短剑,4,60,,60,142,,,1,0x00020000,3,2,2,3,102,1,2,{bonus2 bSkillAtk,"SC_FATALMENACE",30;if(getrefine() >= 6) {bonus2 bSkillAtk,"SC_FATALMENACE",(getrefine()-5)*2;bonus bMatk,(getrefine()-5)*3;} if(isequipped(2747)){bonus bHit,5;bonus bMatk,50;bonus2 bSPGainValueOnSKill,"SC_ENERVATION",-20;bonus2 bSPGainValueOnSKill,"SC_GROOMY",-20;}},{},{}
+13062,Unknown,古代短剑,4,10,,60,107,,,,0x0000006E,2,2,2,4,120,1,2,{bonus bMatk,120;bonus bMaxSP,100;bonus bSPrecovRate,5;bonus2 bAddEff2,Eff_Curse,10;},{},{}
+13431,Unknown,铬金属剑,4,10,,220,180,,,,0x00000022,2,2,2,3,110,1,2,{bonus bAgi,1;bonus bMaxHPrate,-5;bonus bUnbreakableWeapon,0;},{},{}
+16010,Unknown,红乙太包,4,10,,100,15,,,1,0x00040000,3,2,2,3,102,1,8,{bonus bMatk,100;bonus2 bSkillAtk,"GN_CRAZYWEED",20;bonus2 bSkillAtk,"GN_DEMONIC_FIRE",20;if(getrefine() >= 6) {bonus2 bSkillAtk,"GN_CRAZYWEED",(getrefine()-5)*2;bonus2 bSkillAtk,"GN_DEMONIC_FIRE",(getrefine()-5)*2;}},{},{}
+18103,Unknown,神祕的弓,4,10,,170,75,,,,0x00000800,3,2,34,3,105,1,11,{bonus bMatk,100;bonus bInt,4;bonus2 bSPGainValueOnSKill,"RA_ARROWSTORM",-10;},{},{}
+2463,Unknown,野性的长靴,5,10,,0,,12,,,0xFFFFFFFF,3,2,64,,75,,,{bonus bUnbreakableWeapon,0;},{},{}
+2564,Unknown,野性的尾巴,5,10,,0,,16,,,0xFFFFFFFF,3,2,4,,75,,,{bonus bUnbreakableWeapon,0;},{},{}
+2843,Unknown,黄金铃铛,5,10,,0,,0,,,0xFFFFFFFF,3,2,136,,75,0,,{bonus bMaxSP,50;},{},{}
+2844,Unknown,艾尔狄卡思泰斯之光,5,10,,10,,0,,,0xFFFFFFFF,3,2,136,,80,0,,{},{},{}
+// 13.3防具
+2153,Unknown,帝国铁盾,5,10,,250,,120,,1,0x00204000,3,2,32,102,,1,1,{bonus bMdef,5;bonus2 bSkillAtk,"LG_SHIELDPRESS",20;if(getrefine() >= 6) {bonus2 bSkillAtk,"LG_SHIELDPRESS",(getrefine()-5)*2;}},{},{}
+2465,Unknown,舞鞋,5,10,,30,,15,,1,0x00100000,3,1,64,,105,1,,{bonus bAspdRate,2;bonus bAgi,1;bonus2 bSPGainValueOnSKill,"WA_SWING_DANCE",32;},{},{}
+2853,Unknown,念动宝玉,5,10,,20,,2,,,0x002FFF80,3,2,136,,110,1,,{bonus bMaxSP,30;bonus bMdef,1;bonus bInt,3;bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",10;},{},{}
+2854,Unknown,炼金术手套,5,10,,10,,1,,,0x003FFF80,3,2,136,,125,1,,{bonus bMdef,2;bonus bInt,1;bonus2 bSkillAtk,"SO_FIREWALK",10;bonus2 bSkillAtk,"SO_DIAMONDDUST",10;bonus5 bAutoSpell,"MG_FIREBALL",5,100,BF_MAGIC,0;},{},{}
+5512,Unknown,炼金术手套,5,10,,10,,1,,,0x003FFF80,3,2,136,,125,1,216,{bonus bMdef,2;bonus bInt,1;bonus2 bSkillAtk,"SO_FIREWALK",10;bonus2 bSkillAtk,"SO_DIAMONDDUST",10;bonus5 bAutoSpell,"MG_FIREBALL",5,100,BF_MAGIC,0;},{},{}
