@@ -102,6 +102,8 @@
 8212,0x97,    ,  0, 1,1000,enemy, 0x006	//MA_FREEZINGTRAP
 
 //[The Quality Maker]
+2008,0x86,    , 0, 1:1:1:2:2:2:3:3:4:4,1000,enemy, 0x018	//RK_DRAGONBREATH
+
 2032,0xe1,    , 2, 0,  -1,enemy, 0x010	//GC_POISONSMOKE
 
 2044,0xca,    , 0, 5,3000,all,   0x018	//AB_EPICLESIS
