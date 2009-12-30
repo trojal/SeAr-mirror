@@ -1,3 +1,8 @@
+2009/12/30[SeAr_1.3.51]
+- 源码:		修正Rampage Balster不记录气弹数量。
+- 源码:		修正Vanish Point使用职业等级代替了Bash等级。
+- 源码、DB:	Hell's Plant, Crazy weed调整为魔法技能。
+
 2009/12/30[SeAr_1.3.50]
 - 源码:		修正Crush Strike不损坏无法损坏的道具，不在杀死对方的那次攻击损坏道具。
 
