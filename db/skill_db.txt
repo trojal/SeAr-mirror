@@ -804,7 +804,7 @@
 2277,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_RESEARCHFE,火热大地研究
 2278,4:5:6:7:8,6,1,-1,0,0,5,1,no,0,0,0,weapon,1,NC_AXEBOOMERANG,回旋斧
 2279,-4,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,		NC_POWERSWING,强力回旋
-2280,0,8,4,-1,0x2,2,5,5,no,0,0,0,weapon,0,	NC_AXETORNADO,旋风斧
+2280,0,8,4,-1,0x2,2,5,-5,no,0,0,0,weapon,0,	NC_AXETORNADO,旋风斧
 2281,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_SILVERSNIPER,FAW 银色狙击手
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法置物
 2283,-5,6,16,0,0,0,1,0,no,0,0,2,weapon,0,		NC_DISJOINT,FAW 解除
