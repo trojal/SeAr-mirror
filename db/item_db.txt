@@ -5909,3 +5909,14 @@
 2853,Unknown,念动宝玉,5,10,,20,,2,,,0x002FFF80,3,2,136,,110,1,,{bonus bMaxSP,30;bonus bMdef,1;bonus bInt,3;bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",10;},{},{}
 2854,Unknown,炼金术手套,5,10,,10,,1,,,0x003FFF80,3,2,136,,125,1,,{bonus bMdef,2;bonus bInt,1;bonus2 bSkillAtk,"SO_FIREWALK",10;bonus2 bSkillAtk,"SO_DIAMONDDUST",10;bonus5 bAutoSpell,"MG_FIREBALL",5,100,BF_MAGIC,0;},{},{}
 5512,Unknown,炼金术手套,5,10,,10,,1,,,0x003FFF80,3,2,136,,125,1,216,{bonus bMdef,2;bonus bInt,1;bonus2 bSkillAtk,"SO_FIREWALK",10;bonus2 bSkillAtk,"SO_DIAMONDDUST",10;bonus5 bAutoSpell,"MG_FIREBALL",5,100,BF_MAGIC,0;},{},{}
+
+//-----12.31 更新物品-----------
+5596,Unknown,衔住的四叶幸运草,5,10,,,,2,,,0xFFFFFFFF,3,2,1,,,0,571,{bonus bAtk,5;bonus bMatk,5;bonus bMdef,2;},{},{}
+5521,Unknown,愤怒的嘴,5,10,,,,,,,0xFFFFFFFF,3,2,1,,,1,194,{bonus bDelayrate,3;},{},{}
+5597,Unknown,衔住的口香糖,5,10,,,,2,,,0xFFFFFFFF,3,2,1,,,1,572,{bonus bAtk,5;bonus bMatk,5;bonus bMdef,2;},{},{}
+5592,Unknown,塞葛伦之羽翼,5,10,,10,,2,,,0xFFFFFFFF,3,2,512,,8,1,568,{if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||BaseClass==Job_Taekwon||BaseClass==Job_Star_Gladiator) { bonus bStr,1;}if(BaseClass==Job_Mage||BaseClass==Job_Ninja||BaseClass==Job_Acolyte||BaseClass==Job_Soul_Linker) { bonus bDex,1;}if(BaseClass==Job_Novice||BaseClass==Job_SuperNovice) { bonus bMaxHP,80;bonus bMaxSP,80;}},{},{}
+2152,Unknown,反恶魔钢盾,5,10,,,,120,,,0xFFFFFFFF,3,2,33,,,1,,{bonus2 bSubRace,7,25;bonus2 bSubRace,6,25;},{},{}
+//-----1.1 更新物品-----------
+5565,Unknown,降龙罗汉脸谱,5,10,,,,3,,,0xFFFFFFFF,3,2,513,,,1,545,{bonus2 bAddRace,RC_DemiHuman,5;},{},{}
+5566,Unknown,伏虎罗汉脸谱,5,10,,,,1,,,0xFFFFFFFF,3,2,513,,,1,546,{bonus2 bAddRace,RC_DemiHuman,2;},{},{}
+5483,Unknown,奧丁面具,5,10,,10,,1,,,0xFFFFFFFF,3,2,513,,50,1,480,{bonus2 bAddRace,RC_DemiHuman,6;bonus bHit,-10;},{},{}

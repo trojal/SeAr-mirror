@@ -1,3 +1,8 @@
+2010/01/01[SeAr_1.3.53]
+- NPC:		汉化Sealed Shrine任务(by Blue狮子)。
+- 源码、DB:	Boss不中燃烧状态，持续时间36秒，修正属性点对燃烧持续时间的影响。
+- DB:		更新一些新头饰。
+
 2009/12/31[SeAr_1.3.52]
 - 源码:		修正Enchant Blade，Thurisaz及狂怒之枪之间的伤害叠加问题。
 - 源码:		修正Axe Tornado两次计算vit，风属性无附加。
