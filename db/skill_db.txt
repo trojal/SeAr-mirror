@@ -788,17 +788,17 @@
 2261,7,6,1,0,0x42,3:2:1,3,1,no,0,0,0,weapon,0,	NC_ARMSCANNON,激光炮
 2262,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_ACCELERATION,增速
 2263,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_HOVERING,悬浮
-2264,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,7,		NC_F_SIDESLIDE,前侧滑
-2265,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,7,		NC_B_SIDESLIDE,后侧滑
+2264,0,6,4,0,0x1,0,1,1,no,0,0,0,none,7,			NC_F_SIDESLIDE,前侧滑
+2265,0,6,4,0,0x1,0,1,1,no,0,0,0,none,7,			NC_B_SIDESLIDE,后侧滑
 2266,0,0,0,0,0,0,4,0,no,0,0,0,none,0,		NC_MAINFRAME,主机改造
 2267,0,6,4,0,0x2,2:3:4,3,1,no,0,0,0,misc,0,	NC_SELFDESTRUCTION,自爆
 2268,0,6,4,3:2:4:1,0x1,0,4,0,no,0,0,0,none,0,	NC_SHAPESHIFT,变形
 2269,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_EMERGENCYCOOL,速冻
 2270,0,6,4,0,0x3,7,1,0,no,0,0,0,weapon,0,		NC_INFRAREDSCAN,红外扫描
 2271,7,6,1,0,0x3,3,3,0,no,0,0,0,none,0,		NC_ANALYZE,分析
-2272,0,6,4,0,0x1,0,3,1,yes,0,0,0,weapon,0,	NC_MAGNETICFIELD,磁场
+2272,0,6,4,0,0x1,0,3,1,yes,0,0,0,none,0,		NC_MAGNETICFIELD,磁场
 2273,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_NEUTRALBARRIER,中立屏障
-2274,0,6,4,0,0x1,0,3,1,yes,0,0,0,weapon,0,	NC_STEALTHFIELD,隐形力场
+2274,0,6,4,0,0x1,0,3,1,yes,0,0,0,none,0,		NC_STEALTHFIELD,隐形力场
 2275,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,		NC_REPAIR,维修
 2276,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		NC_TRAININGAXE,斧修炼
 2277,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_RESEARCHFE,火热大地研究
@@ -807,7 +807,7 @@
 2280,0,8,4,-1,0x2,2,5,-5,no,0,0,0,weapon,0,	NC_AXETORNADO,旋风斧
 2281,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_SILVERSNIPER,FAW 银色狙击手
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法置物
-2283,-5,6,16,0,0,0,1,0,no,0,0,2,weapon,0,		NC_DISJOINT,FAW 解除
+2283,-5,6,16,0,0,0,1,0,no,0,0,2,none,0,			NC_DISJOINT,FAW 解除
 //暗影追迹者
 2284,1,6,1,-1,0x2,3,5,0,no,0,0,0,weapon,0,	SC_FATALMENACE,致命恐吓
 2285,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,		SC_REPRODUCE,复制
@@ -817,18 +817,18 @@
 2289,9,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
 2290,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_INVISIBILITY,隐形
 2291,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_DEADLYINFECT,致命感染
-2292,3,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_ENERVATION,假面-脱力
-2293,3,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_GROOMY,假面-忧郁
-2294,3,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_IGNORANCE,假面-无知
-2295,3,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_LAZINESS,假面-怠惰
-2296,3,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_UNLUCKY,假面-不幸
-2297,3,6,1,0,0x1,0,3,1,no,0,0,0,misc,0,		SC_WEAKNESS,假面-衰弱
-2298,1,6,1,0,0x1,0,5,1,no,0,0,0,weapon,0,		SC_STRIPACCESSARY,卸除装饰品
-2299,9,6,2,0,0,0,3,1,no,0,0,0,magic,0,		SC_MANHOLE,下水道
-2300,9,6,2,0,0,0,3,1,no,0,0,0,magic,0,		SC_DIMENSIONDOOR,次元入口
-2301,9,6,2,0,0,0,3,1,no,0,0,0,misc,0,		SC_CHAOSPANIC,混乱恐慌
+2292,3,6,1,0,0x1,0,3,1,no,0,0,0,none,0,		SC_ENERVATION,假面-脱力
+2293,3,6,1,0,0x1,0,3,1,no,0,0,0,none,0,		SC_GROOMY,假面-忧郁
+2294,3,6,1,0,0x1,0,3,1,no,0,0,0,none,0,		SC_IGNORANCE,假面-无知
+2295,3,6,1,0,0x1,0,3,1,no,0,0,0,none,0,		SC_LAZINESS,假面-怠惰
+2296,3,6,1,0,0x1,0,3,1,no,0,0,0,none,0,		SC_UNLUCKY,假面-不幸
+2297,3,6,1,0,0x1,0,3,1,no,0,0,0,none,0,		SC_WEAKNESS,假面-衰弱
+2298,1,6,1,0,0x1,0,5,1,no,0,0,0,none,0,			SC_STRIPACCESSARY,卸除装饰品
+2299,9,6,2,0,0,0,3,1,no,0,0,0,none,0,			SC_MANHOLE,下水道
+2300,9,6,2,0,0,0,3,1,no,0,0,0,none,0,			SC_DIMENSIONDOOR,次元入口
+2301,9,6,2,0,0,0,3,1,no,0,0,0,none,0,		SC_CHAOSPANIC,混乱恐慌
 //2302,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		SC_MAELSTROM,大漩涡
-2303,9,6,2,0,0,0,3,1,no,0,0,0,misc,0,		SC_BLOODYLUST,血腥渴望
+2303,9,6,2,0,0,0,3,1,no,0,0,0,none,0,		SC_BLOODYLUST,血腥渴望
 //2304,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		SC_FEINTBOMB,伪装炸弹
 //皇家护卫
 2307,11,6,1,-1,0x2,2,5,1,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,加农矛
