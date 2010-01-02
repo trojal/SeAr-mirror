@@ -1,3 +1,9 @@
+2010/01/02[SeAr_1.3.54]
+- 源码:		修正等级对机械师技能的影响。
+- 源码:		Ranger在Research Trap习得后，没有Trap时可以使用Alloy Trap。
+- 源码:		修正Agi对假面技能的抵抗。
+- DB:		Dragon Breath无视闪躲。
+
 2010/01/01[SeAr_1.3.53]
 - NPC:		汉化Sealed Shrine任务(by Blue狮子)。
 - 源码、DB:	Boss不中燃烧状态，持续时间36秒，修正属性点对燃烧持续时间的影响。
