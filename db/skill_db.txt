@@ -813,7 +813,7 @@
 2285,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,		SC_REPRODUCE,复制
 2286,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,		SC_AUTOSHADOWSPELL,自动影咒
 2287,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,		SC_SHADOWFORM,影形态
-2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,3,yes,0,0,0,weapon,4,		SC_TRIANGLESHOT,三连矢
+2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,-3,yes,0,0,0,weapon,4,		SC_TRIANGLESHOT,三连矢
 2289,9,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
 2290,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_INVISIBILITY,隐形
 2291,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_DEADLYINFECT,致命感染
