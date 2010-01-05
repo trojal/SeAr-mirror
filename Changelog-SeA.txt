@@ -1,3 +1,6 @@
+2010/01/05[SeAr_1.3.60]
+- 源码、CONF:	提取一些文字至msg_athena.conf方便简繁互化。
+
 2010/01/05[SeAr_1.3.59]
 - 源码、CONF:	添加设置max_guild_position于inter_athena.conf中。
 
