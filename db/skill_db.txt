@@ -884,8 +884,8 @@
 2412,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		WM_LESSON,课程
 2413,9,6,1,0,0,0,5,1,yes,0,0,0,weapon,0,		WM_METALICSOUND,金属音
 2414,9,6,2,0,0,0,5,1,yes,0,0,3,misc,0,		WM_REVERBERATION,混响
-2415,3,6,1,0,0x2,3,5,1,no,0,0,0,weapon,0,		WM_REVERBERATION_MELEE,混响Melee
-2416,3,6,1,0,0x2,3,5,1,no,0,0,0,magic,0,		WM_REVERBERATION_MAGIC,混响Magic
+2415,3,6,1,0,0x2,1,5,1,no,0,0,0,weapon,0,		WM_REVERBERATION_MELEE,混响Melee
+2416,3,6,1,0,0x2,1,5,1,no,0,0,0,magic,0,		WM_REVERBERATION_MAGIC,混响Magic
 2417,9,6,2,0,0,0,1,0,yes,0,0,0,weapon,0,		WM_DOMINION_IMPULSE,脉冲领土
 2418,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		WM_SEVERE_RAINSTORM,狂风暴雨
 2419,9,6,2,0,0,0,5,1,yes,0,0,5,misc,0,		WM_POEMOFNETHERWORLD,地狱诗歌

@@ -1,3 +1,12 @@
+2010/01/05[SeAr_1.3.61]
+- 源码、DB:	修正Harmonize持续时间和效果。
+- 源码、DB:	SpellFist无视闪躲。
+- DB:		修正Reverbration出发范围和伤害范围。
+- 源码:		Rune Mastery大于等于5级后可以制作大于1个Rune石。
+- 源码:		修正完全回复持续时间。
+- 源码:		int可以抵御Oblivion Curse状态。
+- 源码:		修正Psychic Wave公式。
+
 2010/01/05[SeAr_1.3.60]
 - 源码、CONF:	提取一些文字至msg_athena.conf方便简繁互化。
 
