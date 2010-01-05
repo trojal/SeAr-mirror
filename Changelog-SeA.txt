@@ -1,3 +1,6 @@
+2010/01/05[SeAr_1.3.59]
+- 源码、CONF:	添加设置max_guild_position于inter_athena.conf中。
+
 2010/01/03[SeAr_1.3.58]
 - DB:		修正三连矢伤害。
 - 源码:		修正一些歌舞技能的状态叠加问题。
