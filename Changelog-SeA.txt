@@ -1,3 +1,8 @@
+2010/01/06[SeAr_1.3.62]
+- DB:		龙息术咏唱无法被打断。
+- DB:		修正三转诗舞各自BUFF技能的持续时间。
+- 源码、DB:	Storm Blaster不再有Cool Down。
+
 2010/01/05[SeAr_1.3.61]
 - 源码、DB:	修正Harmonize持续时间和效果。
 - 源码、DB:	SpellFist无视闪躲。
