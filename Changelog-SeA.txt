@@ -1,3 +1,10 @@
+2010/01/11[SeAr_1.3.67]
+- NPC:		修正SeA服务人员传送。
+- DB:		修正狼撕咬前置技能。
+- DB:		修正Cross Impact延时、PinPoint Attack冷却延时。
+- 源码:		修正Weapon Blocking对远程攻击有效。
+- 源码:		Harmonize为负面效果，所有加成固定为某值。
+
 2010/01/09[SeAr_1.3.66]
 - 源码:		修正Harmonize只随机增加1项属性点。
 - 源码、DB:	修正Pinpoint Attack伤害公式，增加2秒Cool Down。
