@@ -1,3 +1,7 @@
+2010/01/13[SeAr_1.3.69]
+- 源码:		修正Invisibility不应用冷却时间。
+- DB:		修正Earth Grave和Diamond Dust伤害范围。
+
 2010/01/13[SeAr_1.3.68]
 - 源码:		修正Earth Drive伤害公式。
 - 源码、DB:	修正Earth Grave和Diamond Dust伤害公式。
