@@ -1,3 +1,7 @@
+2010/01/13[SeAr_1.3.68]
+- 源码:		修正Earth Drive伤害公式。
+- 源码、DB:	修正Earth Grave和Diamond Dust伤害公式。
+
 2010/01/11[SeAr_1.3.67]
 - NPC:		修正SeA服务人员传送。
 - DB:		修正狼撕咬前置技能。

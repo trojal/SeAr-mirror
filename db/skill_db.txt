@@ -908,8 +908,8 @@
 2443,0,6,4,3,0,0,5,0,yes,0,0,0,magic,0,		SO_FIREWALK,火焰步
 2444,0,6,4,4,0,0,5,0,yes,0,0,0,magic,0,		SO_ELECTRICWALK,电流步
 2445,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,		SO_SPELLFIST,咒拳
-2446,9,8,2,2,0x2,3:3:3:4:4,5,-5,yes,0,0,0,magic,0,	SO_EARTHGRAVE,地底墓穴
-2447,9,6,2,1,0,0,5,1,yes,0,0,0,magic,0,				SO_DIAMONDDUST,钻石星尘
+2446,9,8,2,2,0,0,5,-3,yes,0,0,0,magic,0,	SO_EARTHGRAVE,地底墓穴
+2447,9,6,2,1,0,0,5,-5,yes,0,0,0,magic,0,			SO_DIAMONDDUST,钻石星尘
 2448,9,6,1,5,0,0,5,1,yes,0,0,0,magic,0,				SO_POISON_BUSTER,毒爆发
 2449,9,6,2,0,0,0,5,1,yes,0,0,0,magic,0,		SO_PSYCHIC_WAVE,精神波
 2450,9,6,2,5,0,0,5,1,yes,0,0,0,magic,0,				SO_CLOUD_KILL,毒云术
