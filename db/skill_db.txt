@@ -831,7 +831,7 @@
 2303,9,6,2,0,0,0,3,1,no,0,0,0,none,0,		SC_BLOODYLUST,血腥渴望
 //2304,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		SC_FEINTBOMB,伪装炸弹
 //皇家护卫
-2307,11,6,1,-1,0x2,2,5,1,yes,0,0,0,weapon,0,	LG_CANNONSPEAR,加农矛
+2307,11,6,1,-1,0x2,1,5,1,yes,0,0,10,weapon,0,	LG_CANNONSPEAR,加农矛
 2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,尖端驱逐
 2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,践踏
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,盾压
@@ -946,7 +946,7 @@
 2497,0,0,0,0,0,0,10,0,no,0,0,0,none,0,			GN_S_PHARMACY,特殊制药
 2498,0,0,0,0,0,0,1,0,no,0,0,0,none,0,			GN_SLINGITEM_RANGEMELEEATK,道具投掷 Attack
 
-2515,9,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	AB_SACRAMENT,圣礼
+2515,9,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,	AB_SACRAMENT,圣礼
 //2516,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		WM_SEVERE_RAINSTORM_MELEE,狂风暴雨Melee
 2517,0,6,4,-1,0x2,5:5:6:6:7,5,1,yes,0,0x0,0,weapon,0,	SR_HOWLINGOFLION,狮子吼
 2518,3,6,2,-1,0x2,5:5:7;9:9,5,1,no,0,0,0,weapon,0,	SR_RIDEINLIGHTNING,雷光弹

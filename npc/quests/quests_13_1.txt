@@ -14565,7 +14565,7 @@ mid_camp,199,311,7	script	Mr. Kidd#ep13_dan01	884,{
 			mes "......";
 			next;
 			mes "......";
-			mes "............­";
+			mes "............?;
 			next;
 			cutin "moc2_kid03",2;
 			mes "[Mr. Kidd]";
@@ -15637,8 +15637,8 @@ que_job01,82,95,3	script	Bar Master#moc2_01	46,{
 				}
 			}
 		case 2:
-			set now_weight,-;
-			if (now_weight < 2000) {
+			set .@now_weight,MaxWeight-Weight;
+			if (.@now_weight < 2000) {
 				mes "[Karred]";
 				mes "Are you sure you can even hold a glass of alcohol?";
 				mes "You're carrying too many things on you already.";
