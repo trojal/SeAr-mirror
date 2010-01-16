@@ -1,3 +1,8 @@
+2010/01/15[SeAr_1.3.72]
+- 源码:		修正Electric Shocker在boss上的持续时间为和Ankle Snare相同。
+- 源码:		修正Warg Strike不在普通攻击时发动。
+- 源码:		修正拥有某技能的职业转职后，再装备奖励该技能的道具将无法得到该技能。
+
 2010/01/15[SeAr_1.3.71]
 - 源码、DB:	修正Cannon Spear伤害公式，伤害范围和冷却时间。
 - 源码:		修正Moon Slasher伤害公式。
