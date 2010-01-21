@@ -1,3 +1,14 @@
+2010/01/21[SeAr_1.3.78]
+- 源码:		修正如下技能几率为0。
+		 NPC_WIDEBLEEDING、NPC_WIDECONFUSE、NPC_WIDECURSE、
+		 NPC_WIDEFREEZE、NPC_WIDESLEEP、NPC_WIDESILENCE、
+		 NPC_WIDESTONE、NPC_WIDESTUN、NPC_SLOWCAST、
+		 NPC_WIDEHELLDIGNITY、GC_WEAPONCRUSH、NC_ANALYZE、
+- 源码:		修正Blood Sucker为依据int的固定伤害。
+- 源码:		禁止Phantom Thrust和Shadow Form在非攻击性地图使用。
+- 源码、DB:	修正Arrullo机率，int和等级可以缩短持续时间、需要1个黄色魔力矿石。
+- DB:		修正Diamond Dust、Psychic Wave咏唱等时间。
+
 2010/01/20[SeAr_1.3.77]
 - 源码:		修正抄袭/复制技能等级不正确。
 - 源码:		修正自动重载系统处理不可叠加道具时的问题。
