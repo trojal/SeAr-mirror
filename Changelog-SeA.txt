@@ -1,3 +1,8 @@
+2010/01/25[SeAr_1.3.79]
+- 源码、DB:	修正Crazy Weed表现。
+- 源码、DB:	修正Thorn Trap表现。
+- 源码:		复制技能的等级取决于复制的等级。
+
 2010/01/21[SeAr_1.3.78]
 - 源码:		修正如下技能几率为0。
 		 NPC_WIDEBLEEDING、NPC_WIDECONFUSE、NPC_WIDECURSE、
