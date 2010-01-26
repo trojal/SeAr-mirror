@@ -1,3 +1,8 @@
+2010/01/26[SeAr_1.3.82]
+- SQL:		修正服务器帐号ID默认从2000000开始(应该为0)。
+- DB:		Cross Impact行走延时2秒。
+- 源码:		修正SC_ITEMBOOST倍率计算错误。
+
 2010/01/26[SeAr_1.3.81]
 - 源码:		修正Sacrement, Clearance, DeepSleep对黄金虫卡片有效。
 - DB:		Storm Blast击退10格。
