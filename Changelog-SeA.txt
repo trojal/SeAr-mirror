@@ -1,3 +1,8 @@
+2010/01/26[SeAr_1.3.81]
+- 源码:		修正Sacrement, Clearance, DeepSleep对黄金虫卡片有效。
+- DB:		Storm Blast击退10格。
+- DB:		Domestic Fire需要火焰瓶。
+
 2010/01/26[SeAr_1.3.80]
 - DB:		更新Item、Mob DB。(r14223)
 - 源码:		修正脚本指令skill参数2时可以超过最大技能等级。(r14225)

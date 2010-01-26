@@ -679,7 +679,7 @@
 2014,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_GIANTGROWTH,猛增
 2015,9,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_STONEHARDSKIN,坚硬皮肤
 2016,0,6,4,0,,0,1,0,no,0,0,0,none,0,		RK_VITALITYACTIVATION,生命激活
-2017,0,6,4,3,0x2,3,1,1,no,0,0,0,weapon,3,		RK_STORMBLAST,毁灭风暴
+2017,0,6,4,3,0x2,3,1,1,no,0,0,0,weapon,10,		RK_STORMBLAST,毁灭风暴
 2018,0,0,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_FIGHTINGSPIRIT,战魂
 2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_ABUNDANCE,充裕
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,幻影击刺
