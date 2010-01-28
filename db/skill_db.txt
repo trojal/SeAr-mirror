@@ -679,7 +679,7 @@
 2014,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_GIANTGROWTH,猛增
 2015,9,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_STONEHARDSKIN,坚硬皮肤
 2016,0,6,4,0,,0,1,0,no,0,0,0,none,0,		RK_VITALITYACTIVATION,生命激活
-2017,0,6,4,3,0x2,3,1,1,no,0,0,0,weapon,10,		RK_STORMBLAST,毁灭风暴
+2017,0,6,4,-1,0x2,3,1,1,no,0,0,0,weapon,10,		RK_STORMBLAST,毁灭风暴
 2018,0,0,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_FIGHTINGSPIRIT,战魂
 2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_ABUNDANCE,充裕
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,幻影击刺
@@ -735,7 +735,7 @@
 2210,9,6,1,0,0,0,5,1,yes,0,0,0,magic,0,		WL_DRAINLIFE,生命吸收
 2211,9,8,1,3,0x2,3,5,-7,yes,0,0,1,magic,5,	WL_CRIMSONROCK,深红岩石
 2212,9,6,1,3,0,0,5,1,yes,0,0,0,magic,0,		WL_HELLINFERNO,地狱火焰
-2213,9,8,2,3,0x2,7,5,-20,yes,0,0,0,magic,0,	WL_COMET,破坏的彗星
+2213,9,8,2,0,0x2,7,5,-20,yes,0,0,0,magic,0,	WL_COMET,破坏的彗星
 2214,9,6,1,4,0x2,5,5,1,yes,0,0x100,0,magic,0,	WL_CHAINLIGHTNING,连锁闪电
 2215,9,6,1,4,0x2,5,5,1,yes,0,0x100,0,magic,0,	WL_CHAINLIGHTNING_ATK,连锁闪电_ATK
 2216,9,8,2,2,0,0,5,-10,yes,1,0,0,magic,0,		WL_EARTHSTRAIN,大地扭曲

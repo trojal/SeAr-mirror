@@ -1,11 +1,13 @@
 //===================================
 // =波利战争(War of Porings)
 // =By BlackJack
+// =版本 V 1.1
 // =2010.1.15
 // =测试 SeAr_1.2.93
 // =测试人员：秋仔
 // =BUG汇报联系QQ：263639348
 // =此脚本请勿擦去版权，请勿用于商业用途。
+// =为经允许请勿转载，版权归Blackjack所有
 // ==============日志=================
 // = 2010.1.15 
 // = 11:50 am 开始编写脚本 (BlackJack)
@@ -15,6 +17,8 @@
 // = 0:20 am 编写完成 (BlackJack)
 // = 2010.1.17
 // = 8:00 am 核心部分BUG修正完毕 (BlackJack)
+// = 2010.1.28
+// = 16:00 pm BUG修正完毕 (BlackJack and 秋仔)
 //===================================
 
 //============== 设置 ==================
@@ -24,7 +28,7 @@ OnInit:
 
 	set $pw_zeny,500;	//进场费用
 
-	set $pw_team_players,1; //队伍最大人数
+	set $pw_team_players,5; //队伍最大人数
 
 	set $pw_Reward,7539; 	//奖励物品
 
@@ -503,49 +507,60 @@ OnPCDieEvent:
 	getmapxy @map$,@x,@y,0;
 	if (@map$ == "poring_w02"){
 	if(getcharid(1)==$@team_1){
-	savepoint "poring_w02",48,81;
 	}
 	if(getcharid(1)==$@team_2){
 	savepoint "poring_w02",150,81;
 		}
 	}
 	end;
+
 OnPCLogoutEvent:
 	getmapxy @map$,@x,@y,0;
 	if (@map$ == "poring_w02"){
 	if ( getmapusers("poring_w02.gat")<6 ){
 	set $@pw_cushi1,0;
 	set $@pw_cushi,0;
-	savepoint "poring_w02",150,81;
+	savepoint "prontera",155,121;
+	warpparty "prontera",155,121,$@team_2;
+	warpparty "prontera",155,121,$@team_1;
+	end;
 	} else {
-	savepoint "poring_w02",150,81;
+	savepoint "prontera",155,121;;
 	}
 	end;
+	}
 
 
 }
+
 //============== 奖励人员 ==================
 poring_w02,100,200,3	script	小恶魔	738,{
 	mes "[小恶魔]";
 	mes "恭喜你们获得本次战争的胜利";
 	mes "以下是你们的奖励";
 	close2;
+	if(countitem($pw_badge)>=0){
+	set @item,countitem($pw_badge);
 	if($@win == 2&& getcharid(1)==$@team_2){
 	getitem $pw_Reward,3;
 	warp "prontera",155,121;
 	savepoint "prontera",155,121;
+	delitem $pw_badge,@item;
 	end;
 	}
 	if($@win == 1&& getcharid(1)==$@team_1){
 	getitem $pw_Reward,3;
 	warp "prontera",155,121;
 	savepoint "prontera",155,121;
+	delitem $pw_badge,@item;
 	end;
 	}
 	getitem $pw_Reward,1;
 	warp "prontera",155,121;
 	savepoint "prontera",155,121;
+	delitem $pw_badge,@item;
 	end;
+	}
 }
 
 
