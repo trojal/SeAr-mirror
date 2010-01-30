@@ -125,10 +125,11 @@
 2274,0x86,   ,  1, 0,1000,all,   0x000	//NC_STEALTHFIELD
 
 2289,0x86,   ,  0, 1,1000,enemy, 0x000	//SC_BODYPAINT
-2299,0xcc,   ,  0, 1,1000,all,   0x004	//SC_MANHOLE
-2300,0xcd,   ,  0, 1,1000,all,   0x004	//SC_DIMENSIONDOOR
-2301,0xcf,   ,  0, 1,1000,all,   0x004	//SC_CHAOSPANIC
-2303,0xce,   ,  0, 1,1000,all,   0x004	//SC_BLOODYLUST
+2299,0xcc,   ,  0, 1, 100,all,   0x014	//SC_MANHOLE
+2300,0xcd,   ,  0, 0,  -1,all,   0x004	//SC_DIMENSIONDOOR
+2301,0xce,   ,  0, 2, 100,all,   0x004	//SC_CHAOSPANIC
+2302,0xcf,   ,  0, 2,1000,all,   0x002	//SC_MAELSTROM
+2303,0xd0,   ,  0, 2,1000,all,   0x004	//SC_BLOODYLUST
 
 2334,0x86,   ,  0, 2,1000,enemy, 0x000	//SR_CURSEDCIRCLE
 

@@ -2837,15 +2837,15 @@
 6117,Imp_Pet_Coupon,Imp Pet Exchange Coupon,3,0,,10,,,,,,,,,,,,,{},{},{}
 6118,Chung_E_Pet_Coupon,Chung E Exchange Coupon,3,0,,10,,,,,,,,,,,,,{},{},{}
 6119,Natural_Leather,Natural Leather,3,0,,10,,,,,,,,,,,,,{},{},{}
-6120,Face_Paint,Face Paint,3,0,,10,,,,,,,,,,,,,{},{},{}
-6121,Makeover_Brush,Makeover Brush,3,0,,10,,,,,,,,,,,,,{},{},{}
-6122,Paint_Brush,Paint Brush,3,0,,10,,,,,,,,,,,,,{},{},{}
-6123,Surface_Paint,Surface Paint,3,0,,10,,,,,,,,,,,,,{},{},{}
-6124,Wolf's_Flute,Wolf's Flute,3,0,,10,,,,,,,,,,,,,{},{},{}
+6120,颜面涂料,Face Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
+6121,化妆笔,Makeup Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
+6122,颜料笔,Paint Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
+6123,地面涂料,Surface Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
+6124,狼笛,Wolf's Flute,3,250,,10,,,,,,,,,,,,,{},{},{}
 6125,Lucky_Box,Lucky Box,3,0,,10,,,,,,,,,,,,,{},{},{}
 6126,Happy_Box,Happy Box,3,0,,10,,,,,,,,,,,,,{},{},{}
 6127,Purification_Stone,Purification Stone,3,0,,10,,,,,,,,,,,,,{},{},{}
-6128,Guillotine_Antidote,Guillotine Antidote,3,0,,10,,,,,,,,,,,,,{},{},{}
+6128,解毒剂,Antidote,3,10,,10,,,,,,,,,,,,,{},{},{}
 6129,Ticket_Nightmare,Ticket Nightmare,3,0,,10,,,,,,,,,,,,,{},{},{}
 6130,Ticket_Loli_Ruri,Ticket Loli Ruri,3,0,,10,,,,,,,,,,,,,{},{},{}
 6131,Ticket_Goblin_Leader,Ticket Goblin Leader,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -2862,18 +2862,18 @@
 6142,Ticket_Golem,Ticket Golem,3,0,,10,,,,,,,,,,,,,{},{},{}
 6143,Ticket_Civil_Servant,Ticket Civil Servant,3,0,,10,,,,,,,,,,,,,{},{},{}
 6144,Heartbroken_Tears,Heartbroken Tears,3,0,,10,,,,,,,,,,,,,{},{},{}
-6145,Vulcan_Bullet,Vulcan Bullet,3,0,,10,,,,,,,,,,,,,{},{},{}
-6146,Magic_Gear_Fuel,Magic Gear Fuel,3,0,,10,,,,,,,,,,,,,{},{},{}
-6147,Liquid_Condensed_Bullet,Liquid Condensed Bullet,3,0,,10,,,,,,,,,,,,,{},{},{}
+6145,火神子弹,Vulcan Bullet,3,10,,3,,,,,,,,,,,,,{},{},{}
+6146,魔导装甲燃料,Mado/Magic Gear Fuel,3,300,,30,,,,,,,,,,,,,{},{},{}
+6147,液冷子弹,Liquid Cold Bullet,3,100,,10,,,,,,,,,,,,,{},{},{}
 6148,Chocolate_Of_Eternity,Chocolate Of Eternity,3,0,,10,,,,,,,,,,,,,{},{},{}
 6149,Plain_Chocolate,Plain Chocolate,3,0,,10,,,,,,,,,,,,,{},{},{}
-6150,Key_Of_The_Mansion,Key Of The Mansion,3,0,,10,,,,,,,,,,,,,{},{},{}
-6151,Peice_Of_Great_Bradium,Peice Of Great Bradium,3,0,,10,,,,,,,,,,,,,{},{},{}
-6152,Glittering_Crystal,Glittering Crystal,3,0,,10,,,,,,,,,,,,,{},{},{}
-6153,Special_Exchange_Coupon,Special Exchange Coupon,3,0,,10,,,,,,,,,,,,,{},{},{}
-6154,Broken_Horn_Pipe,Broken Horn Pipe,3,0,,10,,,,,,,,,,,,,{},{},{}
+6150,御宅的钥匙,House Key,3,10,,10,,,,,,,,,,,,,{},{},{}
+6151,巨大镭矿的碎块,Test Item 2,3,10,,10,,,,,,,,,,,,,{},{},{}
+6152,闪亮的水晶,Test Item 3,3,10,,10,,,,,,,,,,,,,{},{},{}
+6153,特别的交换卷轴,Test Item 4,3,10,,10,,,,,,,,,,,,,{},{},{}
+6154,角笛的碎块,Fragmented Horn Flute,3,10,,10,,,,,,,,,,,,,{},{},{}
 6155,Coke_Membership_Card,Coke Membership Card,3,0,,10,,,,,,,,,,,,,{},{},{}
-6156,Approval_Report,Approval Report,3,0,,10,,,,,,,,,,,,,{},{},{}
+6156,等候领取报告,Payment Waiting Report,3,10,,10,,,,,,,,,,,,,{},{},{}
 6157,Poring_Ticket,Poring Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 6158,Drops_Ticket,Drops Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 6159,Poporing_Ticket,Poporing Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -2903,7 +2903,7 @@
 6183,Hardtack_Ticket,Hardtack Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 6184,Zherlthsh_Ticket,Zherlthsh Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 6185,Alice_Ticket,Alice Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
-6186,Monkey_Wrench,Monkey Wrench,3,0,,10,,,,,,,,,,,,,{},{},{}
+6186,活动扳手,Monkey Wrench,3,500,,10,,,,,,,,,,,,,{},{},{}
 
 7001,Mould_Powder,霉菌粉末,3,466,,10,,,,,,,,,,,,,{},{},{}
 7002,Ogre_Tooth,兽人之牙,3,658,,10,,,,,,,,,,,,,{},{},{}
@@ -3753,16 +3753,16 @@
 7928,Brazilian_Flag_,Brazilian Flag,3,0,,10,,,,,,,,,,,,,{},{},{}
 7929,Golden_Coin_,Golden Coin,3,0,,10,,,,,,,,,,,,,{},{},{}
 7930,Cowking's_Nose_Ring,Cowking's Nose Ring,3,0,,10,,,,,,,,,,,,,{},{},{}
-7931,Poison_Kit,Poison Kit,3,0,,10,,,,,,,,,,,,,{},{},{}
-7932,Poison_Herb_Nerium,Poison Herb Nerium,3,0,,10,,,,,,,,,,,,,{},{},{}
-7933,Poison_Herb_Rantana,Poison Herb Rantana,3,0,,10,,,,,,,,,,,,,{},{},{}
-7934,Poison_Herb_Makulata,Poison Herb Makulata,3,0,,10,,,,,,,,,,,,,{},{},{}
-7935,Poison_Herb_Seratum,Poison Herb Seratum,3,0,,10,,,,,,,,,,,,,{},{},{}
-7936,Poison_Herb_Scopolia,Poison Herb Scopolia,3,0,,10,,,,,,,,,,,,,{},{},{}
-7937,Poison_Herb_Amoena,Poison Herb Amoena,3,0,,10,,,,,,,,,,,,,{},{},{}
-7938,Light_Granule,Light Granule,3,0,,10,,,,,,,,,,,,,{},{},{}
-7939,Elder_Branch,Elder Branch,3,0,,10,,,,,,,,,,,,,{},{},{}
-7940,Special_Alloy_Trap,Special Alloy Trap,3,0,,10,,,,,,,,,,,,,{},{},{}
+7931,Poison_Kit,Poison Manufacture Kit,3,10,,10,,,,,,,,,,,,,{},{},{}
+7932,Poison_Herb_Nerium,Nerium,3,10,,10,,,,,,,,,,,,,{},{},{}
+7933,Poison_Herb_Rantana,Lantana,3,10,,10,,,,,,,,,,,,,{},{},{}
+7934,Poison_Herb_Makulata,Makulrata,3,10,,10,,,,,,,,,,,,,{},{},{}
+7935,Poison_Herb_Seratum,Celatom,3,10,,10,,,,,,,,,,,,,{},{},{}
+7936,Poison_Herb_Scopolia,Scoforia,3,10,,10,,,,,,,,,,,,,{},{},{}
+7937,Poison_Herb_Amoena,Amoena,3,10,,10,,,,,,,,,,,,,{},{},{}
+7938,光的粒子,Light Partacle,3,10,,10,,,,,,,,,,,,,{},{},{}
+7939,长老树枝,Elder's Branch,3,10,,10,,,,,,,,,,,,,{},{},{}
+7940,特殊合金陷阱,Special Alloy Trap,3,10,,10,,,,,,,,,,,,,{},{},{}
 7941,Halloween_Ticket,Halloween Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 7942,Letter_From_Chico,Letter From Chico,3,0,,10,,,,,,,,,,,,,{},{},{}
 7943,Caskinya,Caskinya,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -5579,35 +5579,6 @@
 5516,锐利之眼1,Hawkeye 1,3,10,,10,,,,,,,,,,,,,{},{},{}
 5517,锐利之眼2,Hawkeye 2,3,10,,10,,,,,,,,,,,,,{},{},{}
 
-// Shadow Chaser Paint And Brushes
-6120,颜面涂料,Face Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
-6121,化妆笔,Makeup Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
-6122,颜料笔,Paint Brush,3,10,,10,,,,,,,,,,,,,{},{},{}
-6123,地面涂料,Surface Paint,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-// Ranger Flute
-6124,狼笛,Wolf Flute,3,250,,10,,,,,,,,,,,,,{},{},{}
-
-// Guillotine Cross Poison Antidote
-6128,解毒剂,Antidote,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-6144,Something_Tear,Something Tear,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-// Mechanic Mado Gear Skill Required Items
-6145,火神子弹,Vulcan Bullet,3,10,,3,,,,,,,,,,,,,{},{},{}
-6146,魔导装甲燃料,Mado/Magic Gear Fuel,3,300,,30,,,,,,,,,,,,,{},{},{}
-6147,液冷子弹,Liquid Cold Bullet,3,100,,10,,,,,,,,,,,,,{},{},{}
-
-6150,御宅的钥匙,House Key,3,10,,10,,,,,,,,,,,,,{},{},{}
-6151,巨大镭矿的碎块,Test Item 2,3,10,,10,,,,,,,,,,,,,{},{},{}
-6152,闪亮的水晶,Test Item 3,3,10,,10,,,,,,,,,,,,,{},{},{}
-6153,特别的交换卷轴,Test Item 4,3,10,,10,,,,,,,,,,,,,{},{},{}
-6154,角笛的碎块,Fragmented Horn Flute,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-6156,等候领取报告,Payment Waiting Report,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-6186,活动扳手,Monkey Wrench,3,500,,10,,,,,,,,,,,,,{},{},{}
-
 // Warlock's Magic Spellbooks
 6189,魔法书(火箭术),Magic Book (Fire Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
 6190,魔法书(冰箭术),Magic Book (Cold Bolt),3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -5692,22 +5663,6 @@
 6285,高级药水制作说明书Improved_Potion_Creation_Manual,Improved Potion Creation Manual,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 6297,空药水瓶,Empty Potion Bottle,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-// Guillotine Cross Poison Ingredients
-7931,Poison_Kit,Poison Manufacture Kit,3,10,,10,,,,,,,,,,,,,{},{},{}
-7932,Poison_Herb_Nerium,Nerium,3,10,,10,,,,,,,,,,,,,{},{},{}
-7933,Poison_Herb_Rantana,Lantana,3,10,,10,,,,,,,,,,,,,{},{},{}
-7934,Poison_Herb_Makulata,Makulrata,3,10,,10,,,,,,,,,,,,,{},{},{}
-7935,Poison_Herb_Seratum,Celatom,3,10,,10,,,,,,,,,,,,,{},{},{}
-7936,Poison_Herb_Scopolia,Scoforia,3,10,,10,,,,,,,,,,,,,{},{},{}
-7937,Poison_Herb_Amoena,Amoena,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-// Rune Knight Rune Stone Ingredients
-7938,光的粒子,Light Partacle,3,10,,10,,,,,,,,,,,,,{},{},{}
-7939,长老树枝,Elder's Branch,3,10,,10,,,,,,,,,,,,,{},{},{}
-
-// Ranger Special Alloy Trap
-7940,特殊合金陷阱,Special Alloy Trap,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 // Genetic Books And Formula's
 11022,组合料理制作说明书,Mix Cooking Ingredient Book 1,3,10,,10,,,,,,,,,,,,,{},{},{}

@@ -1,3 +1,11 @@
+
+- 源码:		实装Renewal属性计算公式，见renewal.conf。
+
+2010/01/30[SeAr_1.3.87]
+- 源码、DB:	苍鹰之眼不再对锐利射击有效。(r14232)
+- 源码、DB:	实装技能Mael Strom。
+- 源码、DB:	修正Bloody Slut, Man Hole, Dimension Door, Chaos Panic表现。
+
 2010/01/30[SeAr_1.3.86]
 - 源码:		修正Blood Sucker不吸收HP。
 - 源码:		修正Blood Sucker, Leech End, Pryexia, Overheat动画卡位。
