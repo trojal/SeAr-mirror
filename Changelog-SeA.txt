@@ -1,5 +1,11 @@
-
-- 源码:		实装Renewal属性计算公式，见renewal.conf。
+2010/01/30[SeAr_1.3.88]
+- 源码、CONF:	实装Renewal属性计算公式，见renewal.conf。
+		 * 近距离基本攻击力 [STR + DEX/5 + LUK/3 + BLv/4] 
+		 * 远距离基本攻击力 [Dex + STR/5 + LUK/3 + BLv/4] 
+		 * 基本命中率 [BLv + DEX + 175]
+		 * 基本逃避率 [BLv + AGI + 100]
+		 * 基本属性物理防御 [(VIT+BLv)/2] + [AGI/5]. 
+		 * 基本属性魔法防御 [INT + VIT/5 + DEX/5 + BLv/4]. 
 
 2010/01/30[SeAr_1.3.87]
 - 源码、DB:	苍鹰之眼不再对锐利射击有效。(r14232)
