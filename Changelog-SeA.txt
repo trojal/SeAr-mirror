@@ -1,3 +1,6 @@
+2010/01/30[SeAr_1.3.89]
+- 源码、DB:	更新Psychic Wave每次攻击间隔时间、伤害公式，不再造成晕眩。
+
 2010/01/30[SeAr_1.3.88]
 - 源码、CONF:	实装Renewal属性计算公式，见renewal.conf。
 		 * 近距离基本攻击力 [STR + DEX/5 + LUK/3 + BLv/4] 
