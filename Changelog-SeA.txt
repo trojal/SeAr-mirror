@@ -1,3 +1,8 @@
+2010/01/30[SeAr_1.3.86]
+- 源码:		修正Blood Sucker不吸收HP。
+- 源码:		修正Blood Sucker, Leech End, Pryexia, Overheat动画卡位。
+- 源码:		修正Leech End, Pyrexia, Overheat, Toxin间隔时间。
+
 2010/01/28[SeAr_1.3.85]
 - 源码:		修正光猎攻击到暗影追踪。
 - 源码:		修正地面范围技能无法触发防御型自动咏唱技能。
@@ -7,7 +12,7 @@
 - NPC:		波利战争最大人数限制调整，默认不加载。
 - 源码:		修正Blood Sucker动画效果。
 - 源码:		Hell Inferno由火属性和暗属性两部分伤害组成。
-- 源码:		修正Magic Mushroom技能发动列表，且不再会杀死对方。
+- 源码、DB:	修正Magic Mushroom技能发动列表，且不再会杀死对方。
 
 2010/01/27[SeAr_1.3.83]
 - 源码:		Piety仅对玩家有效。
@@ -25,7 +30,7 @@
 2010/01/26[SeAr_1.3.81]
 - 源码:		修正Sacrement, Clearance, DeepSleep对黄金虫卡片有效。
 - DB:		Storm Blast击退10格。
-- DB:		Domestic Fire需要火焰瓶。
+- DB:		Demonic Fire需要火焰瓶。
 
 2010/01/26[SeAr_1.3.80]
 - DB:		更新Item、Mob DB。(r14223)
