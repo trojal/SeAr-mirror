@@ -935,7 +935,7 @@
 2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_SMOKE_POWDER,火焰膨胀 Smoke Powder
 2488,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_TEAR_GAS,火焰膨胀 Tear Gas
 2489,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_ACID,火焰膨胀 Acid
-2490,9,6,2,0,0,0,5,1,yes,0,0,2:3:4:5:6,none,0,		GN_HELLS_PLANT,地狱植物
+2490,7,6,2,0,0x3,1,5,1,yes,0,0,2:3:4:5:6,none,0,		GN_HELLS_PLANT,地狱植物
 2491,0,6,1,0,0,0,5,1,no,0,0,0,magic,0,			GN_HELLS_PLANT_ATK,地狱植物 Attack
 2492,9,6,4,0,0x1,0,5,1,yes,0,0,0,none,0,			GN_MANDRAGORA,曼陀罗种植
 //Unfinished
