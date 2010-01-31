@@ -895,10 +895,10 @@
 2423,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SIRCLEOFNATURE,循环的自然之声
 2424,0,6,4,0,0x1,0,5,1,yes,0,0,0,misc,0,		WM_RANDOMIZESPELL,即兴曲
 2425,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,		WM_GLOOMYDAY,阴郁天
-2426,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		WM_GREAT_ECHO,大回音
+2426,9,6,2,0,0,0,5,1,yes,0,0x40,0,weapon,0,		WM_GREAT_ECHO,大回音
 2427,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SONG_OF_MANA,魔力之歌
 2428,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_DANCE_WITH_WUG,与狼共舞
-2429,9,6,1,0,0x1,0,5,1,yes,0,0,0,misc,0,		WM_SOUND_OF_DESTRUCTION,毁灭之歌
+2429,9,6,1,0,0x1,0,5,1,yes,0,0x40,0,misc,0,		WM_SOUND_OF_DESTRUCTION,毁灭之歌
 2430,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_SATURDAY_NIGHT_FEVER,周末狂热夜
 2431,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_LERADS_DEW,雷拉兹露水
 2432,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,夕阳曲
