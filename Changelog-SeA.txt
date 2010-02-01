@@ -1,3 +1,7 @@
+2010/02/01[SeAr_1.3.95]
+- 源码:		修正Reproduce複製的技能可以超過玩家正常技能上限。
+- 源码:		Ray of Genesis可以在Inspiration狀態下使用。
+
 2010/01/31[SeAr_1.3.94]
 - 源码:		修正瘋草和連鎖閃電使用的隨機挑選對象函數引起的懸空指正。
 
