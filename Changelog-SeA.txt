@@ -1,3 +1,6 @@
+2010/02/02[SeAr_1.3.96]
+- 源码、DB:	修正Striking SP消耗、SP需求及ATK獎勵值。
+
 2010/02/01[SeAr_1.3.95]
 - 源码:		修正Reproduce複製的技能可以超過玩家正常技能上限。
 - 源码:		Ray of Genesis可以在Inspiration狀態下使用。
