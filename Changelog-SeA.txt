@@ -1,3 +1,7 @@
+2010/02/04[SeAr_1.3.97]
+- 源码:		新毒研究增加致命荼毒持續時間。
+- DB:		Lauda技能僅有冷卻時間，無延時。
+
 2010/02/02[SeAr_1.3.96]
 - 源码、DB:	修正Striking SP消耗、SP需求及ATK獎勵值。
 
