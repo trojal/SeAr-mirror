@@ -130,6 +130,7 @@
 2301,0xce,   ,  0, 2, 100,all,   0x004	//SC_CHAOSPANIC
 2302,0xcf,   ,  0, 2,1000,all,   0x002	//SC_MAELSTROM
 2303,0xd0,   ,  0, 2,1000,all,   0x004	//SC_BLOODYLUST
+2304,0xd1,   ,  0, 4,  -1,enemy, 0x000	//SC_FEINTBOMB
 
 2334,0x86,   ,  0, 2,1000,enemy, 0x000	//SR_CURSEDCIRCLE
 

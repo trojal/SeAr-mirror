@@ -1,3 +1,18 @@
+2010/02/06[SeAr_1.3.98]
+- 源码:		修正Blood Sucker HP回復量。
+- 源码:		修正Weapon Blocking成功后組合技等待時間。
+- 源码:		修正Leech End損血量。
+- 源码:		修正Earth Shaker不工作。
+- 源码、DB:	Hell's Plant在命中前能生存40秒，只攻击单元格中1个对象。
+- 源码、DB:	Circle of Nature不是合奏技能。
+- NPC:		添加尼德霍格的巢穴任务。(小爱提供)
+- NPC:		修正兽人回忆任务。(r14239)
+- 源码:		修正有排名的铁匠、炼金系列职业制作的道具只对本系列职业有奖励值。
+- 源码:		修正gm_all_skill后客户端关闭。
+- 源码:		修正Striking对雇佣兵使用后客户端跳框。
+- 源码、CONF:	修正光环显示等级。
+- 源码、DB:	实装技能Feint Bomb。
+
 2010/02/04[SeAr_1.3.97]
 - 源码:		新毒研究增加致命荼毒持續時間。
 - DB:		Lauda技能僅有冷卻時間，無延時。
