@@ -1,3 +1,8 @@
+2010/02/08[SeAr_1.3.99]
+- 源码:		修正靈感狀態無法被使用加速朮。
+- 源码:		Leech End和Magic Mushroom中斷詠唱。
+- 源码:		修正reloadmobdb將在原有基礎上疊加計算matk。
+
 2010/02/06[SeAr_1.3.98]
 - 源码:		修正Blood Sucker HP回復量。
 - 源码:		修正Weapon Blocking成功后組合技等待時間。
