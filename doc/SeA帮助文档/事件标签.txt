@@ -61,7 +61,7 @@ OnPCPetLvUpEvent	玩家宠物升级时，运行标签下的脚本。
 OnPCHomLvUpEvent	玩家生命体升级时，运行标签下的脚本。
 OnPCSCStartEvent	玩家获得某种状态时，运行标签下的脚本。意在某些状态共存限制。赋予关联者变量@startedsc，表示状态编号
 OnPCSCEndEvent		玩家解除某种状态时，运行标签下的脚本。意在支持无限状态。赋予关联者变量@endedsc，表示状态编号
-OnPCUseSkillEvent	玩家使用某种技能时，运行标签下的脚本。赋予关联者变量@useskill_id，表示技能id
+OnPCUseSkillEvent	玩家使用某种技能时，运行标签下的脚本。赋予关联者变量@useskill_id，表示技能id，@useskill_lv，表示技能等級
 OnPCUseItemEvent	玩家使用某种物品时，运行标签下的脚本。赋予关联者变量@useitem_pos，表示在物品栏中的位置编号
 OnPCEquipEvent		玩家装备某件道具时，运行标签下的脚本。赋予关联者变量@equip_pos，表示在物品栏中的位置编号
 OnPCUnequipEvent	玩家卸除某件道具时，运行标签下的脚本。赋予关联者变量@unequip_pos，表示在物品栏中的位置编号

@@ -1,3 +1,8 @@
+2010/02/11[SeAr_1.3.102]
+- 源码、DOC:	OnPCUseSkillEvent賦予變量@useskill_lv表示技能等級。
+- DB:		修正Arms Cannon詠唱時間等。
+- 源码:		修正Auto Shadow Spell檢查並消耗物品需求。
+
 2010/02/10[SeAr_1.3.101]
 - 源码、CONF:	添加Renewal爆擊傷害計算公式。
 - 源码、DB:	修正Wall of Thorns表現。
