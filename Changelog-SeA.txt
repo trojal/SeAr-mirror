@@ -1,3 +1,7 @@
+2010/02/13[SeAr_1.3.104]
+- 源码、DB、CONF:
+		腳本化sound、adopt、marry、divorce、changesex、shownpc、hidenpc、mount。
+
 2010/02/12[SeAr_1.3.103]
 - 源码:		更新Crush Strike傷害公式。
 - 源码:		修正魔力增幅對Earth Strain無效。

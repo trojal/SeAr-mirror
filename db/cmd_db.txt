@@ -96,6 +96,24 @@ undisguise,20,20,0,0,{ callfunc "cmd_disguise",0; }
 disguiseall,99,99,1,1,{ callfunc "cmd_disguise",3; }
 undisguiseall,99,99,0,0,{ callfunc "cmd_disguise",2; }
 
+//播放聲音給身邊玩家，參數為文件名
+sound,40,40,1,1,{ if( strcut(@cmd_para$[0], getstrlen(@cmd_para$[0])-5,4) != ".wav" ) soundeffectall @cmd_para$[0]+".wav",0; else soundeffectall @cmd_para$[0],0; }
+
+//結婚、離婚、收養
+marry,40,40,2,2,{ if( !isloggedin(getcharid(3,@cmd_para$[0])) ) dispmes "玩家"+@cmd_para$[0]+"不在綫"; else if( !isloggedin(getcharid(3,@cmd_para$[1])) ) dispmes "玩家"+@cmd_para$[1]+"不在綫"; else { set .@id, getcharid(3); attachrid getcharid(3,@cmd_para$[0]); if( marriage(@cmd_para$[1]) ) { wedding; getitem sex?2634:2635,1; attachrid getcharid(3,@cmd_para$[1]); getitem sex?2634:2635,1; attachrid .@id; dispmes "祝他們幸福"; } else { attachrid .@id; dispmes "这两个人不能结婚，因为他们俩中的一个要么是宝宝要么已经结婚了。"; } } }
+divorce,40,40,1,1,{ if( !isloggedin(getcharid(3,@cmd_para$[0])) ) dispmes "玩家"+@cmd_para$[0]+"不在綫"; else { set .@id, getcharid(3); attachrid getcharid(3,@cmd_para$[0]); if(divorce()) { attachrid .@id; dispmes @cmd_para$[0]+"和他的配偶离婚了"; } else { attachrid .@id; dispmes "離婚失敗"; } } }
+adopt,40,40,3,3,{ if( !isloggedin(getcharid(3,@cmd_para$[0])) ) dispmes "玩家"+@cmd_para$[0]+"不在綫"; else if( !isloggedin(getcharid(3,@cmd_para$[1])) ) dispmes "玩家"+@cmd_para$[1]+"不在綫"; else if( !isloggedin(getcharid(3,@cmd_para$[2])) ) dispmes "玩家"+@cmd_para$[2]+"不在綫"; else if( adopt(@cmd_para$[0],@cmd_para$[1],@cmd_para$[2]) ) dispmes "祝他們幸福"; }
+
+//變性
+changesex,60,60,0,0,{ changesex; }
+
+//顯示/隱藏npc
+shownpc,60,60,0,0,{ if(getnpcdata(0,@cmd_para$[0]) == -1) dispmes msg(111); else { enablenpc @cmd_para$[0]; dispmes msg(110); } }
+hidenpc,60,60,0,0,{ if(getnpcdata(0,@cmd_para$[0]) == -1) dispmes msg(111); else { disablenpc @cmd_para$[0]; dispmes msg(112); } }
+
+//坐騎(包括鳥，龍，機器人)
+mount,20,20,0,1,{ if( checkriding() ) { setriding 0; dispmes msg(214); } else if( checkdisguise() ) dispmes msg(212); else { setriding !atoi(@cmd_para$[0])?1:atoi(@cmd_para$[0]); if( checkriding() ) dispmes msg(102); else dispmes msg(213); } }
+
 //======================= 以下为自定义指令 =========================
 // 打开悬赏窗口
 w&r,0,99,0,0,{ if((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }
