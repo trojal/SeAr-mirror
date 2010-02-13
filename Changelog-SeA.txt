@@ -1,3 +1,7 @@
+2010/02/13[SeAr_1.3.106]
+- 源码、DB、CONF:
+		腳本化day、night、skreset、streset、skpoint、stpoint、camp。
+
 2010/02/13[SeAr_1.3.105]
 - 源码、DB、CONF:
 		腳本化dye、ccolor、hairstyle、hstyle、haircolor、hcolor、model、changelook。

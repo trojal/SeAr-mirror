@@ -127,6 +127,19 @@ model,20,20,3,3,{ set .@id1, atoi(@cmd_para$[0]); set .@id2, atoi(@cmd_para$[1])
 //改变玩家外观
 changelook,60,60,1,2,{ setarray .@pos[0],4,5,3,2,8,9; set .@id1, atoi(@cmd_para$[0]); set .@id2, atoi(@cmd_para$[1]); if(@cmd_pcount == 2) { if(.@id1 < 1) set .@id1,1; else if(.@id1 > 6) set .@id1,6; set .@id1, .@pos[.@id1-1]; } else { set .@id2,.@id1; set .@id1,4; } changelook .@id1,.@id2; }
 
+//日夜
+day,80,80,0,0,{ if( !day() ) dispmes msg(90); }
+night,80,80,0,0,{ if( !night() ) dispmes msg(89); }
+
+//重置技能、点数
+skreset,80,80,0,0,{ resetskill; dispmes msg(206,strcharinfo(0)); }
+streset,80,80,0,0,{ resetstatus; dispmes msg(207,strcharinfo(0)); }
+skpoint,60,60,0,0,{ set .@i, atoi(@cmd_para$[0]); if( .@i < 0 && SkillPoint < .@i*-1 ) set .@j, 0; else set .@j, SkillPoint+.@i; if(.@j != SkillPoint) { set SkillPoint,.@j; dispmes msg(175); } else { if(.@i < 0) dispmes msg(41); else dispmes msg(149); } }
+stpoint,60,60,0,0,{ set .@i, atoi(@cmd_para$[0]); if( .@i < 0 && StatusPoint < .@i*-1 ) set .@j, 0; else set .@j, StatusPoint+.@i; if(.@j != SkillPoint) { set StatusPoint,.@j; dispmes msg(174); } else { if(.@i < 0) dispmes msg(41); else dispmes msg(149); } }
+
+//阵营
+camp,50,50,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id > getbattleflag("max.camp")) { dispmes "请输入 0 - "+getbattleflag("max_camp")+" 之间的数字"; end; } set PC_CAMP, .@id; if( !PC_CAMP ) dispmes "退出所有阵营"; else dispmes "加入阵营: "+PC_CAMP; }
+
 //======================= 以下为自定义指令 =========================
 // 打开悬赏窗口
 w&r,0,99,0,0,{ if((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }
