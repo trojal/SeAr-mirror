@@ -2,6 +2,7 @@
 //-->	免费版玩家指令上限为5条	<--
 // <玩家指令>,<@指令等级>,<#指令等级>,<最少参数数量>,<最大参数数量>,{脚本}
 // @cmd_para$[]为脚本可用参数
+// @cmd_pcount为输入变量数
 // 参数数量最大值为128,即@cmd_para$[127]
 // 数字参数请使用atoi(@cmd_para$[])
 
@@ -113,6 +114,18 @@ hidenpc,60,60,0,0,{ if(getnpcdata(0,@cmd_para$[0]) == -1) dispmes msg(111); else
 
 //坐騎(包括鳥，龍，機器人)
 mount,20,20,0,1,{ if( checkriding() ) { setriding 0; dispmes msg(214); } else if( checkdisguise() ) dispmes msg(212); else { setriding !atoi(@cmd_para$[0])?1:atoi(@cmd_para$[0]); if( checkriding() ) dispmes msg(102); else dispmes msg(213); } }
+
+//染色、染发、换发型
+dye,20,20,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_cloth_color") && .@id <= getbattleflag("max_cloth_color")){ setlook 7, .@id; dispmes msg(36); } else dispmes msg(37); }
+ccolor,20,20,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_cloth_color") && .@id <= getbattleflag("max_cloth_color")){ setlook 7, .@id; dispmes msg(36); } else dispmes msg(37); }
+hairstyle,20,20,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_style")){ setlook 1, .@id; dispmes msg(36); } else dispmes msg(37); }
+hstyle,20,20,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_style")){ setlook 1, .@id; dispmes msg(36); } else dispmes msg(37); }
+haircolor,20,20,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_color")){ setlook 6, .@id; dispmes msg(36); } else dispmes msg(37); }
+hcolor,20,20,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_color")){ setlook 6, .@id; dispmes msg(36); } else dispmes msg(37); }
+model,20,20,3,3,{ set .@id1, atoi(@cmd_para$[0]); set .@id2, atoi(@cmd_para$[1]); set .@id3, atoi(@cmd_para$[2]); if(.@id1 >= getbattleflag("min_cloth_color") && .@id1 <= getbattleflag("max_cloth_color") && .@id2 >= getbattleflag("min_hair_style") && .@id3 >= getbattleflag("min_hair_color")){ setlook 7, .@id1; setlook 1, .@id2; setlook 6, .@id3; dispmes msg(36); } else dispmes msg(37); }
+
+//改变玩家外观
+changelook,60,60,1,2,{ setarray .@pos[0],4,5,3,2,8,9; set .@id1, atoi(@cmd_para$[0]); set .@id2, atoi(@cmd_para$[1]); if(@cmd_pcount == 2) { if(.@id1 < 1) set .@id1,1; else if(.@id1 > 6) set .@id1,6; set .@id1, .@pos[.@id1-1]; } else { set .@id2,.@id1; set .@id1,4; } changelook .@id1,.@id2; }
 
 //======================= 以下为自定义指令 =========================
 // 打开悬赏窗口
