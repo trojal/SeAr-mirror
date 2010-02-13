@@ -141,6 +141,10 @@ stpoint,0,0,{ set .@i, atoi(@cmd_para$[0]); if( .@i < 0 && StatusPoint < .@i*-1 
 //阵营
 camp,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id > getbattleflag("max.camp")) { dispmes "请输入 0 - "+getbattleflag("max_camp")+" 之间的数字"; end; } set PC_CAMP, .@id; if( !PC_CAMP ) dispmes "退出所有阵营"; else dispmes "加入阵营: "+PC_CAMP; }
 
+auction,0,0,{ openauction; }
+mail,0,0,{ openmail; }
+font,1,1,{ set .@id, atoi(@cmd_para$[0]); if( .@id < 0 || .@id > 9 ) dispmes "字体无效, 请使用0-9之间的值"; else { set .@id,setfont(.@id); if( .@id == 0 ) dispmes "字体恢复"; else dispmes "字体已变更"; } }
+
 //======================= 以下为自定义指令 =========================
 // 打开悬赏窗口
 w&r,0,0,{ if((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }

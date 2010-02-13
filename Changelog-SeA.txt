@@ -1,3 +1,7 @@
+2010/02/13[SeAr_1.3.108]
+- 源码、DB、CONF:
+		腳本化auction、mail、font。
+
 2010/02/13[SeAr_1.3.107]
 - 源码、DB、CONF:
 		cmd_db中指令在atcommand_athena.conf中设置等级，未设定的将被禁用。
