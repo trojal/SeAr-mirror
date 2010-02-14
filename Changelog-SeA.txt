@@ -1,3 +1,6 @@
+2010/02/14[SeAr_1.3.109]
+- 源码、DB:	腳本化tonpc、reset、option、effect、misceffect、title、aura、makeegg、hatch。
+
 2010/02/13[SeAr_1.3.108]
 - 源码、DB、CONF:
 		腳本化auction、mail、font。
