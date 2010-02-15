@@ -1,3 +1,9 @@
+2010/02/15[SeAr_1.3.110]
+- 源码:		魔法免疫将免疫真空极限。
+- 源码:		修正Rage Burst伤害公式。
+- 源码:		修正Inspiration点数、HIT和ATK增加量。
+- 源码:		Hesperus Lit能在Inspiration状态下使用。
+
 2010/02/14[SeAr_1.3.109]
 - 源码、DB:	腳本化tonpc、reset、option、effect、misceffect、title、aura、makeegg、hatch。
 
