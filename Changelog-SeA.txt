@@ -1,3 +1,14 @@
+2010/02/19[SeAr_1.3.111]
+- 源码、DB:	修正Vacuum Extreme范围、持续时间，str减少持续时间。
+- 源码:		修正魔力增幅后的Earth Strain方向问题。
+- DB:		修正Thorns Trap可被减伤。
+- 源码:		修正Auto Shadow Spell咏唱等级。
+- 源码:		修正Weapon Blocking触发后的僵硬时间。
+- DB:		修正Ep13.2魔物DB。
+- 源码:		出血不会杀死魔物。
+- NPC:		修正eA银行脚本。(r14244、r14246)
+- 源码、SQL:	修正客户端公会经验溢出。(r14242)
+
 2010/02/15[SeAr_1.3.110]
 - 源码:		魔法免疫将免疫真空极限。
 - 源码:		修正Rage Burst伤害公式。
