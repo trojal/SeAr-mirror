@@ -829,7 +829,7 @@
 2301,7,6,2,0,0,0,3,1,yes,0,0,0,none,0,			SC_CHAOSPANIC,»ìÂÒ¿Ö»Å
 2302,7,6,2,0,0,5,3,1,yes,0,0,0,none,0,			SC_MAELSTROM,´óäöÎÐ
 2303,7,6,2,0,0,0,3,1,yes,0,0,0,none,0,			SC_BLOODYLUST,ÑªÐÈ¿ÊÍû
-2304,0,6,4,0,0x1,4,3,1,yes,0,0,0,weapon,1,		SC_FEINTBOMB,Î±×°Õ¨µ¯
+2304,0,6,4,0,0x2,4,3,1,yes,0,0,0,weapon,1,		SC_FEINTBOMB,Î±×°Õ¨µ¯
 //»Ê¼Ò»¤ÎÀ
 2307,11,6,1,-1,0x2,1,5,1,yes,0,0,10,weapon,0,	LG_CANNONSPEAR,¼ÓÅ©Ã¬
 2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,¼â¶ËÇýÖð
