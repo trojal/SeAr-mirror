@@ -146,7 +146,7 @@ auction,0,0,{ openauction; }
 mail,0,0,{ openmail; }
 font,1,1,{ set .@id, atoi(@cmd_para$[0]); if( .@id < 0 || .@id > 9 ) dispmes "字体无效, 请使用0-9之间的值"; else { set .@id,setfont(.@id); if( .@id == 0 ) dispmes "字体恢复"; else dispmes "字体已变更"; } }
 tonpc,1,1,{ if(getmapxy(.@m$,.@x,.@y,1,@cmd_para$[0]) == -1) dispmes msg(111); else { warp .@m$,.@x,.@y; dispmes msg(0); } }
-option,3,3,{ set .@id1,atoi(@cmd_para$[0]); set .@id2,atoi(@cmd_para$[1]); set .@id3,atoi(@cmd_para$[2]); if(.@id1 < 0)set .@id1,0; if(.@id2 < 0)set .@id2,0; if(.@id3 < 0)set .@id3,0; setoption1 .@id1; setoption2 0x80000000,0; setoption2 .@id2, 1; setoption 0x80000000,0; setoption .@id3, 1; dispmes msg(9); }
+option,3,3,{ set .@id1,atoi(@cmd_para$[0]); set .@id2,atoi(@cmd_para$[1]); set .@id3,atoi(@cmd_para$[2]); if(.@id1 < 0) set .@id1,0; if(.@id2 < 0) set .@id2,0; if(.@id3 < 0) set .@id3,0; setoption1 .@id1; setoption2 0xFF,0; if(.@id2) setoption2 .@id2, 1; setoption 0; setoption 0xFFFFF,0; if(.@id3) setoption .@id3, 1; dispmes msg(9); }
 effect,1,1,{ specialeffect2 atoi(@cmd_para$[0]),ALL_CLIENT; dispmes msg(229); }
 misceffect,1,1,{ misceffect2 atoi(@cmd_para$[0]); dispmes msg(229); }
 aura,1,1,{ setaura atoi(@cmd_para$[0]); if(PC_AURA) dispmes "人物光环已显示。"; else dispmes "人物光环已关闭。"; }
