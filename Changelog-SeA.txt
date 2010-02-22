@@ -1,3 +1,9 @@
+2010/02/22[SeAr_1.3.115]
+- DB:		修正Thorns Trap表现。
+- DB:		修正Electric Shocker持续时间。
+- 源码:		Marsh of Abbys减少MDEF, DEF, FLEE和移动速度。
+- 源码:		White Imprison解除燃烧，冰冻，石化等状态。
+
 2010/02/21[SeAr_1.3.114]
 - DB:		修正@option工作不正常。
 
