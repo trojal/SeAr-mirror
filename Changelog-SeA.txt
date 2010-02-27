@@ -1,3 +1,6 @@
+2010/02/27[SeAr_1.3.121]
+- 源码、DB:	修正Pile Bunker技能类型，状态解除几率。
+
 2010/02/27[SeAr_1.3.120]
 - 源码、DB、CONF:
 		实装Renewal ASPD公式。
