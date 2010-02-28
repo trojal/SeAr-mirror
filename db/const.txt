@@ -352,8 +352,6 @@ bDex		17
 bLuk		18
 bAtk		41
 bAtk2		42
-bMatk		43
-bMatk2		44
 bDef		45
 bDef2		46
 bMdef		47
@@ -363,6 +361,7 @@ bFlee		50
 bFlee2		51
 bCritical	52
 bAspd		53
+bMatk		54
 bFame		59
 bUnbreakable	60
 

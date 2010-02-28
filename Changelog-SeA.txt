@@ -1,3 +1,7 @@
+2010/02/28[SeAr_1.3.123]
+- 源码、DB、CONF:
+		实装Renewal MATK公式。
+
 2010/02/28[SeAr_1.3.122]
 - DB:		Comet使用红色魔力矿石。
 - DB:		Warg Bite和Warg Strike使用武器属性。
