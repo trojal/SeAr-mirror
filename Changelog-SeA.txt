@@ -1,3 +1,13 @@
+2010/02/28[SeAr_1.3.122]
+- DB:		Comet使用红色魔力矿石。
+- DB:		Warg Bite和Warg Strike使用武器属性。
+- DB:		Cluster Bomb不会Miss。
+- DB:		修正Venom Impress持续时间。
+- DB:		修正金刚不坏SP消耗量。
+- 源码:		修正中毒状态会杀死低血魔物。
+- 源码:		修正Paralyze移动速度减少量。
+- DB:		修正战场装备和新卡片DB。(r14251)
+
 2010/02/27[SeAr_1.3.121]
 - 源码、DB:	修正Pile Bunker技能类型，状态解除几率。
 
