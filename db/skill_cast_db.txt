@@ -1186,17 +1186,19 @@
 2242,0,0,0,1000,150000 
 //-- RA_WUGBITE      
 2244,0,0,0,20000,0
-//-- RA_MAGENTATRAP[Unfinished]    
+//-- RA_CAMOUFLAGE
+2247,0,0,0,10000,0
+//-- RA_MAGENTATRAP
 2249,0,0,0,10000,0    
-//-- RA_COBALTTRAP [Unfinished]   
+//-- RA_COBALTTRAP
 2250,0,0,0,10000,0   
-//-- RA_MAIZETRAP   [Unfinished]  
+//-- RA_MAIZETRAP
 2251,0,0,0,10000,0    
-//-- RA_VERDURETRAP  [Unfinished]
+//-- RA_VERDURETRAP
 2252,0,0,0,10000,0      
-//-- RA_FIRINGTRAP [Unfinished]
+//-- RA_FIRINGTRAP
 2253,0,0,0,36000,0     
-//-- RA_ICEBOUNDTRAP  [Unfinished] 
+//-- RA_ICEBOUNDTRAP
 2254,0,0,0,10000,0       
 //-- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 //-- NC_BOOSTKNUCKLE

@@ -1,3 +1,8 @@
+2010/03/01[SeAr_1.3.125]
+- DB:		修正Earth Grave技能前置。
+- 源码:		去除Camouflage的cri, atk和def奖惩。
+- 源码、DB:	修正Camouflage持续时间。
+
 2010/02/28[SeAr_1.3.124]
 - 源码、CONF:	实装Renewal魔法伤害计算公式。
 - DB:		更新部分道具MATK加成。
