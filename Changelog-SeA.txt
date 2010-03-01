@@ -1,3 +1,6 @@
+2010/03/01[SeAr_1.3.126]
+- 源码、CONF:	实装Renewal物理伤害计算公式。
+
 2010/03/01[SeAr_1.3.125]
 - DB:		修正Earth Grave技能前置。
 - 源码:		去除Camouflage的cri, atk和def奖惩。
