@@ -1066,46 +1066,46 @@
 2005,Dea_Staff,西亚之杖,4,0,,1000,30,,1,1,0x00008110,2,2,34,4,50,1,10,{ bonus bAtkEle,Ele_Holy; bonus bInt,6; bonus bVit,2; bonus bMatkRate,15+(getrefine()/2); bonus2 bSPGainValueOnSkill,"AL_HEAL",200; },{},{}
 // Shields
 //===================================================================
-2101,Guard,铁盾,5,500,,300,,3,,0,0xFFFFFFFF,7,2,32,,0,1,1,{},{},{}
-2102,Guard_,铁盾,5,500,,300,,3,,1,0xFFFFFFFF,7,2,32,,0,1,1,{},{},{}
-2103,Buckler,圆盾,5,14000,,600,,4,,0,0x000ED5F2,7,2,32,,0,1,2,{},{},{}
-2104,Buckler_,圆盾,5,14000,,600,,4,,1,0x000ED5F2,7,2,32,,0,1,2,{},{},{}
-2105,Shield,钢盾,5,56000,,1300,,6,,0,0x00004082,7,2,32,,0,1,3,{},{},{}
-2106,Shield_,钢盾,5,56000,,1300,,6,,1,0x00004082,7,2,32,,0,1,3,{},{},{}
-2107,Mirror_Shield,镜盾,5,60000,,1000,,4,,0,0x00404082,7,2,32,,0,1,4,{ bonus bMdef,5; },{},{}
-2108,Mirror_Shield_,镜盾,5,60000,,1000,,4,,1,0x00404082,7,2,32,,0,1,4,{ bonus bMdef,5; },{},{}
-2109,Memorize_Book,谎言纪录本,5,20,,1000,,3,,0,0x00810204,7,2,32,,0,1,0,{ bonus bInt,1; bonus bMdef,2; if (isequipped(2717) && isequipped(2239)) { bonus bHPrecovRate,15; bonus bSPrecovRate,15; bonus bMatkRate,7; }; },{},{}
-2110,Holy_Guard,圣耀之盾,5,85000,,1400,,5,,0,0x00004000,7,2,32,,68,0,3,{ bonus bVit,2; bonus bMdef,2; },{},{}
+2101,Guard,铁盾,5,500,,300,,20,,0,0xFFFFFFFF,7,2,32,,0,1,1,{},{},{}
+2102,Guard_,铁盾,5,500,,300,,20,,1,0xFFFFFFFF,7,2,32,,0,1,1,{},{},{}
+2103,Buckler,圆盾,5,14000,,600,,40,,0,0x000ED5F2,7,2,32,,0,1,2,{},{},{}
+2104,Buckler_,圆盾,5,14000,,600,,40,,1,0x000ED5F2,7,2,32,,0,1,2,{},{},{}
+2105,Shield,钢盾,5,56000,,1300,,60,,0,0x00004082,7,2,32,,0,1,3,{},{},{}
+2106,Shield_,钢盾,5,56000,,1300,,60,,1,0x00004082,7,2,32,,0,1,3,{},{},{}
+2107,Mirror_Shield,镜盾,5,60000,,1000,,45,,0,0x00404082,7,2,32,,0,1,4,{ bonus bMdef,5; },{},{}
+2108,Mirror_Shield_,镜盾,5,60000,,1000,,45,,1,0x00404082,7,2,32,,0,1,4,{ bonus bMdef,5; },{},{}
+2109,Memorize_Book,谎言纪录本,5,20,,1000,,25,,0,0x00810204,7,2,32,,0,1,0,{ bonus bInt,1; bonus bMdef,2; if (isequipped(2717) && isequipped(2239)) { bonus bHPrecovRate,15; bonus bSPrecovRate,15; bonus bMatkRate,7; }; },{},{}
+2110,Holy_Guard,圣耀之盾,5,85000,,1400,,110,,0,0x00004000,7,2,32,,68,0,3,{ bonus bVit,2; bonus bMdef,2; },{},{}
 2111,Herald_Of_GOD,大天使之盾,5,128000,,1600,,5,,0,0x00004000,7,2,32,,83,1,3,{ bonus bVit,3; bonus bInt,2; bonus bMdef,3; bonus bUnbreakableShield,0; },{},{}
 2112,Novice_Guard,初学者铁盾,5,1,,1,,3,,0,0x00000001,7,2,32,,0,0,1,{},{},{}
 2113,Novice_Shield,初学者钢盾,5,5000,,1000,,3,,1,0x00000001,7,2,32,,40,1,3,{ bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Earth,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Poison,20; bonus2 bSubEle,Ele_Ghost,20; bonus2 bSubEle,Ele_Undead,20; },{},{}
-2114,Stone_Buckler,石制圆盾,5,30000,,1500,,3,,1,0xFFFFFFFE,7,2,32,,65,1,2,{ bonus2 bSubSize,2,5; if (isequipped(2353,5122)) { bonus bStr,2; bonus bDef,5; bonus bMdef,5; if(BaseClass == Job_Swordman) bonus bDef,6; } },{},{}
-2115,Valkyrja's_Shield,巴基力亚钢盾,5,30000,,500,,3,,1,0xFFFFFFFE,7,2,32,,65,1,3,{ bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5; if(isequipped(2353,5124)) { bonus bDef,2-getrefine()-getequiprefinerycnt(EQI_HEAD_TOP); bonus bMdef,5+getrefine()+getequiprefinerycnt(EQI_HEAD_TOP); } },{},{}
-2116,Angel's_Safeguard,天使的保护,5,10000,,400,,3,,1,0x00000001,7,2,32,,20,1,3,{ bonus2 bSubRace,RC_Demon,5; },{},{}
-2117,Arm_Guard,手臂护腕,5,10000,,150,,5,,0,0x02000000,7,2,32,,20,1,,{},{},{}
-2118,Arm_Guard_,手臂护腕,5,10000,,150,,5,,1,0x02000000,7,2,32,,20,1,,{},{},{}
-2119,Improved_Arm_Guard,改良型手臂护腕,5,40000,,150,,4,,0,0x02000000,7,2,32,,50,1,,{ bonus bMdef,5; },{},{}
-2120,Improved_Arm_Guard_,改良型手臂护腕,5,40000,,150,,4,,1,0x02000000,7,2,32,,50,1,,{ bonus bMdef,5; },{},{}
-2121,Memory_Book_,谎言纪录本,5,20,,1000,,3,,1,0x00810204,7,2,32,,0,1,0,{ bonus bInt,1; bonus bMdef,2; if (isequipped(2717) && isequipped(2239)) { bonus bHPrecovRate,15; bonus bSPrecovRate,15; bonus bMatkRate,7; }; },{},{}
-2122,Platinum_Shield,白金钢盾,5,20,,1200,,5,,0,0xFFFFFFFE,2,2,32,,68,1,1,{ bonus bMdef,5; bonus2 bSubSize,1,15; bonus2 bSubSize,2,15; bonus2 bSubRace,RC_Undead,10; bonus5 bAutoSpellWhenHit,"NPC_MAGICMIRROR",2,150,BF_MAGIC,0; },{},{}
-2123,Orleans_Server,欧罗莱昂的铁盘,5,20,,1000,,5,,1,0xFFFFFFFE,2,2,32,,55,1,1,{ bonus bMDef,2; bonus bMagicDamageReturn,5; if (isequipped(2701)) bonus bCastrate,-10; },{},{}
-2124,Thorny_Buckler,刺针盾牌,5,20,,1000,,5,,1,0xFFFFFFFE,2,2,32,,55,1,1,{ bonus bMDef,2; if (isequipped(2702)) { bonus bAspdRate,10; bonus bShortWeaponDamageReturn,5; } },{},{}
-2125,Strong_Shield,强硬钢盾,5,20,,2500,,4,,1,0xFFFFFFFE,2,2,32,,75,1,1,{ bonus bNoKnockback,0; bonus2 bSubEle,Ele_Neutral,-20; bonus2 bSubEle,Ele_Fire,-20; bonus2 bSubEle,Ele_Water,-20; bonus2 bSubEle,Ele_Wind,-20; bonus2 bSubEle,Ele_Earth,-20; bonus2 bSubEle,Ele_Dark,-20; bonus2 bSubEle,Ele_Holy,-20; bonus2 bSubEle,Ele_Ghost,-20; },{},{}
+2114,Stone_Buckler,石制圆盾,5,30000,,1500,,45,,1,0xFFFFFFFE,7,2,32,,65,1,2,{ bonus2 bSubSize,2,5; if (isequipped(2353,5122)) { bonus bStr,2; bonus bDef,5; bonus bMdef,5; if(BaseClass == Job_Swordman) bonus bDef,6; } },{},{}
+2115,Valkyrja's_Shield,巴基力亚钢盾,5,30000,,500,,80,,1,0xFFFFFFFE,7,2,32,,65,1,3,{ bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5; if(isequipped(2353,5124)) { bonus bDef,2-getrefine()-getequiprefinerycnt(EQI_HEAD_TOP); bonus bMdef,5+getrefine()+getequiprefinerycnt(EQI_HEAD_TOP); } },{},{}
+2116,Angel's_Safeguard,天使的保护,5,10000,,400,,30,,1,0x00000001,7,2,32,,20,1,3,{ bonus2 bSubRace,RC_Demon,5; },{},{}
+2117,Arm_Guard,手臂护腕,5,10000,,150,,50,,0,0x02000000,7,2,32,,20,1,,{},{},{}
+2118,Arm_Guard_,手臂护腕,5,10000,,150,,50,,1,0x02000000,7,2,32,,20,1,,{},{},{}
+2119,Improved_Arm_Guard,改良型手臂护腕,5,40000,,150,,45,,0,0x02000000,7,2,32,,50,1,,{ bonus bMdef,5; },{},{}
+2120,Improved_Arm_Guard_,改良型手臂护腕,5,40000,,150,,45,,1,0x02000000,7,2,32,,50,1,,{ bonus bMdef,5; },{},{}
+2121,Memory_Book_,谎言纪录本,5,20,,1000,,25,,1,0x00810204,7,2,32,,0,1,0,{ bonus bInt,1; bonus bMdef,2; if (isequipped(2717) && isequipped(2239)) { bonus bHPrecovRate,15; bonus bSPrecovRate,15; bonus bMatkRate,7; }; },{},{}
+2122,Platinum_Shield,白金钢盾,5,20,,1200,,95,,0,0xFFFFFFFE,2,2,32,,68,1,1,{ bonus bMdef,5; bonus2 bSubSize,1,15; bonus2 bSubSize,2,15; bonus2 bSubRace,RC_Undead,10; bonus5 bAutoSpellWhenHit,"NPC_MAGICMIRROR",2,150,BF_MAGIC,0; },{},{}
+2123,Orleans_Server,欧罗莱昂的铁盘,5,20,,1000,,75,,1,0xFFFFFFFE,2,2,32,,55,1,1,{ bonus bMDef,2; bonus bMagicDamageReturn,5; if (isequipped(2701)) bonus bCastrate,-10; },{},{}
+2124,Thorny_Buckler,刺针盾牌,5,20,,1000,,85,,1,0xFFFFFFFE,2,2,32,,55,1,1,{ bonus bMDef,2; if (isequipped(2702)) { bonus bAspdRate,10; bonus bShortWeaponDamageReturn,5; } },{},{}
+2125,Strong_Shield,强硬钢盾,5,20,,2500,,90,,1,0xFFFFFFFE,2,2,32,,75,1,1,{ bonus bNoKnockback,0; bonus2 bSubEle,Ele_Neutral,-20; bonus2 bSubEle,Ele_Fire,-20; bonus2 bSubEle,Ele_Water,-20; bonus2 bSubEle,Ele_Wind,-20; bonus2 bSubEle,Ele_Earth,-20; bonus2 bSubEle,Ele_Dark,-20; bonus2 bSubEle,Ele_Holy,-20; bonus2 bSubEle,Ele_Ghost,-20; },{},{}
 2126,Guyak_Shield,蒟蒻盾牌,5,20,,700,,3,,0,0xFFFFFFFE,7,2,32,,75,1,1,{ bonus bMDef,3; },{},{}
 2127,Secular_Mission,Secular Mission,5,20,,0,,10,,0,0xFFFFFFFF,7,2,32,1,1,0,1,{ bonus2 bSubRace,RC_NonBoss,25; bonus2 bSubRace,RC_Boss,25; },{},{}
-2128,Herald_Of_GOD_,Sacred Mission,5,128000,,1600,,5,,1,0x00004000,7,2,32,,83,1,3,{ bonus bVit,3; bonus bInt,2; bonus bMdef,3; bonus bUnbreakableShield,0; },{},{}
+2128,Herald_Of_GOD_,Sacred Mission,5,128000,,1600,,120,,1,0x00004000,7,2,32,,83,1,3,{ bonus bVit,3; bonus bInt,2; bonus bMdef,3; bonus bUnbreakableShield,0; },{},{}
 2129,Exorcism_Bible,驱魔_宝典,5,20,,600,,5,,0,0x00008100,7,2,32,,50,1,1,{ bonus bHPrecovRate,3; bonus bSPrecovRate,3; bonus bInt,1; if(isequipped(1631)) bonus2 bSkillAtk,"PR_MAGNUS",20; bonus3 bAutoSpellWhenHit,"PR_TURNUNDEAD",1,20; },{},{}
-2130,Cross_Shield,十字钢盾,5,20,,2000,,6,,1,0x00004000,7,2,32,,80,1,1,{ bonus bStr,1; bonus2 bSkillAtk,"PA_SHIELDCHAIN",30; bonus2 bSkillAtk,"CR_SHIELDBOOMERANG",30; bonus bUseSPrate,10; },{},{}
-2131,Magic_Study_Vol1,魔力_宝典_第1部,5,20,,1000,,2,,1,0x00010204,2,2,32,,70,1,1,{ bonus bMDef,3; bonus bInt,2; bonus2 bAddEffWhenHit,Eff_Stun,1000; },{},{}
+2130,Cross_Shield,十字钢盾,5,20,,2000,,130,,1,0x00004000,7,2,32,,80,1,1,{ bonus bStr,1; bonus2 bSkillAtk,"PA_SHIELDCHAIN",30; bonus2 bSkillAtk,"CR_SHIELDBOOMERANG",30; bonus bUseSPrate,10; },{},{}
+2131,Magic_Study_Vol1,魔力_宝典_第1部,5,20,,1000,,18,,1,0x00010204,2,2,32,,70,1,1,{ bonus bMDef,3; bonus bInt,2; bonus2 bAddEffWhenHit,Eff_Stun,1000; },{},{}
 2132,Shelter_Resistance,Shell Of Resistance,5,0,,0,,9,,0,0xFFFFFFFF,2,2,32,,0,0,1,{ bonus2 bSubEle,Ele_Neutral,20; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Earth,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Poison,20; bonus2 bSubEle,Ele_Holy,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Ghost,20; bonus2 bSubEle,Ele_Undead,20; bonus bShortWeaponDamageReturn,1; },{},{}
-2133,Tournament_Shield,锦标赛之盾,5,20,,1000,,5,,1,0x00004082,2,2,32,,50,1,3,{ bonus bAtkRate,1; if( Class == Job_Lord_Knight ) bonus bAspdRate,-5; if( isequipped(1420) || isequipped(1421) || isequipped(1422) ) { bonus bAtkRate,4; bonus bDef,2; } },{},{}
-2134,Shield_Of_Naga,纳迦鳞盾,5,20,,500,,3,,1,0x00CFFF80,2,2,32,,70,1,3,{ bonus bMdef,3; autobonus2 "{ bonus bShortWeaponDamageReturn,(getrefine()*3); }",10,5000,BF_WEAPON,"{ specialeffect2 EF_GUARD; }"; },{},{}
-2135,Shadow_Guard,阴影守护,5,20,,800,,4,,1,0x00020000,2,2,32,,70,1,3,{ if( isequipped(2426) ) { bonus2 bAddEff,Eff_Blind,500; autobonus "{ bonus bFlee,20; }",200,10000,BF_WEAPON,"{ specialeffect2 EF_INCAGILITY; }"; } },{},{}
-2136,Cracked_Buckler,Cracked Buckler,5,0,,0,,5,,0,0xFFFFFFFF,2,2,32,,0,1,2,{ bonus bAgi,2; bonus2 bAddEle,Ele_Neutral,-10; bonus3 bAutoSpellWhenHit,"PR_KYRIE",1,50; bonus bMdef,1; },{},{} 
-2137,Valkyrja's_Shield_C,Neo Valkyrja's Shield,5,0,,0,,5,,0,0xFFFFFFFE,7,2,32,,95,0,3,{ bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5; if(isequipped(2353,5124)) { bonus bDef,2-getrefine()-getequiprefinerycnt(EQI_HEAD_TOP); bonus bMdef,5+getrefine()+getequiprefinerycnt(EQI_HEAD_TOP); } },{},{}
-2138,Bradium_Shield,钚镭之盾,5,0,,1800,,5,,1,0x00CFDF80,2,2,32,,65,1,3,{ bonus bMaxHP,500; bonus bAgi,-1; bonus2 bSkillAtk,"CR_SHIELDBOOMERANG",60; },{},{}
+2133,Tournament_Shield,锦标赛之盾,5,20,,1000,,105,,1,0x00004082,2,2,32,,50,1,3,{ bonus bAtkRate,1; if( Class == Job_Lord_Knight ) bonus bAspdRate,-5; if( isequipped(1420) || isequipped(1421) || isequipped(1422) ) { bonus bAtkRate,4; bonus bDef,2; } },{},{}
+2134,Shield_Of_Naga,纳迦鳞盾,5,20,,500,,35,,1,0x00CFFF80,2,2,32,,70,1,3,{ bonus bMdef,3; autobonus2 "{ bonus bShortWeaponDamageReturn,(getrefine()*3); }",10,5000,BF_WEAPON,"{ specialeffect2 EF_GUARD; }"; },{},{}
+2135,Shadow_Guard,阴影守护,5,20,,800,,52,,1,0x00020000,2,2,32,,70,1,3,{ if( isequipped(2426) ) { bonus2 bAddEff,Eff_Blind,500; autobonus "{ bonus bFlee,20; }",200,10000,BF_WEAPON,"{ specialeffect2 EF_INCAGILITY; }"; } },{},{}
+2136,Cracked_Buckler,Cracked Buckler,5,0,,0,,80,,0,0xFFFFFFFF,2,2,32,,0,1,2,{ bonus bAgi,2; bonus2 bAddEle,Ele_Neutral,-10; bonus3 bAutoSpellWhenHit,"PR_KYRIE",1,50; bonus bMdef,1; },{},{} 
+2137,Valkyrja's_Shield_C,Neo Valkyrja's Shield,5,0,,0,,80,,0,0xFFFFFFFE,7,2,32,,95,0,3,{ bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5; if(isequipped(2353,5124)) { bonus bDef,2-getrefine()-getequiprefinerycnt(EQI_HEAD_TOP); bonus bMdef,5+getrefine()+getequiprefinerycnt(EQI_HEAD_TOP); } },{},{}
+2138,Bradium_Shield,钚镭之盾,5,0,,1800,,98,,1,0x00CFDF80,2,2,32,,65,1,3,{ bonus bMaxHP,500; bonus bAgi,-1; bonus2 bSkillAtk,"CR_SHIELDBOOMERANG",60; },{},{}
 //2139,Flame_Thrower 
-2140,Energy_Rune_Guard,Energy Rune Guard,5,0,,0,,6,,0,0x00004082,7,2,32,,0,1,1,{ bonus bMaxSPrate,2; },{},{}
+//2140,Energy_Rune_Guard,Energy Rune Guard,5,0,,0,,6,,0,0x00004082,7,2,32,,0,1,1,{ bonus bMaxSPrate,2; },{},{}
 2199,Ahura_Mazda,圆盾,5,1,,10,,100,,0,0xFFFFFFFF,7,2,32,,1,1,2,{ bonus bAllStats,50; bonus bMdef,99; bonus bShortWeaponDamageReturn,100; bonus2 bSubRace,RC_DemiHuman,95; skill "CR_FULLPROTECTION",5; },{},{}
 // Headgears
 //===================================================================
@@ -1124,8 +1124,8 @@
 2213,Cat_Hairband,猫耳发圈,5,20,,100,,2,,0,0xFFFFFFFF,7,2,256,,0,1,2,{},{},{}
 2214,Bunny_Band,兔耳发圈,5,20,,100,,2,,0,0xFFFFFFFF,7,2,256,,0,1,15,{ bonus bLuk,2; },{},{}
 2215,Flower_Hairband,花发圈,5,20,,100,,2,,0,0xFFFFFFFF,7,2,256,,0,1,5,{},{},{}
-2216,Biretta,圣职之帽,5,9000,,100,,4,,0,0x00008110,7,2,256,,0,1,11,{},{},{}
-2217,Biretta_,圣职之帽,5,9000,,100,,4,,1,0x00008110,7,2,256,,0,1,11,{},{},{}
+2216,Biretta,圣职之帽,5,9000,,100,,8,,0,0x00008110,7,2,256,,0,1,11,{},{},{}
+2217,Biretta_,圣职之帽,5,9000,,100,,8,,1,0x00008110,7,2,256,,0,1,11,{},{},{}
 2218,Flu_Mask,口罩,5,300,,100,,0,,0,0xFFFFFFFF,7,2,1,,0,0,8,{ bonus2 bResEff,Eff_Silence,1000; },{},{}
 2219,Flu_Mask_,口罩,5,300,,100,,0,,0,0xFFFFFFFF,7,2,1,,0,0,8,{ bonus2 bResEff,Eff_Silence,1000; },{},{}
 2220,Hat,渔夫帽,5,1000,,200,,2,,0,0xFFFFFFFF,7,2,256,,0,1,16,{},{},{}
@@ -1188,14 +1188,14 @@
 2277,Nurse_Cap,护士帽,5,20,,100,,2,,0,0x00008110,7,2,256,,0,1,64,{ bonus bInt,1; },{},{}
 2278,Mr_Smile,笑脸面具,5,60,,100,,1,,0,0xFFFFFFFF,7,2,513,,0,0,65,{},{},{}
 2279,Bomb_Wick,火线头饰,5,20,,100,,1,,0,0xFFFFFFFF,7,2,256,,0,0,66,{},{},{}
-2280,Sahkkat,草帽,5,20,,300,,3,,0,0xFFFFFFFF,7,2,256,,0,1,67,{ bonus bAgi,1; },{},{}
+2280,Sahkkat,草帽,5,20,,300,,4,,0,0xFFFFFFFF,7,2,256,,0,1,67,{ bonus bAgi,1; },{},{}
 2281,Phantom_Of_Opera,舞会面具,5,20,,200,,2,,0,0xFFFFFFFE,7,2,513,,0,0,68,{},{},{}
 2282,Spirit_Chain,光环,5,20,,100,,0,,0,0xFFFFFFFF,7,2,256,,0,0,69,{ bonus2 bSubEle,Ele_Holy,15; },{},{}
 2283,Ear_Mufs,耳罩,5,20,,200,,3,,0,0xFFFFFFFF,7,2,256,,0,1,70,{ bonus2 bResEff,Eff_Curse,1000; },{},{}
 2284,Antler,鹿角头饰,5,20,,500,,4,,0,0xFFFFFFFE,7,2,256,,0,1,71,{},{},{}
-2285,Apple_Of_Archer,苹果头饰,5,20,,200,,0,,0,0xFFFFFFFE,7,2,256,,30,1,72,{ bonus bDex,3; },{},{}
+2285,Apple_Of_Archer,苹果头饰,5,20,,200,,1,,0,0xFFFFFFFE,7,2,256,,30,1,72,{ bonus bDex,3; },{},{}
 2286,Elven_Ears,妖精长耳朵饰,5,20,,100,,0,,0,0xFFFFFFFE,7,2,512,,70,0,73,{},{},{}
-2287,Pirate_Bandana,海盗头巾,5,20,,100,,3,,0,0xFFFFFFFE,7,2,256,,0,1,74,{ bonus bStr,1; },{},{}
+2287,Pirate_Bandana,海盗头巾,5,20,,100,,4,,0,0xFFFFFFFE,7,2,256,,0,1,74,{ bonus bStr,1; },{},{}
 2288,Mr_Scream,整人面具,5,20,,100,,1,,0,0xFFFFFFFE,7,2,513,,0,0,75,{},{},{}
 2289,Poo_Poo_Hat,粪便帽,5,20,,700,,0,,0,0xFFFFFFFF,7,2,256,,0,0,76,{ bonus2 bSubRace,RC_DemiHuman,10; },{},{}
 2290,Funeral_Costume,葬礼帽,5,3000,,100,,1,,0,0xFFFFFFFF,7,2,256,,0,0,77,{},{},{}
@@ -1210,81 +1210,81 @@
 2299,Viking_Helm,兽人头盔,5,20,,500,,5,,0,0x000654E2,7,2,256,,0,1,86,{},{},{}
 // Armors
 //===================================================================
-2301,Cotton_Shirt,棉衬衫,5,10,,100,,1,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
-2302,Cotton_Shirt_,棉衬衫,5,10,,100,,1,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
-2303,Leather_Jacket,皮制外套,5,200,,200,,2,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
-2304,Leather_Jacket_,皮制外套,5,200,,200,,2,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
-2305,Adventure_Suit,冒险衣,5,1000,,300,,3,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
-2306,Adventurere's_Suit_,冒险衣,5,1000,,300,,3,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2301,Cotton_Shirt,棉衬衫,5,10,,100,,10,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2302,Cotton_Shirt_,棉衬衫,5,10,,100,,10,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2303,Leather_Jacket,皮制外套,5,200,,200,,15,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2304,Leather_Jacket_,皮制外套,5,200,,200,,15,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2305,Adventure_Suit,冒险衣,5,1000,,300,,20,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2306,Adventurere's_Suit_,冒险衣,5,1000,,300,,20,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
 2307,Mantle,大衣,5,10000,,600,,4,,0,0xFFFFFFFE,7,2,16,,0,1,0,{},{},{}
 2308,Mantle_,大衣,5,10000,,600,,4,,1,0xFFFFFFFE,7,2,16,,0,1,0,{},{},{}
 2309,Coat,长大衣,5,22000,,1200,,5,,0,0xFFFFFFFE,7,2,16,,0,1,0,{},{},{}
 2310,Coat_,长大衣,5,22000,,1200,,5,,1,0xFFFFFFFE,7,2,16,,0,1,0,{},{},{}
-2311,Mink_Coat,毛皮大衣,5,20,,2300,,6,,1,0xFFFFFFFE,7,2,16,,30,1,0,{},{},{}
-2312,Padded_Armor,铁制铠甲,5,48000,,2800,,7,,0,0x000654E2,7,2,16,,0,1,0,{ if(isequipped(2656)) { bonus bDef,5; bonus bMaxHP,150; } },{},{}
-2313,Padded_Armor_,铁制铠甲,5,48000,,2800,,7,,1,0x000654E2,7,2,16,,0,1,0,{ if(isequipped(2656)) { bonus bDef,5; bonus bMaxHP,150; } },{},{}
-2314,Chain_Mail,钢铁锁子甲,5,65000,,3300,,8,,0,0x000654E2,7,2,16,,0,1,0,{},{},{}
-2315,Chain_Mail_,钢铁锁子甲,5,65000,,3300,,8,,1,0x000654E2,7,2,16,,0,1,0,{},{},{}
-2316,Plate_Armor,钢铁铠甲,5,80000,,4500,,10,,0,0x00004082,7,2,16,,40,1,0,{},{},{}
-2317,Plate_Armor_,钢铁铠甲,5,80000,,4500,,10,,1,0x00004082,7,2,16,,40,1,0,{},{},{}
-2318,Clothes_Of_The_Lord,秘衣 美德,5,20,,2500,,8,,1,0x00040420,7,2,16,,70,1,0,{ bonus bMdef,5; bonus bInt,1; },{},{}
-2319,Glittering_Clothes,秘衣 恶德,5,20,,2500,,7,,1,0xFFFFFFFE,7,2,16,,60,1,0,{ bonus bMdef,5; bonus2 bAddEff,Eff_Blind,300; },{},{}
-2320,Formal_Suit,西装外套,5,20,,300,,5,,1,0xFFFFFFFE,7,2,16,,0,1,0,{},{},{}
-2321,Silk_Robe,丝质外袍,5,8000,,400,,3,,0,0x0085C7B6,7,2,16,,0,1,0,{ bonus bMdef,10; },{},{}
-2322,Silk_Robe_,丝质外袍,5,8000,,400,,3,,1,0x0085C7B6,7,2,16,,0,1,0,{ bonus bMdef,10; },{},{}
-2323,Scapulare,圣职之袍,5,6500,,400,,4,,0,0x00008110,7,2,16,,0,1,0,{},{},{}
-2324,Scapulare_,圣职之袍,5,6500,,400,,4,,1,0x00008110,7,2,16,,0,1,0,{},{},{}
-2325,Saint_Robe,圣职之衣,5,54000,,600,,6,,0,0x00048530,7,2,16,,0,1,0,{ bonus bMdef,5; },{},{}
-2326,Saint_Robe_,圣职之衣,5,54000,,600,,6,,1,0x00048530,7,2,16,,0,1,0,{ bonus bMdef,5; },{},{}
-2327,Holy_Robe,天衣 月舞,5,20,,1700,,7,,0,0x00008110,7,2,16,,60,1,0,{ bonus bMdef,5; bonus2 bSubRace,RC_Demon,15; bonus2 bSubEle,Ele_Dark,10; },{},{}
-2328,Wooden_Mail,木制铠甲,5,5500,,1000,,4,,0,0x000444A2,7,2,16,,0,1,0,{},{},{}
-2329,Wooden_Mail_,木制铠甲,5,5500,,1000,,4,,1,0x000444A2,7,2,16,,0,1,0,{},{},{}
-2330,Tights,紧身便衣,5,71000,,500,,6,,0,0x00080808,7,2,16,,45,1,0,{ bonus bDex,1; },{},{}
-2331,Tights_,紧身便衣,5,71000,,500,,6,,1,0x00080808,7,2,16,,45,1,0,{ bonus bDex,1; },{},{}
-2332,Silver_Robe,秘银之衣,5,7000,,700,,4,,0,0x00810204,7,2,16,,0,1,0,{},{},{}
-2333,Silver_Robe_,秘银之衣,5,7000,,700,,4,,1,0x00810204,7,2,16,,0,1,0,{},{},{}
-2334,Mage_Coat,魔法外套,5,20,,600,,5,,0,0x00810204,7,2,16,,50,1,0,{ bonus bMdef,5; bonus bInt,1; },{},{}
-2335,Thief_Clothes,盗贼之衣,5,74000,,100,,6,,0,0x02021040,7,2,16,,0,1,0,{ bonus bAgi,1; },{},{}
-2336,Thief_Clothes_,盗贼之衣,5,74000,,100,,6,,1,0x02021040,7,2,16,,0,1,0,{ bonus bAgi,1; },{},{}
+2311,Mink_Coat,毛皮大衣,5,20,,2300,,30,,1,0xFFFFFFFE,7,2,16,,30,1,0,{},{},{}
+2312,Padded_Armor,铁制铠甲,5,48000,,2800,,35,,0,0x000654E2,7,2,16,,0,1,0,{ if(isequipped(2656)) { bonus bDef,5; bonus bMaxHP,150; } },{},{}
+2313,Padded_Armor_,铁制铠甲,5,48000,,2800,,35,,1,0x000654E2,7,2,16,,0,1,0,{ if(isequipped(2656)) { bonus bDef,5; bonus bMaxHP,150; } },{},{}
+2314,Chain_Mail,钢铁锁子甲,5,65000,,3300,,45,,0,0x000654E2,7,2,16,,0,1,0,{},{},{}
+2315,Chain_Mail_,钢铁锁子甲,5,65000,,3300,,45,,1,0x000654E2,7,2,16,,0,1,0,{},{},{}
+2316,Plate_Armor,钢铁铠甲,5,80000,,4500,,65,,0,0x00004082,7,2,16,,40,1,0,{},{},{}
+2317,Plate_Armor_,钢铁铠甲,5,80000,,4500,,65,,1,0x00004082,7,2,16,,40,1,0,{},{},{}
+2318,Clothes_Of_The_Lord,秘衣 美德,5,20,,2500,,59,,1,0x00040420,7,2,16,,70,1,0,{ bonus bMdef,5; bonus bInt,1; },{},{}
+2319,Glittering_Clothes,秘衣 恶德,5,20,,2500,,58,,1,0xFFFFFFFE,7,2,16,,60,1,0,{ bonus bMdef,5; bonus2 bAddEff,Eff_Blind,300; },{},{}
+2320,Formal_Suit,西装外套,5,20,,300,,40,,1,0xFFFFFFFE,7,2,16,,0,1,0,{},{},{}
+2321,Silk_Robe,丝质外袍,5,8000,,400,,20,,0,0x0085C7B6,7,2,16,,0,1,0,{ bonus bMdef,10; },{},{}
+2322,Silk_Robe_,丝质外袍,5,8000,,400,,20,,1,0x0085C7B6,7,2,16,,0,1,0,{ bonus bMdef,10; },{},{}
+2323,Scapulare,圣职之袍,5,6500,,400,,24,,0,0x00008110,7,2,16,,0,1,0,{},{},{}
+2324,Scapulare_,圣职之袍,5,6500,,400,,24,,1,0x00008110,7,2,16,,0,1,0,{},{},{}
+2325,Saint_Robe,圣职之衣,5,54000,,600,,42,,0,0x00048530,7,2,16,,0,1,0,{ bonus bMdef,5; },{},{}
+2326,Saint_Robe_,圣职之衣,5,54000,,600,,42,,1,0x00048530,7,2,16,,0,1,0,{ bonus bMdef,5; },{},{}
+2327,Holy_Robe,天衣 月舞,5,20,,1700,,57,,0,0x00008110,7,2,16,,60,1,0,{ bonus bMdef,5; bonus2 bSubRace,RC_Demon,15; bonus2 bSubEle,Ele_Dark,10; },{},{}
+2328,Wooden_Mail,木制铠甲,5,5500,,1000,,25,,0,0x000444A2,7,2,16,,0,1,0,{},{},{}
+2329,Wooden_Mail_,木制铠甲,5,5500,,1000,,25,,1,0x000444A2,7,2,16,,0,1,0,{},{},{}
+2330,Tights,紧身便衣,5,71000,,500,,27,,0,0x00080808,7,2,16,,45,1,0,{ bonus bDex,1; },{},{}
+2331,Tights_,紧身便衣,5,71000,,500,,27,,1,0x00080808,7,2,16,,45,1,0,{ bonus bDex,1; },{},{}
+2332,Silver_Robe,秘银之衣,5,7000,,700,,23,,0,0x00810204,7,2,16,,0,1,0,{},{},{}
+2333,Silver_Robe_,秘银之衣,5,7000,,700,,23,,1,0x00810204,7,2,16,,0,1,0,{},{},{}
+2334,Mage_Coat,魔法外套,5,20,,600,,40,,0,0x00810204,7,2,16,,50,1,0,{ bonus bMdef,5; bonus bInt,1; },{},{}
+2335,Thief_Clothes,盗贼之衣,5,74000,,100,,40,,0,0x02021040,7,2,16,,0,1,0,{ bonus bAgi,1; },{},{}
+2336,Thief_Clothes_,盗贼之衣,5,74000,,100,,40,,1,0x02021040,7,2,16,,0,1,0,{ bonus bAgi,1; },{},{}
 2337,Ninja_Suit,忍服 血樱,5,20,,1500,,7,,0,0x02021040,7,2,16,,50,1,0,{ bonus bAgi,1; bonus bMdef,3; if(isequipped(2654)) { bonus bUseSPrate,-20; bonus bMaxHP,300; } },{},{}
 2338,Wedding_Dress,结婚礼服,5,43000,,500,,0,,0,0xFFFFFFFE,7,2,16,,0,1,0,{ bonus bMdef,15; },{},{}
-2339,G_Strings,三角裤,5,1000,,100,,4,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2339,G_Strings,三角裤,5,1000,,100,,22,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
 2340,Novice_Breast,初学者胸铠,5,89000,,500,,4,,1,0x00000001,7,2,16,,10,1,0,{},{},{}
-2341,Full_Plate_Armor,秘银金属铠甲,5,94000,,5500,,11,,0,0x00004000,7,2,16,,70,1,0,{},{},{}
-2342,Full_Plate_Armor_,秘银金属铠甲,5,102500,,5500,,11,,1,0x00004000,7,2,16,,70,1,0,{},{},{}
+2341,Full_Plate_Armor,秘银金属铠甲,5,94000,,5500,,79,,0,0x00004000,7,2,16,,70,1,0,{},{},{}
+2342,Full_Plate_Armor_,秘银金属铠甲,5,102500,,5500,,79,,1,0x00004000,7,2,16,,70,1,0,{},{},{}
 2343,Robe_Of_Casting,创作者外袍,5,124800,,1100,,5,,0,0x00810200,7,2,16,,75,1,0,{ bonus bCastrate,-3; bonus bMdef,4; },{},{}
-2344,Flame_Sprits_Armor,火鳞铠甲,5,136000,,2200,,4,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Fire; },{},{}
-2345,Flame_Sprits_Armor_,火鳞铠甲,5,136000,,2200,,4,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Fire; },{},{}
-2346,Water_Sprits_Armor,水鳞铠甲,5,136000,,2200,,4,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Water; },{},{}
-2347,Water_Sprits_Armor_,水鳞铠甲,5,136000,,2200,,4,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Water; },{},{}
-2348,Wind_Sprits_Armor,风鳞铠甲,5,136000,,2200,,4,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Wind; },{},{}
-2349,Wind_Sprits_Armor_,风鳞铠甲,5,136000,,2200,,4,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Wind; },{},{}
-2350,Earth_Sprits_Armor,地鳞铠甲,5,136000,,2200,,4,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Earth; },{},{}
-2351,Earth_Sprits_Armor_,地鳞铠甲,5,136000,,2200,,4,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Earth; },{},{}
+2344,Flame_Sprits_Armor,火鳞铠甲,5,136000,,2200,,25,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Fire; },{},{}
+2345,Flame_Sprits_Armor_,火鳞铠甲,5,136000,,2200,,25,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Fire; },{},{}
+2346,Water_Sprits_Armor,水鳞铠甲,5,136000,,2200,,25,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Water; },{},{}
+2347,Water_Sprits_Armor_,水鳞铠甲,5,136000,,2200,,25,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Water; },{},{}
+2348,Wind_Sprits_Armor,风鳞铠甲,5,136000,,2200,,25,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Wind; },{},{}
+2349,Wind_Sprits_Armor_,风鳞铠甲,5,136000,,2200,,25,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Wind; },{},{}
+2350,Earth_Sprits_Armor,地鳞铠甲,5,136000,,2200,,25,,0,0x000444A2,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Earth; },{},{}
+2351,Earth_Sprits_Armor_,地鳞铠甲,5,136000,,2200,,25,,1,0xFFFFFFFE,7,2,16,,45,1,0,{ bonus bDefEle,Ele_Earth; },{},{}
 2352,Novice_Plate,初学者忍者斗篷,5,1,,1,,4,,0,0x00000001,7,2,16,,0,0,0,{},{},{}
-2353,Odin's_Blessing,奥丁的祝福,5,30000,,2500,,6,,1,0xFFFFFFFE,7,2,16,,65,1,0,{},{},{}
-2354,Goibne's_Armor,哥夫内的铠甲,5,50000,,3500,,7,,0,0xFFFFFFFE,7,2,16,,54,1,0,{ bonus bVit,2; bonus bMaxHPrate,10; },{},{}
-2355,Angel's_Protection,天使的加护,5,10000,,600,,4,,1,0x00000001,7,2,16,,40,1,0,{ bonus bMdef,20; if(isequipped(2116,2420,2521,5125)) { bonus bMaxHP,900; bonus bMaxSP,100; bonus3 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,30; } },{},{}
-2356,Vestment_Of_Grace,恩惠的圣衣,5,20,,2500,,5,,1,0x00008100,7,2,16,,70,1,0,{ bonus bMdef,2; bonus2 bResEff,Eff_Blind,8000; },{},{}
-2357,Valkyrie_Armor,巴基力的铠甲,5,0,,2800,,6,,1,0xFFFFFFFE,2,2,16,,0,1,0,{ bonus bAllStats,1; bonus bUnbreakableArmor,0; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) bonus2 bResEff,Eff_Stun,5000; },{},{}
+2353,Odin's_Blessing,奥丁的祝福,5,30000,,2500,,53,,1,0xFFFFFFFE,7,2,16,,65,1,0,{},{},{}
+2354,Goibne's_Armor,哥夫内的铠甲,5,50000,,3500,,58,,0,0xFFFFFFFE,7,2,16,,54,1,0,{ bonus bVit,2; bonus bMaxHPrate,10; },{},{}
+2355,Angel's_Protection,天使的加护,5,10000,,600,,25,,1,0x00000001,7,2,16,,40,1,0,{ bonus bMdef,20; if(isequipped(2116,2420,2521,5125)) { bonus bMaxHP,900; bonus bMaxSP,100; bonus3 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,30; } },{},{}
+2356,Vestment_Of_Grace,恩惠的圣衣,5,20,,2500,,45,,1,0x00008100,7,2,16,,70,1,0,{ bonus bMdef,2; bonus2 bResEff,Eff_Blind,8000; },{},{}
+2357,Valkyrie_Armor,巴基力的铠甲,5,0,,2800,,55,,1,0xFFFFFFFE,2,2,16,,0,1,0,{ bonus bAllStats,1; bonus bUnbreakableArmor,0; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) bonus2 bResEff,Eff_Stun,5000; },{},{}
 2358,Dress_Of_Angel,天使礼服,5,20,,1000,,5,,0,0xFFFFFFFF,7,2,16,,0,0,0,{ bonus bLuk,4; },{},{}
-2359,Ninja_Suit_,忍服 血樱,5,20,,1500,,7,,1,0x02021040,7,2,16,,50,1,0,{ bonus bAgi,1; bonus bMdef,3; if(isequipped(2654)) { bonus bUseSPrate,-20; bonus bMaxHP,300; } },{},{}
+2359,Ninja_Suit_,忍服 血樱,5,20,,1500,,58,,1,0x02021040,7,2,16,,50,1,0,{ bonus bAgi,1; bonus bMdef,3; if(isequipped(2654)) { bonus bUseSPrate,-20; bonus bMaxHP,300; } },{},{}
 2360,Robe_Of_Casting_,创作者外袍,5,124800,,1100,,5,,1,0x00810200,7,2,16,,75,1,0,{ bonus bCastrate,-3; bonus bMdef,4; },{},{}
 //2361,Blue_Aodai,Blue Robe,5,20,,500,,0,,0,0xFFFFFFFE,7,2,16,,0,1,0,{ bonus bAllStats,5; bonus bMdef,5; },{},{}
 //2362,Red_Aodai,Red Robe,5,20,,500,,0,,0,0xFFFFFFFE,7,2,16,,0,1,0,{ bonus bAllStats,5; bonus bMdef,5; },{},{}
 //2363,White_Aodai,White Robe,5,20,,500,,0,,0,0x00000001,7,2,16,,0,1,0,{ bonus bAllStats,3; bonus bMdef,5; },{},{}
-2364,Meteo_Plate_Armor,陨石钢铁铠甲,5,20,,3000,,10,,1,0x000444A2,2,2,16,,55,1,0,{ bonus2 bResEff,Eff_Stun,3000; bonus2 bResEff,Eff_Freeze,3000; },{},{}
-2365,Orleans_Gown,欧罗莱昂的制服,5,20,,300,,2,,1,0xFFFFFFFE,2,2,16,,55,1,0,{ bonus bCastrate,15; bonus bNoCastCancel,0; },{},{}
-2366,Divine_Cloth,神圣的衣裳,5,20,,1500,,6,,1,0xFFFFFFFE,2,2,16,,55,1,0,{ bonus2 bResEff,Eff_Curse,500; bonus2 bResEff,Eff_Silence,500; bonus2 bResEff,Eff_Stun,500; bonus2 bResEff,Eff_Stone,500; bonus2 bResEff,Eff_Sleep,500; },{},{}
-2367,Sniping_Suit,剪裁服装,5,20,,750,,5,,1,0x00000800,2,2,16,,50,1,0,{ bonus bMdef,5; bonus bCritical,6+(readparam(bLuk)/10); bonus bDelayRate,-23; },{},{}
+2364,Meteo_Plate_Armor,陨石钢铁铠甲,5,20,,3000,,85,,1,0x000444A2,2,2,16,,55,1,0,{ bonus2 bResEff,Eff_Stun,3000; bonus2 bResEff,Eff_Freeze,3000; },{},{}
+2365,Orleans_Gown,欧罗莱昂的制服,5,20,,300,,15,,1,0xFFFFFFFE,2,2,16,,55,1,0,{ bonus bCastrate,15; bonus bNoCastCancel,0; },{},{}
+2366,Divine_Cloth,神圣的衣裳,5,20,,1500,,50,,1,0xFFFFFFFE,2,2,16,,55,1,0,{ bonus2 bResEff,Eff_Curse,500; bonus2 bResEff,Eff_Silence,500; bonus2 bResEff,Eff_Stun,500; bonus2 bResEff,Eff_Stone,500; bonus2 bResEff,Eff_Sleep,500; },{},{}
+2367,Sniping_Suit,剪裁服装,5,20,,750,,42,,1,0x00000800,2,2,16,,50,1,0,{ bonus bMdef,5; bonus bCritical,6+(readparam(bLuk)/10); bonus bDelayRate,-23; },{},{}
 2368,Golden_Armor,Golden Armor,5,20,,2000,,4,,0,0xFFFFFFFF,7,2,16,,,1,0,{ bonus bMdef,4; },{},{}
 2369,Freyja_Overcoat,Freya's Clothes,5,0,,500,,12,,0,0xFFFFFFFE,7,2,16,,0,1,0,{ bonus bUnbreakableArmor,0; bonus2 bSubRace,RC_DemiHuman,10; if ((isequipped(2428)) && (isequipped(2533)) && (isequipped(5306))) { bonus2 bSubRace,RC_DemiHuman,10; bonus bMaxHPrate,20; bonus2 bResEff,Eff_Freeze,10000; skill "WZ_FIREPILLAR",10; } },{},{}
 2370,Used_Mage_Coat,Used Mage Coat,5,0,,0,,15,,0,0xFFFFFFFF,7,2,16,1,1,0,0,{ bonus bMaxHP,300; bonus bMaxSP,30; bonus bBaseAtk,10; bonus bAGI,1; },{},{}
-2371,G_Strings_,Pantie,5,1000,,100,,4,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
-2372,Mage_Coat_,Mage Coat,5,20,,600,,5,,1,0x00810204,7,2,16,,50,1,0,{ bonus bMdef,5; bonus bInt,1; },{},{}
-2373,Holy_Robe_,Holy Robe,5,20,,1700,,7,,1,0x00008110,7,2,16,,60,1,0,{ bonus bMdef,5; bonus2 bSubRace,RC_Demon,15; bonus2 bSubEle,Ele_Dark,10; },{},{}
-2374,Diabolus_Robe,赤焰小恶魔_外袍,5,20,,300,,6,,1,0x00098B1C,2,2,16,,55,1,0,{ bonus bMaxSP,150; bonus bMdef,5; bonus bHealPower,6; bonus bDelayRate,-10; if (isequipped(2729)) { bonus bAtkRate,3; bonus bMatkRate,3; } },{},{}
-2375,Diabolus_Armor,赤焰小恶魔_铠甲,5,20,,600,,7,,1,0x000654E2,2,2,16,,55,1,0,{ bonus bStr,2; bonus bDex,1; bonus bMaxHP,150; bonus2 bResEff,Eff_Stun,500; bonus2 bResEff,Eff_Stone,500; if (isequipped(2729)) { bonus bAtkRate,3; bonus bMatkRate,3; } },{},{}
+2371,G_Strings_,Pantie,5,1000,,100,,22,,1,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{}
+2372,Mage_Coat_,Mage Coat,5,20,,600,,40,,1,0x00810204,7,2,16,,50,1,0,{ bonus bMdef,5; bonus bInt,1; },{},{}
+2373,Holy_Robe_,Holy Robe,5,20,,1700,,57,,1,0x00008110,7,2,16,,60,1,0,{ bonus bMdef,5; bonus2 bSubRace,RC_Demon,15; bonus2 bSubEle,Ele_Dark,10; },{},{}
+2374,Diabolus_Robe,赤焰小恶魔_外袍,5,20,,300,,57,,1,0x00098B1C,2,2,16,,55,1,0,{ bonus bMaxSP,150; bonus bMdef,5; bonus bHealPower,6; bonus bDelayRate,-10; if (isequipped(2729)) { bonus bAtkRate,3; bonus bMatkRate,3; } },{},{}
+2375,Diabolus_Armor,赤焰小恶魔_铠甲,5,20,,600,,79,,1,0x000654E2,2,2,16,,55,1,0,{ bonus bStr,2; bonus bDex,1; bonus bMaxHP,150; bonus2 bResEff,Eff_Stun,500; bonus2 bResEff,Eff_Stone,500; if (isequipped(2729)) { bonus bAtkRate,3; bonus bMatkRate,3; } },{},{}
 2376,Assaulter_Plate,突袭队长的_钢铁铠甲,5,0,,0,,7,,1,0x006444A2,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2538) && isequipped(2435)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bVit,3; bonus bMaxHPRate,12; bonus2 bSkillHeal2,"AL_HEAL",10; bonus2 bAddItemHealRate,IG_Recovery,10; autobonus2 "{ bonus2 bHPRegenRate,600,1000; }",5,10000,BF_WEAPON,"{ specialeffect2 EF_HEAL; }"; }; },{},{}
 2377,Elite_Engineer_Armor,精锐工兵的_铠甲,5,0,,0,,7,,1,0x00040420,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2538) && isequipped(2435)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bStr,3; bonus bMaxHPRate,12; bonus2 bSkillAtk,"MC_MAMMONITE",20; bonus2 bSkillHeal,"AM_POTIONPITCHER",10; bonus2 bSkillHeal2,"AM_POTIONPITCHER",10; bonus2 bSkillHeal2,"AL_HEAL",10; bonus bUnbreakableArmor,0; }; },{},{}
 2378,Assassin_Robe,刺客的_外袍,5,0,,0,,7,,1,0x02021040,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2538) && isequipped(2435)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bAgi,3; bonus bMaxHPRate,12; bonus bCritical,5; bonus bAspdRate,5; autobonus "{ bonus2 bHPRegenRate,300,1000; }",10,10000,BF_WEAPON,"{ specialeffect2 EF_HEAL; }"; }; },{},{}
@@ -1292,65 +1292,65 @@
 2380,Medic_Robe,医护兵的_外袍,5,0,,0,,3,,1,0x00008110,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2539) && isequipped(2436)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bInt,3; bonus bMaxHPRate,12; bonus2 bCastrate,156,-50; bonus bHealPower,6; autobonus2 "{ bonus bDefEle,Ele_Ghost; }",30,10000,BF_WEAPON,"{ specialeffect2 EF_ENERGYCOAT; }"; }; },{},{}
 2381,Elite_Archer_Suit,精锐弓兵_外套,5,0,,0,,3,,1,0x00180808,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2539) && isequipped(2436)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bDex,3; bonus bMaxHPRate,12; bonus bLongAtkDef,10; bonus bDelayRate,-25; }; },{},{}
 2382,Elite_Shooter_Suit,精锐射手的_外套,5,0,,0,,3,,1,0x01000000,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2540) && isequipped(2437)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bDex,3; bonus bMaxHPRate,12; bonus bLongAtkDef,10; bonus bDelayRate,-25; }; },{},{}
-2383,Brynhild,布林喜德,5,0,,400,,,,0,0xFFFFFFFF,7,2,16,,94,0,0,{ bonus bMdef,10; bonus bMaxHP,20*BaseLevel; bonus bMaxSP,5*BaseLevel; bonus2 bAddRace,RC_NonBoss,10; bonus2 bAddRace,RC_Boss,10; bonus bMatkRate,10; bonus bUnbreakableArmor,0; bonus bNoKnockback,0; },{},{}
+2383,Brynhild,布林喜德,5,0,,400,,120,,0,0xFFFFFFFF,7,2,16,,94,0,0,{ bonus bMdef,10; bonus bMaxHP,20*BaseLevel; bonus bMaxSP,5*BaseLevel; bonus2 bAddRace,RC_NonBoss,10; bonus2 bAddRace,RC_Boss,10; bonus bMatkRate,10; bonus bUnbreakableArmor,0; bonus bNoKnockback,0; },{},{}
 2384,Spritual_Tunic,Spiritual Tunic,5,20,,0,,10,,0,0xFFFFFFFF,7,2,16,,0,0,0,{ bonus bMaxHP,800; bonus2 bResEff,Eff_Freeze,10000; bonus2 bSubEle,Ele_Earth,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Poison,20; bonus2 bSubEle,Ele_Holy,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Ghost,20; bonus2 bSubEle,Ele_Undead,20; },{},{}
 2385,Recuperative_Armor,Recuperative Armor,5,20,,0,,12,,0,0xFFFFFFFF,7,2,16,,0,0,0,{ bonus bNoRegen,1; bonus bNoRegen,2; bonus bHPGainValue,60; bonus bSPGainValue,6; bonus bMagicHPGainValue,60; bonus bMagicSPGainValue,6; },{},{ heal 0,-100; }
-2386,Chameleon_Armor,变色龙铠甲,5,20,,1700,,5,,0,0x000FDF80,2,2,16,,70,1,0,{ bonus bMaxHP,(BaseLevel*7); bonus bMaxSP,(BaseLevel/2); autobonus2 "{ bonus bNoMagicDamage,100; }",10,2000,BF_MAGIC,"{ specialeffect2 EF_ENERGYCOAT; }"; if( BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte ) bonus bMdef,5; else if( BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief ) bonus bDef,3; },{},{}
-2387,Sprint_Mail,奔跑铠甲,5,20,,1000,,3,,1,0x000FDF80,2,2,16,,70,1,0,{ bonus bVit,1; bonus bHPrecovRate,5; bonus2 bAddItemHealRate,IG_Recovery,3; bonus2 bSkillHeal,"AL_HEAL",3; if( isequipped(2440) && isequipped(2744) ) { bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bCastrate,-3; bonus bDelayrate,-15; } },{},{}
-2388,Kandura,中东长袍,5,20,,300,,4,,1,0x00001000,2,2,16,,70,1,0,{ bonus bAgi,1; bonus bFlee,5; bonus bAspdRate,2; },{},{}
-2389,Armor_Of_Naga,纳迦鳞甲,5,20,,1000,,5,,1,0x00CFDF80,2,2,16,,70,1,0,{ bonus bMdef,2; autobonus2 "{ bonus bBaseAtk,20; }",10,10000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }"; },{},{}
-2390,Improved_Tights,改良型紧身便衣,5,20,,400,,6,,1,0x00080808,2,2,16,,75,1,0,{ bonus bMdef,2; bonus bFlee2,3; },{},{}
-2391,Life_Link,生命之环,5,20,,3500,,9,,1,0x00004082,2,2,16,,82,1,0,{ bonus bVit,2; bonus bMdef,5; bonus bHPrecovRate,50; },{},{}
+2386,Chameleon_Armor,变色龙铠甲,5,20,,1700,,55,,0,0x000FDF80,2,2,16,,70,1,0,{ bonus bMaxHP,(BaseLevel*7); bonus bMaxSP,(BaseLevel/2); autobonus2 "{ bonus bNoMagicDamage,100; }",10,2000,BF_MAGIC,"{ specialeffect2 EF_ENERGYCOAT; }"; if( BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte ) bonus bMdef,5; else if( BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief ) bonus bDef,3; },{},{}
+2387,Sprint_Mail,奔跑铠甲,5,20,,1000,,20,,1,0x000FDF80,2,2,16,,70,1,0,{ bonus bVit,1; bonus bHPrecovRate,5; bonus2 bAddItemHealRate,IG_Recovery,3; bonus2 bSkillHeal,"AL_HEAL",3; if( isequipped(2440) && isequipped(2744) ) { bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bCastrate,-3; bonus bDelayrate,-15; } },{},{}
+2388,Kandura,中东长袍,5,20,,300,,36,,1,0x00001000,2,2,16,,70,1,0,{ bonus bAgi,1; bonus bFlee,5; bonus bAspdRate,2; },{},{}
+2389,Armor_Of_Naga,纳迦鳞甲,5,20,,1000,,45,,1,0x00CFDF80,2,2,16,,70,1,0,{ bonus bMdef,2; autobonus2 "{ bonus bBaseAtk,20; }",10,10000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }"; },{},{}
+2390,Improved_Tights,改良型紧身便衣,5,20,,400,,38,,1,0x00080808,2,2,16,,75,1,0,{ bonus bMdef,2; bonus bFlee2,3; },{},{}
+2391,Life_Link,生命之环,5,20,,3500,,65,,1,0x00004082,2,2,16,,82,1,0,{ bonus bVit,2; bonus bMdef,5; bonus bHPrecovRate,50; },{},{}
 2392,Old_Pant,Old Pant,5,0,,0,,10,,0,0xFFFFFFFF,7,2,16,,0,1,0,{ bonus bStr,2; bonus bVit,2; bonus bMaxHP,200; bonus3 bAutoSpellWhenHit,"MO_CALLSPIRITS",5,20; bonus bMdef,1; },{},{}
 2393,N_Adventure_Suit,Novice Adventure Suit,5,1,,0,,8,,1,0x00000001,7,2,16,,0,0,0,{},{},{}
 2394,Krieger_Suit1,Glorious Suit,5,0,,0,,0,,0,0xFFFFFFFE,7,2,16,,81,1,0,{ bonus bMaxHPRate,20; bonus2 bSubRace,RC_DemiHuman,7; if( isequipped(2444) && isequipped(2549) ) { bonus bAtkRate,5; bonus bMatkRate,5; bonus2 bResEff,Eff_Freeze,10000; bonus2 bSkillHeal2,"AM_POTIONPITCHER",3; bonus2 bSkillHeal2,"AL_HEAL",3; bonus2 bSkillHeal2,"PR_SANCTUARY",3; } },{},{}  
 2395,Krieger_Suit2,Glorious Popularized Suit,5,0,,0,,0,,0,0xFFFFFFFE,7,2,16,,61,1,0,{ bonus bMaxHP,600; bonus bSPrecovRate,10; },{},{}  
 2396,Krieger_Suit3,Glorious Mass-Production Suit,5,0,,0,,0,,0,0xFFFFFFFE,7,2,16,,61,1,0,{ bonus bMaxHP,500; },{},{}
 2397,Incredible_Coat,Incredible Coat,5,0,,900,,2,,0,0xFFFFFFFF,7,2,16,,0,1,0,{},{},{} 
-2398,Sniping_Suit_M,Sniping Suit,5,20,,750,,5,,0,0x00000800,2,2,16,,50,1,0,{ bonus bMdef,5; bonus bCritical,6+(readparam(bLuk)/10); bonus bDelayRate,-23; },{},{}
+2398,Sniping_Suit_M,Sniping Suit,5,20,,750,,42,,0,0x00000800,2,2,16,,50,1,0,{ bonus bMdef,5; bonus bCritical,6+(readparam(bLuk)/10); bonus bDelayRate,-23; },{},{}
 2399,Dragon_Vest,龙之盛装,5,0,,500,,3,,1,0xFFFFFFFE,7,2,16,,0,1,0,{ bonus bMdef,3; if(isequipped(2553)) { bonus bAgi,5; bonus bFlee,15; } },{},{}
 // Footgears
 //===================================================================
-2401,Sandals,轻便鞋,5,400,,200,,1,,0,0xFFFFFFFF,7,2,64,,0,1,0,{},{},{}
-2402,Sandals_,轻便鞋,5,400,,200,,1,,1,0xFFFFFFFF,7,2,64,,0,1,0,{},{},{}
-2403,Shoes,长靴,5,3500,,400,,2,,0,0xFFFFFFFE,7,2,64,,0,1,0,{},{},{}
-2404,Shoes_,长靴,5,3500,,400,,2,,1,0xFFFFFFFE,7,2,64,,0,1,0,{},{},{}
-2405,Boots,战士长靴,5,18000,,600,,4,,0,0x016E5CEA,7,2,64,,0,1,0,{},{},{}
-2406,Boots_,战士长靴,5,18000,,600,,4,,1,0x016E5CEA,7,2,64,,0,1,0,{},{},{}
-2407,Chrystal_Pumps,玻璃鞋,5,20,,100,,0,,0,0xFFFFFFFE,7,0,64,,0,1,0,{ bonus bMdef,10; bonus bLuk,5; },{},{}
-2408,Cuffs,脚链,5,5000,,3000,,3,,0,0xFFFFFFFF,7,2,64,,0,1,0,{ if (isequipped(2655)) { bonus bBaseAtk,50; bonus2 bAddDefClass,1196,20; bonus2 bAddDefClass,1197,20; } },{},{}
+2401,Sandals,轻便鞋,5,400,,200,,5,,0,0xFFFFFFFF,7,2,64,,0,1,0,{},{},{}
+2402,Sandals_,轻便鞋,5,400,,200,,5,,1,0xFFFFFFFF,7,2,64,,0,1,0,{},{},{}
+2403,Shoes,长靴,5,3500,,400,,10,,0,0xFFFFFFFE,7,2,64,,0,1,0,{},{},{}
+2404,Shoes_,长靴,5,3500,,400,,10,,1,0xFFFFFFFE,7,2,64,,0,1,0,{},{},{}
+2405,Boots,战士长靴,5,18000,,600,,16,,0,0x016E5CEA,7,2,64,,0,1,0,{},{},{}
+2406,Boots_,战士长靴,5,18000,,600,,16,,1,0x016E5CEA,7,2,64,,0,1,0,{},{},{}
+2407,Chrystal_Pumps,玻璃鞋,5,20,,100,,5,,0,0xFFFFFFFE,7,0,64,,0,1,0,{ bonus bMdef,10; bonus bLuk,5; },{},{}
+2408,Cuffs,脚链,5,5000,,3000,,18,,0,0xFFFFFFFF,7,2,64,,0,1,0,{ if (isequipped(2655)) { bonus bBaseAtk,50; bonus2 bAddDefClass,1196,20; bonus2 bAddDefClass,1197,20; } },{},{}
 2409,Spiky_Heel,抗魔鞋,5,8500,,600,,2,,0,0xFFFFFFFE,7,2,64,,0,1,0,{ bonus bMdef,5; },{},{}
 2410,Sleipnir,史雷普尼尔之靴,5,20,,3500,,5,,0,0xFFFFFFFF,7,2,64,,94,0,0,{ bonus bMdef,10; bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bSPrecovRate,15; bonus bSpeedRate,25; },{},{}
-2411,Grave,重靴,5,48000,,750,,5,,0,0x00004080,7,2,64,,65,1,0,{},{},{}
-2412,Grave_,重靴,5,54000,,750,,5,,1,0x00004080,7,2,64,,65,1,0,{},{},{}
-2413,Safty_Boots,安全鞋,5,34000,,350,,6,,0,0x00004082,7,2,64,,30,0,0,{},{},{}
+2411,Grave,重靴,5,48000,,750,,27,,0,0x00004080,7,2,64,,65,1,0,{},{},{}
+2412,Grave_,重靴,5,54000,,750,,27,,1,0x00004080,7,2,64,,65,1,0,{},{},{}
+2413,Safty_Boots,安全鞋,5,34000,,350,,22,,0,0x00004082,7,2,64,,30,0,0,{},{},{}
 2414,Novice_Boots,初学者海滩鞋,5,1,,1,,2,,0,0x00000001,7,2,64,,0,0,0,{},{},{}
 2415,Slipper,兔子拖鞋,5,34000,,300,,3,,1,0xFFFFFFFE,7,0,64,,30,1,0,{ bonus bLuk,3; bonus bMdef,3; },{},{}
 2416,Novice_Shoes,初学者长靴,5,35000,,500,,2,,1,0x00000001,7,2,64,,40,1,0,{ bonus bMaxHPrate,5; },{},{}
-2417,Fricco_Shoes,傅里哥长靴,5,30000,,500,,3,,0,0xFFFFFFFE,7,2,64,,65,1,0,{ bonus bAgi,2; bonus2 bAddItemHealRate,IG_Potion,20; if(isequipped(2353,2516)){ bonus bAgi,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; } },{},{}
-2418,Vidar's_Boots,迪塔乐长靴,5,30000,,650,,4,,0,0xFFFFFFFE,7,2,64,,65,1,0,{ bonus bMaxHPrate,9; bonus bMaxSPrate,9; if(isequipped(2353,2517)){ bonus bVit,5; bonus bHPrecovRate,10; bonus bSPrecovRate,10; } },{},{}
-2419,Goibne's_Combat_Boots,哥夫内军靴,5,30000,,700,,4,,0,0xFFFFFFFE,7,2,64,,54,1,0,{ bonus bMdef,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; },{},{}
-2420,Angel's_Arrival,天使的降临,5,10000,,300,,2,,1,0x00000001,7,2,64,,25,1,0,{ bonus bMaxHP,100; },{},{}
-2421,Valkyrie_Shoes,巴基力的长靴,5,0,,500,,4,,1,0xFFFFFFFE,2,2,64,,1,1,0,{ bonus bUnbreakableShoes,0; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) bonus bMaxHP,(BaseLevel*5); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) bonus bMaxSP,(JobLevel*2); },{},{}
-2422,High_Fashion_Sandals,高级轻便鞋,5,24000,,200,,2,,1,0x00818314,7,2,64,,40,1,0,{ bonus bMdef,10; },{},{}
-2423,Variant_Shoes,变形长靴,5,10000,,500,,3,,0,0xFFFFFFFE,2,2,64,,85,1,0,{ bonus bMaxHPRate,20-getrefine(); bonus bMaxSPRate,20-getrefine(); bonus bDef,getrefine()/2; },{},{}
-2424,Tidal_Shoes,防水长靴,5,10000,,300,,3,,1,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus2 bSubEle,Ele_Water,5; if (isequipped(2528)) { bonus bHPrecovRate,5; bonus bMaxHPrate,10; } },{},{}
-2425,Black_Leather_Boots,黑色皮革长靴,5,10000,,500,,4,,0,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus bAgi,1; if(getrefine() >= 9) bonus bAgi,2; },{},{}
+2417,Fricco_Shoes,傅里哥长靴,5,30000,,500,,12,,0,0xFFFFFFFE,7,2,64,,65,1,0,{ bonus bAgi,2; bonus2 bAddItemHealRate,IG_Potion,20; if(isequipped(2353,2516)){ bonus bAgi,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; } },{},{}
+2418,Vidar's_Boots,迪塔乐长靴,5,30000,,650,,13,,0,0xFFFFFFFE,7,2,64,,65,1,0,{ bonus bMaxHPrate,9; bonus bMaxSPrate,9; if(isequipped(2353,2517)){ bonus bVit,5; bonus bHPrecovRate,10; bonus bSPrecovRate,10; } },{},{}
+2419,Goibne's_Combat_Boots,哥夫内军靴,5,30000,,700,,13,,0,0xFFFFFFFE,7,2,64,,54,1,0,{ bonus bMdef,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; },{},{}
+2420,Angel's_Arrival,天使的降临,5,10000,,300,,8,,1,0x00000001,7,2,64,,25,1,0,{ bonus bMaxHP,100; },{},{}
+2421,Valkyrie_Shoes,巴基力的长靴,5,0,,500,,13,,1,0xFFFFFFFE,2,2,64,,1,1,0,{ bonus bUnbreakableShoes,0; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) bonus bMaxHP,(BaseLevel*5); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) bonus bMaxSP,(JobLevel*2); },{},{}
+2422,High_Fashion_Sandals,高级轻便鞋,5,24000,,200,,7,,1,0x00818314,7,2,64,,40,1,0,{ bonus bMdef,10; },{},{}
+2423,Variant_Shoes,变形长靴,5,10000,,500,,13,,0,0xFFFFFFFE,2,2,64,,85,1,0,{ bonus bMaxHPRate,20-getrefine(); bonus bMaxSPRate,20-getrefine(); bonus bDef,getrefine()/2; },{},{}
+2424,Tidal_Shoes,防水长靴,5,10000,,300,,13,,1,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus2 bSubEle,Ele_Water,5; if (isequipped(2528)) { bonus bHPrecovRate,5; bonus bMaxHPrate,10; } },{},{}
+2425,Black_Leather_Boots,黑色皮革长靴,5,10000,,500,,16,,0,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus bAgi,1; if(getrefine() >= 9) bonus bAgi,2; },{},{}
 2426,Shadow_Walk,阴暗步行长靴,5,10000,,2000,,0,,0,0xFFFFFFFE,2,2,64,,75,1,0,{ bonus bMdef,10; if(getskilllv("AS_CLOAKING") < 3){ bonus5 bAutoSpellWhenHit,"AS_CLOAKING",3,100,BF_MAGIC,0; } else bonus5 bAutoSpellWhenHit,"AS_CLOAKING",getskilllv("AS_CLOAKING"),100,BF_MAGIC,0; },{},{}
 2427,Golden_Shoes,Golden Shoes,5,0,,300,,4,,0,0xFFFFFFFF,7,2,64,,,1,0,{ bonus bMdef,4; },{},{}
 2428,Freyja_Boots,Freya's Boots,5,0,,300,,10,,0,0xFFFFFFFF,7,2,64,,0,1,0,{ bonus2 bSubRace,RC_DemiHuman,5; },{},{}
 2429,Iron_Boots01,Iron Shoes 01,5,0,,1500,,5,,0,0x030E5CEA,7,2,64,,0,1,0,{},{},{}
 2430,Iron_Boots02,Iron Shoes 02,5,0,,800,,5,,0,0x00018315,7,2,64,,0,1,0,{},{},{}
 2431,Valley_Shoes,Valley Shoes,5,20,,0,,10,,0,0xFFFFFFFE,7,2,64,1,1,0,0,{ bonus bMaxHPRate,7; bonus bMaxSPRate,7; },{},{}
-2432,Spiky_Heel_,High Heels,5,8500,,600,,2,,1,0xFFFFFFFE,7,2,64,,0,1,0,{ bonus bMdef,5; },{},{}
-2433,Diabolus_Boots,赤焰小恶魔_长靴,5,20,,250,,4,,1,0x000FDF80,2,2,64,,0,1,0,{ bonus bMaxHP,(BaseLevel*10); },{},{}
-2434,Black_Leather_Boots_,Black Leather Boots,5,10000,,500,,4,,1,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus bAgi,1; if(getrefine() >= 9) bonus bAgi,2; },{},{}
+2432,Spiky_Heel_,High Heels,5,8500,,600,,10,,1,0xFFFFFFFE,7,2,64,,0,1,0,{ bonus bMdef,5; },{},{}
+2433,Diabolus_Boots,赤焰小恶魔_长靴,5,20,,250,,15,,1,0x000FDF80,2,2,64,,0,1,0,{ bonus bMaxHP,(BaseLevel*10); },{},{}
+2434,Black_Leather_Boots_,Black Leather Boots,5,10000,,500,,16,,1,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus bAgi,1; if(getrefine() >= 9) bonus bAgi,2; },{},{}
 2435,Battle_Greave,战斗_重靴,5,0,,0,,4,,1,0x026654E2,7,2,64,,80,1,0,{ bonus bMaxHP,100; bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
 2436,Combat_Boots,军靴,5,0,,0,,3,,1,0x00898B1C,7,2,64,,80,1,0,{ bonus bMaxHP,100; bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
 2437,Battle_Boots,战斗_短靴,5,0,,0,,3,,1,0x01000000,7,2,64,,80,1,0,{ bonus bMaxHP,100; bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
 2438,Paw_Of_Cat,Cat's Paw,5,20,,300,,0,,0,0xFFFFFFFF,7,2,64,,80,1,0,{ bonus bFlee,5; bonus bAgi,1; },{},{}
 2439,Refresh_Shoes,Refresh Shoes,5,20,,0,,9,,0,0xFFFFFFFF,7,2,64,,0,0,0,{ bonus bMaxHPRate,17; bonus bMaxSPRate,8; bonus2 bHPRegenRate,20,10000; bonus2 bSPRegenRate,3,10000; },{},{}
-2440,Sprint_Shoes,奔跑长靴,5,20,,300,,2,,1,0x000FDF80,2,2,64,,70,1,0,{ bonus bAgi,1; bonus bSPrecovRate,5; },{},{}
+2440,Sprint_Shoes,奔跑长靴,5,20,,300,,10,,1,0x000FDF80,2,2,64,,70,1,0,{ bonus bAgi,1; bonus bSPrecovRate,5; },{},{}
 2441,Beach_Sandal,Beach Sandals,5,20,,200,,0,,0,0xFFFFFFFF,7,2,64,,0,1,0,{ bonus bStr,1; bonus bInt,1; bonus bAgi,1; bonus2 bSubEle,Ele_Fire,10; if (isequipped(2546)) bonus bFlee,5; },{},{}
 2442,Boots_Perforated,Red Stocking Boots,5,0,,0,,7,,0,0xFFFFFFFF,7,2,64,,0,1,0,{ bonus bLuk,2; bonus bHPrecovRate,10; bonus bSPrecovRate,10; bonus3 bAutoSpellWhenHit,"WZ_QUAGMIRE",3,20; bonus bMdef,1; },{},{}
 2443,Fish_Shoes,Fisher's Boots,5,0,,200,,0,,0,0xFFFFFFFF,7,2,64,,0,1,0,{},{},{}  
@@ -1365,58 +1365,58 @@
 //===================================================================
 2501,Hood,连帽披肩,5,1000,,200,,1,,0,0xFFFFFFFF,7,2,4,,0,1,0,{},{},{}
 2502,Hood_,连帽披肩,5,1000,,200,,1,,1,0xFFFFFFFF,7,2,4,,0,1,0,{},{},{}
-2503,Muffler,披肩,5,5000,,400,,2,,0,0xFFFFFFFE,7,2,4,,0,1,0,{},{},{}
-2504,Muffler_,披肩,5,5000,,400,,2,,1,0xFFFFFFFE,7,2,4,,0,1,0,{},{},{}
-2505,Manteau,斗篷,5,32000,,600,,4,,0,0x006654E2,7,2,4,,0,1,0,{},{},{}
-2506,Manteau_,斗篷,5,32000,,600,,4,,1,0x006654E2,7,2,4,,0,1,0,{},{},{}
+2503,Muffler,披肩,5,5000,,400,,8,,0,0xFFFFFFFE,7,2,4,,0,1,0,{},{},{}
+2504,Muffler_,披肩,5,5000,,400,,8,,1,0xFFFFFFFE,7,2,4,,0,1,0,{},{},{}
+2505,Manteau,斗篷,5,32000,,600,,13,,0,0x006654E2,7,2,4,,0,1,0,{},{},{}
+2506,Manteau_,斗篷,5,32000,,600,,13,,1,0x006654E2,7,2,4,,0,1,0,{},{},{}
 2507,Cape_Of_Ancient_Lord,伯爵斗篷,5,82000,,600,,2,,0,0xFFFFFFFE,7,2,4,,40,1,0,{ bonus bAgi,1; },{},{}
-2508,Ragamuffin_Cape,抗魔斗篷,5,56000,,500,,1,,0,0xFFFFFFFE,7,2,4,,0,1,0,{ bonus bUnbreakableGarment,0; bonus bMdef,10; },{},{}
-2509,Clack_Of_Servival,生存斗篷,5,20000,,550,,0,,0,0x00810204,7,2,4,,75,1,0,{ bonus bMdef,5; bonus bVit,10; if(isequipped(1618) || isequipped(1620)){ bonus bMaxHP,300; bonus bMatkRate,getequiprefinerycnt(EQI_HAND_R)-5; bonus2 bSubEle,Ele_Neutral,getrefine()*3; } },{},{}
+2508,Ragamuffin_Cape,抗魔斗篷,5,56000,,500,,4,,0,0xFFFFFFFE,7,2,4,,0,1,0,{ bonus bUnbreakableGarment,0; bonus bMdef,10; },{},{}
+2509,Clack_Of_Servival,生存斗篷,5,20000,,550,,10,,0,0x00810204,7,2,4,,75,1,0,{ bonus bMdef,5; bonus bVit,10; if(isequipped(1618) || isequipped(1620)){ bonus bMaxHP,300; bonus bMatkRate,getequiprefinerycnt(EQI_HAND_R)-5; bonus2 bSubEle,Ele_Neutral,getrefine()*3; } },{},{}
 2510,Novice_Hood,初学者阴险披肩,5,1,,1,,2,,0,0x00000001,7,2,4,,0,0,0,{ bonus2 bSubEle,Ele_Neutral,20; },{},{}
-2511,Skeleton's_Cape,邪骸战士的斗篷,5,5000,,700,,1,,0,0xFFFFFFFE,7,2,4,,75,1,0,{ bonus bStr,2; bonus bInt,-3; bonus bDex,2; bonus bVit,-3; bonus bLuk,2; bonus bAgi,-4; },{},{}
+2511,Skeleton's_Cape,邪骸战士的斗篷,5,5000,,700,,13,,0,0xFFFFFFFE,7,2,4,,75,1,0,{ bonus bStr,2; bonus bInt,-3; bonus bDex,2; bonus bVit,-3; bonus bLuk,2; bonus bAgi,-4; },{},{}
 2512,Novice_Manteau,初学者斗篷,5,50000,,500,,2,,1,0x00000001,7,2,4,,40,1,0,{ bonus2 bSubEle,Ele_Neutral,10; },{},{}
 2513,Celestial_Robe,薄纱围巾,5,20,,500,,3,,1,0xFFFFFFFE,7,2,4,,80,1,0,{},{},{}
 2514,Pauldron,护肩甲,5,20,,800,,5,,1,0x000654E2,7,2,4,,80,1,0,{},{},{}
-2515,Wing_Of_Eagle,老鹰之翅膀,5,20000,,300,,1,,1,0x00810204,7,2,4,,85,1,0,{ if(isequipped(1616)) bonus bSpeedRate,25; },{},{}
-2516,Falcon_Robe,猎鹰披肩,5,30000,,400,,3,,0,0xFFFFFFFE,7,2,4,,65,1,0,{ bonus bFlee,15; bonus bFlee2,5; },{},{}
-2517,Vali's_Manteau,贝利的斗篷,5,30000,,600,,4,,0,0xFFFFFFFE,7,2,4,,65,1,0,{ bonus2 bSubEle,Ele_Neutral,15; },{},{}
-2518,Morpheus's_Shawl,摩菲斯披肩,5,30000,,600,,3,,0,0xFFFFFFFE,7,2,4,,33,1,0,{ bonus bMaxSPrate,10; bonus bMdef,3; },{},{}
-2519,Morrigane's_Manteau,茉莉雅娜斗篷,5,30000,,600,,3,,0,0xFFFFFFFE,7,2,4,,61,1,0,{ bonus bLuk,2; bonus bFlee2,8; },{},{}
-2520,Goibne's_Shoulder_Arms,哥夫内肩饰,5,30000,,700,,3,,0,0xFFFFFFFE,7,2,4,,54,1,0,{ bonus bLongAtkDef,10; bonus bMdef,2; bonus bVit,1; },{},{}
-2521,Angel's_Warmth,天使的温气,5,10000,,400,,2,,1,0x00000001,7,2,4,,20,1,0,{ bonus bHPrecovRate,5; },{},{}
+2515,Wing_Of_Eagle,老鹰之翅膀,5,20000,,300,,12,,1,0x00810204,7,2,4,,85,1,0,{ if(isequipped(1616)) bonus bSpeedRate,25; },{},{}
+2516,Falcon_Robe,猎鹰披肩,5,30000,,400,,8,,0,0xFFFFFFFE,7,2,4,,65,1,0,{ bonus bFlee,15; bonus bFlee2,5; },{},{}
+2517,Vali's_Manteau,贝利的斗篷,5,30000,,600,,13,,0,0xFFFFFFFE,7,2,4,,65,1,0,{ bonus2 bSubEle,Ele_Neutral,15; },{},{}
+2518,Morpheus's_Shawl,摩菲斯披肩,5,30000,,600,,8,,0,0xFFFFFFFE,7,2,4,,33,1,0,{ bonus bMaxSPrate,10; bonus bMdef,3; },{},{}
+2519,Morrigane's_Manteau,茉莉雅娜斗篷,5,30000,,600,,9,,0,0xFFFFFFFE,7,2,4,,61,1,0,{ bonus bLuk,2; bonus bFlee2,8; },{},{}
+2520,Goibne's_Shoulder_Arms,哥夫内肩饰,5,30000,,700,,11,,0,0xFFFFFFFE,7,2,4,,54,1,0,{ bonus bLongAtkDef,10; bonus bMdef,2; bonus bVit,1; },{},{}
+2521,Angel's_Warmth,天使的温气,5,10000,,400,,6,,1,0x00000001,7,2,4,,20,1,0,{ bonus bHPrecovRate,5; },{},{}
 2522,Undershirt,衬衫,5,20000,,150,,2,,0,0xFFFFFFFF,7,2,4,,1,1,0,{ bonus bMdef,1; if(isequipped(2339) || isequipped(2371)) { bonus bAgi,5; bonus bFlee,10; } },{},{}
 2523,Undershirt_,衬衫,5,20000,,150,,2,,1,0xFFFFFFFF,7,2,4,,1,1,0,{ bonus bMdef,1; if(isequipped(2339) || isequipped(2371)) { bonus bAgi,5; bonus bFlee,10; } },{},{}
-2524,Valkyrie_Manteau,巴基力的斗篷,5,0,,500,,3,,1,0xFFFFFFFE,2,2,4,,1,1,0,{ bonus bUnbreakableGarment,0; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*2); },{},{}
-2525,Cape_Of_Ancient_Lord_,伯爵斗篷,5,82000,,600,,2,,1,0xFFFFFFFE,7,2,4,,40,1,0,{ bonus bAgi,1; },{},{}
-2526,Dragon_Scale_Coat,龙鳞外套,5,20,,10,,4,,0,0xFFFFFFFF,7,2,4,,50,1,0,{},{},{}
-2527,Dragon_Breath,龙的呼吸,5,10000,,600,,4,,1,0xFFFFFFFE,2,2,4,,48,1,0,{ bonus2 bSubRace,RC_Dragon,15; if (isequipped(1166) || isequipped(13001) || isequipped(1474)) bonus2 bAddRace,RC_Dragon,5; },{},{}
-2528,Wool_Scarf,羊毛领巾,5,10000,,500,,3,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bMdef,4;},{},{}
-2529,Rider_Insignia,骑乘之徽章,5,10000,,500,,4,,0,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; if (isequipped(2425) || isequipped(2434)) bonus bFlee,10; },{},{}
-2530,Rider_Insignia_,骑乘之徽章,5,10000,,500,,4,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; if (isequipped(2425) || isequipped(2434)) bonus bFlee,10; },{},{}
-2531,Ulfhedinn,巫普斗篷,5,10000,,700,,3,,1,0x000654E2,2,2,4,,70,1,0,{ bonus3 bAutoSpellWhenHit,"NPC_STONESKIN",1,20; },{},{}
-2532,Mithril_Magic_Cape,迷思力魔法斗篷,5,10000,,400,,3,,1,0x00098B1C,2,2,4,,70,1,0,{ bonus bMdef,3; bonus5 bAutoSpellWhenHit,"NPC_ANTIMAGIC",1,200,BF_MAGIC,0; },{},{}
+2524,Valkyrie_Manteau,巴基力的斗篷,5,0,,500,,10,,1,0xFFFFFFFE,2,2,4,,1,1,0,{ bonus bUnbreakableGarment,0; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*2); },{},{}
+2525,Cape_Of_Ancient_Lord_,伯爵斗篷,5,82000,,600,,9,,1,0xFFFFFFFE,7,2,4,,40,1,0,{ bonus bAgi,1; },{},{}
+2526,Dragon_Scale_Coat,龙鳞外套,5,20,,10,,14,,0,0xFFFFFFFF,7,2,4,,50,1,0,{},{},{}
+2527,Dragon_Breath,龙的呼吸,5,10000,,600,,16,,1,0xFFFFFFFE,2,2,4,,48,1,0,{ bonus2 bSubRace,RC_Dragon,15; if (isequipped(1166) || isequipped(13001) || isequipped(1474)) bonus2 bAddRace,RC_Dragon,5; },{},{}
+2528,Wool_Scarf,羊毛领巾,5,10000,,500,,11,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bMdef,4;},{},{}
+2529,Rider_Insignia,骑乘之徽章,5,10000,,500,,13,,0,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; if (isequipped(2425) || isequipped(2434)) bonus bFlee,10; },{},{}
+2530,Rider_Insignia_,骑乘之徽章,5,10000,,500,,13,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; if (isequipped(2425) || isequipped(2434)) bonus bFlee,10; },{},{}
+2531,Ulfhedinn,巫普斗篷,5,10000,,700,,13,,1,0x000654E2,2,2,4,,70,1,0,{ bonus3 bAutoSpellWhenHit,"NPC_STONESKIN",1,20; },{},{}
+2532,Mithril_Magic_Cape,迷思力魔法斗篷,5,10000,,400,,8,,1,0x00098B1C,2,2,4,,70,1,0,{ bonus bMdef,3; bonus5 bAutoSpellWhenHit,"NPC_ANTIMAGIC",1,200,BF_MAGIC,0; },{},{}
 2533,Freyja_Cape,Freya's Manteau,5,0,,200,,10,,0,0xFFFFFFFE,7,2,4,,0,1,0,{ bonus2 bSubRace,RC_DemiHuman,15; },{},{}
 2534,Ruffler,Ruffler,5,20,,0,,10,,0,0x006654E2,7,2,4,1,1,0,0,{ bonus2 bSubEle,Ele_Neutral,17; bonus bFlee,17; },{},{}
 2535,Cloak_Of_Survival_C,Refined Survivor's Manteau,5,1,,0,,5,,0,0x00810204,7,2,4,,1,0,0,{ bonus bVit,10; bonus bMdef,10; if (isequipped(1618) || isequipped(1620)) { bonus bMatkRate,5; bonus2 bSubEle,Ele_Neutral,25; } },{},{}
-2536,Skin_Of_Ventus,魔王的_表皮_披肩,5,20,,250,,2,,1,0xFFFFFFFE,7,2,4,,60,1,0,{ bonus bMdef,5; bonus bMaxHP,200; bonus bFlee,10; },{},{}
+2536,Skin_Of_Ventus,魔王的_表皮_披肩,5,20,,250,,7,,1,0xFFFFFFFE,7,2,4,,60,1,0,{ bonus bMdef,5; bonus bMaxHP,200; bonus bFlee,10; },{},{}
 2537,Diabolus_Manteau,赤焰小恶魔_斗篷,5,20,,250,,5,,1,0x000FDF80,2,2,4,,0,1,0,{ bonus2 bSubEle,Ele_Neutral,5; bonus bMaxHP,100; bonus2 bAddDamageClass,1916,10; bonus2 bAddDamageClass,1917,10; if (isequipped(2433)) bonus bMaxHPRate,6; },{},{}
 2538,Commander_Manteau,司令官的_斗篷,5,0,,0,,4,,1,0x026654E2,7,2,4,,80,1,0,{ bonus bMaxHP,50; bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
 2539,Commander_Manteau_,指挥官的_斗篷,5,0,,0,,3,,1,0x00898B1C,7,2,4,,80,1,0,{ bonus bMaxHP,50; bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
 2540,Sheriff_Manteau,保安官的_斗篷,5,0,,0,,3,,1,0x01000000,7,2,4,,80,1,0,{ bonus bMaxHP,50; bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
-2541,Asprika,阿斯富力咖,5,0,,400,,5,,0,0xFFFFFFFF,7,2,4,,94,0,0,{ bonus bMdef,5; bonus2 bSubEle,Ele_Neutral,30; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Earth,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Wind,30; bonus2 bSubEle,Ele_Poison,30; bonus2 bSubEle,Ele_Holy,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Ghost,30; bonus2 bSubEle,Ele_Undead,30; bonus bFlee,30; skill "AL_TELEPORT",1; bonus bUnbreakableGarment,0; },{},{}
+2541,Asprika,阿斯富力咖,5,0,,400,,40,,0,0xFFFFFFFF,7,2,4,,94,0,0,{ bonus bMdef,5; bonus2 bSubEle,Ele_Neutral,30; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Earth,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Wind,30; bonus2 bSubEle,Ele_Poison,30; bonus2 bSubEle,Ele_Holy,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Ghost,30; bonus2 bSubEle,Ele_Undead,30; bonus bFlee,30; skill "AL_TELEPORT",1; bonus bUnbreakableGarment,0; },{},{}
 2542,Flame_Manteau,夜胜魔的_火焰斗篷,5,20,,70,,4,,1,0xFFFFFFFE,2,2,4,,70,1,0,{ bonus bMaxHPRate,5; bonus bMdef,2; bonus bMatkRate,1; bonus2 bAddEle,Ele_Fire,2; },{},{}
 2543,Sylphid_Manteau,Sylph Manteau,5,20,,0,,9,,0,0xFFFFFFFF,7,2,4,,0,0,0,{ bonus bFlee,13; bonus2 bSubEle,Ele_Neutral,13; bonus bFlee2,1; },{},{}
 2544,Leather_Of_Tendrilion,三角兽之皮,5,20,,300,,3,,1,0x00CFDF80,2,2,4,,0,1,0,{ bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Earth,5; bonus2 bSubRace,RC_Plant,5; bonus2 bSubRace,RC_Brute,5; },{},{}
-2545,Musika,圣堂长袍,5,20,,500,,2,,1,0x00008100,2,2,4,,70,1,0,{ bonus bMdef,3; bonus3 bAutoSpell,"AL_HEAL",getskilllv("AL_HEAL") ? getskilllv("AL_HEAL") : 1,20; },{},{}
+2545,Musika,圣堂长袍,5,20,,500,,10,,1,0x00008100,2,2,4,,70,1,0,{ bonus bMdef,3; bonus3 bAutoSpell,"AL_HEAL",getskilllv("AL_HEAL") ? getskilllv("AL_HEAL") : 1,20; },{},{}
 2546,Beach_Manteau,Beach Manteau,5,20,,600,,0,,1,0xFFFFFFFF,7,2,4,,0,1,0,{ bonus bStr,1; bonus bInt,1; bonus2 bSubEle,Ele_Fire,10; },{},{}
-2547,Cheap_Running_Shirts,Cheap Undershirt,5,20,,0,,8,,0,0xFFFFFFFF,7,2,4,,0,1,0,{ bonus bDex,2; bonus bFlee,10; bonus2 bSubEle,Ele_Neutral,10; bonus bMdef,1; },{},{} 
+2547,Cheap_Running_Shirts,Cheap Undershirt,5,20,,0,,5,,0,0xFFFFFFFF,7,2,4,,0,1,0,{ bonus bDex,2; bonus bFlee,10; bonus2 bSubEle,Ele_Neutral,10; bonus bMdef,1; },{},{} 
 2548,Muffler_C,Neo Muffler,5,0,,0,,5,,0,0xFFFFFFFE,7,2,4,,95,0,0,{ bonus2 bSubRace,RC_DemiHuman,10; bonus bMaxHPrate,10; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Fire,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Dark,5; },{},{}
 2549,Krieger_Muffler1,Glorious Muffler,5,0,,0,,0,,0,0xFFFFFFFE,7,2,4,,81,1,0,{ bonus bMaxHPRate,5; bonus2 bSubRace,RC_DemiHuman,5; },{},{}
 2550,Fisher's_Muffler,Fisher's Muffler,5,0,,200,,0,,0,0xFFFFFFFF,7,2,4,,0,1,0,{},{},{}
 2551,Rider_Insignia_M,Crest of the Rider,5,10000,,500,,4,,0,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; if (isequipped(2425) || isequipped(2434)) bonus bFlee,10; },{},{} 
 2552,Mithril_Magic_Cape_M,Mithril Magic Manteau,5,10000,,400,,3,,0,0x00098B1C,2,2,4,,70,1,0,{ bonus bMdef,3; bonus5 bAutoSpellWhenHit,"NPC_ANTIMAGIC",1,200,BF_MAGIC,0; },{},{}
-2553,Dragon_Manteau,龙之斗篷,5,0,,1000,,5,,1,0xFFFFFFFE,2,2,4,,1,1,0,{ bonus bAgi,1; bonus bMdef,5; },{},{}
-2554,Piece_Of_Angent_Skin,代行者的皮的碎片,5,0,,400,,5,,1,0xFFFFFFFE,2,2,4,,90,1,0,{ bonus bMdef,3; bonus2 bSubEle,Ele_Neutral,7; bonus2 bSubEle,Ele_Water,7; bonus2 bSubEle,Ele_Earth,7; bonus2 bSubEle,Ele_Fire,7; bonus2 bSubEle,Ele_Wind,7; bonus2 bSubEle,Ele_Poison,7; bonus2 bSubEle,Ele_Holy,7; bonus2 bSubEle,Ele_Dark,7; bonus2 bSubEle,Ele_Ghost,7; bonus2 bSubEle,Ele_Undead,7; bonus bMaxSP,BaseLevel/3+10*getrefine(); bonus3 bSPDrainRate,1,1,0; },{},{}
+2553,Dragon_Manteau,龙之斗篷,5,0,,1000,,16,,1,0xFFFFFFFE,2,2,4,,1,1,0,{ bonus bAgi,1; bonus bMdef,5; },{},{}
+2554,Piece_Of_Angent_Skin,代行者的皮的碎片,5,0,,400,,14,,1,0xFFFFFFFE,2,2,4,,90,1,0,{ bonus bMdef,3; bonus2 bSubEle,Ele_Neutral,7; bonus2 bSubEle,Ele_Water,7; bonus2 bSubEle,Ele_Earth,7; bonus2 bSubEle,Ele_Fire,7; bonus2 bSubEle,Ele_Wind,7; bonus2 bSubEle,Ele_Poison,7; bonus2 bSubEle,Ele_Holy,7; bonus2 bSubEle,Ele_Dark,7; bonus2 bSubEle,Ele_Ghost,7; bonus2 bSubEle,Ele_Undead,7; bonus bMaxSP,BaseLevel/3+10*getrefine(); bonus3 bSPDrainRate,1,1,0; },{},{}
 // Accessories
 //===================================================================
 2601,Ring,力量戒指,5,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,20,0,0,{ bonus bStr,2; },{},{}
@@ -2154,17 +2154,17 @@
 5004,Oxygen_Mask,氧气罩,5,20,,200,,0,,0,0xFFFFFFFE,7,2,1,,0,0,90,{ bonus2 bResEff,Eff_Poison,2000; },{},{}
 5005,Gas_Mask,防毒面具,5,20,,100,,1,,0,0xFFFFFFFE,7,2,513,,0,0,91,{ bonus2 bResEff,Eff_Poison,3000; },{},{}
 5006,Machoman_Glasses,颓废眼镜,5,36000,,100,,1,,0,0xFFFFFFFE,7,2,512,,0,0,92,{},{},{}
-5007,Loard_Circlet,领导者头箍,5,20,,200,,3,,0,0xFFFFFFFE,7,2,256,,55,1,93,{ bonus bMdef,4; bonus bStr,1; bonus bInt,1; bonus bLuk,1; },{},{}
+5007,Loard_Circlet,领导者头箍,5,20,,200,,7,,0,0xFFFFFFFE,7,2,256,,55,1,93,{ bonus bMdef,4; bonus bStr,1; bonus bInt,1; bonus bLuk,1; },{},{}
 5008,Puppy_Love,花冠,5,20,,100,,1,,0,0xFFFFFFFE,7,2,256,,0,0,94,{},{},{}
 5009,Safety_Helmet,安全帽,5,20,,500,,3,,0,0xFFFFFFFE,7,2,256,,0,1,95,{ bonus bMdef,3; bonus bUnbreakableHelm,0; },{},{}
-5010,Indian_Hair_Piece,印地安发箍,5,20,,100,,3,,0,0xFFFFFFFF,7,2,256,,0,1,96,{},{},{}
+5010,Indian_Hair_Piece,印地安发箍,5,20,,100,,5,,0,0xFFFFFFFF,7,2,256,,0,1,96,{},{},{}
 5011,Antenna,天线头饰,5,20,,100,,3,,0,0xFFFFFFFF,7,2,256,,0,1,97,{},{},{}
 5012,Ph.D_Hat,学士帽,5,20,,200,,3,,0,0xFFFFFFFE,7,2,256,,0,1,98,{},{},{}
 5013,Horn_Of_Lord_Kaho,卡浩之角,5,20,,100,,5,,0,0xFFFFFFFF,7,2,256,,0,1,99,{ bonus bMdef,10; bonus bStr,5; bonus bAgi,10; bonus bVit,10; bonus bInt,5; bonus bLuk,20; },{},{}
 5014,Fin_Helm,剑士头盔,5,20,,300,,2,,0,0x00004082,7,2,512,,65,0,100,{},{},{}
-5015,Egg_Shell,蛋壳帽,5,20,,200,,3,,0,0xFFFFFFFF,7,2,256,,0,0,101,{},{},{}
+5015,Egg_Shell,蛋壳帽,5,20,,200,,6,,0,0xFFFFFFFF,7,2,256,,0,0,101,{},{},{}
 5016,Boy's_Cap,学生帽,5,20,,100,,2,,0,0xFFFFFFFE,7,2,256,,0,1,102,{},{},{}
-5017,Bone_Helm,骨制头盔,5,20,,800,,7,,0,0x000444A2,7,2,256,,70,1,103,{ bonus2 bSubEle,Ele_Dark,-15; },{},{}
+5017,Bone_Helm,骨制头盔,5,20,,800,,15,,0,0x000444A2,7,2,256,,70,1,103,{ bonus2 bSubEle,Ele_Dark,-15; },{},{}
 5018,Feather_Bonnet,羽毛帽,5,20,,300,,4,,0,0x00080808,7,2,256,,0,1,104,{ bonus bAgi,1; },{},{}
 5019,Corsair,海盗船长帽,5,20,,500,,5,,0,0xFFFFFFFE,7,2,256,,0,1,105,{ bonus bVit,1; },{},{}
 5020,Kafra_Band,卡普拉发圈,5,20,,500,,3,,0,0xFFFFFFFF,7,2,256,,0,1,106,{ bonus bMdef,3; },{},{}
@@ -2174,7 +2174,7 @@
 5024,Hat_Of_Cake,蛋糕帽,5,20,,1000,,1,,0,0xFFFFFFFF,7,2,256,,0,1,109,{},{},{}
 5025,Helm_Of_Angel,天使头盔,5,20,,1600,,5,,0,0x00CFDF80,7,2,256,,74,1,110,{ bonus bAgi,1; bonus bLuk,1; bonus bMdef,3; },{},{}
 5026,Hat_Of_Cook,厨师帽,5,20,,300,,1,,0,0xFFFFFFFE,7,2,256,,50,1,111,{ bonus bDex,1; },{},{}
-5027,Wizardry_Hat,魔法师帽,5,20,,300,,1,,0,0x00810204,7,2,256,,0,1,112,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
+5027,Wizardry_Hat,魔法师帽,5,20,,300,,7,,0,0x00810204,7,2,256,,0,1,112,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
 5028,Candle,蜡烛头饰,5,20,,150,,0,,0,0xFFFFFFFF,7,2,256,,0,1,113,{},{},{}
 5029,Spore_Hat,魔菇帽,5,20,,900,,3,,0,0xFFFFFFFE,7,2,256,,20,1,114,{},{},{}
 5030,Panda_Cap,熊猫帽,5,20,,800,,3,,0,0xFFFFFFFE,7,2,256,,40,1,115,{},{},{}
@@ -2186,7 +2186,7 @@
 5036,Cross_Band,十字架发圈,5,20,,250,,1,,0,0xFFFFFFFE,7,2,256,,10,1,121,{},{},{}
 5037,Fruit_Shell,水果皮帽,5,20,,150,,4,,0,0xFFFFFFFF,7,2,256,,5,0,122,{},{},{}
 5038,Deviruchi_Cap,小恶魔帽,5,20,,800,,2,,0,0xFFFFFFFE,7,2,256,,64,1,123,{ bonus bStr,1; bonus bInt,1; },{},{}
-5039,Mottled_Egg_Shell,蓝白蛋壳帽,5,20,,400,,4,,0,0xFFFFFFFF,7,2,256,,19,0,124,{},{},{}
+5039,Mottled_Egg_Shell,蓝白蛋壳帽,5,20,,400,,7,,0,0xFFFFFFFF,7,2,256,,19,0,124,{},{},{}
 5040,Blush,红晕,5,20,,100,,0,,0,0xFFFFFFFF,7,2,512,,0,0,125,{},{},{}
 5041,Heart_Hair_Pin,爱心发夹,5,20,,100,,0,,0,0xFFFFFFFF,7,2,256,,0,1,126,{},{},{}
 5042,Hair_Protector,丸子头饰,5,20,,150,,0,,0,0xFFFFFFFE,7,2,256,,14,1,127,{},{},{}
@@ -2205,7 +2205,7 @@
 5055,Novice_Egg_Cap,初学者蛋壳帽,5,1,,1,,3,,0,0x00000001,7,2,256,,0,0,101,{},{},{}
 5056,Love_Berry,爱心果实,5,1,,100,,0,,0,0xFFFFFFFF,7,2,256,,0,0,140,{},{},{}
 5057,Ear_Of_Black_Cat,黑猫耳朵,5,16000,,200,,2,,0,0xFFFFFFFF,7,2,256,,45,1,141,{},{},{}
-5058,Drooping_Kitty,懒洋洋的猫,5,250000,,500,,1,,0,0xFFFFFFFE,7,2,256,,0,1,142,{ bonus bMDef,15; bonus2 bResEff,Eff_Curse,3000; },{},{}
+5058,Drooping_Kitty,懒洋洋的猫,5,250000,,500,,3,,0,0xFFFFFFFE,7,2,256,,0,1,142,{ bonus bMDef,15; bonus2 bResEff,Eff_Curse,3000; },{},{}
 5059,Brown_Bear_Cap,小熊帽,5,20,,800,,3,,0,0xFFFFFFFF,7,2,256,,50,1,143,{},{},{}
 5060,Party_Hat,派对帽,5,20,,300,,3,,0,0xFFFFFFFF,7,2,256,,0,1,144,{ bonus bLuk,1; },{},{}
 5061,Flower_Hairpin,花卉发夹,5,20,,100,,1,,0,0xFFFFFFFF,7,2,256,,0,1,145,{},{},{}
@@ -2241,8 +2241,8 @@
 5091,Big_Golden_Bell,巨大的金铃铛,5,20,,200,,2,,0,0xFFFFFFFE,7,2,768,,35,1,175,{},{},{}
 5092,Blue_Coif,修女的帽子,5,150000,,300,,5,,0,0x00001100,7,2,768,,65,1,176,{},{},{}
 5093,Blue_Coif_,修女的帽子,5,150000,,300,,5,,1,0x00001100,7,2,768,,65,1,177,{ bonus bMaxSP,100; },{},{}
-5094,Orc_Hero_Helm,兽人英雄的头具,5,500000,,900,,5,,0,0xFFFFFFFE,7,2,768,,55,1,178,{ bonus bStr,2; bonus bVit,1; },{},{}
-//5095,Orc_Hero_Helm_,Helmet of Orc Hero,5,800000,,1000,,5,,1,0xFFFFFFFE,7,2,768,,55,1,179,{ bonus bStr,2; bonus bVit,1; },{},{}
+5094,Orc_Hero_Helm,兽人英雄的头具,5,500000,,900,,9,,0,0xFFFFFFFE,7,2,768,,55,1,178,{ bonus bStr,2; bonus bVit,1; },{},{}
+//5095,Orc_Hero_Helm_,Helmet of Orc Hero,5,800000,,1000,,9,,1,0xFFFFFFFE,7,2,768,,55,1,179,{ bonus bStr,2; bonus bVit,1; },{},{}
 5096,Assassin_Mask_,刺客口罩,5,20,,100,,0,,0,0x00001100,7,2,1,,70,0,180,{},{},{}
 5097,Cone_Hat_,商城开幕活动帽,5,0,,400,,0,,0,0xFFFFFFFF,7,2,256,,0,1,144,{},{},{}
 5098,Tiger_Mask,老虎面具,5,20,,400,,2,,0,0xFFFFFFFF,7,2,768,,50,0,181,{ bonus bStr,3; bonus bMaxHP,100; },{},{}
@@ -2269,13 +2269,13 @@
 5119,Super_Novice_Hat_,超级初学者之帽,5,8500,,400,,4,,1,0x00000001,7,2,256,,40,1,193,{ bonus bAllStats,1; },{},{}
 5120,Fedora_,软呢帽,5,6000,,300,,3,,1,0xFFFFFFFF,7,2,256,,0,1,195,{},{},{}
 5121,Zherlthsh_Mask,艾斯恩魔女假面,5,20,,400,,3,,0,0xFFFFFFFE,7,2,768,,70,1,200,{ bonus2 bAddRace,RC_DemiHuman,5; bonus2 bSubRace,RC_DemiHuman,5; },{},{}
-5122,Magni_Cap,魔术无边帽,5,30000,,1000,,5,,0,0xFFFFFFFE,7,2,256,,65,1,250,{ bonus bStr,2; },{},{}
+5122,Magni_Cap,魔术无边帽,5,30000,,1000,,9,,0,0xFFFFFFFE,7,2,256,,65,1,250,{ bonus bStr,2; },{},{}
 5123,Ulle_Cap,毛无边帽,5,30000,,500,,3,,1,0xFFFFFFFE,7,2,256,,65,1,254,{ bonus bDex,2; bonus bAgi,1; if(isequipped(2353) && readparam(bDex)>=70) bonus bUseSPrate,-10; },{},{}
 5124,Fricca_Circlet,菲力卡的头箍,5,30000,,300,,3,,0,0xFFFFFFFE,7,2,256,,65,1,251,{ bonus bMdef,10; bonus bInt,2; bonus bMaxSP,50; },{},{}
 5125,Kiss_Of_Angel,天使之吻,5,10000,,300,,3,,1,0x00000001,7,2,256,,50,1,255,{ bonus bSPrecovRate,5; },{},{}
 5126,Morpheus's_Hood,摩菲斯的头巾,5,30000,,200,,1,,0,0xFFFFFFFE,7,2,256,,33,1,256,{ bonus bInt,2; if(isequipped(2518,2648,2649)) { bonus bInt,5; bonus bMdef,11; bonus bMaxSPrate,20; bonus bNoCastCancel,0; bonus bCastrate,25; } },{},{}
 5127,Morrigane's_Helm,茉莉雅娜的头盔,5,30000,,500,,4,,0,0xFFFFFFFE,7,2,256,,61,1,257,{ bonus bLuk,2; bonus bBaseAtk,3; if(isequipped(2519,2650,2651)) { bonus bStr,2; bonus bLuk,9; bonus bCritical,13; bonus bBaseAtk,18; bonus bFlee2,13; } },{},{}
-5128,Goibne's_Helmet,哥夫内的头具,5,30000,,500,,5,,0,0xFFFFFFFE,7,2,256,,54,1,258,{ bonus bVit,3; bonus bMdef,3; if(isequipped(2354,2419,2520)) { bonus bVit,5; bonus bMaxHPrate,15; bonus bMaxSPrate,5; bonus bDef,5; bonus bMdef,15; bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Fire,10; bonus2 bSubEle,Ele_Wind,10; } },{},{}
+5128,Goibne's_Helmet,哥夫内的头具,5,30000,,500,,10,,0,0xFFFFFFFE,7,2,256,,54,1,258,{ bonus bVit,3; bonus bMdef,3; if(isequipped(2354,2419,2520)) { bonus bVit,5; bonus bMaxHPrate,15; bonus bMaxSPrate,5; bonus bDef,5; bonus bMdef,15; bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Fire,10; bonus2 bSubEle,Ele_Wind,10; } },{},{}
 5129,Bird_Nest,鸟窝,5,20,,400,,1,,0,0xFFFFFFFF,7,2,256,,50,0,201,{ bonus bAgi,2; bonus2 bSubRace,RC_Brute,10; },{},{}
 5130,Lion_Mask,狮子面具,5,20,,700,,0,,0,0x00CFDF80,7,2,768,,75,1,202,{ bonus2 bAddEffWhenHit,Eff_Silence,500; bonus bMdef,1; },{},{}
 5131,Close_Helmet,紧密的头盔,5,20,,1200,,8,,0,0x00004082,7,2,769,,75,1,203,{ bonus bVit,3; bonus bMaxHPrate,3; },{},{}
@@ -2329,7 +2329,7 @@
 5179,Gold_Tiara,黄金后冠,5,0,,100,,0,,0,0xFFFFFFFF,7,2,256,,0,1,232,{ bonus bInt,2; },{},{}
 5180,Phrygian_Cap_,国庆日帽子,5,20,,100,,1,,0,0xFFFFFFFF,7,2,256,,0,1,217,{ bonus bVit,1; },{},{}
 5181,Helm_Of_Darkness,黑暗的头盔,5,20,,2000,,3,,1,0x000654E2,7,2,768,,50,1,233,{ bonus bStr,2; },{},{}
-5182,Puppy_Hat,小狗帽,5,20,,500,,2,,0,0xFFFFFFFF,7,2,256,,30,0,234,{ bonus bAgi,1; bonus3 bAutoSpell,"PR_GLORIA",1,10+20*(readparam(bAgi)>=77); },{},{}
+5182,Puppy_Hat,小狗帽,5,20,,500,,3,,0,0xFFFFFFFF,7,2,256,,30,0,234,{ bonus bAgi,1; bonus3 bAutoSpell,"PR_GLORIA",1,10+20*(readparam(bAgi)>=77); },{},{}
 5183,Bird_Nest_Hat,雀巢帽,5,20,,500,,2,,0,0xFFFFFFFF,7,2,256,,10,1,235,{ bonus bDex,1; bonus bAgi,1; bonus2 bResEff,Eff_Stun,1000; },{},{}
 5184,Captain_Hat,船长之帽,5,20,,500,,4,,0,0xFFFFFFFE,7,2,256,,30,1,236,{ bonus2 bSubEle,Ele_Water,5; },{},{}
 5185,Laurel_Wreath,月桂树之冠,5,20,,100,,1,,1,0xFFFFFFFF,7,2,256,,10,1,237,{ bonus bLuk,3; bonus2 bResEff,Eff_Blind,500; bonus2 bResEff,Eff_Curse,500; },{},{}
@@ -2371,7 +2371,7 @@
 5221,Pair_Of_Red_Ribbon_,进化的红色小发带,5,20,,100,,1,,0,0xFFFFFFFF,7,0,512,,45,0,169,{ bonus bFlee,5; },{},{}
 5222,Fish_On_Head_,进化的蓝色鱼,5,20,,500,,2,,0,0xFFFFFFFF,7,2,256,,50,1,149,{ bonus bAgi,1; bonus bDex,1; },{},{}
 5223,Big_Golden_Bell_,进化的巨大的金铃铛,5,20,,200,,2,,0,0xFFFFFFFE,7,2,768,,35,1,175,{ bonus bAgi,2; },{},{}
-5224,Orc_Hero_Helm_TW,进化的兽人英雄的头具,5,500000,,900,,5,,0,0xFFFFFFFE,7,2,768,,55,1,178,{ bonus bStr,2; bonus bVit,1; bonus bMaxHPrate,10; },{},{}
+5224,Orc_Hero_Helm_TW,进化的兽人英雄的头具,5,500000,,900,,9,,0,0xFFFFFFFE,7,2,768,,55,1,178,{ bonus bStr,2; bonus bVit,1; bonus bMaxHPrate,10; },{},{}
 5225,Marcher_Hat,Holy Marcher Hat,5,20,,200,,2,,1,0xFFFFFFFF,7,2,256,,10,1,269,{ bonus bMdef,2; bonus bStr,2; bonus3 bAutoSpell,"AL_ANGELUS",5,30; },{},{}
 5226,Mini_Propeller_,梦想升空竹蜻蜓,5,20,,200,,2,,0,0xFFFFFFFF,7,2,256,,0,1,270,{ bonus bAgi,2; bonus bDex,1; bonus bFlee,10; bonus bCastrate,-getrefine(); },{},{}
 5227,Red_Deviruchi_Cap,红色小恶魔帽,5,20,,800,,2,,0,0xFFFFFFFE,7,2,256,,64,1,271,{ bonus bStr,1; bonus bInt,1; },{},{}
@@ -2385,11 +2385,11 @@
 5235,Gray_Fur_Hat,灰色毛帽,5,20,,350,,2,,0,0xFFFFFFFF,7,2,256,,0,1,279,{ bonus bLuk,1; },{},{}
 5236,Blue_Fur_Hat,蓝色毛帽,5,20,,350,,2,,0,0xFFFFFFFF,7,2,256,,0,1,280,{ bonus bLuk,1; },{},{}
 5237,Pink_Fur_Hat,粉红色毛帽,5,20,,350,,2,,0,0xFFFFFFFF,7,2,256,,0,1,281,{ bonus bLuk,1; },{},{}
-5238,Red_Wizardry_Hat,红色魔法师帽,5,20,,300,,1,,0,0x810204,7,2,256,,0,1,282,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
-5239,White_Wizardry_Hat,白色魔法师帽,5,20,,300,,1,,0,0x810204,7,2,256,,0,1,283,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
-5240,Gray_Wizardry_Hat,灰色魔法师帽,5,20,,300,,1,,0,0x810204,7,2,256,,0,1,284,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
-5241,Blue_Wizardry_Hat,蓝色魔法师帽,5,20,,300,,1,,0,0x810204,7,2,256,,0,1,285,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
-5242,Yellow_Wizardry_Hat,黄色魔法师帽,5,20,,300,,1,,0,0x810204,7,2,256,,0,1,286,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
+5238,Red_Wizardry_Hat,红色魔法师帽,5,20,,300,,7,,0,0x810204,7,2,256,,0,1,282,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
+5239,White_Wizardry_Hat,白色魔法师帽,5,20,,300,,7,,0,0x810204,7,2,256,,0,1,283,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
+5240,Gray_Wizardry_Hat,灰色魔法师帽,5,20,,300,,7,,0,0x810204,7,2,256,,0,1,284,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
+5241,Blue_Wizardry_Hat,蓝色魔法师帽,5,20,,300,,7,,0,0x810204,7,2,256,,0,1,285,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
+5242,Yellow_Wizardry_Hat,黄色魔法师帽,5,20,,300,,7,,0,0x810204,7,2,256,,0,1,286,{ bonus bInt,2; bonus bMaxSP,150; },{},{}
 5243,Chullos,遮耳帽,5,20,,800,,2,,1,0xFFFFFFFF,7,2,768,,0,1,287,{ bonus2 bResEff,Eff_Freeze,1000; },{},{}
 5244,Elven_Blindfold,Elven Blinker,5,20,,200,,1,,0,0xFFFFFFFF,7,2,512,,0,0,288,{ bonus2 bResEff,Eff_Blind,10000; },{},{}
 5245,Elven_Sunglasses,Elven Sunglasses,5,20,,200,,1,,0,0xFFFFFFFF,7,2,512,,0,0,289,{ bonus2 bResEff,Eff_Blind,500; },{},{}
@@ -2522,7 +2522,7 @@
 5372,Drooping_White_Kitty,Koneko Hat,5,20,,500,,1,,0,0xFFFFFFFF,7,2,256,,0,1,378,{ bonus bInt,1; bonus bDelayRate,-3; bonus bMatkRate,3; bonus bMaxSPrate,3; bonus bMdef,3; },{},{}
 5373,Darkness_Helm,Dark Randgris Helm,5,20,,300,,2,,0,0xFFFFFFFF,7,2,768,,0,1,379,{ bonus bDex,4; bonus bMdef,1; },{},{}
 5374,L_Magestic_Goat,Baphomet Horns,5,20,,800,,5,,0,0xFFFFFFFF,7,2,256,,0,1,380,{ bonus2 bAddRace,RC_DemiHuman,12; bonus bBaseAtk,(JobLevel*2)/7; },{},{}
-5375,L_Orc_Hero_Helm,Orc Hero Headdress,5,20,,900,,5,,1,0xFFFFFFFF,7,2,768,,0,1,381,{ bonus bStr,3; bonus3 bAutoSpellWhenHit,"BS_WEAPONPERFECT",3,10; },{},{}
+5375,L_Orc_Hero_Helm,Orc Hero Headdress,5,20,,900,,9,,1,0xFFFFFFFF,7,2,768,,0,1,381,{ bonus bStr,3; bonus3 bAutoSpellWhenHit,"BS_WEAPONPERFECT",3,10; },{},{}
 //5376,Satanic_Chain_P,Flying Evil Wing,5,20,,100,,3,,1,0xFFFFFFFF,7,2,256,,0,1,382,{ bonus bMaxSP,120; bonus3 bAddEffWhenHit,Eff_Curse,300,ATF_SELF; },{},{}
 5377,Antique_Pipe,Gentleman's Pipe,5,20,,100,,0,,0,0xFFFFFFFF,7,2,1,,0,0,383,{ bonus2 bSubRace,RC_DemiHuman,2; },{},{}
 5378,Rabbit_Ear_Hat,Bunny Top Hat,5,20,,300,,0,,0,0xFFFFFFFF,7,2,256,,0,1,384,{ bonus bAgi,3; bonus3 bAutoSpellWhenHit,"AL_INCAGI",5,30; },{},{}
@@ -5572,7 +5572,7 @@
 1549,穿甲撞针,Pile Bunker,4,10,,3000,450,,1,0,0xFFFFFFFF,24,2,2,3,99,0,23,{},{},{}
 
 // Mechanic Mado Side Arm Weapons
-2139,火焰喷射器,Flame Thrower,5,20000,,2000,,5,,0,0xFFFFFFFF,24,2,32,,99,0,5,{},{},{}
+2139,火焰喷射器,Flame Thrower,5,20000,,2000,,60,,0,0xFFFFFFFF,24,2,32,,99,0,5,{},{},{}
 2140,卢恩能量盾,Energy Rune Guard,3,10,,10,,,,,,,,,,,,,{},{},{}
 
 
