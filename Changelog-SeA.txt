@@ -1,3 +1,11 @@
+2010/03/03[SeAr_1.3.131]
+- 源码:		Force of Vanguard增加eDEF。
+- 源码:		修正Swing Dance移动速度和ASPD增加效果。
+- DB:		Enchant Blade为目标技能。
+- 源码、DB:	修正Echo Song和Windmill Rush效果颠倒，修正作用范围和SP消耗。
+- 源码:		aspd.renewal未激活时，所有3转技能aspd效果无效。
+- 源码:		修正Dance With Warg咏唱减少量。
+
 2010/03/02[SeAr_1.3.130]
 - 源码、CONF:	添加3转最大ASPD设置。
 - DB:		更新部分道具防御值。
