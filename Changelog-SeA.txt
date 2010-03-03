@@ -1,3 +1,7 @@
+2010/03/03[SeAr_1.3.132]
+- 源码、NPC、DB:
+		修正#玩家指令中对GM等级的判断。
+
 2010/03/03[SeAr_1.3.131]
 - 源码:		Force of Vanguard增加eDEF。
 - 源码:		修正Swing Dance移动速度和ASPD增加效果。

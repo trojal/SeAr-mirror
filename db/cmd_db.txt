@@ -156,7 +156,7 @@ hatch,0,0,{ if(!getpetinfo(0)) bpet; else dispmes msg(181); }
 
 //======================= 以下为自定义指令 =========================
 // 打开悬赏窗口
-w&r,0,0,{ if((getgmlevel() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getgmlevel() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }
+w&r,0,0,{ if((getcmduserlv() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getcmduserlv() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }
 
 // 租赁指令
 rentitem,2,2,{ rentitem atoi(@cmd_para$[0]),atoi(@cmd_para$[1]); }

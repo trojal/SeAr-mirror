@@ -76,11 +76,11 @@ function	script	cmd_mapmove	{
 		set .@x,0;
 		set .@y,0;
 	}
-	if( getmapflag(.@m$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if( getmapflag(.@m$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(247);
 		end;
 	}
-	if( getmapflag(.@m$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if( getmapflag(.@m$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(248);
 		end;
 	}
@@ -103,7 +103,7 @@ function	script	cmd_jumpto	{
 		end;
 	}
 	getmapxy .@m1$,.@x,.@y,0;
-	if( getmapflag(.@m1$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if( getmapflag(.@m1$,mf_nowarp) && getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(248);
 		end;
 	}
@@ -112,7 +112,7 @@ function	script	cmd_jumpto	{
 	set .@n$, strcharinfo(0);
 	getmapxy .@m2$,.@x,.@y,0;
 	attachrid .@j;
-	if( getmapflag(.@m2$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if( getmapflag(.@m2$,mf_nowarpto) && getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(247);
 		end;
 	}
@@ -137,7 +137,7 @@ function	script	cmd_jump	{
 		set .@x,0;
 		set .@y,0;
 	}
-	if( getmapflag(.@m$,mf_noteleport) && getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if( getmapflag(.@m$,mf_noteleport) && getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(248);
 		end;
 	}
@@ -156,8 +156,8 @@ function	script	cmd_where	{
 		dispmes msg(3);
 		end;
 	}
-	if( getbattleflag("hide_GM_session") && getgmlevel() < getgmlevel(.@i) &&
-		!(getbattleflag("who_display_aid") && getgmlevel() >= getbattleflag("who_display_aid"))
+	if( getbattleflag("hide_GM_session") && getcmduserlv() < getgmlevel(.@i) &&
+		!(getbattleflag("who_display_aid") && getcmduserlv() >= getbattleflag("who_display_aid"))
 	) {
 		dispmes msg(3);
 		end;
@@ -171,12 +171,12 @@ function	script	cmd_where	{
 }
 
 function	script	cmd_load	{
-	if( getmapflag(getsavepoint(0), mf_nowarpto) &&  getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if( getmapflag(getsavepoint(0), mf_nowarpto) &&  getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(249);
 		end;
 	}
 	getmapxy .@m$,.@x,.@y,0;
-	if ( getmapflag(.@m$, mf_nowarp) &&  getbattleflag("any_warp_GM_min_level") > getgmlevel() ) {
+	if ( getmapflag(.@m$, mf_nowarp) &&  getbattleflag("any_warp_GM_min_level") > getcmduserlv() ) {
 		dispmes msg(248);
 		end;
 	}
@@ -252,7 +252,7 @@ function	script	cmd_clone	{
 	attachrid .@id;
 	set .@id3, getcharid(0);
 	attachrid .@id2;
-	if(getgmlevel(.@id) > getgmlevel(.@id2)) {
+	if(getgmlevel(.@id) > getcmduserlv()) {
 		dispmes msg(126);
 		end;
 	}
