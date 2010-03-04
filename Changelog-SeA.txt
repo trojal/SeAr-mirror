@@ -1,3 +1,7 @@
+2010/03/04[SeAr_1.3.134]
+- 源码:		修正mdamage.renewal激活时属性MDEF时的显示。
+- 源码:		修正mdamage.renewal激活时对MDEF 60的对象伤害异常。
+
 2010/03/03[SeAr_1.3.133]
 - 源码:		修正Duplelight可以被复制。
 - 源码:		40 INT减少1秒Deep Sleep持续时间。
