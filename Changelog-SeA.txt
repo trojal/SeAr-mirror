@@ -1,3 +1,9 @@
+2010/03/04[SeAr_1.3.135]
+- 源码:		修正Mandragora作用范围。
+- 源码、DB:	修正Shield Press冷却时间和伤害公式。
+- 源码、DB:	修正Exceed Break咏唱时间和伤害公式，咏唱不可被远程攻击中断，咏唱中可移动。
+- 源码:		更新Pinpoint Attack伤害公式。
+
 2010/03/04[SeAr_1.3.134]
 - 源码:		修正mdamage.renewal激活时属性MDEF时的显示。
 - 源码:		修正mdamage.renewal激活时对MDEF 60的对象伤害异常。
