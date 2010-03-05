@@ -1,3 +1,8 @@
+2010/03/05[SeAr_1.3.136]
+- 源码:		修正Reflect Damage不反射Cart Termination，并修正其动画效果。
+- DB:		Cluster Bomb, Firing Trap和Ice Bounded Trap无视目标减伤。
+- 源码、DB:	修正Cloud Kill表现。
+
 2010/03/04[SeAr_1.3.135]
 - 源码:		修正Mandragora作用范围。
 - 源码、DB:	修正Shield Press冷却时间和伤害公式。

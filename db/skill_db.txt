@@ -762,7 +762,7 @@
 2236,-9,8,1,-1,0,0,10,4,no,0,0,0,weapon,0,	RA_AIMEDBOLT,集中目标
 2237,7,6,2,0,0x3,6,1,1,no,0,0,0,none,0,		RA_DETONATOR,起爆装置
 2238,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,0,	RA_ELECTRICSHOCKER,电冲击陷阱
-2239,3,6,2,0,0x42,2,5,1,no,0,0x80,3,misc,0,	RA_CLUSTERBOMB,集束炸弹
+2239,3,6,2,0,0xC2,2,5,1,no,0,0x80,3,misc,0,	RA_CLUSTERBOMB,集束炸弹
 2240,0,0,4,0,0,0,1,0,no,0,0,0,misc,0,		RA_WUGMASTERY,狼训练
 2241,0,0,4,0,0,0,3,0,no,0,0,0,misc,0,		RA_WUGRIDER,骑狼
 2242,3,6,4,0,0x2,1,1,0,no,0,0,0,weapon,0,		RA_WUGDASH,狼疾走
@@ -776,8 +776,8 @@
 2250,3,6,2,1,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_COBALTTRAP,深蓝陷阱
 2251,3,6,2,2,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_MAIZETRAP,淡黄陷阱
 2252,3,6,2,4,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_VERDURETRAP,青绿陷阱
-2253,3,6,2,3,0x42,2,5,1,no,0,0x80,0,misc,0,	RA_FIRINGTRAP,焰火陷阱
-2254,3,6,2,1,0x42,2,5,1,no,0,0x80,0,misc,0,	RA_ICEBOUNDTRAP,冰封陷阱
+2253,3,6,2,3,0xC2,2,5,1,no,0,0x80,0,misc,0,	RA_FIRINGTRAP,焰火陷阱
+2254,3,6,2,1,0xC2,2,5,1,no,0,0x80,0,misc,0,	RA_ICEBOUNDTRAP,冰封陷阱
 //机械师
 2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,魔导装置认证
 2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,		NC_BOOSTKNUCKLE,喷射飞拳
