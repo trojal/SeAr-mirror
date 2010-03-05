@@ -1,3 +1,6 @@
+2010/03/06[SeAr_1.3.137]
+- 源码:		修正Shield Press和Exceed Break对物品重量的计算。
+
 2010/03/05[SeAr_1.3.136]
 - 源码:		修正Reflect Damage不反射Cart Termination，并修正其动画效果。
 - DB:		Cluster Bomb, Firing Trap和Ice Bounded Trap无视目标减伤。
