@@ -1,3 +1,8 @@
+2010/03/06[SeAr_1.3.139]
+- 源码:		更新renewal最大MATK和最小MATK计算方式。(装备MATK+属性MATK->2装备MATK+1.5属性MATK)
+- 源码:		更新renewal魔法攻击力显示(最小MATK+最大MATK->属性MATK+装备MATK)
+- 源码:		修正renewal属性MDEF计算公式(x+等级->x+等级/4)
+
 2010/03/06[SeAr_1.3.138]
 - 源码、CONF:	完成提取所有用户界面中文信息以便繁体化。
 
