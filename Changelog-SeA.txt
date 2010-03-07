@@ -1,3 +1,11 @@
+2010/03/07[SeAr_1.3.142]
+- 源码:		Earth Strain伤害和脱卸几率受等级影响。
+- 源码:		Release伤害受等级和职业等级影响。
+- 源码:		修正Freezing状态负面效果。
+- 源码:		修正Drain Life伤害公式，HP吸收量和成功几率。
+- 源码:		修正Chain Lightening和Crazy Weed有几率失败。
+- DB:		修正Stasis冷却时间。
+
 2010/03/07[SeAr_1.3.141]
 - 源码:		修正Renewal机制下Magic Recognize使得属性MATK变成装备MATK。
 - DB:		修正Canto Candidus持续时间。
