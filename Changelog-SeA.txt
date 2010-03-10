@@ -1,3 +1,9 @@
+2010/03/10[SeAr_1.3.144]
+- DB:		Warg Mastery不再消耗狼笛。
+- NPC:		添加战场的任务记录。(r14256)
+- NPC:		添加KVM战场。(r14256)
+- 源码:		修正Renovatio没有效果。
+
 2010/03/08[SeAr_1.3.143]
 - DB:		钚镭装饰品皆为1洞。
 - DB:		修正Rune Knight无法制作/使用Rune。

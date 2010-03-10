@@ -357,7 +357,7 @@ bat_a02,44,20,3	script	克勒亚军司令官#tv2	415,{
 			close2;
 		}
 
-		set Tierra_BG_Tick, gettimetick(2) + 300;
+		setquest 2069;
 		getitem 7828, .@Reward;
 		bg_leave;
 		warp "bat_room",155,150;
@@ -388,7 +388,7 @@ bat_a02,52,378,3	script	吉永军司令官#tv2	419,{
 			close2;
 		}
 
-		set Tierra_BG_Tick, gettimetick(2) + 300;
+		setquest 2069;
 		getitem 7828, .@Reward;
 		bg_leave;
 		warp "bat_room",155,150;

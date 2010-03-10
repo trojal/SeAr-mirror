@@ -377,12 +377,17 @@ bat_room,156,178,5	script	提尔雅峡谷-01 军官#1	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Tierra_BG_Tick >= gettimetick(2) )
+
+	if( checkquest(2069,PLAYTIME) == 2 ) erasequest 2069;
+	if( checkquest(2069,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入Tierra Valley.";
+		mes "You have received an indicator showing that you've participated in the Battle at Tierra Gorge. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Tierra Officer]";
+		mes "Stand-by for Tierra Gorge Battle until the time limit passes.";
 		close;
 	}
+
 	if( BaseLevel < 80 )
 	{
 		mes "您希望加入我们的军队，我们很高兴，不过您基础等级低于80，我不能把您这样的新手推上残酷的战场";
@@ -442,10 +447,13 @@ bat_room,156,121,1	script	提尔雅峡谷-01 军官#2	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Tierra_BG_Tick >= gettimetick(2) )
+	if( checkquest(2069,PLAYTIME) == 2 ) erasequest 2069;
+	if( checkquest(2069,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入Tierra Valley.";
+		mes "You have received an indicator showing that you've participated in the Battle at Tierra Gorge. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Tierra Officer]";
+		mes "Stand-by for Tierra Gorge Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -462,7 +470,7 @@ bat_room,156,121,1	script	提尔雅峡谷-01 军官#2	414,{
 
 // 吉永 阵营骑士 - 提尔雅峡谷
 // *********************************************************************
-bat_room,175,178,5	script	吉永 阵营骑士#2	417,{
+bat_room,167,178,5	script	吉永 阵营骑士#2	417,{
 	mes "[吉永 阵营骑士]";
 	mes "^FF0000提尔雅峡谷^000000是一个非常陡峭的峡谷，在地图的南北两头各有一座城堡.";
 	next;
@@ -481,7 +489,7 @@ bat_room,175,178,5	script	吉永 阵营骑士#2	417,{
 
 // 提尔雅峡谷军官 -吉永军
 // *********************************************************************
-bat_room,172,178,5	script	提尔雅峡谷-02 军官#3	418,{
+bat_room,164,178,5	script	提尔雅峡谷-02 军官#3	418,{
 	mes "[吉永军 提尔雅峡谷军官]";
 	if( Bat_Team == 2 )
 	{
@@ -507,10 +515,13 @@ bat_room,172,178,5	script	提尔雅峡谷-02 军官#3	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Tierra_BG_Tick >= gettimetick(2) )
+	if( checkquest(2069,PLAYTIME) == 2 ) erasequest 2069;
+	if( checkquest(2069,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入Tierra Valley.";
+		mes "You have received an indicator showing that you've participated in the Battle at Tierra Gorge. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Tierra Officer]";
+		mes "Stand-by for Tierra Gorge Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -521,13 +532,13 @@ bat_room,172,178,5	script	提尔雅峡谷-02 军官#3	418,{
 
 	mes "祝您好运!";
 	close2;
-	warp "bat_room",85,94;
+	warp "bat_room",57,94;
 	end;
 }
 
 // 克勒亚 阵营骑士 - 提尔雅峡谷
 // *********************************************************************
-bat_room,175,121,1	script	克勒亚 阵营骑士#2	413,{
+bat_room,167,121,1	script	克勒亚 阵营骑士#2	413,{
 	mes "[克勒亚 阵营骑士]";
 	mes "^FF0000提尔雅峡谷^000000是一个非常陡峭的峡谷，在地图的南北两头各有一座城堡.";
 	next;
@@ -546,7 +557,7 @@ bat_room,175,121,1	script	克勒亚 阵营骑士#2	413,{
 
 // 提尔雅峡谷军官 - 克勒亚军
 // *********************************************************************
-bat_room,172,121,1	script	提尔雅峡谷-02 军官#4	414,{
+bat_room,164,121,1	script	提尔雅峡谷-02 军官#4	414,{
 	mes "[克勒亚军 提尔雅峡谷军官]";
 	if( Bat_Team == 1 )
 	{
@@ -572,10 +583,13 @@ bat_room,172,121,1	script	提尔雅峡谷-02 军官#4	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Tierra_BG_Tick >= gettimetick(2) )
+	if( checkquest(2069,PLAYTIME) == 2 ) erasequest 2069;
+	if( checkquest(2069,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入Tierra Valley.";
+		mes "You have received an indicator showing that you've participated in the Battle at Tierra Gorge. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Tierra Officer]";
+		mes "Stand-by for Tierra Gorge Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -586,13 +600,13 @@ bat_room,172,121,1	script	提尔雅峡谷-02 军官#4	414,{
 
 	mes "祝您好运!";
 	close2;
-	warp "bat_room",85,77;
+	warp "bat_room",57,77;
 	end;
 }
 
 // 吉永 阵营骑士 - 霍厄斯战场
 // *********************************************************************
-bat_room,151,178,5	script	吉永 阵营骑士#3	417,{
+bat_room,175,178,5	script	吉永 阵营骑士#3	417,{
 	mes "[吉永 阵营骑士]";
 	mes "在^FF0000霍厄斯战场^000000中, 破坏对方的水晶获得1分，最快获得2分的一方获胜";
 	next;
@@ -612,7 +626,7 @@ bat_room,151,178,5	script	吉永 阵营骑士#3	417,{
 
 // 霍厄斯战场军官 -吉永军
 // *********************************************************************
-bat_room,148,178,5	script	霍厄斯战场-01 军官#1	418,{
+bat_room,172,178,5	script	霍厄斯战场-01 军官#1	418,{
 	mes "[吉永佣兵 军官]";
 	if( Bat_Team == 2 )
 	{
@@ -640,10 +654,13 @@ bat_room,148,178,5	script	霍厄斯战场-01 军官#1	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Flavius_BG_Tick >= gettimetick(2) )
+	if( checkquest(2070,PLAYTIME) == 2 ) erasequest 2070;
+	if( checkquest(2070,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 Flavius.";
+		mes "You have received an indicator showing that you've participated in the Battle at Flavius. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Flavius Officer]";
+		mes "Stand-by for Flavius Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -656,13 +673,13 @@ bat_room,148,178,5	script	霍厄斯战场-01 军官#1	418,{
 	mes "快去让克勒亚军尝尝我们的厉害吧，";
 	mes "今天可以尽情呐喊我们吉永军胜利了!";
 	close2;
-	warp "bat_room",253,94;
+	warp "bat_room",85,94;
 	end;
 }
 
 // 克勒亚 阵营骑士 - 霍厄斯战场
 // *********************************************************************
-bat_room,151,121,1	script	克勒亚 阵营骑士#3	413,{
+bat_room,175,121,1	script	克勒亚 阵营骑士#3	413,{
 	mes "[克勒亚 阵营骑士]";
 	mes "在^FF0000霍厄斯战场^000000中,破坏对方的水晶获得1分，最快获得2分的一方获胜";
 	next;
@@ -682,7 +699,7 @@ bat_room,151,121,1	script	克勒亚 阵营骑士#3	413,{
 
 // 霍厄斯战场军官 - 克勒亚军
 // *********************************************************************
-bat_room,148,121,1	script	霍厄斯战场-01 军官#2	414,{
+bat_room,172,121,1	script	霍厄斯战场-01 军官#2	414,{
 	mes "[克勒亚佣兵 军官]";
 	if( Bat_Team == 1 )
 	{
@@ -710,10 +727,13 @@ bat_room,148,121,1	script	霍厄斯战场-01 军官#2	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Flavius_BG_Tick >= gettimetick(2) )
+	if( checkquest(2070,PLAYTIME) == 2 ) erasequest 2070;
+	if( checkquest(2070,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入Flavius.";
+		mes "You have received an indicator showing that you've participated in the Battle at Flavius. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Flavius Officer]";
+		mes "Stand-by for Flavius Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -726,13 +746,13 @@ bat_room,148,121,1	script	霍厄斯战场-01 军官#2	414,{
 	mes "快去让吉永军尝尝我们的厉害吧，";
 	mes "今天可以尽情呐喊我们克勒亚军胜利了!";
 	close2;
-	warp "bat_room",253,77;
+	warp "bat_room",85,77;
 	end;
 }
 
 // 吉永 阵营骑士 - 霍厄斯战场
 // *********************************************************************
-bat_room,167,178,5	script	吉永 阵营骑士#4	417,{
+bat_room,151,178,5	script	吉永 阵营骑士#4	417,{
 	mes "[吉永 阵营骑士]";
 	mes " 在^FF0000霍厄斯战场^000000中,破坏对方的水晶获得1分，最快获得2分的一方获胜";
 	next;
@@ -752,7 +772,7 @@ bat_room,167,178,5	script	吉永 阵营骑士#4	417,{
 
 // 霍厄斯战场军官 -吉永军
 // *********************************************************************
-bat_room,164,178,5	script	霍厄斯战场-02 军官#3	418,{
+bat_room,148,178,5	script	霍厄斯战场-02 军官#3	418,{
 	mes "[吉永军 霍厄斯战场军官]";
 	if( Bat_Team == 2 )
 	{
@@ -778,10 +798,13 @@ bat_room,164,178,5	script	霍厄斯战场-02 军官#3	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Flavius_BG_Tick >= gettimetick(2) )
+	if( checkquest(2070,PLAYTIME) == 2 ) erasequest 2070;
+	if( checkquest(2070,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 Flavius.";
+		mes "You have received an indicator showing that you've participated in the Battle at Flavius. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Flavius Officer]";
+		mes "Stand-by for Flavius Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -792,13 +815,13 @@ bat_room,164,178,5	script	霍厄斯战场-02 军官#3	418,{
 
 	mes "祝您好运!";
 	close2;
-	warp "bat_room",57,94;
+	warp "bat_room",253,94;
 	end;
 }
 
 // 克勒亚 阵营骑士 - 霍厄斯战场
 // *********************************************************************
-bat_room,167,121,1	script	克勒亚 阵营骑士#4	413,{
+bat_room,151,121,1	script	克勒亚 阵营骑士#4	413,{
 	mes "[克勒亚 阵营骑士]";
 	mes " 在^FF0000霍厄斯战场^000000中,破坏对方的水晶获得1分，最快获得2分的一方获胜";
 	next;
@@ -818,7 +841,7 @@ bat_room,167,121,1	script	克勒亚 阵营骑士#4	413,{
 
 // 霍厄斯战场军官 - 克勒亚军
 // *********************************************************************
-bat_room,164,121,1	script	霍厄斯战场-02 军官#4	414,{
+bat_room,148,121,1	script	霍厄斯战场-02 军官#4	414,{
 	mes "[克勒亚军 霍厄斯战场军官]";
 	if( Bat_Team == 1 )
 	{
@@ -844,10 +867,13 @@ bat_room,164,121,1	script	霍厄斯战场-02 军官#4	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( Flavius_BG_Tick >= gettimetick(2) )
+	if( checkquest(2070,PLAYTIME) == 2 ) erasequest 2070;
+	if( checkquest(2070,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 Flavius.";
+		mes "You have received an indicator showing that you've participated in the Battle at Flavius. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[Flavius Officer]";
+		mes "Stand-by for Flavius Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -858,7 +884,7 @@ bat_room,164,121,1	script	霍厄斯战场-02 军官#4	414,{
 
 	mes "祝您好运!";
 	close2;
-	warp "bat_room",57,77;
+	warp "bat_room",253,77;
 	end;
 }
 
@@ -907,10 +933,13 @@ bat_room,140,178,5	script	KVM [80-99] 军官#1	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( KvM_BG_Tick >= gettimetick(2) )
+	if( checkquest(6025,PLAYTIME) == 2 ) erasequest 6025;
+	if( checkquest(6025,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 KvM.";
+		mes "You have received an indicator showing that you've participated in the Battle at KvM. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[KVM Officer]";
+		mes "Stand-by for KvM Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -970,10 +999,13 @@ bat_room,140,121,1	script	KVM [80-99] 军官#2	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( KvM_BG_Tick >= gettimetick(2) )
+	if( checkquest(6025,PLAYTIME) == 2 ) erasequest 6025;
+	if( checkquest(6025,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 KvM.";
+		mes "You have received an indicator showing that you've participated in the Battle at KvM. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[KVM Officer]";
+		mes "Stand-by for KvM Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 80 )
@@ -1033,10 +1065,13 @@ bat_room,132,178,5	script	KVM [60-79] 军官#1	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( KvM_BG_Tick >= gettimetick(2) )
+	if( checkquest(6025,PLAYTIME) == 2 ) erasequest 6025;
+	if( checkquest(6025,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 KvM.";
+		mes "You have received an indicator showing that you've participated in the Battle at KvM. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[KVM Officer]";
+		mes "Stand-by for KvM Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 60 || BaseLevel > 79 )
@@ -1096,10 +1131,13 @@ bat_room,132,121,1	script	KVM [60-79] 军官#2	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( KvM_BG_Tick >= gettimetick(2) )
+	if( checkquest(6025,PLAYTIME) == 2 ) erasequest 6025;
+	if( checkquest(6025,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 KvM.";
+		mes "You have received an indicator showing that you've participated in the Battle at KvM. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[KVM Officer]";
+		mes "Stand-by for KvM Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel < 60 || BaseLevel > 79 )
@@ -1159,10 +1197,13 @@ bat_room,124,178,5	script	KVM [1-59] 军官#1	418,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( KvM_BG_Tick >= gettimetick(2) )
+	if( checkquest(6025,PLAYTIME) == 2 ) erasequest 6025;
+	if( checkquest(6025,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 KvM.";
+		mes "You have received an indicator showing that you've participated in the Battle at KvM. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[KVM Officer]";
+		mes "Stand-by for KvM Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel > 59 )
@@ -1222,10 +1263,13 @@ bat_room,124,121,1	script	KVM [1-59] 军官#2	414,{
 		mes "因为你之前临阵退缩,所以您要等上 ^0000FF" + callfunc("Time2Str",BG_Delay_Tick) + "^000000 才能再次加入战场.";
 		close;
 	}
-	if( KvM_BG_Tick >= gettimetick(2) )
+	if( checkquest(6025,PLAYTIME) == 2 ) erasequest 6025;
+	if( checkquest(6025,PLAYTIME) != -1 )
 	{
-		mes "很抱歉，您现在不能加入战场.";
-		mes "您要等上 ^0000FF" + callfunc("Time2Str",Tierra_BG_Tick) + "^000000 才能再次加入 KvM.";
+		mes "You have received an indicator showing that you've participated in the Battle at KvM. I can't let you participate in any other battles until the indicator goes off.";
+		next;
+		mes "[KVM Officer]";
+		mes "Stand-by for KvM Battle until the time limit passes.";
 		close;
 	}
 	if( BaseLevel > 59 )
@@ -1256,54 +1300,63 @@ bat_room,161,158,3	duplicate(bat_aid)	吉永 秘书长::bat_aid4	419
 
 // Exit from Registration
 // *********************************************************************
-// 霍厄斯战场 bat_b02
-bat_room,57,81,0	warp	bat1	2,2,bat_room,154,149
-bat_room,57,90,0	warp	bat2	2,2,bat_room,154,149
+-	script	warp2bat_room	-1,{
+	end;
+
+OnTouch:
+	set BG_Delay_Tick, gettimetick(2) + 30;
+	warp "bat_room",154,149;
+	end;
+}
+
+// Flavius bat_b02
+bat_room,57,81,0	duplicate(warp2bat_room)	bat1	45,1,1
+bat_room,57,90,0	duplicate(warp2bat_room)	bat2	45,1,1
 // Free BG
-bat_room,57,220,0	warp	bat3	2,2,bat_room,154,149
-bat_room,57,211,0	warp	bat4	2,2,bat_room,154,149
-// 提尔雅峡谷 bat_a02
-bat_room,85,81,0	warp	bat5	2,2,bat_room,154,149
-bat_room,85,90,0	warp	bat6	2,2,bat_room,154,149
-// 提尔雅峡谷 bat_a01
-bat_room,85,220,0	warp	bat7	2,2,bat_room,154,149
-bat_room,85,211,0	warp	bat8	2,2,bat_room,154,149
+bat_room,57,220,0	duplicate(warp2bat_room)	bat3	45,1,1
+bat_room,57,211,0	duplicate(warp2bat_room)	bat4	45,1,1
+// Tierra Valley bat_a02
+bat_room,85,81,0	duplicate(warp2bat_room)	bat5	45,1,1
+bat_room,85,90,0	duplicate(warp2bat_room)	bat6	45,1,1
+// Tierra Valley bat_a01
+bat_room,85,220,0	duplicate(warp2bat_room)	bat7	45,1,1
+bat_room,85,211,0	duplicate(warp2bat_room)	bat8	45,1,1
 // Free BG
-bat_room,113,81,0	warp	bat9	2,2,bat_room,154,149
-bat_room,113,90,0	warp	bat10	2,2,bat_room,154,149
+bat_room,113,81,0	duplicate(warp2bat_room)	bat9	45,1,1
+bat_room,113,90,0	duplicate(warp2bat_room)	bat10	45,1,1
 // Free BG
-bat_room,113,220,0	warp	bat11	2,2,bat_room,154,149
-bat_room,113,211,0	warp	bat12	2,2,bat_room,154,149
+bat_room,113,220,0	duplicate(warp2bat_room)	bat11	45,1,1
+bat_room,113,211,0	duplicate(warp2bat_room)	bat12	45,1,1
 // Free BG
-bat_room,141,81,0	warp	bat13	2,2,bat_room,154,149
-bat_room,141,90,0	warp	bat14	2,2,bat_room,154,149
+bat_room,141,81,0	duplicate(warp2bat_room)	bat13	45,1,1
+bat_room,141,90,0	duplicate(warp2bat_room)	bat14	45,1,1
 // Free BG
-bat_room,141,220,0	warp	bat15	2,2,bat_room,154,149
-bat_room,141,211,0	warp	bat16	2,2,bat_room,154,149
+bat_room,141,220,0	duplicate(warp2bat_room)	bat15	45,1,1
+bat_room,141,211,0	duplicate(warp2bat_room)	bat16	45,1,1
 // Free BG
-bat_room,169,81,0	warp	bat17	2,2,bat_room,154,149
-bat_room,169,90,0	warp	bat18	2,2,bat_room,154,149
+bat_room,169,81,0	duplicate(warp2bat_room)	bat17	45,1,1
+bat_room,169,90,0	duplicate(warp2bat_room)	bat18	45,1,1
 // Free BG
-bat_room,169,220,0	warp	bat19	2,2,bat_room,154,149
-bat_room,169,211,0	warp	bat20	2,2,bat_room,154,149
+bat_room,169,220,0	duplicate(warp2bat_room)	bat19	45,1,1
+bat_room,169,211,0	duplicate(warp2bat_room)	bat20	45,1,1
 // Free BG
-bat_room,197,81,0	warp	bat21	2,2,bat_room,154,149
-bat_room,197,90,0	warp	bat22	2,2,bat_room,154,149
+bat_room,197,81,0	duplicate(warp2bat_room)	bat21	45,1,1
+bat_room,197,90,0	duplicate(warp2bat_room)	bat22	45,1,1
 // KvM bat_c03
-bat_room,197,220,0	warp	bat23	2,2,bat_room,154,149
-bat_room,197,211,0	warp	bat24	2,2,bat_room,154,149
+bat_room,197,220,0	duplicate(warp2bat_room)	bat23	45,1,1
+bat_room,197,211,0	duplicate(warp2bat_room)	bat24	45,1,1
 // Free BG
-bat_room,225,81,0	warp	bat25	2,2,bat_room,154,149
-bat_room,225,90,0	warp	bat26	2,2,bat_room,154,149
+bat_room,225,81,0	duplicate(warp2bat_room)	bat25	45,1,1
+bat_room,225,90,0	duplicate(warp2bat_room)	bat26	45,1,1
 // KvM bat_c02
-bat_room,225,220,0	warp	bat27	2,2,bat_room,154,149
-bat_room,225,211,0	warp	bat28	2,2,bat_room,154,149
-// 霍厄斯战场 bat_b01
-bat_room,253,81,0	warp	bat29	2,2,bat_room,154,149
-bat_room,253,90,0	warp	bat30	2,2,bat_room,154,149
+bat_room,225,220,0	duplicate(warp2bat_room)	bat27	45,1,1
+bat_room,225,211,0	duplicate(warp2bat_room)	bat28	45,1,1
+// Flavius bat_b01
+bat_room,253,81,0	duplicate(warp2bat_room)	bat29	45,1,1
+bat_room,253,90,0	duplicate(warp2bat_room)	bat30	45,1,1
 // KvM bat_c01
-bat_room,253,220,0	warp	bat31	2,2,bat_room,154,149
-bat_room,253,211,0	warp	bat32	2,2,bat_room,154,149
+bat_room,253,220,0	duplicate(warp2bat_room)	bat31	45,1,1
+bat_room,253,211,0	duplicate(warp2bat_room)	bat32	45,1,1
 
 // 战场修理工(台湾版本没有)
 // *********************************************************************
