@@ -1,3 +1,10 @@
+2010/03/11[SeAr_1.3.145]
+- 源码:		修正White Imprison只接受念属性伤害。
+- 源码:		修正Shadow Form只能在非攻击性地图使用。
+- 源码、DB:	修正Ray of Genesis攻击范围、HP消耗和伤害公式。
+- 源码:		修正Venom Impress伤害公式。
+- 源码:		修正Cluster Bomb, IceBound Trap和Firing Trap普通攻击伤害部分无法被减伤。
+
 2010/03/10[SeAr_1.3.144]
 - DB:		Warg Mastery不再消耗狼笛。
 - NPC:		添加战场的任务记录。(r14256)
