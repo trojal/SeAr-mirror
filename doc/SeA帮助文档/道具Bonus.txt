@@ -41,8 +41,10 @@ bonus bSpeedAddRate,n;			移动速度 + n%
 bonus bAspd,n;				攻击速度 + n
 bonus bAspdRate,n;			攻击速度 + n%
 bonus bAtkRange,n;			攻击距离 + n
-bonus bCastrate,n;			咏唱时间 + n%
-bonus2 bCastrate,n,x;			增加 x% 技能 n 的咏唱时间 (支持技能名)
+bonus bCastrate,n;			可变咏唱时间 + n%
+bonus bFixedCastRate,n;			固定咏唱时间 + n%
+bonus2 bCastrate,n,x;			增加 x% 技能 n 的可变咏唱时间 (支持技能名)
+bonus2 bFixedCastrate,n,x;		增加 x% 技能 n 的固定咏唱时间 (支持技能名)
 bonus bDelayrate,n;			延迟时间 + n%
 
 //=========================================================

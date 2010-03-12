@@ -897,7 +897,7 @@
 1646,La'cryma_Stick,泪杖,4,0,,500,30,,1,2,0x00010204,2,2,2,3,50,1,10,{ bonus bMatkRate,15; bonus bInt,4; bonus bMdef,getrefine(); bonus2 bSkillAtk,"MG_THUNDERSTORM",getrefine(); if(getrefine() >= 10) bonus2 bCastrate,"WZ_STORMGUST",-8; },{},{}
 1647,Croce_Staff,十字杖,4,0,,500,30,,1,1,0x00008110,2,2,2,3,50,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatkRate,15; bonus bInt,4; bonus4 bAutoSpellOnSkill,"AL_HEAL","AL_BLESSING",getskilllv("AL_BLESSING"),100; },{},{}
 1648,Staff_Of_Bordeaux,颂诗之杖,4,0,,500,30,,1,1,0x00010204,2,2,2,4,50,1,10,{ bonus bInt,2; bonus bDex,1; bonus bMatkRate,15; if(getskilllv("SA_DRAGONOLOGY") == 5) bonus bInt,3; bonus bUseSPrate,-15; },{},{}
-1649,Lapine_Staff,Lapine Staff,4,10,,500,30,,1,0,0x00018300,15,2,2,3,100,1,10,{ bonus bMatk,180; },{},{}
+1649,Lapine_Staff,Lapine Staff,4,10,,500,30,,1,0,0x00018300,15,2,2,3,100,1,10,{ bonus bMatk,180; bonus bFixedCastRate, -getrefine(); },{},{}
 1654,Unknown,精神法杖,4,10,,50,40,,,1,0x00010000,3,2,2,3,102,1,10,{bonus bMatk,170;bonus2 bCastrate,2449,-3;bonus2 bSPGainValueOnSKill,"SO_PSYCHIC_WAVE",-60; if(getrefine() >= 6) {bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",(getrefine()-5)*2;}},{},{heal 0,-100;}
 // Bows
 1701,Bow,弓,4,1000,,500,15,,5,3,0x000A0848,7,2,34,1,4,1,11,{},{},{}
@@ -2105,8 +2105,8 @@
 4452,Centipede_Larva_Card,变异蜈蚣幼虫卡片,6,20,,10,,,,,,,,2,,,,,{ bonus bInt,1; bonus bMatk,3; bonus bMatk2,3; },{},{} 
 4453,Hillsrion_Card,希斯利安卡片,6,20,,10,,,,,,,,2,,,,,{ bonus bAtk,25; },{},{} 
 // 13.3物品
-4760,Unknown,MATK+1%,0,10,,10,,,,,,,,,,,,,{},{},{}
-4761,Unknown,MATK+2%,0,10,,10,,,,,,,,,,,,,{},{},{}
+4760,Unknown,MATK+1%,0,10,,10,,,,,,,,,,,,,{ bonus bMatkRate,1; bonus bFixedCastRate,1; },{},{}
+4761,Unknown,MATK+2%,0,10,,10,,,,,,,,,,,,,{ bonus bMatkRate,2; bonus bFixedCastRate,1; },{},{}
 4762,Unknown,FLEE+6,0,10,,10,,,,,,,,,,,,,{},{},{}
 4763,Unknown,FLEE+12,0,10,,10,,,,,,,,,,,,,{},{},{}
 4764,Unknown,CRI+5,0,10,,10,,,,,,,,,,,,,{},{},{}

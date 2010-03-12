@@ -1,3 +1,7 @@
+2010/03/12[SeAr_1.3.148]
+- 源码、DB、DOC:
+		实装bFixedCastRate。
+
 2010/03/11[SeAr_1.3.147]
 - 源码:		修正Ride in Lightening和Ray of Genesis技能中心为指定地面。
 - DB:		修正Hesperus Lit技能类型。

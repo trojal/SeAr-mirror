@@ -461,6 +461,7 @@ bHealPower2	1091
 bFixDamage	1900
 bBonusDamage	1901
 bFixDamageWhenHit	1902
+bFixedCastRate	1903
 
 bRestartFullRecover	2000
 bNoCastCancel	2001
