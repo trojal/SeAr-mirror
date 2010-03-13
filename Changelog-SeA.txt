@@ -1,3 +1,9 @@
+2010/03/13[SeAr_1.3.149]
+- 源码:		Ranger的陷阱不能放置在地属性领域上。
+- 源码:		Enchant Blade的伤害不被Exceed Break放大。
+- 源码:		Inspiration对自己的反射伤害为1%。
+- 源码:		disablenpc隐藏的npc将不被Intravision探测到。
+
 2010/03/12[SeAr_1.3.148]
 - 源码、DB、DOC:
 		实装bFixedCastRate。
