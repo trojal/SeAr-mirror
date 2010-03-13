@@ -1,3 +1,8 @@
+2010/03/13[SeAr_1.3.150]
+- 源码、DB:	更新Ride in Lightning气弹、SP消耗，伤害公式。
+- 源码、DB:	更新Gate of Hell气弹、SP消耗，射程。
+- 源码、DB:	更新Rampage Blaster SP消耗，伤害公式，且定义为远距离技能。
+
 2010/03/13[SeAr_1.3.149]
 - 源码:		Ranger的陷阱不能放置在地属性领域上。
 - 源码:		Enchant Blade的伤害不被Exceed Break放大。
