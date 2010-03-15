@@ -1,3 +1,7 @@
+2010/03/15[SeAr_1.3.151]
+- 源码:		修正新毒製造幾率。
+- 源码:		Weapon Blocking在没有命中时也会发动。
+
 2010/03/13[SeAr_1.3.150]
 - 源码、DB:	更新Ride in Lightning气弹、SP消耗，伤害公式。
 - 源码、DB:	更新Gate of Hell气弹、SP消耗，射程。
