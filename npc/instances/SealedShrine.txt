@@ -73,7 +73,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			mes "[修道士 帕特里克]";
 			mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
 			close2;
-			cutin "ins_cata_pri_n",255;
+			cutin "",255;
 			end;
 		case 2:
 			cutin "ins_cata_pri_n",2;
@@ -83,7 +83,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			mes "[修道士 帕特里克]";
 			mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
 			close2;
-			cutin "ins_cata_pri_n",255;
+			cutin "",255;
 			end;
 		}
 	case 2:
@@ -104,7 +104,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 				mes "[修道士 帕特里克]";
 				mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
 				close2;
-				cutin "ins_cata_pri_n",255;
+				cutin "",255;
 				end;
 			}
 
@@ -117,7 +117,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 						mes "队长的名字 "+.@partymembername$[0]+"...";
 						mes "唔...好像有点问题...我再检查一次,请稍等.";
 						close2;
-						cutin "ins_cata_pri_n",255;
+						cutin "",255;
 					}
 					else {
 
@@ -141,7 +141,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 							disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"T", instance_id());
 							disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"F", instance_id());
 						}
-						for( set .@i, 1; .@i < 12; set .@i, .@i + 1 ) {
+						for( set .@i, 1; .@i <= 12; set .@i, .@i + 1 ) {
 							disablenpc instance_npcname("火把#"+.@i, instance_id());
 						}
 
@@ -188,7 +188,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 						mes "[修道士 帕特里克]";
 						mes "比如 ^0000FF暗之障壁, 圣母之祈福^000000... 因此进入墓穴前你最好做好准备.";
 						close2;
-						cutin "ins_cata_pri_n",255;
+						cutin "",255;
 					}
 					end;
 				}
@@ -199,7 +199,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 					mes "[修道士 帕特里克]";
 					mes "当队长获得进入许可时, 队伍的其他成员才能随后进入. 这是修道院的规矩.";
 					close2;
-					cutin "ins_cata_pri_n",255;
+					cutin "",255;
 					end;
 				}
 			}
@@ -207,7 +207,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 				mes "[修道士 帕特里克]";
 				mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
 				close2;
-				cutin "ins_cata_pri_n",255;
+				cutin "",255;
 				end;
 			}
 			else if (.@ins_bapho_check == 2) {
@@ -223,7 +223,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 				mes "[修道士 帕特里克]";
 				mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
 				close2;
-				cutin "ins_cata_pri_n",255;
+				cutin "",255;
 				end;
 			}
 		}
@@ -234,7 +234,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			mes "[修道士 帕特里克]";
 			mes "请多锻炼锻炼再来吧.";
 			close2;
-			cutin "ins_cata_pri_n",255;
+			cutin "",255;
 		}
 		end;
 	case 3:
@@ -256,7 +256,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			mes "去修道院大厅附近找 ^0000FF锈蚀的黑手^000000 ...它能帮你用这个娃娃做点什么.";
 			setquest 3042;
 			close2;
-			cutin "ins_cata_pri_n",255;
+			cutin "",255;
 			end;
 		}
 	case 4:
@@ -266,7 +266,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 		mes "[修道士 帕特里克]";
 		mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
 		close2;
-		cutin "ins_cata_pri_n",255;
+		cutin "",255;
 		end;
 	}
 }
@@ -315,6 +315,7 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 			//else if (ret == 0) {
 			else {
 				mapannounce "monk_test","队伍 [" + getpartyname(.@party_id) + "] 的成员 [" + strcharinfo(0) + "] 进入了封印神殿",bc_map,"0x00ff99";
+				setquest 3040;
 				warp "1@cata",100,224;
 				close;
 			}
@@ -1054,7 +1055,7 @@ OnTouch:
 		next;
 		mes "[远古英雄的灵魂]";
 		mes "勇敢的战士, 请前进吧.";
-		cutin "ins_cata_champ_n",255;
+		cutin "",255;
 		instance_announce 0, "远古英雄的灵魂 : 现在你可以去位于东南方的主祭坛了.",bc_map,"0xFFFF00";
 		close;
 	}
@@ -1065,21 +1066,21 @@ OnTouch:
 		next;
 		mes "[远古英雄的灵魂]";
 		mes "当你准备好的时候请告诉我, 我将打开封印之门.";
-		cutin "ins_cata_champ_n",255;
+		cutin "",255;
 		close;
 	}
 	else if ('ins_baphomet == 5) {
 		cutin "ins_cata_champ_n",2;
 		mes "[远古英雄的灵魂]";
 		mes "你在做什么? 主祭坛的门已经打开了, 去战斗吧! 入口位于本层右下方位.";
-		cutin "ins_cata_champ_n",255;
+		cutin "",255;
 		close;
 	}
 	else {
 		cutin "ins_cata_champ_n",2;
 		mes "[远古英雄的灵魂]";
 		mes "我没什么好说的了.";
-		cutin "ins_cata_champ_n",255;
+		cutin "",255;
 		close;
 	}
 }
@@ -2180,14 +2181,14 @@ OnTouch:
 		next;
 		mes "[远古英雄的灵魂]";
 		mes "离开修道院的时候, 请代我向帕特里克问候.";
-		cutin "ins_cata_champ_n",255;
+		cutin "",255;
 		set 'ins_baphomet,0;
 		warp "monk_test",310,150;
 		close;
 	case 2:
 		mes "[远古英雄的灵魂]";
 		mes "你在这里还有什么事情吗? 如果你已经完成了, 我将让你安全的离开这里.";
-		cutin "ins_cata_champ_n",255;
+		cutin "",255;
 		close;
 	}
 }

@@ -10602,7 +10602,7 @@ ein_in01,85,208,5	script	°¬Ò×Åá#repay01	854,{
 					callsub S_BonusReward,1500,1235;
 					end;
 				case 11:
-					callsub S_BonusReward,1500,1223;
+					callsub S_BonusReward,1500,1233;
 					end;
 				case 12:
 					callsub S_BonusReward,1500,1232;

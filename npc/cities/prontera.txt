@@ -170,6 +170,8 @@ prontera,78,150,3	script	丹尼尔#pront	90,{
 // inside Prontera
 //============================================================
 //Curator of Library#pront
+/*
+//This NPC has been disabled officiall.
 prt_in,178,92,0	script	图书馆管理员#pront	57,{
 	mes "[管理员 奇司]";
 	mes "我们图书馆的资料是依照在卢恩 米德加尔特王国各个密穴里的魔物来分类的，让你可以一目了然，轻松的获得你所想要的资料。";
@@ -180,7 +182,7 @@ prt_in,178,92,0	script	图书馆管理员#pront	57,{
 	mes "[管理员 奇司]";
 	mes "旁边那间图书馆则是以魔物属性作为分类的依据，如果有需要你可以到那里去看看。";
 	close;
-}
+}*/
 //Library Girl#pront
 prt_in,175,50,0	script	工读生#pront	71,{
 	mes "[工读生 艾伦]";

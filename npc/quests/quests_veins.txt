@@ -174,7 +174,7 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 		mes "会在两个地方的其中之一";
 		close;
 	}
-	else if (veins_stone < 4) {
+	else if ((veins_stone > 1) && (veins_stone < 4)) {
 		mes "[嘉巴鲁]";
 		mes "Geez, 阿沙乐 sure can";
 		mes "be fussy. Still, do your";
@@ -240,7 +240,7 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 	else if (veins_stone < 7) {
 		mes "[嘉巴鲁]";
 		mes "Thanks again for your help!";
-		mes "What did Asbar call this";
+		mes "What did Absar call this";
 		mes "thing again? A Tactile...";
 		mes "Extendable... Damn it...";
 		mes "Why's the name so long?";
@@ -269,7 +269,7 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 	}
 	else if (veins_stone > 7) {
 		mes "[嘉巴鲁]";
-		mes "Thanks to you and Asbar,";
+		mes "Thanks to you and Absar,";
 		mes "my poor back hasn't been";
 		mes "bothering me at all lately.";
 		mes "I should be taking better";
@@ -2883,7 +2883,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "if I want to free Curdie.";
 			close;
 		}
-		else if (rachel_camel <= 16) {
+		else if ((rachel_camel >= 12) && (rachel_camel <= 16)) {
 			mes "["+strcharinfo(0)+"]";
 			mes "Well... I found the";
 			mes "camel. Now I need to get";
@@ -6498,11 +6498,13 @@ OnTouch:
 		end;
 	}
 	else if (aru_vol == 14) {
+		enablenpc "上校 毕图#1";
 		mes "[上校 毕图]";
 		mes "What are you still";
 		mes "doing standing there?";
 		mes "Don't slack off! Come!";
 		close2;
+		disablenpc "上校 毕图#1";
 		warp "thor_camp",156,68;
 		end;
 	}
@@ -6552,6 +6554,7 @@ OnTouch:
 		end;
 	}
 	else if (aru_vol == 14) {
+		enablenpc "上校 毕图#2";
 		mes "[上校 毕图]";
 		mes "What are you still";
 		mes "doing standing there?";
@@ -6565,12 +6568,14 @@ OnTouch:
 }
 
 thor_camp,187,228,5	script	上校 毕图#1	946,{
+	end;
 OnInit:
 	disablenpc "上校 毕图#1";
 	end;
 }
 
 thor_camp,155,175,7	script	上校 毕图#2	946,{
+	end;
 OnInit:
 	disablenpc "上校 毕图#2";
 	end;
