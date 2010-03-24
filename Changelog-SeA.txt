@@ -1,3 +1,8 @@
+2010/03/24[SeAr_1.3.159]
+- DB:		Gate of Hell技能延时为1秒。
+- DB:		修正Arrullo范围。
+- 源码:		修正Pyrexia应该给与的不可治愈的黑暗状态，并在给与伤害时中断咏唱。
+
 2010/03/23[SeAr_1.3.158]
 - DB:		Sensitive Keen是远距离技能。
 - 源码:		Duple Light可以被复制。
