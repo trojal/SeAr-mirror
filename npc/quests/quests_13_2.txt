@@ -3691,11 +3691,11 @@ spl_fild02,27,218,0	script	Half-buried Gem#1	844,{
 
 
 OnInit:
-	hideoffnpc "Half-buried Gem#ep132_rhea04";
+	hideoffnpc "Half-buried Gem#1";
 	end;
 
 OnEnable:
-	hideoffnpc "Half-buried Gem#ep132_rhea04";
+	hideoffnpc "Half-buried Gem#1";
 	stopnpctimer;
 	end;
 

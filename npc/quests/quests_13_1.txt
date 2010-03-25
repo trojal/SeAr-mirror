@@ -13530,7 +13530,7 @@ OnDisable:
 	end;
 
 OnTimer600000:
-	killmonsterall "spl_fild02";
+	killmonster "spl_fild02","ep13_spl_fild02_mon_edq::OnMyMobDead";
 	stopnpctimer;
 	donpcevent "ep13_spl_fild02_mon_edq::OnEnable";
 	end;
