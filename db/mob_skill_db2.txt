@@ -1,7 +1,7 @@
 // Custom mob skills
 //MOB_ID, a unused dummy character sequence (for information only), STATE, SKILL_ID, SKILL_LV,
 // rate (10000 = 100%), casttime, delay, cancelable, a target, a condition type, a condition value,
-// a value 1, a value 2, a value 3, a value 4, a value 5, emotion
+// a value 1, a value 2, a value 3, a value 4, a value 5, emotion{, chat}
 //Example
 //1001,²¨Àû@TF_POISON,attack,52,3,100,1500,10000,no,target,always,0,,,,,7
 //
