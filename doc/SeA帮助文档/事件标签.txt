@@ -43,7 +43,9 @@ OnPCKillEvent		玩家杀死玩家时，运行标签下的脚本。可以通过killedrid变量获得被杀死
 OnNPCKillEvent		玩家杀死魔物时，运行标签下的脚本。该脚本仅对本身没有OnMobDead事件的魔物触发。可以通过killedrid变量获得杀死魔物的id
 OnPCLoginEvent		玩家登陆时，运行标签下的脚本。
 OnPCLogoutEvent		玩家登出时，运行标签下的脚本。
-OnPCLoadMapEvent	玩家登陆地图时，运行标签下的脚本，默认情况下只有loadevent标签的地图可以触发该标签下的脚本。misc.conf中的force_loadevent设置可以取消上述要求。
+OnPCLoadMapEvent	玩家登陆地图时，运行标签下的脚本，默认情况下只有loadevent标签的地图可以触发该标签下的脚本。
+			misc.conf中的force_loadevent设置可以取消上述要求。
+			赋予关联者变量@premap$，表示上一张地图。
 OnPCBaseLvUpEvent	玩家基本等级上升时，运行标签下的脚本
 OnPCJobLvUpEvent	玩家职业等级上升时，运行标签下的脚本
 OnPCStatCalcEvent	玩家每次进行属性运算时，运行标签下的脚本。
