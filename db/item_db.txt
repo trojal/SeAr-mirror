@@ -4511,11 +4511,11 @@
 12731,Runstone_Turisus,Thurisaz Rune,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_GIANTGROWTH",1; },{},{}
 12732,Runstone_Pertz,Wyrd Rune,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STORMBLAST",1; },{},{}
 12733,Runstone_Hagalas,Hagalaz Rune,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STONEHARDSKIN",1; },{},{}
-12734,Runstone_Quality,Luxurious Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 25; },{},{}
-12735,Runstone_Ancient,Ancient Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 25; },{},{}
-12736,Runstone_Mystic,Mystic Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 25; },{},{}
-12737,Runstone_Ordinary,General Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 25; },{},{}
-12738,Runstone_Rare,Rare Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 25; },{},{}
+12734,Runstone_Quality,Luxurious Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12735,Runstone_Ancient,Ancient Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12736,Runstone_Mystic,Mystic Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12737,Runstone_Ordinary,General Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12738,Runstone_Rare,Rare Rune,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
 12739,Snow_Flower,Snow Flower,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12740,Inc_Str_Scroll,Inc Str Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12741,Inc_Int_Scroll,Inc Int Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}

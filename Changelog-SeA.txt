@@ -1,3 +1,8 @@
+2010/03/27[SeAr_1.3.165]
+- 源码:		联合咏唱ADORAMUS时不消耗矿石。
+- 源码、DB:	实装Mix Cooking, Make Bomb和Special Pharmacy。
+- 源码:		修正卢恩石有几率超过制作数量上限。
+
 2010/03/27[SeAr_1.3.164]
 - DB:		更新Renewal版魔物DB，道具DB。(Credit goes to Chilly)
 
