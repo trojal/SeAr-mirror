@@ -1,3 +1,6 @@
+2010/03/27[SeAr_1.3.164]
+- DB:		更新Renewal版魔物DB，道具DB。(Credit goes to Chilly)
+
 2010/03/27[SeAr_1.3.163]
 - 源码、DB、CONF:
 		实装NPC Talk。

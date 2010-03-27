@@ -1117,6 +1117,9 @@
 2138,Bradium_Shield,îÐÀØÖ®¶Ü,5,0,,1800,,98,,1,0x00CFDF80,2,2,32,,65,1,3,{ bonus bMaxHP,500; bonus bAgi,-1; bonus2 bSkillAtk,"CR_SHIELDBOOMERANG",60; },{},{}
 2139,Flame_Thrower,»ðÑæÅçÉäÆ÷,5,20000,,2000,,60,,0,0x00000400,8,2,32,,99,0,5,{},{},{}
 2140,Energy_Rune_Guard,Â¬¶÷ÄÜÁ¿¶Ü,5,0,,0,,6,,0,0x00004082,15,2,32,,0,1,1,{  bonus bMaxSPrate,2;  },{},{}
+2146,Silver_Guard,Silver Guard,5,20,,300,,60,,1,0xFFFFFFFF,7,2,32,,22,1,3,{},{},{}
+2147,Round_Buckler,Round Buckler,5,20,,600,,90,,1,0xFFFFFFFF,7,2,32,,22,1,3,{},{},{}
+2148,Rosa_Shield,Rose Shield,5,20,,1300,,130,,1,0xFFFFFFFF,2,2,32,,100,1,3,{},{},{}
 2152,Unknown,·´¶ñÄ§¸Ö¶Ü,5,10,,,,120,,,0xFFFFFFFF,3,2,33,,,1,,{bonus2 bSubRace,7,25;bonus2 bSubRace,6,25;},{},{}
 2153,Unknown,µÛ¹úÌú¶Ü,5,10,,250,,120,,1,0x00204000,3,2,32,102,,1,1,{bonus bMdef,5;bonus2 bSkillAtk,"LG_SHIELDPRESS",20;if(getrefine() >= 6) {bonus2 bSkillAtk,"LG_SHIELDPRESS",(getrefine()-5)*2;}},{},{}
 2199,Ahura_Mazda,Ô²¶Ü,5,1,,10,,100,,0,0xFFFFFFFF,7,2,32,,1,1,2,{ bonus bAllStats,50; bonus bMdef,99; bonus bShortWeaponDamageReturn,100; bonus2 bSubRace,RC_DemiHuman,95; skill "CR_FULLPROTECTION",5; },{},{}
@@ -2961,10 +2964,10 @@
 6215,Tear_Gas,´ßÀáÍßË¹,3,10,,10,,,,,,,,,,,,,{},{},{}
 6216,Oil_Bottle,ÓÍÆ¿,3,10,,10,,,,,,,,,,,,,{},{},{}
 6217,Mandragora_Flowerpot,ÂüÍÓÂÜÅèÔÔ,3,10,,10,,,,,,,,,,,,,{},{},{}
-//6223,Kalunium,
-//6224,Bradium,
-//6225,High_Density_Kalunium,
-//6226,High_Density_Bradium,
+6223,Kalunium,Kalunium,3,10,,10,,,,,,,,,,,,,{},{},{}
+6224,Bradium,Bradium,3,10,,10,,,,,,,,,,,,,{},{},{}
+6225,High_Density_Kalunium,High Density Kalunium,3,10,,10,,,,,,,,,,,,,{},{},{}
+6226,High_Density_Bradium,High Density Bradium,3,10,,10,,,,,,,,,,,,,{},{},{}
 6244,Dark_Powder,»ðÒ©·Û,3,10,,10,,,,,,,,,,,,,{},{},{}
 6245,Black_Powder,ºÚÌ¿·Û,3,10,,10,,,,,,,,,,,,,{},{},{}
 6246,Yellow_Powder,»ÆÉ«·ÛÄ©,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -5736,6 +5739,9 @@
 15000,Bone_Plate,¹Ç¼×,5,0,,1000,,7,,1,0x02021040,7,2,16,,85,1,0,{ bonus bStr,1; bonus bMdef,3; bonus3 bAutoSpellWhenHit,"NPC_WIDEBLEEDING",2,10; bonus2 bIgnoreDefRate,7,10; bonus2 bIgnoreDefRate,2,10; },{},{}
 15001,Odin's_Blessing_I,Odin's Blessing I,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 15002,Rune_Plate,Â¬¶÷îø¼×,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+15012,Purity_Robe,Purity Robe,5,20,,400,,42,,1,0xFFFFFFFF,7,2,16,,22,1,0,{ bonus bHealPower,5; },{},{}
+15013,Clair_Suit,Clair Suit,5,20,,2800,,58,,1,0xFFFFFFFE,7,2,16,,22,1,0,{},{},{}
+15014,Black_Armor,Black Armor,5,20,,4500,,93,,1,0x00004082,2,2,16,,100,1,0,{},{},{}
 16000,Erde,°¬¶ûµÂÖ®ÕÈ,4,0,,500,130,,1,2,0x0004C5B2,2,2,2,3,50,1,8,{ bonus bMaxHP,50; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus2 bSkillAtk,"AM_ACIDTERROR",20; bonus2 bSkillHeal,"AM_POTIONPITCHER",10; bonus2 bSkillHeal,"CR_SLIMPITCHER",10; },{},{}
 16001,Red_Square_Bag,ºìÉ«ÊÖÌá°ü,4,0,,500,130,,1,2,0x0004C5B2,2,2,2,3,50,1,8,{ bonus bMaxHP,200; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus2 bSkillAtk,"AM_ACIDTERROR",20; if(readparam(bStr)>=90) { bonus3 bAddEff,Eff_Stun,500,ATF_SHORT; bonus2 bAddMonsterDropItem,501,100; bonus2 bAddMonsterDropItem,502,100; bonus2 bAddMonsterDropItem,503,100; bonus2 bAddMonsterDropItem,504,100; bonus2 bAddMonsterDropItem,505,100; bonus2 bAddMonsterDropItem,506,100; } },{},{}
 16002,Stunner_C,Stunner C,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
