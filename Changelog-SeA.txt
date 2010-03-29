@@ -1,3 +1,6 @@
+2010/03/29[SeAr_1.3.166]
+- 源码、DB:	Gate of Hell没有固定咏唱，没有冷却时间，前置Rising Dragon 1级。
+
 2010/03/27[SeAr_1.3.165]
 - 源码:		联合咏唱ADORAMUS时不消耗矿石。
 - 源码、DB:	实装Mix Cooking, Make Bomb和Special Pharmacy。

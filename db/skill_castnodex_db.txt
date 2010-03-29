@@ -1,14 +1,16 @@
 // <Skill id>,<Cast>,<Delay (optional)>
 //
-// Cast:  0 - 所有东西都会影响技能发动速度
-//        1 - 技能发动速度不受 dex 影响
-//        2 - skill's cast time is not affected by statuses (Suffragium, etc)
-//        4 - skill's cast time is not affected by item bonuses (equip, cards)
+// 咏唱:  0 - 一切都影响该技能的咏唱
+//        1 - dex不影响该技能咏唱
+//        2 - 状态不影响该技能咏唱 (牺牲祈福等)
+//        4 - 道具属性不影响该技能咏唱 (装备, 卡片)
+//        8 - 技能没有固定咏唱
+//       16 - 技能没有可变咏唱
 //
-// Delay: 0 - everything affects the skill's delay
-//        1 - skill's delay is not affected by dex
-//        2 - skill's delay is not affected by statuses (Magic Strings, etc)
-//        4 - skill's delay is not affected by item bonuses (equip, cards)
+// 延时:  0 - 一切都影响该技能的延时
+//        1 - dex不影响该技能延时
+//        2 - 布拉奇之诗不影响该技能延时
+//        4 - 道具属性不影响该技能延时 (装备, 卡片)
 //
 // Note: Values are bit fields, add them up to combine their effects.
 // Note: Delay setting '1' only makes sense when delay_dependon_dex is enabled.
@@ -56,3 +58,4 @@
 2023,1 //WL_SUMMONBL
 2024,1 //WL_SUMMONWB
 2029,1 //WL_SUMMONSTONE
+2343,8 //SR_GATEOFHELL,刹破凰擊
