@@ -1,3 +1,8 @@
+2010/04/01[SeAr_1.3.169]
+- DB:		Pinpoint Attack没有咏唱时间。
+- 源码:		修正White Imprison成功机率。
+- 源码、DB:	Ranger陷阱不伤害自己。
+
 2010/03/30[SeAr_1.3.168]
 - DB:		Ranger陷阱作用于所有玩家。
 - 源码:		修正Sienna Execrate成功机率。
