@@ -1,3 +1,8 @@
+2010/04/02[SeAr_1.3.170]
+- DB:		修正Storm Blast咏唱时间。
+- 源码:		修正所有Rune最大制作数量为20。
+- 源码、DB:	修正魔法师系列技能咏唱时间。
+
 2010/04/01[SeAr_1.3.169]
 - DB:		Pinpoint Attack没有咏唱时间。
 - 源码:		修正White Imprison成功机率。
