@@ -373,13 +373,13 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 						skill 144,1,0;
 						skill 145,1,0;
 						skill 146,1,0;
-						if (BaseJob==7 || BaseJob==4054) skill 1001,1,0;
-						if (BaseJob==14 || BaseJob==4066) skill 1002,1,0;
+						if (BaseJob==7) skill 1001,1,0;
+						if (BaseJob==14) skill 1002,1,0;
 						break;
 					case 2:
 						skill 157,1,0;
-						if (BaseJob==9 || BaseJob==4055) skill 1006,1,0;
-						if (BaseJob==16 || BaseJob==4067) {
+						if (BaseJob==9) skill 1006,1,0;
+						if (BaseJob==16) {
 							skill 1007,1,0;
 							skill 1008,1,0;
 							skill 1017,1,0;
@@ -390,13 +390,13 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 					case 3:
 						skill 147,1,0;
 						skill 148,1,0;
-						if (BaseJob==11 || BaseJob==4056) skill 1009,1,0;
-						if (BaseJob==19 || BaseJob==4068) skill 1010,1,0;
-						if (BaseJob==20 || BaseJob==4069) skill 1011,1,0;
+						if (BaseJob==11) skill 1009,1,0;
+						if (BaseJob==19) skill 1010,1,0;
+						if (BaseJob==20) skill 1011,1,0;
 						break;
 					case 4:
-						if (BaseJob==8 || BaseJob==4057) skill 1014,1,0;
-						if (BaseJob==15 || BaseJob==4070) {
+						if (BaseJob==8) skill 1014,1,0;
+						if (BaseJob==15) {
 							skill 1015,1,0;
 							skill 1016,1,0;
 						}
@@ -406,22 +406,22 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 						skill 153,1,0;
 						skill 154,1,0;
 						skill 155,1,0;
-						if (BaseJob==10 || BaseJob==4058) {
+						if (BaseJob==10) {
 							skill 1013,1,0;
 							skill 1012,1,0;
 						}
-						if (BaseJob==18 || BaseJob==4071) skill 238,1,0;
+						if (BaseJob==18) skill 238,1,0;
 						break;
 					case 6:
 						skill 149,1,0;
 						skill 150,1,0;
 						skill 151,1,0;
 						skill 152,1,0;
-						if (BaseJob==12 || BaseJob==4059) {
+						if (BaseJob==12) {
 							skill 1003,1,0;
 							skill 1004,1,0;
 						}
-						if (BaseJob==17 || BaseJob==4072) skill 1005,1,0;
+						if (BaseJob==17) skill 1005,1,0;
 						break;
 				}
 				mes "我已经把招数教给你了，打开技能表看一下吧";
@@ -430,23 +430,15 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 				mes "[SeA服务员]";
 				switch(BaseJob)
 				{
-					case 4058:
-					case 4064:
-						setarray .@option[0],2500,2,2255; break;
-					case 4054:
-					case 4060:
-						setarray .@option[0],800,2,2007; break;
 					case 10:
+						if(Upper&4) { setarray .@option[0],2500,2,2255; break; }
 					case 18:
 					case 23:
-					case 4071:
 						setarray .@option[0],800,1,39; break;
 					case 7:
+						if(Upper&4) { setarray .@option[0],800,2,2007; break; }
 					case 14:
-					case 4066:
-					case 4073:
 						setarray .@option[0],2500,2,63; break;
-					case 4056:
 					case 11: setarray .@option[0],2500,4,127; break;
 					default: mes "没有适合你的道具"; cutin "son",255; close;
 				}

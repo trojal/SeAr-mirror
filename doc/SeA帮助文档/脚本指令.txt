@@ -3156,6 +3156,14 @@ The official scripts seem to use the 'failedrefitem' command as a function
 instead: 'failedrefitem(<number>)' but it returns nothing on the stack. This is 
 since jAthena, so probably nobody knows for sure why is it so.
 
+---------------------------------------
+
+*failedrefitem2 <装备位置>,<精炼值>;
+
+This command will fail to refine an item in the specified equipment slot of the 
+invoking character. 道具精炼值会根据指定值减少. This will also display a 'refine 
+failure' effect on the character and put appropriate messages into their chat 
+window.
 
 ---------------------------------------
 
