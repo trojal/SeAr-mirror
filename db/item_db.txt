@@ -814,7 +814,7 @@
 1546,Krieger_Onehand_Mace1,Glorious Morning Star,4,0,,0,130,,1,0,0x0004C5B3,7,2,2,4,80,1,8,{ bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-4)*((getrefine()>14?14:getrefine())-4); bonus2 bIgnoreDefRate,RC_DemiHuman,5; bonus bAspdRate,5; } if(getrefine() > 8) { bonus2 bAddEff,Eff_Stun,2000; bonus bAspdRate,5; } },{},{}
 1547,Mace_Of_Madness,Mace Of Madness,4,0,,0,150,,1,0,0x0004C5B2,7,2,2,2,1,0,8,{ bonus2 bSkillAtk,"MC_CARTREVOLUTION",25; bonus bStr,2; },{},{}
 1548,Veteran_Hammer,¿œ¡∑÷Æ¥∏,4,0,,1800,160,,1,2,0x00008110,7,2,2,3,80,1,8,{ bonus bInt,1; bonus bLuk,1; bonus2 bSkillHeal,"AL_HEAL",getskilllv("AL_DP"); bonus2 bSkillHeal2,"AL_HEAL",getskilllv("AL_DP"); bonus bCriticalRate,getskilllv("PR_MACEMASTERY")*2; },{},{}
-1549,Pile_Buncker,¥©º◊◊≤’Î,4,10,,3000,450,,1,0,0xFFFFFFFF,24,2,2,3,99,0,23,{},{},{}
+1549,Pile_Buncker,¥©º◊◊≤’Î,4,10,,3000,450,,1,0,0xFFFFFFFF,24,2,2,3,99,0,8,{},{},{}
 // Books
 1550,Book, È,4,30000,,600,85,,1,3,0x00410100,7,2,2,2,14,1,15,{},{},{}
 1551,Bible, •—‘÷Æ È,4,60000,,1000,115,,1,2,0x00410100,7,2,2,3,27,1,15,{ bonus bInt,2; },{},{}
