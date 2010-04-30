@@ -836,7 +836,7 @@
 2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,践踏
 2310,3,6,1,0,0,0,5,1,no,0,0,0,weapon,0,		LG_SHIELDPRESS,盾压
 2311,0,0,4,0,0x01,5,5,0,yes,0,0x0,0,none,0,	LG_REFLECTDAMAGE,反射伤害
-2312,7,6,1,-1,0x0,0,5,1,yes,0,0x0,0,weapon,0,	LG_PINPOINTATTACK,精确攻击
+2312,5,6,1,-1,0x0,0,5,1,yes,0,0x0,0,weapon,0,	LG_PINPOINTATTACK,精确攻击
 2313,0,0,4,0,0x1,0,5,0,yes,0,0x0,0,none,0,	LG_FORCEOFVANGUARD,先锋力量
 2314,2,6,1,-1,0x0,0,1,1,yes,0,0x0,0,weapon,0,	LG_RAGEBURST,狂怒爆裂
 2315,0,6,4,-1,0x2,3,3,1,yes,0,0,0,weapon,1,	LG_SHIELDSPELL,盾咒
