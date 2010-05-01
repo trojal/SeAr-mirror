@@ -173,7 +173,7 @@ prt_church.gat,94,100,4	script	结婚 服务人员	71,{
 			cutin "",255;
 			end;
 		}
-		if(Upper == 2) {
+		if(Upper&2) {
 			//养子未调查
 			close2;
 			cutin "",255;
@@ -367,7 +367,7 @@ prt_church.gat,100,128,4	script	教主	60,{
 			cutin "wedding_bomars01",255;
 			end;
 		}
-		if(readparam(Upper,.@another$) == 2) {
+		if(readparam(Upper,.@another$)&2) {
 			close2;
 			cutin "wedding_bomars01",255;
 			end;

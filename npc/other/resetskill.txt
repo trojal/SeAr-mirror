@@ -55,7 +55,7 @@ prontera,146,232,4	script	催眠术师#2	124,{
 				mes "是无法使用本服务的";
 				close;
 			}
-			if ((Class > 0 && Class < 7 && Upper == 0) || (Class == Job_Gunslinger) || (Class == Job_Ninja) || (Class == Job_Taekwon)) {
+			if ((Class > 0 && Class < 7) || (Class == Job_Gunslinger) || (Class == Job_Ninja) || (Class == Job_Taekwon)) {
 				if (checkcart()) {
 					mes "[催眠术师]";
 					mes "请解除手推车装置";

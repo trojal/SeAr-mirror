@@ -8,7 +8,7 @@
 //===================================
 
 valkyrie,48,86,4	script	巴奇利#	811,{
-	if (ADVJOB != 0 || Upper == 1) {
+	if (ADVJOB != 0 || Upper&1) {
 		mes "[巴奇利]";
 		mes "欢迎来到荣誉的巴哈拉，";
 		mes "好好的休息再回去吧，";
@@ -193,7 +193,7 @@ yuno_in02,88,164,5	script	玫泰武司 西芙#Library	742,{
 }
 
 yuno_in02,93,207,1	script	依美乐之书	111,{
-	if (ADVJOB != 0 || Upper == 1) {
+	if (ADVJOB != 0 || Upper&1) {
 		mes "[依美乐之书]";
 		mes "...进入荣誉神殿的入口";
 		mes "已为重生的所有人们而打开，";
@@ -286,7 +286,7 @@ yuno_in05,49,43,1	script	依美乐的心脏	111,{
 }
 
 valkyrie,44,33,5	script	泰乐柏特#val	124,{
-	if (Upper != 1) {
+	if (!(Upper&1)) {
 		set .@karma_d,rand(1,10);
 		if (.@karma_d > 4) {
 			mes "[泰乐柏特]";

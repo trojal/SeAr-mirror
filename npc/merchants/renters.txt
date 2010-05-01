@@ -97,8 +97,8 @@ prontera.gat,232,318,3	script	大嘴鸟 管理兵#cru	105,{
 // Falcon Master--------------------------------------------------------------
 hu_in01.gat,381,304,5	script	猎鹰 管理员	105,{
 	if(Upper==0) set .@price,2500; //Normal Falcon - default price
-	if(Upper==1) set .@price,2500; //Scarf Falcon
-	if(Upper==2) set .@price,2500; //Baby Falcon
+	if(Upper&1) set .@price,2500; //Scarf Falcon
+	if(Upper&2) set .@price,2500; //Baby Falcon
 
 	mes "[猎鹰 管理员]";
 	if (BaseJob == Job_Hunter) {
