@@ -1,6 +1,6 @@
 // 物品精练的数据
 // 安全范围精练的效果值, 每x精炼增加的防御效果, 精练的安全范围, Lv.1 %, Lv 2 %, Lv.3%, ect...
-// Armor defense is done in percentage (ie 70 = .7 def)
+// Armor defense is no longer done in percentage (ie 1 = 1 def)
 // Weapons are whole numbers (ie 3 = 3 atk)
 
   1,4,4, 100,100,100,100, 60, 40, 40, 20, 20, 10, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5	// 防具
