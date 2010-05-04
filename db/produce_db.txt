@@ -444,11 +444,11 @@
 //==============================================
 //----- Change Material ---- ItemLV=26 ---------
 //-- Thorny Seed <-- GN_CHANGEMATERIAL & Plant Genetic Cultivation Guide &
-6210,26,2494,1,6284,0
+6210,26,2494,1,1587,10,6284,0
 //-- Vampire Plant Seed <-- GN_CHANGEMATERIAL & Plant Genetic Cultivation Guide &
-6211,26,2494,1,6284,0
+6211,26,2494,1,11033,10,6284,0
 //-- Bomb Mushroom Seed <-- GN_CHANGEMATERIAL & Plant Genetic Cultivation Guide &
-6212,26,2494,1,6284,0
+6212,26,2494,1,1921,10,7033,5,6245,2,6284,0
 //6213 <-- Possible item to create with this skill
 //6214 <-- Possible item to create with this skill
 //6215 <-- Possible item to create with this skill
