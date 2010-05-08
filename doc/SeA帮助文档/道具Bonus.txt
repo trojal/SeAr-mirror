@@ -46,6 +46,11 @@ bonus bFixedCastRate,n;			固定咏唱时间 + n%
 bonus2 bCastrate,n,x;			增加 x% 技能 n 的可变咏唱时间 (支持技能名)
 bonus2 bFixedCastrate,n,x;		增加 x% 技能 n 的固定咏唱时间 (支持技能名)
 bonus bDelayrate,n;			延迟时间 + n%
+bonus2 bDelayrate,n,x;			增加 x% 使用技能 n 后的延迟时间
+bonus bCooldownRate,n;			冷却时间 + n%
+bonus2 bCooldownRate,n,x;		增加 x% 技能 n 的冷却时间
+bonus2 bSCDef,n,x;			某状态 n 抵抗力 + x%
+bonus bChangeRace,n;			变成n种族
 
 //=========================================================
 //=攻击修正

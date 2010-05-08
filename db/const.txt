@@ -465,6 +465,9 @@ bFixDamage	1900
 bBonusDamage	1901
 bFixDamageWhenHit	1902
 bFixedCastRate	1903
+bCooldownRate	1904
+bSCDef		1905
+bChangeRace	1906
 
 bRestartFullRecover	2000
 bNoCastCancel	2001
