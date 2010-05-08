@@ -31,7 +31,7 @@ bonus bHit,n;				命中 + n
 bonus bHitRate,n;			命中 + n%
 bonus bCritical,n;			爆击 + n
 bonus bCriticalRate,n;			爆击 + n%
-bonus2 bCriticalAddRace,n,r;		对种族 r 增加 n 爆击率 (r值见备注1)
+bonus2 bCriticalAddRace,r,n;		对种族 r 增加 n 爆击率 (r值见备注1)
 bonus bFlee,n;				回避 + n
 bonus bFleeRate,n;			回避 + n%
 bonus bFlee2,n;				完全回避 + n
