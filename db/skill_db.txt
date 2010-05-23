@@ -677,7 +677,7 @@
 2012,-1,6,1,-1,0,0,1,1,no,0,0,0,weapon,0,		RK_CRUSHSTRIKE,击溃
 2013,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_REFRESH,完全回复
 2014,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_GIANTGROWTH,猛增
-2015,9,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_STONEHARDSKIN,坚硬皮肤
+2015,9,6,4,0,0x01,0,1,0,yes,0,0,0,none,0,		RK_STONEHARDSKIN,坚硬皮肤
 2016,0,6,4,0,,0,1,0,no,0,0,0,none,0,		RK_VITALITYACTIVATION,生命激活
 2017,0,6,4,-1,0x2,3,1,1,no,0,0,0,weapon,10,		RK_STORMBLAST,毁灭风暴
 2018,0,0,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_FIGHTINGSPIRIT,战魂
