@@ -691,7 +691,7 @@
 1384,Veteran_Axe,老练之斧,4,0,,3000,250,,1,2,0x00040420,7,2,34,3,80,1,7,{ bonus bVit,2; bonus4 bAutoSpellOnSkill,"BS_HAMMERFALL","SM_MAGNUM",3,50; if(getskilllv("BS_DAGGER") >= 3){ bonus bATK,10; } if(getskilllv("BS_SWORD") >= 3){ bonus bATK,10; } if(getskilllv("BS_TWOHANDSWORD") >= 3){ bonus bATK,10; } if(getskilllv("BS_KNUCKLE") >= 3){ bonus bATK,10; } if(getskilllv("BS_SPEAR") >= 3){ bonus bATK,10; } if(getskilllv("BS_AXE") >= 3){ bonus bATK,10; } if(getskilllv("BS_MACE") >= 3){ bonus bATK,10; } },{},{}
 1385,Bradium_Stonehammer,钚镭石锤,4,0,,2700,210,,1,0,0x00000400,10,2,34,4,75,1,7,{ bonus3 bAddEffOnSkill,"BS_HAMMERFALL",Eff_Stun,50+(20*getrefine()); },{},{}
 1386,Doom_Slayer_I,Doom Slayer,4,20,,0,20,,1,0,0x000444A2,7,2,34,4,0,0,7,{ if(readparam(bStr)>=95){ bonus bBaseAtk,400; bonus2 bAddEff,Eff_Stun,3000; bonus bAspdRate,-25; bonus bUseSPrate,100; bonus bBreakArmorRate,500; } },{},{}
-1387,Giant_Axe,古加多之斧,4,0,,4000,330,,1,1,0x000444A2,2,2,34,3,50,1,6,{ bonus2 bSkillAtk,"WS_CARTTERMINATION",15; if(readparam(bStr)>=95) { bonus bHit,10; bonus bAspdRate,3; } },{},{}
+1387,Giant_Axe,古加多之斧,4,0,,4000,330,,1,1,0x000444A2,2,2,34,3,50,1,7,{ bonus2 bSkillAtk,"WS_CARTTERMINATION",15; if(readparam(bStr)>=95) { bonus bHit,10; bonus bAspdRate,3; } },{},{}
 1388,Two_Handed_Axe_C,Two-Handed Axe,4,0,,0,220,,1,0,0x000444A2,7,2,34,3,1,0,7,{ bonus2 bAddSize,0,40; bonus2 bAddSize,1,40; bonus2 bAddSize,2,40; },{},{}
 // 1-Handed Spears
 1401,Javelin,长戟,4,150,,700,28,,3,3,0x00004082,7,2,2,1,4,1,4,{},{},{}
