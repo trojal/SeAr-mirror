@@ -359,7 +359,7 @@ prt_church.gat,100,128,4	script	教主	60,{
 			if($@partymembername$[.@i] != strcharinfo(0))
 				set .@another$,$@partymembername$[.@i];
 		}
-		if($@partymembercount != 2 || readparam(Sex,.@another$) == 1) {
+		if($@partymembercount != 2 || readparam(21,.@another$) == 1) {
 			mes "[宝玛乐丝]";
 			mes "想要结婚的话，";
 			mes "请限定两位先组队之后，再来吧";
@@ -367,7 +367,7 @@ prt_church.gat,100,128,4	script	教主	60,{
 			cutin "wedding_bomars01",255;
 			end;
 		}
-		if(readparam(Upper,.@another$)&2) {
+		if(readparam(56,.@another$)&2) {
 			close2;
 			cutin "wedding_bomars01",255;
 			end;
