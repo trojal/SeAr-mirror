@@ -4464,14 +4464,14 @@
 12339,Cherish_Box_Ori,Cherish Box Ori,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12340,Mysterious_Rice_Powder,Mysterious Rice Powder,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12341,Special_Alloy_Trap_Box,特殊合金陷阱箱子,2,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 7940,100; },{},{}
-12342,Manuk's_Opportunity,Manuk's Opportunity,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12343,Manuk's_Courage,Manuk's Courage,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12344,Pinguicula's_fruit_Jam,Pinguicula's fruit Jam,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12345,Luciola's_Honey_Jam,Luciola's Honey Jam,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12342,Manuk's_Opportunity,Manuk's Opportunity,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_MANU_ATK,600000,10; },{},{} 
+12343,Manuk's_Courage,Manuk's Courage,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_MANU_DEF,600000,10; },{},{} 
+12344,Pinguicula's_fruit_Jam,Pinguicula's Fruit Jam,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPL_ATK,600000,10; },{},{} 
+12345,Luciola's_Honey_Jam,Luciola's Honey Jam,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPL_DEF,600000,10; },{},{}
 12346,Unripe_Acorn,Unripe Acorn,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal -100,0; },{},{}
 12347,Acorn_Jelly,Acorn Jelly,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12348,Manuk's_Faith,Manuk's Faith,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12349,Cornus'_Tears,Cornus' Tears,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12348,Manuk's_Faith,Manuk's Faith,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_MANU_MATK,600000,10; },{},{} 
+12349,Cornus'_Tears,Cornus' Tears,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPL_MATK,600000,10; },{},{}
 12350,Angeling_Potion,Angeling Potion,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12351,Shout_Megaphone,Shout Megaphone,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12352,Dun_Tele_Scroll3,Dun Tele Scroll3,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
