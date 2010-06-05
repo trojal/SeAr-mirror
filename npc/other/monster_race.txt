@@ -7202,12 +7202,12 @@ OnInit:
 
 OnEnable:
 	enablenpc "TrapGlobal#race02";
-	donpcevent "starting#race02_1::OnEnable";
-	donpcevent "starting#race02_2::OnEnable";
-	donpcevent "starting#race02_3::OnEnable";
-	donpcevent "starting#race02_4::OnEnable";
-	donpcevent "starting#race02_5::OnEnable";
-	donpcevent "starting#race02_6::OnEnable";
+	enablenpc "starting#race02_1";
+	enablenpc "starting#race02_2";
+	enablenpc "starting#race02_3";
+	enablenpc "starting#race02_4";
+	enablenpc "starting#race02_5";
+	enablenpc "starting#race02_6";
 	//-------------------------------------------------------------
 	// Monster No. 1, Poring
 	//-------------------------------------------------------------
