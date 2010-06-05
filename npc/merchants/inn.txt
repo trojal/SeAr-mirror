@@ -284,3 +284,47 @@ ve_in,157,219,5	script	ÂÃ¹Ý Ö÷ÈË#venis	709,{
 		close;
 	}
 }
+
+//======================== Brasilis =================================
+bra_in01,27,24,3	script	Receptionist#bra	478,{
+	mes "[Receptionist]";
+	mes "Welcome to the 'Happy Toucan' Inn,";
+	mes "we have everything to make you feel at home.";
+	next;
+	switch(select("Save:Take Rest - 5,000 zeny:Cancel")) {
+	case 1:
+		mes "[Receptionist]";
+		mes "Would you like me to save your respawn point here?";
+		next;
+		switch(select("No, thanks.:Sure!")) {
+		case 1:
+			mes "[Receptionist]";
+			mes "Alright, please come back if you change your mind.";
+			close;
+		case 2:
+			savepoint "bra_in01",143,68;
+			mes "[Receptionist]";
+			mes "Your respawn point has been saved.";
+			mes "Enjoy your stay in Brasilius and don't forget to check our natural beauties.";
+			close;
+		}
+	case 2:
+		if (Zeny < 5000) {
+			mes "[Receptionist]";
+			mes "I'm sorry, but the service charge is 5,000 zeny.";
+			mes "Please make sure that you have enough money to check in next time, okay?";
+			close;
+		}
+		else {
+			mes "[Receptionist]";
+			mes "I'll take you to your room.";
+			close2;
+			set zeny,zeny-5000;
+			percentheal 100,100;
+			warp "bra_in01",144,69;
+			end;
+		}
+	case 3:
+		close;
+	}
+}
