@@ -1,0 +1,5 @@
+// EP13.2´«ËÍ
+spl_fild01,372,110,0	warp	nyd_dun_1	1,1,nyd_dun01,72,124
+nyd_dun01,66,124,0	warp	nyd_dun_2	1,1,spl_fild01,365,109
+nyd_dun01,255,143,0	warp	nyd_dun_3	1,1,nyd_dun02,63,265
+nyd_dun02,59,265,0	warp	nyd_dun_4	1,1,nyd_dun01,252,143

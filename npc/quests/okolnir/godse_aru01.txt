@@ -801,7 +801,7 @@ OnTouch:
 				monster "que_qaru01",102,275,strcharinfo(0),1652,1,"#Gate_manager_aru01::OnMyMobDead";
 			}
 			set $gqse_aru01_miro,17;
-			warp "que_qaru01",102,281;
+			warp "que_qaru01",102,282;
 			end;
 		}
 		else if ($gqse_aru01_miro == 17) {
@@ -928,7 +928,7 @@ OnTimer6000:
 	monster "que_qaru01",63,282,"赛依连 温德森",1640,1,"#gq_miromob2_aru01::OnMyMobDead";
 	monster "que_qaru01",61,243,"凯特莉娜 凯罗",1645,1,"#gq_miromob2_aru01::OnMyMobDead";
 	monster "que_qaru01",70,249,"莎西尔 德摩",1644,1,"#gq_miromob2_aru01::OnMyMobDead";
-	monster "que_qaru01",102,281,"玛嘉雷特 索琳",1643,1,"#gq_miromob2_aru01::OnMyMobDead";
+	monster "que_qaru01",102,282,"玛嘉雷特 索琳",1643,1,"#gq_miromob2_aru01::OnMyMobDead";
 	monster "que_qaru01",66,300,"艾勒梅斯 盖尔",1641,1,"#gq_miromob2_aru01::OnMyMobDead";
 	monster "que_qaru01",57,258,"哈沃得 艾尔特艾森",1642,1,"#gq_miromob2_aru01::OnMyMobDead";
 	stopnpctimer;
@@ -1255,8 +1255,8 @@ OnEnable:
 	setcell "que_qaru01",94,256,97,256,cell_shootable,0;
 	setcell "que_qaru01",64,298,64,301,cell_walkable,0;
 	setcell "que_qaru01",64,298,64,301,cell_shootable,0;
-	setcell "que_qaru01",000,251,003,251,cell_walkable,0;
-	setcell "que_qaru01",000,251,003,251,cell_shootable,0;
+	setcell "que_qaru01",100,251,103,251,cell_walkable,0;
+	setcell "que_qaru01",100,251,103,251,cell_shootable,0;
 	end;
 
 OnDisable:
@@ -2863,7 +2863,7 @@ OnInit:
 	end;
 
 OnDisable:
-	killmonster "que_qaru01","影之守护者#aru01_01::OnMyMobDead";
+	killmonster "que_qaru01","影之守护者#aru01_02::OnMyMobDead";
 	disablenpc "影之守护者#aru01_02";
 	end;
 

@@ -801,7 +801,7 @@ OnTouch:
 				monster "que_qsch05",102,275,strcharinfo(0),1652,1,"#Gate_manager_sch05::OnMyMobDead";
 			}
 			set $gqse_sch05_miro,17;
-			warp "que_qsch05",102,281;
+			warp "que_qsch05",102,282;
 			end;
 		}
 		else if ($gqse_sch05_miro == 17) {
@@ -928,7 +928,7 @@ OnTimer6000:
 	monster "que_qsch05",63,282,"Seyren Windsor",1640,1,"#gq_miromob2_sch05::OnMyMobDead";
 	monster "que_qsch05",61,243,"Kathryne Keyron",1645,1,"#gq_miromob2_sch05::OnMyMobDead";
 	monster "que_qsch05",70,249,"Cecil Damon",1644,1,"#gq_miromob2_sch05::OnMyMobDead";
-	monster "que_qsch05",102,281,"Margaretha Sorin",1643,1,"#gq_miromob2_sch05::OnMyMobDead";
+	monster "que_qsch05",102,282,"Margaretha Sorin",1643,1,"#gq_miromob2_sch05::OnMyMobDead";
 	monster "que_qsch05",66,300,"Eremes Guile",1641,1,"#gq_miromob2_sch05::OnMyMobDead";
 	monster "que_qsch05",57,258,"Howard Alt-Eisen",1642,1,"#gq_miromob2_sch05::OnMyMobDead";
 	stopnpctimer;
@@ -1255,8 +1255,8 @@ OnEnable:
 	setcell "que_qsch05",94,256,97,256,cell_shootable,0;
 	setcell "que_qsch05",64,298,64,301,cell_walkable,0;
 	setcell "que_qsch05",64,298,64,301,cell_shootable,0;
-	setcell "que_qsch05",000,251,003,251,cell_walkable,0;
-	setcell "que_qsch05",000,251,003,251,cell_shootable,0;
+	setcell "que_qsch05",100,251,103,251,cell_walkable,0;
+	setcell "que_qsch05",100,251,103,251,cell_shootable,0;
 	end;
 
 OnDisable:
@@ -2863,7 +2863,7 @@ OnInit:
 	end;
 
 OnDisable:
-	killmonster "que_qsch05","Guard of Shadow#sch05_01::OnMyMobDead";
+	killmonster "que_qsch05","Guard of Shadow#sch05_02::OnMyMobDead";
 	disablenpc "Guard of Shadow#sch05_02";
 	end;
 
@@ -3142,7 +3142,7 @@ que_qsch05,252,340,3	script	Wish Maiden#sch05_gift	403,{
 		else {
 			cutin "wish_maiden12",1;
 			mes "[Wish Maiden]";
-			mes "¸ All of you worked together as a team...";
+			mes "?All of you worked together as a team...";
 			mes "Humans are strong when they are united, but are easily swayed by lust.";
 			next;
 			mes "[Wish Maiden]";
