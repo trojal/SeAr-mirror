@@ -1,4 +1,4 @@
-/1:zeny
+//1:zeny
 //2:points
 //3:cash
 function	script	Give_to_All	{
