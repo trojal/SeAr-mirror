@@ -358,7 +358,7 @@
 315,0,0,0,0,0,0,10,0,no,0,0,0,weapon,0,		BA_MUSICALLESSON,操控乐器
 316,9,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,		BA_MUSICALSTRIKE,乐器攻击
 317,0,8,4,0,0x41,0,5,1,no,0,0x20,0,misc,0,	BA_DISSONANCE,不谐和音
-318,0,6,4,0,0x3,-1,5,1,no,0,0,0,misc,0,		BA_FROSTJOKE,冷笑话
+318,0,6,4,0,0x3,-1,5,1,no,0,0,0,misc,0,		BA_FROSTJOKER,冷笑话
 319,0,6,4,0,0x1,0,10,1,no,0,0x20,0,misc,0,	BA_WHISTLE,吹口哨
 320,0,6,4,0,0x1,0,10,1,no,0,0x20,0,misc,0,	BA_ASSASSINCROSS,刺客的黄昏
 321,0,6,4,0,0x1,0,10,1,no,0,0x20,0,misc,0,	BA_POEMBRAGI,布莱奇之诗
