@@ -211,7 +211,7 @@ function	script	cmd_clone	{
 
 	if( set(.@flag,getarg(0)) == 2 )
 	{
-		if( set(.@j,getbattleflag("atcommand_slave_clone_limit")) && countslave(.@id2) > .@j ) 
+		if( set(.@j,getbattleflag("atcommand_slave_clone_limit")) && countslave(.@id2) >= .@j ) 
 		{
 			dispmes msg(127);
 			end;

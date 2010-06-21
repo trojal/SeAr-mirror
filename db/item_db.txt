@@ -1117,7 +1117,7 @@
 2147,Round_Buckler,Round Buckler,5,20,,600,,90,,1,0xFFFFFFFE,7,2,32,,22,1,3,{},{},{}
 2148,Rosa_Shield,Rose Shield,5,20,,1300,,130,,1,0x00004080,8,2,32,,100,1,3,{},{},{}
 2152,Unknown,反恶魔钢盾,5,10,,,,120,,,0xFFFFFFFF,3,2,33,,,1,,{bonus2 bSubRace,7,25;bonus2 bSubRace,6,25;},{},{}
-2153,Imperial_Guard,帝国铁盾,5,10,,250,,120,,1,0x00004000,8,2,32,102,,1,1,{bonus bMdef,5;bonus2 bSkillAtk,"LG_SHIELDPRESS",20;if(getrefine() >= 6) {bonus2 bSkillAtk,"LG_SHIELDPRESS",(getrefine()-5)*2;}},{},{}
+2153,Imperial_Guard,帝国铁盾,5,10,,250,,120,,1,0x00004000,8,2,32,,102,1,1,{bonus bMdef,5;bonus2 bSkillAtk,"LG_SHIELDPRESS",20;if(getrefine() >= 6) {bonus2 bSkillAtk,"LG_SHIELDPRESS",(getrefine()-5)*2;}},{},{}
 2199,Ahura_Mazda,圆盾,5,1,,10,,100,,0,0xFFFFFFFF,7,2,32,,1,1,0,{ bonus bAllStats,50; bonus bMdef,99; bonus bShortWeaponDamageReturn,100; bonus2 bSubRace,RC_DemiHuman,95; skill "CR_FULLPROTECTION",5; Skill "WZ_ESTIMATION",1; Skill "ST_FULLSTRIP",5; Skill "HW_MAGICPOWER", 10; bonus bMaxHPRate,200; bonus bNoGemStone,0;  bonus bSpeedRate,25; },{ sc_start4 SC_ENDURE,60000,10,0,0,1; },{ sc_end SC_ENDURE; }
 // Headgears
 //===================================================================
@@ -4653,7 +4653,7 @@
 12372,Hell_Contract,Contract Of Hell,2,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1379; },{},{}
 12373,Boy's_Naivety,Boy's Pure Heart,2,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1370; },{},{}
 12374,Flaming_Ice,Ice Fireworks,2,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1837; },{},{}
-12375,Acaraje,Acaraje,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_STEAL; sc_start SC_INHITHATE,120000,5; },{},{}
+12375,Acaraje,Acaraje,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_STEAL; sc_start SC_INCHITHATE,120000,5; },{},{}
 12376,Mysterious_Can2,Mysterious Can2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12377,Mysterious_PET_Bottle2,Mysterious PET Bottle2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12378,2009_Rice_Cake_Soup,2009 Rice Cake Soup,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -4716,28 +4716,28 @@
 12714,Easter_Scroll,Easter Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12715,Black_Treasure_Chest,Black Treasure Chest,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12716,Indian_Rice_Cake,Indian Rice Cake,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12717,Poison_Paralysis,Poison Paralysis,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PARALIZE,300000,0; },{},{}
-12718,Poison_Leech,Poison Leech,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_LEECHEND,300000,0; },{},{}
-12719,Poison_Oblivion,Poison Oblivion,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_OBLIVIONCURSE,300000,0; },{},{}
-12720,Poison_Contamination,Poison Contamination,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_DISHEART,300000,0; },{},{}
-12721,Poison_Numb,Poison Numb,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_TOXIN,300000,0; },{},{}
-12722,Poison_Fever,Poison Fever,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PYREXIA,300000,0; },{},{}
-12723,Poison_Laughing,Poison Laughing,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_MUSHROOM,300000,0; },{},{}
-12724,Poison_Fatigue,Poison Fatigue,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_VENOMBLEED,15000,0; },{},{}
-12725,Runstone_Nosiege,Runstone Nosiege,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_REFRESH",1; },{},{}
-12726,Runstone_Rhydo,Runstone Rhydo,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_CRUSHSTRIKE",1; },{},{}
-12727,Runstone_Verkana,Runstone Verkana,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_MILLENNIUMSHIELD",1; },{},{}
-12728,Runstone_Isia,Runstone Isia,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_VITALITYACTIVATION",1; },{},{}
-12729,Runstone_Asir,Runstone Asir,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_FIGHTINGSPIRIT",1; },{},{}
-12730,Runstone_Urj,Runstone Urj,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_ABUNDANCE",1; },{},{}
-12731,Runstone_Turisus,Runstone Turisus,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_GIANTGROWTH",1; },{},{}
-12732,Runstone_Pertz,Runstone Pertz,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STORMBLAST",1; },{},{}
-12733,Runstone_Hagalas,Runstone Hagalas,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STONEHARDSKIN",1; },{},{}
-12734,Runstone_Quality,Runstone Quality,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12735,Runstone_Ancient,Runstone Ancient,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12736,Runstone_Mystic,Runstone Mystic,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12737,Runstone_Ordinary,Runstone Ordinary,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12738,Runstone_Rare,Runstone Rare,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12717,Poison_Paralysis,瘫痪毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PARALIZE,300000,0; },{},{}
+12718,Poison_Leech,吸血毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_LEECHEND,300000,0; },{},{}
+12719,Poison_Oblivion,忘却毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_OBLIVIONCURSE,300000,0; },{},{}
+12720,Poison_Contamination,污染毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_DISHEART,300000,0; },{},{}
+12721,Poison_Numb,神经毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_TOXIN,300000,0; },{},{}
+12722,Poison_Fever,发热毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PYREXIA,300000,0; },{},{}
+12723,Poison_Laughing,爆笑毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_MUSHROOM,300000,0; },{},{}
+12724,Poison_Fatigue,疲劳毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_VENOMBLEED,15000,0; },{},{}
+12725,Runstone_Nosiege,束缚符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_REFRESH",1; },{},{}
+12726,Runstone_Rhydo,调和符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_CRUSHSTRIKE",1; },{},{}
+12727,Runstone_Verkana,再生符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_MILLENNIUMSHIELD",1; },{},{}
+12728,Runstone_Isia,静止符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_VITALITYACTIVATION",1; },{},{}
+12729,Runstone_Asir,联合符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_FIGHTINGSPIRIT",1; },{},{}
+12730,Runstone_Urj,轮回符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_ABUNDANCE",1; },{},{}
+12731,Runstone_Turisus,自省符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_GIANTGROWTH",1; },{},{}
+12732,Runstone_Pertz,恐惧符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STORMBLAST",1; },{},{}
+12733,Runstone_Hagalas,毁灭符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STONEHARDSKIN",1; },{},{}
+12734,Runstone_Quality,高级_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12735,Runstone_Ancient,古代_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12736,Runstone_Mystic,神秘_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12737,Runstone_Ordinary,普通_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12738,Runstone_Rare,珍稀_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
 12739,Snow_Flower,Snow Flower,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12740,Inc_Str_Scroll,Inc Str Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12741,Inc_Int_Scroll,Inc Int Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -5950,14 +5950,14 @@
 14598,GhostringS,Ghostring Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,60000,4047; },{},{}
 14599,Greed_Scroll_C,Greed Scroll C,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 14600,Mental_Potion,Mental Potion,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-14601,Tyr's_Blessing,Tyr's Blessing,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCFLEE,300000,30; sc_start SC_INHIT,300000,30; sc_start SC_ATKPOTION,300000,20; sc_start SC_MATKPOTION,300000,20; },{},{}
+14601,Tyr's_Blessing,Tyr's Blessing,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCFLEE,300000,30; sc_start SC_INCHIT,300000,30; sc_start SC_ATKPOTION,300000,20; sc_start SC_MATKPOTION,300000,20; },{},{}
 14602,TaogunkaS,Tao Gunka Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,180000,4302; },{},{}
 14603,MistressS,Mistress Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,180000,4132; },{},{}
 14604,Orc_HeroS,Orc Hero Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,60000,4143; },{},{}
 14605,Orc_LoadS,Orc Lord Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,180000,4135; },{},{}
 14606,Job_Manual25,Job Manual25,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-14607,Luxurious_Dinner_W,Luxurious Dinner W,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start INC_ALLSTATUS,3600000,3; },{},{}
-14608,Luxurious_Dinner_E,Luxurious Dinner E,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start INC_ALLSTATUS,3600000,6; },{},{}
+14607,Luxurious_Dinner_W,Luxurious Dinner W,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCALLSTATUS,3600000,3; },{},{}
+14608,Luxurious_Dinner_E,Luxurious Dinner E,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCALLSTATUS,3600000,6; },{},{}
 14609,Spoiled_Cuisine,Spoiled Cuisine,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 10,10; },{},{}
 15000,Bone_Plate,骨甲,5,20,,1000,,7,,1,0x00021040,2,2,16,,85,1,0,{ bonus bStr,1; bonus bMDef,3; bonus2 bIgnoreDefRate,RC_DemiHuman,10; bonus2 bIgnoreDefRate,RC_Brute,10; bonus3 bAutoSpellWhenHit,"NPC_WIDEBLEEDING",1,10; },{},{}
 15001,Odin's_Blessing_I,Odin's Blessing I,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
