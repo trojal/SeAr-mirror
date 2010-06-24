@@ -3971,13 +3971,13 @@ With getmobdata, the array given will be filled with the current data. In setmob
 the indexes in the array would be used to set that data on the monster. 
 Parameters (indexes) are: （getmobdata仅支持到47）
 
-0 = 显示体型 (big, small, normal)			7  = y						14 = 发型		21 = 武器
+0 = 魔物ID						7  = y						14 = 发型		21 = 武器
 1 = 等级						8  = 移动速度					15 = 发色		22 = 攻击速度
 2 = HP							9  = mode (see doc/mob_db_mode_list.txt)	16 = 头下		23 = 面朝方向
 3 = max HP						10 = special AI state			17 = 头中		24 = killer state (1 or 0)
 4 = 主人 ID (aid of the master, summon)		11 = SC option				18 = 头上		25 = callback flag
 5 = 地图编号						12 = 性别					19 = 衣服颜色		26 = 禁止移动 (1 or 0)
-6 = x							13 = class (Monster ID, Job ID)		20 = 盾		
+6 = x							13 = 外观ID (魔物 ID, Job ID)			20 = 盾		
 
 27 = 阵营						28 = 目的坐标x					29 = 目的坐标y		30 = 射程
 31 = atk1						32 = atk2					33 = amotion		34 = adelay
