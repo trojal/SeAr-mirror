@@ -40,6 +40,7 @@ bonus bSpeedRate,n;			移动速度 + n% (最大值有效)
 bonus bSpeedAddRate,n;			移动速度 + n% 
 bonus bAspd,n;				攻击速度 + n
 bonus bAspdRate,n;			攻击速度 + n%
+bonus bFixedAspd,n;			攻击速度固定为 + n%
 bonus bAtkRange,n;			攻击距离 + n
 bonus bCastrate,n;			可变咏唱时间 + n%
 bonus bFixedCastRate,n;			固定咏唱时间 + n%

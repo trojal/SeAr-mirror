@@ -673,15 +673,15 @@
 2008,7,6,2,3,0xC2,1:1:1:2:2:2:3:3:4:4,10,1,no,0,0,0,misc,0,	RK_DRAGONBREATH,龙之吐息
 2009,0,6,4,0,0x3,3:4:5:6:7,5,1,no,0,0,0,none,2,	RK_DRAGONHOWLING,龙之咆哮
 2010,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RK_RUNEMASTERY,符文掌握
-2011,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_MILLENNIUMSHIELD,-千禧盾-
-2012,-1,6,1,-1,0,0,1,1,no,0,0,0,weapon,0,		RK_CRUSHSTRIKE,-击溃-
-2013,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_REFRESH,-完全回复-
-2014,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_GIANTGROWTH,-猛增-
-2015,9,6,4,0,0x01,0,1,0,yes,0,0,0,none,0,		RK_STONEHARDSKIN,-坚硬皮肤-
-2016,0,6,4,0,,0,1,0,no,0,0,0,none,0,		RK_VITALITYACTIVATION,-生命激活-
-2017,0,6,4,-1,0x2,3,1,1,no,0,0,0,weapon,10,		RK_STORMBLAST,-毁灭风暴-
-2018,0,0,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_FIGHTINGSPIRIT,-战魂-
-2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_ABUNDANCE,-充裕-
+2011,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_MILLENNIUMSHIELD,千年之盾
+2012,-1,6,1,-1,0,0,1,1,no,0,0,0,weapon,0,		RK_CRUSHSTRIKE,粉碎冲击
+2013,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_REFRESH,精力重生
+2014,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_GIANTGROWTH,力量增长
+2015,9,6,4,0,0x01,0,1,0,yes,0,0,0,none,0,		RK_STONEHARDSKIN,岩石皮肤
+2016,0,6,4,0,,0,1,0,no,0,0,0,none,0,		RK_VITALITYACTIVATION,生命激化
+2017,0,6,4,-1,0x2,3,1,1,no,0,0,0,weapon,10,		RK_STORMBLAST,风暴
+2018,0,0,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_FIGHTINGSPIRIT,战斗意志
+2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_ABUNDANCE,充沛
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,幻影刺击
 //十字切割者
 2021,9,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化

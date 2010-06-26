@@ -474,6 +474,7 @@ bFixedCastRate	1903
 bCooldownRate	1904
 bSCDef		1905
 bChangeRace	1906
+bFixedAspd	1907
 
 bRestartFullRecover	2000
 bNoCastCancel	2001
