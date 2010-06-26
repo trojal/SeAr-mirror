@@ -438,6 +438,8 @@ lighthalzen,66,94,5	script	老人#lhz	866,{
 	mes "[老人]";
 	mes "不过现在的老婆还是很漂亮啊，";
 	mes "和老婆走过的这一生，我真是一位幸福的男人啊!呼呼呼";
+	emotion e_kis,0,"老人#2lhz";
+	emotion e_kis2;
 	close;
 }
 //Margie Keays
@@ -1375,7 +1377,6 @@ lighthalzen,296,239,3	script	少年#8lhz	706,{
 		mes "看样子今天爸爸是不会回来的";
 		mes "你先回屋里面吧...";
 		next;
-		emotion 7;
 		mes "[少年]";
 		mes "不要! 不要!";
 		mes "我不想先进去!";

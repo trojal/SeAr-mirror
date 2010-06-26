@@ -3453,13 +3453,22 @@ character.
 
 ---------------------------------------
 
-*specialeffect <effect number>{,<send_target>};
+*specialeffect <效果编号>{,<发送目标>{,"<NPC名>"}};
 
-This command will display special effect with the given number, centered on the 
-specified NPCs coordinates, if any. For a full list of special effect numbers 
-known see 'doc/effect_list.txt'. Some effect numbers are known not to work in 
-some client releases. (Notably, rain is absent from any client executables 
-released after April 2005.)
+该指令会在指定NPC的坐标上显示指定编号的特殊效果。
+编号列表请看'doc/effect_list.txt'。
+有些效果编号在有些版本的客户端里无效。(可以看到，下雨效果从2005年4月后的客户端都没有)
+
+<NPC名> 会在其他NPC上显示 <效果编号>。如果指定NPC不存在，支持不会有任何效果。
+如果指定了NPC，<发送目标>也必须同时使用。对<发送目标>使用AREA值会保留默认效果。
+ 
+	// this will make the NPC "John Doe#1"
+	// show the effect "EF_HIT1" specified by
+	// Jane Doe. I wonder what John did...
+	mes "[Jane Doe];
+	mes "Well, I never!";
+	specialeffect EF_HIT1,AREA,"John Doe#1";
+	close;
 
 ---------------------------------------
 
@@ -4995,11 +5004,14 @@ rand(2,10) 的结果会是 2,3,4,5,6,7,8,9 or 10
 
 ---------------------------------------
 
-*emotion <表情数字>{, 目标};
+*emotion <表情数字>{,<目标>{,"<目标名字>"}};
 
 显示表情. 表情数字见 'db/const.txt' 以 'e_' 开头的. 
 
 目标为0或省略则表情显示在NPC头上，目标为1则显示在关联玩家头上
+
+<目标名字> 可以在其他没有事件标签的NPC/PC身上执行此指令。如果没有
+发现名字则什么都不会做。
 
 ---------------------------------------
 
@@ -5020,6 +5032,22 @@ rand(2,10) 的结果会是 2,3,4,5,6,7,8,9 or 10
 玩家，则关联NPC。
 
 类型不清楚，可能是文件夹的名字。0是'data/wav',而其他数字就不知道了。
+
+---------------------------------------
+
+*playBGM "<背景音乐文件名>"
+*playBGMall "<背景音乐文件名>",{,"<地图名>"}{,<x0>,<y0>,<x1>,<y1>}
+
+这两条指令会对关联角色('playBGM')或多个角色('playBGMall')播放背景音乐。
+如果由浮动NPC运行此指令或者不是由NPC(道具脚本)运行此指令，声音会从关联
+脚本的角色(如果有的话)为中心发出。除此之外，都会以NPC为中心发出。
+
+背景音乐文件名是在/BGM/文件夹中的文件名. 必须以.mp3为扩展名。
+
+脚本无需指定扩展名。
+如果坐标被省略，则全地图播放。
+
+通常情况下，你可以这样自定义背景音乐。
 
 ---------------------------------------
 

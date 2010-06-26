@@ -500,18 +500,16 @@ s_Record:
 }
 
 airplane_01,221,158,6	script	Pilot#air-0::Pilot	852,{
-	set @pilot, rand(1,4);
-	if (@pilot == 1) {
+	set .@pilot, rand(1,4);
+	if (.@pilot == 1) {
 		mes "[舵手]";
 		mes "目前飞行路线是是东经131度，北纬37度，";
 		mes "一切正常!";
-		close;
-	} else if(@aa == 2) {
+	} else if(.@pilot == 2) {
 		mes "[舵手]";
 		mes "今天是多云的天气，";
 		mes "这种天气要认路很困难..嗯嗯";
-		close;
-	} else if(@aa == 3) {
+	} else if(.@pilot == 3) {
 		mes "[舵手]";
 		mes "船长的性格很怪癖吧，";
 		mes "每次都是船员们来擦屁股，";
@@ -524,8 +522,9 @@ airplane_01,221,158,6	script	Pilot#air-0::Pilot	852,{
 		next;
 		mes "[舵手]";
 		mes "是~ 是~ 知道了";
-		close;
 	}
+	else
+	{
 		mes "[舵手]";
 		mes "呼呜...这制服是很帅啦，只是太热...";
 		mes "船长室里也不会有外人进来";
@@ -537,7 +536,8 @@ airplane_01,221,158,6	script	Pilot#air-0::Pilot	852,{
 		//emotion 23;
 		mes "[舵手]";
 		mes "呃!? 你是谁啊?!";
-		close;
+	}
+	close;
 }
 
 //============================================================ 
