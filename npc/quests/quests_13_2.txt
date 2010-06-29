@@ -5080,7 +5080,6 @@ man_in01,378,276,3	script	Manuk Engineer#ep13_2	453,{
 					mes "[Manuk Engineer]";
 					mes "To prevent our bodies from becoming numb, we need Bradium.";
 					mes "From the Bradium we can extract a special element that we need to survive.";
-					mes "Ã·?Ãÿ ‚µ???¨≤¢æ≠≥£'”·£";
 					next;
 					mes "[Manuk Engineer]";
 					mes "The mining industry is primary here since our lives depend on it.";
