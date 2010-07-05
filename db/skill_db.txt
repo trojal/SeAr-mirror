@@ -684,7 +684,7 @@
 2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_ABUNDANCE,充沛
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,幻影刺击
 //十字切割者
-2021,9,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化
+2021,5,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化
 2022,3,8,1,-1,0,0,5,7,no,0,0,0,weapon,0,		GC_CROSSIMPACT,十字斩
 2023,3:4:5:6:7,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,GC_DARKILLUSION,暗影步
 2024,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GC_RESEARCHNWPOISON,新毒研究
@@ -769,7 +769,7 @@
 2243,-9,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,		RA_WUGSTRIKE,狼突击
 2244,-9,8,1,-1,0x2,1,5,1,no,0,0,0,weapon,0,		RA_WUGBITE,狼撕咬
 2245,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_TOOTHOFWUG,狼牙
-2246,5,6,4,3,0x2,3,5,1,no,0,0,0,weapon,0,		RA_SENSITIVEKEEN,敏锐嗅觉
+2246,5,6,4,3,0x2,3:4:5:6:7,5,1,no,0,0,0,weapon,0,		RA_SENSITIVEKEEN,敏锐嗅觉
 2247,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		RA_CAMOUFLAGE,隐蔽战术
 2248,0,0,0,0,0,0,5,0,no,0,0,0,misc,0,		RA_RESEARCHTRAP,陷阱研究
 2249,3,6,2,3,0x1,1,5,1,no,0,0x80,0,misc,0,	RA_MAGENTATRAP,紫红陷阱
