@@ -3465,17 +3465,22 @@ character.
 	// this will make the NPC "John Doe#1"
 	// show the effect "EF_HIT1" specified by
 	// Jane Doe. I wonder what John did...
-	mes "[Jane Doe];
+	mes "[Jane Doe]";
 	mes "Well, I never!";
 	specialeffect EF_HIT1,AREA,"John Doe#1";
 	close;
 
 ---------------------------------------
 
-*specialeffect2 <effect number>{,<send_target>};
+*specialeffect2 <effect number>{,<send_target>{,"<Player Name>"}};
 
 This command behaves identically to the 'specialeffect', but the effect will be 
 centered on the invoking character's sprite.
+
+<Player name> parameter will display <effect number> on another Player than the
+one currently attached to the script. Like with specialeffect, when specifying
+a player, <send_target> must be supplied, specifying AREA will retain the default
+behavior of the command.
 
 ---------------------------------------
 
