@@ -120,8 +120,6 @@ bonus bRestartFullRecover,n;		复活时, HP SP全满。n无意义
 bonus bNoCastCancel,n;			除GVG场地外，咏唱不会中断。n无意义
 bonus bNoCastCancel2,n;			咏唱不会中断。n无意义
 bonus bNoSizeFix,n;			攻击伤害无视体型。n无意义
-bonus bNoWeaponDamage,n;		免疫所有物理攻击。n无意义
-bonus bNoMagicDamage,n;			免疫所有魔法技能。n无意义
 bonus bNoGemStone,n;			除随机技能需要1个黄色魔力矿石外，技能无需魔力矿石。n无意义
 bonus bIntravision,n;			可以看见隐形单位。n无意义
 bonus bNoRegen,n;			阻止 n 再生 (n: 1=HP, 2=SP)
@@ -170,6 +168,8 @@ bonus2 bRandomAttackIncrease,n,r;	r% 几率增加物理攻击伤害 n%
 //=========================================================
 //=伤害修正
 //=========================================================
+bonus bNoWeaponDamage,n;		物理伤害减少n%。
+bonus bNoMagicDamage,n;			魔法伤害减少n%。
 bonus2 bAddSize,n,x;			物理攻击时，对体型 n 增加 x% 的伤害 (n值见备注5)
 bonus2 bMagicAddSize,n,x;		魔法攻击时，对体型 n 增加 x% 的伤害 (n值见备注5)
 bonus2 bSubSize,n,x;			减少来自体型 n 的伤害 x% (n值见备注5)
