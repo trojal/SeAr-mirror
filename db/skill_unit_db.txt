@@ -106,7 +106,7 @@
 
 2032,0xe1,    , 2, 0,  -1,enemy, 0x010	//GC_POISONSMOKE
 
-2044,0xca,    , 0, 5,3000,all,   0x018	//AB_EPICLESIS
+2044,0xca,    , 0, 3,3000,all,   0x018	//AB_EPICLESIS
 
 2239,0xd9,    , 0, 1,1000,enemy, 0x006	//RA_CUSTERBOMB
 2238,0xd8,    , 0, 1,1000,enemy, 0x006	//RA_ELECTRICSHOCKER
