@@ -4,21 +4,21 @@
 // ---------------------------------
 // - 海利翁之眼 任务脚本 - 
 //===================================
-// 版本：1.4  by 小笨冰与黑色小猫
+// 版本：1.4  [小笨冰]&[黑色小猫]
+// 待改写为1.9新版本
 //===================================
 
 geffen,110,200,3	script	贤者 绣恩	754,2,2,{
-
-	if(HELLIONQ > 25) {
+	if (HELLIONQ > 25) {
 		mes "[绣恩]";
 		mes "石板已正确的送达了吗?";
 		mes "那位朋友过的如何呢?";
 		close;
 	}
-	if(HELLIONQ > 18) {
+	if (HELLIONQ > 18) {
 		switch(HELLIONQ) {
 		case 19:
-			if(HELLIONQ3) {
+			if (HELLIONQ3) {
 				if(countitem(504)) {
 					mes "[绣恩]";
 					mes "嘻嘻.. 请把那个拿给我，";
@@ -89,15 +89,12 @@ geffen,110,200,3	script	贤者 绣恩	754,2,2,{
 			mes "唉哟";
 			set HELLIONQ3,1;
 			close;
-
 		case 20:
 			mes "[绣恩]";
 			mes "是从吉芬塔上面爱奴智那里，";
 			mes "^7151FF拿来有关吉芬地区魔物生态的研究^000000报告书";
 			mes "即可拜托你啦";
 			close;
-		break;
-
 		case 21:
 			mes "[绣恩]";
 			mes "......看你的表情，好像有满肚子的话要说似的，";
@@ -115,15 +112,11 @@ geffen,110,200,3	script	贤者 绣恩	754,2,2,{
 			mes "^3151FF已得到了一本有关海洋生物的报告书- 克克魔篇";
 			set HELLIONQ,22;
 			close;
-		break;
-
 		case 22:
 			mes "[绣恩]";
 			mes "请你赶快把这本书送给爱奴智吧，";
 			mes "回来的时候不要忘了带一个蓝色魔力矿石啊";
 			close;
-		break;
-
 		case 23:
 			if(!countitem(717)) {
 				mes "[绣恩]";
@@ -160,17 +153,12 @@ geffen,110,200,3	script	贤者 绣恩	754,2,2,{
 			mes "我的朋友，一辈子的心思都花在封印这邪恶的力量上，可怜的我的朋友，";
 			mes "请你好好的送给齐里亚斯先生吧";
 			close;
-
-		break;
-
 		case 24:
 			mes "[绣恩]";
 			mes "给我的朋友，";
 			mes "齐里亚斯先生送去那石板之碎片吧，";
 			mes "你还在犹豫什么?";
 			close;
-		break;
-
 		case 25:
 			mes "[绣恩]";
 			mes "有什么事吗?什么? 帮你拼凑出石板吗?那刚才就直说吗，我还以为你会拼凑，";
@@ -247,17 +235,16 @@ geffen,110,200,3	script	贤者 绣恩	754,2,2,{
 	mes "因为我要思考，我不想被一位没有事情做的人来打扰";
 	close;
 OnTouch:
-	if(HELLIONQ != 19) end;
+	if (HELLIONQ != 19) end;
 	specialeffect 313;
 	specialeffect2 313;
 	mes "- 石板之碎片不知和什么有反应后开始发光了 -";
 	mes "- 感觉到有一股强烈的引力般似的 -";
 	close;
-
 }
 
 gef_tower,116,37,1	script	爱奴智#2	748,{
-	if(HELLIONQ == 22) {
+	if (HELLIONQ == 22) {
 		mes "[爱奴智]";
 		mes "Oh hey, I remember you~";
 		mes "So did my mentor send you";
@@ -297,7 +284,7 @@ gef_tower,116,37,1	script	爱奴智#2	748,{
 		set HELLIONQ,23;
 		close;
 	}
-	if(HELLIONQ == 21) {
+	if (HELLIONQ == 21) {
 		mes "[爱奴智]";
 		mes "My mentor Welshyun's";
 		mes "been playing jokes again,";
@@ -306,7 +293,7 @@ gef_tower,116,37,1	script	爱奴智#2	748,{
 		mes "Science Reference Book?";
 		close;
 	}
-	if(HELLIONQ == 20){
+	if (HELLIONQ == 20){
 		mes "[爱奴智]";
 		mes "是你吗?! 是你吗?!";
 		mes "把这边学术书拿走的人是你吗?!";
@@ -365,8 +352,7 @@ gef_tower,116,37,1	script	爱奴智#2	748,{
 }
 
 prontera,269,326,3	script	克莱呢赐 海普抡	50,{
-
-	if(HELLIONQ > 7) {
+	if (HELLIONQ > 7) {
 		mes "[克莱呢赐 海普抡]";
 		mes "是你喔，我还在这里搜集相关的情报呢，";
 		mes "还好你上次来过之后让我松了一口气，";
@@ -375,10 +361,10 @@ prontera,269,326,3	script	克莱呢赐 海普抡	50,{
 		mes "你真的没有对我任何隐瞒吧?";
 		close;
 	}
-	if(HELLIONQ) {
+	if (HELLIONQ) {
 		switch(HELLIONQ) {
 		case 1:
-			if(HELLIONQ2) {
+			if (HELLIONQ2) {
 				mes "[克莱呢赐 海普抡]";
 				mes "你干嘛老是找我呢?";
 				mes "你很行自己去想办法吧!";
@@ -503,8 +489,6 @@ prontera,269,326,3	script	克莱呢赐 海普抡	50,{
 			mes "我能提供的情报只有这个而已";
 			set HELLIONQ,2;
 			close;
-		break;
-
 		case 2:
 			mes "[克莱呢赐 海普抡]";
 			mes "我在旧剑士公会修练场找到了这个破裂之剑，";
@@ -512,8 +496,6 @@ prontera,269,326,3	script	克莱呢赐 海普抡	50,{
 			mes "喂，告诉你若真有的话，我会这样按兵不动吗?";
 			mes "我看你蛮有意念的嘛，你就去四处看看好了";
 			close;
-		break;
-
 		case 3:
 			mes "[克莱呢赐 海普抡]";
 			mes "怎样，成果如何呢? 毫无所获吧?";
@@ -559,7 +541,7 @@ prontera,269,326,3	script	克莱呢赐 海普抡	50,{
 			next;
 			mes "[克莱呢赐 海普抡]";
 			mes "啊啊... 你就自己去找找看看吧，送你这个，带在身上吧，嗯，因为是靠我提供的线索去调查的，所以你获得的成果必须要共享";
-			getitem 7093,1; //取得 齿轮 1 个
+			getitem 7093,1; //齿轮 1 个
 			set HELLIONQ,4;
 			close;
 		case 4:
@@ -571,8 +553,6 @@ prontera,269,326,3	script	克莱呢赐 海普抡	50,{
 			mes "我想你应该比我更会仔细寻找吧，";
 			mes "当然要记得分享情报喔";
 			close;
-		break;
-
 		case 7:
 			mes "[克莱呢赐 海普抡]";
 			mes "请问你有进一步探听到什么吗?";
@@ -613,7 +593,7 @@ prontera,269,326,3	script	克莱呢赐 海普抡	50,{
 
 prontera,223,82,1	script	训练用的木偶#HelDummy	111,{
 
-	if(HELLIONQ == 2) {
+	if (HELLIONQ == 2) {
 		mes "^3151FF是训练用的木偶，";
 		mes "仔细查看木偶的身体部位，";
 		mes "发现了有东西被拔出来的痕迹";
@@ -718,7 +698,7 @@ prt_in,128,79,0	script	不知用途的机械#HelMchn	111,{
 
 prontera,45,67,1	script	#HellionActivator	139,0,0,{
 OnTouch:
-	if(HELLIONQ != 4) end;
+	if (HELLIONQ != 4) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "...蔬菜店小姐为什么一直那样凝视着我呢?";
 	mes "由于有蔬菜店小姐的纪录，我才来到这里的啊";
@@ -782,8 +762,7 @@ OnTouch:
 }
 
 payon,182,132,3	script	葛劳吾堤 特卡	48,{
-
-	if(HELLIONQ > 18) {
+	if (HELLIONQ > 18) {
 		mes "[葛劳吾堤]";
 		mes "找到宝石了吗?";
 		mes "没有啊，我也不怎么好奇啊，";
@@ -795,7 +774,7 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 		mes "向我的负债真的是小事一桩...";
 		close;
 	}
-	if(HELLIONQ > 17) {
+	if (HELLIONQ > 17) {
 		mes "[葛劳吾堤]";
 		mes "对呀，";
 		mes "这真是长的很奇怪的石板呀，";
@@ -815,9 +794,8 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 		mes "这忧关我人生的问题啊!";
 		close;
 	}
-	if(HELLIONQ > 8) {
+	if (HELLIONQ > 8) {
 		switch(HELLIONQ){
-
 		case 9:
 			mes "[葛劳吾堤]";
 			mes "...很抱歉我现在有点忙，我要找某个东西，我已经从我的委托人那边已收取了佣金的关系...";
@@ -907,8 +885,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "希望你能完成那个宝石... 嘻嘻嘻...";
 			set HELLIONQ,10;
 			close;
-		break;
-
 		case 10:
 			mes "[葛劳吾堤]";
 			mes "想知道在什么地方吗?";
@@ -920,8 +896,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "我对你期待很大呢，嘻嘻嘻";
 			viewpoint 1,101,191,10,0xFF00FF;
 			close;
-		break;
-
 		case 11:
 			mes "[葛劳吾堤]";
 			mes "你已经来回了第一个场所了，";
@@ -933,8 +907,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "嘻嘻嘻";
 			viewpoint 1,82,109,11,0xFF00FF;
 			close;
-		break;
-
 		case 12:
 			mes "[葛劳吾堤]";
 			mes "来，现在让你去第三个场所，";
@@ -942,8 +914,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "效果确实是不错啊";
 			viewpoint 1,239,56,12,0xFF00FF;
 			close;
-		break;
-
 		case 13:
 			mes "[葛劳吾堤]";
 			mes "现在是最后一个场所了，";
@@ -951,8 +921,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "是获得葡萄汁的地方";
 			viewpoint 1,240,161,13,0xFF00FF;
 			close;
-		break;
-
 		case 14:
 			mes "[葛劳吾堤]";
 			mes "看你的眼神，你现在想要对我呐喊说，你这个骗徒似的，没有找到任何连贯性吧?我也是这样啊，";
@@ -994,8 +962,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "我真的希望那宝石还是什么的，快点出现就好了，加油了，朋友";
 			set HELLIONQ,15;
 			close;
-		break;
-
 		case 15:
 			mes "[葛劳吾堤]";
 			mes "朋友，祝你幸运啦，";
@@ -1003,8 +969,6 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "嘻嘻嘻";
 			viewpoint 1,159,130,14,0xFF00FF;
 			close;
-		break;
-
 		case 16:
 			mes "[葛劳吾堤]";
 			mes "难道是?这些都是当初意图所形成的吗，连那些没有连贯性的物品也包含在内啊，";
@@ -1015,16 +979,12 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 			mes "那边会有一个巨大的石像，做为隐藏东西的地方，是最好也不过了，你认为呢?";
 			set HELLIONQ,17;
 			close;
-		break;
-
 		case 17:
 			mes "[葛劳吾堤]";
 			mes "请你去弓箭手村落吧，";
 			mes "会有一个巨大的石像，";
 			mes "我认为应该是那边啊";
 			close;
-		break;
-
 		}
 	}
 	mes "[葛劳吾堤]";
@@ -1035,7 +995,7 @@ payon,182,132,3	script	葛劳吾堤 特卡	48,{
 }
 
 payon,101,191,1	script	天花板#HellionStepAct	139,1,1,{
-	if(HELLIONQ != 10) end;
+	if (HELLIONQ != 10) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "这里是葛劳吾堤告诉我的地方没错啊..嗯嗯? 天花板上好像写着密密麻麻的东西?阅读一下好了";
 	mes "　";
@@ -1050,7 +1010,7 @@ payon,101,191,1	script	天花板#HellionStepAct	139,1,1,{
 }
 
 payon,82,109,1	script	石头堆#HellionStones	111,{
-	if(HELLIONQ != 11) end;
+	if (HELLIONQ != 11) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "第二个场所是.... 石头堆?这种地方会出现什么样的东西呢，应该不会是这石心吧?";
 	mes "　";
@@ -1065,7 +1025,7 @@ payon,82,109,1	script	石头堆#HellionStones	111,{
 }
 
 payon,239,56,1	script	晒干的鱼#HellionFish	111,{
-	if(HELLIONQ != 12) end;
+	if (HELLIONQ != 12) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "第三个是.... 晒干的鱼吗，越走越糟啊，这一次又是什么?";
 	mes "　";
@@ -1079,7 +1039,7 @@ payon,239,56,1	script	晒干的鱼#HellionFish	111,{
 }
 
 payon,240,161,1	script	缸#HellionVat	111,{
-	if(HELLIONQ != 13) end;
+	if (HELLIONQ != 13) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "最后一个场所是....缸，我知道这个东西是把某个东西做发酵，或是做长时间保管时用的，";
 	mes "...有一点葡萄香的味道?";
@@ -1099,7 +1059,7 @@ payon,240,161,1	script	缸#HellionVat	111,{
 }
 
 payon,159,130,1	script	地板下#HellionFloor	111,{
-	if(HELLIONQ > 15) {
+	if (HELLIONQ > 15) {
 		mes "- 虽然木地板上是很脏乱的 -";
 		mes "- 不过有一个可以看到内容的 -";
 		mes "- 转印版 -";
@@ -1111,7 +1071,7 @@ payon,159,130,1	script	地板下#HellionFloor	111,{
 		mes "希望你能抛开你的贪婪之心吧- 泰伊俄斯";
 		close;
 	}
-	if(HELLIONQ != 15) end;
+	if (HELLIONQ != 15) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "真的是一个很平凡的地板啊，我来找找看地板下面好了..";
 	next;
@@ -1158,7 +1118,7 @@ s_Dig:
 }
 
 pay_arche,141,29,1	script	佛像#HellionStat	111,3,3,{
-	if(HELLIONQ != 17) end;
+	if (HELLIONQ != 17) end;
 	mes "[" + strcharinfo(0) + "]";
 	mes "这就是葛劳吾堤所讲的石像吗?果然在这么隐密的地方，是很难被人找到的";
 	next;
@@ -1215,18 +1175,17 @@ pay_arche,141,29,1	script	佛像#HellionStat	111,3,3,{
 		end;
 	}
 OnTouch:
-	if(HELLIONQ != 17) end;
+	if (HELLIONQ != 17) end;
 	specialeffect 313;
 	specialeffect2 313;
 	mes "^3151FF- 石板之碎片不知和什么有反应后开始发光了 -";
 	mes "- 感觉到有一股强烈的引力般似的 -";
 	close;
-
 }
 
 morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 
-	if(HELLIONQ == 27) {
+	if (HELLIONQ == 27) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "好久不见，";
 		mes "我们之间的约定你没忘记吧?";
@@ -1314,7 +1273,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 			mes "这是，你应得的，似乎未被宝石的诱惑而动摇的你..请你誓死好好保护他，还有这是我们之间的秘密喔";
 			delitem 7332,1; //删除 石板
 			getitem 2658,1; //取得 尼罗玫瑰[1]
-			set BaseExp,BaseExp+1200000;
+			getexp 1200000,0;
 			set HELLIONQ,27;
 			next;
 			mes "[齐里亚斯 泰伊俄斯]";
@@ -1348,12 +1307,12 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		mes "这是，你应得的，似乎未被宝石的诱惑而动摇的你..请你誓死好好保护他，还有这是我们之间的秘密喔";
 		delitem 7332,1; //删除 石板
 		getitem 2658,1; //取得 尼罗玫瑰[1]
-		set BaseExp,BaseExp+1200000;
+		getexp 1000000,0;
 		set hellion_consideration,0;
 		set HELLIONQ,27;
 		close;
 	}
-	if(HELLIONQ == 25) {
+	if (HELLIONQ == 25) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "请你到吉芬再见一次我朋友好吗?";
 		mes "我的专长是研究自然的属性，";
@@ -1367,7 +1326,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		mes "这都怪我能力不足啊....";
 		close;
 	}
-	if(HELLIONQ == 24) {
+	if (HELLIONQ == 24) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "嗯，你来啦... 啊啊......终于都搜集齐全了，再者这些石板，各自拥有一个宝石的碎片!";
 		mes "啊啊.. 可是，这样的碎片..无法组合成一个的话....啊啊..怎么办呢";
@@ -1381,13 +1340,13 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		set HELLIONQ,25;
 		close;
 	}
-	if(HELLIONQ > 18) {
+	if (HELLIONQ > 18) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "去见吉芬的贤者绣恩吧，";
 		mes "他是我的朋友，很可靠呢";
 		close;
 	}
-	if(HELLIONQ == 18) {
+	if (HELLIONQ == 18) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		specialeffect 313;
 		specialeffect2 313;
@@ -1424,7 +1383,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		mes "去吉芬找贤者绣恩吧";
 		close;
 	}
-	if(HELLIONQ > 8) {
+	if (HELLIONQ > 8) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "依照石板之碎片上所记载的文句去斐扬吧，";
 		mes "斐扬有位叫做葛劳吾堤 特卡的人，";
@@ -1432,7 +1391,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		mes "虽然他为人有点怪异啦";
 		close;
 	}
-	if(HELLIONQ == 8) {
+	if (HELLIONQ == 8) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "这是!";
 		mes "这不是石板之碎片吗，...这些字是.. 果然是祖父所留下的，";
@@ -1446,7 +1405,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		set HELLIONQ,9;
 		close;
 	}
-	if(HELLIONQ == 4) {
+	if (HELLIONQ == 4) {
 		//感谢黑色小猫协助翻译
 		mes "^3151FF当你告诉齐里亚斯，";
 		mes "你在训练时发现的怪讯息之后，";
@@ -1463,7 +1422,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		mes "你需要自己调查出他的意义来!";
 		close;
 	}
-	if(HELLIONQ > 0) {
+	if (HELLIONQ) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "你到普隆德拉去找";
 		mes "叫做'克莱呢赐 海普抡'的人吧，";
@@ -1471,7 +1430,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 		mes "......";
 		close;
 	}
-	if(hellion_consideration) {
+	if (HELLIon_consideration) {
 		mes "[齐里亚斯 泰伊俄斯]";
 		mes "....你要重新考虑吗? 我不会强迫你的，";
 		mes "应该会有人出现吧，";
@@ -1681,7 +1640,7 @@ morocc_in,116,101,2	script	老学者 泰伊俄斯	735,2,2,{
 	goto s_Iwilll;
 
 OnTouch:
-	if(HELLIONQ != 18) end;
+	if (HELLIONQ != 18) end;
 	specialeffect 313;
 	specialeffect2 313;
 	mes "- 石板之碎片不知和什么有反应后开始发光了 -";
@@ -1732,7 +1691,7 @@ gef_fild09,296,59,1	script	封死的 洞穴#HellionCave	111,{
 	end;
 
 OnTouch:
-	if(HELLIONQ != 25) end;
+	if (HELLIONQ != 25) end;
 	specialeffect 313;
 	specialeffect2 313;
 	mes "- 石板不知和什么有反应后开始发光了 -";

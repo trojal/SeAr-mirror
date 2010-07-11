@@ -3,7 +3,7 @@
 //===== By: ==================================================
 //= [Ishizu-chan]
 //===== Current Version: =====================================
-//= 1.9
+//= 2.0
 //===== Compatible With: =====================================
 //= Any eAthena Version i guess?
 //===== Description: =========================================
@@ -21,6 +21,7 @@
 //= 1.7 Fixed a minor bug with prevented code part from reseting properly. [SinSloth]
 //= 1.8 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
 //= 1.9 Fixed a bug in the last event which allowed an exploit after the first summoning. [SinSloth]
+//= 2.0 支持3转职业检查 [Inkfish]
 //============================================================
 
 hu_fild01,140,163,5	script	进出 管理员	852,3,3,{

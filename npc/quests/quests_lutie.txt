@@ -1,358 +1,344 @@
-//===== eAthena Script ======================================= 
-//= Quest NPCs related to Lutie
-//===== By: ================================================== 
-//= TonyMan & Samuray22
-//===== Current Version: ===================================== 
-//= 1.3b
-//===== Compatible With: ===================================== 
-//= eAthena 1.0
-//===== Description: ========================================= 
-//= Blush, Cake Hat, Candle, Chef Hat, Raccoon Hat, Rainbow Eggshell,
-//= Spore Hat, Wonder Nutshell Quests
-//===== Additional Comments: ================================= 
-//= 1.1 Optimized [Lupus]
-//= 1.2 Fixed Chef Hat items [Lupus]
-//= 1.3 Update NPC to the Official One. [Samuray22]
-//= 1.3a Changed item names to item IDs. [Samuray22]
-//= 1.3b Removed a scrap " left in a delitem. [L0ne_W0lf]
-//============================================================ 
+//===================================
+// [冥] The PlutoEA Project [王]
+// http://opensvn.csie.org/PlutoEA
+// ---------------------------------
+// - 姜饼村 头饰制作脚本 - 
+//===================================
+// 版本：1.3b
+//===================================
+//= 红晕, 蛋糕帽, 蜡烛头饰, 厨师帽, 狸猫帽, 蓝白蛋壳帽,
+//= 魔菇帽, Wonder Nutshell Quests
+//===================================
 
-xmas,117,295,3	script	Vending Machine Man	704,{
-	mes "[Titicupe]";
-	mes "Ha ha ha ha ha ha";
-	mes "..You arrived";
-	mes "I'm a manager";
-	mes "of toy factory!!";
-	mes "I've opened my eyes";
-	mes "on new business!";
+xmas,117,295,3	script	自动贩卖机专家	704,{
+	mes "[堤堤酷飞]";
+	mes "呜 哈 哈 哈 哼 哼 哼";
+	mes "... 你来了";
+	mes "我是在姜饼城";
+	mes "玩具工厂里的厂长，我叫堤堤酷飞!!";
+	mes "对于新事业";
+	mes "开了眼界！";
 	next;
-	switch(select( "Talk to him about the vending machine", "Items in the vending machine", "Stop talking")) {
+	switch(select( "讲述有关自动贩卖机的事情:说明自动贩卖机商品:结束对话")) {
 	case 1:
-		mes "[Titicupe]";
-		mes "Can you see a little snowman";
-		mes "left side of me. can you?";
-		mes "If you look at his mouth cautiously";
-		mes "you can find out";
-		mes "that it was builted to";
-		mes "huge size as it can";
+		mes "[堤堤酷飞]";
+		mes "我左边的小雪人";
+		mes "有看到了吗？来 来 ..";
+		mes "仔细看";
+		mes "那雪人的嘴巴被设计成";
+		mes "他可以吞下";
 		next;
-		mes "[Titicupe]";
-		mes "swallow any thing.";
-		mes ".. feel bad hah?";
-		mes "Try to put your";
-		mes "hand,legs,and even your head inside.";
-		mes "Everything goes in.";
-		mes "Hohoho . However";
+		mes "[堤堤酷飞]";
+		mes "世上任何可口的东西";
+		mes ".. 感觉不太好？";
+		mes "无论手臂或腿";
+		mes "放进去看看 ~";
+		mes "什么都进的去 -";
+		mes "哈哈哈 . 换个话题吧";
 		next;
-		mes "[Titicupe]";
-		mes "this is a";
-		mes "vending machine";
-		mes "which is you can get";
-		mes "fashionable decorating item.";
-		mes "You have to provide";
-		mes "some items when you want to get.";
+		mes "[堤堤酷飞]";
+		mes "这就是";
+		mes "创造出新的";
+		mes "装扮物品的";
+		mes "自动贩卖机";
+		mes "只要是自动贩卖机要求的";
+		mes "各种物品";
 		next;
-		mes "[Titicupe]";
-		mes "Pour out to snowman's mouth!!";
-		mes "If you do that";
-		mes "You can get";
-		mes "fancy items wHat";
-		mes "you dreamed for";
-		mes "Ha ha ha ha ha~~~";
-		next;
-		goto L_end2;
+		mes "[堤堤酷飞]";
+		mes "倒入雪人的";
+		mes "嘴吧里时";
+		mes "就可以获得";
+		mes "我想要的";
+		mes "美丽的物品";
+		mes "呜 哈 哈 哼 哼 凄 凄";
+		close;
 	case 2:
-		mes "[Titicupe]";
-		mes "Ho ho ho ho~";
-		mes "Do you have";
-		mes "any question?";
-		mes "then ask me";
-		mes "I'm genius.ha ha~";
+		mes "[堤堤酷飞]";
+		mes "哼哼哼哼哼";
+		mes "对于";
+		mes "我这天才";
+		mes "有问题要问的话";
+		mes "请悄悄的问我吧~";
 		next;
-		switch( select( "Raccoon Hat", "Spore Hat", "Wonder Nutshell", "Rainbow Egg Shell", "Blush", "Chef Hat", "Candle", "Cake Hat", "Stop talking")) {
+		switch( select( "狸猫帽:魔菇帽:神秘的水果皮帽:蓝白蛋壳帽:红晕:厨师帽:蜡烛头饰:蛋糕帽:结束对话")) {
 		case 1:
-			mes "[Titicupe]";
-			mes "Raccoon Hat ?";
-			mes "Kitty Band 1";
-			mes "Dragon Scale 20";
-			mes "Tough Scalelike stem 200";
-			mes "Sea-Otter Fur 300";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "狸猫帽？";
+			mes "^3355FF猫耳发圈^000000 1";
+			mes "^3355FF龙鳞^000000 20";
+			mes "^3355FF植物梗^000000 200";
+			mes "^3355FF海獭的皮革^000000300";
+			break;
 		case 2:
-			mes "[Titicupe]";
-			mes "Spore Hat ?";
-			mes "Poison Spore 850";
-			mes "Burnt Tree 300";
-			mes "Long Tongue 1";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "魔菇帽？";
+			mes "^3355FF毒蘑菇芽孢^000000 850";
+			mes "^3355FF燃烧一半的木材^000000 300";
+			mes "^3355FF细长舌头^000000 1";
+			break;
 		case 3:
-			mes "[Titicupe]";
-			mes "Wonder Nutshell ?";
-			mes "Fruit Shell 1";
-			mes "Wing of Dragonfly 500";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "神秘的水果皮帽？";
+			mes "^3355FF水果皮帽^000000 1";
+			mes "^3355FF蜻蜓的翅膀^000000 500";
+			break;
 		case 4:
-			mes "[Titicupe]";
-			mes "Rainbow Egg Shell ?";
-			mes "Egg Shell 1";
-			mes "Cobaltblue Dyestuffs 1";
-			mes "Claw Of Desert Wolf 50";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "蓝白蛋壳帽？";
+			mes "^3355FF蛋壳帽^000000 1";
+			mes "^3355FF蓝色染料^000000 1";
+			mes "^3355FF沙漠之狼指甲^000000 50";
+			break;
 		case 5:
-			mes "[Titicupe]";
-			mes "Blush ?!";
-			mes "You !";
-			mes "You know something ha ha ?!";
-			mes "he he . anyway";
-			mes "- Alice's Apron 100 -";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "红晕?";
+			mes "你!";
+			mes "好像知道什么似的 ?!";
+			mes "哼哼 . 不管怎么样";
+			mes "- ^3355FF艾丽丝的围裙^000000 100 -";
+			break;
 		case 6:
-			mes "[Titicupe]";
-			mes "Chef Hat ?";
-			mes "Piece Of Cake 120";
-			mes "White Dyestuffs 1";
-			mes "Feather 330";
-			mes "Dragon Scale 450";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "厨师帽？";
+			mes "^3355FF小蛋糕^000000 120";
+			mes "^3355FF白色染料^000000 1";
+			mes "^3355FF柔毛^000000 330";
+			mes "^3355FF龙鳞^000000 450";
+			break;
 		case 7:
-			mes "[Titicupe]";
-			mes "Candle ?";
-			mes "Bomb Wick 1";
-			mes "Matchstick 50";
-			mes "Royal Jelly 100";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "蜡烛头饰？";
+			mes "^3355FF火线头饰^000000 1";
+			mes "^3355FF火柴^000000 50";
+			mes "^3355FF蜂胶^000000 100";
+			break;
 		case 8:
-			mes "[Titicupe]";
-			mes "Cake Hat ?";
-			mes "Candy 10";
-			mes "Candy Cane 5";
-			mes "Well Baked Cookie 15";
-			mes "Piece Of Cake 20";
-			mes "steel 10";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "蛋糕帽？";
+			mes "^3355FF糖果^000000 10";
+			mes "^3355FF柺杖糖^000000 5";
+			mes "^3355FF姜饼^000000 15";
+			mes "^3355FF小蛋糕^000000 20";
+			mes "^3355FF钢铁^000000 10";
+			break;
 		case 9:
-			mes "[Titicupe]";
-			mes "Ask me any time";
-			mes " Actually you know?";
-			mes "'Genius' knows everything ";
-			mes "My brain is number one";
-			mes "in the whole universe!";
-			mes "Just So Goooooood!";
-			goto L_end;
+			mes "[堤堤酷飞]";
+			mes "不管什么时候都可以问我";
+			mes "'天才' 是";
+			mes "什么事都知道啊";
+			mes "我的头脑";
+			mes "在这世界上最优秀的!";
+			mes "就是 . 这么好 !";
+			break;
 		}
+		next;
+		mes "[堤堤酷飞]";
+		mes "啊，我是天才啊";
+		mes "哇哇太好了";
+		mes "哼哼哼";
+		mes "哼哼哼哼哼哼";
+		close;
 	case 3:
-		goto L_end2;
+		mes "[堤堤酷飞]";
+		mes "我是天才啊 天才 !!";
+		mes "在这世界上 !";
+		mes "能创造出这么好的物品";
+		mes "能出自于我的头脑";
+		mes "别人一定感到惊讶啊";
+		mes "哈 - 哈 - 哈";
+		next;
+		mes "[堤堤酷飞]";
+		mes "- 玩具工厂老板 -";
+		mes "- 堤堤酷飞 -";
+		mes "- 用手，指着 -";
+		mes "- 小雪人 -";
+		mes "- 自动贩卖机时 -";
+		mes "- 他会不专心的 -";
+		mes "- 跳来跳去 -";
+		close;
 	}
-
-L_end:
-	next;
-	mes "[Titicupe]";
-	mes "So happy!!";
-	mes "I'm a genius";
-	mes "Ho ho ho";
-	mes "Ho ho ho ho";
-	close;
-L_end2:
-	mes "[Titicupe]";
-	mes "I'm a genius!!";
-	mes "The world will suprise!";
-	mes "for my magnificient creation";
-	mes "of these beautiful";
-	mes "and so cool items";
-	mes "Ke-ke-ke";
-	next;
-	mes "- Toy factory manager -";
-	mes "- Titicupe is jumping -";
-	mes "- around and pointing -";
-	mes "- the vending machine -";
-	mes "- snowman with very -";
-	mes "- uproarious attitude-";
-	mes "- and he looks very very happy -";
-	close;
 }
 
-xmas,115,297,3	script	Vending Machine	111,{
-	mes "[Audi]";
-	mes "- Exciting item vending machine. -";
-	mes "- Thanks to find Audi. -";
-	mes "- Select a item that you want -";
-	mes "- and -";
-	mes "- Put required item to -";
-	mes "- my mouth. -";
+xmas,115,297,3	script	自动贩卖机	111,{
+	mes "[奥迪]";
+	mes "- 祝你快乐 -";
+	mes "- 道具自动贩卖机 -";
+	mes "- 请选择需要的商品 -";
+	mes "- 然后放入道具 -";
+	mes "- 最后我会给你你需要的道具 -";
 	next;
-	switch( select( "^FF3355- notice (must read) -^000000", "Raccoon Hat", "Spore Hat", "Wonder Nutshell", "Rainbow Egg Shell", "Blush", "Hat Of Cooker", "Candle", "Cake Hat", "Cancel")) {
+	switch( select( "^FF3355- 注意事项（必读） -^000000:狸猫帽:魔菇帽:神秘的水果皮帽:蓝白蛋壳帽:红晕:厨师帽:蜡烛头饰:蛋糕帽:取消")) {
 	case 1:
-		mes "[Audi]";
-		mes "Hi~ !";
-		mes "I need to tell you";
-		mes "one important thing";
-		mes "This vending mashine is";
-		mes "not equipted to differentiate";
-		mes "special items and ordinary item";
+		mes "[奥迪]";
+		mes "叮当！";
+		mes "我讲一个";
+		mes "注意事项好了";
+		mes "本自动贩卖机";
+		mes "把一般装备物品和";
+		mes "客人们特别";
 		next;
-		mes "[Audi]";
-		mes "So If you use item that";
-		mes "^FF3355already applied valuable";
-		mes "Monster card in it^000000 or";
+		mes "[奥迪]";
+		mes "给的物品";
+		mes "不会做";
+		mes "分别";
+		mes "的程式";
+		mes "换句话说，^FF5533有插着好的^000000";
+		mes "^FF5533装备卡片^000000 或是";
 		next;
-		mes "[Audi]";
-		mes "^FF3355high level of";
-		mes "forged items^000000 will";
-		mes "^3355FFtreated as normal";
-		mes "item^000000 so. When you";
-		mes "try to exchange + generate item";
-		mes "Please put away valiable items";
+		mes "[奥迪]";
+		mes "^FF5533完成较高^000000";
+		mes "^FF5533精炼的物品^000000";
+		mes "^3355FF它会当做^000000";
+		mes "^3355FF一般物品处理^000000";
+		mes "所以当把物品交换 + 制作时";
+		mes "请把贵重的物品";
 		next;
-		mes "[Audi]";
-		mes "to Kafre warehouse";
-		mes "or seperate from";
-		mes "your body.";
-		mes "This is very important.";
-		mes "Because if when you use";
-		mes "this vending machine and";
+		mes "[奥迪]";
+		mes "交给卡普拉服务处";
+		mes "或是拜托";
+		mes "借放在其它地方";
+		mes "假如拿着贵重物品";
+		mes "被自动贩卖机";
 		next;
-		mes "[Audi]";
-		mes "your valiable items";
-		mes "have used by vending machine.";
-		mes "There will be no";
-		mes "refund and recover";
-		mes "to that item.";
+		mes "[奥迪]";
+		mes "程式误判";
+		mes "被抢走时 ..";
+		mes "本自动贩卖机";
+		mes "对这损失";
+		mes "不负任何责任";
 		next;
-		mes "[Audi]";
-		mes "Have a good time";
-		mes "Thank you";
+		mes "[奥迪]";
+		mes "祝你有个愉快的时间";
+		mes "谢谢";
 		close;
 	case 2:
 		if (countitem(2213) > 0 && countitem(1036) > 19 && countitem(7012) > 199 && countitem(7065) > 299) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 2213, 1; //Kitty Band
-			delitem 1036, 20; //Dragon Scale 
-			delitem 7012, 200; //Tough Scalelike Stem
-			delitem 7065, 300; //Sea-Otter Fur
-			getitem 5033, 1; //Raccoon Hat
-			callfunc "Vending Machine","finish";
+			delitem 2213, 1; //猫耳发圈
+			delitem 1036, 20; //龙鳞 
+			delitem 7012, 200; //强韧鳞梗
+			delitem 7065, 300; //海獭的皮革
+			getitem 5033, 1; //狸猫帽
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 3:
 		if (countitem(7033) > 849 && countitem(7068) > 299 && countitem(1015) > 0) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 7033, 850; //Poison Spore
-			delitem 7068, 300; //Burnt Tree
-			delitem 1015, 1; //Tongue
-			getitem 5029, 1; //Spore Hat
-			callfunc "Vending Machine","finish";
+			delitem 7033, 850; //毒魔菇芽孢
+			delitem 7068, 300; //燃烧一半的木材
+			delitem 1015, 1; //细长舌头
+			getitem 5029, 1; //魔菇帽
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 4:
 		if (countitem(5037) > 0 && countitem(7064) > 499) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 5037, 1; //Nutshell
-			delitem 7064, 500; //Wing of Dragonfly
-			getitem 5050, 1; //Wonder Nutshell
-			callfunc "Vending Machine","finish";
+			delitem 5037, 1; //水果皮帽
+			delitem 7064, 500; //蜻蜓的翅膀
+			getitem 5050, 1; //神秘的水果皮帽
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 5:
 		if (countitem(5015) > 0 && countitem(978) > 0 && countitem(7030) > 49) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 5015, 1; //Egg Shell
-			delitem 978, 1; //Cobaltblue Dyestuff
-			delitem 7030, 50; //Claw of Desert Wolf
-			getitem 5039, 1; //Rainbow Eggshell
-			callfunc "Vending Machine","finish";
+			delitem 5015, 1; //蛋壳帽
+			delitem 978, 1; //蓝色染料
+			delitem 7030, 50; //沙漠之狼之指甲
+			getitem 5039, 1; //蓝白蛋壳帽
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 6:
 		if (countitem(7047) > 99) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 7047, 100; //Alice's Apron
-			getitem 5040, 1; //Blush
-			callfunc "Vending Machine","finish";
+			delitem 7047, 100; //爱丽丝的围裙
+			getitem 5040, 1; //红晕
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 7:
 		if (countitem(539) > 119 && countitem(982) > 0 && countitem(949) > 329 && countitem(1036) > 449) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 539, 120; //Piece of Cake
-			delitem 982, 1; //White Dyestuff
-			delitem 949, 330; //Feather
-			delitem 1036, 450; //Dragon Scale
-			getitem 5026, 1; //Chef Hat
-			callfunc "Vending Machine","finish";
+			delitem 539, 120; //小蛋糕
+			delitem 982, 1; //白色染料
+			delitem 949, 330; //柔毛
+			delitem 1036, 450; //龙鳞
+			getitem 5026, 1; //厨师帽
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 8:
 		if (countitem(2279) > 0 && countitem(7035) > 49 && countitem(526) > 99) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 2279, 1; //Bomb Wick
-			delitem 7035, 50; //Matchstick
-			delitem 526, 100; //Royal Jelly
-			getitem 5028, 1; //Candle
-			callfunc "Vending Machine","finish";
+			delitem 2279, 1; //火线头饰
+			delitem 7035, 50; //火柴
+			delitem 526, 100; //蜂胶
+			getitem 5028, 1; //蜡烛头饰
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 9:
 		if (countitem(529) > 9 && countitem(530) > 4 && countitem(538) > 14 && countitem(539) > 19 && countitem(999) > 9) {
-			callfunc "Vending Machine","good";
+			callfunc "贩卖机","good";
 			next;
-			delitem 529, 10; //Candy
-			delitem 530, 5; //Candy Cane
-			delitem 538, 15; //Well-baked Cookie
-			delitem 539, 20; //Piece of Cake
-			delitem 999, 10; //Steel
-			getitem 5024, 1; //Cake Hat
-			callfunc "Vending Machine","finish";
+			delitem 529, 10; //糖果
+			delitem 530, 5; //柺杖糖
+			delitem 538, 15; //姜饼
+			delitem 539, 20; //小蛋糕
+			delitem 999, 10; //钢铁
+			getitem 5024, 1; //蛋糕帽
+			callfunc "贩卖机","finish";
 		}
-			callfunc "Vending Machine","bad";
+			callfunc "贩卖机","bad";
 	case 10:
-		mes "[Audi]";
-		mes "- Thank you so much -";
-		mes "- for use me -";
+		mes "[奥迪]";
+		mes "- 谢谢您 -";
+		mes "- 再次使用 -";
 		mes "- . . . . . -";
-		mes "- But you didn't use";
-		mes "- anything. hummmmm-";
-		mes "- Well see you again ! -";
+		mes "- 我也没使用 -";
+		mes "- 谢什么谢呀 -";
+		mes "- 真奇怪 ! -";
 		close;
 	}
 }
 
-function	script	Vending Machine	{
+function	script	贩卖机	{
 	if(getarg(0) == "good") {
-		mes "- You put items -";
-		mes "- that is required to -";
-		mes "- generate new item, -";
-		mes "- inside of me. hehe -";
+		mes "- 哔 哔 哔－ !! -";
+		mes " - 你把材料通通丢进去贩卖机里面 - ";
 		return;
 	} else if(getarg(0) == "bad") {
-		mes "[Audi]";
-		mes "- Piiiiii !! -";
-		mes "- Ups ! Ups ! -";
-		mes "- lack of items -";
-		mes "- Ups ! Ups ! -";
-		mes "Don't think I'm fool.";
+		mes "[奥迪]";
+		mes "- 哔 哔 哔－ !! -";
+		mes "- 呕嘶 ! 呕嘶 ! -";
+		mes "- 物品不够啊 -";
+		mes "- 呕嘶 ! 呕嘶 ! -";
+		mes "不要小看我噢";
 		close;
 	}
-		mes "[Audi]";
-		mes "- broook boom -";
-		mes "- boooom!! -";
-		mes "- weck weck !! -";
-		mes "- boom!! -";
-		mes "- ugh ! -";
-		if(countitem(5040) > 0) {
-			mes "- Wow . Blush !! -";
-			mes "- You are so cool -";
-			mes "- you know real fashion ! -";
-			mes "- ah so cute Blush -";
-			mes "- Wanna touch .. -";
-		}
-		mes "- Thanks for use! -";
-		close;
+	mes "[奥迪]";
+	mes "- broook boom -";
+	mes "- boooom!! -";
+	mes "- weck weck !! -";
+	mes "- boom!! -";
+	mes "- ugh ! -";
+	if(countitem(5040) > 0) {
+		mes "- Wow . 红晕 !! -";
+		mes "- You are so cool -";
+		mes "- you know real fashion ! -";
+		mes "- ah so cute 红晕 -";
+		mes "- Wanna touch .. -";
+	}
+	mes "- Thanks for use! -";
+	close;
 }
-

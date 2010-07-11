@@ -1,48 +1,28 @@
-//===== eAthena Script ======================================= 
-//= Quest NPCs related to Louyang
-//===== By: ================================================== 
-//= Evera and The eAthena Dev Team
-//===== Current Version: ===================================== 
-//= 1.9
-//===== Compatible With: ===================================== 
-//= eAthena 1.0
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= Soup Quest
-//= - Variable in use: che_tre (max 5)
-//= Doctor Quest
-//= - Variable in use: che_par (max 18)
-//= Poison King Quest 
-//= - Variable in use: ch_poison (max 20)
-//= Revolution Quest
-//= - Variable in use: QL_REVO (max 9)
-//===== Additional Comments: ================================= 
-//= 1.0 Initial Release [Evera]
-//= 1.1 Fixed double levelup bug [Lupus]
-//= 1.2 Added Revolution Quest. [SinSloth]
-//= 1.3 Fixed experience gains to match upcoming rate adjustments. [SinSloth]
-//= 1.4 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
-//= 1.5 Fixed bad NPC header data to comply with rev. 11603. [L0ne_W0lf]
-//= 1.6 Rescripted Soup, Doctor, and Poison King quests [L0ne_W0lf]
-//=	to Aegis 10.3 standards. Attempted to save current
-//=	quest progress from the old scripts.
-//= 1.7 Added missing checkweights. And corrected [L0ne_W0lf]
-//=	a typo in Poison King quest.
-//= 1.8 Bug fixes. (bugreport:1025 bugreport:1062) [L0ne_W0lf]
-//= 1.9 Bug fixes/Typos. [Paradox924X]
-//============================================================ 
+//===================================
+// [冥] The PlutoEA Project [王]
+// http://opensvn.csie.org/PlutoEA
+// ---------------------------------
+// - 龙之城 洛阳 地区任务脚本 - 
+//===================================
+// 版本：2.2
+//===================================
+//= * 四龙转入汤
+//= * 召还丹
+//= * 毒药王
+//= * 革命运动
+//===================================
 
-// Soup Quest
-//============================================================
-lou_in02,53,174,7	script	Employee#1	822,6,62,{
+// 四龙转入汤
+//===================================
+lou_in02,53,174,7	script	服务生#1	822,6,62,{
 	if (gettime(3) >= 10 && gettime(3) < 22) {
-		mes "[Chang Pai]";
-		mes "Welcome, welcome!";
-		mes "We are ready to serve you~!";
-		mes "Now, go ahead and go upstairs~!";
+		mes "[昌派]";
+		mes "啊啊! 客人~~~~ 欢迎光临!";
+		mes "有很多很多位子喔!";
+		mes "来! 来! 请上2楼~";
 		close;
 	}
-	mes "[Chang Pai]";
+	mes "[昌派]";
 	mes "^666666*Yawn...*^000000";
 	close;
 
@@ -50,7 +30,7 @@ OnTouch:
 	if (ch_tre == 2 || ch_tre == 3) {
 		if (gettime(3) >= 10 && gettime(3) < 14) {
 			if (rand(1,10) < 9) {
-				mes "[Chang Pai]";
+				mes "[昌派]";
 				mes "Wait, who are you?!";
 				mes "Put that down and get";
 				mes "of out here right now!";
@@ -63,7 +43,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 14 && gettime(3) < 17) {
 			if (rand(1,10) < 10) {
-				mes "[Chang Pai]";
+				mes "[昌派]";
 				mes "Wait, who are you?!";
 				mes "Put that down and get";
 				mes "of out here right now!";
@@ -76,7 +56,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 17 && gettime(3) < 21) {
 			if (rand(1,10) < 6) {
-				mes "[Chang Pai]";
+				mes "[昌派]";
 				mes "Wait, who are you?!";
 				mes "Put that down and get";
 				mes "of out here right now!";
@@ -89,12 +69,12 @@ OnTouch:
 		}
 		else {
 			if (rand(1,10) < 5) {
-				mes "[Chang Pai]";
+				mes "[昌派]";
 				mes "^666666*Yawn...*^000000";
 				mes "So...";
 				mes "Sleepy...";
 				next;
-				mes "[Chang Pai]";
+				mes "[昌派]";
 				mes "Huh...?";
 				mes "Who are you!?";
 				mes "Hey, I got a thief here!";
@@ -109,24 +89,24 @@ OnTouch:
 	end;
 }
 
-lou_in02,76,181,3	script	Employee#2	822,2,2,{
+lou_in02,76,181,3	script	服务生#2	822,2,2,{
 	if (gettime(3) >= 10 && gettime(3) < 22) {
-		mes "[Huang Jia Xian]";
+		mes "[黄家善]";
 		mes "Welcome~";
 		mes "Sorry for making you wait. If you wish to rest, please go upstairs.";
 		next;
-		mes "[Huang Jia Xian]";
+		mes "[黄家善]";
 		mes "Recently, many tourists are visiting Louyang and although business is great, we're now";
 		mes "busier than ever.";
 		next;
-		mes "[Huang Jia Xian]";
+		mes "[黄家善]";
 		mes "^666666*Sigh...*^000000";
 		mes "I don't even";
 		mes "have time to eat.";
 		mes "I'm starving...!";
 		close;
 	}
-	mes "[Huang Jia Xian]";
+	mes "[黄家善]";
 	mes "Ehhhh...";
 	mes "Forgive me...";
 	mes "....................";
@@ -137,7 +117,7 @@ OnTouch:
 	if (ch_tre == 2 || ch_tre == 3) {
 		if (gettime(3) >= 10 && gettime(3) < 14) {
 			if (rand(1,10) < 9) {
-				mes "[Huang Jia Xian]";
+				mes "[黄家善]";
 				mes "What the...?";
 				mes "Hey, what";
 				mes "are you doing?";
@@ -151,7 +131,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 14 && gettime(3) < 17) {
 			if (rand(1,10) < 10) {
-				mes "[Huang Jia Xian]";
+				mes "[黄家善]";
 				mes "What the...?";
 				mes "Hey, what";
 				mes "are you doing?";
@@ -165,7 +145,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 17 && gettime(3) < 22) {
 			if (rand(1,10) < 6) {
-				mes "[Huang Jia Xian]";
+				mes "[黄家善]";
 				mes "What the...?";
 				mes "Hey, what";
 				mes "are you doing?";
@@ -179,11 +159,11 @@ OnTouch:
 		}
 		else {
 			if (rand(1,10) < 5) {
-				mes "[Huang Jia Xian]";
+				mes "[黄家善]";
 				mes "*Yawn...*";
 				mes "So very tired...";
 				next;
-				mes "[Huang Jia Xian]";
+				mes "[黄家善]";
 				mes "Hey, what are you";
 				mes "doing here? Are you";
 				mes "a Thief?! Somebody help!";
@@ -199,10 +179,10 @@ OnTouch:
 	end;
 }
 
-lou_in02,61,175,3	script	Employee#3	818,2,2,{
+lou_in02,61,175,3	script	服务生#3	818,2,2,{
 	if (gettime(3) >= 10 && gettime(3) < 22) {
 		if (ch_tre == 5) {
-			mes "[Ya Hua]";
+			mes "[阿花]";
 			mes "Welcome, welcome!";
 			mes "We have many rooms";
 			mes "available! Why don't";
@@ -210,22 +190,20 @@ lou_in02,61,175,3	script	Employee#3	818,2,2,{
 			mes "Ha ha ha!";
 			next;
 			emotion e_swt;
-			mes "[Ya Hua]";
+			mes "[阿花]";
 			mes "Oh, if by any chance you came to try the Dragon Soup, I'm sorry, but it's no longer availalbe.";
 			next;
-			mes "[Ya Hua]";
+			mes "[阿花]";
 			mes "But don't be too disappointed, we serve many other delicious foods that you can choose from!";
 			close;
 		}
-		mes "[Ya Hua]";
-		mes "Welcome, welcome!";
-		mes "We have many rooms";
-		mes "available! Why don't";
-		mes "you go upstairs?";
-		mes "Ha ha ha!";
+		mes "[阿花]";
+		mes "啊啊! 客人~~~~ 欢迎光临!";
+		mes "还有很多位子呢~";
+		mes "来! 来! 请上2楼~";
 		close;
 	}
-	mes "[Ya Hua]";
+	mes "[阿花]";
 	mes "^666666*Yawn...*^000000";
 	close;
 
@@ -233,7 +211,7 @@ OnTouch:
 	if (ch_tre == 2 || ch_tre == 3) {
 		if (gettime(3) >= 10 && gettime(3) < 14) {
 			if (rand(1,10) < 9) {
-				mes "[Ya Hua]";
+				mes "[阿花]";
 				mes "What do you think";
 				mes "you're doing here?!";
 				mes "Put that down and";
@@ -247,7 +225,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 14 && gettime(3) < 17) {
 			if (rand(1,10) < 10) {
-				mes "[Ya Hua]";
+				mes "[阿花]";
 				mes "What do you think";
 				mes "you're doing here?!";
 				mes "Put that down and";
@@ -261,7 +239,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 17 && gettime(3) < 22) {
 			if (rand(1,10) < 6) {
-				mes "[Ya Hua]";
+				mes "[阿花]";
 				mes "What do you think";
 				mes "you're doing here?!";
 				mes "Put that down and";
@@ -275,13 +253,13 @@ OnTouch:
 		}
 		else {
 			if (rand(1,10) < 5) {
-				mes "[Ya Hua]";
+				mes "[阿花]";
 				mes "^666666*Yawn...*^000000";
 				mes "Eyelids...";
 				mes "Getting...";
 				mes "Heavier...";
 				next;
-				mes "[Ya Hua]";
+				mes "[阿花]";
 				mes "Wait a sec...";
 				mes "Are you a Thief?!";
 				mes "Get out of here!!";
@@ -296,68 +274,70 @@ OnTouch:
 	end;
 }
 
-lou_in02,62,183,3	script	Chef#1-2	820,2,2,{
+lou_in02,62,183,3	script	厨师#1-2	820,2,2,{
 	if (ch_tre > 0 && ch_tre < 4) {
-		mes "[Wang Shi Long]";
-		mes "Hm? Aren't you a customer? I am Wang Shi Long, the chef of this restaurant.";
+		mes "[王沙隆]";
+		mes "嗯? 是客人吗?";
+		mes "我是这家店的厨师";
 		next;
-		mes "[Wang Shi Long]";
-		mes "My family has served food to Lord Bai Long for a long time. This restaurant is own by my family and I am the successor.";
+		mes "[王沙隆]";
+		mes "太守世世代代的餐饮， ";
+		mes "通常是由我们的祖先料理的呢!";
+		mes "这家店是我们家族的荣耀，而我是这家店的继承者! 喔呼~";
 		next;
-		mes "[Wang Shi Long]";
-		mes "Every dish my family cooks is counted among the most delicious food in Louyang.";
+		mes "[王沙隆]";
+		mes "我们店里的主力料理";
+		mes "四龙转入汤， ";
+		mes "连很挑食的太守";
+		mes "也喊着：特好啊~的程度， ";
+		mes "它的口味是一流呢!";
 		next;
-		mes "[Wang Shi Long]";
-		mes "Our Dragon Soup won especially high praise from our Lord Bai Long.";
+		mes "[王沙隆]";
+		mes "特别严选的新鲜及品质又好的材料，";
+		mes "使料理显的更加高级! 哈哈!";
 		next;
-		mes "[Wang Shi Long]";
-		mes "I'm also proud to tell you that my family only uses the freshest, highest quality ingredients for our dishes.";
-		next;
-		mes "[Wang Shi Long]";
-		mes "We have been popular in Louyang for hundreds and hundreds of years because of the quality of our gourmet food.";
-		next;
-		mes "[Wang Shi Long]";
-		mes "Recently, though, I've had a bad feeling that someone is trying to take over our restaurant...";
-		next;
-		mes "[Wang Shi Long]";
-		mes "Oh, well. Maybe I'm in a different mood because of some other reason. It's probably nothing.";
+		mes "[王沙隆]";
+		mes "托你的福，";
+		mes "我们店里这几百年来";
+		mes "都没遇到任何困难，";
+		mes "并享受着美好的现况!";
 		close;
 	}
 	else if (ch_tre > 3 && ch_tre < 6) {
-		mes "[Wang Shi Long]";
+		mes "[王沙隆]";
 		mes "^666666*Moans and Cries*^000000";
 		mes "I guess this is it...!";
 		mes "The end of my family's glory.";
 		mes "Someone stole the base broth";
 		mes "of my Dragon Soup!";
 		next;
-		mes "[Wang Shi Long]";
+		mes "[王沙隆]";
 		mes "What should I do, now?";
 		mes "Without Dragon Soup, my family's restaurant will now just be like all the others...";
 		close;
 	}
-	mes "[Wang Shi Long]";
+	mes "[王沙隆]";
 	mes "Hello, are you";
 	mes "one of our customers?";
-	mes "I am Wang Shi Long,";
+	mes "I am 王沙隆,";
 	mes "the chef of this";
 	mes "restaurant.";
 	next;
-	mes "[Wang Shi Long]";
+	mes "[王沙隆]";
 	mes "My family has served food";
 	mes "to Lord Bai Long for a long time. This restaurant has been handed down the family line, and I am the successor~";
 	next;
-	mes "[Wang Shi Long]";
+	mes "[王沙隆]";
 	mes "Our specialty dish, Dragon Soup, won especially high praise from Lord Bai Long, who is known for";
 	mes "his extremely discerning sense of taste.";
 	next;
-	mes "[Wang Shi Long]";
+	mes "[王沙隆]";
 	mes "I'm also proud to say that we cook with only the freshest and highest quality ingredients.";
 	next;
-	mes "[Wang Shi Long]";
+	mes "[王沙隆]";
 	mes "We've always been popular in Louyang for hundreds and hundreds of years because of our high quality gourmet cuisine.";
 	next;
-	mes "[Wang Shi Long]";
+	mes "[王沙隆]";
 	mes "In this dry and hot weather,";
 	mes "Dragon Soup is the best food for any appetite. I suggest that you try a bowl. You'll be quite pleased!";
 	close;
@@ -366,7 +346,7 @@ OnTouch:
 	if (ch_tre == 2 || ch_tre == 3) {
 		if (gettime(3) >= 10 && gettime(3) < 14) {
 			if (rand(1,10) < 9) {
-				mes "[Wang Shi Long]";
+				mes "[王沙隆]";
 				mes "Hey, what do you";
 				mes "think you're doing?!";
 				mes "Let go of that, and";
@@ -381,7 +361,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 14 && gettime(3) < 17) {
 			if (rand(1,10) < 10) {
-				mes "[Wang Shi Long]";
+				mes "[王沙隆]";
 				mes "Hey, what do you";
 				mes "think you're doing?!";
 				mes "Let go of that, and";
@@ -396,7 +376,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 17 && gettime(3) < 22) {
 			if (rand(1,10) < 6) {
-				mes "[Wang Shi Long]";
+				mes "[王沙隆]";
 				mes "Hey, what do you";
 				mes "think you're doing?!";
 				mes "Let go of that, and";
@@ -411,12 +391,12 @@ OnTouch:
 		}
 		else {
 			if (rand(1,10) < 5) {
-				mes "[Wang Shi Long]";
+				mes "[王沙隆]";
 				mes "^666666*Yawn...*^000000";
 				mes "Hm...?";
 				mes "Who's that?";
 				next;
-				mes "[Wang Shi Long]";
+				mes "[王沙隆]";
 				mes "Wait...!";
 				mes "What are you doing?!";
 				mes "G-Get out of here!";
@@ -546,7 +526,7 @@ lou_fild01,195,177,5	script	古炎宝#1-1	819,{
 		mes "Hey~";
 		mes "So how ya been, ya smooth criminal? You wanna visit that place again?";
 		next;
-		if (select("Sure, let's go~:Nah, maybe next time.") == 1) {
+		if (select("Sure, let's go~:Nah, maybe next time.")==1) {
 			mes "[古炎宝]";
 			mes "Alright~";
 			mes "Let's get";
@@ -733,10 +713,8 @@ lou_in02,50,185,5	script	Pot#1	111,{
 		close;
 	}
 	if (gettime(3) >= 10 && gettime(3) < 22) {
-		mes "[Chef]";
-		mes "Ah...!";
-		mes "Please, do not";
-		mes "touch the pots!";
+		mes "[厨师]";
+		mes "啊! 请勿触摸那里";
 		close;
 	}
 	mes "^3131FFBeneath the shadows,";
@@ -805,10 +783,8 @@ lou_in02,49,185,5	script	Pot#2	111,{
 		close;
 	}
 	if (gettime(3) >= 10 && gettime(3) < 22) {
-		mes "[Chef]";
-		mes "Ah...!";
-		mes "Please, do not";
-		mes "touch the pots!";
+		mes "[厨师]";
+		mes "啊! 请勿触摸那里";
 		close;
 	}
 	mes "^3131FFBeneath the shadows,";
@@ -816,49 +792,52 @@ lou_in02,49,185,5	script	Pot#2	111,{
 	close;
 }
 
-lou_in02,58,183,5	script	Chef Assistant#lou1	823,5,5,{
-	mes "[Jin Wei Ling]";
-	mes "I used to be";
-	mes "an enthusiastic";
-	mes "martial artist.";
+lou_in02,58,183,5	script	厨房助理#lou1	823,5,5,{
+	mes "[金唯英]";
+	mes "老实说过去我是个武术家，";
+	mes "虽然现在成了料理师，";
+	mes "不过我的心里总是活着武术人的灵魂";
 	next;
-	mes "[Jin Wei Ling]";
-	mes "Although I became an";
-	mes "assistant chef for a living, I always think of myself as a martial artist first.";
+	mes "[金唯英]";
+	mes "所以我正在做料理结合武术的研究，";
+	mes "像我们店里这么大的地方，";
+	mes "有时候客满时不但非常忙碌，";
+	mes "也非常的拥挤呢!";
 	next;
-	mes "[Jin Wei Ling]";
-	mes "So, I decided to reflect the spirit of the martial arts into my cooking. We are often very busy when there are many customers.";
+	mes "[金唯英]";
+	mes "像这时候-!!!";
+	mes "直接用武功的话，可以迅速的准备好材料，";
+	mes "哈哈，武术好棒喔~";
 	next;
-	mes "[Jin Wei Ling]";
-	mes "When we're busy, I can use my martial arts to cook cuisine much more quickly! Hahaha~ Martial arts can be very practical!";
+	specialeffect EF_BEGINSPELL3;
+	mes "[金唯英]";
+	mes "托啊-!!!!";
 	next;
-	specialeffect 55; //"Chef Assistant" EF_BEGINSPELL3
-	mes "[Jin Wei Ling]";
-	mes "Waaa-!!!!";
+	specialeffect EF_ENDURE;
+	mes "[金唯英]";
+	mes "托呵喔喔-!!!!!";
 	next;
-	specialeffect 11; //"Chef Assistant" EF_ENDURE
-	mes "[Jin Wei Ling]";
-	mes "Waaa Taaah-!!!!!";
+	specialeffect EF_SONICBLOW;
+	mes "[金唯英]";
+	mes "剁啊啊啊啊!!!!!!";
 	next;
-	specialeffect 121; //"Chef Assistant" EF_SONICBLOW
-	mes "[Jin Wei Ling]";
-	mes "Waaa...";
-	mes "Waaa Taaah-!!!!!";
-	next;
-	specialeffect 122; //"Chef Assistant" EF_SONICBLOWHIT
-	mes "^3355FF* Chop chop chop chop chop *^000000";
+	specialeffect EF_SONICBLOWHIT;
+	mes "- 滋嗒嗒嗒嗒嗒嗒嗒嗒喏 -";
 	next;
 	emotion e_no1;
-	mes "[Jin Wei Ling]";
-	mes "Hahahaha! Look these perfect vergetable slices! Muhahahaha!!";
-	mes "I will continue to hone my martial arts through cooking!";
+	mes "[金唯英]";
+	mes "呼呼呼~瞧瞧吧!!";
+	mes "毫无误差地切在菜板上的蔬菜!!";
+	mes "哇哈哈哈哈哈哈!!!!";
+	mes "我会一直研究推广，直到所有料理店的厨师，";
+	mes "都使用武术来做菜的那一天为止!! 加油!!";
 	close;
 
 OnTouch:
 	if (ch_tre == 2 || ch_tre == 3) {
 		if (gettime(3) >= 10 && gettime(3) < 14) {
 			if (rand(1,10) < 9) {
-				mes "[Jin Wei Ling]";
+				mes "[金唯英]";
 				mes "Wait! Who are you!";
 				mes "Put that pot down";
 				mes "and get out of";
@@ -872,7 +851,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 14 && gettime(3) < 17) {
 			if (rand(1,10) < 10) {
-				mes "[Jin Wei Ling]";
+				mes "[金唯英]";
 				mes "Wait! Who are you!";
 				mes "Put that pot down";
 				mes "and get out of";
@@ -886,7 +865,7 @@ OnTouch:
 		}
 		else if (gettime(3) >= 17 && gettime(3) < 22) {
 			if (rand(1,10) < 6) {
-				mes "[Jin Wei Ling]";
+				mes "[金唯英]";
 				mes "Wait! Who are you!";
 				mes "Put that pot down";
 				mes "and get out of";
@@ -902,128 +881,110 @@ OnTouch:
 	end;
 }
 
-lou_in02,80,173,3	script	Li Min#lou	746,{
+lou_in02,80,173,3	script	李敏#lou	746,{
 	if (ch_tre == 5) {
-		mes "[Li Min]";
+		mes "[李敏]";
 		mes "^666666*Sigh*^000000 I am so disappointed. I came all the way down here to taste the food! I can't believe they don't sell it anymore!";
 		next;
-		mes "[Li Min]";
+		mes "[李敏]";
 		mes "The worst part is that I'm already addicted to the taste! ^666666*Sob...*^000000";
 		close;
 	}
-	mes "[Li Min]";
-	mes "Well, I don't really";
-	mes "live here in Louyang.";
-	mes "Still, I come here often";
-	mes "enough to visit.";
+	mes "[李敏]";
+	mes "虽然我不是这村子的住民，";
+	mes "但无法忘记不久前吃过唯一那一次的料理，而再次的找上门了";
 	next;
-	mes "[Li Min]";
-	mes "I just returned";
-	mes "because I've got";
-	mes "a huge craving for the";
-	mes "food I tasted here";
-	mes "a while ago.";
+	mes "[李敏]";
+	mes "吃过一次就绝不会忘记，";
+	mes "那种在嘴里薄薄的散开并融化的甜感..";
+	mes "喀喔...那是什么呢~";
 	next;
-	mes "[Li Min]";
-	mes "For some reason, I can't forget it. I can't get it out of my mind!";
-	next;
-	mes "[Li Min]";
-	mes "The taste, the texture.";
-	mes "The sweetness, melting down into my mouth, and its tempting scent lingering on my lips...";
-	next;
-	mes "[Li Min]";
-	mes "Ummmmm...";
-	mes "Royal Jelly!";
-	mes "It makes my";
-	mes "mouth water~";
+	mes "[李敏]";
+	mes "对!!! 没错!! 那就是蜂胶，对，没错!没错!";
+	mes "喔呵呵~~ 越想嘴里的口水就越多了..";
 	close;
 }
 
-lou_in02,42,186,5	script	Liu Jia Lim#lou	816,{
+lou_in02,42,186,5	script	刘家林#lou	816,{
+	mes "[刘家林]";
+	mes "你知道这家店人气最旺的料理是什么吗?";
+	mes "就是四龙转入汤!";
+	mes "因为是拥有悠久历史的店，连细微的地方也非常用心";
+	next;
 	if (ch_tre == 5) {
-		mes "[Liu Jia Lim]";
+		mes "[刘家林]";
 		mes "Do you know what was this restaurant's best dish throughout all of its history? Dragon Soup!";
 		next;
 		emotion e_lv;
-		mes "[Liu Jia Lim]";
+		mes "[刘家林]";
 		mes "Its delicate taste comes from";
 		mes "a broth extracted from pure meat that does not contain any fat. So it's also a very popular diet food for the ladies.";
 		next;
-		mes "[Liu Jia Lim]";
+		mes "[刘家林]";
 		mes "I'm not sure what happened,";
 		mes "but people say this restaurant no longer sells Dragon Soup.";
 		mes "Was it because of the price...?";
 		close;
 	}
-	mes "[Liu Jia Lim]";
-	mes "Do you know what's the best dish at this restaurant? It's Dragon Soup! They've been selling it here for as long as this restaurant has been around.";
-	next;
-	mes "[Liu Jia Lim]";
-	mes "Its delicate taste comes from";
-	mes "a broth extracted from pure meat that does not contain any fat. So it's also a very popular diet food for the ladies.";
-	next;
-	mes "[Liu Jia Lim]";
-	mes "It's tasty and really good for your health. Why don't you order a bowl? I've never known anyone to taste Dragon Soup and not love it!";
+	mes "[刘家林]";
+	mes "虽然我很喜欢那细心做出来的口味，最主要是它的肉不老不硬， ";
+	mes "也会先把油挤过一次，是注重身材的小姐们的最爱呢!";
+	mes "有各种对身体有益的材料.. 一句话就是健康食品呢!";
 	close;
 }
 
-lou_in02,43,169,1	script	Jiang Rong#lou	827,{
-	mes "[Jiang Rong]";
-	mes "Dragon Soup is known for its spicy, yet sweet and refreshing taste.";
+lou_in02,43,169,1	script	张勇#lou	827,{
+	mes "[张勇]";
+	mes "四龙转入汤的人气";
+	mes "当然是在于那清爽香甜又微辣的口味，";
+	mes "而且加入很多有益的药材，";
+	mes "也是对健康非常好的食品呢!!";
 	next;
-	mes "[Jiang Rong]";
-	mes "It's made with all sorts of medicinal herbs, so it's good";
-	mes "for your health as well.";
+	mes "[张勇]";
+	mes "可以除掉身体上不需要的热量，";
+	mes "也可以畅通处处阻塞的气血，";
+	mes "会使新陈代谢顺畅，可以维持自然健康，就像个补药般食品!";
+	mes "喀哈哈!!";
 	next;
-	mes "[Jiang Rong]";
-	mes "Dragon Soup draws out the unnecessary heat created inside";
-	mes "the body and circulates the blood. So it helps optimize the body's functions and promotes longevity.";
-	next;
-	mes "[Jiang Rong]";
-	mes "I've eaten Dragon Soup regularly ever since I was young. Look at me, don't you think I look so healthy considering my age?";
+	mes "[张勇]";
+	mes "因为我年轻的时候常吃四龙转入汤的关系，";
+	mes "现在就算这个年纪也是个血气旺盛的老人家呢!";
+	mes "不是吗?";
 	close;
 }
 
 louyang,261,123,3	script	贼五平#lou	824,{
 	mes "[贼五平]";
-	mes "I don't feel good...";
-	mes "So... Totally out of it...";
-	next;
-	mes "[贼五平]";
-	mes "Oh, my aching body!";
-	mes "All my muscles are sore...";
-	mes "There's only one thing that could cure all of this agonizing... pain...";
+	mes "没什么胃口..是中暑了吗..";
+	mes "呵喔，好无力喔...";
+	mes "唉呀，我的头、腰、肩膀、膝盖啊...";
+	mes "这个时候，应该要吃那个呢...";
 	next;
 	emotion e_gasp;
 	mes "[贼五平]";
-	mes "Hey kid~!";
-	mes "You don't look like a local!";
-	mes "Why don't you follow the road ahead and check out the big restaurant?";
+	mes "喂，你不是这里的人吧？";
+	mes "顺着这条路上去的话，有家很大的酒店，";
+	mes "那家卖的食品是在这村子里最健康的养生食品呢";
 	next;
 	mes "[贼五平]";
-	mes "The soup that they sell there is probably the healthiest food you can ever find.";
+	mes "对你这种心身疲劳的人，是必备的食品呢！";
 	next;
 	mes "[贼五平]";
 	if (BaseLevel < 80) {
-		mes "I guess you could eat";
-		mes "some of that soup";
-		mes "for your health.";
+		mes "对你这种瘦巴巴的人，";
+	} else {
+		mes "对你这种心身疲劳的人，";
 	}
-	else {
-		mes "You seem to need";
-		mes "that soup to ease";
-		mes "the fatigue of your";
-		mes "body and mind.";
-	}
+	mes "是必备的食品呢！";
 	close;
 }
 
-louyang,174,150,5	script	Jiu Chi Ling#lou	815,{
+louyang,174,150,5	script	古嘉玲#lou	815,{
 	if (ch_tre == 5) {
-		mes "[Jiu Chi Ling]";
+		mes "[古嘉玲]";
 		mes "There's a strange rumor going around that the restaurant is no longer selling Dragon Soup...";
 		next;
-		mes "[Jiu Chi Ling]";
+		mes "[古嘉玲]";
 		mes "Do you think";
 		mes "my brother did";
 		mes "something bad again!?";
@@ -1031,20 +992,20 @@ louyang,174,150,5	script	Jiu Chi Ling#lou	815,{
 		mes "What am I supposed to do?!";
 		close;
 	}
-	mes "[Jiu Chi Ling]";
-	mes "I'm worried about my brother.";
-	mes "He's young, rebellious and doesn't listen to anybody...";
+	mes "[古嘉玲]";
+	mes "好担心我弟弟喔，";
+	mes "因为年纪还小，";
+	mes "而且正是叛逆时期，";
+	mes "说什么都不听呢";
 	next;
-	mes "[Jiu Chi Ling]";
-	mes "He just left the";
-	mes "house while he was";
-	mes "complaining about";
-	mes "that restaurant...";
+	mes "[古嘉玲]";
+	mes "刚刚也说村子的酒店，";
+	mes "怎样怎样的，";
+	mes "然后自己生气就离家出走了";
 	next;
-	mes "[Jiu Chi Ling]";
-	mes "^666666*Sigh~~*^000000";
-	mes "I'm not gonna let him";
-	mes "get away this time!";
+	mes "[古嘉玲]";
+	mes "唉呦! 真是的~~";
+	mes "这家伙一旦回来的话，一定要揍他一顿!";
 	close;
 }
 
@@ -3374,7 +3335,7 @@ lou_in02,123,39,4	script	Poison King#lou	824,{
 	}
 }
 
-lou_in02,253,45,0	script	Employee#poison	822,{
+lou_in02,253,45,0	script	服务生#poison	822,{
 	if (checkweight(1201,1) == 0) {
 		mes "^3355FF * Wait a minute! *";
 		mes "You're carrying too many items with you right now. Please put some of your things into Kafra Storage and try again.^000000";
@@ -3615,7 +3576,7 @@ lou_in02,253,45,0	script	Employee#poison	822,{
 		mes "Oh, forget about it.";
 		mes "I don't think I can ever";
 		mes "make you understand how I feel.";
-		specialeffect 11; //"Employee#poison" EF_ENDURE
+		specialeffect EF_ENDURE;
 		close2;
 		set ch_poison,6;
 		end;
@@ -3654,7 +3615,7 @@ lou_in02,253,45,0	script	Employee#poison	822,{
 			next;
 			mes "[Song Zhi Du]";
 			mes "You're still missing some of the items I need. I must have them all in order to finish making this poison!";
-			specialeffect 11; //"Employee#poison" EF_ENDURE
+			specialeffect EF_ENDURE;
 			close;
 		}
 		mes "[Song Zhi Du]";
@@ -3666,7 +3627,7 @@ lou_in02,253,45,0	script	Employee#poison	822,{
 		mes "10 Venom Canine,";
 		mes "10 Empty Potion,";
 		mes "30 Green Potion^000000.";
-		specialeffect 11; //"Employee#poison" EF_ENDURE
+		specialeffect EF_ENDURE;
 		close;
 	}
 	else if (ch_par > 9 && ch_poison == 8) {
@@ -3704,17 +3665,17 @@ lou_in02,253,45,0	script	Employee#poison	822,{
 			next;
 			mes "[Song Zhi Du]";
 			mes "Then, I add Green Herb extract, poison extracted from Bee Sting and a Large Jellopy into the liquid! Finally, I must heat them all!";
-			specialeffect 12; //"Employee#poison" EF_BEGINSPELL
+			specialeffect EF_BEGINSPELL;
 			next;
 			mes "[Song Zhi Du]";
 			mes "Finally, I have to carefully heat the mixture and collect it all into a Potion Bottle.";
-			specialeffect 125; //"Employee#poison" EF_ENCHANTPOISON
-			specialeffect 124; //"Employee#poison" EF_VENOMDUST
+			specialeffect EF_ENCHANTPOISON;
+			specialeffect EF_VENOMDUST;
 			next;
 			mes "[Song Zhi Du]";
 			mes "Now, I've got to do this just right. This is a very delicate procedure...";
 			next;
-			specialeffect 17; //"Employee#poison" EF_MAGNUMBREAK
+			specialeffect EF_MAGNUMBREAK;
 			emotion e_omg;
 			mes "[Song Zhi Du]";
 			mes "No!! I failed again! ^666666*Sigh...*^000000 And I spent a long time preparing all of those materials...";
@@ -3772,20 +3733,20 @@ lou_in02,253,45,0	script	Employee#poison	822,{
 				mes "[Song Zhi Du]";
 				mes "Then, I add Green Herb extract,";
 				mes "a poison extracted from Bee Sting and a Large Jellopy!";
-				specialeffect 12; //"Employee#poison" EF_BEGINSPELL
+				specialeffect EF_BEGINSPELL;
 				next;
 				mes "[Song Zhi Du]";
 				mes "Finally, I have to carefully heat the mixture and collect it all into a Potion Bottle.";
-				specialeffect 125; //"Employee#poison" EF_ENCHANTPOISON
-				specialeffect 124; //"Employee#poison" EF_VENOMDUST
+				specialeffect EF_ENCHANTPOISON;
+				specialeffect EF_VENOMDUST;
 				next;
 				mes "[Song Zhi Du]";
 				mes "*Phew...*";
 				mes "Did...";
 				mes "Did I make it?";
 				next;
-				specialeffect 20; //"Employee#poison" EF_PATTACK
-				specialeffect 53; //"Employee#poison" EF_POISONHIT
+				specialeffect EF_PATTACK;
+				specialeffect EF_POISONHIT;
 				emotion e_omg;
 				mes "[Song Zhi Du]";
 				mes "Hahaha~!";
@@ -3820,19 +3781,19 @@ lou_in02,253,45,0	script	Employee#poison	822,{
 			next;
 			mes "[Song Zhi Du]";
 			mes "Then I add Green Herb extract, a poison extracted from Bee Sting and a Large Jellopy!";
-			specialeffect 12; //"Employee#poison" EF_BEGINSPELL
+			specialeffect EF_BEGINSPELL;
 			next;
 			mes "[Song Zhi Du]";
 			mes "Then I must carefully heat the mixture, and gather it all into a potion bottle.";
-			specialeffect 125; //"Employee#poison" EF_ENCHANTPOISON
-			specialeffect 124; //"Employee#poison" EF_VENOMDUST
+			specialeffect EF_ENCHANTPOISON;
+			specialeffect EF_VENOMDUST;
 			next;
 			mes "[Song Zhi Du]";
 			mes "*Phew...*";
 			mes "Did...";
 			mes "Did I make it?";
 			next;
-			specialeffect 17; //"Employee#poison" EF_MAGNUMBREAK
+			specialeffect EF_MAGNUMBREAK;
 			emotion e_omg;
 			mes "[Song Zhi Du]";
 			mes "NO! I... I've failed again! And I spent a long time getting everything ready...";
@@ -4216,7 +4177,7 @@ lou_fild01,225,350,0	script	 #fire	139,{
 	end;
 
 OnClaymore:
-	specialeffect 106; //" #fire" EF_BLASTMINEBOMB
+	specialeffect EF_BLASTMINEBOMB;
 	end;
 }
 
@@ -4552,99 +4513,106 @@ lou_in01,99,144,4	script	Soldier#bailong4	825,{
 	close;
 }
 
-// Revolution Quest
+// 革命任务
 //===================================================================
-lou_in02,77,37,7	script	Hermit	824,{
-
-	if(!QL_REVOL)
-	{
-		mes "[Sun Mao]";
-		mes "Where there's a will,";
-		mes "there's a way. When we";
-		mes "work together, there's";
-		mes "nothing we cannot do.";
+lou_in02,77,37,7	script	隐居者#lou	824,{
+	if(!QL_REVOL) {
+		mes "[孙 马奥]";
+		mes "有志者事竟成，";
+		mes "每一个人团结协力，";
+		mes "想到光明的明天，没有做不到的事情!";
+		mes "要不要参加革命运动呢?";
 		next;
-		mes "[Sun Mao]";
-		mes "Will you lend us your power, and help us build a better future? Will you join our movement for social reform in Louyang?";
+		mes "[孙 马奥]";
+		mes "管他是本国人或是外国人都没有关系啊...";
+		mes "我的名字叫孙 马奥，为了洛阳的未来，";
+		mes "发誓连生命都可以岩阳的未来，";
+		mes "我梦想着有一天，";
+		mes "所有人都能过着平等的生活";
 		next;
-		mes "[Sun Mao]";
-		mes "It doesn't matter if you're a local or a foreigner. So long as we share the same goal of creating a better Louyang, where everyone is treated as an equal.";
+		mes "[孙 马奥]";
+		mes "请问有没有想要一起参与";
+		mes "我们的改革运动呢?";
+		mes "当然一开始接受是比较困难的，";
+		mes "暂时帮助我们的话，会很感激您的";
 		next;
-		mes "[Sun Mao]";
-		mes "My name...";
-		mes "is Sun Mao.";
-		mes "This invitation may be sudden, but I am a man of action. I see in your face that you too despise injustice.";
-		next;
-		switch( select( "What am I supposed to do?","I will join you!","Well, I'm just another tourist..." ) )
-		{
+		switch( select( "要怎么帮你呢?:我也参与改革:我只是一位观光客啦..." )) {
+		case 1:
+			mes "[孙 马奥]";
+			mes "首先现在先募集一些";
+			mes "志道同合的人吧，";
+			mes "然后在适当的时机准备好之后就起义，";
+			mes "我们的洛阳，以后要把全世界";
+			mes "都大大改变...!";
+			next;
+			mes "[孙 马奥]";
+			mes "目前还没有准备好，";
+			mes "为了起义所募集到的同志还不够啊，";
+			mes "在太守的监视下，";
+			mes "我们能活到今天也算是幸运啊";
+			next;
+			mes "[孙 马奥]";
+			mes "希望所有的人， ";
+			mes "都能了解我们的意思，";
+			mes "不过这是很难的事情，";
+			mes "我们也不是第一次对像你这样的外国人说明了，";
+			mes "不管是谁，我们都需要志道同合的人!";
+			close;
+		case 2:
+			mes "[孙 马奥]";
+			mes "欧欧，是老天帮助我们吗，";
+			mes "为我们送来新的同志，";
+			mes "真的是天地神明在保佑我们啊，";
+			mes "要和我们共执同一个理念，";
+			mes "真的谢谢你啊...";
+			next;
+			mes "[孙 马奥]";
+			mes "那么，你... 不，把同志你的名字";
+			mes "就写在血书上了...";
+			mes "在这之前我再问最后一次，";
+			mes "真的要加入我们吗?";
+			next;
+			switch( select( "No, wait!:I am 100% sure.")) {
 			case 1:
-				mes "[Sun Mao]";
-				mes "For now, we must recruit as many members as we can. When we're ready, we'll start a movement that will change Louyang, and even the world!";
-				next;
-				mes "[Sun Mao]";
-				mes "However, we currently do not have the manpower to carry out the plans we have laid out. We've been lucky the lord hasn't found us out yet.";
-				next;
-				mes "[Sun Mao]";
-				mes "I wish everyone would understand our intentions, but the people of this city are disunited. This is not the first time I have approached a foreigner for help...";
-				next;
-				mes "[Sun Mao]";
-				mes "I suppose you understand the urgency of our cause, and our need to gather others who see the merit of our goals!";
+				mes "[孙 马奥]";
+				mes "I understand if you need time to decide. If you do decide to join us, please return. Time is on our side, after all.";
 				close;
-
 			case 2:
-				mes "[Sun Mao]";
-				mes "Oh, God must be on my side today and has sent you to me. Thank you for making the big decision...";
+				set QL_REVOL,1;
+				mes "[孙 马奥]";
+				mes strcharinfo(0)+ "...!";
+				mes "Your name is now engraved on this bloody pledge board. We will fight together to the death for Louyang's future!";
 				next;
-				mes "[Sun Mao]";
-				mes "I shall then engrave your name";
-				mes "on this bloody pledge board. But before I do so, I shall ask once more. Do you truly wish to join us, through pain and bloodshed?";
-				next;
-				switch( select( "No, wait!","I am 100% sure." ) )
-				{
-					case 1:
-						mes "[Sun Mao]";
-						mes "I understand if you need time to decide. If you do decide to join us, please return. Time is on our side, after all.";
-						close;
-
-					case 2:
-						set QL_REVOL,1;
-						mes "[Sun Mao]";
-						mes strcharinfo(0)+ "...!";
-						mes "Your name is now engraved on this bloody pledge board. We will fight together to the death for Louyang's future!";
-						next;
-						getpartymember(getcharid(1));
-						set @partymember,$@partymembercount;
-						if (getpartyleader(getcharid(1),1) == getcharid(0) || !@partymember)
-						{
-							mes "[Sun Mao]";
-							mes "Now, the most important thing for our cause is to gather more recruits and increase our numbers. Please find others who will join us in our fight.";
-							next;
-							mes "[Sun Mao]";
-							mes "However, as to not arouse suspicion, bring only one new recruit at a time. Also, we suggest not to bring a friend in a party with you.";
-							next;
-							mes "[Sun Mao]";
-							mes "Now, I will wait for you here. Go forth and find others who wish for a better future for Louyang!";
-							close;
-						}
-						mes "[Sun Mao]";
-						mes "Please assist the people who fight behind you. As more are gathered, one of our comrades will inform you of further instructions.";
-						close;
+				getpartymember(getcharid(1));
+				set @partymember,$@partymembercount;
+				if (getpartyleader(getcharid(1),1) == getcharid(0) || !@partymember) {
+					mes "[孙 马奥]";
+					mes "Now, the most important thing for our cause is to gather more recruits and increase our numbers. Please find others who will join us in our fight.";
+					next;
+					mes "[孙 马奥]";
+					mes "However, as to not arouse suspicion, bring only one new recruit at a time. Also, we suggest not to bring a friend in a party with you.";
+					next;
+					mes "[孙 马奥]";
+					mes "Now, I will wait for you here. Go forth and find others who wish for a better future for Louyang!";
+					close;
 				}
-
-			case 3:
-				mes "[Sun Mao]";
-				mes "Are you...? I see, you may leave now. Do not reveal what you have seen or heard in this place.";
-				next;
-				mes "[Sun Mao]";
-				mes "If you're a real tourist, you do not want to get involved in our business, one way or another.";
+				mes "[孙 马奥]";
+				mes "Please assist the people who fight behind you. As more are gathered, one of our comrades will inform you of further instructions.";
 				close;
+			}
+		case 3:
+			mes "[孙 马奥]";
+			mes "是这样子吗..好吧，就进去看看吧";
+			mes "在这边的所见所闻及所有的东西，";
+			mes "不要让任何人知道，";
+			mes "假如真的以是观光目的来的话，";
+			mes "应该不会有时间想要了解我们的问题";
+			close;
 		}
 	}
-	else if(getpartyleader(getcharid(1),2) == getcharid(0))
-	{
-		if(QL_REVOL == 9)
-		{
-			mes "[Sun Mao]";
+	else if(getpartyleader(getcharid(1),2) == getcharid(0)) {
+		if(QL_REVOL == 9) {
+			mes "[孙 马奥]";
 			mes "Once again,";
 			mes "thank you for";
 			mes "your trouble.";
@@ -4653,303 +4621,267 @@ lou_in02,77,37,7	script	Hermit	824,{
 		}
 		getpartymember(getcharid(1));
 		set @partymember,$@partymembercount;
-		if(QL_REVOL < 8)
-		{
-			if(@partymember == QL_REVOL +1)
-			{
-				if(@partymember != 8)
-				{
+		if(QL_REVOL < 8) {
+			if(@partymember == QL_REVOL +1) {
+				if(@partymember != 8) {
 					set QL_REVOL,QL_REVOL +1;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "Oh, you brought a new comrade! Welcome. Please help your friend understand our intentions before joining us.";
 					next;
-					mes "[Sun Mao]";
-					switch(QL_REVOL)
-					{
-						case 2:
-							mes "Please bring another friend that both of you can trust. Remember, add one person at a time into your party.";
-							next;
-							mes "[Sun Mao]";
-							mes "Otherwise, other people may learn of what we are doing, and that will lead to trouble.";
-							close;
-
-						case 3:
-							mes "The three of you may all move together for our cause. Please try to find another recruit to be your fourth member, invite him to your party and bring him to this place.";
-							close;
-
-						case 4:
-							mes "Ah, now there are four of you. However, we must continue to strengthen our ranks at a cautious pace. Please go and find one new recruit, and only one, to add to your party.";
-							close;
-
-						case 5:
-							mes "Now, there are five of you. Needless to say, we still require more manpower. Please go out and seek another new member for our cause. Remember, only add one more person to your party and return to me.";
-							close;
-
-						case 6:
-							mes "There are now six of you. So far, so good. Please go forth and find just one more person to add to your party and bring him to me so that we may recruit him.";
-							close;
-
-						case 7:
-							mes "Now, there are seven of you, but we still lack the manpower we need. Please go forth and seek out one, and only one, more person to add to your party and then return to me.";
-							close;
+					mes "[孙 马奥]";
+					switch(QL_REVOL) {
+					case 2:
+						mes "Please bring another friend that both of you can trust. Remember, add one person at a time into your party.";
+						next;
+						mes "[孙 马奥]";
+						mes "Otherwise, other people may learn of what we are doing, and that will lead to trouble.";
+						close;
+					case 3:
+						mes "The three of you may all move together for our cause. Please try to find another recruit to be your fourth member, invite him to your party and bring him to this place.";
+						close;
+					case 4:
+						mes "Ah, now there are four of you. However, we must continue to strengthen our ranks at a cautious pace. Please go and find one new recruit, and only one, to add to your party.";
+						close;
+					case 5:
+						mes "Now, there are five of you. Needless to say, we still require more manpower. Please go out and seek another new member for our cause. Remember, only add one more person to your party and return to me.";
+						close;
+					case 6:
+						mes "There are now six of you. So far, so good. Please go forth and find just one more person to add to your party and bring him to me so that we may recruit him.";
+						close;
+					case 7:
+						mes "Now, there are seven of you, but we still lack the manpower we need. Please go forth and seek out one, and only one, more person to add to your party and then return to me.";
+						close;
 					}
 				}
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "Great work, you've brought another new comrade! Welcome! Please explain our goals and the righteousness of our cause to our new friend so that he may fully join us.";
 				next;
-				if(BaseLevel < 50)
-				{
-					mes "[Sun Mao]";
+				if(BaseLevel < 50) {
+					mes "[孙 马奥]";
 					mes "It is almost time to take the action...";
 					next;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "I recognize your pledge to fight for us, but I fear that you are not yet ready for the task I have available for you.";
 					next;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "However, we still have time. Go out and train with the party members you have gathered to gain more experience.";
 					next;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "Together, all of you will be able to train faster than if you were to go train alone. Come back when you feel that you are ready for this task.";
 					close;
 				}
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "At long last, there are eight of you. Now, I believe there is among manpower amongst you to carry out this mission. Please listen carefully.";
 				next;
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "The martial arts organizations of Louyang, as you may well know, have been divided between those that fight for justice, and those that serve evil purposes.";
 				next;
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "Recently, some of the evil organizations have conspired with corrupt government officials in the interest to expand their power.";
 				next;
-				mes "[Sun Mao]";
-				mes "These corrupt government officials have been suspicious of our gunpowder research and arrested our comrade, ^3355FFHao Chenryu^000000, our gunpowder expert, under the pretext of investigation.";
+				mes "[孙 马奥]";
+				mes "These corrupt government officials have been suspicious of our gunpowder research and arrested our comrade, ^3355FF郝 干柳^000000, our gunpowder expert, under the pretext of investigation.";
 				next;
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "Without him, we cannot continue the gunpowder research, or produce the gunpowder we'll need for our movement. We must contact him so that he may make gunpowder for us.";
 				next;
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "Unfortunately, many of us cannot contact him, as our identities are known to the officials. However, since you are new recruits, as well as Rune-Midgardians, they will not know how you are.";
 				next;
-				mes "[Sun Mao]";
-				mes "Your mission will be to deliver these chemicals to our comrade Hao Chenryu who is held captive by the government.";
+				mes "[孙 马奥]";
+				mes "Your mission will be to deliver these chemicals to our comrade 郝 干柳 who is held captive by the government.";
 				next;
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "Since flammable chemicals are not allowed inside government offices, you must keep them well hidden. If the chemicals are equally divided among the eight of you, we might succeed!";
 				next;
 				set QL_REVOL,8;
 				getitem 7068,8;
 				getitem 7096,8;
 				getitem 7004,8;
-				mes "[Sun Mao]";
+				mes "[孙 马奥]";
 				mes "There you go. Now, divide these materials equally among the eight of you. The eight of you must fully cooperate with each other, or our plan will fail. Understood?";
 				close;
-
 			}
-			else if(@partymember < QL_REVOL +1)
-			{
-				mes "[Sun Mao]";
-				switch(QL_REVOL)
-				{
-					case 1:
-						mes "You made a party. Now, why don't you go recruit more followers? For now, just add one more person, lest we arouse the suspicion of our enemies.";
-						close;
-
-					case 2:
-						mes "Hmmm...";
-						mes "Having trouble finding a third person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
-						close;
-
-					case 3:
-						mes "Hmmm...";
-						mes "Having trouble finding a forth person to add to your party? I understand that it's important that you find someone you can trust. Be careful and don't get caught!";
-						close;
-
-					case 4:
-						mes "Having trouble finding a fifth person to add to your party? I understand that it's important that you find someone you can trust. Be careful and don't get caught!";
-						close;
-
-					case 5:
-						mes "Having trouble finding a six person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
-						close;
-
-					case 6:
-						mes "Having trouble finding a seventh person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
-						close;
-
-					case 7:
-						mes "Hmmm...";
-						mes "Having trouble finding an eighth person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
-						close;
+			else if(@partymember < QL_REVOL +1) {
+				mes "[孙 马奥]";
+				switch(QL_REVOL) {
+				case 1:
+					mes "You made a party. Now, why don't you go recruit more followers? For now, just add one more person, lest we arouse the suspicion of our enemies.";
+					close;
+				case 2:
+					mes "Hmmm...";
+					mes "Having trouble finding a third person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
+					close;
+				case 3:
+					mes "Hmmm...";
+					mes "Having trouble finding a forth person to add to your party? I understand that it's important that you find someone you can trust. Be careful and don't get caught!";
+					close;
+				case 4:
+					mes "Having trouble finding a fifth person to add to your party? I understand that it's important that you find someone you can trust. Be careful and don't get caught!";
+					close;
+				case 5:
+					mes "Having trouble finding a six person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
+					close;
+				case 6:
+					mes "Having trouble finding a seventh person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
+					close;
+				case 7:
+					mes "Hmmm...";
+					mes "Having trouble finding an eighth person to add to your party? It's important that you find someone that is trustworthy. Be careful and don't get caught!";
+					close;
 				}
 			}
-			else
-			{
-				mes "[Sun Mao]";
+			else {
+				mes "[孙 马奥]";
 				mes "Oh no! You've brought more than one more person to join us! We can't do any recruiting now, it will bring unnecessary attention to our activities!";
 				next;
-				mes "[Sun Mao]";
-				switch(QL_REVOL)
-				{
-					case 1:	
-						mes "Please make sure that there is a total of two members in your party so that we can recruit your friend. I believe that will look natural.";
-						close;
-
-					case 2:
-						mes "At this stage in our plan, we cannot afford any unnecessary attention to our activities! Please make sure that there is a total of three members in your party so that we can recruit your friend.";
-						close;
-					case 3:
-						mes "Please make sure that there is a total of four members in your party so that we can recruit your friend. I believe that will look natural.";
-						close;
-					case 4:
-						mes "Please make sure that there is a total of five members in your party so that we can recruit your friend. I believe that will look natural.";
-						close;
-					case 5:
-					case 6:
-						mes "By this time, you should know that you should only bring one more person at a time. You know that it is crucial that we do not attract any undue attention before we can take action!";
-						close;
-					case 7:
-						mes "At this stage in our plan, we cannot afford any unnecessary attention to our activities! Please make sure that there is a total of eight members in your party so that we can recruit your friend.";
-						close;
+				mes "[孙 马奥]";
+				switch(QL_REVOL) {
+				case 1:	
+					mes "Please make sure that there is a total of two members in your party so that we can recruit your friend. I believe that will look natural.";
+					close;
+				case 2:
+					mes "At this stage in our plan, we cannot afford any unnecessary attention to our activities! Please make sure that there is a total of three members in your party so that we can recruit your friend.";
+					close;
+				case 3:
+					mes "Please make sure that there is a total of four members in your party so that we can recruit your friend. I believe that will look natural.";
+					close;
+				case 4:
+					mes "Please make sure that there is a total of five members in your party so that we can recruit your friend. I believe that will look natural.";
+					close;
+				case 5:
+				case 6:
+					mes "By this time, you should know that you should only bring one more person at a time. You know that it is crucial that we do not attract any undue attention before we can take action!";
+					close;
+				case 7:
+					mes "At this stage in our plan, we cannot afford any unnecessary attention to our activities! Please make sure that there is a total of eight members in your party so that we can recruit your friend.";
+					close;
 				}
 			}
 		}
-		else if(QL_REVOL == 8)
-		{
-			if(@partymember == 8)
-			{
-				if(countitem(7204) > 7)
-				{
-					mes "[Sun Mao]";
+		else if(QL_REVOL == 8) {
+			if(@partymember == 8) {
+				if(countitem(7204) > 7) {
+					mes "[孙 马奥]";
 					mes "Welcome back! I see that the mission has been successfully accomplished! Great work, men!";
 					next;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "Finally, we have a weapon to mete out severe retribution to our enemies, the corrupt government officials and the evil martial arts organizations! I appreciate your help, comrades.";
 					next;
 					delitem 7204,countitem(7204);
 					set ch_make,0;
 					set QL_REVOL,9;
 					getitem 668,8;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "Please take these funds and share them with your party members. I hope that all of you will lend your power to our cause once again.";
 					next;
-					mes "[Sun Mao]";
+					mes "[孙 马奥]";
 					mes "Once again, I thank you for your help. Now, go in safety.";
 					close;
 				}
-				mes "[Sun Mao]";
-				mes "Your mission is to take the materials I have given you and your party members, and to smuggle them to Hao Chenryu.";
+				mes "[孙 马奥]";
+				mes "Your mission is to take the materials I have given you and your party members, and to smuggle them to 郝 干柳.";
 				next;
-				mes "[Sun Mao]";
-				mes "Hao Chenryu is currently held captive by corrupt members of the government. Remember to divide the materials equally among your party members so that the officials do find them.";
+				mes "[孙 马奥]";
+				mes "郝 干柳 is currently held captive by corrupt members of the government. Remember to divide the materials equally among your party members so that the officials do find them.";
 				close;
 			}
-			mes "[Sun Mao]";
+			mes "[孙 马奥]";
 			mes "Huh, where are all your members? Come back to me with all of your recruits.";
 			next;
-			mes "[Sun Mao]";
+			mes "[孙 马奥]";
 			mes "Remember that you move together with your comrades. There isn't a traitor amongst you, is there?";
 			close;
 		}
 	}
-	else
-	{
-		if(ch_make == 1)
-		{
+	else {
+		if(ch_make == 1) {
 			set ch_make,0;
-			mes "[Sun Mao]";
+			mes "[孙 马奥]";
 			mes "Ah...";
 			mes "You have";
 			mes "returned!";
 			mes "Ha ha ha ha!";
 			next;
-			mes "[Sun Mao]";
+			mes "[孙 马奥]";
 			mes "I would like to commend you and your comrades for your excellent performance in the last mission. Come back anytime if you wish to be assigned to another task for our cause.";
 			close;
 		}
-		mes "[Sun Mao]";
+		mes "[孙 马奥]";
 		mes "Remember that the authoritative center of the party is its leader. The party members must act as one in order to accomplish their goals.";
 		close;
 	}
 }
 
-lou_in01,43,147,3	script	Gunpowder Expert	750,{
-
-	if(ch_make == 0)
-	{
+lou_in01,43,147,3	script	火药制作者#lou	750,{
+	if(ch_make == 0) {
 		getpartymember(getcharid(1));
 		set @partymember,$@partymembercount;
-		if(!QL_REVOL)
-		{
-			mes "[Hao Chenryu]";
-			mes "Who...";
-			mes "Are you?";
-			next;
-			mes "[Hao Chenryu]";
-			mes "I only trust my comrades in the cause for Louyang, so leave me alone. Death before oppression! Freedom for Louyang!";
+		if(!QL_REVOL) {
+			mes "[郝 干柳]";
+			mes "谁呀!你这家伙...";
+			mes "没有在血书上写名字，";
+			mes "我不想跟非志同道合的人一起讲话，";
+			mes "请你走开啦!";
 			close;
 		}
-		else if(@partymember != 8)
-		{
-			mes "[Hao Chenryu]";
+		else if(@partymember != 8) {
+			mes "[郝 干柳]";
 			mes "Mao told me that eight Rune-Midgardians";
 			mes "would be coming.";
 			mes "But what happened?";
 			mes "I'm confused...";
 			next;
-			mes "[Hao Chenryu]";
+			mes "[郝 干柳]";
 			mes "Mao's plans are flawless,";
 			mes "so I'm sticking to the scenario he's drawn up. You're either improvising needlessly, or you're not really my comrade...";
 			close;
 		}
-		else if(countitem(7068) && countitem(7096) && countitem(7004))
-		{
-			mes "[Hao Chenryu]";
+		else if(countitem(7068) && countitem(7096) && countitem(7004)) {
+			mes "[郝 干柳]";
 			mes "Ah, I see that Mao";
 			mes "has sent you. I'm sorry";
 			mes "for the trouble you've";
 			mes "gone through to smuggle";
 			mes "the chemicals to me, comrade.";
 			next;
-			mes "[Hao Chenryu]";
+			mes "[郝 干柳]";
 			mes "Please give me";
 			mes "a minute so that";
 			mes "I may quickly make";
 			mes "the gunpowder.";
 			next;
-			switch( select( "Make Gunpowder.","Cancel." ) )
-			{
-				case 1:
-					delitem 7068,1;
-					delitem 7096,1;
-					delitem 7004,1;
-					mes "[Hao Chenryu]";
-					mes "I don't want you to be caught if the soldiers inspect your goods. It will be better if one of you carry a Cart and hide the gunpowder in there.";
-					set ch_make,1;
-					getitem 7204,1;
-					close;
-
-				case 2:
-					mes "[Hao Chenryu]";
-					mes "Is...";
-					mes "Something wrong?!";
-					next;
-					mes "[Hao Chenryu]";
-					mes "I guess we must";
-					mes "be extra careful,";
-					mes "as there is much";
-					mes "surveillance in";
-					mes "this place.";
-					close;
+			switch( select( "Make Gunpowder.:Cancel." )) {
+			case 1:
+				delitem 7068,1;
+				delitem 7096,1;
+				delitem 7004,1;
+				mes "[郝 干柳]";
+				mes "I don't want you to be caught if the soldiers inspect your goods. It will be better if one of you carry a Cart and hide the gunpowder in there.";
+				set ch_make,1;
+				getitem 7204,1;
+				close;
+			case 2:
+				mes "[郝 干柳]";
+				mes "Is...";
+				mes "Something wrong?!";
+				next;
+				mes "[郝 干柳]";
+				mes "I guess we must";
+				mes "be extra careful,";
+				mes "as there is much";
+				mes "surveillance in";
+				mes "this place.";
+				close;
 			}
 		}
-		else
-		{
-			mes "[Hao Chenryu]";
+		else {
+			mes "[郝 干柳]";
 			mes "Hmmm...";
 			mes "It seems like";
 			mes "you're one of us.";
 			next;
-			mes "[Hao Chenryu]";
+			mes "[郝 干柳]";
 			mes "If you came for the";
 			mes "gunpowder, you should";
 			mes "get some chemcials";
@@ -4957,29 +4889,24 @@ lou_in01,43,147,3	script	Gunpowder Expert	750,{
 			close;
 		}
 	}
-	else if(countitem(7204))
-	{
-		mes "[Hao Chenryu]";
+	else if(countitem(7204)) {
+		mes "[郝 干柳]";
 		mes "Be careful!";
 		mes "It's easy for";
 		mes "gunpowder to be";
 		mes "found during the";
 		mes "inspection process!";
 		mes "Hide it well...!";
-		close;
 	}
-	else
-	{
-		mes "[Hao Chenryu]";
+	else {
+		mes "[郝 干柳]";
 		mes "I hope you bring the gunpowder to Mao safely. The next time you see him, please give him my thanks.";
-		close;
 	}
+	close;
 }
 
 lou_in01,45,138,3	script	Soldier#1	825,{
-
-	if(countitem(7204))
-	{
+	if(countitem(7204)) {
 		mes "[Soldier]";
 		mes "Hold on there!";
 		next;
@@ -4997,9 +4924,7 @@ lou_in01,45,138,3	script	Soldier#1	825,{
 }
 
 lou_in01,82,139,7	script	Soldier#2	825,{
-
-	if(countitem(7068) || countitem(7096) || countitem(7004))
-	{
+	if(countitem(7068) || countitem(7096) || countitem(7004)) {
 		mes "[Soldier]";
 		mes "I am sorry, but it is prohibited to enter with some of the products";
 		mes "you are carrying. I cannot let you in.";

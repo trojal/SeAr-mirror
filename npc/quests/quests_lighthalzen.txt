@@ -4,78 +4,29 @@
 // ---------------------------------
 // - 里希塔乐镇 地区任务脚本 - 
 //===================================
-// 版本：4.5
+// 版本：4.6
 //====================================
 
-lighthalzen,1,1,7	script	sneakAddSuber	-1,{
-OnInit:
-	set $@sneakchance, 3;	// chance of successful sneak(0 = never, 10 = always)
-	set $@sneakguard, 0;	// numbers of people who sneaked past guard
-	set $@threshold, 10;	// numbers of sneakers before mob appears
-	set $@mob, 50;		// Max respawn numbers of "mobsters"
-	set $@mobcount, 0;	// current numbers of "mobsters"
-	set $@lhz_alert, 0;	// Alert on Lighthalzen(0 = off, 1 = on)
-	set $@i, 0;
+// Gangster Alert [Aegis Conversion]
+//------------------------------------------------------------
+lighthalzen,1,1,0	script	Law Enforcement	-1,{
 	end;
 
-OnMinute00:
-OnMinute05:
-OnMinute10:
-OnMinute15:
-OnMinute20:
-OnMinute25:
-OnMinute30:
-OnMinute35:
-OnMinute40:
-OnMinute45:
-OnMinute50:
-OnMinute55:
-	if ($@lhz_alert == 0) set $@sneakguard, $@sneakguard + rand(1,3);
-	if ($@lhz_alert == 1) set $@sneakguard, $@sneakguard - 1;  // Monsters will die after 5~10 min. (sneakAddSuber)
-	end;
-}
-
-lighthalzen,1,1,7	script	AlertChk	-1,{
-OnInit:
+OnEnable:
+	mapannounce "lighthalzen","公民们注意了. 我们的安全受到威胁，城市处于流氓警报状态. 请立即寻求保护!",bc_map;
 	initnpctimer;
+	for (set .@i, 0; .@i < 30; set .@i, .@i + 1)
+		monster "lighthalzen",0,0,"Gangster",1592,1,"Law Enforcement::OnMyMobDead";
 	end;
 
-OnTimer10000:
-	if ($@sneakguard >= $@threshold) goto MakeMob;
-	if ($@sneakguard == 0) goto ClearMob;  // Monsters will die after 5~10 min. (sneakAddSuber)
-	setnpctimer 0;
-	end;
-	
-MakeMob:
-	if ($@lhz_alert == 1) goto ChkEnd;
-	set $@mobcount, $@mob;
-	mapannounce "lighthalzen","治安维持局: 由于目前村落治安不佳的缘故，请各位居民们注意安全，再说一次，请各位居民们要特别注意安全", 1;
-	for( set $@i, 0; $@i < $@mob; set $@i, $@i + 1 ) {
-		monster "lighthalzen",0,0,"Gangster",1592,1,"AlertChk::OnMobKilled";
-	}
-	set $@lhz_alert, 1;
-	set $@sneakguard, 2;   // Monsters will die after 5~10 min. (sneakAddSuber)
-	setnpctimer 0;
-	end;
-	
-ClearMob:
-	if ($@lhz_alert == 0) goto ChkEnd;
-	set $@mobcount, 0;
-	mapannounce "lighthalzen","治安维持局: 我们治安维持局经过一番努力后，终于把村落的异议份子都处决了，各位居民们可以放心了", 1;	
-	killmonster "lighthalzen","AlertChk::OnMobKilled";
-	set $@lhz_alert, 0;
-	set $@sneakguard, 0;
-	setnpctimer 0;
+OnTimer220000:
+	killmonster "lighthalzen","Law Enforcement::OnMyMobDead";
+	mapannounce "lighthalzen","公民们注意了. 我们的武装部门已经成功处理了紧急状况. 警报已经解除.",bc_map;
+	set $@Lhz_Gangster_Alert, 0;
+	stopnpctimer;
 	end;
 
-OnMobKilled:
-	set $@mobcount, $@mobcount - 1;
-	if ($@mobcount == 0) goto ClearMob;
-	setnpctimer 0;
-	end;
-
-ChkEnd:
-	setnpctimer 0;
+OnMyMobDead:
 	end;
 }
 
@@ -91,7 +42,7 @@ lighthalzen,267,200,3	script	警卫#lhz01	868,{
 		warp "lighthalzen",303,229;
 		end;
 	}
-	else if ($@lhz_alert == 1) {
+	if ($@Lhz_Gangster_Alert >= 100) {
 		mes "[警卫]";
 		mes "最近有太多人";
 		mes "偷渡至对面，";
@@ -101,40 +52,48 @@ lighthalzen,267,200,3	script	警卫#lhz01	868,{
 		mes "唉... 总之问题不小啊";
 		close;
 	}
-	else if ((gettime(2)>00 && gettime(2)<10) || (gettime(2)>30 && gettime(2)<40)) {
-		if (rand(1,10) < 2) {
-			mes "[警卫]";
-			mes "喂喂!你想去哪里啊!";
-			mes "不能允许陌生人";
-			mes "到对面的贫民区!";
-			mes "像你这样可疑的人，";
-			mes "毫无理由的让你通过的话，";
-			mes "就很难维持治安了!";
-			close;
-		}
+	if ($@Lhz_Gangster_Alert >= 100) {
 		mes "[警卫]";
-		mes "打呼... 打呼... 打呼...";
-		mes "嗯呀，嗯呀...打呼...";
+		mes "最近有太多人";
+		mes "偷渡至对面，";
+		mes "所以加强了保安警戒，";
+		mes "到底是谁老是这样";
+		mes "来回的偷渡呢，";
+		mes "唉... 总之问题不小啊";
+		donpcevent "Law Enforcement::OnEnable";
+		set $@Lhz_Gangster_Alert, 100;
+		close;
+	}
+	if (gettime(3) >= 22 || gettime(3) < 2) {
+		mes "[警卫]";
+		mes "Zzzz... Zzz...";
+		mes "ZZZzzzzzzzzzz...";
 		next;
-		mes "-警卫正在睡觉，";
-		mes " 应该可以偷渡过去，";
-		mes " 那就偷偷过去吧-";
+		mes "^3355FF警卫睡觉了，现在是";
+		mes "溜过去的绝好时机^000000";
 		close2;
+		set $@Lhz_Gangster_Alert, $@Lhz_Gangster_Alert + 1;
 		warp "lighthalzen",303,229;
 		end;
 	}
-	else if (rand(1,10) < 2) {
-		mes "-警卫暂时在";
-		mes " 混水摸鱼，就趁现在";
-		mes " 快步偷溜过去吧-";
+	if (rand(1,6) == 3) {
+		mes "^3355FF警卫好像有点分心在看其他地方。";
+		mes "你现在有机会溜过去^000000";
 		close2;
-		warp "lighthalzen",297,227;
-		set $@sneakguard, $@sneakguard + 1;
+		set $@Lhz_Gangster_Alert, $@Lhz_Gangster_Alert + 1;
+		warp "lighthalzen",303,229;
 		end;
+	}
+	else {
+		mes "[警卫]";
+		mes "站住!";
+		mes "我不能让任何人进入";
+		mes "从哪儿来回哪儿去，冒险者！";
+		close;
 	}
 }
 
-lighthalzen,294,223,7	script	Guard#lhz02	868,{
+lighthalzen,294,223,7	script	警卫#lhz02	868,{
 	if (countitem(7350)>0) {
 		mes "[警卫]";
 		mes "你是谁!...嗯?有通行证啊，";
@@ -146,7 +105,7 @@ lighthalzen,294,223,7	script	Guard#lhz02	868,{
 		warp "lighthalzen",260,199;
 		end;
 	}
-	if ($@lhz_alert == 1) {
+	if ($@Lhz_Gangster_Alert >= 100) {
 		mes "[警卫]";
 		mes "最近有太多人";
 		mes "偷渡至对面，";
@@ -156,36 +115,44 @@ lighthalzen,294,223,7	script	Guard#lhz02	868,{
 		mes "唉... 总之问题不小啊";
 		close;
 	}
-	if ((gettime(2)>00 && gettime(2)<10) || (gettime(2)>30 && gettime(2)<40)) {
-		if (rand(1,10) < 2) {
-			mes "[警卫]";
-			mes "喂喂!你想去哪里啊!";
-			mes "像你这样可疑的人，";
-			mes "想要通过这里到对面，";
-			mes "门儿都没有!";
-			mes "不能把贫民区的居民，";
-			mes "进入富裕区!";
-			close;
-		}
+	if ($@Lhz_Gangster_Alert > 14) {
 		mes "[警卫]";
-		mes "打呼... 打呼... 打呼...";
-		mes "嗯呀，嗯呀...打呼...";
+		mes "最近有太多人";
+		mes "偷渡至对面，";
+		mes "所以加强了保安警戒，";
+		mes "到底是谁老是这样";
+		mes "来回的偷渡呢，";
+		mes "唉... 总之问题不小啊";
+		donpcevent "Law Enforcement::OnEnable";
+		set $@Lhz_Gangster_Alert, 100;
+		close;
+	}
+	if (gettime(3) >= 22 || gettime(3) < 2) {
+		mes "[警卫]";
+		mes "Zzzz... Zzz...";
+		mes "ZZZzzzzzzzzzz...";
 		next;
-		mes "-警卫正在睡觉，";
-		mes " 应该可以偷渡过去，";
-		mes " 那就偷偷过去吧-";
+		mes "^3355FF警卫睡觉了，现在是";
+		mes "溜过去的绝好时机^000000";
 		close2;
-		warp "lighthalzen",264,200;
+		set $@Lhz_Gangster_Alert, $@Lhz_Gangster_Alert + 1;
+		warp "lighthalzen",260,199;
 		end;
 	}
-	else if (rand(1,10) < 2) {
-		mes "-警卫暂时在";
-		mes " 混水摸鱼，就趁现在";
-		mes " 快步偷溜过去吧-";
+	if (rand(1,6) == 3) {
+		mes "^3355FF警卫好像有点分心在看其他地方。";
+		mes "你现在有机会溜过去^000000";
 		close2;
-		warp "lighthalzen",264,200;
-		set $@sneakguard, $@sneakguard + 1;
+		set $@Lhz_Gangster_Alert, $@Lhz_Gangster_Alert + 1;
+		warp "lighthalzen",260,199;
 		end;
+	}
+	else {
+		mes "[警卫]";
+		mes "站住!";
+		mes "我不能让任何人过去";
+		mes "如果你没有通行证，离开这里！";
+		close;
 	}
 }
 
@@ -2351,7 +2318,7 @@ yuno_in04,96,106,4	script	热血学生	754,{
 		mes "黑魔法，喃喃自语着..";
 		mes "他种族，喃喃自语着..";
 		next;
-		if (friendship < 8) {
+		if (friendship < 8 || friendship > 15) {
 			mes "-似乎沉浸在自已封闭的世界";
 			mes "所以偷偷的事先做好了是长处吗?!-";
 			close;

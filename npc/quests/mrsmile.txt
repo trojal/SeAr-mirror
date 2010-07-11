@@ -13,7 +13,7 @@ prontera,157,187,4	script	微笑小姐#prt::SmileHelper	92,{
 	mes "我是 微笑小姐";
 	mes "有什么我可以的帮上忙的地方吗?";
 	next;
-	switch (select("询问有关^0099FF笑脸面具^000000的事情","制作^0099FF笑脸面具^000000","终止对话")) {
+	switch (select("询问有关^0099FF笑脸面具^000000的事情:制作^0099FF笑脸面具^000000:终止对话")) {
 	case 1:
 		mes "[微笑小姐]";
 		mes "这是位了取悦^0099FF特力斯坦 3世 ^000000国王陛下";
@@ -56,7 +56,6 @@ prontera,157,187,4	script	微笑小姐#prt::SmileHelper	92,{
 			next;
 			mes "[微笑小姐]";
 			mes "我们的国王^5577FF特力斯坦 3世^000000允许了这次活动的举行，目的是为了更好的为在梦幻宝贝中生活的人民服务.";
-			close;
 		}
 		else {
 			mes "[微笑小姐]";
@@ -67,8 +66,8 @@ prontera,157,187,4	script	微笑小姐#prt::SmileHelper	92,{
 			mes "^5555FF毛 10 个^000000,";
 			mes "^5555FF三叶幸运草10 个^000000,";
 			mes "请确定好数量再过来";
-			close;
 		}
+		close;
 	case 3:
 		mes "[微笑小姐]";
 		mes "非常感谢您的使用";
@@ -86,7 +85,7 @@ prontera,157,187,4	script	微笑小姐#prt::SmileHelper	92,{
 	}
 }
 
-// Additional Smile Assistance staff
+// 其它地方的微笑小姐
 moc_ruins,59,154,3	duplicate(SmileHelper)	微笑小姐#moc	92
 aldebaran,136,135,4	duplicate(SmileHelper)	微笑小姐#alde	92
 geffen,119,107,4	duplicate(SmileHelper)	微笑小姐#gef	92

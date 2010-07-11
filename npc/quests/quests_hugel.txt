@@ -246,7 +246,7 @@ hu_in01,387,245,0	script	艾轮 休伊	849,2,2,{
 			mes "bones are infected!";
 			mes "Help me, oh help me!";
 			next;
-			donpcevent "普斯特 Schuwell#D::OnEnable";
+			donpcevent "普斯特#D::OnEnable";
 			mes "[艾轮]";
 			mes "Oh...";
 			mes "My son...!";
@@ -258,7 +258,7 @@ hu_in01,387,245,0	script	艾轮 休伊	849,2,2,{
 			mes "medicine you're";
 			mes "supposed to";
 			mes "need so badly.";
-			donpcevent "普斯特 Schuwell#D::OnEffect";
+			donpcevent "普斯特#D::OnEffect";
 			next;
 			mes "[艾轮]";
 			mes "Thank goodness...";
@@ -270,7 +270,7 @@ hu_in01,387,245,0	script	艾轮 休伊	849,2,2,{
 			mes "Something's not";
 			mes "right. Bunkoll A";
 			mes "doesn't taste like this...";
-			donpcevent "普斯特 Schuwell#D::OnSweat";
+			donpcevent "普斯特#D::OnSweat";
 			next;
 			mes "[普斯特]";
 			mes "Bunkoll A...?";
@@ -297,7 +297,7 @@ hu_in01,387,245,0	script	艾轮 休伊	849,2,2,{
 			mes "stress yourself about it.";
 			close2;
 			set hg_herb,11;
-			disablenpc "普斯特 Schuwell#D";
+			disablenpc "普斯特#D";
 			emotion e_swt,1;
 			emotion e_swt;
 			end;
@@ -395,16 +395,16 @@ hu_in01,385,247,5	script	普斯特#D	97,{
 	close;
 
 OnInit:
-	disablenpc "普斯特 Schuwell#D";
+	disablenpc "普斯特#D";
 	end;
 
 OnEnable:
-	enablenpc "普斯特 Schuwell#D";
+	enablenpc "普斯特#D";
 	initnpctimer;
 	end;
 
 OnTimer100000:
-	disablenpc "普斯特 Schuwell#D";
+	disablenpc "普斯特#D";
 	stopnpctimer;
 	end;
 	
@@ -653,9 +653,9 @@ OnTouch:
 	
 }
 
-hu_in01,370,255,3	script	Upper Drawer#Second	139,2,2,{
+hu_in01,370,255,3	script	上层 抽屉#Second	139,2,2,{
 OnInit:
-	disablenpc "Upper Drawer#Second";
+	disablenpc "上层 抽屉#Second";
 	end;
 
 	OnTouch:
@@ -689,13 +689,13 @@ OnEnable:
 	end;
 
 OnTimer1000:
-	enablenpc "Upper Drawer#Second";
-	disablenpc "Upper Drawer#First";
+	enablenpc "上层 抽屉#Second";
+	disablenpc "上层 抽屉#First";
 	end;
 
 OnTimer4500:
-	enablenpc "Upper Drawer#First";
-	disablenpc "Upper Drawer#Second";
+	enablenpc "上层 抽屉#First";
+	disablenpc "上层 抽屉#Second";
 	disablenpc "#DrawerOpener";
 	stopnpctimer;
 	end;
@@ -2162,7 +2162,7 @@ hugel,70,137,5	script	西伊岱	879,{
 		if(lhz_boss == 44 && lhz_curse > 30)
 		{
 			mes "[西伊岱]";
-			mes "Have you seen Mr. Herico?";
+			mes "Have you seen Mr. 海力克?";
 			mes "He is a lonesome old man who is staying at Hugel Inn.";
 			next;
 			mes "[西伊岱]";
@@ -2186,7 +2186,7 @@ hugel,70,137,5	script	西伊岱	879,{
 	else if(hg_tre == 41)
 	{
 		mes "[西伊岱]";
-		mes "Mr. Herico has an impediment in movement, so he usually stays in his room.";
+		mes "Mr. 海力克 has an impediment in movement, so he usually stays in his room.";
 		mes "Please go spend some time with him. I know that he will appreciate it.";
 		close2;
 		cutin "",255;
@@ -2204,18 +2204,18 @@ hugel,70,137,5	script	西伊岱	879,{
 	
 }
 
-hu_in01,256,40,3	script	Herico	897,{
+hu_in01,256,40,3	script	海力克	897,{
 
 	if(checkweight(7342,1) != 1)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Why don't you go take some load off your shoulder first, and come back?";
 		close;
 	}
 	cutin "heri1",2;
 	if(hg_tre < 41)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "The weather is beautiful today. *Sigh* But my body aches too badly to go out...";
 		close2;
 		cutin "",255;
@@ -2223,19 +2223,19 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 41)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "The weather is beautiful today. *Sigh* But my body aches too badly to go out...";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Hello!";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "西伊岱?";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Oh, hello. Ms. 西伊岱 asked me to drop you by. Nice to meet you, I am ^3131FF"+strcharinfo(0)+"^000000.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Ah, hello. I heard that recently an airport was built in this town. So, are you from a different city?";
 		mes "I like to see new things...although I don't like this chilly wind.";
 		mes "How do you like Hugel?";
@@ -2245,7 +2245,7 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "Everyone looks happy, and they feel very different than people in the other areas.";
 		mes "So I feel like that I am in a different land.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Everyone has worries and happyness at the same time.";
 		mes "You must have travelled many cities of this country,";
 		mes "and have figured out many things on your own.";
@@ -2255,27 +2255,27 @@ hu_in01,256,40,3	script	Herico	897,{
 		{
 		case 1:
 			cutin "heri2",2;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "I think that my senses are still working fine.";
 			mes "People's eyes tell many things to me.";
 			next;
 			cutin "heri1",2;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Your eyes are telling me your admiration and astonishment";
 			mes "toward what you have seen in Hugel,";
 			mes "which is a totally different experience for you.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "People of Hugel don't question anyone.";
 			mes "It is an unwritten law of this village.";
 			mes "That is why I could have been resting in this village without worries.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "However, as I see you, I suddenly have an urge to ruminate on my past";
 			mes "that I have never spoken to anyone.";
 			mes "May I have a moment of your time, if you don't mind?";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Perhaps we will learn something from each other's story.";
 			set hg_tre,42;
 			close2;
@@ -2283,7 +2283,7 @@ hu_in01,256,40,3	script	Herico	897,{
 			end;
 		break;
 		case 2:
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Then I guess that you have not been deeply impressed by this country.";
 			mes "Haha, alright, that's fine.";
 			close2;
@@ -2291,7 +2291,7 @@ hu_in01,256,40,3	script	Herico	897,{
 			end;
 		break;
 		case 3:
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Oh, am I not?";
 			mes "Haha, I am sorry for hazarding a conjecture.";
 			close2;
@@ -2302,27 +2302,27 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 42)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Hmm...can you tell me your name once again?";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Yes, my name is ^3131FF"+strcharinfo(0)+"^000000.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "^3131FF"+strcharinfo(0)+"^000000, I have many interesting stories for you.";
 		mes "However, before I tell you my stories, I would like to ask you something. Do you mind?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "As you see, ever since an airport was built in this Hugel, many strangers are coming in and going out this village.";
 		mes "It may be a good change for Hugel, so that more people will know about its existence.";
 		mes "However, I have this bad feeling about the airport and airships.";
 		mes "I do not think that this country is not extending their airlines only for the transportation purposes.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Did you know that more and more people are using the ferry after the airport was built?";
 		mes "Can't you see the reason of my doubt?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Please find out the secret about the airship and the island.";
 		mes "Then I will tell you my stories.";
 		mes "I hope that you will do your best to find out the secret.";
@@ -2335,7 +2335,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	{
 		if(hg_odin == 60)
 		{
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Welcome back. I have been waiting for you with eager anticipation to hear about the secret.";
 			mes "Now, please tell me what you have found out.";
 			next;
@@ -2343,25 +2343,25 @@ hu_in01,256,40,3	script	Herico	897,{
 			mes "- such as Giantes, Ymir's Heart and Rekenber. -";
 			next;
 			cutin "heri3",2;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Rekenber...So, they have expanded";
 			mes "their power even to this small village, Hugel.";
 			next;
 			mes "["+strcharinfo(0)+"]";
 			mes "Do you know about them?";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Of course, I know them too well.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "............";
 			next;
 			cutin "heri1",2;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Thank you so much for your effort.";
 			mes "I am afraid that your dangerous journey has not been ended.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Well, this is time for me to tell you my story.";
 			mes "I hope that you will enjoy it.";
 			set hg_tre,44;
@@ -2371,7 +2371,7 @@ hu_in01,256,40,3	script	Herico	897,{
 		}
 		else
 		{
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Please find out the secret about the airship and the island.";
 			mes "Then I will tell you my stories.";
 			mes "I hope that you will do your best to find out the secret.";
@@ -2382,48 +2382,48 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 44)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Hmm...I don't know where to start.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "As you know, we have bionic machines called";
 		mes "^FF0000Guardians^000000.";
 		mes "We are using Guardians to protect important facilities";
 		mes "or to avoid meaningless murders.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Have you ever thought about how the people in old times";
 		mes "would protect their important facilities without guardians?";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Perhaps, they hired many men to do that?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Yes, you are right.";
 		mes "For the longest time, Schwaltzvalt Republic had had";
 		mes "^3131FFMercenary Soldiers^000000 who exchanged their lives";
 		mes "with the good money, and they used to take care of";
 		mes "all the dirty jobs in the past.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "They lost their jobs when Rekenber successfully invented and publicized guardians.";
 		mes "Guardians were made for humans, but sadly it was the worst thing that could happen to them.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "As they lost their jobs to guardians, they rose in rebellion called ^FF0000Mercenary Rebellion^000000.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "This Mercenary Rebellion was greatly responded to by the public.";
 		mes "However, they lost people's trust by choosing ^3131FFa violent method^000000";
 		mes "to fight, instead of appealing to the public in a convincible way.";
 		mes "In other words, they lost their game by making a critical mistake.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Ever since their rebellion was failed,";
 		mes "survivors of the rebellion have disappeared beyond history.";
 		next;
 		cutin "heri3",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Not only that, they held a fight with guardians in";
 		mes "^FF0000the Sage Varmunt's birthplace^000000";
 		mes "which was our proud national treasure!";
@@ -2434,53 +2434,53 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "Sage Varmunt.....!";
 		next;
 		cutin "heri1",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Oh...I must have been really upset about it.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "To be honest with you,";
 		mes "Sage Varmunt is partially responsible on guardians.";
 		mes "You know that he was the one";
 		mes "who created their motive power.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "It is riduculous that the mercenary soldiers were trying to";
 		mes "make their revenge on Sage Varmunt";
 		mes "for inventing guardians, you know.";
 		mes "But, it is understandable because they lost their jobs to guardians.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "I heard about the Mercenary Rebellion after everything was ended,";
 		mes "so there was nothing that I could do about Sage Varmunt.";
 		mes "He disappeared, and I couldn't figure out more";
 		mes "than what I found from his birth place...so...";
 		mes "I came to Hugel and settled down here.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "I tried to find at least a little bit of his documents from his laboratory...";
 		mes "but everything was gone...huh?";
 		mes "Hold on, I just remember something very important!";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Where are all of his research documents?";
 		mes "No...did mercenary soldiers took them or...possibly dispose them?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Damn it! I am so stupid! Grrr...";
 		mes "How couldn't I think about this earlier?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes ""+strcharinfo(0)+", can you see what I want to tell you now?";
 		mes "I have to take a long time to remember everything";
 		mes "about the incident, but you must understand";
 		mes "that this is an extremely important matter.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Mercenary Rebellion was a huge issue back then.";
 		mes "Hopefully, there will be at least one news reporter";
 		mes "who remembers about the rebellion.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Please go to Lighthalzen and find a news reporter";
 		mes "who still remembers about the rebellion.";
 		mes "If you find him, please ask him if he knows whereabouts of the rebellion survivors,";
@@ -2492,7 +2492,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 45)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Please go to Lighthalzen and find a news reporter";
 		mes "who still remembers about the rebellion.";
 		mes "If you find him, please ask him if he knows whereabouts of the rebellion survivors,";
@@ -2503,7 +2503,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre > 45 && hg_tre < 49)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "How have you been doing?";
 		close2;
 		cutin "",255;
@@ -2511,7 +2511,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 49)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Did you find Sage Varmunt's research documents?";
 		next;
 		cutin "",255;
@@ -2523,26 +2523,26 @@ hu_in01,256,40,3	script	Herico	897,{
 		case 1:
 			mes "I ate them.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Hahaha! That's funny!";
 			next;
 			mes "["+strcharinfo(0)+"]";
 			mes "No, it is not funny.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes ".................";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Then...SPIT THEM OUT!";
 			percentheal -5,0;
 			specialeffect2 3;
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "SPIT THEM OUT!";
 			percentheal -5,0;
 			specialeffect2 3;
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "I SAID, SPIT THEM OUUUUUT!";
 			percentheal -5,0;
 			specialeffect2 3;
@@ -2551,13 +2551,13 @@ hu_in01,256,40,3	script	Herico	897,{
 			mes "Err...I was just kidding...";
 			next;
 			cutin "heri2",2;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Haha, the first part was funny,";
 			mes "but the second part was kind of scary, you know?";
 			emotion e_dots;
 			emotion e_sob,1;
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "So, tell me, where are all of his research documents?";
 			next;
 			mes "["+strcharinfo(0)+"]";
@@ -2570,17 +2570,17 @@ hu_in01,256,40,3	script	Herico	897,{
 		break;
 		}
 		cutin "heri3",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "...........................";
 		next;
 		cutin "heri1",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "It was expected.";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "What do you have in mind?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "First, I think that I should inform you about my true identity.";
 		mes "I may now be an old man whose days are numbered,";
 		mes "but I used to work at ^3131FFthe Ymir's Heart imitation research department";
@@ -2588,7 +2588,7 @@ hu_in01,256,40,3	script	Herico	897,{
 		emotion e_omg,1;
 		next;
 		cutin "heri2",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "You look very surprised.";
 		next;
 		cutin "heri1",2;
@@ -2596,16 +2596,16 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "Does it mean that you are the one";
 		mes "who created the Ymir's Heart imitation?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Well, I was a mere assistant of Sage Varmunt,";
 		mes "so I can't say that I created it.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Rekenber has been secretly gathering ^FF0000Ymir's Heart Pieces^000000.";
 		mes "They are very obsessed with Ymir's Heart Pieces,";
 		mes "and I guess that it is because of the enormous power that the heart pieces possess within..";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "However, the power of the original heart pieces";
 		mes "are too strong for humans to control.";
 		mes "Thus, it is not fiseable to manipulate the power";
@@ -2613,13 +2613,13 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "That is why ^3131FFthe imitations of Ymir's Heart";
 		mes "Pieces^000000 have been created.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "We, researchers including Sage Varmunt, endeavoured";
 		mes "our effort in studying and analyzing the revolutionary energy source";
 		mes "for a long time.";
 		mes "And our effort has gained a fruitful result; the Imitations of Ymir's Heart Piece.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "With the invention, we could create guardians.";
 		mes "We were so happy for the fact that we";
 		mes "finally made our dream come true.";
@@ -2631,10 +2631,10 @@ hu_in01,256,40,3	script	Herico	897,{
 		next;
 		mes "- You told him what you knew about the Mercenary Rebellion. -";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Hmm...now I see.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "After we succeeded in creating the imitations of Ymir's Heart Piece,";
 		mes "Sage Varmunt looked pretty depressed for some reason.";
 		mes "After all, he left the laboratory and said that ^3131FFby him";
@@ -2642,17 +2642,17 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "will make everyone miserable^000000.";
 		mes "I still don't figure out why he said that.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "He was a really great scholar.";
 		mes "He always tried to use his knowledge in science for humankind.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "As expected, after Sage Varmunt left Regenschirm,";
 		mes "almost every research process started stagnating.";
 		mes "Even many projects were canceled or postponed.";
 		next;
 		cutin "heri3",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "The upper management were threatened by the phenomenon,";
 		mes "so they yelled at people to ^FF0000continue";
 		mes "with their research by all means^000000.";
@@ -2660,11 +2660,11 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "on anything that is alive.";
 		next;
 		cutin "heri1",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "......................";
 		mes "That gave me a reason to leave Regenschirm.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Rekenber will do anything to achieve their goals.";
 		mes "They have become too powerful to just be considered a big corporation.";
 		next;
@@ -2674,11 +2674,11 @@ hu_in01,256,40,3	script	Herico	897,{
 		next;
 		cutin "heri3",2;
 		emotion e_ag;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "What? \"Bio Lab\"? I didn't image that they could";
 		mes "even think of that! I can't express enough of my resentment toward them!";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Science is to benefit humankinds,";
 		mes "not to harm them. I think that something must be done.";
 		mes "Can you bring me a glass of water?";
@@ -2689,36 +2689,36 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 50)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Can you guess what I am thinking right now?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "I am thinking about ^3131FFdestroying Regenschirm^000000.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Rekenber has become as powerful as this Schwaltzvalt Republic.";
 		mes "I don't think that I could destroy the entire corporation.";
 		mes "But even if I could, it could also lead to the fall of my country,";
 		mes "because that's who big Rekenber means to this country.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "So, instead, I am thinking to destroy \"Regenschirm\".";
 		mes "Because the laboratory may not be as big as the corporation,";
 		mes "but at the same time, it has a great meaning to them.";
 		mes "I want to stop their inhumane and dangerous practice in research.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "...*Sigh*...Unfortunately, I do not possess any power to";
 		mes "proceed with my plan. Thus, I need your help, desperately.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Let me hear your opinion.";
 		mes "Will you join me in destroying Regenschirm?";
 		next;
 		switch( select( "Sorry, I won't.","Yes, I will." ) )
 		{
 		case 1:
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "I respect your decision since this is not something";
 			mes "that is okay for you to make a quick judgement.";
 			mes "I appreciate everything that you have done for me so far.";
@@ -2729,14 +2729,14 @@ hu_in01,256,40,3	script	Herico	897,{
 		break;
 		case 2:
 			cutin "heri2",2;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "I knew that you are too righteous to";
 			mes "neglect lies and injustice.";
 			mes "I have seen that through your eyes.";
 			mes "I don't know how much we can achieve with this mission,";
 			mes "but it is very meaningful for us to at least try.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Let's discuss further what we should do.";
 			set hg_tre,51;
 			close2;
@@ -2747,7 +2747,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 51)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "We must find out how we can stop them";
 		mes "from doing more evil things, at least for a while.";
 		mes "Regenschirm is a historic laboratory, and thus";
@@ -2757,7 +2757,7 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "all the researching activity within Regenschirm";
 		mes "will not be progressed.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Regenschirm is located at the underground level";
 		mes "of Rekenber's Lighthalzen headquarters.";
 		mes "It is where their filthy ambitions are reflected on.";
@@ -2770,7 +2770,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 52)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Regenschirm is located at the underground level";
 		mes "of Rekenber's Laighthalzen headquarters.";
 		mes "Can you sneak into the place and bring me their research data?";
@@ -2780,52 +2780,52 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 53)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Ah, you are back.";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "I had a little bit of trouble because I was caught by a guard.";
 		mes "But I took care of it.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Thank you so much for your trouble.";
 		mes "Haha, since they lost their research data,";
 		mes "they wouldn't be able to continue with their research";
 		mes "at least for a while, I hope.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Now, let's get into the next step, shall we?";
 		mes "I know that you have gone through many difficulties so far,";
 		mes "but this might be the most difficult thing that you've ever done.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "In my opinion, the bio lab is the most important facility in Regenschirm.";
 		mes "We must not let that kind of inhumane place exist in this world any longer.";
 		mes "I am so horrified by the thought that they have been doing all sorts of evil things";
 		mes "under an excuse of scientific research.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "As I analyzed the research data which you have brought to me,";
 		mes "the bio lab is consisted of 3 levels,";
 		mes "and I suspect that the 2nd level is used to";
 		mes "perform experimental research on living bodies.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "I am pretty sure that we can find";
 		mes "a miner who knows how to make";
 		mes "Marine Sphere Bottles in ^3131FFEinbech^000000,";
 		mes "since the Marine Sphere Bottles are needed to";
 		mes "blast tunnels inside mines.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Haha...you know what I am going to ask you now, don't you?";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Please go meet with ^3131FFthe Marine Sphere Bottle manufacturer^000000,";
 		mes "and purchase some Marine Sphere Bottles.";
 		mes "And explode ^3131FFthe bio experiment equipment^000000 in the 2nd level of bio lab!";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "I know that this is a difficult task. But, please understand";
 		mes "that you are the only hope that I have.";
 		mes "Please stop them from performing experimental research on living bodies!";
@@ -2837,14 +2837,14 @@ hu_in01,256,40,3	script	Herico	897,{
 	}
 	else if(hg_tre == 54)
 	{
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Please go meet with ^3131FFthe Marine Sphere Bottle manufacturer^000000,";
 		mes "and purchase some Marine Sphere Bottles.";
 		mes "And explode ^3131FFthe bio experiment equipment^000000 in the 2nd level of bio lab.";
 		mes "You are the only hope that I have.";
 		mes "Let's hope that it will work out well.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "If you know anyone";
 		mes "who can create Marine Sphere Bottles for you,";
 		mes "you may use his instead.";
@@ -2858,32 +2858,32 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "The machine was blown up.";
 		next;
 		cutin "heri2",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Excellent! Excellent!";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Now, I am relieved that they won't be able to";
 		mes "proceed with their bio research at least for a while.";
 		mes "You did a great job, and I am so proud of you.";
 		next;
 		cutin "heri1",2;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "I assume that there are";
 		mes "some failed experimental objects remaining within the laboratory.";
 		mes "According to the research document,";
 		mes "those experimental objects are identified with ^3131FFHandcuffs^000000.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "From now on, I will reward you every time when you bring me";
 		mes "a certain amount of the Handcuffs.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "And...even though we succeeded in stopping them for now,";
 		mes "it will not last that long.";
 		mes "We need someone who has a power to stop them permanently.";
 		mes "Sadly, I am not the one.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "By any chance, do you know a man who can aid his power in stopping them?";
 		next;
 		input @inputstr$;
@@ -2892,14 +2892,14 @@ hu_in01,256,40,3	script	Herico	897,{
 			mes "["+strcharinfo(0)+"]";
 			mes "I think that I know one...";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Okay, tell me who he is.";
 			next;
 			mes "["+strcharinfo(0)+"]";
 			mes "Mr. President.....!";
 			mes "Mr. President must be the one who can help us.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "You mean Karl...something something?";
 			mes "I may well say that Rekenber owns this country.";
 			mes "I don't think that he has not been influenced by them.";
@@ -2910,7 +2910,7 @@ hu_in01,256,40,3	script	Herico	897,{
 			mes "Even if he was frustrated by a ridiculous reason at the last time,";
 			mes "I believe that he has not given up in his hope.";
 			next;
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Hmm...I see. Then I must count on your word.";
 			mes "I am giving the research data back to you,";
 			mes "so please bring it to Mr. President.";
@@ -2926,7 +2926,7 @@ hu_in01,256,40,3	script	Herico	897,{
 		mes "["+strcharinfo(0)+"]";
 		mes "Umm...no, I don't think that I know anyone.";
 		next;
-		mes "[Herico]";
+		mes "[海力克]";
 		mes "Oh...okay. Hmm...we certainly need someone";
 		mes "with a power who can stop them permanently.";
 		mes "Why don't you go to different cities and find the one";
@@ -2939,7 +2939,7 @@ hu_in01,256,40,3	script	Herico	897,{
 	else {
 		if(countitem(7342))
 		{
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Why are you still here?";
 			mes "That research data will aid a great help to Mr. President.";
 			mes "Please deliver it to him as soon as you can.";
@@ -2949,12 +2949,12 @@ hu_in01,256,40,3	script	Herico	897,{
 		}	
 		else
 		{
-			mes "[Herico]";
+			mes "[海力克]";
 			mes "Hey, welcome back.";
 			next;
 			switch( select( "I brought Handcuffs","Regarding Sage Varmunt's documents")) {
 			case 1:
-				mes "[Herico]";
+				mes "[海力克]";
 				mes "I am willing to exchange 1 of level 4 food with 100 Handcuffs.";
 				next;
 				switch( select( "Exchange.","Cancel." ) )
@@ -2962,7 +2962,7 @@ hu_in01,256,40,3	script	Herico	897,{
 				case 1:
 					if(countitem(7345) > 99) //Handcuffs
 					{
-						mes "[Herico]";
+						mes "[海力克]";
 						mes "There you go, thank you for your trouble.";
 						delitem 7345,100; //Handcuffs
 						switch(rand(1,6))
@@ -2992,7 +2992,7 @@ hu_in01,256,40,3	script	Herico	897,{
 					}
 					else
 					{
-						mes "[Herico]";
+						mes "[海力克]";
 						mes "I don't think that you have brought me 100 Handcuffs.";
 						close2;
 						cutin "",255;
@@ -3007,7 +3007,7 @@ hu_in01,256,40,3	script	Herico	897,{
 				end;
 			break;
 			case 2:
-				mes "[Herico]";
+				mes "[海力克]";
 				mes "When I checked the research data that you have brought to me,";
 				mes "it seemed that Sage Varmunt wrote his documents in cipher,";
 				mes "so they could not decode them.";
@@ -3025,15 +3025,15 @@ hu_in01,256,40,3	script	Herico	897,{
 	
 }
 
-lhz_in03,39,44,3	script	Enquro Carson	97,{
+lhz_in03,39,44,3	script	昂哥罗 卡森	97,{
 
 	if(hg_tre < 45)
 	{
-		mes "[Enquro Carson]";
-		mes "Hello, everyone. This is Enquro Carson";
+		mes "[昂哥罗 卡森]";
+		mes "Hello, everyone. This is 昂哥罗 卡森";
 		mes "from Light News.";
 		next;
-		mes "[Enquro Carson]";
+		mes "[昂哥罗 卡森]";
 		mes "People want to hear prompt and accurate news.";
 		mes "I feel proud of myself as a news reporter";
 		mes "especially when people are astonished by the news";
@@ -3042,11 +3042,11 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 	}
 	else if(hg_tre == 45)
 	{
-		mes "[Enquro Carson]";
-		mes "Hello, everyone. This is Enquro Carson";
+		mes "[昂哥罗 卡森]";
+		mes "Hello, everyone. This is 昂哥罗 卡森";
 		mes "from Light News.";
 		next;
-		mes "[Enquro Carson]";
+		mes "[昂哥罗 卡森]";
 		mes "People want to hear prompt and accurate news.";
 		mes "I feel proud of myself as a news reporter";
 		mes "especially when people are astonished by the news";
@@ -3055,7 +3055,7 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 		switch( select( "Mercenary Rebellion","News reporter job" ) )
 		{
 		case 1:
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Hmm...Mercenary Rebellion...?";
 			mes "It happened pretty long time ago.";
 			mes "Mercenary soldiers lost their jobs";
@@ -3066,7 +3066,7 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 			mes "["+strcharinfo(0)+"]";
 			mes "Do you know any survivor of Mercenary Rebellion?";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Welll...I was not assigned to the case,";
 			mes "and the news reporter who kept the coverage of the case";
 			mes "retired long time ago...";
@@ -3078,10 +3078,10 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 			mes "- *Rummage Rummage* -";
 			mes "- *Rummage Rummage* -";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Oh! I found it.";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Mr. Balparan, yes, he is the news reporter,";
 			mes "must be greatly intrigued by the rebellion.";
 			mes "According to this documents, he tried to";
@@ -3091,7 +3091,7 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 			mes "["+strcharinfo(0)+"]";
 			mes "Can you tell me the survivors' locations?";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Well, I am not supposed to release";
 			mes "any kind of personal information to outside.";
 			mes "Hmm...but it happened a long time ago, and";
@@ -3100,17 +3100,17 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 			mes "["+strcharinfo(0)+"]";
 			mes "Thank you so much!";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Wait, wait, I didn't say that I would release their information yet.";
 			mes "Actually my motto is that";
 			mes "\"^3131FFEvery bit of information must be shared^000000\".";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "I hope that you are willing to share any information";
 			mes "that you will find from the survivors with me.";
 			mes "Oh yes, do you know what? \"Commutative contract\".";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "I heard of a private pub in Morroc,";
 			mes "a city of Rune-Midgarts Kingdom";
 			mes "that is not open to the public.";
@@ -3121,12 +3121,12 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 			close;
 		break;
 		case 2:
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes ".......Hmmm...Hmmm...Hmmm.";
 			next;
-			mes "- Enquro Carson looks you up and down with squinting his eyes. -";
+			mes "- 昂哥罗 卡森 looks you up and down with squinting his eyes. -";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "You are not saying that you want to be a news reporter, are you?";
 			close;
 		break;
@@ -3136,7 +3136,7 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 	{
 		if(!countitem(12112) || !countitem(12113))
 		{
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "I heard of a private pub in Morroc,";
 			mes "a city of Rune-Midgarts Kingdom";
 			mes "that is not open to the public.";
@@ -3147,18 +3147,18 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 		}
 		else
 		{
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Wow, this is that famous drink!";
 			mes "Let's see...*Gulp*";
 			next;
 			emotion e_no1;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Wow! This is awsome!";
 			mes "It is as delicious as I heard!";
 			mes "Its taste is still lingering on my tongue,";
 			mes "and it is like Wow!";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Anyways, according to Mr. Balparan's documents,";
 			mes "errr....yes, this must be the name of the last mercenary soldier.";
 			mes "Mr. Balparan contacted with";
@@ -3170,20 +3170,20 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 			mes "["+strcharinfo(0)+"]";
 			mes "What? Hugel?";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Previously, it was very difficult to get to Hugel";
 			mes "because there was no safe route.";
 			mes "Basically, the village was like an island within the continent,";
 			mes "but ever since an airport was built there,";
 			mes "the village is now having its period of prosperity.";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "You are lucky, you know that?";
 			mes "Mr. Balparan gave up on meeting with the mercenary soldier";
 			mes "in Hugel because it was too tough to just get there.";
 			mes "But you, all you need to do is just getting on to the airship.";
 			next;
-			mes "[Enquro Carson]";
+			mes "[昂哥罗 卡森]";
 			mes "Oh, by the way, I hope that you will keep";
 			mes "this secret between you and me.";
 			mes "I released the personal information at my discretion,";
@@ -3197,7 +3197,7 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 	}
 	else if(hg_tre == 47)
 	{
-		mes "[Enquro Carson]";
+		mes "[昂哥罗 卡森]";
 		mes "Just get on to the airship and go to Hugel.";
 		mes "Hopefully you will meet with ^3131FFWintzil Trony^000000";
 		mes "or his son...or something.";
@@ -3207,7 +3207,7 @@ lhz_in03,39,44,3	script	Enquro Carson	97,{
 	}
 	else
 	{
-		mes "[Enquro Carson]";
+		mes "[昂哥罗 卡森]";
 		mes "This is very shameful for me to confess,";
 		mes "but I tend to make lots and lots of spelling mistakes.";
 		mes "Yeah, I know, it is a shame.";
@@ -3603,13 +3603,13 @@ hu_in01,317,312,0	script	Book	111,{
 
 }
 
-einbech,208,124,3	script	Bomb Maker	851,{
+einbech,208,124,3	script	刺锤瓶 制作业者 	851,{
 
 	if(hg_tre == 54)
 	{
 		/*var max_max_c1 = CheckMaxCount 1201 1
 		if (max_max_c1 == 1)
-			mes "[Boomer]";
+			mes "[布摩]";
 			mes "Hey, you look pretty heavy, huh?";
 			mes "Do you want me to help you?";
 			close
@@ -3617,27 +3617,27 @@ einbech,208,124,3	script	Bomb Maker	851,{
 		endif
 		var now_weight = v[VAR_MAXWEIGHT] - v[VAR_WEIGHT]
 		if (now_weight < 2000)
-			mes "[Boomer]";
+			mes "[布摩]";
 			mes "Hey, you look pretty heavy, huh?";
 			mes "Do you want me to help you?";
 			close
 			return
 		endif*/
-		mes "[Boomer]";
+		mes "[布摩]";
 		mes "Hey, what's up?";
 		mes "I am a professional Marine Sphere Bottle maker.";
-		mes "You can call me Boomer.";
+		mes "You can call me 布摩.";
 		next;
 		switch( select( "Buy Marine Sphere Bottle.","End conversation." ) )
 		{
 		case 1:
-			mes "[Boomer]";
+			mes "[布摩]";
 			mes "Heh, you want my Marine Sphere Bottles, huh?";
 			mes "You know, my bomb never fail to blow things away.";
 			mes "Do you want to cut a tunnel?";
 			mes "You've got the right choice for the bomb here!";
 			next;
-			mes "[Boomer]";
+			mes "[布摩]";
 			mes "One Marine Sphere Bottle is 3,000 zeny.";
 			mes "You must understand that I am providing the bomb at such a low price";
 			mes "considering its amazing performance!";
@@ -3648,11 +3648,11 @@ einbech,208,124,3	script	Bomb Maker	851,{
 			case 1:
 				if(Zeny < 3000)
 				{
-					mes "[Boomer]";
+					mes "[布摩]";
 					mes "Errr...You must have been so hurry to carry your wallet with you.";
 					close;
 				}
-					mes "[Boomer]";
+					mes "[布摩]";
 					mes "Just make sure that you are not going to";
 					mes "blow yourself away with this bomb, hahah!";
 					set Zeny,Zeny-3000;
@@ -3660,14 +3660,14 @@ einbech,208,124,3	script	Bomb Maker	851,{
 					close;
 			break;
 			case 2:
-				mes "[Boomer]";
+				mes "[布摩]";
 				mes "I believe that you will end up coming back to me. Heheh.";
 				close;
 			break;
 			}
 		break;
 		case 2:
-			mes "[Boomer]";
+			mes "[布摩]";
 			mes "Boom! Don't you need a bomb? Boom!";
 			close;
 		break;
@@ -3675,10 +3675,10 @@ einbech,208,124,3	script	Bomb Maker	851,{
 	}
 	else
 	{
-		mes "[Boomer]";
+		mes "[布摩]";
 		mes "Hey, what's up?";
 		mes "I am a professional Marine Sphere Bottle maker.";
-		mes "You can call me Boomer.";
+		mes "You can call me 布摩.";
 		close;
 	}
 	
@@ -5053,59 +5053,40 @@ hugel,107,67,3	script	拓丕	706,{
 	if(BaseLevel > 49) {
 		if(!hg_ubu01) {
 			mes "[拓丕]";
-			mes "D-Daddy...!";
-			mes "Daddy where";
-			mes "are you?! Wah~!";
+			mes "哇哇哇哇!!帮我找爸爸，哇哇哇哇~";
 			next;
-			switch( select( "What's wrong?:Ignore" ) ) {
+			switch( select( "询问他发生什么事情了:直接路过" ) ) {
 			case 1:
+				mes "["+strcharinfo(0)+"]";
+				mes "小孩发生什么事了吗?";
+				next;
 				mes "[拓丕]";
-				mes "My Daddy hasn't";
-				mes "been home for a few";
-				mes "day now. I'm afraid that";
-				mes "something must have";
-				mes "happened to him. *Sniff*";
+				mes "那是，那是... 呜呜~";
+				next;
+				mes "[拓丕]";
+				mes "那是，那是因为... 我爸爸都不回家，哭泣~ 已经好几天没回家，帮我找爸爸啦! 呜呜哇";
 				next;
 				mes "["+strcharinfo(0)+"]";
-				mes "Your Dad is missing?";
-				mes "Why don't you tell me";
-				mes "about the last time";
-				mes "that you saw him?";
+				mes "嗯，你再说清楚一点";
 				next;
 				mes "[拓丕]";
-				mes "Well, we were playing";
-				mes "Hide-and-Seek, and then";
-				mes "it was his turn to hide,";
-				mes "and then, a-and then...";
-				mes "I never found him!";
+				mes "几天前的下午... 我与爸爸一起玩捉迷藏，哭泣~ 我正在找躲起来的爸爸，哼哼~ 一直找，一直找!! 可是没找到~~~ 哇哇~~~";
 				next;
-				switch( select( "Really? Tell me more...:What, is that all...?" ) ) {
+				switch( select( "再问清楚一点:别好管闲事了" ) ) {
 				case 1:
 					mes "[拓丕]";
-					mes "Th-then my Mom got";
-					mes "mad at Dad for hiding";
-					mes "for so long. But when";
-					mes "she went to find him, she";
-					mes "disappeared too! I-I'm all";
-					mes "alone now! Waaaaaah~!";
+					mes "妈妈也忍无可忍生气的 跑出去找爸爸了!! 可是，可是... 连一大早 去村落找爸爸的 妈妈也还没... 呜哇哇哇哇~~";
 					next;
 					emotion e_dots,1;
-					mes "["+strcharinfo(0)+"]";
-					mes "Don't worry, I'll look";
-					mes "for your parents. I'm";
-					mes "sure that I can find at";
-					mes "least one of them just";
-					mes "outside of town.";
+					mes "^800080如果小孩再哭下去的话，这世界恐被泪水淹没，世界末日可能会来临，在那之前先去找 到村外的拓丕的 妈妈吧^000000";
 					set hg_ubu01,1;
 					close;
 				break;
 				case 2:
-					mes "["+strcharinfo(0)+"]";
-					mes "Don't worry, your";
-					mes "Dad will probably";
-					mes "show up sooner";
-					mes "or later. Well, lots";
-					mes "of luck, kid.";
+					mes "^800080...";
+					mes "最好少管这种闲事，";
+					mes "此乃明智之举，";
+					mes "赶快离开这里吧^000000";
 					emotion e_dots,1;
 					close;
 				break;
@@ -5113,10 +5094,7 @@ hugel,107,67,3	script	拓丕	706,{
 			break;
 			case 2:
 				mes "[拓丕]";
-				mes "D-Daddy...!";
-				mes "Mommiiiiiiiiie!";
-				mes "Where are yoooou?!";
-				mes "Wuh-Waaaaaaaaaah!";
+				mes "哇哇哇哇~ 爸爸! 妈妈! ";
 				close;
 			break;
 			}
@@ -5124,123 +5102,74 @@ hugel,107,67,3	script	拓丕	706,{
 		else if(hg_ubu01 == 2)
 		{
 			mes "[拓丕]";
-			mes "Oh...";
-			mes "Mommy was just";
-			mes "outside of town?";
-			mes "*Sob* Okay, I hope my";
-			mes "Daddy comes back soon...";
+			mes "呜~ 你说妈妈在村落外面吗? 好，那么我站在这里等，看爸爸会不会经过这里";
 			set hg_ubu01,3;
 			close;
 		}
 		else if(hg_ubu01 == 6)
 		{
 			mes "[拓丕]";
-			mes "Y-you found my Daddy!";
-			mes "Hooray! I was so worried";
-			mes "about him! Th-thank you";
-			mes "so much for your help!";
+			mes "哈! 你说爸爸在那里吗? 我担心~~~ 死了~~~ 呵呵呵! 谢谢你，呵呵呵!! 是我的胜利啊!!!";
 			next;
 			mes "[拓丕]";
-			mes "Um, um, where is my";
-			mes "Daddy hiding anyway?";
-			mes "Oh? A barrel? Where";
-			mes "was it again? Heh heh!";
-			mes "Now I can find him!";
-			next;
-			mes "[拓丕]";
-			mes "Oh, would you go talk";
-			mes "to my Mom, and tell her";
-			mes "to come here please? And";
-			mes "also tell her that Daddy";
-			mes "is safe! See you later~";
+			mes "请你去转告妈妈吧，妈妈也需要知道啊，叫妈妈赶快回来吧，呵呵呵!";
 			next;
 			emotion e_dots,1;
-			mes "......";
-			mes ".........";
-			mes "............";
-			next;
-			mes "[拓丕]";
-			mes "^333333...............................";
-			mes "Hee hee~ Once I find";
-			mes "my Daddy, he has to get me";
-			mes "a girlfriend! He promised~!^000000";
+			mes "^800080他是刚才在哭嚎的小孩对吗? 气氛变不同了，具有嗅不出是小孩子的老练和 ";
+			mes "流露出一股莫名的杀气，感觉这一切都是陷阱";
 			set hg_ubu01,7;
 			close;
 		}
 		else if(hg_ubu01 == 7)
 		{
 			mes "[拓丕]";
-			mes "Would you please hurry";
-			mes "and talk to my Mom? She";
-			mes "should be just outside of?";
-			mes "this town, where you last";
-			mes "saw her. Bye bye for now~";
+			mes "妈妈应该是在村落外面的，";
+			mes "快点,快点,快点~ ";
 			next;
 			emotion e_dots,1;
-			mes "......";
-			mes ".........";
-			mes "............";
-			next;
-			mes "[拓丕]";
-			mes "^333333...............................";
-			mes "Oh yeah! Should I have";
-			mes "Mom help me pick out my";
-			mes "new girlfriend? Hmm, I dunno.";
-			mes "Wh-what if they become friends?";
-			mes "Um, that might not be good...^000000";
+			mes "^800080虽然再度显露天真活泼的一面，";
+			mes "不过他先前的样子就像到达 ";
+			mes "最高极限的暗杀者，把自己";
+			mes "的杀气随风飘走一样很自然，";
+			mes "他真的是一位拥有心机很重的";
+			mes "小孩^00000";
 			close;
 		}
 		else if(hg_ubu01 == 8)
 		{
 			emotion e_dots,1;
-			mes "[拓丕]";
-			mes "Daddy promised to get";
-			mes "me a girlfriend if I beat him";
-			mes "at Hide-and-Seek! Hahaha!";
-			mes "I won, so now he has to do it!";
+			mes "^800080从远处听到低声吟咏的 小孩子的声音";
 			next;
 			mes "[拓丕]";
-			mes "Wait, but should I let";
-			mes "my Dad pick my girlfriend?";
-			mes "Maybe I should pick her...";
-			mes "Yeah, I'll pick the perfectest";
-			mes "girl that I can find! Yaaay~";
+			mes "呵呵呵~ 喝醉酒的爸爸 果然不是我的对手啊，这完美编制的剧本 和情况进展!!";
+			next;
+			mes "[拓丕]";
+			mes "他已经答应我要帮我找漂亮又 性感的媳妇，我就期待看看吧? ";
+			mes "还是我来选吧? 谁比较好呢?呵呵呵! 人生不就是如此吗!";
 			set hg_ubu01,9;
 			close;
 		}
 		else if(hg_ubu01 == 9)
 		{
-			emotion e_dots,1;
-			mes "[拓丕]";
-			mes "Maybe I should wait until";
-			mes "I'm older to have a girlfriend.";
-			mes "I mean, what if the girl I pick";
-			mes "now gets uglier when she";
-			mes "grows up? Or what if she gets^FFFFFF ^000000 really fat? I better be careful...";
-			next;
-			mes "^3355FF拓丕 is still a young,";
-			mes "naive child that has much";
-			mes "to learn about girlfriends,";
-			mes "or just people, in general.^000000";
+			mes "^800080以他的年纪敢向父亲要求 ";
+			mes "性感媳妇的勇气 ";
+			mes "和过份宏大的抱负来看，";
+			mes "我想对增加人口一定有 ";
+			mes "非常大的贡献的^000000";
 			close;
 		}
 		else
 		{
 			mes "[拓丕]";
-			mes "^333333*Sniff*^000000 D-Daddy's gone!";
-			mes "Will you help me find my";
-			mes "Daddy please? I h-have";
-			mes "to find him now! H-Hurry!";
+			mes "一定! 快点~快点~";
+			mes "帮我找爸爸，拓丕就不会再哭了";
 			close;
 		}
 	}
 	else
 	{
 		mes "[拓丕]";
-		mes "Waaah~!";
-		mes "I have to find";
-		mes "my Daddy! Daddy...!";
-		mes "Where are yooooou?!";
+		mes "哇哇哇~~~~ 爸爸~~~";
 		close;
 	}
 	
@@ -5325,8 +5254,8 @@ hu_fild06,190,367,3	script	拓丕的 妈妈	701,{
 		mes "以及被蒙在鼓里的妈妈...^000000";
 		next;
 		mes "^830083说是搞不清楚拓丕幼稚 ";
-		mes "还是她老公幼稚的她，";
-		mes "或许她是家族之中 ";
+		mes "还是她老公幼稚的他，";
+		mes "或许他是家族之中 ";
 		mes "最纯真，保有赤子之心 ";
 		mes "的人，难道她不知道吗?^000000";
 		close;
@@ -5342,56 +5271,38 @@ hugel,100,176,3	script	可疑的桶	111,{
 
 	if(hg_ubu01 == 3)
 	{
-		mes "[Strange Man]";
-		mes "So... hun...gry...";
-		mes "F-food... Give me...";
-		mes "F-food... Must... replenish...";
-		mes "h-health... with... Steamed...";
-		mes "Crab... Nippers... Please...";
+		mes "[怪人]";
+		mes "我.. 好.. 饿.... 请给我... 一些食物... 实在太饿了..连说话的力气也没有..";
+		mes "我好想吃蒸蟹之螯... 现在马上... 吃的话... 我似乎就能立刻起身了...";
 		next;
 		emotion e_dots,1;
-		mes "^3355FFIt sounds like";
-		mes "this barrel wants";
-		mes "Steamed Crab Nippers.^000000";
+		mes "^800080桶子会说话，桶子在说话表示 世界末日即将来临，或是有人在里面??? 管他是桶子还是人，先把他想要的东西...^000000";
 		next;
-		switch( select( "I'll bring you Steamed Crab Nippers:Ignore" ) )
+		switch( select( "告诉他帮忙找:帮他找是浪费时间" ) )
 		{
 		case 1:
-			mes "[Strange Man]";
-			mes "Please... cook me...";
-			mes "Steamed... Crab Nippers...!";
-			mes "You... n-need.... 10 Green";
-			mes "Herbs... 1 Yellow Potions...";
-			mes "and 10... N-Nippers... to";
-			mes "c-cook th-them. Ugh...";
+			mes "[怪人]";
+			mes "蒸蟹之螯是需要!!! 钳子10个,绿色药草10个,黄色药水1个等才能做出的 VIT 强化型料理呀!! 必须透过料理制作才能做出来";
 			next;
 			emotion e_dots,1;
-			mes "["+strcharinfo(0)+"]";
-			mes "Hold on,";
-			mes "I have to cook";
-			mes "them for you?!";
+			mes "^800080他刚才不是说饿到 说不出话来的人吗...竟然能在0.3秒内 讲完话，我确定他不是人 而是桶子^000000";
 			next;
-			mes "[Strange Man]";
-			mes "Y-yes...";
-			mes "It's... It's the";
-			mes "o-only... possible...";
-			mes "Way... P-please help...";
+			mes "[怪人]";
+			mes "有HP恢复+5%,VIT+1的效能!! 我... 需要的.. 是... 蒸蟹之螯... 帮我找.. 拜托你了...";
+			next;
+			mes "^800080先答应帮桶子找想要的东西吧，这样也许桶子会变成宝物后，恳求我收留他 也说不定^000000";
 			set hg_ubu01,4;
 			close;
 		break;
 		case 2:
-			mes "[Strange Man]";
-			mes "D-don't... leave...";
-			mes "me... Here... Th-the...";
-			mes "hunger...! It... It can't...";
-			mes "It c-can't be... d-denied!";
+			mes "[怪人]";
+			mes "太过份了，冒险家!!! 你必会受到天谴的!!! ";
 			next;
 			emotion e_dots,1;
-			mes "["+strcharinfo(0)+"]";
-			mes "Weirdo! Why don't you";
-			mes "get out of that barrel,";
-			mes "and get your Steamed";
-			mes "Crab Nippers yourself?!";
+			mes "^800080或许现在和桶子谈话 比受到天谴还危险100倍";
+			mes "也不一定，赶快逃离这里吧，";
+			mes "还有不到5秒前说全身 无力的桶子，";
+			mes "竟能如此 大声的斥责，更加可疑^000000";
 			close;
 		break;
 		}
@@ -5400,52 +5311,26 @@ hugel,100,176,3	script	可疑的桶	111,{
 	{
 		if(countitem(12051)) //Steamed crab nippers
 		{
-			mes "[Strange Man]";
-			mes "Th-that... tantalizing...";
-			mes "scent... It's S-Steamed...";
-			mes "Crab... Nippers... Oh God...";
-			mes "It's b-been so... l-long...";
-			mes "G-Give me! G-Give me now!";
+			mes "[怪人]";
+			mes "咕噜咕噜噜!! 这味道是!!!呜哦哦哦!! 这香味是!!!在洞口之间看到的那红色是一大块调味料!!!";
+			mes "光看就觉得让我精力旺盛!!!";
 			next;
 			emotion e_dots,1;
-			mes "^3355FFYou dumped the";
-			mes "Steamed Crab Nippers";
-			mes "into the barrel where";
-			mes "it was quickly devoured.^000000";
+			mes "^800080我也一想到桶子可能会变成宝物箱子，所以更让我精力旺盛，你赶快吃完后变成宝物箱子吧^000000";
 			delitem 12051,1; //Steamed crab nippers
 			set hg_ubu01,5;
 			next;
-			mes "[Strange Man]";
-			mes "Ha ha ha!";
-			mes "Back in the game, baby!";
-			mes "Man, it's been, about what,";
-			mes "3 days since I last ate?";
-			mes "It's good to be alive!";
+			mes "[怪人]";
+			mes "狼吞虎咽~ 嚼嚼嚼~ 啊~ 事隔三天才吃到的 色香味俱全的食物~ 好像拥有了全世界一般~~~ 实在太幸福了!!";
 			close2;
-			donpcevent "Strange Man#Hugel::OnEnable";
+			donpcevent "怪人#Hugel::OnEnable";
 			end;
 		}
 		else
 		{
-			mes "[Strange Man]";
-			mes "Please... cook me...";
-			mes "Steamed... Crab Nippers...!";
-			mes "You... n-need.... 10 Green";
-			mes "Herbs... 1 Yellow Potions...";
-			mes "and 10... N-Nippers... to";
-			mes "c-cook th-them. Ugh...";
-			next;
-			emotion e_dots,1;
-			mes "["+strcharinfo(0)+"]";
-			mes "Hold on,";
-			mes "I have to cook";
-			mes "them for you?!";
-			next;
-			mes "[Strange Man]";
-			mes "Y-yes...";
-			mes "It's... It's the";
-			mes "o-only... possible...";
-			mes "Way... P-please help...";
+			mes "[怪人]";
+			mes "我..很...饿....蒸蟹之螯...我! 好! 想! 吃!";
+			mes "蒸蟹之螯...必须透过料理制作才能做出来... ";
 			close;
 		}
 	}
@@ -5453,181 +5338,130 @@ hugel,100,176,3	script	可疑的桶	111,{
 	{
 		if(countitem(12051)) //Steamed crab nippers
 		{
-			mes "[Strange Man]";
-			mes "Th-that... tantalizing...";
-			mes "scent... It's S-Steamed...";
-			mes "Crab... Nippers... Oh God...";
-			mes "It's b-been so... l-long...";
-			mes "G-Give me! G-Give me now!";
+			mes "[怪人]";
+			mes "咕噜咕噜噜!! 这味道是!!!呜哦哦哦!! 这香味是!!!在洞口之间看到的那红色是一大块调味料!!!";
+			mes "光看就觉得让我精力旺盛!!!";
 			next;
 			emotion e_dots,1;
-			mes "^3355FFYou dumped the";
-			mes "Steamed Crab Nippers";
-			mes "into the barrel where";
-			mes "it was quickly devoured.^000000";
+			mes "^800080我也一想到桶子可能会变成宝物箱子，所以更让我精力旺盛，你赶快吃完后变成宝物箱子吧^000000";
 			delitem 12051,1; //Steamed crab nippers
 			set hg_ubu01,5;
 			next;
-			mes "[Strange Man]";
-			mes "Ha ha ha!";
-			mes "Back in the game, baby!";
-			mes "Man, it's been, about what,";
-			mes "3 days since I last ate?";
-			mes "It's good to be alive!";
+			mes "[怪人]";
+			mes "狼吞虎咽~ 嚼嚼嚼~ 啊~ 事隔三天才吃到的 色香味俱全的食物~ 好像拥有了全世界一般~~~ 实在太幸福了!!";
 			close2;
-			donpcevent "Strange Man#Hugel::OnEnable";
+			donpcevent "怪人#Hugel::OnEnable";
 			end;
 		}
 		else
 		{
-			mes "[Strange Man]";
-			mes "Please... cook me...";
-			mes "Steamed... Crab Nippers...!";
-			mes "You... n-need.... 10 Green";
-			mes "Herbs... 1 Yellow Potions...";
-			mes "and 10... N-Nippers... to";
-			mes "c-cook th-them. Ugh...";
-			next;
-			emotion e_dots,1;
-			mes "["+strcharinfo(0)+"]";
-			mes "Hold on,";
-			mes "I have to cook";
-			mes "them for you?!";
-			next;
-			mes "[Strange Man]";
-			mes "Y-yes...";
-			mes "It's... It's the";
-			mes "o-only... possible...";
-			mes "Way... P-please help...";
+			mes "[怪人]";
+			mes "我..很...饿....蒸蟹之螯...我! 好! 想! 吃!";
+			mes "蒸蟹之螯...必须透过料理制作才能做出来... ";
 			close;
 		}
 	}
 	else if(hg_ubu01 == 6)
 	{
 		emotion e_dots,1;
-		mes "^3355FFFor now, you should";
-		mes "tell 拓丕 and his mom";
-		mes "where 拓丕's father is";
-		mes "hiding so they won't";
-		mes "worry about him so much.";
+		mes "^800080与其跟桶子成为物我一体的 某种东西对话，^000000";
+		mes "^800080不如把这消息通知他的家人，我想更有助于身心健康^000000";
 		close;
 	}
 	else if(hg_ubu01 == 7)
 	{
 		emotion e_dots,1;
-		mes "^800080拓丕的 妈妈 might want to know about^000000";
-		mes "^800080this extraordinary barrel.^000000";
+		mes "^800080与其跟桶子成为物我一体的 某种东西对话，^000000";
+		mes "^800080不如把这消息通知他的家人，我想更有助于身心健康^000000";
 		close;
 	}
 	else if(hg_ubu01 == 8)
 	{
 		emotion e_dots,1;
-		mes "^800080How long does 拓丕's father plan to stay within the barrel?^000000";
+		mes "^800080那桶子里的父亲究竟 要在桶里住到何时啊...^000000";
 		close;
 	}
 	else if(hg_ubu01 == 9)
 	{
 		emotion e_dots,1;
-		mes "^800080That barrel will become a symbolic object^000000";
-		mes "^800080that pays tribute to the firm will of 拓丕's father^000000";
-		mes "^800080who is trying hard to avoid keeping the promise with his son to find his wife.^000000";
+		mes "^800080那桶子是，想藉以捉迷藏的 ";
+		mes "胜负来平息答应找媳妇的先前 ";
+		mes "约定，这会成为纪念一个男子 ";
+		mes "对坚定意志象征性的结构了^000000";
 		close;
 	}
 	else
 	{
-		emotion e_dots,1;
-		mes "^800080You hear something bustling from the hole in the barrel.^000000";
-		mes "^800080However, it doesn't seem to be a big deal.^000000";
+		
+		mes "^800080听到了奇怪的声音，";
+		mes "在钻有小洞口的地方，";
+		mes "虽听到小小声音，";
+		mes "但现在我没空理它^000000";
 		close;
 	}
 	
 }
 
-hugel,100,174,3	script	Strange Man#Hugel	898,{
+hugel,100,174,3	script	怪人#Hugel	898,{
 
-	if(hg_ubu01 == 5)
-	{
-		mes "[Strange Man]";
-		mes "Ahhhh... Thanks for";
-		mes "the free meal! It was";
-		mes "so invigorating! Well,";
-		mes "I better climb back";
-		mes "inside that barrel. See";
-		mes "ya round, adventurer~";
+	if(hg_ubu01 == 5) {
+		mes "^800080真是!! 运气真背!! 不是宝物箱子却变成人了，我的梦想... 好吧，不如这样变成人，^000000";
+		mes "^800080或许能拿到确切的 补偿也说不定^000000";
+		next;
+		mes "[怪人]";
+		mes "呼~~ 啊~~ 好舒畅啊，哦哈哈哈，那么我再次进入 桶里面吧?";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Hold it!";
-		mes "Why are you hiding";
-		mes "inside that barrel?!";
+		mes "等等!!! 你为什么要进入那里呢???";
 		next;
-		mes "[Strange Man]";
-		mes "Huh? Oh, I'm just";
-		mes "playing Hide-and-Seek";
-		mes "with my son, that's all.";
+		mes "[怪人]";
+		mes "没什么，因为儿子不得已 躲在这里啊，正和儿子玩 捉迷藏呢";
 		next;
-		mes "["+strcharinfo(0)+"]";
-		mes "But you haven't";
-		mes "eaten in days! Wait,";
-		mes "hold on, you wouldn't";
-		mes "happen to be 拓丕's";
-		mes "father now, would you?";
-		next;
-		mes "[Strange Man]";
-		mes "Oh, you ran into my boy?";
-		mes "Has he given up on our";
-		mes "little wager yet? Because";
-		mes "I'd really hate to lose...";
+		emotion e_dots,1;
+		mes "^800080跟儿子玩捉迷藏，似乎在哪里听过?? 莫非是拓丕的???^000000";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Um, your wife and son";
-		mes "are really worried about";
-		mes "you. Shouldn't you be going";
-		mes "home as soon as you can?";
+		mes "请问你是拓丕的爸爸吗?";
 		next;
-		mes "[Strange Man]";
-		mes "No, I can't! Not until";
-		mes "拓丕 gives up! I made";
-		mes "a really silly promise";
-		mes "with my son, and if I lose";
-		mes "this game of Hide-and-Seek...";
-		mes "Well, I just can't lose! Bye!";
+		mes "[怪人]";
+		mes "呵呵呵~ 我这么有名吗? 不是，应该是拓丕有名吧? 噢呵~ 我们父子俨然 已是风云人物了，天才猎人和其儿子，对嘛?";
+		next;
+		emotion e_dots,1;
+		mes "^800080他那过份妄想 加上语无伦次的口气... 感到不安，如果和这种人有缘份的话，应该会很困扰的^000000";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "不! 是! 啦! 是你的太太和儿子在担心你，请你快点回去吧";
+		next;
+		mes "[怪人]";
+		mes "不行! 我有难处，若赌输的话，我要对儿子... 非要答应他不得了的 要求啊，那么我要躲一下 所以~";
 		set hg_ubu01,6;
 		next;
-		mes "^3355FF拓丕's father has";
-		mes "hidden himself again,";
-		mes "but at least now you";
-		mes "can go back to 拓丕's";
-		mes "Mom and 拓丕, and let them";
-		mes "both know where he is hiding.^000000";
+		emotion e_dots,1;
+		mes "^800080看样子可能是要求了不得了的事情，嗯~ 我想当务之急应该先 把此事告知拓丕和他母亲吧^000000";
 		close2;
-		disablenpc "Strange Man#Hugel";
+		disablenpc "怪人#Hugel";
 		enablenpc "可疑的桶";
 		end;
 	}
-	else
-	{
-		mes "[Strange Man]";
-		mes "Hahahaha!";
-		mes "Steamed Crab Nippers!";
-		mes "That really hit the spot!";
-		mes "I ate so much, I won't";
-		mes "have to eat again for days!";
+	else {
+		mes "[怪人]";
+		mes "噢呵~ 肚子饱了~ 很好";
 		close;
 	}
 	
 OnEnable:
-	enablenpc "Strange Man#Hugel";
+	enablenpc "怪人#Hugel";
 	disablenpc "可疑的桶";
 	initnpctimer;
 	end;
 	
 OnInit:
-	disablenpc "Strange Man#Hugel";
+	disablenpc "怪人#Hugel";
 	end;
 	
 OnTimer60000:
 	stopnpctimer;
-	disablenpc "Strange Man#Hugel";
+	disablenpc "怪人#Hugel";
 	enablenpc "可疑的桶";
 	end;
 	
@@ -5689,22 +5523,23 @@ hu_in01,15,372,3	script	西雷托 萝碧特	74,{
 			set @randvar, rand(1,4);
 			if(@randvar == 1) {
 				mes "[西雷托]";
-				mes "Alright, please take this";
-				mes "order of Fish Cake Soup to";
-				mes "my friend 内哈. I'm grateful";
-				mes "that she's a regular customer--";
-				mes "she's a good friend, but I'm sure^FFFFFF ^000000 that she loves the soup as well.";
+				mes "是我朋友内哈，她是我";
+				mes "很好的麻吉朋友，因此";
+				mes "帮我提升不少营业额，真是";
+				mes "很感谢她，请快点去送吧，";
+				mes "冷掉就不好吃了";
 				set hg_odeng,1;
 				getitem 584,1; //Skewer soup
 				close;
 			}
 			else if(@randvar == 2) {
 				mes "[西雷托]";
-				mes "Right, take this next order";
-				mes "of Fish Cake Soup to 玫宛,";
-				mes "another one of my regulars.";
-				mes "He's been buying my soup ever";
-				mes "since I helped him start his^FFFFFF ^000000 business. Nice of him, isn't it?";
+				mes "我的粉丝中有一位叫做 玫宛，";
+				mes "他以前作生意时我曾帮过忙，";
+				mes "从此之后他就成了我的粉丝，";
+				mes "一直帮我到现在，食物冷掉";
+				mes "就不好吃了，请赶快";
+				mes "送去吧~";
 				set hg_odeng,2;
 				getitem 584,1; //Skewer soup
 				close;
@@ -5712,12 +5547,11 @@ hu_in01,15,372,3	script	西雷托 萝碧特	74,{
 			else if(@randvar == 3)
 			{
 				mes "[西雷托]";
-				mes "Okay, this order of Fish";
-				mes "Cake Soup is ready! Please";
-				mes "take it to my roommate 拉尤麻.";
-				mes "But... Be careful. She's got";
-				mes "a thing about punctuality.";
-				mes "Just try not to be late...";
+				mes "这次是我的室友拉尤麻小姐，";
+				mes "她很会修理家中的家具，";
+				mes "另外她只要看到盗虫就会";
+				mes "吓得花容失色，";
+				mes "麻烦你快点~";
 				set hg_odeng,3;
 				getitem 584,1; //Skewer soup
 				close;
@@ -6069,31 +5903,29 @@ hugel,76,134,3	script	内哈	101,{
 		if(countitem(1960) && countitem(584)) //Whip and Skewer soup
 		{
 			mes "[内哈]";
-			mes "Finally... My soup!";
-			mes "And you brought me my Whip!";
-			mes "Don't worry, I'll only give you";
-			mes "just one hard spanking. It'll";
-			mes "be over before you know it~";
+			mes "噢~ 弹性佳、打击感又很 真实的^FF0000玛哪鞭子^000000你买来了，若你一心想要完成外送任务";
+			mes "的话，我会特别诚心诚意的 鞭打你，即使你惨叫我也会 原谅你的，噢呵呵呵";
 			next;
 			mes "[内哈]";
-			mes "Ha!";
+			mes "咿啊!";
 			next;
-			mes "^3355FF*Slap*^000000";
+			mes "^3355FF- 啪嗒 -^000000";
 			percentheal -25,0;
 			next;
 			mes "[内哈]";
-			mes "Heeyah!!";
+			mes "咿啊!";
 			next;
-			mes "^3355FF*SLAP*^000000";
+			mes "^3355FF- 啪嗒 -^000000";
 			percentheal -25,0;
 			next;
 			mes "[内哈]";
-			mes "Ooh, did I accidentally";
-			mes "whip you twice? Heh heh...";
-			mes "Well, I'm satisfied. I'll go";
-			mes "ahead and tell Celette that";
-			mes "you did a good job... I hope";
-			mes "you come deliver my soup again~";
+			mes "哈，说好只鞭打一次的 却因为! 触感太好了，不知不觉中 连打了好几下，念在顾客是 王的份上，你就当作是为你 免费服务一次吧";
+			next;
+			mes "[内哈]";
+			mes "嗯哼... 好吧，那么你的 外送迟延失误到此就网开 一面，我就收下黑轮汤，我想应该可以吃的 更津津有味";
+			next;
+			mes "[内哈]";
+			mes "那么辛苦你了，往后 有机会再送外卖的话，你一定要来喔，呼呼... ";
 			delitem 1960,1; //Whip
 			delitem 584,1; //Skewer soup
 			set hg_odeng,10;
@@ -6102,23 +5934,19 @@ hugel,76,134,3	script	内哈	101,{
 		else
 		{
 			mes "[内哈]";
-			mes "^FF00001 Fish Cake Soup^000000...";
-			mes "^FF00001 Whip^000000... Is that too";
-			mes "much for a girl to ask?";
-			mes "I'm hungry, and I want to";
-			mes "hit somebody! What's wrong";
-			mes "with that, huh? Now hurry up!";
+			mes "你快去买 ^FF00001玛哪鞭子^000000啦，";
+			mes "真是，黑轮汤也要";
+			mes "保管好啊 ";
 			close;
 		}
 	}
 	else
 	{
 		mes "[内哈]";
-		mes "Oh ho ho ho ho ho~";
-		mes "I just love cute little boys...";
-		mes "But for some reason, it";
-		mes "thrills me to torture them";
-		mes "a little bit as well. Hoho~";
+		mes "噢~ 呵呵呵呵呵! 美少年是我";
+		mes "生活中的乐趣! 当我鞭打时";
+		mes "所发出的那可爱的呻吟声音，...";
+		mes "真是让我冻未条! ";
 		close;
 	}
 	
@@ -6318,12 +6146,20 @@ hugel,102,161,3	script	艾乐詹	100,{
 		else
 		{
 			mes "[艾乐詹]";
-			mes "I am Erjan, first son of";
-			mes "the noble Franchefeschu";
-			mes "family. Commoner, if you";
-			mes "do not have any business";
-			mes "with me, then leave me be,";
-			mes "and do whatever it is you do.";
+			mes "嗯，这里是有品德的家族，";
+			mes "是福兰伽费休家族长子的我";
+			mes "艾乐詹所休憩的地方，请问";
+			mes "你找我有什么事吗? 若没事的话，";
+			mes "就别打扰我甜美的时光，";
+			mes "静静的离开吧";
+			next;
+			mes "[艾乐詹]";
+			mes "你说曾在某处见过我吗... 呼，";
+			mes "应该是巧合吧，像我这般";
+			mes "优雅的人物怎会还有";
+			mes "第二人嘛，可能是因我的";
+			mes "品德和这穷乡僻壤毁葛";
+			mes "不匹配而引起的误会吧";
 			close;
 		}
 	}
@@ -6332,25 +6168,19 @@ hugel,102,161,3	script	艾乐詹	100,{
 		if(countitem(584) && countitem(736)) //Skewer soup and China
 		{
 			mes "[艾乐詹]";
-			mes "Ah, so you've delivered";
-			mes "my Fish Cake Soup with some";
-			mes "proper China. Yes, this pleases";
-			mes "me. Now, I may enjoy this meal";
-			mes "in a manner befitting the";
-			mes "Franchefeschu family.";
+			mes "哼，虽依旧是刺激鼻子的 香气，但盛装它的 器皿...嗯? 你所携带的 那盘子纯白色比我想像的";
+			mes "更有格调，可以让我瞧瞧吗 ";
 			next;
 			mes "[艾乐詹]";
-			mes "Although this China is";
-			mes "below my standards, I also";
-			mes "understand that this is the";
-			mes "best you can do. Yes, to accept";
-			mes "this is my... noblesse oblige.";
+			mes "哼...不过身为福兰伽费休家族 长子的我，要使用这白色盘子 是有损我的身分，但对平民的";
+			mes "器具而言算很棒的了... 比上不足比下有余我就用它吧，呼~";
 			next;
 			mes "[艾乐詹]";
-			mes "You are dismissed.";
-			mes "Please take your leave,";
-			mes "and return to 西雷托";
-			mes "with my noble thanks.";
+			mes "虽有失优雅感，但对一介 外送员而言已达极限了，不过诚意十足，即使 不及我的品德水准，";
+			mes "却大受平民阶层的好评 是无庸置疑的";
+			next;
+			mes "[艾乐詹]";
+			mes "我会好好享用的，外送员，像聘用你这种人的商店，我想在这黑轮汤中一定 充满了诚心诚意，不会 让我失望吧... 呼，辛苦了";
 			delitem 736,1; //China
 			delitem 584,1; //Skewer soup
 			set hg_odeng,10;
@@ -7185,47 +7015,47 @@ OnTouch:
 }
 
 //-------------------------------------------------------------------------
-// Cow Milking Quest
+// 挤牛奶任务
 //-------------------------------------------------------------------------
 
-hugel,56,104,3	script	Kurupe	709,3,3,{
+hugel,56,104,3	script	库陆培	709,3,3,{
 
 	if(hg_milk == 1)
 	{
-		mes "[Kurupe]";
-		mes "Could Burupu be hiding";
+		mes "[库陆培]";
+		mes "Could 布陆普 be hiding";
 		mes "from me again? He's been";
 		mes "wanting to ditch work more";
 		mes "and more ever since he wanted";
 		mes "to become a Swordman. If only";
 		mes "I could hire someone else...";
 		next;
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Unfortunately, he's the";
 		mes "only one I can find that";
 		mes "can actually milk my cow,";
 		mes "Booboo! If you can find";
-		mes "Burupu for me, I'll be sure";
+		mes "布陆普 for me, I'll be sure";
 		mes "to pay you for your effort.";
 		next;
 		switch( select( "Sure.","Sorry, I'm busy." ) )
 		{
 			case 1:
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Thank you, you're a";
 				mes "lifesaver! I need to get the";
 				mes "milk delivered by tomorrow,";
-				mes "so I really need Burupu back!";
+				mes "so I really need 布陆普 back!";
 				mes "You should be able to find him";
 				mes "somewhere just outside of town.";
 				set hg_milk,2;
 				close;
 			
 			case 2:
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "N-no...!";
 				mes "If I can't find";
-				mes "Burupu, then there's no";
+				mes "布陆普, then there's no";
 				mes "way I'd be able to deliver";
 				mes "the milk orders by tomorrow!";
 				mes "Great, what am I gonna do?";
@@ -7234,8 +7064,8 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 	}
 	else if(hg_milk > 1 && hg_milk < 5)
 	{
-		mes "[Kurupe]";
-		mes "Burupu, I need you";
+		mes "[库陆培]";
+		mes "布陆普, I need you";
 		mes "to come to work! Maybe";
 		mes "you can find him practicing";
 		mes "with his sword right outside";
@@ -7245,18 +7075,18 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 	}
 	else if(hg_milk == 5)
 	{
-		mes "[Kurupe]";
-		mes "Burupu is making demands?!";
+		mes "[库陆培]";
+		mes "布陆普 is making demands?!";
 		mes "I guess I don't have a choice.";
 		mes "You wouldn't happen to know";
 		mes "how much Rapiers cost, do you?";
-		mes "Why does Burupu want to become";
+		mes "Why does 布陆普 want to become";
 		mes "a Swordman so much, huh?";
 		close;
 	}
 	else if(hg_milk == 6)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Oh, you're going to";
 		mes "help me milk the cow?";
 		mes "Great, great, thanks so";
@@ -7268,10 +7098,10 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 	}
 	else if(hg_milk == 7)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Hmm, how about this?";
 		mes "If you can actually milk";
-		mes "Booboo the cow, then I'll";
+		mes "Mrs.布乌布乌, then I'll";
 		mes "give you some food. Does";
 		mes "that sound fair? Anyway,";
 		mes "please get to work soon~";
@@ -7279,7 +7109,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 	}
 	else if(hg_milk == 8)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Great! Now that you've";
 		mes "milked Booboo, I can go";
 		mes "and make my deliveries";
@@ -7289,7 +7119,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 		next;
 		if(checkweight(12063,3) != 1)
 		{
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "Wait a minute!";
 			mes "Currently you are carrying";
 			mes "too many items with you.";
@@ -7301,18 +7131,18 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 		specialeffect2 71;
 		getexp 100000,0;
 		getitem 12063,3;
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "I always need";
 		mes "someone to help me";
 		mes "milk Booboo, especially";
-		mes "when Burupu doesn't feel";
+		mes "when 布陆普 doesn't feel";
 		mes "like doing it, so please come";
 		mes "by and help me when you can~";
 		close;
 	}
 	else if(hg_milk == 9)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Oh, it's you again!";
 		mes "Did you want to help me";
 		mes "out by milking Booboo the";
@@ -7322,18 +7152,18 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 		switch( select( "Sure, I'll milk Booboo.","What'll pay me this time?","Nah, just dropping by." ) )
 		{
 			case 1:
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Great, great! If you want";
 				mes "to milk Booboo, first tell";
-				mes "Burupu that he doesn't need";
+				mes "布陆普 that he doesn't need";
 				mes "to come in today, and then";
 				mes "come back to me. Then, I'll";
-				mes "let you milk Booboo the cow.";
+				mes "let you milk Mrs.布乌布乌.";
 				set hg_milk,10;
 				close;
 			
 			case 2:
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Let's see...";
 				mes "Milk Booboo for me this";
 				mes "time, and I'll randomly";
@@ -7349,46 +7179,46 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 				close;
 			
 			case 3:
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Ahahahah, it's good";
 				mes "to see you! Now, don't";
 				mes "be a stranger, alright?";
-				mes "Burupu could learn a";
+				mes "布陆普 could learn a";
 				mes "couple things from you...";
 				close;
 		}
 	}
 	else if(hg_milk == 10)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "For now, go talk";
-		mes "to Burupu and let him";
+		mes "to 布陆普 and let him";
 		mes "know that he doesn't need";
 		mes "to come into work today~";
 		close;
 	}
 	else if(hg_milk == 11)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Ah, you spoke to";
-		mes "Burupu already? Good,";
+		mes "布陆普 already? Good,";
 		mes "now would you please";
-		mes "milk Booboo the cow?";
+		mes "milk Mrs.布乌布乌?";
 		mes "Thanks once again~";
 		set hg_milk,12;
 		close;
 	}
 	else if(hg_milk == 12)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Please go and milk";
-		mes "Booboo the cow as";
+		mes "Mrs.布乌布乌 as";
 		mes "soon as you can, okay?";
 		close;
 	}
 	else if(hg_milk == 13)
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Ah, you've done a good";
 		mes "job of milking Booboo the";
 		mes "cow for me. Let's see, let's";
@@ -7398,7 +7228,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 		set .@milkreward,rand(1,10);
 		if (.@milkreward < 5)
 		{
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "You know what?";
 			mes "Why don't you have";
 			mes "some Milk? It's only";
@@ -7408,7 +7238,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 			if(checkweight(519,5) != 1)
 			{
 				next;
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Wait a minute!";
 				mes "Currently you are carrying";
 				mes "too many items with you.";
@@ -7422,16 +7252,16 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 		}
 		else if(.@milkreward > 4 && .@milkreward < 8)
 		{
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "Ah, I've got it!";
 			mes "You like Orange Potions,";
 			mes "right? Come on, you looove";
 			mes "Orange Potions! Here, you can";
-			mes "have a bunch as my way of saying thanks for milking Booboo the cow~";
+			mes "have a bunch as my way of saying thanks for milking Mrs.布乌布乌~";
 			if(checkweight(502,5) != 1)
 			{
 				next;
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Wait a minute!";
 				mes "Currently you are carrying";
 				mes "too many items with you.";
@@ -7445,7 +7275,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 		}
 		else if(.@milkreward > 7 && .@milkreward < 10)
 		{
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "Oooh, I could give you";
 			mes "some Yellow Potions, Yes,";
 			mes "that's a good idea. Please";
@@ -7455,7 +7285,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 			if(checkweight(503,5) != 1)
 			{
 				next;
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Wait a minute!";
 				mes "Currently you are carrying";
 				mes "too many items with you.";
@@ -7472,7 +7302,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 			set .@milkreward,rand(1,10);
 			if (.@milkreward < 7)
 			{
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Hey, why don't you";
 				mes "take some fresh Honey?";
 				mes "Yes, it's sweet, delicious,";
@@ -7482,7 +7312,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 				if(checkweight(518,3) != 1)
 				{
 					next;
-					mes "[Kurupe]";
+					mes "[库陆培]";
 					mes "Wait a minute!";
 					mes "Currently you are carrying";
 					mes "too many items with you.";
@@ -7494,7 +7324,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 				getitem 518,3;
 				close;
 			}
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "Here, why don't you";
 			mes "have some of this really";
 			mes "delicious food? I don't";
@@ -7504,7 +7334,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 			if(checkweight(12111,1) != 1)
 			{
 				next;
-				mes "[Kurupe]";
+				mes "[库陆培]";
 				mes "Wait a minute!";
 				mes "Currently you are carrying";
 				mes "too many items with you.";
@@ -7519,7 +7349,7 @@ hugel,56,104,3	script	Kurupe	709,3,3,{
 	}
 	else
 	{
-		mes "[Kurupe]";
+		mes "[库陆培]";
 		mes "Aww, nuts...!";
 		mes "I've got so many";
 		mes "Milk deliveries to do";
@@ -7533,24 +7363,24 @@ OnTouch:
 	{
 		if(!hg_milk)
 		{
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "Oh no, what am I gonna";
 			mes "do?! I need to deliver the";
-			mes "milk tomorrow, but Burupu";
+			mes "milk tomorrow, but 布陆普";
 			mes "still hasn't arrived yet!";
 			emotion e_omg,0;
 			next;
-			mes "[Kurupe]";
+			mes "[库陆培]";
 			mes "When is he coming";
-			mes "to work? Burupu,";
+			mes "to work? 布陆普,";
 			mes "where are you?!";
 			emotion e_swt,0;
 			set hg_milk,1;
 			close;
 		}
 	}
-	mes "[Kurupe]";
-	mes "Why hasn't Burupu";
+	mes "[库陆培]";
+	mes "Why hasn't 布陆普";
 	mes "arrived yet? If he";
 	mes "doesn't come soon,";
 	mes "how will I get the milk";
@@ -7558,19 +7388,19 @@ OnTouch:
 	close;
 }
 
-hu_fild06,217,270,3	script	Burupu	896,3,3,{
+hu_fild06,217,270,3	script	布陆普	896,3,3,{
 
 	if (hg_milk == 3)
 	{
-		mes "[Burupu]";
-		mes "What? Kurupe wants me";
+		mes "[布陆普]";
+		mes "What? 库陆培 wants me";
 		mes "to come in to work again?";
 		mes "Man, does it look like I want";
 		mes "to milk Booboo all my life?";
 		mes "Forget that, I'm gonna be";
 		mes "a Swordman! Tally-hoooe!";
 		next;
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Yeah, ever since that";
 		mes "Airship landed in our";
 		mes "town, and I saw all those";
@@ -7581,7 +7411,7 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 	}
 	else if(hg_milk == 4)
 	{
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Hey, that equipment of";
 		mes "yours looks plenty expensive.";
 		mes "I think I'll need something";
@@ -7589,9 +7419,9 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 		mes "a Swordman. Hey, I know";
 		mes "how we can help each other~";
 		next;
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "I'll help you with milking";
-		mes "Booboo the cow if you can get";
+		mes "Mrs.布乌布乌 if you can get";
 		mes "me some proper Swordman";
 		mes "equipment. Let's see... Why not";
 		mes "give me 1 Rapier with 2 Slots?^FFFFFF ^000000 That's not too much to ask, right?";
@@ -7599,7 +7429,7 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 		switch( select( "Alright.","Whoa, that's too much!" ) )
 		{
 			case 1:
-				mes "[Burupu]";
+				mes "[布陆普]";
 				mes "I'm glad you agree~";
 				mes "Okay then, try to bring";
 				mes "me a Rapier with 2 Slots";
@@ -7609,7 +7439,7 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 				close;
 
 			case 2:
-				mes "[Burupu]";
+				mes "[布陆普]";
 				mes "You think so...?";
 				mes "Well, it's the only";
 				mes "thing I can think of";
@@ -7621,16 +7451,16 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 	{
 		if (!countitem(1110))
 		{
-			mes "[Burupu]";
+			mes "[布陆普]";
 			mes "Hey, weren't you";
 			mes "supposed to bring me";
 			mes "a Rapier with 2 Slots?";
 			mes "If you want me to milk";
-			mes "Booboo the cow, then keep";
+			mes "Mrs.布乌布乌, then keep";
 			mes "your end of our bargain~";
 			close;
 		}
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Oh, wow...!";
 		mes "That's such a beautiful";
 		mes "Rapier! Look, it's got";
@@ -7640,7 +7470,7 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 		delitem 1110,1;
 		set hg_milk,6;
 		next;
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "You know what?";
 		mes "I've changed my mind.";
 		mes "Screw milking that dumb cow!";
@@ -7648,14 +7478,14 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 		mes "to keep his promises, huh?";
 		mes "Okay then, how about this?";
 		next;
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "I hid my secret instructions";
-		mes "for milking Booboo the cow";
+		mes "for milking Mrs.布乌布乌";
 		mes "under the ground just northeast";
 		mes "of her. Read them carefully, and^FFFFFF ^000000 you should be able to milk her";
 		mes "yourself. You can do it, right?";
 		next;
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Anyway, don't forget";
 		mes "to find and read those";
 		mes "instructions. Oh, and";
@@ -7664,7 +7494,7 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 	}
 	else if(hg_milk == 10)
 	{
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Hmm? You wanna milk";
 		mes "Booboo today? Great,";
 		mes "that means I've got more";
@@ -7676,7 +7506,7 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 	}
 	else
 	{
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "I'm gonna become the";
 		mes "best Swordman in the";
 		mes "world! But first, I gotta";
@@ -7689,13 +7519,13 @@ hu_fild06,217,270,3	script	Burupu	896,3,3,{
 OnTouch:
 	if (hg_milk == 2)
 	{
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Heeeyah!";
 		mes "Yaaaaaaaah!";
 		mes "Wh-whooooooosh!";
 		emotion e_swt2,0;
 		next;
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Crap! Why do I have";
 		mes "to have such a crappy";
 		mes "sword?! I mean, I'm getting";
@@ -7707,7 +7537,7 @@ OnTouch:
 	}
 	else if(hg_milk == 5)
 	{
-		mes "[Burupu]";
+		mes "[布陆普]";
 		mes "Heeeyah!";
 		mes "Yaaaaaaaah!";
 		mes "Yeeeeeeeyoooop!";
@@ -7716,7 +7546,7 @@ OnTouch:
 	}
 }
 
-hugel,72,101,0	script	Burupu's Instructions	111,{
+hugel,72,101,0	script	布陆普的说明书	111,{
 
 	if (hg_milk < 6)
 	{
@@ -7725,9 +7555,9 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 		close;
 	}
 	mes "^804000This small notebook^000000";
-	mes "^804000contains Burupu's detailed^000000";
+	mes "^804000contains 布陆普's detailed^000000";
 	mes "^804000instructions for milking^000000";
-	mes "^804000Booboo the cow. Although^000000";
+	mes "^804000Mrs.布乌布乌. Although^000000";
 	mes "^804000it is written by hand, it^000000";
 	mes "^804000is very well organized.^000000";
 	next;
@@ -7761,14 +7591,14 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 			mes "[Chapter 2 Contents]";
 			mes " ";
 			mes "Part 1: How to Respond to";
-			mes "Booboo the Cow's Feelings";
+			mes "Mrs.布乌布乌's Feelings";
 			mes "Part 2: Booboo's Songs";
 			next;
 			switch( select( "Part 1","Part 2" ) )
 			{
 				case 1:
 					mes "[Chapter 2, Part 1]";
-					mes "Booboo the Cow usually";
+					mes "Mrs.布乌布乌 usually";
 					mes "expresses five different";
 					mes "feelings through her songs:";
 					mes "these are joy, sadness, anger,";
@@ -7776,7 +7606,7 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 					next;
 					mes "[Chapter 2, Part 1]";
 					mes "^800080She is so happy^000000!";
-					mes "When Booboo the Cow";
+					mes "When Mrs.布乌布乌";
 					mes "feels joy, then you go";
 					mes "ahead and brush her";
 					mes "hair 3 times before";
@@ -7789,7 +7619,7 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 					mes "comb her hair ^800080 5 times^000000.";
 					next;
 					mes "[Chapter 2, Part 1]";
-					mes "If Booboo the cow feels";
+					mes "If Mrs.布乌布乌 feels";
 					mes "sad, then you need to make";
 					mes "her feel more loved. How";
 					mes "do you do this? Just brush";
@@ -7797,14 +7627,14 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 					next;
 					mes "[Chapter 2, Part 1]";
 					mes "Now, remember that when";
-					mes "Booboo the cow is angry,";
+					mes "Mrs.布乌布乌 is angry,";
 					mes "you shouldn't touch her";
 					mes "at all. Just say, ''No!'' to";
 					mes "brushing her hair, okay?";
 					next;
 					mes "[Chapter 2, Part 1]";
 					mes "If you happen to see";
-					mes "Booboo the cow in love,";
+					mes "Mrs.布乌布乌 in love,";
 					mes "then just brush her hair";
 					mes "once. Just look for the";
 					mes "hearts, and you'll know";
@@ -7820,7 +7650,7 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 				
 				case 2:
 					mes "[Chapter 2, Part 2]";
-					mes "Booboo the cow will";
+					mes "Mrs.布乌布乌 will";
 					mes "always sing this song.";
 					mes "Keep these sounds in";
 					mes "mind when she sings them...";
@@ -7845,16 +7675,16 @@ hugel,72,101,0	script	Burupu's Instructions	111,{
 		case 3:
 			mes "[Chapter 3]";
 			mes "If you want to milk";
-			mes "Booboo the cow, you";
+			mes "Mrs.布乌布乌, you";
 			mes "must first get permission";
-			mes "from Kurupe. You will also";
+			mes "from 库陆培. You will also";
 			mes "need 3 Concentration Potions";
 			mes "to insert into Booboo's comb.";
 			close;
 	}
 }
 
-hugel,68,99,3	script	Booboo the Cow	889,{
+hugel,68,99,3	script	Mrs.布乌布乌	889,{
 
 	if (hg_milk == 7 || hg_milk == 12)
 	{
@@ -7863,7 +7693,7 @@ hugel,68,99,3	script	Booboo the Cow	889,{
 		mes "Booboo Boop boo!";
 		next;
 		mes "^804000It seems that";
-		mes "Booboo the cow";
+		mes "Mrs.布乌布乌";
 		mes "has something that";
 		mes "she wants to tell you.^000000";
 		next;
@@ -7881,7 +7711,7 @@ hugel,68,99,3	script	Booboo the Cow	889,{
 					end;
 				}
 				mes "^3355FFTo use this comb to";
-				mes "brush Booboo the cow,";
+				mes "brush Mrs.布乌布乌,";
 				mes "you will need to insert";
 				mes "3 Concentration Potions.";
 				mes "You can only brush Booboo";
@@ -7890,7 +7720,7 @@ hugel,68,99,3	script	Booboo the Cow	889,{
 				
 			case 2:
 				mes "^3355FFMaybe you should learn more";
-				mes "about Booboo the cow, and";
+				mes "about Mrs.布乌布乌, and";
 				mes "get more information before";
 				mes "you can attempt to milk her.^000000";
 				close;
@@ -7923,7 +7753,7 @@ function	script	Func_MilkCow	{
 	next;
 	soundeffect ""+getarg(0)+"",0;
 	mes "^3355FFNow it's time for you";
-	mes "to brush Booboo the cow.";
+	mes "to brush Mrs.布乌布乌.";
 	mes "Depending on her mood,";
 	mes "you need to brush her a";
 	mes "certain number of times.^000000";
@@ -7933,7 +7763,7 @@ function	script	Func_MilkCow	{
 	{
 		soundeffect "taming_fail.wav",0;
 		mes "^3355FFAwwww...";
-		mes "Booboo the cow looks";
+		mes "Mrs.布乌布乌 looks";
 		mes "so disappointed. She";
 		mes "looks like she wants";
 		mes "to close herself off";
@@ -7941,7 +7771,7 @@ function	script	Func_MilkCow	{
 		close;
 	}
 	soundeffect "cow_06.wav",0;
-	mes "^3355FFBooboo the cow";
+	mes "^3355FFMrs.布乌布乌";
 	mes "seems fairly content,";
 	mes "and is singing a serenade.^000000";
 	next;
@@ -8005,7 +7835,7 @@ function	script	Func_MilkCow	{
 	next;
 	mes "^3355FFHurry, respond to Booboo's song! Look for the word that is slightly";
 	mes "different than Booboo's normal";
-	mes "song in Burupu's notes, and then tell her the correct world without";
+	mes "song in 布陆普's notes, and then tell her the correct world without";
 	mes "the tilde character (''~'').^000000";
 	next;
 	if(@cowsong2 == 1) set @cowsong$,"Brrbrr";
@@ -8019,18 +7849,18 @@ function	script	Func_MilkCow	{
 	{
 		soundeffect "tming_success.wav",0;
 		mes "^3355FFSuccess!";
-		mes "Booboo the cow";
+		mes "Mrs.布乌布乌";
 		mes "is quite happy, and";
 		mes "you were able to milk";
 		mes "her. Now, you should";
-		mes "report to Kurupe.^000000";
+		mes "report to 库陆培.^000000";
 		if(hg_milk == 12) set hg_milk,13;
 		else set hg_milk,8;
 		close;
 	}
 	soundeffect "taming_fail.wav",0;
 	mes "^3355FFUh oh...";
-	mes "Booboo the cow is starting";
+	mes "Mrs.布乌布乌 is starting";
 	mes "to snort violently! She seems";
 	mes "pretty angry with you, so you";
 	mes "better get away for now...^000000";

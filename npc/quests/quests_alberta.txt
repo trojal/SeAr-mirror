@@ -21,15 +21,15 @@ alberta,117,134,8	script	 小孩	96,{
 		mes "[小孩]";
 		mes "哥哥你好~? 嘻嘻...  哥哥你是男生应该不喜欢娃娃吧? 我很喜欢~娃娃!";
 		next;	
-		mes "[小孩]";	
+		mes "[小孩]";
 		mes "有吗~ 我, 想要新的娃娃~ 下次生日时我爸爸一定会帮我买娃娃.";
 		break;
-	default:
+	case 0:
 		set .@DollSex$,"姊姊";
 		mes "[小孩]";
 		mes "姊姊你好~? 姊姊, 姊姊, 喜欢娃娃吗? 我. 非常喜欢娃娃~ 嘻嘻~!";
-		next;	
-		mes "[小孩]";	
+		next;
+		mes "[小孩]";
 		mes "有吗~ 我, 想要新的娃娃~ 下次生日时我爸爸一定会帮我买娃娃.";
 		break;
 	}
@@ -362,127 +362,102 @@ alberta_in,122,53,4	script	蔡露奇	47,{
 
 //头饰制作
 alberta,120,53,1	script	时髦商人	51,{
-	mes "[智可]";
-	mes "呀呼~海的味道果然很好!! 太好了!";
-	mes "嗯?...有什么事吗?";
-	mes "你是知道我是商人，才找我的吧??";
-	next;
-	mes "[智可]";
-	mes "哎..太有名的商人，要去那里都是劳累命";
-	mes "~~";
-	mes "知道了 知道了...唉~~~";
-	mes "名气太大，连想休息都不行...";
-	next;
-	mes "[智可]";
-	mes "你想要什么? 又?";
-	mes "说出来~说出来听听~~";
-	mes "不说也知道....没事找我聊天我就知道了";
-	mes "~~!!";
-	next;
-	switch(select("丸子头饰:下弦月发夹:时尚太阳眼镜:爱心发夹")) {
-	case 1:
+	if(countitem(10007) >= 1 && countitem(968) >= 50) {
+		setarray .@need,10007,968;
+		setarray .@amount,1,50;
+		set .@gain,5042;	//丸子头饰
+	}
+	else if(countitem(5041) >= 1 && countitem(999) >= 10) {
+		setarray .@need,5041,999;
+		setarray .@amount,1,10;
+		set .@gain,5048;	//上弦月发夹
+	}
+	else if(countitem(2271) >= 1 && countitem(975) >= 1) {
+		setarray .@need,2271,975;
+		setarray .@amount,1,1;
+		set .@gain,5047;	//时尚太阳眼镜
+	}
+	else if(countitem(7013) >= 1200) {
+		setarray .@need,7013,0;
+		setarray .@amount,1200,0;
+		set .@gain,5041;	//爱心发夹
+	}
+	if(.@gain) {
 		mes "[智可]";
-		mes "连我在经营的项目，都知道的一清二楚啊!";
-		mes "! 哈哈!!";
-		mes "看吧~~ 我就知道!! ?";
-		mes "你又是听谁说的，才来找我的吧?";
+		mes "明白了、明白了!";
+		mes getitemname(.@gain)+ "是吧....";
+		mes "请稍等";
 		next;
-		mes "[智可]";
-		mes "丸子头饰呢~~";
+		mes "- 唏啦哗啦 -";
 		next;
+		delitem .@need[0],.@amount[0];
+		delitem .@need[1],.@amount[1];
+		getitem .@gain,1;
 		mes "[智可]";
-		mes "^3355FF宠物发带^000000 1 个还有";
-		mes "^3355FF兽人英雄之证^000000 50 个就好了.";
-		mes "...这也是你知道的事情吧?";
-		mes "听过一次不过有忘记了，";
-		mes "所以又再问我的吧?";
-		if(countitem(10007) < 1 || countitem(968) < 50) close;
-		next;
-		mes "[智可]";
-		mes "祝贺你！我已经成功的做好了...";
-		mes "这是^3355FF丸子头饰^000000。请拿好了!.";
-		delitem	10007,1;
-		delitem	968,50;
-		getitem	5042,1;
-		close;
-	case 2:
-		mes "[智可]";
-		mes "连我在经营的项目，都知道的一清二楚啊!";
-		mes "! 哈哈!!";
-		mes "看吧~~ 我就知道!! ?";
-		mes "你又是听谁说的，才来找我的吧?";
-		next;
-		mes "[智可]";
-		mes "下弦月发夹呢~~";
-		next;
-		mes "[智可]";
-		mes "^3355FF爱心发夹^000000 1 个还有";
-		mes "^3355FF钢铁^000000 10 个就好了.";
-		mes "...这也是你知道的事情吧?";
-		mes "听过一次不过有忘记了，";
-		mes "所以又再问我的吧?";
-		if(countitem(5041) < 1 || countitem(999) < 10) close;
-		next;
-		mes "[智可]";
-		mes "祝贺你！我已经成功的做好了...";
-		mes "这是^3355FF下弦月发夹^000000。请拿好了!.";
-		delitem	5041,1;
-		delitem	999,10;
-		getitem	5048,1;
-		close;
-	case 3:
-		mes "[智可]";
-		mes "连我在经营的项目，都知道的一清二楚啊!";
-		mes "! 哈哈!!";
-		mes "看吧~~ 我就知道!! ?";
-		mes "你又是听谁说的，才来找我的吧?";
-		next;
-		mes "[智可]";
-		mes "时尚太阳眼镜呢~~";
-		next;
-		mes "[智可]";
-		mes "^3355FF眼镜头饰^000000 1 个还有";
-		mes "^3355FF红色染料^000000 1 个就好了.";
-		mes "...这也是你知道的事情吧?";
-		mes "听过一次不过有忘记了，";
-		mes "所以又再问我的吧?";
-		if(countitem(2271) < 1 || countitem(975) < 1) close;
-		next;
-		mes "[智可]";
-		mes "祝贺你！我已经成功的做好了...";
-		mes "这是^3355FF时尚太阳眼镜^000000。请拿好了!.";
-		delitem	2271,1;
-		delitem	975,1;
-		getitem	5047,1;
-		close;
-	case 4:
-		mes "[智可]";
-		mes "连我在经营的项目，都知道的一清二楚啊!";
-		mes "! 哈哈!!";
-		mes "看吧~~ 我就知道!! ?";
-		mes "你又是听谁说的，才来找我的吧?";
-		next;
-		mes "[智可]";
-		mes "爱心发夹呢~~";
-		next;
-		mes "[智可]";
-		mes "单纯! 无知!(这样比较好?";
-		mes "当然啰~~)";
-		mes "^3355FF珊瑚^000000 1200 个就好了.";
-		mes "...这也是你知道的事情吧?";
-		mes "听过一次不过有忘记了，";
-		mes "所以又再问我的吧?";
-		if(countitem(7013) < 1200) close;
-		next;
-		mes "[智可]";
-		mes "祝贺你！我已经成功的做好了...";
-		mes "这是^3355FF爱心发夹^000000。请拿好了!.";
-		delitem	7013,1200;
-		getitem	5041,1;
+		mes "祝贺你!";
+		mes "我已经成功的做好了....";
 		close;
 	}
+	mes "[智可]";
+	mes "呀呼~海的味道果然很好!太好了!";
+	mes "嗯?....有什么事吗?";
+	mes "你知道我是商人才找我的吧?";
+	next;
+	mes "[智可]";
+	mes "哎....太有名的商人，要去哪里都是劳累命~";
+	mes "知道了、知道了....唉~";
+	mes "名气太大，连想休息都不行....";
+	next;
+	mes "[智可]";
+	mes "你想要什么?";
+	mes "说出来~说出来听听~";
+	mes "不说也知道....没事找我聊天我就知道了~!!";
+	next;
+	set @menu,select("丸子头饰:上弦月发夹:时尚太阳眼镜:爱心发夹");
+	mes "[智可]";
+	mes "连我在经营的项目，都知道的一清二楚啊!哈哈!";
+	mes "看吧~我就知道!!";
+	mes "你又是听谁说的才来找我的吧....";
+	next;
+	mes "[智可]";
+	switch(@menu) {
+	case 1:
+		mes "丸子头饰....";
+		next;
+		mes "[智可]";
+		mes "^0000ff宠物发带^000000 1个还有";
+		mes "^0000ff兽人英雄之证^000000 50个就好了";
+		mes "听过一次不过又忘记了，所以又再问我的吧...?";
+		break;
+	case 2:
+		mes "上弦月发夹....";
+		next;
+		mes "[智可]";
+		mes "^0000ff爱心发夹^000000 1个还有";
+		mes "^0000ff钢铁^000000 10个就好了";
+		mes "听过一次不过又忘记了，所以又再问我的吧...?";
+		break;
+	case 3:
+		mes "时尚太阳眼镜....";
+		next;
+		mes "[智可]";
+		mes "^0000ff眼镜头饰^000000 1个还有";
+		mes "^0000ff红色染料^000000 1个就好了";
+		mes "听过一次不过又忘记了，所以又再问我的吧...?";
+		break;
+	case 4:
+		mes "爱心发夹....";
+		next;
+		mes "[智可]";
+		mes "单纯!无知!(这样比较好?当然罗~)";
+		mes "^0000ff珊瑚^000000 1200个就好了";
+		mes "....这也是你知道的事情吧?";
+		mes "听过一次不过又忘记了，所以又再问我的吧...?";
+		break;
+	}
+	mes "总之快去准备材料吧";
+	close;
 }
-
 
 //头饰制作
 alberta,136,79,5	script	帽子商店小姐	71,{
@@ -558,11 +533,11 @@ alberta,136,79,5	script	帽子商店小姐	71,{
 		mes "[谭巴斯特拉]";
 		mes "祝贺你！我已经成功的做好了...";
 		mes "这是^3355FF出游帽子^000000。请拿好了!.";
-		delitem	1059,250;
-		delitem	2221,1;
-		delitem	2227,1;
-		delitem	7063,600;
-		getitem	5032,1;
+		delitem 1059,250;
+		delitem 2221,1;
+		delitem 2227,1;
+		delitem 7063,600;
+		getitem 5032,1;
 		close;
 	case 2:
 		mes "[谭巴斯特拉]";
@@ -589,11 +564,11 @@ alberta,136,79,5	script	帽子商店小姐	71,{
 		mes "[谭巴斯特拉]";
 		mes "祝贺你！我已经成功的做好了...";
 		mes "这是^3355FF魔法师帽^000000。请拿好了!.";
-		delitem	2252,1;
-		delitem	1036,400;
-		delitem	7001,50;
-		delitem	4052,1;
-		getitem	5027,1;
+		delitem 2252,1;
+		delitem 1036,400;
+		delitem 7001,50;
+		delitem 4052,1;
+		getitem 5027,1;
 		close;
 	case 3:
 		mes "[谭巴斯特拉]";
@@ -619,10 +594,10 @@ alberta,136,79,5	script	帽子商店小姐	71,{
 		mes "[谭巴斯特拉]";
 		mes "祝贺你！我已经成功的做好了...";
 		mes "这是^3355FF魔术师帽^000000。请拿好了!.";
-		delitem	2252,1;
-		delitem	1054,500;
-		delitem	943,1200;
-		getitem	5045,1;
+		delitem 2252,1;
+		delitem 1054,500;
+		delitem 943,1200;
+		getitem 5045,1;
 		close;
 	case 4:
 		mes "[谭巴斯特拉]";
@@ -656,12 +631,12 @@ alberta,136,79,5	script	帽子商店小姐	71,{
 		mes "[谭巴斯特拉]";
 		mes "祝贺你！我已经成功的做好了...";
 		mes "这是^3355FF太阳神头盔^000000。请拿好了!.";
-		delitem	7086,1;
-		delitem	969,10;
-		delitem	999,40;
-		delitem	1003,50;
-		delitem	984,2;
-		getitem	5022,1;	
+		delitem 7086,1;
+		delitem 969,10;
+		delitem 999,40;
+		delitem 1003,50;
+		delitem 984,2;
+		getitem 5022,1;
 		close;
 	}
 }

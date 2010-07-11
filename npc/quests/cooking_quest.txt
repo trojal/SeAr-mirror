@@ -4,41 +4,34 @@
 // ---------------------------------
 // - 料理 任务脚本 - 
 //===================================
-// 版本：1.6b
+// 版本：1.8
 //===================================
 
 prt_castle,43,30,3	script	夏罗乐 欧罗莱昂#cook	878,{
 	set .@now_weight,MaxWeight-Weight;
 	if (.@now_weight < 2000) {
 		mes "[夏罗乐 欧罗莱昂]";
-		mes "Just one second.";
-		mes "You're carrying too";
-		mes "many items with you";
-		mes "right now, so you better";
-		mes "place some of your things";
-		mes "into Kafra Storage, yes?";
-		close2;
-		//EnableItemMove;
-		end;
+		mes "非常抱歉,";
+		mes "您目前身上东西太多了,";
+		mes "请把一些东西放到卡普拉仓库中,";
+		mes "好吗?";
+		close;
 	}
 	if (BaseJob == Job_Novice) {
 		if (sex) {
 			cutin "orleans_5",0;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Excuse me, monsieur?";
-			mes "Yes, you. If you're not";
-			mes "here as hired help for the";
-			mes "kitchen, then I'd like to";
-			mes "ask you to leave now.";
+			mes "抱歉,这位先生?";
+			mes "没错！就是您！";
+			mes "如果您不是到厨房里来帮忙的";
+			mes "麻烦请您马上离开!";
 			next;
 			emotion e_an;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Please don't be";
-			mes "offended, but I can't";
-			mes "concentrate on my ";
-			mes "cooking when Novices";
-			mes "like yourself are running";
-			mes "around here like children.";
+			mes "没有要冒犯你的意思，";
+			mes "但有个像你这样的小鬼头";
+			mes "在我旁边一直晃来晃去的， ";
+			mes "我实在没办法专心做料理啊";
 			close;
 		}
 		cutin "orleans_1",0;
@@ -209,12 +202,10 @@ prt_castle,43,30,3	script	夏罗乐 欧罗莱昂#cook	878,{
 		case 1:
 			cutin "orleans_7",0;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Who else would";
-			mes "I be talking to?";
-			mes "To Madeleine over";
-			mes "there? Or that child";
-			mes "holding that mangy";
-			mes "cat? Sacrebleu!";
+			mes "我还能在跟谁说话?";
+			mes "那边的玛德琳?";
+			mes "还是那边那个拎着脏兮兮小猫的小鬼?";
+			mes "我的天！(法文)";
 			next;
 			cutin "nyuang_4",2;
 			mes "[拎着小猫的 小孩]";
@@ -225,79 +216,74 @@ prt_castle,43,30,3	script	夏罗乐 欧罗莱昂#cook	878,{
 			cutin "orleans_3",0;
 			emotion e_omg;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Goodness, you scared me!";
-			mes "What an ill natured kid!";
-			mes "Who brought this kid in?";
+			mes "天啊！你吓到我了！";
+			mes "真是个有问题的小鬼";
+			mes "谁让这小鬼进来的?";
 			break;
 		case 2:
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "I can't remember every";
-			mes "tyro who's begged me for";
-			mes "instruction in the culinary";
-			mes "arts. I could swear you've";
-			mes "come here months ago, it's";
-			mes "just--what was your name...?";
+			mes "我不可能记住每一个";
+			mes "跑来要求我教他们料理艺术的新手";
+			mes "我敢发誓你在几个月前绝对来过，";
+			mes "只是...";
+			mes "等等，你叫什么来着?";
 			next;
 			cutin "orleans_7",0;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Bah! No matter.";
-			mes "I suppose that's";
-			mes "of no importance";
-			mes "at the moment.";
+			mes "噢! 算了";
+			mes "我想这也不太重要";
 			break;
 		case 3:
 			cutin "orleans_4",0;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "E-excuse me? I may be";
-			mes "your instructor, but you";
-			mes "can call me by my first name.";
-			mes "I know that I can be strict,";
-			mes "but please: in the end, we are colleagues, even if I am superior.";
+			mes "抱-抱歉";
+			mes "虽然我是你的指导员";
+			mes "但你可以直呼我的名字没关系";
+			mes "我知道我有时候很严厉,";
+			mes "但毕竟我们还是同事阿...尽管我是你的上司";
 			next;
 			cutin "orleans_1",0;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Fine, fine...";
-			mes "If you insist on your";
-			mes "modicum of expressed";
-			mes "respect, then you may";
-			mes "call me ''Sir Charles.''";
+			mes "啊，没关系!";
+			mes "如果你坚持要表达你那极其微的尊重,";
+			mes "你可以称呼我为";
+			mes " '夏罗乐骑士大人' ";
 			next;
 			cutin "orleans_7",0;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Ah... That does have";
-			mes "a rather fine ring to it.";
-			mes "I actually earned that title";
-			mes "from the king himself, even";
-			mes "if I'm a knight only in title and manner, rather than strength.";
+			mes "啊~那的确有个不错的戒指跟着一起";
+			mes "事实上这个称号是国王本人赐给我的";
+			mes "尽管跟力量比起来,";
+			mes "我有的是骑士的称号及态度";
 			break;
 		}
 		next;
 		cutin "orleans_7",0;
 		mes "[夏罗乐 欧罗莱昂]";
-		mes "Well then, let's get started";
-		mes "today with making a simple";
-		mes "dish. Okay, ^FF0000I don't teach recipes";
-		mes "more than once^000000, ^FF0000so make sure";
-		mes "that you write this down^000000. Now";
-		mes "then, what shall we cook?";
+		mes "非常好,我们开始吧！";
+		mes "今天我们来做道简单的菜色";
+		mes "好, ^FF0000我只会讲一次";
+		mes "^000000, ^FF0000所以请把我说的话记下来";
+		mes "^000000.现在,";
+		mes "我们可以开始了吗?";
 		next;
 		cutin "orleans_6",0;
 		set .@cook_m1,rand(1,6);
 		if (.@cook_m1 == 1) {
 			set cooking_q,1;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Ahhh, how about";
-			mes "'Fried Grasshopper Legs?'";
-			mes "To the uninitiated, it may";
-			mes "seem to be a disgusting dish,";
-			mes "but trust me, its exquisite taste is pure pleasure for your palate.";
+			mes "啊~不如我们来做";
+			mes "'蝗虫热炒?'";
+			mes "对那些未开化的人来说，";
+			mes "它可能是道恶心的料理，";
+			mes "不过请相信我, 它精致的味道绝对会是截然不同的享受.";
 			next;
 			mes "[夏罗乐 欧罗莱昂]";
-			mes "Now, please bring";
-			mes "^4D4DFF5 Grasshopper Legs^000000,";
+			mes "现在,请给我";
+			mes "^4D4DFF蝗虫后腿 5个^000000,";
 			mes "^4D4DFF1 Cooking Oil^000000, and";
-			mes "^4D4DFF1 Old Frying Pan^000000.";
-			mes "Then, we can begin.";
+			mes "^4D4DFF老旧平底锅 1个^000000.";
+			mes "接着我们就可以开始了.";
 			goto L_End;
 		}
 		else if (.@cook_m1 == 2) {
@@ -836,11 +822,11 @@ prt_castle,43,30,3	script	夏罗乐 欧罗莱昂#cook	878,{
 			donpcevent "拎着小猫的 小孩#cook::OnDot";
 			mes "[拎着小猫的 小孩]";
 			mes "...";
-			mes "(Meow?)";
+			mes "(喵?)";
 			next;
 			cutin "nyuang_4",2;
 			donpcevent "拎着小猫的 小孩#cook::OnAngry";
-			specialeffect2 1; //EF_HIT2
+			specialeffect2 EF_HIT2;
 			percentheal -10,0;
 			mes "[拎着小猫的 小孩]";
 			mes "Grrrrrrr!";
@@ -1523,7 +1509,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "要更香一点! 要更脆一点!!";
 			mes "我现在正在支配火侯啊!!";
 			close;
-
 		case 2:
 			mes "[马德连 修]";
 			mes "我只会做一些基础料理，";
@@ -1559,7 +1544,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "又出类拔萃的料理名人，";
 			mes "直到那一天我会努力不懈";
 			close;
-
 		case 3:
 			mes "[马德连 修]";
 			mes "嗯... 我是没办法教你的，";
@@ -1607,7 +1591,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "^4D4DFF1 Old Frying Pan^000000 to make";
 			mes "fried Grasshopper Legs.";
 			break;
-
 		case 2:
 			mes "[马德连 修]";
 			mes "Oh! You'll need";
@@ -1615,7 +1598,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "^4D4DFF2 Red Potions^000000 for";
 			mes "Grape Juice Herbal Tea.";
 			break;
-
 		case 3:
 			mes "[马德连 修]";
 			mes "Oh! You'll need";
@@ -1623,7 +1605,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "^4D4DFF2 Grapes^000000, and";
 			mes "^4D4DFF1 Red Potion^000000.";
 			break;
-
 		case 4:
 			mes "[马德连 修]";
 			mes "Oh! You'll need";
@@ -1632,7 +1613,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "^4D4DFF1 Squid Ink^000000 for Frog";
 			mes "Egg and Squid Ink soup.";
 			break;
-
 		case 5:
 			mes "[马德连 修]";
 			mes "Oh! You'll need";
@@ -1641,7 +1621,6 @@ prt_castle,45,35,5	script	马德连 修#cook	886,{
 			mes "^4D4DFF1 Yellow Potion^000000 for";
 			mes "Steamed Crab Nippers.";
 			break;
-
 		case 6:
 			mes "[马德连 修]";
 			mes "Oh! You'll need";
@@ -2341,7 +2320,7 @@ payon,209,127,3	script	村落 男佣	88,{
 		mes "说真的，我并没有请他教我啊";
 		next;
 		mes "[阿宏]";
-		mes "所以。我实在感激不尽...";
+		mes "所以我实在感激不尽...";
 		mes "我也刚好想做一些美味的";
 		mes "廖哩，给我们家女主人，";
 		mes "因缘际会，所以我就学了";

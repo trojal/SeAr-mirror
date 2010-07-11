@@ -1,612 +1,520 @@
-//===== eAthena Script ======================================= 
-//= Grade A and Grade S weapon quests
-//===== By: ================================================== 
-//= Vicious_Pucca, Reddozen & MasterOfMuppets
-//===== Current Version: ===================================== 
-//= 1.4
-//===== Compatible With: ===================================== 
-//= eAthena SVN 3422+(Requires jA Script System)
-//===== Description: ========================================= 
-//= Grade A and Grade S weapon quests
-//===== Additional Comments: ================================= 
-//= 1.0 First Version, Credits goes to Vicious_Pucca for converting [MasterOfMuppets]
-//=     the quest from aegis format to eA format. Also thanks to 
-//=	reddozen for fixing bugs.
-//= 1.1 Many fixes to spelling, grammar, and sentence order. [Silent]
-//= 1.2 A small fix, thanks to vicious_pucca [MasterOfMuppets]
-//= 1.21 Fixing MoM's typos (Citrin -> Citrine) [erKURITA]
-//= 1.3 Redirected error message for "LV_16" to "LV_16_NOGEM" (Gepard) [L0ne_W0lf]
-//= 1.4 Fixed bad NPC header data to comply with rev. 11603. [L0ne_W0lf]
-//============================================================ 
+//===================================
+// [冥] The PlutoEA Project [王]
+// http://opensvn.csie.org/PlutoEA
+// -----------------------------------------
+// - 4 级武器制作脚本 -
+//===================================
+//= 版本: 1.4
+//= 翻译: 5511
+//===================================
+//= 2009/02/03
+//= *A级武器制作任务
+//= -魔刀 吞神, 暗灵之斧和利剪剑制作任务
+//= -破甲短剑, 削刃短剑和斯勒特斧制作任务
+//= -圣剑 浑沌, 秘锤 冷月和魔锤 安魂曲制作任务
+//===================================
 
 //---------------------------------------------------------------
-// Initialize the basic materials for easier reading/conversion 
+// 设置基本材料, 方便阅读/修改
 //---------------------------------------------------------------
 
 -	script	lv4_weapon_init	-1,{
 OnInit:
-	set $@LV4_Citrine, 7295; // 7295,Citrine
-	set $@LV4_Turquoise, 7294; // 7294,Turquoise
-	set $@LV4_Agate, 7291; // 7291,Agate
+	set $@LV4_Citrine, 7295; // 7295,黄水晶
+	set $@LV4_Turquoise, 7294; // 7294,绿松石
+	set $@LV4_Agate, 7291; // 7291,玛瑙
 	
-	set $@LV4_Muscovite, 7292; // 7292,Muscovite
-	set $@LV4_Biotite, 7297; // 7297,Biotite
-	set $@LV4_Pyroxene, 7296; // 7296,Pyroxene
+	set $@LV4_Muscovite, 7292; // 7292,白云母
+	set $@LV4_Biotite, 7297; // 7297,黑云母
+	set $@LV4_Pyroxene, 7296; // 7296,辉石
 	
-	set $@LV4_Phlogopite, 7290; // 7290,Phlogopite
-	set $@LV4_Olivine, 7289; // 7289,Peridot
-	set $@LV4_Rose_Quartz, 7293; // 7293,Rose_Quartz	
+	set $@LV4_Phlogopite, 7290; // 7290,金云母
+	set $@LV4_Olivine, 7289; // 7289,橄榄石
+	set $@LV4_Rose_Quartz, 7293; // 7293,玫瑰石英
 	
-	set $@LV4_Gold, 969; // 969,Gold
-	set $@LV4_Steel, 999; // 999,Steel
-	set $@LV4_Emperium, 714; // 714,Emperium
-	set $@LV4_Hammer_Of_Blacksmith, 1005; // 1005,Hammer_of_Blacksmith
-	set $@LV4_Emperium_Anvil, 989; // 989,Emperium_Anvil
-	set $@LV4_Illusion_Flower, 710; // 710,Illusion_Flower
-	end;		
+	set $@LV4_Gold, 969; // 969,黄金
+	set $@LV4_Steel, 999; // 999,钢铁
+	set $@LV4_Emperium, 714; // 714,华丽金属
+	set $@LV4_Hammer_Of_Blacksmith, 1005; // 1005,高级铁砧
+	set $@LV4_Emperium_Anvil, 989; // 989,华丽金属铁砧
+	set $@LV4_Illusion_Flower, 710; // 710,幻想花
+	end;
 }
 
 //---------------------------------------------------------------
-// Bazo, creates Immaterial Sword, Quadrille and Slash
+// 巴佐, 制作圣剑 浑沌, 秘锤 冷月和魔锤 安魂曲
 //---------------------------------------------------------------
 
-umbala,117,285,3	script	Bazo	85,{
+umbala,117,285,3	script	巴佐	85,{
 	set @NowWeight, MaxWeight - Weight;
-	if (@NowWeight >= 3000) goto LV4_NOT_OW;
-	mes "- Wait a minute! -";
-	mes "- Currently you are overweight. -";
-	mes "- Please lighten your weight -";
-	mes "- and try again. -";
-	close;
-
-	
-LV4_NOT_OW:
-	if(lv4_weapon == 0) goto LV4_0;
-	if(lv4_weapon == 1) goto LV4_1;
-	if(lv4_weapon == 2) goto LV4_2;
-	if(lv4_weapon == 3) goto LV4_2;
-	if(lv4_weapon == 4) goto LV4_2;
-	if(lv4_weapon == 5) goto LV4_5;
-	if(lv4_weapon == 6) goto LV4_5;
-	if(lv4_weapon == 7) goto LV4_5;
-	if(lv4_weapon > 7) goto LV4_7;	
-	end; // shouldn't be here
-
-	
-LV4_0:
-	mes "[Bazo]";
-	mes "Hello, you are from outside, huh?";
-	mes "I can tell by your appearance.";
-	mes "Pleased to meet you. My name is Bazo Heburiech.";
-	mes "I am also from outside.";
-	next;
-	mes "[Bazo]";
-	mes "We must have been meant to meet each other.";
-	mes "If you don't mind, let me explain about this place for a while.";
-	mes "Umbala is adjacent to Nifflheim, the city of the dead.";
-	mes "Even at a first sight, I knew that";
-	mes "there is something about this village.";
-	next;
-	mes "[Bazo]";
-	mes "Due to that geographical trait,";
-	mes "this village was filled with evil power";
-	mes "that was influenced by the city of the dead.";
-	next;
-	mes "[Bazo]";
-	mes "The local people have learned";
-	mes "to manipulate the evil power for";
-	mes "producing specialties.";
-	next;
-	mes "[Bazo]";
-	mes "While staying here, I also have learned";
-	mes "some recipes. If you bring me materials,";
-	mes "I am willing to show you my skills.";
-	mes "How does that sound?";
-	next;
-	
-	switch( select( "Sounds good.", "No, thanks." ) ) {
-		case 1:
-			if(BaseLevel >= 70) goto L4_0_1;
-			
-			mes "[Bazo]";
-			mes "Err...I don't think that you are powerful";
-			mes "enough to handle my products.";
-			mes "They are charged with evil power.";
-			next;
-			mes "That means if their owners are not powerful";
-			mes "and not experienced enough,";
-			mes "they will drive the owners insane.";
-			mes "And I cannot do that to my friend.";
-			next;
-			mes "[Bazo]";
-			mes "Therefore, I want you to go back and level up first.";
-			mes "I will gladly expect you to come back when you are ready.";
-			break;
-L4_0_1:
-			mes "[Bazo]";
-			mes "Excellent! Let me tell you";
-			mes "the materials I need. I hope you will write them down.";
-			mes "There is not that many though.";
-			next;
-			mes "[Bazo]";
-			mes "I need 10 Gold, 50 Steel and 10 Emperium";
-			mes "as basic materials...";
-			mes "and you can enchant the product with a certain trait.";
-			mes "For that, I need some rare ores...";
-			next;
-			mes "[Bazo]";
-			mes "Please bring me 30 of either Citrine, Turquoise or Agate.";
-			mes "Each one of them possess their own attribute";
-			mes "and following by the ore you have brought,";
-			mes "my product will possess a special trait.";
-			next;
-			mes "[Bazo]";
-			mes "I wish you good luck...";
-			mes "I will wait for you!";
-			
-			set lv4_weapon, 1;
-			break;
-		case 2:
-			mes "[Bazo]";
-			mes "Oh, okay. That is fine with me.";
-			mes "By the way, don't you want to know how evil the city of the dead will be?";
-			mes "I do since that city influences so much of this village";
-			mes "with it's mysterious power, you know.";
-			break;			
-	}	
-	close;
-	
-
-
-//--------------------------------------------------
-//Gold, Steel, Emp Check + Choosing the gem
-//--------------------------------------------------
-LV4_1:
-	if(countitem($@LV4_Gold) < 10) goto LV4_1_FAIL;
-	if(countitem($@LV4_Steel) < 50) goto LV4_1_FAIL;
-	if(countitem($@LV4_Emperium) < 10) goto LV4_1_FAIL;
-
-	mes "[Bazo]";
-	mes "Oh...you have brought all the basic materials.";
-	mes "Now let me check what kind of rare ores";
-	mes "you have brought...";
-	next;
-	
-	if (countitem($@LV4_Citrine) >= 30 && countitem($@LV4_Turquoise) >= 30 && countitem($@LV4_Agate) >= 30) goto LV4_1_CTA;
-	if (countitem($@LV4_Citrine) >= 30 && countitem($@LV4_Turquoise) >= 30) goto LV4_1_CT;
-	if (countitem($@LV4_Citrine) >= 30 && countitem($@LV4_Agate) >= 30) goto LV4_1_CA;
-	if (countitem($@LV4_Turquoise) >= 30 && countitem($@LV4_Agate) >= 30) goto LV4_1_TA;
-	if (countitem($@LV4_Citrine) >= 30) goto LV4_1_C;
-	if (countitem($@LV4_Turquoise) >= 30) goto LV4_1_T;
-	if (countitem($@LV4_Agate) >= 30) goto LV4_1_A;
-	goto LV4_1_NOGEM;
-	end;
-
-
-LV4_1_CTA:	
-	mes "[Bazo]";
-	mes "Hahaha, I asked you to bring one kind not all of them.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
-	next;
-	
-	switch( select( "Citrine", "Turquoise", "Agate" ) ) {
-		case 1:
-			mes "[Bazo]";
-			mes "Citrine...okay. Before we start,";
-			set @gem, $@LV4_Citrine;
-			set @gemstring$,"Citrine";
-			break;
-		case 2:
-			mes "[Bazo]";
-			mes "Turquoise...okay. Before we start,";
-			set @gem, $@LV4_Turquoise;
-			set @gemstring$,"Turquoise";
-			break;
-		case 3:
-			mes "[Bazo]";
-			mes "Agate....okay. Before we start,";
-			set @gem, $@LV4_Agate;
-			set @gemstring$,"Agate";
-			break;
+	if (@NowWeight < 3000) {
+		mes "- 稍等下! -";
+		mes "- 当前你已经超重了. -";
+		mes "- 请减轻你的负重再来找我. -";
+		close;
 	}
-	
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-	
-	
-LV4_1_CT:
-	mes "[Bazo]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
-	next;
-	
-	switch( select( "Citrine", "Turquoise" ) ) {
+	switch (lv4_weapon) {
+	case 0:
+		mes "[巴佐]";
+		mes "你好, 你从外面的世界来的, 哈?";
+		mes "我是从你的外貌看出来的.";
+		mes "很高兴见到你. 我的名字是";
+		mes "巴佐 哈布瑞奇.";
+		mes "我也来自外面的世界.";
+		next;
+		mes "[巴佐]";
+		mes "我们一定曾经见到过.";
+		mes "如果你不介意, 让我来跟你说说";
+		mes "这个地方.";
+		mes "汶巴拉与死者国家, 尼芙菲姆相邻.";
+		mes "实际上第一次来到这里, 我就知";
+		mes "道了关于这个村落的一些事情.";
+		next;
+		mes "[巴佐]";
+		mes "由于地理上的特殊,";
+		mes "这个村落完全受到了来自死者国";
+		mes "家的某种邪恶力量的影响.";
+		next;
+		mes "[巴佐]";
+		mes "这里的本地居民已经学会了制造";
+		mes "拥有邪恶力量的特制品.";
+		next;
+		mes "[巴佐]";
+		mes "在这里停留的时间里, 我也学会";
+		mes "了一些方法. 如果你带给我适当";
+		mes "材料, 我会让你看看我的能力.";
+		mes "听起来怎么样?";
+		next;
+		switch( select( "听起来不错:不, 谢谢" ) ) {
 		case 1:
-			mes "[Bazo]";
-			mes "Citrine...okay. Before we start,";
-			set @gem, $@LV4_Citrine;
-			set @gemstring$,"Citrine";
-			break;
+			if(BaseLevel >= 70) {
+				mes "[巴佐]";
+				mes "非常棒! 让我告诉你需要的材料.";
+				mes "我希望你能把他们记下来.";
+				mes "虽然数量并不是很多.";
+				next;
+				mes "[巴佐]";
+				mes "我需要10 块黄金, 50 片钢铁和";
+				mes "10 块华丽金属作为基本材料...";
+				mes "还需要对特定物品施予特殊魔法.";
+				mes "所以, 我还需要一些稀有矿石...";
+				next;
+				mes "[巴佐]";
+				mes "请带给我30 块黄水晶, 或绿松";
+				mes "石或是玛瑙.";
+				mes "你带来的每一种矿石都会施予不";
+				mes "同的属性, 我的制造物就会有不";
+				mes "同的特色.";
+				next;
+				mes "[巴佐]";
+				mes "祝你好运...";
+				mes "我会在这里等你!";
+				set lv4_weapon, 1;
+				close;
+			}
+			mes "[巴佐]";
+			mes "呃... 我想你还没有能力掌控我";
+			mes "的创造物.";
+			mes "它们蕴藏着邪恶的力量.";
+			next;
+			mes "就是说如果持有它们的人不是强";
+			mes "壮的, 且没有足够经历的话, 他";
+			mes "们就会被邪恶反噬.";
+			mes "我可以不能这样对待我的朋友.";
+			next;
+			mes "[巴佐]";
+			mes "所以, 我希望你最好先提升你的";
+			mes "等级然后再回来.";
+			mes "等你你准备好后, 期待你再来.";
+			close;
 		case 2:
-			mes "[Bazo]";
-			mes "Turquoise...okay. Before we start,";
-			set @gem, $@LV4_Turquoise;
-			set @gemstring$,"Turquoise";
-			break;
-	}
-	
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-	
-
-LV4_1_CA:	
-	mes "[Bazo]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
-	next;
-	
-	switch( select( "Citrine", "Agate" ) ) {
-		case 1:
-			mes "[Bazo]";
-			mes "Citrine...okay. Before we start,";
-			set @gem, $@LV4_Citrine;
-			set @gemstring$,"Citrine";
-			break;
-		case 2:
-			mes "[Bazo]";
-			mes "Agate....okay. Before we start,";
-			set @gem, $@LV4_Agate;
-			set @gemstring$,"Agate";
-			break;
-	}
-	
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-	
-	
-LV4_1_TA:	
-	mes "[Bazo]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
-	next;
-	
-	switch( select( "Turquoise", "Agate" ) ) {
+			mes "[巴佐]";
+			mes "噢, 好吧. 反正对我无所谓.";
+			mes "顺便说一句, 你不想知道死者国";
+			mes "家的邪恶力量是如何的吗?";
+			mes "要知道, 自从那城市凭借那种力";
+			mes "量影响了很多村落后, 我才开始";
+			mes "自己制作物品的.";
+			close;
+		}
+	case 1:
+		if( countitem($@LV4_Gold) < 10 || countitem($@LV4_Steel) < 50 || countitem($@LV4_Emperium ) < 10) {
+			mes "[巴佐]";
+			mes "我需要10 块黄金, 50 片钢铁和";
+			mes "10 块华丽金属作为基本材料...";
+			mes "还需要对特定物品施予特殊魔法.";
+			mes "所以, 我还需要一些稀有矿石...";
+			next;
+			mes "[巴佐]";
+			mes "请带给我30 块黄水晶, 或绿松";
+			mes "石或是玛瑙.";
+			mes "你带来的每一种矿石都会施予不";
+			mes "同的属性, 我的制造物就会有不";
+			mes "同的特色.";
+			next;
+			mes "[巴佐]";
+			mes "祝你好运...";
+			mes "我会在这里等你!";
+			close;
+		}
+		mes "[巴佐]";
+		mes "噢... 你已经带来了所有的基本";
+		mes "材料.";
+		mes "那么我来检查看看你带来哪些稀";
+		mes "有矿石...";
+		next;
+		if (countitem($@LV4_Citrine) >= 30 && countitem($@LV4_Turquoise) >= 30 && countitem($@LV4_Agate) >= 30) {
+			mes "[巴佐]";
+			mes "哈哈哈, 我叫你随便带一种, 可";
+			mes "你都带来啦.";
+			mes "你只可以使用其中一种.";
+			mes "哪种你更想使用?";
+			next;
+			switch( select( "黄水晶:绿松石:玛瑙" ) ) {
 			case 1:
-				mes "[Bazo]";
-				mes "Turquoise...okay. Before we start,";
-				set @gem, $@LV4_Turquoise;
-				set @gemstring$,"Turquoise";
+				mes "[巴佐]";
+				mes "黄水晶... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Citrine;
+				set @gemstring$,"黄水晶";
 				break;
 			case 2:
-				mes "[Bazo]";
-				mes "Agate....okay. Before we start,";
-				set @gem, $@LV4_Agate;
-				set @gemstring$,"Agate";
+				mes "[巴佐]";
+				mes "绿松石... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Turquoise;
+				set @gemstring$,"绿松石";
 				break;
-	}
-	
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-	
-	
-LV4_1_C:
-	mes "[Bazo]";
-	mes "Citrine...okay. Before we start,";
-	set @gem, $@LV4_Citrine;
-	set @gemstring$,"Citrine";
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-		
-		
-LV4_1_T:
-	mes "[Bazo]";
-	mes "Turquoise...okay. Before we start,";
-	set @gem, $@LV4_Turquoise;
-	set @gemstring$,"Turquoise";
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-	
-	
-LV4_1_A:
-	mes "[Bazo]";
-	mes "Agate....okay. Before we start,";
-	set @gem, $@LV4_Agate;
-	set @gemstring$,"Agate";
-	goto LV4_1_PICK;
-	end; // shouldn't be here
-	
-	
-LV4_1_PICK:
-	mes "we must do one thing first.";
-	mes "That is, testing your luck.";
-	mes "As you already know,";
-	mes "I cannot guarantee you that we will succeed";
-	mes "to make one right away.";
-	next;
-	mes "[Bazo]";
-	mes "If we can raise your luck before we start,";
-	mes "we will be able to succeed.";
-	next;
-	mes "[Bazo]";
-	mes "Now you must be wondering what we";
-	mes "will do in order to increase your luck.";
-	mes "It is simple, we will play a mind-reading game.";
-	mes "I am going to think of one monster among 4 of my favorite ones,";
-	mes "you will guess what the monster is.";
-	next;
-	mes "[Bazo]";
-	mes "You must answer correctly at least";
-	mes "1 out of 5 times. It shouldn't be that difficult.";
-	mes "And if you fail to answer, we must do something else";
-	mes "to drive away your bad luck.";
-	next;
-	mes "[Bazo]";
-	mes "I will take 10 of the special ore you chose.";
-	mes "Well, I understand that it does not sound tempting";
-	mes "but let's think of it this way.";
-	mes "It is much better than wasting 30 ore";
-	mes "by failing to create the item, isn't it?";
-	next;
-	mes "[Bazo]";
-	mes "Okay, now I need some time to prepare...";
-	mes "Talk to you later!";
-	
-	if(countitem($@LV4_Gold) < 10) goto LV4_HACK;
-	if(countitem($@LV4_Steel) < 50) goto LV4_HACK;
-	if(countitem($@LV4_Emperium) < 10) goto LV4_HACK;
-	delitem $@LV4_Gold, 10;
-	delitem $@LV4_Steel, 50;
-	delitem $@LV4_Emperium, 10;
-	if(@gem == $@LV4_Citrine) set lv4_weapon, 2;
-	if(@gem == $@LV4_Turquoise) set lv4_weapon, 3;
-	if(@gem == $@LV4_Agate) set lv4_weapon, 4;	
-	close;
-
-
-LV4_1_NOGEM:
-	mes "[Bazo]";
-	mes "I seem to recall that I asked you to bring";
-	mes "30 of a special ore, Citrine, Turquoise, or Agate...";
-	mes "And I don't see any of them.";
-	mes "You must have forgot them. Please go get them too.";
-	close;
-
-
-LV4_1_FAIL:
-	mes "[Bazo]";
-	mes "Please bring me 10 Gold, 50 Steel and 10 Emperium";
-	mes "as basic materials...";
-	mes "and you can enchant the product with a certain trait.";
-	mes "For that, I need some rare ores...";
-	next;
-	mes "[Bazo]";
-	mes "Please bring me 30 of either Citrine, Turquoise or Agate.";
-	mes "Each one of them possess their own attribute";
-	mes "and using the ore you have brought,";
-	mes "my product will possess a special trait.";
-	next;
-	mes "[Bazo]";
-	mes "I wish you good luck...";
-	mes "I will wait for you!";
-	close;
-
-
-
-//--------------------------------------------------
-//Guessing Game
-//--------------------------------------------------
-LV4_2:
-	if(lv4_weapon == 2) set @gem, $@LV4_Citrine;
-	if(lv4_weapon == 3) set @gem, $@LV4_Turquoise;
-	if(lv4_weapon == 4) set @gem, $@LV4_Agate;
-	if(countitem(@gem) < 30) goto LV4_2_NOGEM; 
-	
-	mes "[Bazo]";
-	mes "Ok, you seem to be ready.";
-	mes "Let's get started.";
-	mes "My favorite monsters are Poring,";
-	mes "Hode, Obeaune, and Minorous.";
-	next;
-
-	set @dap, 0;
-	set @correct[0],1;
-	for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
-		mes "[Bazo]";
-		
-		if(@i == 1) mes "Here's the 1st question. Guess what monster";
-		if(@i != 1) mes "Alright. Now guess what monster";
-		
-		mes "I have in my mind at this moment.";
-		next;
-
-		set @mons, rand(1, 4);		
-
-		switch( select( "Poring", "Hode", "Obeaune", "Minorous" ) ) {
-				case 1:
-					set @correct[@i], 1;
-					if(@mons == 1) set @dap, @dap + 1;
-					break;
-
-				case 2:
-					set @correct[@i], 2;
-					if(@mons == 2) set @dap, @dap + 1;
-					break;
-
-				case 3:
-					set @correct[@i], 3;
-					if(@mons == 3) set @dap, @dap + 1;
-					break;
-
-				case 4:
-					set @correct[@i], 4;
-					if(@mons == 4) set @dap, @dap + 1;
-					break;
+			case 3:
+				mes "[巴佐]";
+				mes "玛瑙.... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Agate;
+				set @gemstring$,"玛瑙";
+			}
+			break;
 		}
-	}
-
-	mes "[Bazo]";
-	mes "Okay, let me give you answers for the questions.";
-	mes "I was thinking of the monsters in the order of";
-	next;
-	mes "[Bazo]";
-
-	for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
-		if(@correct[@i] == 1) mes "Poring";
-		if(@correct[@i] == 2) mes "Hode";
-		if(@correct[@i] == 3) mes "Obeaune";
-		if(@correct[@i] == 4) mes "Minorous";
-	}
-
-	if(@dap < 1) goto LV4_2_FAIL;
-	
-	next;
-	mes "[Bazo]";
-	mes "You answered " + @dap + " times!";
-	mes "I must say you're amazing!";
-	mes "As I promised, I will make an Umbala specialty for you.";
-	mes "Please give me some time to prepare.";
-	mes "Talk to you later.";
-	
-	if(countitem(@gem) < 30) goto LV4_HACK;
-	delitem @gem, 30;
-	set lv4_weapon, lv4_weapon + 3;
-	close;
-	
-	
-LV4_2_FAIL:
-	if(countitem(@gem) < 10) goto LV4_HACK;
-	delitem @gem, 10;
-	
-	next;
-	mes "[Bazo]";
-	mes "Errr... I don't think you are good at reading";
-	mes "other people's minds. Or you had bad luck, I guess.";
-	mes "We cannot do that again unless";
-	mes "we drive away the bad luck.";
-	mes "Give me 10 " + @gemstring$ + ", that will do the job.";
-	next;
-	mes "[Bazo]";
-	mes "Well...if you want to do this mind-reading game again,";
-	mes "please come back with the materials.";
-	mes "I will wait here for you.";
-	close;
-
-
-LV4_2_NOGEM:
-	mes "[Bazo]";
-	mes "Errr...something doesn't feel right. We lack something...";
-	mes "Will you check the materials that you have brought?";
-	close;
-	
-	
-	
-//--------------------------------------------------
-//Weapon Creation
-//--------------------------------------------------
-LV4_5:
-	mes "[Bazo]";
-	mes "Great... now, let's do it!";
-	mes "Wish me luck...ah, I forgot to tell you this.";
-	mes "I cannot tell you what kind of product it will be. It is so random.";
-	mes "Let's wish that a good thing will come out, okay?";
-	next;
-	mes "- You feel unknown power start gathering in -";
-	mes "- the materials. It seems the materials are -";
-	mes "- absorbing all the evil power in the air. -";
-	next;
-	mes "- Then, the materials start merging into one -";
-	mes "- even though Bazo didn't touch them at all. -";
-	next;
-	mes "[Bazo]";
-	mes "Can you feel that? The materials are gathering";
-	mes "power at their own will.";
-	mes "They are out of my hand now. Let's wait and hope.";
-	next;
-	mes "- After a while, the air becomes calm -";
-	mes "- and you check the result. -";
-	next;
-	mes "[Bazo]";
-	mes "Ooooooh! It is done!";
-	mes "We have succeeded! Ah, it's amazing!";
-	mes "Did I tell you that it is really rare to succeed right away?";
-	mes "Yes, God must have listened to our prayers.";
-	mes "Oh, it is a weapon! It will be very useful to you.";
-	mes "Let's take a closer look...";
-	next;
-
-	mes "[Bazo]";
-
-	switch( lv4_weapon ) {
+		else if (countitem($@LV4_Citrine) >= 30 && countitem($@LV4_Turquoise) >= 30) {
+			mes "[巴佐]";
+			mes "哈哈哈, 我叫你随便带一种, 可";
+			mes "你带来了两种.";
+			mes "你只可以使用其中一种.";
+			mes "哪种你更想使用?";
+			next;
+			switch( select( "黄水晶:绿松石" ) ) {
+			case 1:
+				mes "[巴佐]";
+				mes "黄水晶... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Citrine;
+				set @gemstring$,"黄水晶";
+				break;
+			case 2:
+				mes "[巴佐]";
+				mes "绿松石... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Turquoise;
+				set @gemstring$,"绿松石";
+				break;
+			}
+			break;
+		}
+		else if (countitem($@LV4_Citrine) >= 30 && countitem($@LV4_Agate) >= 30) {
+			mes "[巴佐]";
+			mes "哈哈哈, 我叫你随便带一种, 可";
+			mes "你带来了两种.";
+			mes "你只可以使用其中一种.";
+			mes "哪种你更想使用?";
+			next;
+			switch( select( "黄水晶:玛瑙" ) ) {
+			case 1:
+				mes "[巴佐]";
+				mes "黄水晶... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Citrine;
+				set @gemstring$,"黄水晶";
+				break;
+			case 2:
+				mes "[巴佐]";
+				mes "玛瑙.... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Agate;
+				set @gemstring$,"玛瑙";
+				break;
+			}
+			break;
+		}
+		else if (countitem($@LV4_Turquoise) >= 30 && countitem($@LV4_Agate) >= 30) {
+			mes "[巴佐]";
+			mes "哈哈哈, 我叫你随便带一种, 可";
+			mes "你带来了两种.";
+			mes "你只可以使用其中一种.";
+			mes "哪种你更想使用?";
+			next;
+			switch( select( "绿松石:玛瑙" ) ) {
+			case 1:
+				mes "[巴佐]";
+				mes "绿松石... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Turquoise;
+				set @gemstring$,"绿松石";
+				break;
+			case 2:
+				mes "[巴佐]";
+				mes "玛瑙.... 好吧. 在我们开始前,";
+				set @gem, $@LV4_Agate;
+				set @gemstring$,"玛瑙";
+				break;
+			}
+			break;
+		}
+		else if (countitem($@LV4_Citrine) >= 30) {
+			mes "[巴佐]";
+			mes "黄水晶... 好吧. 在我们开始前,";
+			set @gem, $@LV4_Citrine;
+			set @gemstring$,"黄水晶";
+			break;
+		}
+		else if (countitem($@LV4_Turquoise) >= 30) {
+			mes "[巴佐]";
+			mes "绿松石... 好吧. 在我们开始前,";
+			set @gem, $@LV4_Turquoise;
+			set @gemstring$,"绿松石";
+			break;
+		}
+		else if (countitem($@LV4_Agate) >= 30) {
+			mes "[巴佐]";
+			mes "玛瑙.... 好吧. 在我们开始前,";
+			set @gem, $@LV4_Agate;
+			set @gemstring$,"玛瑙";
+			break;
+		}
+		else {
+			mes "[巴佐]";
+			mes "我记得我说过我需要你带来30";
+			mes "块特别的矿石, 黄水晶, ";
+			mes "或绿松石或是玛瑙...";
+			mes "可我没看到它们.";
+			mes "你一定是忘了. 接着去找它们吧.";
+			close;
+		}
+		mes "我们要先做一件事.";
+		mes "那就是, 测测你的运气.";
+		mes "就像你知道的, 我可不能保证我";
+		mes "可以立刻为你制造.";
+		next;
+		mes "[巴佐]";
+		mes "如果在开始前, 你能够提升你的";
+		mes "运气, 我们将会成功制造.";
+		next;
+		mes "[巴佐]";
+		mes "现在你一定好奇我们要做什么来";
+		mes "提升你的运气.";
+		mes "很简单, 我们要玩读心术的游戏.";
+		mes "我现在想我最喜欢的4 种魔物中";
+		mes "的一种, 你来猜那魔物是什么.";
+		next;
+		mes "[巴佐]";
+		mes "你至少要在5 次中答对1 次. 这";
+		mes "不怎么难吧.";
+		mes "如果你回答失败了, 我们得做点";
+		mes "什么来驱赶的坏运气了.";
+		next;
+		mes "[巴佐]";
+		mes "我会拿走10 颗你选的特别矿石.";
+		mes "好吧, 我明白这听起来不怎么诱";
+		mes "人, 但这是唯一的方法.";
+		mes "这比要花费30 颗矿石却仍然制";
+		mes "作失败要好的多吧, 是不是?";
+		next;
+		mes "[巴佐]";
+		mes "好, 现在我需要些时间准备...";
+		mes "稍等下再来找我!";
+		if(countitem($@LV4_Gold) < 10 || countitem($@LV4_Steel) < 50 || countitem($@LV4_Emperium) < 10) goto LV4_HACK;
+		delitem $@LV4_Gold, 10;
+		delitem $@LV4_Steel, 50;
+		delitem $@LV4_Emperium, 10;
+		if(@gem == $@LV4_Citrine) set lv4_weapon, 2;
+		if(@gem == $@LV4_Turquoise) set lv4_weapon, 3;
+		if(@gem == $@LV4_Agate) set lv4_weapon, 4;
+		close;
+	case 2:
+	case 3:
+	case 4:
+		if(lv4_weapon == 2) set @gem, $@LV4_Citrine;
+		if(lv4_weapon == 3) set @gem, $@LV4_Turquoise;
+		if(lv4_weapon == 4) set @gem, $@LV4_Agate;
+		if(countitem(@gem) < 30) {
+			mes "[巴佐]";
+			mes "呃... 什么事情感觉不对. 缺少";
+			mes "点什么东西...";
+			mes "你要不要检查下你带来的东西?";
+			close;
+		}
+		mes "[巴佐]";
+		mes "很好, 看来你准备好了.";
+		mes "那我们开始吧.";
+		mes "我最喜欢的魔物是波利, 蚯蚓,";
+		mes "人鱼, 和米洛斯.";
+		next;
+		set @dap, 0;
+		set @correct[0],1;
+		for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
+			mes "[巴佐]";
+			if(@i == 1) mes "现在是第一次. 那么猜猜在我心";
+			if(@i != 1) mes "那么好吧. 现在接着猜猜在我心";
+			mes "中所想的魔物是什么.";
+			next;
+			set @mons,rand(1,4);
+			switch( select( "波利:蚯蚓:人鱼:米洛斯" ) ) {
+			case 1:
+				set @correct[@i], 1;
+				if(@mons == 1) set @dap, @dap + 1;
+				break;
+			case 2:
+				set @correct[@i], 2;
+				if(@mons == 2) set @dap, @dap + 1;
+				break;
+			case 3:
+				set @correct[@i], 3;
+				if(@mons == 3) set @dap, @dap + 1;
+				break;
+			case 4:
+				set @correct[@i], 4;
+				if(@mons == 4) set @dap, @dap + 1;
+				break;
+			}
+		}
+		mes "[巴佐]";
+		mes "好吧, 让我告诉你问题的答案.";
+		mes "我来看看你所猜的魔物列表.";
+		next;
+		mes "[巴佐]";
+		for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
+			if(@correct[@i] == 1) mes "波利";
+			if(@correct[@i] == 2) mes "蚯蚓";
+			if(@correct[@i] == 3) mes "人鱼";
+			if(@correct[@i] == 4) mes "米洛斯";
+		}
+		if(@dap < 1) {
+			if(countitem(@gem) < 10) goto LV4_HACK;
+			delitem @gem, 10;
+			next;
+			mes "[巴佐]";
+			mes "呃... 我想你不擅长读他人的思";
+			mes "想. 或者我猜你的运气也够坏.";
+			mes "我们不能继续制造, 除非你能驱";
+			mes "赶你的坏运气.";
+			mes "给我10 块" + @gemstring$ + ", 然后继续.";
+			next;
+			mes "[巴佐]";
+			mes "那么... 如果你想要再进行一次";
+			mes "读心术的游戏, 请带着材料再来.";
+			mes "我会在这里等你.";
+			close;
+		}
+		next;
+		mes "[巴佐]";
+		mes "你答对了" + @dap + " 次!";
+		mes "你真了不起!";
+		mes "就像我说的, 我会为你制造";
+		mes "汶巴拉的特别产物.";
+		mes "请再给我点时间准备.";
+		mes "等一下再来找我";
+		if(countitem(@gem) < 30) goto LV4_HACK;
+		delitem @gem, 30;
+		set lv4_weapon, lv4_weapon + 3;
+		close;
+	case 5:
+	case 6:
+	case 7:
+		mes "[巴佐]";
+		mes "很好... 现在, 来制造吧!";
+		mes "祝我好运... 啊, 我忘了告诉你";
+		mes "这个.";
+		mes "我不能告诉你制造物是什么. 因";
+		mes "为是随机的.";
+		mes "让我们一块期待好东西的诞生,";
+		mes "怎么样?";
+		next;
+		mes "- 你感觉到未知的力量开始集 -";
+		mes "- 中在材料上. 材料似乎正在 -";
+		mes "- 吸收空气中所有的邪恶力量 -";
+		next;
+		mes "- 随后, 材料开始融合到一块 -";
+		mes "- 而巴佐却根本没有碰到它们 -";
+		next;
+		mes "[巴佐]";
+		mes "你能感觉到吗? 材料正在根据它";
+		mes "们的能力收集力量.";
+		mes "它们现在不受我控制. 来等待结";
+		mes "果吧.";
+		next;
+		mes "- 过了一会儿, 空气宁静下来 -";
+		mes "- 然后你们看到了最后的结果 -";
+		next;
+		mes "[巴佐]";
+		mes "喔喔喔喔! 完成了!";
+		mes "我们成功了! 啊, 太棒了!";
+		mes "我告诉过你这个是很稀有的吗?";
+		mes "哈, 上帝一定听到了我们的祈祷.";
+		mes "噢, 这件武器! 一定会对你非常";
+		mes "有用.";
+		mes "让我们看看...";
+		next;
+		mes "[巴佐]";
+		switch( lv4_weapon ) {
 		case 5:
-			mes "Immaterial Sword!";
-			getitem 1141, 1; // 1141,Immaterial_Sword
+			mes "是圣剑 浑沌!";
+			getitem 1141, 1; //1141,圣剑 浑沌
 			break;
 		case 6:
-			mes "it is Slash!";
-			getitem 1526, 1; // 1526,Slash
+			mes "是魔锤 安魂曲!";
+			getitem 1526, 1; //1526,魔锤 安魂曲
 			break;
 		case 7:
-			mes "it is Quadrille!";
-			getitem 1527, 1; // 1527,Quadrille
+			mes "是秘锤 冷月!";
+			getitem 1527, 1; //1527,秘锤 冷月
 			break;
+		}
+		set lv4_weapon, 0;
+		mes "这武器是你的了!";
+		mes "恭喜你, 希望你能好好利用它.";
+		next;
+		mes "[巴佐]";
+		mes "我感觉如此满足. 如果你想制作";
+		mes "其它的东西, 有空再来找我.";
+		mes "旅行愉快!";
+		close;
+	default:
+		mes "[巴佐]";
+		mes "嗯... 我感觉到你有一些奇怪.";
+		mes "我很遗憾的告诉你我不能帮你做";
+		mes "什么.";
+		mes "希望你旅途安全.";
+		close;
 	}
 
-	set lv4_weapon, 0;
-	mes "This sword was born to be yours!";
-	mes "Congratulations and hopefully it will have a good use for you.";
-	next;
-
-	mes "[Bazo]";
-	mes "I feel so gratified. If you wish to have";
-	mes "another one, please feel free to visit me anytime.";
-	mes "Have a good travel!";
-	close;
-
-
-
-//--------------------------------------------------
-//Other Quests
-//--------------------------------------------------
-LV4_7:
-	mes "[Bazo]";
-	mes "Hmm...I feel something strange from you.";
-	mes "I regret to say that there is nothing I can do for you.";
-	mes "I hope you have a safe travel.";
-	close;
-	
-	
-	
-//--------------------------------------------------
-//Hack Attempt
-//--------------------------------------------------
+// 篡改企图
 LV4_HACK:
-	mes "[Bazo]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "[巴佐]";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }
 
 //---------------------------------------------------------------
-// Hibilaithan, creates Mailbreaker, Swordbreaker and Slaughter
+// 希必拉伊坦, 制作破甲短剑, 削刃短剑和斯勒特斧
 //---------------------------------------------------------------
-
-umbala,163,257,3	script	Hibilaithan	785,{
-	if(event_umbala < 3) goto LumWord;
+umbala,163,257,3	script	希必拉伊坦	785,{
+	if(event_umbala < 3) {
+		mes "[希必拉伊坦]";
+		mes "汶巴! 汶巴巴...汶汶! 巴汶巴!";
+		mes "汶汶汶巴巴巴汶汶巴巴汶巴!";
+		mes "汶巴汶巴汶巴汶巴汶哈!";
+		mes "汶汶汶汶汶巴巴巴巴巴巴!";
+		close;
+	}
 	set @NowWeight, MaxWeight - Weight;
-	if (@NowWeight >= 3000) goto LV4_NOT_OW;
-	mes "- Wait a minute! -";
-	mes "- Currently you are overweight. -";
-	mes "- Please lighten your weight -";
-	mes "- and try again. -";
-	close;
-
-	
-LV4_NOT_OW:
+	if (@NowWeight < 3000) {
+		mes "- 稍等下! -";
+		mes "- 当前你已经超重了. -";
+		mes "- 请减轻你的负重再来找我. -";
+		close;
+	}
 	if(lv4_weapon == 0) goto LV4_0;
 	if(lv4_weapon == 8) goto LV4_8;
 	if(lv4_weapon == 9) goto LV4_9;
@@ -616,98 +524,87 @@ LV4_NOT_OW:
 	if(lv4_weapon == 13) goto LV4_12;
 	if(lv4_weapon == 14) goto LV4_12;
 	if(lv4_weapon < 8) goto LV4_7;
-	if(lv4_weapon > 14) goto LV4_7;	
-	end; // shouldn't be here
-	
-
-LumWord:
-		mes "[Hibilaithan]";
-		mes "Umba! Umbaba...umum! Baumba!";
-		mes "Umumumbababaumumbabaumba!";
-		mes "Umbaumbaumbaumbaumhah!";
-		mes "Umumumumumbababababab!";
-	close;
-
-	
+	if(lv4_weapon > 14) goto LV4_7;
+	end;
 LV4_0:
-	mes "[Hibilaithan]";
-	mes "Haha, yeah, I knew this day would come.";
-	mes "Finally people recognize my value";
-	mes "as the best artisan in Umbala!";
+	mes "[希必拉伊坦]";
+	mes "哈哈, 是啊, 我就知道这一天一";
+	mes "定会来.";
+	mes "最终人们还是意识到我做为汶巴";
+	mes "拉最棒的工匠的价值了!";
 	next;
-	mes "[Hibilaithan]";
-	mes "Okay, let's talk straight.";
-	mes "I, Hibilaithan shall craft something nice";
-	mes "if you bring me materials!";
-	mes "Hahahahahaha!";
+	mes "[希必拉伊坦]";
+	mes "那么, 咱们切入正题.";
+	mes "如果你能带给我材料的话, 我,";
+	mes "希必拉伊坦将会展现我的手艺!";
+	mes "哈哈哈哈哈哈!";
 	next;
-	mes "[Hibilaithan]";
-	mes "Eh? What? You didn't come to see me?";
-	mes "Stop joking around...Don't play me for a fool!";
-	mes "People are too shy to tell the truth nowadays!";
-	mes "Let's be honest and tell me if you want it or not.";
+	mes "[希必拉伊坦]";
+	mes "呃? 什么? 你从没见过我?";
+	mes "不许笑... 别把我当成傻瓜!";
+	mes "时下说实话, 人太胆怯!";
+	mes "诚实点告诉我你想还是不想.";
 	next;
-	
-	switch( select( "...okay.", "...sorry, I don't need it!" ) ) {
-		case 1:
-			if(BaseLevel >= 70) goto L4_0_1;
-			
-			mes "[Hibilaithan]";
-			mes "...what a shame! I regret to tell you this,";
-			mes "but your spirit is too weak";
-			mes "to handle the power of my stuff!";
-			mes "This is not good, not good at all!";
-			mes "Go and train yourself first.";
-			mes "When you become strong, you may come back!";
-			break;
+	switch( select( "... 当然.:... 抱歉, 我真不需要!" ) ) {
+	case 1:
+		if(BaseLevel >= 70) goto L4_0_1;
+		mes "[希必拉伊坦]";
+		mes "... 真可惜! 很遗憾的告诉你,";
+		mes "由于你的灵魂太脆弱而不能掌控";
+		mes "我的创造物的能量!";
+		mes "不妙啊, 一点都不妙!";
+		mes "先去锻炼你自己吧.";
+		mes "当你强壮的时候, 再回来!";
+		break;
 L4_0_1:
-			mes "[Hibilaithan]";
-			mes "Great! I like your attitute! Great, great!";
-			mes "I am going to tell you what I need.";
-			mes "It is not much, so do not forget.";
+			mes "[希必拉伊坦]";
+			mes "很好! 我喜欢你的态度! 不错,";
+			mes "不错!";
+			mes "我会告诉你我需要什么.";
+			mes "不是很多, 所以可别记不住.";
 			next;
-			mes "[Hibilaithan]";
-			mes "Bring me 10 Gold, 50 Steel and 10 Emperium";
-			mes "... as basic materials.";
-			mes "And I need some rare ores to endow power...";
+			mes "[希必拉伊坦]";
+			mes "带给我10 块黄金, 50 片钢铁和";
+			mes "10 块华丽金属... 为基本材料.";
+			mes "并且我还需要一些稀有矿石来提";
+			mes "供魔力...";
 			next;
-			mes "[Hibilaithan]";
-			mes "Bring me 30 of one ore among Muscovite, Biotite or Pyroxene.";
-			mes "Remember you are going to bring 30 of one ore.";
-			mes "I cannot pick one among those because I am";
-			mes "not sure what will come out. Heh.";
+			mes "[希必拉伊坦]";
+			mes "在白云母, 或黑云母或是辉石之";
+			mes "中选一种带给我30 块.";
+			mes "记住一定要带来30 块同种矿石.";
+			mes "我不确定会制造出什么, 所以我";
+			mes "也不确定用哪一种矿石. 呵呵.";
 			next;
-			mes "[Hibilaithan]";
-			mes "Okay, wish you good luck!";
-			mes "Meanwhile I am going to chill here.";
-			
+			mes "[希必拉伊坦]";
+			mes "好吧, 祝你幸运!";
+			mes "我会在这里等你的.";
 			set lv4_weapon, 8;
 			break;
 		case 2:
-			mes "[Hibilaithan]";
-			mes "Bah~ what are you afraid of?";
-			mes "I am just trying to do you a favor, you know?";
-			mes "Alright, it is your call.";
-			mes "But if you change your mind,";
-			mes "feel free to come back.";
-			break;			
-	}	
+			mes "[希必拉伊坦]";
+			mes "呸~ 你怕什么呢?";
+			mes "我只是想帮你一个忙, 懂不懂?";
+			mes "好吧, 你说了算.";
+			mes "但是如果你改变了心意, 随时回";
+			mes "来找我.";
+			break;
+	}
 	close;
-	
-
 
 //--------------------------------------------------
-//Gold, Steel, Emp Check + Choosing the gem
+// 黄金, 钢铁, 华丽金属检查 + 选择魔法石
 //--------------------------------------------------
 LV4_8:
 	if(countitem($@LV4_Gold) < 10) goto LV4_8_FAIL;
 	if(countitem($@LV4_Steel) < 50) goto LV4_8_FAIL;
 	if(countitem($@LV4_Emperium) < 10) goto LV4_8_FAIL;
 
-	mes "[Hibilaithan]";
-	mes "Oh...you have brought all the basic materials.";
-	mes "Now let me check what kind of rare ores";
-	mes "you have brought...";
+	mes "[希必拉伊坦]";
+	mes "噢... 你已经带来了所有的基本";
+	mes "材料.";
+	mes "那么我来检查看看你带来哪些稀";
+	mes "有矿石...";
 	next;
 	
 	if (countitem($@LV4_Muscovite) >= 30 && countitem($@LV4_Biotite) >= 30 && countitem($@LV4_Pyroxene) >= 30) goto LV4_8_MBP;
@@ -722,177 +619,179 @@ LV4_8:
 
 
 LV4_8_MBP:	
-	mes "[Hibilaithan]";
-	mes "Gosh, did you brought all three kinds?";
-	mes "Hahaha, it's fine.";
-	mes "But we cannot use all of them this time.";
-	mes "Pick one that you want to use.";
+	mes "[希必拉伊坦]";
+	mes "啊, 你带来了三种矿石?";
+	mes "哈哈哈, 不错.";
+	mes "不过我们不能一次全用掉.";
+	mes "选一种你想使用的吧.";
 	next;
 			
-	switch( select( "Muscovite", "Biotite", "Pyroxene" ) ) {
+	switch( select( "白云母:黑云母:辉石" ) ) {
 		case 1:
-			mes "[Hibilaithan]";
-			mes "Muscovite...okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "白云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Muscovite;
-			set @gemstring$,"Muscovite";
+			set @gemstring$,"白云母";
 			break;
 		case 2:
-			mes "[Hibilaithan]";
-			mes "Biotite...okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "黑云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Biotite;
-			set @gemstring$,"Biotite";
+			set @gemstring$,"黑云母";
 			break;
 		case 3:
-			mes "[Hibilaithan]";
-			mes "Pyroxene....okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "辉石.... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Pyroxene;
-			set @gemstring$,"Pyroxene";
+			set @gemstring$,"辉石";
 			break;
 	}
 	
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_8_MB:
-	mes "[Hibilaithan]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
+	mes "[希必拉伊坦]";
+	mes "哈哈哈, 我叫你随便带一种, 可";
+	mes "你带来了两种.";
+	mes "你只可以使用其中一种.";
+	mes "哪种你更想使用?";
 	next;
 	
-	switch( select( "Muscovite", "Biotite" ) ) {
+	switch( select( "白云母:黑云母" ) ) {
 		case 1:
-			mes "[Hibilaithan]";
-			mes "Muscovite...okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "白云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Muscovite;
-			set @gemstring$,"Muscovite";
+			set @gemstring$,"白云母";
 			break;
 		case 2:
-			mes "[Hibilaithan]";
-			mes "Biotite...okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "黑云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Biotite;
-			set @gemstring$,"Biotite";
+			set @gemstring$,"黑云母";
 			break;
 	}
 	
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 	
 
 LV4_8_MP:	
-	mes "[Hibilaithan]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
+	mes "[希必拉伊坦]";
+	mes "哈哈哈, 我叫你随便带一种, 可";
+	mes "你带来了两种.";
+	mes "你只可以使用其中一种.";
+	mes "哪种你更想使用?";
 	next;
 	
-	switch( select( "Muscovite", "Pyroxene" ) ) {
+	switch( select( "白云母:辉石" ) ) {
 		case 1:
-			mes "[Hibilaithan]";
-			mes "Muscovite...okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "白云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Muscovite;
-			set @gemstring$,"Muscovite";
+			set @gemstring$,"白云母";
 			break;
 		case 2:
-			mes "[Hibilaithan]";
-			mes "Pyroxene....okay. Before we start,";
+			mes "[希必拉伊坦]";
+			mes "辉石.... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Pyroxene;
-			set @gemstring$,"Pyroxene";
+			set @gemstring$,"辉石";
 			break;
 	}
 	
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_8_BP:	
-	mes "[Hibilaithan]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
+	mes "[希必拉伊坦]";
+	mes "哈哈哈, 我叫你随便带一种, 可";
+	mes "你带来了两种.";
+	mes "你只可以使用其中一种.";
+	mes "哪种你更想使用?";
 	next;
 	
-	switch( select( "Biotite", "Pyroxene" ) ) {
+	switch( select( "黑云母:辉石" ) ) {
 			case 1:
-				mes "[Hibilaithan]";
-				mes "Biotite...okay. Before we start,";
+				mes "[希必拉伊坦]";
+				mes "黑云母... 好吧. 在我们开始前,";
 				set @gem, $@LV4_Biotite;
-				set @gemstring$,"Biotite";
+				set @gemstring$,"黑云母";
 				break;
 			case 2:
-				mes "[Hibilaithan]";
-				mes "Pyroxene....okay. Before we start,";
+				mes "[希必拉伊坦]";
+				mes "辉石.... 好吧. 在我们开始前,";
 				set @gem, $@LV4_Pyroxene;
-				set @gemstring$,"Pyroxene";
+				set @gemstring$,"辉石";
 				break;
 	}
 	
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_8_M:
-	mes "[Hibilaithan]";
-	mes "Muscovite...okay. Before we start,";
+	mes "[希必拉伊坦]";
+	mes "白云母... 好吧. 在我们开始前,";
 	set @gem, $@LV4_Muscovite;
-	set @gemstring$,"Muscovite";
+	set @gemstring$,"白云母";
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 		
 		
 LV4_8_B:
-	mes "[Hibilaithan]";
-	mes "Biotite...okay. Before we start,";
+	mes "[希必拉伊坦]";
+	mes "黑云母... 好吧. 在我们开始前,";
 	set @gem, $@LV4_Biotite;
-	set @gemstring$,"Biotite";
+	set @gemstring$,"黑云母";
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_8_P:
-	mes "[Hibilaithan]";
-	mes "Pyroxene....okay. Before we start,";
+	mes "[希必拉伊坦]";
+	mes "辉石.... 好吧. 在我们开始前,";
 	set @gem, $@LV4_Pyroxene;
-	set @gemstring$,"Pyroxene";
+	set @gemstring$,"辉石";
 	goto LV4_8_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_8_PICK:
-	mes "we must do one thing first.";
-	mes "That is, to test your luck.";
-	mes "As you already know,";
-	mes "I cannot guarantee you that we will succeed";
-	mes "to make one right away.";
+	mes "我们要先做一件事.";
+	mes "那就是, 测测你的运气.";
+	mes "就像你知道的, 我可不能保证我";
+	mes "可以立刻为你制造.";
 	next;
-	mes "[Hibilaithan]";
-	mes "If we can raise your luck before we start,";
-	mes "we will be able to succeed.";
+	mes "[希必拉伊坦]";
+	mes "如果在开始前, 你能够提升你的";
+	mes "运气, 我们将会成功制造.";
 	next;
-	mes "[Hibilaithan]";
-	mes "Now you must be wondering what we";
-	mes "will do in order to increase your luck.";
-	mes "It is simple, we will play a mind-reading game.";
-	mes "I am going to think of one monster among 4 of my favorites,";
-	mes "you will guess what that monster is.";
+	mes "[希必拉伊坦]";
+	mes "现在你一定好奇我们要做什么来";
+	mes "提升你的运气.";
+	mes "很简单, 我们要玩读心术的游戏.";
+	mes "我现在想我最喜欢的4 种魔物中";
+	mes "的一种, 你来猜那魔物是什么.";
 	next;
-	mes "[Hibilaithan]";
-	mes "You must answer correctly at least";
-	mes "1 out of 5 times. It should not be that difficult.";
-	mes "And if you fail to answer, we must do something else";
-	mes "to drive away your bad luck.";
+	mes "[希必拉伊坦]";
+	mes "你至少要在5 次中答对1 次. 这";
+	mes "不怎么难吧.";
+	mes "如果你回答失败了, 我们得做点";
+	mes "什么来驱赶的坏运气了.";
 	next;
-	mes "[Hibilaithan]";
-	mes "I will take 10 of the special ore you have chose.";
-	mes "Well, I understand that it does not sound tempting";
-	mes "but let's think of it this way.";
-	mes "It is much better than wasting 30 ore";
-	mes "by failing to create the item, isn't it?";
+	mes "[希必拉伊坦]";
+	mes "我会拿走10 块你选的特别矿石.";
+	mes "好吧, 我明白这听起来不怎么诱";
+	mes "人, 但这是唯一的方法.";
+	mes "这比要花费30 块矿石却仍然制";
+	mes "作失败要好的多吧, 是不是?";
 	next;
-	mes "[Hibilaithan]";
-	mes "Okay, now I need some time to prepare...";
-	mes "Talk to you later!";
+	mes "[希必拉伊坦]";
+	mes "好, 现在我需要些时间准备...";
+	mes "稍等下再来找我!";
 	
 	if(countitem($@LV4_Gold) < 10) goto LV4_HACK;
 	if(countitem($@LV4_Steel) < 50) goto LV4_HACK;
@@ -907,36 +806,38 @@ LV4_8_PICK:
 
 
 LV4_8_NOGEM:
-	mes "[Hibilaithan]";
-	mes "I seem to recall that I asked you to bring";
-	mes "30 of a special ore among Muscovite, Biotite or Pyroxene...";
-	mes "And I don't see any of them.";
-	mes "You must have forgot that. Please go get them too.";
+	mes "[希必拉伊坦]";
+	mes "我记得我说过我需要你带来30";
+	mes "块特别的矿石, 白云母, 或黑云";
+	mes "母或是辉石...";
+	mes "可我没看到它们.";
+	mes "你一定是忘了. 接着去找它们吧.";
 	close;
 
 
 LV4_8_FAIL:
-	mes "[Hibilaithan]";
-	mes "Please bring me 10 Gold, 50 Steel and 10 Emperium";
-	mes "as basic materials...";
-	mes "and you can enchant the product with a certain trait.";
-	mes "For that, I need some rare ores...";
+	mes "[希必拉伊坦]";
+	mes "我需要10 块黄金, 50 片钢铁和";
+	mes "10 块华丽金属作为基本材料...";
+	mes "还需要对特定物品施予特殊魔法.";
+	mes "所以, 我还需要一些稀有矿石...";
 	next;
-	mes "[Hibilaithan]";
-	mes "Please bring me 30 of an ore among Citrine, Biotite or Pyroxene.";
-	mes "Each one of them possess their own attributes";
-	mes "and by using the ore you have brought,";
-	mes "my product will possess a special trait.";
+	mes "[希必拉伊坦]";
+	mes "请带给我30 块白云母, 或黑云";
+	mes "母或是辉石.";
+	mes "你带来的每一种矿石都会施予不";
+	mes "同的属性, 我的制造物就会有不";
+	mes "同的特色.";
 	next;
-	mes "[Hibilaithan]";
-	mes "I wish you good luck...";
-	mes "I will wait for you!";
+	mes "[希必拉伊坦]";
+	mes "祝你好运...";
+	mes "我会在这里等你!";
 	close;
 
 
 
 //--------------------------------------------------
-//Guessing Game
+// 猜猜看游戏
 //--------------------------------------------------
 LV4_9:
 	if(lv4_weapon == 9) set @gem, $@LV4_Muscovite;
@@ -944,35 +845,33 @@ LV4_9:
 	if(lv4_weapon == 11) set @gem, $@LV4_Pyroxene;
 	if(countitem(@gem) < 30) goto LV4_9_NOGEM; 
 	
-	mes "[Hibilaithan]";
-	mes "Okay, let's get started!";
-	mes "It is simple. There are";
-	mes "4 monsters that I like. I am going to think";
-	mes "of a monster among the 4, you will guess what it is.";
-	mes "We will play this game 5 times and you must";
-	mes "answer correctly at least 1 out of 5 times. Doesn't that sound easy?";
+	mes "[希必拉伊坦]";
+	mes "很好, 我们开始吧!";
+	mes "很简单. 有4 种我喜欢的魔物.";
+	mes "我将从4 个之中想一个魔物, 你";
+	mes "来猜是什么.";
+	mes "一共会进行5 次游戏, 而你至少";
+	mes "要在5 次中答对一次. 简单吧?";
 	next;
-	mes "[Hibilaithan]";
-	mes "This is a very good game for";
-	mes "increasing your luck!";
-	mes "Okay, you better be ready now.";
+	mes "[希必拉伊坦]";
+	mes "这是非常精彩的增加运气的游戏!";
+	mes "那么, 你最好准备好了.";
 	next;
 	
 	set @dap, 0;
 	set @correct[0],1;
 	for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
-		mes "[Hibilaithan]";
+		mes "[希必拉伊坦]";
 		
-		if(@i == 1) mes "I like Zealotus, Alice,";
-		if(@i == 1) mes "Munak, and Isis among all monsters.";
+		if(@i == 1) mes "我最喜欢艾斯恩魔女, 爱丽瑟,";
+		if(@i == 1) mes "僵尸, 和蛇女伊丝这些魔物.";
 		
-		mes "Now, guess which one";
-		mes "I am thinking of at this moment.";		
+		mes "现在, 猜猜我现在想得是哪一个.";	
 		next;
 
 		set @mons, rand(1, 4);		
 
-		switch( select( "Zhertilsh", "Alice", "Munak", "Isis" ) ) {
+		switch( select( "艾斯恩魔女:爱丽瑟:僵尸:蛇女伊丝" ) ) {
 				case 1:
 					set @correct[@i], 1;
 					if(@mons == 1) set @dap, @dap + 1;
@@ -995,30 +894,29 @@ LV4_9:
 		}
 	}
 
-	mes "[Hibilaithan]";
-	mes "Okay, that's all! Now let me";
-	mes "check the answers. I was thinking";
-	mes "monsters in the order of...";
+	mes "[希必拉伊坦]";
+	mes "很好, 结束了! 让我检查下你的";
+	mes "答案. 看看你所猜的魔物...";
 	next;
-	mes "[Hibilaithan]";
+	mes "[希必拉伊坦]";
 
 	for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
-		if(@correct[@i] == 1) mes "Zhertilsh";
-		if(@correct[@i] == 2) mes "Alice";
-		if(@correct[@i] == 3) mes "Munak";
-		if(@correct[@i] == 4) mes "Isis";
+		if(@correct[@i] == 1) mes "艾斯恩魔女";
+		if(@correct[@i] == 2) mes "爱丽瑟";
+		if(@correct[@i] == 3) mes "僵尸";
+		if(@correct[@i] == 4) mes "蛇女伊丝";
 	}
 
 	if(@dap < 1) goto LV4_9_FAIL;
 	
 	next;
-	mes "[Hibilaithan]";
-	mes "Wow, are you a mind reader or what?";
-	mes "You answered " + @dap + " times correctly! Whoa...";
-	mes "I guess you are already a lucky one,";
-	mes "therefore we don't have any reason";
-	mes "to prolong the work now!";
-	mes "I need some time to prepare, talk to you later!";
+	mes "[希必拉伊坦]";
+	mes "哇 喔, 你是个读心者吗?";
+	mes "你答对了" + @dap + " 次! 哇...";
+	mes "我想你现在已经够幸运的了, 那";
+	mes "么就没有任何理由不继续进行我";
+	mes "们的制造了!";
+	mes "我需要时间准备, 稍等下再找我!";
 	
 	if(countitem(@gem) < 30) goto LV4_HACK;
 	delitem @gem, 30;
@@ -1031,27 +929,28 @@ LV4_9_FAIL:
 	delitem @gem, 10;
 	
 	next;
-	mes "[Hibilaithan]";
-	mes "This is not good, not good at all!";
-	mes "You didn't even have a correct answer.";
-	mes "We cannot start the work with this kind of result.";
-	mes "Okay...we must drive away your bad luck first.";
-	mes "10 " + @gemstring$ + " will do it!";
+	mes "[希必拉伊坦]";
+	mes "糟糕啊, 很糟糕啊!";
+	mes "你连一个正确答案都没有.";
+	mes "我们不能以这样的结构开始制造.";
+	mes "那么... 我们是一定要先赶你的";
+	mes "坏运气的.";
+	mes "10 块" + @gemstring$ + ", 我们接着来!";
 	next;
-	mes "[Hibilaithan]";
-	mes "Now, we need to play the game again.";
-	mes "If you don't anymore ore, go get some.";
-	mes "I am not going anywhere";
-	mes "so you don't need to be in hurry.";
-	mes "Take your time!";
+	mes "[希必拉伊坦]";
+	mes "那么, 我们还需要再玩一次.";
+	mes "如果没有矿石, 那就去搜集一些.";
+	mes "我不会去其它地方, 所以你不用";
+	mes "太着急.";
+	mes "慢慢来!";
 	close;
 
 
 LV4_9_NOGEM:
-	mes "[Hibilaithan]";
-	mes "Hum. You might lack of";
-	mes "materials? Check them again.";
-	mes "See. I knew it.";
+	mes "[希必拉伊坦]";
+	mes "哼. 你好像缺少材料了?";
+	mes "检查一下吧.";
+	mes "是吧. 我很了解.";
 	close;
 	
 	
@@ -1060,103 +959,104 @@ LV4_9_NOGEM:
 //Weapon Creation
 //--------------------------------------------------
 LV4_12:
-	mes "[Hibilaithan]";
-	mes "Ah, I can tell you are ready. Alright...";
-	mes "I will try to make an awsome item for you.";
-	mes "...and you are not going to look over my shoulder!";
-	mes "I don't want to share my secret recipe with anyone!";
+	mes "[希必拉伊坦]";
+	mes "啊, 我准备好了. 好的...";
+	mes "我将为你制造一个非常棒的物品.";
+	mes "... 但是你不能一直看着我!";
+	mes "我不想与任何人分享我的秘密!";
 	next;
-	mes "- Hibilaithan picks up all the materials -";
-	mes "- and turns his back at you. -";
-	mes "- You see him busying himself with something. -";
-	mes "- Although the way he is doing it -";
-	mes "- looks very primitive and crude, -";
-	mes "- you feel that some strange energy has gathered around him. -";
+	mes "- 希必拉伊坦拿着所有的材料 -";
+	mes "- 转过身去, 不让你看清楚.  -";
+	mes "- 你看着他匆匆忙忙的.      -";
+	mes "- 尽管他使用的方法是多么的 -";
+	mes "- 简单原始, 但你还能感觉到 -";
+	mes "- 奇怪的能量聚集在他身边.  -";
 	next;
-	mes "[Hibilaithan]";
-	mes "Umm~ umm~ umm~";
-	mes "Aww~aww~ aww~";
-	mes "Phew~ phew~ phew~";
-	mes "Woo~ woo~ woo~";
-	mes "Ho~ ho~ ho~";
+	mes "[希必拉伊坦]";
+	mes "嗯~ 嗯~ 嗯~";
+	mes "啊~ 啊~ 啊~";
+	mes "唷~ 唷~ 唷~";
+	mes "喔~ 喔~ 喔~";
+	mes "哦~ 哦~ 哦~";
 	next;
-	mes "[Hibilaithan]";
+	mes "[希必拉伊坦]";
 	mes " ";
 	mes " ";
-	mes "Haha, there it is! Phew, that was really hard...";
-	mes "You're anxious, aren't you? Ok, let's see...";
+	mes "哈哈, 真是的! 唷, 有点难...";
+	mes "是不是很担心呀? 好, 看下...";
 	next;
 	
-	mes "[Hibilaithan]";
-	mes "It's a big success! Hahaha, sure, I made it...";
-	mes "Therefore, it should be a big success.";
-	mes "Oh, you got a weapon here...let's see,";
+	mes "[希必拉伊坦]";
+	mes "一项大成功! 哈哈哈, 是的, 我";
+	mes "做到了...";
+	mes "这真是个大成功.";
+	mes "喔, 你的武器在这... 来看看,";
 	
 	switch( lv4_weapon ) {
 		case 12:
-			mes "it is a Mailbreaker!";
-			getitem 1225, 1; // 1225,Mail_Breaker
+			mes "是破甲短剑!";
+			getitem 1225, 1; // 1225,破甲短剑
 			break;
 		case 13:
-			mes "it is a Swordbreaker!";
-			getitem 1224, 1; // 1224,Sword_Breaker
+			mes "是削刃短剑!";
+			getitem 1224, 1; // 1224,削刃短剑
 			break;
 		case 14:
-			mes "it is a Slaughter!";
-			getitem 1367, 1; // 1367,Slaughter
+			mes "是斯勒特斧!";
+			getitem 1367, 1; // 1367,斯勒特斧
 			break;
 	}
 
 	set lv4_weapon, 0;
-	mes "This was made competely because I am that skillful,";
-	mes "you got to be thankful for that!";
+	mes "如此的成功得归功于我的熟练技";
+	mes "巧, 你应该感谢我啊!";
 	next;
 	
-	mes "[Hibilaithan]";
-	mes "Whenever you want to have a nice thing,";
-	mes "come back to me anytime!";
-	mes "I am a very generous genius, you know?";
-	mes "Always be thankful for the weapon that I made for you, okay?";
-	mes "See you!";
+	mes "[希必拉伊坦]";
+	mes "但你想拥有比较不错的东西时,";
+	mes "随时来找我!";
+	mes "我是个很大方的天才, 知道吗?";
+	mes "要感谢我为你制作的武器哦!";
+	mes "再见!";
 	close;
 
 
 
 //--------------------------------------------------
-//Other Quests
+// 其它任务
 //--------------------------------------------------
 LV4_7:
-	mes "[Hibilaithan]";
-	mes "Hmm...I feel something strange from you.";
-	mes "I regret to say that there is nothing I can do for you.";
-	mes "I hope you have a safe travel.";
+	mes "[希必拉伊坦]";
+	mes "嗯... 我感觉到你有一些奇怪.";
+	mes "我很遗憾的告诉你我不能帮你做";
+	mes "什么.";
+	mes "希望你旅途安全.";
 	close;
 	
 	
 	
 //--------------------------------------------------
-//Hack Attempt
+// 篡改企图
 //--------------------------------------------------
 LV4_HACK:
-	mes "[Hibilaithan]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "[希必拉伊坦]";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }
 
 //--------------------------------------------------
-// Tabezthan, creates Talefing, Sabbath and Caesar's Sword
+// 铁波兹坦, 制作魔刀 吞神, 暗灵之斧和利剪剑
 //--------------------------------------------------
 
-um_in,156,77,5	script	Tabezthan	788,{
+um_in,156,77,5	script	铁波兹坦	788,{
 	if(event_umbala < 3) goto LumWord;
 	set @NowWeight, MaxWeight - Weight;
 	if (@NowWeight >= 3000) goto LV4_NOT_OW;
-	mes "- Wait a minute! -";
-	mes "- You are currently overweight. -";
-	mes "- Please lose some weight -";
-	mes "- and try again. -";
+	mes "- 稍等下! -";
+	mes "- 当前你已经超重了. -";
+	mes "- 请减轻你的负重再来找我. -";
 	close;
 
 	
@@ -1171,58 +1071,58 @@ LV4_NOT_OW:
 	if(lv4_weapon == 21) goto LV4_19;
 	if(lv4_weapon < 15) goto LV4_14;
 	if(lv4_weapon > 21) goto LV4_14;	
-	end; // shouldn't be here
+	end;
 	
 
 LumWord:
-		mes "[Tabezthan]";
-		mes "Umba! Umbaba...umum! Baumba!";
-		mes "Umumumbababaumumbabaumba!";
-		mes "Umbaumbaumbaumbaumhah!";
-		mes "Umumumumumbababababab!";
+		mes "[铁波兹坦]";
+		mes "汶巴! 汶巴巴...汶汶! 巴汶巴!";
+		mes "汶汶汶巴巴巴汶汶巴巴汶巴!";
+		mes "汶巴汶巴汶巴汶巴汶哈!";
+		mes "汶汶汶汶汶巴巴巴巴巴巴!";
 	close;
 
 	
 LV4_0:
-	mes "[Tabezthan]";
-	mes "Hmm...I feel something different about you...";
-	mes "You are a stranger...aren't you?";
+	mes "[铁波兹坦]";
+	mes "嗯... 你让我觉着有点不对劲儿...";
+	mes "你是一个陌生人... 是不是?";
 	next;
-	mes "[Tabezthan]";
-	mes "Let me introduce myself.";
-	mes "I am Tabezthan,";
-	mes "the storage of the knowledge and the genius of Umbala...";
-	mes "Hahahaha.";
+	mes "[铁波兹坦]";
+	mes "那我介绍一下我自己.";
+	mes "我叫铁波兹坦, 是智慧的宝库也";
+	mes "是汶巴拉的天才...";
+	mes "哈哈哈哈.";
 	next;
-	mes "[Tabezthan]";
-	mes "I have two diciples. One is Hibilaithan the fool";
-	mes "and the other one is Bazo who is intelligent";
-	mes "and is from outside the same as you.";
+	mes "[铁波兹坦]";
+	mes "我有两个伙伴. 一位是有点愚蠢";
+	mes "的希必拉伊坦, 另一位是和你一";
+	mes "样也是来自外界的聪明的巴佐.";
 	next;
-	mes "[Tabezthan]";
-	mes "Of course both of them are talented and skillful";
-	mes "but I am worried about Hibilaithan, for he";
-	mes "makes many stupid mistakes and is shameless";
-	mes "for what he has done.";
+	mes "[铁波兹坦]";
+	mes "当然他们都很有才华, 技术也纯";
+	mes "熟, 不过我还是担忧希必拉伊坦,";
+	mes "他做犯过很多愚蠢的错误, 可从";
+	mes "来不感到羞愧.";
 	next;
-	mes "[Tabezthan]";
-	mes "I have tought them how to manipulate";
-	mes "the mysterious energy existing in Umbala";
-	mes "for creating things with it..";
-	mes "I heard that there is a similar skill called Alchemy";
-	mes "in the outside world. Although I am not sure if I remember it correctly.";
+	mes "[铁波兹坦]";
+	mes "我教过他们如何掌握汶巴拉里的";
+	mes "一种神秘能量, 并使用它制造一";
+	mes "些物品...";
+	mes "我听说在外界有一种叫炼金术的";
+	mes "类似技术. 可能是这样叫它的.";
 	next;
-	mes "[Tabezthan]";
-	mes "Anyways, would you like to see my skill?";
-	mes "If so, bring me materials I need,";
-	mes "I am more than willing to present my skill for you.";
+	mes "[铁波兹坦]";
+	mes "那么, 你想看看我的技术吗?";
+	mes "如果你愿意的话, 带给我需要的";
+	mes "材料, 我非常乐意展示我饿才能.";
 	next;
 	
-	switch( select( "Yes, please.", "No, thank you." ) ) {
+	switch( select( "好啊.:不, 谢谢." ) ) {
 		case 1:
 			if(BaseLevel >= 70) goto L4_0_1;
 			
-			mes "[Tabezthan]";
+			mes "[铁波兹坦]";
 			mes "Sebelumnya saya harus menekankan ini";
 			mes "Barang spesial ini akan menjadi berbahaya jika kamu sendiri masih lemah";
 			mes "Kamu harus lebih berpengalaman lagi anak muda";
@@ -1231,47 +1131,48 @@ LV4_0:
 			mes "Sampai jumpa ~~";
 			break;
 L4_0_1:
-			mes "[Tabezthan]";
-			mes "One with curiousity...he is called the young adventurer...";
-			mes "Fine. Then let me inform you of";
-			mes "the matetrials I need. Please memorize them";
-			mes "or write them down.";
-			mes "It is not much however.";
+			mes "[铁波兹坦]";
+			mes "好奇心呀... 这才能冒险家...";
+			mes "好. 让我告诉你需要的材料.";
+			mes "我希望你能把他们记下来.";
+			mes "虽然数量并不是很多.";
 			next;
-			mes "[Tabezthan]";
-			mes "I need 10 Gold, 50 Steel and 10 Emperium";
-			mes "as basic materials...";
-			mes "and you can enchant the product with a certain trait.";
-			mes "For that, I need some rare ores...";
+			mes "[铁波兹坦]";
+			mes "我需要10 块黄金, 50 片钢铁和";
+			mes "10 块华丽金属作为基本材料...";
+			mes "还需要对特定物品施予特殊魔法.";
+			mes "所以, 我还需要一些稀有矿石...";
 			next;
-			mes "[Tabezthan]";
-			mes "Please bring me 30 of an ore among Phlogopite, Peridot or Rose Quartz.";
-			mes "Each one of them possess their own attribute";
-			mes "and by using the ore you have brought,";
-			mes "my product will possess a special trait.";
+			mes "[铁波兹坦]";
+			mes "请带给我30 块金云母, 或橄榄";
+			mes "石或是玫瑰石英.";
+			mes "你带来的每一种矿石都会施予不";
+			mes "同的属性, 我的制造物就会有不";
+			mes "同的特色.";
 			next;
-			mes "[Tabezthan]";
-			mes "However, please be aware that";
-			mes "I cannot guarantee what will come out as a result.";
-			mes "There are too many factors in the world of alchemy";
-			mes "where my knowledge is limited.";
-			mes "So you must be willing to accept the result as it is";
-			mes "even if it does not satisfy your expectations.";
+			mes "[铁波兹坦]";
+			mes "不过, 要知道我不确定会制造出";
+			mes "什么物品.";
+			mes "我的知识受到炼金术界的很多因";
+			mes "素的限制.";
+			mes "也许不是你期待的, 可你还是得";
+			mes "接受结果.";
 			next;
-			mes "[Tabezthan]";
-			mes "That means that you should place trust in luck.";
-			mes "Let's talk about it later...please go prepare the materials first.";
-			mes "Come back when you are ready.";
-			mes "I will wait here.";
+			mes "[铁波兹坦]";
+			mes "这意思就是说, 这一切全靠运气.";
+			mes "我们迟些再谈吧... 你先去准备";
+			mes "材料.";
+			mes "等你准备好的时候再回来.";
+			mes "我会在这里等你.";
 			
 			set lv4_weapon, 15;
 			break;
 		case 2:
-			mes "[Tabezthan]";
-			mes "Oh...I see. I was not forcing you anyhow.";
-			mes "However, it is a little bit dissappointing to hear that.";
-			mes "I was going to display my ability at full length.";
-			mes "When you change your mind, please come back.";
+			mes "[铁波兹坦]";
+			mes "噢... 我明白了. 都听你的.";
+			mes "但是, 听到你这样说我有点失望.";
+			mes "我会完全展示我的能力的.";
+			mes "当你改变心意后, 就回来找我.";
 			break;			
 	}	
 	close;
@@ -1279,18 +1180,19 @@ L4_0_1:
 
 
 //--------------------------------------------------
-//Gold, Steel, Emp Check + Choosing the gem
+// 黄金, 钢铁, 华丽金属检查 + 选择魔法石
 //--------------------------------------------------
 LV4_15:
 	if(countitem($@LV4_Gold) < 10) goto LV4_15_FAIL;
 	if(countitem($@LV4_Steel) < 50) goto LV4_15_FAIL;
 	if(countitem($@LV4_Emperium) < 10) goto LV4_15_FAIL;
 
-	mes "[Tabezthan]";
-	mes "Ah~ you came back ealier than I thought.";
-	mes "Let's see...you have all the basic materials...and";
-	mes "we need one more thing, remember?";
-	mes "Did you bring it as well?";
+	mes "[铁波兹坦]";
+	mes "啊~ 回来得真早.";
+	mes "让我看看... 你准备的所有基本";
+	mes "材料... 还有我需要的其它东西,";
+	mes "对吧?";
+	mes "你都带来了吗?";
 	next;
 	
 	if (countitem($@LV4_Phlogopite) >= 30 && countitem($@LV4_Olivine) >= 30 && countitem($@LV4_Rose_Quartz) >= 30) goto LV4_15_POR;
@@ -1305,176 +1207,178 @@ LV4_15:
 
 
 LV4_15_POR:	
-	mes "[Tabezthan]";
-	mes "You made a great effort to bring all of them.";
-	mes "However, you can only use one kind at a time.";
-	mes "Please choose what you want to use this time.";
+	mes "[铁波兹坦]";
+	mes "你把它们都带来了.";
+	mes "不过, 你只能一次使用一种.";
+	mes "选一种这次你想使用的.";
 	next;
 			
-	switch( select( "Phlogopite", "Peridot", "Rose Quartz" ) ) {
+	switch( select( "金云母:橄榄石:玫瑰石英" ) ) {
 		case 1:
-			mes "[Tabezthan]";
-			mes "Phlogopite...okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "金云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Phlogopite;
-			set @gemstring$,"Phlogopite";
+			set @gemstring$,"金云母";
 			break;
 		case 2:
-			mes "[Tabezthan]";
-			mes "Peridot...okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "橄榄石... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Olivine;
-			set @gemstring$,"Peridot";
+			set @gemstring$,"橄榄石";
 			break;
 		case 3:
-			mes "[Tabezthan]";
-			mes "Rose Quartz....okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "玫瑰石英.... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Rose_Quartz;
-			set @gemstring$,"Rose Quartz";
+			set @gemstring$,"玫瑰石英";
 			break;
 	}
 	
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_15_PO:
-	mes "[Tabezthan]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
+	mes "[铁波兹坦]";
+	mes "哈哈哈, 我叫你随便带一种, 可";
+	mes "你带来了两种.";
+	mes "你只可以使用其中一种矿石.";
+	mes "哪种你更想使用?";
 	next;
 	
-	switch( select( "Phlogopite", "Peridot" ) ) {
+	switch( select( "金云母:橄榄石" ) ) {
 		case 1:
-			mes "[Tabezthan]";
-			mes "Phlogopite...okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "金云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Phlogopite;
-			set @gemstring$,"Phlogopite";
+			set @gemstring$,"金云母";
 			break;
 		case 2:
-			mes "[Tabezthan]";
-			mes "Peridot...okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "橄榄石... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Olivine;
-			set @gemstring$,"Peridot";
+			set @gemstring$,"橄榄石";
 			break;
 	}
 	
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 	
 
 LV4_15_PR:	
-	mes "[Tabezthan]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
+	mes "[铁波兹坦]";
+	mes "哈哈哈, 我叫你随便带一种, 可";
+	mes "你带来了两种.";
+	mes "你只可以使用其中一种矿石.";
+	mes "哪种你更想使用?";
 	next;
 	
-	switch( select( "Phlogopite", "Rose Quartz" ) ) {
+	switch( select( "金云母:玫瑰石英" ) ) {
 		case 1:
-			mes "[Tabezthan]";
-			mes "Phlogopite...okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "金云母... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Phlogopite;
-			set @gemstring$,"Phlogopite";
+			set @gemstring$,"金云母";
 			break;
 		case 2:
-			mes "[Tabezthan]";
-			mes "Rose Quartz....okay. Before we start,";
+			mes "[铁波兹坦]";
+			mes "玫瑰石英.... 好吧. 在我们开始前,";
 			set @gem, $@LV4_Rose_Quartz;
-			set @gemstring$,"Rose Quartz";
+			set @gemstring$,"玫瑰石英";
 			break;
 	}
 	
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_15_OR:	
-	mes "[Tabezthan]";
-	mes "Hahaha, I asked you to bring one kind not two.";
-	mes "You can only use one kind of ore.";
-	mes "Which one would you like to use?";
+	mes "[铁波兹坦]";
+	mes "哈哈哈, 我叫你随便带一种, 可";
+	mes "你带来了两种.";
+	mes "你只可以使用其中一种矿石.";
+	mes "哪种你更想使用?";
 	next;
 	
-	switch( select( "Peridot", "Rose Quartz" ) ) {
+	switch( select( "橄榄石:玫瑰石英" ) ) {
 			case 1:
-				mes "[Tabezthan]";
-				mes "Peridot...okay. Before we start,";
+				mes "[铁波兹坦]";
+				mes "橄榄石... 好吧. 在我们开始前,";
 				set @gem, $@LV4_Olivine;
-				set @gemstring$,"Peridot";
+				set @gemstring$,"橄榄石";
 				break;
 			case 2:
-				mes "[Tabezthan]";
-				mes "Rose Quartz....okay. Before we start,";
+				mes "[铁波兹坦]";
+				mes "玫瑰石英.... 好吧. 在我们开始前,";
 				set @gem, $@LV4_Rose_Quartz;
-				set @gemstring$,"Rose Quartz";
+				set @gemstring$,"玫瑰石英";
 				break;
 	}
 	
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_15_P:
-	mes "[Tabezthan]";
-	mes "Phlogopite...okay. Before we start,";
+	mes "[铁波兹坦]";
+	mes "金云母... 好吧. 在我们开始前,";
 	set @gem, $@LV4_Phlogopite;
-	set @gemstring$,"Phlogopite";
+	set @gemstring$,"金云母";
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 		
 		
 LV4_15_O:
-	mes "[Tabezthan]";
-	mes "Peridot...okay. Before we start,";
+	mes "[铁波兹坦]";
+	mes "橄榄石... 好吧. 在我们开始前,";
 	set @gem, $@LV4_Olivine;
-	set @gemstring$,"Peridot";
+	set @gemstring$,"橄榄石";
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_15_R:
-	mes "[Tabezthan]";
-	mes "Rose Quartz....okay. Before we start,";
+	mes "[铁波兹坦]";
+	mes "玫瑰石英.... 好吧. 在我们开始前,";
 	set @gem, $@LV4_Rose_Quartz;
-	set @gemstring$,"Rose Quartz";
+	set @gemstring$,"玫瑰石英";
 	goto LV4_15_PICK;
-	end; // shouldn't be here
+	end;
 	
 	
 LV4_15_PICK:
-	mes "we must do one thing first.";
-	mes "That is, to test your luck.";
-	mes "As you already know,";
-	mes "I cannot guarantee you that we will succeed";
-	mes "in makeing one right away.";
+	mes "我们要先做一件事.";
+	mes "那就是, 测测你的运气.";
+	mes "就像你知道的, 我可不能保证我";
+	mes "可以立刻为你制造.";
 	next;
-	mes "[Tabezthan]";
-	mes "If we can raise your luck before we start,";
-	mes "we will be able to succeed.";
+	mes "[铁波兹坦]";
+	mes "如果在开始前, 你能够提升你的";
+	mes "运气, 我们将会成功制造.";
 	next;
-	mes "[Tabezthan]";
-	mes "Now you must be wondering what we";
-	mes "will do in order to increase your luck.";
-	mes "It is simple, we will play a mind-reading game.";
-	mes "I am going to think of one monster among 4 of my favorites,";
-	mes "you will guess what the monster is.";
+	mes "[铁波兹坦]";
+	mes "现在你一定好奇我们要做什么来";
+	mes "提升你的运气.";
+	mes "很简单, 我们要玩读心术的游戏.";
+	mes "我现在想我最喜欢的4 种魔物中";
+	mes "的一种, 你来猜那魔物是什么.";
 	next;
-	mes "[Tabezthan]";
-	mes "You must answer correctly at least";
-	mes "1 out of 5 times. It should not be that difficult.";
-	mes "And if you fail to answer correctly, we must do something else";
-	mes "to drive away your bad luck.";
+	mes "[铁波兹坦]";
+	mes "你至少要在5 次中答对1 次. 这";
+	mes "不怎么难吧.";
+	mes "如果你回答失败了, 我们得做点";
+	mes "什么来驱赶的坏运气了.";
 	next;
-	mes "[Tabezthan]";
-	mes "I will take 10 of the special ore you chose.";
-	mes "Well, I understand that it does not sound tempting";
-	mes "but let's think of it this way.";
-	mes "It is much better than wasting 30 ore";
-	mes "by failing to create the item, isn't it?";
+	mes "[铁波兹坦]";
+	mes "我会拿走10 块你选的特别矿石.";
+	mes "好吧, 我明白这听起来不怎么诱";
+	mes "人, 但这是唯一的方法.";
+	mes "这比要花费30 块矿石却仍然制";
+	mes "作失败要好的多吧, 是不是?";
 	next;
-	mes "[Tabezthan]";
-	mes "Okay, now I need some time to prepare...";
-	mes "Talk to you later!";
+	mes "[铁波兹坦]";
+	mes "好, 现在我需要些时间准备...";
+	mes "稍等下再来找我!";
 	
 	if(countitem($@LV4_Gold) < 10) goto LV4_HACK;
 	if(countitem($@LV4_Steel) < 50) goto LV4_HACK;
@@ -1489,32 +1393,33 @@ LV4_15_PICK:
 
 
 LV4_15_NOGEM:
-	mes "[Tabezthan]";
-	mes "Hmmm...I cannot find any rare ores in";
-	mes "the materials that you have brought...";
-	mes "Please bring me 30 of an ore among Phlogopite, Peridot";
-	mes "or Rose Quartz.";
+	mes "[铁波兹坦]";
+	mes "嗯... 在你带来的材料中, 我没";
+	mes "有找到任何矿石...";
+	mes "请带给我30 块金云母, 或橄榄";
+	mes "石或是玫瑰石英.";
 	close;
 
 
 LV4_15_FAIL:
-	mes "[Tabezthan]";
-	mes "I need 10 Gold, 50 Steel and 10 Emperium";
-	mes "as basic materials...";
-	mes "and you can enchant the product with a certain trait.";
-	mes "For that, I need some rare ores...";
+	mes "[铁波兹坦]";
+	mes "我需要10 块黄金, 50 片钢铁和";
+	mes "10 块华丽金属作为基本材料...";
+	mes "还需要对特定物品施予特殊魔法.";
+	mes "所以, 我还需要一些稀有矿石...";
 	next;
-	mes "[Tabezthan]";
-	mes "Please bring me 30 of an ore among Phlogopite, Peridot or Rose Quartz.";
-	mes "Each one of them possess their own attribute";
-	mes "and by using the ore you have brought,";
-	mes "my product will possess a special trait.";
+	mes "[铁波兹坦]";
+	mes "请带给我30 块金云母, 或橄榄";
+	mes "石或是玫瑰石英.";
+	mes "你带来的每一种矿石都会施予不";
+	mes "同的属性, 我的制造物就会有不";
+	mes "同的特色.";
 	close;
 
 
 
 //--------------------------------------------------
-//Guessing Game
+// 猜猜看游戏
 //--------------------------------------------------
 LV4_16:
 	if(lv4_weapon == 16) set @gem, $@LV4_Phlogopite;
@@ -1522,35 +1427,31 @@ LV4_16:
 	if(lv4_weapon == 18) set @gem, $@LV4_Rose_Quartz;
 	if(countitem(@gem) < 30) goto LV4_16_NOGEM; 
 	
-	mes "[Tabezthan]";
-	mes "Okay, let's get started!";
-	mes "It is simple. There are";
-	mes "4 monsters that I like. I am going to think";
-	mes "of a monster among the 4, you will guess what it is.";
-	mes "We will play this game 5 times and you must";
-	mes "answer correctly at least 1 out of 5 times. Doesn't it sound easy?";
+	mes "[铁波兹坦]";
+	mes "很好, 我们开始吧!";
+	mes "很简单. 有4 种我喜欢的魔物.";
+	mes "我将从4 个之中想一个魔物, 你";
+	mes "来猜是什么.";
+	mes "一共会进行5 次游戏, 而你至少";
+	mes "要在5 次中答对一次. 简单吧?";
 	next;
-	mes "[Hibilaithan]";
-	mes "This is a very good game for";
-	mes "increasing your luck!";
-	mes "Okay, better be ready now.";
+	mes "[铁波兹坦]";
+	mes "这是非常精彩的增加运气的游戏!";
+	mes "那么, 你最好准备好了.";
 	next;
 	
 	set @dap, 0;
 	set @correct[0],1;
 	for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
-		mes "[Tabezthan]";
+		mes "[铁波兹坦]";
 		
-		if(@i == 1) mes "I like Baphomet, Dark Lord,";
-		if(@i == 1) mes "Bloody Knight, and Stormy Knight among all monsters.";
+		if(@i == 1) mes "我最喜欢巴风特, 黑暗领主, ";
+		if(@i == 1) mes "血腥骑士, 和冰暴骑士这些魔物.";
 		
-		mes "Now, guess which one";		
-		mes "I am thinking at this moment.";
+		mes "现在, 猜猜我现在想得是哪一个.";
 		next;
-
-		set @mons, rand(1, 4);		
-
-		switch( select( "Baphomet", "Dark Lord", "Bloody Knight", "Stormy Knight" ) ) {
+		set @mons, rand(1, 4);
+		switch( select( "巴风特:黑暗领主:血腥骑士:冰暴骑士" ) ) {
 				case 1:
 					set @correct[@i], 1;
 					if(@mons == 1) set @dap, @dap + 1;
@@ -1573,27 +1474,26 @@ LV4_16:
 		}
 	}
 
-	mes "[Tabezthan]";
-	mes "Okay, that's all! Now let me check";
-	mes "the answers. I was thinking";
-	mes "of the monsters in the order of...";
+	mes "[铁波兹坦]";
+	mes "很好, 结束了! 让我检查下你的";
+	mes "答案. 看看你所猜的魔物...";
 	next;
-	mes "[Tabezthan]";
+	mes "[铁波兹坦]";
 
 	for( set @i, 1; @i <= 5; set @i, @i + 1 ) {
-		if(@correct[@i] == 1) mes "Baphomet";
-		if(@correct[@i] == 2) mes "Dark Lord";
-		if(@correct[@i] == 3) mes "Bloody Knight";
-		if(@correct[@i] == 4) mes "Stormy Knight";
+		if(@correct[@i] == 1) mes "巴风特";
+		if(@correct[@i] == 2) mes "黑暗领主";
+		if(@correct[@i] == 3) mes "血腥骑士";
+		if(@correct[@i] == 4) mes "冰暴骑士";
 	}
 
 	if(@dap < 1) goto LV4_16_FAIL;
 	
 	next;
-	mes "[Tabezthan]";
-	mes "You have answered " + @dap + " times correctly.";
-	mes "It seems that your luck is at its highest.";
-	mes "I need some time to prepare, talk to you later.";
+	mes "[铁波兹坦]";
+	mes "你答对了" + @dap + " 次.";
+	mes "你的运气还很好嘛.";
+	mes "我需要时间准备, 稍等下再找我.";
 	
 	if(countitem(@gem) < 30) goto LV4_HACK;
 	delitem @gem, 30;
@@ -1606,121 +1506,126 @@ LV4_16_FAIL:
 	delitem @gem, 10;
 	
 	next;
-	mes "[Tabezthan]";
-	mes "Unfortunately you have failed...";
-	mes "When you have bad luck, you'd better";
-	mes "not expect a good result.";
-	mes "Okay, we must drive away your bad luck.";
-	mes "10 " + @gemstring$ + " will do it.";
+	mes "[铁波兹坦]";
+	mes "真不幸, 你失败了...";
+	mes "运气坏的时候, 还是不要报太大";
+	mes "希望.";
+	mes "那么, 我们一定要先驱赶你的坏";
+	mes "运气.";
+	mes "10 块" + @gemstring$ + ", 我们接着来.";
 	next;
-	mes "[Tabezthan]";
-	mes "Do not be so dissappointed.";
-	mes "It is still better than wasting 30 of them";
-	mes "for trying to make a thing when you know";
-	mes "you would not make it. ";
+	mes "[铁波兹坦]";
+	mes "别灰心.";
+	mes "要知道, 这比要花费30 块矿石";
+	mes "却仍然制作失败要好的多吧.";
 	next;
-	mes "[Tabezthan]";
-	mes "If you need something to prepare,";
-	mes "please do. I will wait for you here.";
+	mes "[铁波兹坦]";
+	mes "如果要准备什么东西, 就去吧.";
+	mes "我会在这里等你.";
 	close;
 
 
 LV4_16_NOGEM:
-	mes "[Tabezthan]";
-	mes "Umm...it seems you are lacking " + @gemstring$;
-	mes "Please count them and";
-	mes "if you don't have enough,";
-	mes "you can go gather more first.";
+	mes "[铁波兹坦]";
+	mes "嗯... 你缺少" + @gemstring$ + ".";
+	mes "查看它的数量, 接续去收集.";
 	close;
 	
 	
 	
 //--------------------------------------------------
-//Weapon Creation
+// 武器制造
 //--------------------------------------------------
 LV4_19:
-	mes "[Tabezthan]";
-	mes "Great, I am also ready.";
-	mes "Shall we start now? Give me a minute.";
-	mes "I need to arrange these materials in a magic circle.";
+	mes "[铁波兹坦]";
+	mes "不错, 我也准备好了.";
+	mes "我们要开始吗? 稍等下.";
+	mes "我需要把这些材料围成一个魔圈.";
 	next;
-	mes "- He arranges materials in a strange circle -";
-	mes "- and starts chanting in a strange language. -";
-	mes "- As he does that, suddenly the air surrounding him -";
-	mes "- seems to change and you feel something powerful-";
-	mes "- gathering around him and the materials. -";
+	mes "- 希必拉伊坦拿着所有的材料 -";
+	mes "- 他把那些材料围成一个怪圈 -";
+	mes "- 并且哼唱着一种奇怪的语言 -";
+	mes "- 同时, 他周围的空气改变了 -";
+	mes "- 你感觉到在他和材料周围凝 -";
+	mes "- 聚着某种强大的能量.      -";
 	next;
-	mes "[Tabezthan]";
-	mes "Please understand that the power is not from me.";
-	mes "I just used my ability to gather the power into these materials.";
-	mes "The power has come from the city of the dead.";
+	mes "[铁波兹坦]";
+	mes "要知道这能量不是从我这产生的.";
+	mes "我只用了我的能力来把能量凝聚";
+	mes "在材料中.";
+	mes "这能量来自死者国家.";
 	next;
-	mes "[Tabezthan]";
-	mes "The result is in God's hands.";
-	mes "Let's pray for a good result together.";
-	mes "Hmmmmm!";
+	mes "[铁波兹坦]";
+	mes "结果得听天由命了.";
+	mes "我们一起祈祷好的结果吧.";
+	mes "嗯嗯嗯!";
 	next;
-	mes "- After a while...you find the materials -";
-	mes "- are gathering and combining into one new thing. -";
-	mes "- Does that mean that you have succeeded or failed?! -";
+	mes "- 过了一会... 你发现这些材 -";
+	mes "- 料凝聚在一起并结合成一件 -";
+	mes "- 新的物品.                -";
+	mes "- 这意味着是失败还是成功?! -";
 	next;
-	mes "[Tabezthan]";
-	mes "?!...God must bless you!";
-	mes "I cannot believe that I created such a rare weapon!";
-	mes "Yes, my late father told me the name of this weapon.";
+	mes "[铁波兹坦]";
+	mes "?!... 上帝一定会保佑你!";
+	mes "我真不敢相信我能制造这么稀有";
+	mes "的武器!";
+	mes "是的, 我已故的父亲曾告诉我这";
+	mes "武器的名字.";
 	
 	switch( lv4_weapon ) {
 		case 19:
-			mes "That is Caesar's Sword.";
-			getitem 1134, 1; // 1134,Caesar's_Sword
+			mes "它是利剪剑.";
+			getitem 1134, 1; // 1134,利剪剑
 			break;
 		case 20:
-			mes "That is Talefing.";
-			getitem 1139, 1; // 1139,Talefing_
+			mes "它是魔刀 吞神.";
+			getitem 1139, 1; // 1139,魔刀 吞神
 			break;
 		case 21:
-			mes "That is Sabbath.";
-			getitem 1365, 1; // 1365,Sabbath
+			mes "它是暗灵之斧.";
+			getitem 1365, 1; // 1365,暗灵之斧
 			break;
 	}
 
 	set lv4_weapon, 0;
-	mes "[Tabezthan]";
-	mes "Now, since I made this with materials";
-	mes "that you have brought, this is yours now.";
-	mes "I only helped you to make it,";
-	mes "and I am glad to give this to you.";
+	mes "[铁波兹坦]";
+	mes "那么, 这是我用你带来的材料制";
+	mes "造的, 现在它是你的了.";
+	mes "我只能帮你制造物品, 而且我很";
+	mes "高兴把它给你.";
 	next;
-	mes "[Tabezthan]";
-	mes "Well, feel free to come back";
-	mes "if you want to make a thing again...hahaha.";
-	mes "The weapon was made to be yours.";
+	mes "[铁波兹坦]";
+	mes "好的, 如果你还想再知道物品,";
+	mes "就来找我... 哈哈哈.";
+	mes "制造的武器都是你的.";
 	close;
 
 
 
 //--------------------------------------------------
-//Other Quests
+// 其它任务
 //--------------------------------------------------
 LV4_14:
-	mes "[Tabezthan]";
-	mes "Umm...you don't have a business with me, do you?";
-	mes "Please do not think of me as an old fool.";
-	mes "When a man gets older, he can see through other people's minds.";
-	mes "Go ahead and do what you have been doing.";
-	mes "Do not let me intrrupt you any longer.";
+	mes "[铁波兹坦]";
+	mes "嗯... 你好像没跟我有生意来往,";
+	mes "是不是?";
+	mes "别认为我是个老笨蛋.";
+	mes "当男人变老的时候, 他就可以看";
+	mes "穿别人的心思.";
+	mes "继续做你要做的事吧.";
+	mes "我不想打扰你.";
 	close;
 	
 	
 	
 //--------------------------------------------------
-//Hack Attempt
+// 修改企图
 //--------------------------------------------------
 LV4_HACK:
-	mes "[Tabezthan]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "[铁波兹坦]";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }
 
@@ -1777,50 +1682,50 @@ LV4_55:
 	if(lv4_weapon == 27)
 {
 			set @LV4_Gem1Name$, "Peridot";
-			set @LV4_Gem2Name$, "Turquoise";
-			set @LV4_Gem3Name$, "Agate";
+			set @LV4_Gem2Name$, "绿松石";
+			set @LV4_Gem3Name$, "玛瑙";
 }
 	if(lv4_weapon == 28)
 {
-			set @LV4_Gem1Name$, "Phlogopite";
-			set @LV4_Gem2Name$, "Pyroxene";
-			set @LV4_Gem3Name$, "Rose Quartz";
+			set @LV4_Gem1Name$, "金云母";
+			set @LV4_Gem2Name$, "辉石";
+			set @LV4_Gem3Name$, "玫瑰石英";
 }
 	if(lv4_weapon == 36)
 {
-			set @LV4_Gem1Name$, "Muscovite";
-			set @LV4_Gem2Name$, "Rose Quartz";
+			set @LV4_Gem1Name$, "白云母";
+			set @LV4_Gem2Name$, "玫瑰石英";
 			set @LV4_Gem3Name$, "Peridot";
 }
 	if(lv4_weapon == 37)
 {
-			set @LV4_Gem1Name$, "Biotite";
-			set @LV4_Gem2Name$, "Agate";
-			set @LV4_Gem3Name$, "Citrine";
+			set @LV4_Gem1Name$, "黑云母";
+			set @LV4_Gem2Name$, "玛瑙";
+			set @LV4_Gem3Name$, "黄水晶";
 }
 	if(lv4_weapon == 45)
 {
-			set @LV4_Gem1Name$, "Turquoise";
-			set @LV4_Gem2Name$, "Biotite";
-			set @LV4_Gem3Name$, "Rose Quartz";
+			set @LV4_Gem1Name$, "绿松石";
+			set @LV4_Gem2Name$, "黑云母";
+			set @LV4_Gem3Name$, "玫瑰石英";
 }
 	if(lv4_weapon == 46)
 {
-			set @LV4_Gem1Name$, "Citrine";
-			set @LV4_Gem2Name$, "Pyroxene";
-			set @LV4_Gem3Name$, "Phlogopite";
+			set @LV4_Gem1Name$, "黄水晶";
+			set @LV4_Gem2Name$, "辉石";
+			set @LV4_Gem3Name$, "金云母";
 }
 	if(lv4_weapon == 54)
 {
-			set @LV4_Gem1Name$, "Muscovite";
-			set @LV4_Gem2Name$, "Agate";
-			set @LV4_Gem3Name$, "Citrine";
+			set @LV4_Gem1Name$, "白云母";
+			set @LV4_Gem2Name$, "玛瑙";
+			set @LV4_Gem3Name$, "黄水晶";
 }
 	if(lv4_weapon == 55)
 {
-			set @LV4_Gem1Name$, "Pyroxene";
-			set @LV4_Gem2Name$, "Turquoise";
-			set @LV4_Gem3Name$, "Phlogopite";
+			set @LV4_Gem1Name$, "辉石";
+			set @LV4_Gem2Name$, "绿松石";
+			set @LV4_Gem3Name$, "金云母";
 }
 
 	mes "[Bill Thayer]";
@@ -1856,65 +1761,65 @@ LV4_53:
 		case 27:
 			set @LV4_Gem1Name$, "Peridot";
 			set LV4_Gem1, $@LV4_Olivine;
-			set @LV4_Gem2Name$, "Turquoise";
+			set @LV4_Gem2Name$, "绿松石";
 			set LV4_Gem2, $@LV4_Turquoise;
-			set @LV4_Gem3Name$, "Agate";
+			set @LV4_Gem3Name$, "玛瑙";
 			set LV4_Gem3, $@LV4_Agate;
 			break;
 		case 28:
-			set @LV4_Gem1Name$, "Phlogopite";
+			set @LV4_Gem1Name$, "金云母";
 			set LV4_Gem1, $@LV4_Phlogopite;
-			set @LV4_Gem2Name$, "Pyroxene";
+			set @LV4_Gem2Name$, "辉石";
 			set LV4_Gem2, $@LV4_Pyroxene;
-			set @LV4_Gem3Name$, "Rose Quartz";
+			set @LV4_Gem3Name$, "玫瑰石英";
 			set LV4_Gem3, $@LV4_Rose_Quartz;
 			break;
 		case 36:
-			set @LV4_Gem1Name$, "Muscovite";
+			set @LV4_Gem1Name$, "白云母";
 			set LV4_Gem1, $@LV4_Muscovite;
-			set @LV4_Gem2Name$, "Rose Quartz";
+			set @LV4_Gem2Name$, "玫瑰石英";
 			set LV4_Gem2, $@LV4_Rose_Quartz ;
 			set @LV4_Gem3Name$, "Peridot";
 			set LV4_Gem3, $@LV4_Olivine;
 			break;
 		case 37:
-			set @LV4_Gem1Name$, "Biotite";
+			set @LV4_Gem1Name$, "黑云母";
 			set LV4_Gem1, $@LV4_Biotite;
-			set @LV4_Gem2Name$, "Agate";
+			set @LV4_Gem2Name$, "玛瑙";
 			set LV4_Gem2, $@LV4_Agate;
-			set @LV4_Gem3Name$, "Citrine";
+			set @LV4_Gem3Name$, "黄水晶";
 			set LV4_Gem3, $@LV4_Citrine;
 			break;
 		case 45:
-			set @LV4_Gem1Name$, "Turquoise";
+			set @LV4_Gem1Name$, "绿松石";
 			set LV4_Gem1, $@LV4_Turquoise;
-			set @LV4_Gem2Name$, "Biotite";
+			set @LV4_Gem2Name$, "黑云母";
 			set LV4_Gem2, $@LV4_Biotite;
-			set @LV4_Gem3Name$, "Rose Quartz";
+			set @LV4_Gem3Name$, "玫瑰石英";
 			set LV4_Gem3, $@LV4_Rose_Quartz;
 			break;
 		case 46:
-			set @LV4_Gem1Name$, "Citrine";
+			set @LV4_Gem1Name$, "黄水晶";
 			set LV4_Gem1, $@LV4_Citrine;
-			set @LV4_Gem2Name$, "Pyroxene";
+			set @LV4_Gem2Name$, "辉石";
 			set LV4_Gem2, $@LV4_Pyroxene;
-			set @LV4_Gem3Name$, "Phlogopite";
+			set @LV4_Gem3Name$, "金云母";
 			set LV4_Gem3, $@LV4_Phlogopite;
 			break;
 		case 54:
-			set @LV4_Gem1Name$, "Muscovite";
+			set @LV4_Gem1Name$, "白云母";
 			set LV4_Gem1, $@LV4_Muscovite;
-			set @LV4_Gem2Name$, "Agate";
+			set @LV4_Gem2Name$, "玛瑙";
 			set LV4_Gem2, $@LV4_Agate;
-			set @LV4_Gem3Name$, "Citrine";
+			set @LV4_Gem3Name$, "黄水晶";
 			set LV4_Gem3, $@LV4_Citrine;
 			break;
 		case 55:
-			set @LV4_Gem1Name$, "Pyroxene";
+			set @LV4_Gem1Name$, "辉石";
 			set LV4_Gem1, $@LV4_Pyroxene;
-			set @LV4_Gem2Name$, "Turquoise";
+			set @LV4_Gem2Name$, "绿松石";
 			set LV4_Gem2, $@LV4_Turquoise;
-			set @LV4_Gem3Name$, "Phlogopite";
+			set @LV4_Gem3Name$, "金云母";
 			set LV4_Gem3, $@LV4_Phlogopite;
 			break;
 	}
@@ -2044,7 +1949,7 @@ LV4_LEVEL_PASS:
 	if(lv4_weapon == 29) goto LV4_29;
 	if(lv4_weapon == 30) goto LV4_30;
 	if(lv4_weapon > 30) goto LV4_31;
-	end; // shouldn't be here
+	end;
 
 
 LV4_0:
@@ -2066,7 +1971,7 @@ LV4_22:
 	close;
 	
 LV4_0_ASK:
-	switch( select( "Show interest.", "Ignore him." ) ) {
+	switch( select( "Show interest.:Ignore him." ) ) {
 		case 1:
 			mes "[Kayron]";
 			mes "Ah...I cannot remember what I was going to say...";
@@ -2202,8 +2107,8 @@ LV4_25_BASE_MAT:
 		}
 		next;
 		mes "[Kayron]";
-		mes "I need 2 Hammer of Blacksmith,";
-		mes "1 Emperium Anvil, 1 Illusion Flower and 20 Gold...";
+		mes "I need 2 高级铁砧,";
+		mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 		next;
 		mes "[Kayron]";
 		mes "Bring these to me first. I am kind of worried";
@@ -2260,7 +2165,7 @@ LV4_28:
 		if(@i == 3) mes "This will be the last one!";
 		if(@i == 3) mes "Let's compare after this.";
 		set @npchand[@i], rand(1, 3);
-		switch( select( "Scissors", "Rock", "Paper" ) ) {
+		switch( select( "Scissors:Rock:Paper" ) ) {
 			case 1:
 				set @myhand[@i], 1;
 				if(@npchand[@i] == 3) set @shobu, @shobu + 1;
@@ -2408,9 +2313,9 @@ LV4_30:
 //--------------------------------------------------
 LV4_HACK:
 	mes "[Kayron]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }
 
@@ -2451,7 +2356,7 @@ LV4_LEVEL_PASS:
 	if(lv4_weapon == 38) goto LV4_38;
 	if(lv4_weapon == 39) goto LV4_39;
 	if(lv4_weapon > 39) goto LV4_40;
-	end; // shouldn't be here
+	end;
 
 
 LV4_0:
@@ -2473,7 +2378,7 @@ LV4_31:
 	close;
 	
 LV4_0_ASK:
-	switch( select( "Show interest.", "Igonore him." ) ) {
+	switch( select( "Show interest.:Igonore him." ) ) {
 		case 1:
 			mes "[Reyghema]";
 			mes "Ah...I cannot remember what I was going to say...";
@@ -2599,8 +2504,8 @@ LV4_34_BASE_MAT:
 		}
 		next;
 		mes "[Reyghema]";
-		mes "I need 2 Hammer of Blacksmith,";
-		mes "1 Emperium Anvil, 1 Illusion Flower and 20 Gold...";
+		mes "I need 2 高级铁砧,";
+		mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 		mes "...wait...are they all...or do I need more?!";
 		if(lv4_weapon == 33) next;
 		if(lv4_weapon == 33) mes "[Reyghema]";
@@ -2655,7 +2560,7 @@ LV4_37:
 		if(@i == 3) mes "This will be the last one!";
 		if(@i == 3) mes "Let's compare after this.";
 		set @npchand[@i], rand(1, 3);
-		switch( select( "Scissors", "Rock", "Paper" ) ) {
+		switch( select( "Scissors:Rock:Paper" ) ) {
 			case 1:
 				set @myhand[@i], 1;
 				if(@npchand[@i] == 3) set @shobu, @shobu + 1;
@@ -2808,9 +2713,9 @@ LV4_39:
 //--------------------------------------------------
 LV4_HACK:
 	mes "[Reyghema]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }
 
@@ -2850,7 +2755,7 @@ LV4_LEVEL_PASS:
 	if(lv4_weapon == 47) goto LV4_47;
 	if(lv4_weapon == 48) goto LV4_48;
 	if(lv4_weapon > 48) goto LV4_49;
-	end; // shouldn't be here
+	end;
 
 
 LV4_0:
@@ -2875,7 +2780,7 @@ LV4_40:
 	close;
 	
 LV4_0_ASK:
-	switch( select( "Show interest.", "Igonore him." ) ) {
+	switch( select( "Show interest.:Igonore him." ) ) {
 		case 1:
 			mes "[Hein]";
 			mes "Why did I speak of money?";
@@ -2992,8 +2897,8 @@ LV4_43_BASE_MAT:
 			mes "Thank you so much.";
 			next;
 			mes "[Hein]";
-			mes "I need 2 Hammer of Blacksmith,";
-			mes "1 Emperium Anvil, 1 Illusion Flower and 20 Gold...";
+			mes "I need 2 高级铁砧,";
+			mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 			mes "Most likely they are the ones I need.";
 			next;
 			mes "[Hein]";
@@ -3011,8 +2916,8 @@ LV4_43_BASE_MAT:
 			break;
 		case 43:
 			mes "[Hein]";
-			mes "I need 2 Hammer of Blacksmith,";
-			mes "1 Emperium Anvil, 1 Illusion Flower and 20 Gold...";
+			mes "I need 2 高级铁砧,";
+			mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 			mes "Most likely they are the ones I need.";
 			break;
 		}
@@ -3063,7 +2968,7 @@ LV4_46:
 		if(@i == 3) mes "This will be the last one!";
 		if(@i == 3) mes "Let's compare after this.";
 		set @npchand[@i], rand(1, 3);
-		switch( select( "Scissors", "Rock", "Paper" ) ) {
+		switch( select( "Scissors:Rock:Paper" ) ) {
 			case 1:
 				set @myhand[@i], 1;
 				if(@npchand[@i] == 3) set @shobu, @shobu + 1;
@@ -3213,9 +3118,9 @@ LV4_48:
 //--------------------------------------------------
 LV4_HACK:
 	mes "[Hein]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }
 
@@ -3253,7 +3158,7 @@ LV4_LEVEL_PASS:
 	if(lv4_weapon == 56) goto LV4_56;
 	if(lv4_weapon == 57) goto LV4_57;
 	if(lv4_weapon > 57) goto LV4_58;
-	end; // shouldn't be here
+	end;
 
 
 LV4_0:
@@ -3279,7 +3184,7 @@ LV4_49:
 	close;
 	
 LV4_0_ASK:
-	switch( select( "Show interest.", "Igonore him." ) ) {
+	switch( select( "Show interest.:Igonore him." ) ) {
 		case 1:
 			mes "[Waltboughst]";
 			mes "...what did he say afterwards?";
@@ -3388,8 +3293,8 @@ LV4_52_BASE_MAT:
 			mes "I just remembered the materials.";
 			next;
 			mes "[Waltboughst]";
-			mes "I need 2 Hammer of Blacksmith,";
-			mes "1 Emperium Anvil, 1 Illusion Flower and 20 Gold...";
+			mes "I need 2 高级铁砧,";
+			mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 			next;
 			mes "[Waltboughst]";
 			mes "I do need some other items...but I need some time";
@@ -3399,8 +3304,8 @@ LV4_52_BASE_MAT:
 			break;
 		case 52:
 			mes "[Waltboughst]";
-			mes "I need 2 Hammer of Blacksmith,";
-			mes "1 Emperium Anvil, 1 Illusion Flower and 20 Gold...";
+			mes "I need 2 高级铁砧,";
+			mes "1 华丽金属铁砧, 1 幻想花 and 20 黄金...";
 			mes "Most likey they will be the ones I need...";
 			break;
 		}
@@ -3451,7 +3356,7 @@ LV4_55:
 		if(@i == 3) mes "This will be the last one!";
 		if(@i == 3) mes "Let's compare after this.";
 		set @npchand[@i], rand(1, 3);
-		switch( select( "Scissors", "Rock", "Paper" ) ) {
+		switch( select( "Scissors:Rock:Paper" ) ) {
 			case 1:
 				set @myhand[@i], 1;
 				if(@npchand[@i] == 3) set @shobu, @shobu + 1;
@@ -3610,8 +3515,8 @@ LV4_57:
 //--------------------------------------------------
 LV4_HACK:
 	mes "[Waltboughst]";
-	mes "Hmm. There seems to be a bit of problem.";
+	mes "嗯. 似乎有点什么小问题.";
 	set lv4_weapon, 0;
-	logmes "[" +strcharinfo(0) + "] tried to hack LV4 quest.";
+	logmes "[" +strcharinfo(0) + "]企图篡改4 级任务.";
 	close;
 }

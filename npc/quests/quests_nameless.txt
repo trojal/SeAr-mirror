@@ -1,17 +1,16 @@
-//===================================
+//===========================================================
 // [冥] The PlutoEA Project [王]
 // http://opensvn.csie.org/PlutoEA
 // ---------------------------------
 // - 无名岛相关任务脚本 (EP11.3) - 
-//===================================
-//= 版本：1.7+(0.1) 变更异国商人位于梦罗克的NPC位置 [笨冰]
-//===================================
+//===========================================================
+//= 版本：2.1+(0.1) 变更异国商人位于梦罗克的NPC位置 [笨冰]
+//===========================================================
 //= 无名岛进入任务:
 //= - 完成任务才能自由进出无名岛
 //= - 使用变数: aru_monas  (最大: 26)
 
 //= 阿卢纳贝兹教国的和平:
-//= - -(与EP12可能有不相容的情形)+
 //- - 帮忙维护阿卢纳贝兹与米德加尔特之间的和平
 //= - 使用变数: aru_em (最大: 23)
 
@@ -30,85 +29,76 @@
 //= - 使用变数: zdan_edq (最大: 19)
 
 //= 被埋藏的秘宝:
-//= - -(与EP12可能有不相容的情形)+
 //- - 帮助普隆德拉的宝藏猎人回家，并了解,
 //= - 被埋藏的秘宝的起源.
 //= - 使用变数: treasure_nd (最大: 12)
 //= - 使用变数: jewel_nd (最大: 31)
 
 //= 流氓公会的谣言 任务:
-//= - -(与EP12可能有不相容的情形)+
-//- - Assist the Rogue Guild with their investigations.
+//- - 帮助流氓公会进行调查
 //= - 使用变数: rumour_nd (最大: 22)
-//============================================================
+//===========================================================
 
 
-// Nameless Island and Cursed Monestary Access Quest
-//============================================================
-airplane_01,95,61,3	script	QuestTrigger#Aru	-1,3,3,{
+// 无名岛进入任务
+//===========================================================
+airplane_01,95,61,3	script	触发#Aru	-1,3,3,{
 	end;
 
 OnTouch:	
 	if ((prt_curse == 36 || prt_curse == 45 || prt_curse == 56 || prt_curse == 61) && (aru_monas < 1)) {
-		hideoffnpc "Agent#Aru";
+		hideoffnpc "情报员#Aru";
 		mes "[????]";
 		mes "你是"+strcharinfo(0)+"吗?";
 		mes "我正在等你呢，";
-		mes "在^6B8E23普隆德拉教堂^000000 的 ^6B8E23'班夫'^000000";
+		mes "在^6B8E23普隆德拉教堂^000000 的 ^6B8E23'班波'^000000";
 		mes "正在等你呢，";
 		mes "请尽快去教堂一趟";
 		close2;
 		set aru_monas,1;
-		hideonnpc "Agent#Aru";
+		hideonnpc "情报员#Aru";
 	}
 	end;
 }
 
-airplane_01,95,61,3	script	Agent#Aru	899,5,5,{
+airplane_01,95,61,3	script	情报员#Aru	899,5,5,{
 	end;
 
 OnInit:
-	hideonnpc "Agent#Aru";
+	hideonnpc "情报员#Aru";
 	end;
 }
 
 cmd_in02,174,89,7	script	平凡的男人#pc1	97,{
 	if (aru_monas < 2) {
 		mes "[拉乐希司]";
-		mes "Damn it, I lost again!";
-		mes "This game is rigged!";
-		mes "No matter what I try,";
-		mes "I can never seem to win!";
-		mes "But Comodo Hold 'Em";
-		mes "is so... It's so addicting!";
+		mes "喔，该死! 又输了啦!";
+		mes "这游戏分明就是在耍老千啊";
+		mes "无论玩多少次都是输!";
+		mes "不过这游戏还挺让人上瘾的啊，呵呵";
 		close;
 	}
 	else if (aru_monas == 2) {
 		mes "[拉乐希司]";
-		mes "Argh, I lost at this game";
-		mes "so many times that I've";
-		mes "completely lost track!";
-		mes "I've got to win sometime...";
+		mes "哎呦呦...";
+		mes "我到底输了多少啊...";
+		mes "呜呜呜...";
 		next;
-		select("Excuse me.");
+		select("请..请问...");
 		mes "[拉乐希司]";
-		mes "Oh! Uh... Hmm...";
-		mes "How may I help you?";
+		mes "哦 嗯...?";
+		mes "有什么地方可以帮助你的吗?";
 		next;
-		select ("^6B8E23Priest Bamph^000000 sent me.");
+		select ("我是受^6B8E23班波祭司^000000之托而来的");
 		mes "[拉乐希司]";
-		mes "Oh, I see. I apologize";
-		mes "if my screaming and yelling";
-		mes "made you a bit uncomfortable.";
-		mes "I'm just here to kill some";
-		mes "time... I now see firsthand";
-		mes "that gambling is truly evil!";
+		mes "是这样啊，我向您道歉啊";
+		mes "如果得我的尖叫声有吓到你的话..";
+		mes "我只是在这里消磨时间啊，呵呵";
+		mes "不过我现在已经认清赌博是个无底深渊啊!";
 		next;
 		mes "[拉乐希司]";
-		mes "Er, would you come";
-		mes "over this way? I don't";
-		mes "want anyone else to";
-		mes "overhear us talking.";
+		mes "嗯.. 我们到那边去谈谈吧";
+		mes "小心隔墙有耳!";
 		close2;
 		set aru_monas,3;
 		warp "cmd_in02",110,53;
@@ -116,9 +106,8 @@ cmd_in02,174,89,7	script	平凡的男人#pc1	97,{
 	}
 	else {
 		mes "[拉乐希司]";
-		mes "What?! I lost again?";
-		mes "How does... How does";
-		mes "this game even work?!";
+		mes "什么!?  怎么可能我又输了!";
+		mes "这游戏机到底是该怎么玩...";
 		close;
 	}
 }
@@ -126,60 +115,47 @@ cmd_in02,174,89,7	script	平凡的男人#pc1	97,{
 cmd_in02,111,52,3	script	平凡的男人#pc2	97,{
 	if (aru_monas < 3) {
 		mes "[拉乐希司]";
-		mes "^666666*Sigh...*^000000";
-		mes "This isn't good at all.";
-		mes "I don't know what to do...";
+		mes "^666666*咳...*^000000";
+		mes "情况不是很乐观啊..";
 		close;
 	}
 	else if (aru_monas == 3) {
 		mes "[拉乐希司]";
-		mes "Good, no one should be";
-		mes "able to hear us from here.";
-		mes "After I sent a message to";
-		mes "the place, I found some";
-		mes "new information that should";
-		mes "really help my investigation.";
+		mes "在这里就不用担心隔墙";
+		mes "有耳了，嗯... 我事先支会";
+		mes "王宫后并继续调查的结果，";
+		mes "发现了重大情报，";
+		mes "因此调查时间可以缩短了";
 		next;
 		mes "[拉乐希司]";
-		mes "I learned that two details";
-		mes "about the night when that";
-		mes "high ranking man vanished.";
-		mes "Firstly, he left the guards for";
-		mes "a bit to meet a woman. It's";
-		mes "always a woman, isn't it?";
+		mes "据我调查的结果，";
+		mes "那位权高位重的男人失踪那晚，";
+		mes "曾躲开守卫去见了一位女人";
 		next;
 		mes "[拉乐希司]";
-		mes "Secondly, after he left to";
-		mes "meet that woman, some other";
-		mes "people came in, and then they";
-		mes "carried some really large";
-		mes "baggage with them when";
-		mes "they left to the west.";
+		mes "然后他见了那个女人后，";
+		mes "有其他人陆续进到他房间，然后带着";
+		mes "一个大袋子出了房门";
 		next;
 		mes "[拉乐希司]";
-		mes "Those bags were so big,";
-		mes "it's suspicious. It seems";
-		mes "like some organization has";
-		mes "kidnapped him, and wants to";
-		mes "bring him west for some reason.";
+		mes "她们的背袋大得离谱，很奇怪吧?";
+		mes "应该是有某组织的人预谋绑架了他";
+		mes "而且把他带到西边的地区去了...";
 		next;
-		select("Why to the west?");
+		select("为什么是西边?");
 		mes "[拉乐希司]";
-		mes "This is just a guess, but";
-		mes "I think whoever kidnapped";
-		mes "him are from ^2F4F2FArunafeltz^000000.";
-		mes "I'm prohibited from entering";
-		mes "Arunafeltz so I wasn't able";
-		mes "to investigate any further.";
+		mes "这当然只是个猜测啦，";
+		mes "不过我认为绑走他的人应该是";
+		mes "来自^2F4F2F阿卢纳贝兹^000000的人";
+		mes "因为我不能进入阿卢纳贝兹教国";
+		mes "所以就无法取得更多消息了";
 		set aru_monas,4;
 		close;
 	}
 	else {
 		mes "[拉乐希司]";
-		mes "I gambled away";
-		mes "this much money?";
-		mes "How am I gonna pay";
-		mes "off all of this debt?!";
+		mes "赌博输了太多钱，";
+		mes "这么多负债怎么还得起啊!";
 		close;
 	}
 }
@@ -197,37 +173,31 @@ ra_in01,308,59,1	script	服务生#Aru	930,{
 		if (aru_monas == 6) {
 			next;
 			mes "[服务生]";
-			mes "What would you like";
-			mes "to order? Or... If I'm";
-			mes "not mistaken, you're";
-			mes "here for something else?";
+			mes "你是来用餐吗?";
+			mes "还是有其它事情?";
 			next;
-			if (select("I'd like to order.:Yes, I've come for another reason.") == 1) {
+			if (select("我要用餐:我要办事") == 1) {
 				mes "[服务生]";
-				mes "Sure, no problem.";
-				mes "Did you come alone?";
+				mes "好的，没问题?";
+				mes "你是一个人来吗?";
 				next;
-				select("Yes.");
+				select("是的");
 				mes "[服务生]";
-				mes "Right this way.";
+				mes "请往这边走";
 				close2;
 				set aru_monas,7;
 				warp "ra_in01",303,43;
 				end;
 			}
 			mes "[服务生]";
-			mes "Hm, okay. Well, whatever";
-			mes "it is, I hope you enjoy your";
-			mes "stay at Rachel's Palate.";
+			mes "嗯，不管要办什么事，";
+			mes "希望你在拉赫玩得愉快";
 			close;
 		}
 	}
 	mes "[服务生]";
-	mes "The food in this";
-	mes "restaurant is the";
-	mes "best in Rachel--no,";
-	mes "it is the best in all";
-	mes "of Arunafeltz!";
+	mes "餐厅里的每道菜都是拉赫..";
+	mes "喔不! 是阿卢纳贝兹里最上等的喔!!";
 	close;
 }
 
@@ -458,12 +428,10 @@ ve_in,78,314,5	script	保安官#Aru	945,{
 	}	
 	else if (aru_monas == 10) {
 		mes "[阿尔哈玛]";
-		mes "I thought I told you";
-		mes "that you weren't allowed";
-		mes "to come in here. Why do";
-		mes "you keep coming back?";
+		mes "我说过这里禁止进入啊，";
+		mes "你到底有何事老是进出呢?";
 		next;
-		if (select("I'm sorry.:I want to know about the smugglers.") == 1) {
+		if (select("对不起:不久前被逮捕的可疑人是?") == 1) {
 			mes "[阿尔哈玛]";
 			mes "It's fine. Just leave,";
 			mes "and don't come back";
@@ -501,7 +469,7 @@ ve_in,78,314,5	script	保安官#Aru	945,{
 	else if (aru_monas == 13) {
 		mes "[阿尔哈玛]";
 		mes "Huh, that's weird. You're not";
-		mes "even a citizen of Arunafeltz,";
+		mes "even a citizen of 阿卢纳贝兹,";
 		mes "but somehow you know such";
 		mes "a high ranking priest. Alright,";
 		mes "I guess I can tell you more";
@@ -620,12 +588,10 @@ ve_in,81,296,3	script	士兵#Aru	946,{
 	}
 	else if (aru_monas == 9) {
 		mes "[西姆斯]";
-		mes "Hm? Oh, the magistrate";
-		mes "gave you the brush-off?";
-		mes "Well, he hasn't really been";
-		mes "himself ever since we arrested";
-		mes "those ^32CD32smugglers coming from";
-		mes "the south^000000 a few months ago.";
+		mes "几个月从前^32CD32南边有可疑人物";
+		mes "企图偷渡上岸时被逮捕^000000，";
+		mes "由于是自己的管辖范围，所以保安官";
+		mes "在处理这件事情";
 		next;
 		mes "[西姆斯]";
 		mes "Once we reported the arrest";
@@ -666,7 +632,7 @@ ve_in,81,296,3	script	士兵#Aru	946,{
 	else {
 		mes "[西姆斯]";
 		mes "Nice day, isn't it?";
-		close;		
+		close;
 	}
 }
 
@@ -682,12 +648,11 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 	}
 	cutin "ra_gwoman",2;
 	mes "[尼乐研大神官]";
-	mes "So you wanted to talk to me?";
-	mes "I'm pretty tired right now, but";
-	mes "I can spare a moment or two.";
-	mes "What would you like to ask?";
+	mes "你是想跟我聊天喔!";
+	mes "只是我现在有点疲倦，希望能长话短说..";
+	mes "那您到底想说什么事呢?";
 	next;
-	switch(select("Ask About Veins Smugglers:As About 杰德")) {
+	switch(select("有关在菲音斯被捕的人士:关于杰德的事情")) {
 	case 1:
 		if (aru_monas == 12) {
 			mes "[尼乐研]";
@@ -737,7 +702,7 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 			mes "then... We lost all contact.";
 			next;
 			mes "[尼乐研]";
-			mes "We sent investigators, but";
+			mes "We sent 零零七s, but";
 			mes "we still have no idea what";
 			mes "happened. All they found was";
 			mes "a message left by one survivor:";
@@ -761,7 +726,7 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 			mes "still alive. I doubt it, but...";
 			next;
 			mes "[尼乐研]";
-			mes "The investigators we employ";
+			mes "The 零零七s we employ";
 			mes "in our temple usually pale";
 			mes "in comparison to you foreign";
 			mes "adventurers, so I have faith";
@@ -865,7 +830,7 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 		}
 		else {
 			mes "[尼乐研]";
-			mes "I suppose that Arunafeltz";
+			mes "I suppose that 阿卢纳贝兹";
 			mes "and Rune-Midgarts will be too";
 			mes "busy with their own internal";
 			mes "issues to commit to war.";
@@ -1069,7 +1034,7 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 				mes "[尼乐研大神官]";
 				mes "However, I've never";
 				mes "doubted 杰德's dedication";
-				mes "to Arunafeltz. He deserves";
+				mes "to 阿卢纳贝兹. He deserves";
 				mes "another chance from me.";
 				next;
 				mes "[尼乐研大神官]";
@@ -1250,7 +1215,7 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 				mes "have to say... But that's much";
 				mes "preferable to doing nothing";
 				mes "and experiencing the downfall";
-				mes "of our beloved Arunafeltz.";
+				mes "of our beloved 阿卢纳贝兹.";
 				next;
 				mes "[尼乐研大神官]";
 				mes "Sippie, please";
@@ -1303,7 +1268,7 @@ ra_temple,165,57,5	script	尼乐研大神官#ss	915,{
 			mes "[尼乐研大神官]";
 			mes "Our priests may have acted";
 			mes "selfishly, but they are still";
-			mes "committed to Arunafeltz's";
+			mes "committed to 阿卢纳贝兹's";
 			mes "welfare. Things should";
 			mes "change for the better now.";
 			next;
@@ -1432,14 +1397,14 @@ ve_fild07,125,128,0	script	Boat#Aru	111,{
 		mes "I'll explain everything.";
 		next;
 		mes "[拉乐希司]";
-		mes "According to our investigation, Arunafeltz is definitely involved";
+		mes "According to our investigation, 阿卢纳贝兹 is definitely involved";
 		mes "in this case. We've been watching you since you're somehow related";
-		mes "to that high ranked official from Arunafeltz. I apologize for that.";
+		mes "to that high ranked official from 阿卢纳贝兹. I apologize for that.";
 		next;
 		mes "[拉乐希司]";
 		mes "This is an international";
 		mes "incident, so to prevent any";
-		mes "intel leaks to Arunafeltz,";
+		mes "intel leaks to 阿卢纳贝兹,";
 		mes "we've had to be much stricter";
 		mes "with securing and protecting";
 		mes "all information for this case.";
@@ -1614,12 +1579,11 @@ nameless_i,212,184,0	script	#aru_clue1	-1,2,3,{
 
 OnTouch:
 	if (aru_monas == 17) {
-		mes "^3355FFThe village is totally";
-		mes "silent, as if all life had";
-		mes "abandoned it. You look";
-		mes "around and see that something";
-		mes "was here a few hours ago, but";
-		mes "it's somewhere else now.^000000";
+		mes "村子里好像没有任何生命般的";
+		mes "安静，但是仔细观察的话，";
+		mes "可以发现在几小时前，";
+		mes "有过东西的痕迹，";
+		mes "他们似乎移往某处了";
 		next;
 		mes "^3355FFWhatever it was,";
 		mes "it definitely wasn't";
@@ -1635,11 +1599,9 @@ nameless_in,21,176,0	script	#aru_clue2	-1,2,2,{
 
 OnTouch:
 	if (aru_monas == 17) {
-		mes "^3355FFThere are traces of";
-		mes "humans around here,";
-		mes "along with some kind";
-		mes "of creature that you";
-		mes "can't clearly identify.^000000";
+		mes "这里有人生活过的痕迹，";
+		mes "但是另外还发现了其它";
+		mes "痕迹，该痕迹感觉不好";
 		close;
 	}
 	end;
@@ -1650,26 +1612,22 @@ nameless_i,129,218,0	script	#aru_clue3	-1,4,3,{
 
 OnTouch:
 	if (aru_monas == 17) {
-		mes "^3355FFA strange scent strikes";
-		mes "you as you enter this field of";
-		mes "grass. A few ^32CD32animal corpses^3355FF";
-		mes "are strewn around the ground.^000000";
+		mes "这草原散发着奇妙的气味，";
+		mes "还发现了几只^32CD32动物尸体^000000";
 		close;
 	}
 	end;
 }
 
-nameless_i,127,207,0	script	Dead Crow#Aru	111,{
+nameless_i,127,207,0	script	乌鸦的尸体#Aru	111,{
 	if (aru_monas < 17) { 
 		mes "^3355FFThere is a dead crow on the ground.";
 		close;
 	}
 	else if (aru_monas == 17) {
-		mes "^3355FFThe sight of this ^32CD32dead";
-		mes "crow^3355FF makes you feel";
-		mes "uneasy for some reason.^000000";
+		mes "有只可疑的^32CD32乌鸦尸体^000000";
 		next;
-		if (select("Ignore:Investigate") == 1) {
+		if (select("不要管它:仔细观察") == 1) {
 			mes "^3355FFYou decide not to touch";
 			mes "the animal's carcass.^000000";
 			close;
@@ -1818,7 +1776,6 @@ OnMyMobDead:
 
 nameless_in,13,53,0	script	#Aru_Trigger2	-1,3,1,{
 	end;
-
 OnTouch:
 	if (aru_monas == 19 && !@mymobcount) {
 		mes "[???????]";
@@ -1854,7 +1811,7 @@ OnTouch:
 	if(aru_monas == 20) {
 		hideoffnpc "拉乐希司#Aru3";
 		mes "[" +strcharinfo(0)+ "]";
-		mes "What the hell...!?";
+		mes "这到底是....";
 		next;
 		mes "[拉乐希司]";
 		mes "So... This is the";
@@ -1889,7 +1846,7 @@ nameless_n,259,218,3	script	拉乐希司#Boat1	97,{
 		mes "That guy was Tristam III?!";
 		mes "This explains a lot, I suppose.";
 		mes "I'll report this along with the";
-		mes "voucher. So Arunafeltz was";
+		mes "voucher. So 阿卢纳贝兹 was";
 		mes "behind that poison grass too.";
 		next;
 		mes "[拉乐希司]";
@@ -1926,7 +1883,7 @@ nameless_n,259,218,3	script	拉乐希司#Boat1	97,{
 	close;
 }
 
-abbey02,224,70,0	script	Book#Aru	111,{
+abbey02,224,70,0	script	书#Aru	111,{
 	if (checkweight(7766,1) == 0) {
 		mes "^3355FFWait a second!";
 		mes "Right now, you're carrying";
@@ -1963,7 +1920,7 @@ abbey02,224,70,0	script	Book#Aru	111,{
 	}
 }
 
-abbey03,232,233,4	script	Man#Aru	956,{
+abbey03,232,233,4	script	倒卧的男子#Aru	956,{
 	if (aru_monas < 22) {
 		mes "^3355FFYou find a man lying on";
 		mes "the floor, wearing torn";
@@ -1975,29 +1932,23 @@ abbey03,232,233,4	script	Man#Aru	956,{
 		close;
 	}
 	if (aru_monas == 22) {
-		mes "^3355FFYou find a man lying on";
-		mes "the floor, wearing torn";
-		mes "yet luxurious clothing.";
-		mes "He doesn't seem to be";
-		mes "breathing at all...^000000.";
+		mes "有位穿着体面的男子";
+		mes "倒卧在地上，";
+		mes "原以为死了，但把耳朵靠过去";
+		mes "看有没有呼吸，结果还在喘息着";
 		next;
-		mes "^3355FFYou bring your ears more";
-		mes "closely to his mouth: it";
-		mes "seems that he really is";
-		mes "still barely alive.^000000";
-		next;
-		if (select("Touch Him:Ignore Him") == 1) {
+		if (select("动一下男子:不管他") == 1) {
 			mes "["+strcharinfo(0)+"]";
 			mes "This man...";
 			mes "He's so familiar";
 			mes "for some reason.";
 			next;
-			mes "^3355FFAs you touch him, the";
-			mes "man suddenly jumps";
-			mes "up with a crazed yowl.^000000";
+			mes "轻轻碰一下那个男子，";
+			mes "结果男子呻吟一下后";
+			mes "就起来了.";
 			initnpctimer;
-			hideonnpc "Man#Aru";
-			monster "abbey03",232,232,"Dead King",1875,1,"Man#Aru::OnMyMobDead";
+			hideonnpc "倒卧的男子#Aru";
+			monster "abbey03",232,232,"王的尸体",1875,1,"倒卧的男子#Aru::OnMyMobDead";
 			close;
 		}
 		mes "^3355FFYou don't feel";
@@ -2012,18 +1963,18 @@ abbey03,232,233,4	script	Man#Aru	956,{
 
 OnMyMobDead:
 	stopnpctimer;
-	hideoffnpc "Dead Man#Aru";
-	donpcevent "Dead Man#Aru::OnEnable";
+	hideoffnpc "王的尸体#Aru";
+	donpcevent "王的尸体#Aru::OnEnable";
 	end;
 
 OnTimer300000:
 	stopnpctimer;
-	hideonnpc "Dead Man#Aru";
-	hideoffnpc "Man#Aru";
+	hideonnpc "王的尸体#Aru";
+	hideoffnpc "倒卧的男子#Aru";
 	end;
 }
 
-abbey03,232,232,4	script	Dead Man#Aru	956,{
+abbey03,232,232,4	script	王的尸体#Aru	956,{
 	if (checkweight(7766,1) == 0) {
 		mes "^3355FFWait a second!";
 		mes "Right now, you're carrying";
@@ -2046,8 +1997,8 @@ abbey03,232,232,4	script	Dead Man#Aru	956,{
 		mes "this man is...!";
 		set aru_monas,23;
 		getitem 7726,1; //Token_of_King
-		hideonnpc "Dead Man#Aru";
-		hideoffnpc "Man#Aru";
+		hideonnpc "王的尸体#Aru";
+		hideoffnpc "倒卧的男子#Aru";
 		stopnpctimer;
 		close;
 	}
@@ -2058,7 +2009,7 @@ OnEnable:
 	end;
 
 OnInit:
-	hideonnpc "Dead Man#Aru";
+	hideonnpc "王的尸体#Aru";
 	end;
 }
 
@@ -2092,7 +2043,7 @@ ra_temple,168,54,3	script	Sippie#ss	917,{
 		mes "[Sippie]";
 		mes "She loves children...";
 		mes "She's like a mother to";
-		mes "all the kids in Arunafeltz.";
+		mes "all the kids in 阿卢纳贝兹.";
 		mes "She even brought our 教皇 to";
 		mes "Rachel when she was a baby,";
 		mes "raising her like her own child.";
@@ -2109,7 +2060,7 @@ ra_temple,168,54,3	script	Sippie#ss	917,{
 	}
 }
 
-// Peace to the Arunafeltz
+// 阿卢纳贝兹教国的和平
 //============================================================
 moc_ruins,77,167,3	script	异国商人#aru1	880,{
 	if (aru_vol == 27) {
@@ -2178,10 +2129,9 @@ moc_ruins,77,167,3	script	异国商人#aru1	880,{
 		}
 		else if (aru_em == 7) {
 			mes "[异国商人]";
-			mes "*Pant Pant*";
-			mes "*Sweat*";
+			mes "呼呜、呼呜...";
 			next;
-			switch(select("Give Fruit Wine:Quietly Watch Him")) {
+			switch(select("把水果酒交给商人:静观其变")) {
 			case 1:
 				mes "[异国商人]";
 				mes "Oh, thank you! This";
@@ -2587,7 +2537,7 @@ ra_fild03,139,355,5	script	伊斯马尔#em	914,{
 				mes "My pen was made of a very";
 				mes "rare gemstone called ^FF0000Sardonyx^000000.";
 				mes "*Sob* I don't think anyone";
-				mes "sells Sardonyx in Arunafeltz.";
+				mes "sells Sardonyx in 阿卢纳贝兹.";
 				mes "You can only get that in the";
 				mes "countries next to us...";
 				next;
@@ -2782,14 +2732,13 @@ OnTouch:
 		mes "well be shocked...";
 		next;
 		mes "^3355FFHigh Priest 杰德 explained";
-		mes "all of Arunafeltz's secrets";
+		mes "all of 阿卢纳贝兹's secrets";
 		mes "in detail. He revealed the";
 		mes "split between the moderates";
 		mes "and hard liners among the";
 		mes "priests, the corruption...^000000";
 		next;
 		mes "^3355FFHe also explained the role";
-		mes "He also explained the role";
 		mes "of the priests in the inhumane";
 		mes "testing conducted by the";
 		mes "Rekenber Corporation, and";
@@ -2820,7 +2769,7 @@ OnTouch:
 		mes "we don't have much time.";
 		mes "We're facing the possibility";
 		mes "of war, and we must stop it";
-		mes "in order to save Arunafeltz.";
+		mes "in order to save 阿卢纳贝兹.";
 		next;
 		mes "[教皇]";
 		mes "...............................";
@@ -2929,7 +2878,7 @@ OnTouch:
 		mes "[教皇]";
 		mes "Write a report about the";
 		mes "tests conducted by the";
-		mes "moderates in Arunafeltz and";
+		mes "moderates in 阿卢纳贝兹 and";
 		mes "the Schwaltzvalt Republic,";
 		mes "and their relationship with";
 		mes "that Schwaltzvalt Corporation.";
@@ -2973,7 +2922,7 @@ OnTouch:
 		mes "[教皇]";
 		mes ""+ strcharinfo(0) +"...";
 		mes "I appreciate all your work";
-		mes "on behalf of Arunafeltz.";
+		mes "on behalf of 阿卢纳贝兹.";
 		mes "My influence may still be";
 		mes "weak, but I'll do my best";
 		mes "with 杰德 and 尼乐研's support.";
@@ -3014,7 +2963,7 @@ OnTouch:
 	end;
 
 OnTimer4000:
-	mapannounce "rachel","教皇: Citizens of Arunafeltz. High Priests and Priestesses.",bc_map,"0xFFCE00";
+	mapannounce "rachel","教皇: Citizens of 阿卢纳贝兹. High Priests and Priestesses.",bc_map,"0xFFCE00";
 	end;
 
 OnTimer7000:
@@ -3026,7 +2975,7 @@ OnTimer10000:
 	end;
 
 OnTimer15000:
-	mapannounce "rachel","教皇: I have observed all that is happening in Arunafeltz.",bc_map,"0x66CCCC";
+	mapannounce "rachel","教皇: I have observed all that is happening in 阿卢纳贝兹.",bc_map,"0x66CCCC";
 	end;
 
 OnTimer19000:
@@ -3034,7 +2983,7 @@ OnTimer19000:
 	end;
 
 OnTimer23000:
-	mapannounce "rachel","教皇: However, I did not intervene for the sake of those that still pray for peace in Arunafeltz.",bc_map,"0x66CCCC";
+	mapannounce "rachel","教皇: However, I did not intervene for the sake of those that still pray for peace in 阿卢纳贝兹.",bc_map,"0x66CCCC";
 	end;
 
 OnTimer30000:
@@ -3046,7 +2995,7 @@ OnTimer35000:
 	end;
 
 OnTimer43000:
-	mapannounce "rachel","教皇: My followers in Arunafeltz, keep your faith in me, and keep your country strong.",bc_map,"0x66CCCC";
+	mapannounce "rachel","教皇: My followers in 阿卢纳贝兹, keep your faith in me, and keep your country strong.",bc_map,"0x66CCCC";
 	end;
 
 OnTimer47000:
@@ -3075,12 +3024,11 @@ comodo,224,187,3	script	穆夫	86,{
 	}
 	if (diamond_edq == 0) {
 		mes "[穆夫]";
-		mes "What th-?! Geez,";
-		mes "you didn't have to";
-		mes "scare me like that!";
-		mes "What is it that you want?";
+		mes "哎呀... 吓我一跳，你怎么可以";
+		mes "突然跟我搭讪呢? 呼呜...";
+		mes "你找我有事吗?";
 		next;
-		switch(select("You look troubled.:Nothing. Take care!")) {
+		switch(select("你有心事吗?:没事，拜拜")) {
 		case 1:
 			if (BaseLevel < 61) {
 				mes "[穆夫]";
@@ -3095,90 +3043,88 @@ comodo,224,187,3	script	穆夫	86,{
 			}
 			else {
 				mes "[穆夫]";
-				mes "Well, I'm actually in";
-				mes "pretty big trouble.";
-				mes "I borrowed some money";
-				mes "from this loan shark";
-				mes "named ^0000FFBelder^000000 in Alberta.";
-				mes "It was a bad move!";
+				mes "真的吗?... 太好了";
+				mes "我正好因为某事而";
+				mes "伤脑筋中，你这样有为的人，";
+				mes "我大可放心的委托你事情了";
 				next;
 				mes "[穆夫]";
-				mes "My business hasn't been";
-				mes "good, but I felt like I didn't";
-				mes "have a choice. I made enough";
-				mes "money to repay him now, but";
-				mes "then I lost my bond of debt.";
+				mes "最近由于手头紧，不得已向艾尔贝塔";
+				mes "叫^0000FF贝尔德^000000的地下钱庄借了高利贷，";
+				mes "虽然他是本地人所不知的恶质";
+				mes "高利贷，但我的情况实在太艰困";
 				next;
 				mes "[穆夫]";
-				mes "When I asked Belder if";
-				mes "I could pay him back without";
-				mes "that bond, he insisted that";
-				mes "he didn't remember loaning";
-				mes "money to me. I bet he just";
-				mes "wants to keep my collateral!";
+				mes "幸好在到期日前弄到了";
+				mes "资金... 但却意外遗失了";
+				mes "借钱的借据...";
 				next;
 				mes "[穆夫]";
-				mes "I knew that guy was shady!";
-				mes "Would you help me find my";
-				mes "lost bond of debt? You see,";
-				mes "the collateral I gave him";
-				mes "is really valuable to me.";
+				mes "而更让我吐血的是贝尔德那家伙的态度，";
+				mes "我把原委告诉她后，本想直接还钱给他，";
+				mes "他居然否认借钱给我过";
 				next;
-				switch(select("Do you know where you lost it?:I'm sorry to hear that. Bye!")) {
+				mes "[穆夫]";
+				mes "这家伙肯定想藉此机会吞掉";
+				mes "我的抵押品... 这是那家伙";
+				mes "经常用的手段...";
+				next;
+				mes "[穆夫]";
+				mes "拜托你，帮我找一下遗失的";
+				mes "那张借据好吗... 我实在我委屈的";
+				mes "睡不着觉，那抵押品就像我的生命一样宝贵";
+				next;
+				mes "[穆夫]";
+				mes "我想想... 我究竟在何处";
+				mes "遗失的呢...";
+				next;
+				switch(select("地点在哪里呢?:再会")) {
 				case 1:
 					mes "[穆夫]";
-					mes "If I knew where I lost";
-					mes "it, then it wouldn't be";
-					mes "lost now, would it? Well,";
-					mes "I remember going to a union";
-					mes "meeting, and I had a drink";
-					mes "or two. Okay, I had a lot.";
+					mes "如果我知道遗失的地方，";
+					mes "又何必苦苦相你哀求呢?";
 					next;
 					mes "[穆夫]";
-					mes "On the way home,";
-					mes "I stumbled in a field";
-					mes "near Comodo... I remember";
-					mes "seeing some water... That";
-					mes "must be where I dropped my";
-					mes "wallet with the bond of debt.";
+					mes "嗯，我从公会会长宴会回来的途中，";
+					mes "好像在克魔岛附近的原野搞丢了";
+					mes "我的皮夹，借据就放在皮夹里...";
+					mes "只怪我当时为何喝得酩酊大醉...";
 					next;
 					mes "[穆夫]";
-					mes "If you can find my";
-					mes "wallet, I'll make sure";
-					mes "to repay you. Please";
-					mes "help me if you can!";
+					mes "我记得酒醉中在河边";
+					mes "摔过一跤... 肯定那时候";
+					mes "在附近弄丢了皮夹";
+					next;
+					mes "[穆夫]";
+					mes "我会付你满意的酬劳... 请你帮帮忙";
 					set diamond_edq,1;
 					close;
 				case 2:
 					mes "[穆夫]";
-					mes "H-hey! Where are you";
-					mes "going?! You can't just";
-					mes "leave me here! I need help!";
+					mes "喂... 你干什么...?";
+					mes "年...年轻人.. 你怎忍心离我而去...";
 					close;
 				}
 			}
 		case 2:
 			mes "[穆夫]";
-			mes "What, are you trying to";
-			mes "make me mad on purpose?";
-			mes "I get it. You're working for";
-			mes "Belder! I'm gonna get";
-			mes "my treasure from that";
-			mes "bastard, no matter what!";
+			mes "什...什么? 你在捉弄我吗?";
+			mes "哦，好啊，你该不会是贝尔德的";
+			mes "手下吧，我一定会赎回我的";
+			mes "宝物，你可别乱来啊!";
 			next;
-			switch(select("I don't understand.:I'm sorry, I was just kidding...")) {
+			switch(select("你在说啥呢...?:拍谢，我只是开玩笑...")) {
 			case 1:
 				mes "[穆夫]";
-				mes "You think you can";
-				mes "fool me?! Get lost!";
-				mes "I'm not telling you";
-				mes "anything, you snake!";
+				mes "你这家伙! 你以为我不知道吗?";
+				mes "哼... 不需要跟你们啰嗦";
 				close;
 			case 2:
 				mes "[穆夫]";
-				mes "So you're not spying on";
-				mes "me for Belder? Well, then";
-				mes "why are you pestering me?";
+				mes "什么? 开玩笑? 那么你不是";
+				mes "贝尔德的手下吗? 嗯...";
+				mes "我现在非常烦恼中，";
+				mes "没心情跟你开玩笑";
 				close;
 			}
 		}
@@ -3276,12 +3222,9 @@ comodo,224,187,3	script	穆夫	86,{
 	}
 	if ((diamond_edq == 1) || (diamond_edq == 2)) {
 		mes "[穆夫]";
-		mes "You didn't leave to";
-		mes "look for my wallet yet?";
-		mes "I think it's somewhere";
-		mes "in the Papuchicha Forest.";
-		mes "Please find the bond of debt";
-		mes "inside as soon as you can.";
+		mes "你还没出发吗? 快点帮我找找，";
+		mes "在巴布其卡森林所遗失的";
+		mes "我皮夹内的借据...";
 		close;
 	}
 	if (diamond_edq == 4) {
@@ -3389,7 +3332,7 @@ comodo,224,187,3	script	穆夫	86,{
 		mes "pretty anxious... So did";
 		mes "杜立安's Magic Dryer work?";
 		next;
-		delitem 7722,1; //Debt_Note
+		delitem 7722,1; //借据
 		mes "[穆夫]";
 		mes "Oh! It worked much better";
 		mes "than I expected! Belder";
@@ -3550,7 +3493,7 @@ OnTouch:
 	end;
 }
 
-cmd_fild01,55,160,0	script	Heap of Earth	844,{
+cmd_fild01,55,160,0	script	可疑的土堆	844,{
 	if (diamond_edq == 1) {
 		mes "^3355FFIt looks like someone";
 		mes "dug a hole in the ground,";
@@ -3685,12 +3628,11 @@ izlude_in,110,64,3	script	杜立安	878,2,2,{
 				mes "powerful magnetic field.";
 				next;
 				mes "[杜立安]";
-				mes "The ruby engine's";
-				mes "magnetic field operates";
-				mes "according to the ^FF00003 Centrifuge";
-				mes "Wavelength Theory^000000. Now,";
-				mes "pearl inset sensors detect";
-				mes "the amount of calibration...";
+				mes "以这台魔力经典加热器来说，";
+				mes "由我天才头脑所想出来的作品，";
+				mes "利用属于动力主干的红宝石引擎";
+				mes "旋转轴的核心透过^FF00003波长离心分离^000000所产生";
+				mes "的强烈磁场...";
 				next;
 				mes "[杜立安]";
 				mes "...............................";
@@ -4121,7 +4063,7 @@ OnTouch:
 	end;
 }
 
-izlude_in,113,66,0	script	Strange Machine	111,{
+izlude_in,113,66,0	script	奇特的机器	111,{
 	if (checkweight(907,200) == 0) {
 		mes "[杜立安]";
 		mes "Ugh, just like a member";
@@ -4134,13 +4076,13 @@ izlude_in,113,66,0	script	Strange Machine	111,{
 	}
 	if (diamond_edq) == 10 {
 		set .@bolt_rand,rand(2,5);
-		mes "^3355FFThis must be 杜立安's";
-		mes "Mystic Dryer de Elegance.";
-		mes "What do you want to do?^000000";
+		mes "这个好像就是杜立安提过的魔法";
+		mes "经典加热器的样子，";
+		mes "我要怎么动手呢?";
 		next;
 		while(1) {
 			set .@switch_sound,rand(1,4);
-			switch(select("Check the Machine:Replace the Engine:Tighten the Screw:Press a Switch")) {
+			switch(select("查看机器:更换引擎:锁紧螺丝:按下开关")) {
 			case 1:
 				if (.@hit_status == 0) {
 					mes "^3355FFThere's no power";
@@ -4464,10 +4406,9 @@ izlude_in,113,66,0	script	Strange Machine	111,{
 		mes "the slot reopens.^000000";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "So this is the original";
-		mes "bond of debt that 穆夫";
-		mes "lost? It looks... Perfect!";
-		getitem 7722,1; //Debt_Note
+		mes "这就是穆夫所遗失的";
+		mes "借据的原貌吗...";
+		getitem 7722,1; //借据
 		close;
 	}
 	else if ((diamond_edq == 13) && (countitem(7722) > 0)) {
@@ -4767,7 +4708,7 @@ morocc,107,83,5	script	伊布拉印	732,3,3,{
 		next;
 		select("Explain What You Learned");
 		mes "[伊布拉印]";
-		mes "What?! The Z Gang stole";
+		mes "What?! Z集团 stole";
 		mes "my diamond? No wonder!";
 		mes "I bet they wanted to use its";
 		mes "curse for something evil.";
@@ -4777,7 +4718,7 @@ morocc,107,83,5	script	伊布拉印	732,3,3,{
 		select("Give Diamond of Destruction");
 		mes "[伊布拉印]";
 		mes "Oh! Great! So it was";
-		mes "in the Z Gang's hideout?";
+		mes "in Z集团's hideout?";
 		mes "Wow, even after hearing so";
 		mes "much about you, you still";
 		mes "exceeded my expectations!";
@@ -5411,16 +5352,16 @@ geffen,128,153,3	script	雷布罗	883,{
 		mes "[雷布罗]";
 		mes "I hear the Rogue Guild";
 		mes "is secretly investigating";
-		mes "the Z Gang, so that couple";
+		mes "Z集团, so that couple";
 		mes "must have plenty of enemies.";
-		mes "So... Yeah. The Z Gang has";
+		mes "So... Yeah. Z集团 has";
 		mes "the Diamond of Destruction.";
 		next;
 		mes "[雷布罗]";
 		mes "You should talk with one";
-		mes "of the investigators of the";
+		mes "of the 零零七s of the";
 		mes "Rogue Guild if you want to";
-		mes "learn more about the Z Gang.";
+		mes "learn more about Z集团.";
 		mes "Pretty useful info, huh?";
 		mes "Take care, my friend.";
 		set diamond_edq,22;
@@ -5429,9 +5370,9 @@ geffen,128,153,3	script	雷布罗	883,{
 	if (diamond_edq == 22) {
 		mes "[雷布罗]";
 		mes "You should talk with one";
-		mes "of the investigators of the";
+		mes "of the 零零七s of the";
 		mes "Rogue Guild if you want to";
-		mes "learn more about the Z Gang.";
+		mes "learn more about Z集团.";
 		mes "Pretty useful info, huh?";
 		mes "Take care, my friend.";
 		close;
@@ -5855,9 +5796,9 @@ OnTouch:
 	end;
 }
 
-in_rogue,366,46,3	script	Rogue Investigator	828,{
+in_rogue,366,46,3	script	流氓情报员	828,{
 	if ((diamond_edq == 22) && (BaseJob == Job_Rogue)) {
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Oh, remember me?";
 		mes "It's been a long time";
 		mes "so I can't blame you:";
@@ -5865,11 +5806,11 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		mes "first joined our guild!";
 		mes "So what brings you here?";
 		next;
-		select("Ask About the Z Gang");
-		mes "[Investigator]";
+		select("Ask About Z集团");
+		mes "[零零七]";
 		mes "Ah, Z Gang, you said?";
 		next;
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Oh, yeah, we're investigating";
 		mes "those guys. We actually found";
 		mes "their hideout, but then they";
@@ -5877,14 +5818,14 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		mes "catch them. Wily bastards...";
 		mes "I think they were tipped off!";
 		next;
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "A few of our Rogue agents";
 		mes "are investigating the hideout,";
 		mes "but I doubt they can find";
 		mes "anything useful there.";
 		next;
 		select("Where's the hideout?");
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Well, it's a large";
 		mes "warehouse over in Comodo.";
 		mes "You're free to scope out";
@@ -5894,7 +5835,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		close;
 	}
 	else if ((diamond_edq == 22) && (BaseClass == Job_Thief)) {
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Hey, how's it going?";
 		mes "You ever consider joining";
 		mes "the Rogues? It'd be a lot";
@@ -5902,8 +5843,8 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		mes "look around, so feel free";
 		mes "to ask me any questions.";
 		next;
-		select("Ask About the Z Gang");
-		mes "[Investigator]";
+		select("Ask About Z集团");
+		mes "[零零七]";
 		mes "Oh, yeah, we're investigating";
 		mes "those guys. We actually found";
 		mes "their hideout, but then they";
@@ -5911,21 +5852,21 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		mes "catch them. Wily bastards...";
 		mes "I think they were tipped off!";
 		next;
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "A few of our Rogue agents";
 		mes "are investigating the hideout,";
 		mes "but I doubt they can find";
 		mes "anything useful there.";
 		next;
 		select("Where's the hideout?");
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Well, I'm not sure if";
 		mes "I can just tell you that";
 		mes "kind of information. I mean,";
 		mes "you're not a member of our";
 		mes "guild... Yet. What can I do?";
 		next;
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "I got it. I'll just tell my";
 		mes "boss that you bribed me";
 		mes "with 10,000 zeny. Not too";
@@ -5936,15 +5877,15 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		case 1:
 			if (Zeny > 9999) {
 				set zeny,zeny-10000;
-				mes "[Investigator]";
+				mes "[零零七]";
 				mes "Thanks for the money~";
 				mes "Of course, if you became";
 				mes "a Rogue, this amount is";
 				mes "nothing compared to what";
 				mes "you can gank. ^666666*Ahem*^000000";
 				next;
-				mes "[Investigator]";
-				mes "The Z Gang's old hideout";
+				mes "[零零七]";
+				mes "Z集团's old hideout";
 				mes "is a large warehouse over";
 				mes "in Comodo. I doubt you'll";
 				mes "find anything there, but";
@@ -5953,7 +5894,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 				close;
 			}
 			else {
-				mes "[Investigator]";
+				mes "[零零七]";
 				mes "Aw, what am I gonna";
 				mes "do if my boss askes to";
 				mes "see the money? We've got";
@@ -5961,7 +5902,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 				close;
 			}
 		case 2:
-			mes "[Investigator]";
+			mes "[零零七]";
 			mes "Be my guest, maybe it'll be";
 			mes "a good learning experience.";
 			mes "But yeah, come back when";
@@ -5971,7 +5912,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		}
 	}
 	else if (diamond_edq == 22) {
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Whoa, what are you doin'";
 		mes "here? I've got no beef with";
 		mes "you, but some Rogues, see,";
@@ -5979,14 +5920,14 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		mes "lot of beef. Uh, what'd you";
 		mes "want? Not a fight, I hope.";
 		next;
-		select("Ask About the Z Gang");
-		mes "[Investigator]";
+		select("Ask About Z集团");
+		mes "[零零七]";
 		mes "Those guys have been";
 		mes "bothering everyone!";
 		mes "Yeah, I guess you can";
 		mes "say we're united on this.";
 		next;
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Oh, yeah, we're investigating";
 		mes "those guys. We actually found";
 		mes "their hideout, but then they";
@@ -5994,14 +5935,14 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		mes "catch them. Wily bastards...";
 		mes "I think they were tipped off!";
 		next;
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "A few of our Rogue agents";
 		mes "are investigating the hideout,";
 		mes "but I doubt they can find";
 		mes "anything useful there.";
 		next;
 		select("Where's the hideout?");
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Uh, I can't just give";
 		mes "you that information";
 		mes "if you're not a member";
@@ -6013,7 +5954,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 		case 1:
 			if (Zeny > 9999) {
 				set zeny,zeny-10000;
-				mes "[Investigator]";
+				mes "[零零七]";
 				mes "Right on, right on.";
 				mes "Alright, I didn't charge";
 				mes "you much since the hideout";
@@ -6024,7 +5965,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 				close;
 			}
 			else {
-				mes "[Investigator]";
+				mes "[零零七]";
 				mes "Hey, this isn't enough";
 				mes "money. I thought people";
 				mes "in your job made more";
@@ -6032,7 +5973,7 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 				close;
 			}
 		case 2:
-			mes "[Investigator]";
+			mes "[零零七]";
 			mes "Alright, but I think";
 			mes "you'll need a little";
 			mes "extra help finding that";
@@ -6042,20 +5983,24 @@ in_rogue,366,46,3	script	Rogue Investigator	828,{
 			close;
 		}
 	}
-	mes "[Investigator]";
-	mes "Geez, I'm so sleepy...";
-	mes "Everyone's out on a mission,";
-	mes "and I'm stuck here on guard";
-	mes "duty. When can I see some";
-	mes "action again? Ugh! Rogues";
-	mes "hate standing in one place!";
+	mes "[零零七]";
+	mes "打哈欠... 好困啊...";
+	mes "其他人都被叫去四处调查，";
+	mes "而我无所事事的留守在";
+	mes "公会里休息";
+	next;
+	mes "[零零七]";
+	mes "但不要把我看成是无能的";
+	mes "流氓喔，我只有在最关键";
+	mes "紧要时刻才出手...";
+	mes "就像王牌一样，呵呵呵";
 	close;
 }
 
-cmd_in02,94,208,5	script	Investigator	828,{
+cmd_in02,94,208,5	script	零零七	828,{
 	if ((diamond_edq == 22) || (diamond_edq == 23)) {
 		if (BaseJob == Job_Rogue) {
-			mes "[Investigator]";
+			mes "[零零七]";
 			mes "Hey, pal. You part";
 			mes "of the guild? Nice.";
 			mes "If they sent you to help";
@@ -6065,15 +6010,15 @@ cmd_in02,94,208,5	script	Investigator	828,{
 			close;
 		}
 		else {
-			mes "[Investigator]";
+			mes "[零零七]";
 			mes "What do you want?";
 			mes "Oh, your guild musta";
 			mes "sent you to help out.";
 			mes "Yeah. We investigated.";
 			mes "Didn't find anything.";
-			mes "The Z Gang's long gone.";
+			mes "Z集团's long gone.";
 			next;
-			mes "[Investigator]";
+			mes "[零零七]";
 			mes "Feel free to look";
 			mes "around, but if you ask";
 			mes "me, it's a waste of time.";
@@ -6081,7 +6026,7 @@ cmd_in02,94,208,5	script	Investigator	828,{
 		}
 	}
 	else {
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Yeesh, I'm stuck here";
 		mes "till I receive my new";
 		mes "orders from the guild.";
@@ -6098,7 +6043,7 @@ cmd_in02,69,188,1	script	Small Safe	844,{
 		mes "shadows of these boxes.^000000";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "Looks like the Z Gang";
+		mes "Looks like Z集团";
 		mes "forgot to take this with";
 		mes "them in their rush to escape.";
 		mes "Hmmm... How do I open this?";
@@ -6121,7 +6066,7 @@ cmd_in02,69,188,1	script	Small Safe	844,{
 		mes "of Destruction?";
 		next;
 		getitem 7723,1; //Diamond_Of_Ruin
-		mes "[Investigator]";
+		mes "[零零七]";
 		mes "Zzz... Zzz...";
 		next;
 		mes "[" + strcharinfo(0) + "]";
@@ -6208,7 +6153,22 @@ OnInit:
 // Z 集团 任务
 //============================================================ 
 prontera,150,326,0	script	悬赏通缉公告#edq	111,{
-	if (zdan_edq == 0) {
+	switch (zdan_edq) {
+	case 19:
+		mes "[保安队长]";
+		mes "Ever since you captured";
+		mes "Z集团, crime has gone";
+		mes "down to an all time low.";
+		mes "Thanks for helping us out~";
+		next;
+		mes "[保安队长]";
+		mes "Peace never lasts long...";
+		mes "Some other fiends will";
+		mes "replace Z集团 soon.";
+		mes "When that happens, I hope";
+		mes "we can count on you again.";
+		close;
+	default:
 		mes "=========公布通缉令=========";
 		mes "普隆德拉王国保安队要公开";
 		mes "通缉以下嫌犯";
@@ -6220,69 +6180,26 @@ prontera,150,326,0	script	悬赏通缉公告#edq	111,{
 		mes "被称为Z集团的3人组集团，";
 		mes "有窃取国家物品、诈欺、败坏风气、伪造文书等罪嫌";
 		next;
-		mes "=========公布通缉令=========";
 		mes "逮捕上述通缉人物或";
 		mes "找回被窃走的王国禁书'禁止的神秘术书'的人";
 		mes "将会重重有赏";
 		mes "　";
 		mes "　　-普隆德拉王国保安队长-";
-		set zdan_edq,1;
-		close;
+		if (zdan_edq) { close; }
+		else { set zdan_edq,1; close; }
 	}
-	else if (zdan_edq > 18) {
-		mes "[保安队长]";
-		mes "Ever since you captured";
-		mes "the Z Gang, crime has gone";
-		mes "down to an all time low.";
-		mes "Thanks for helping us out~";
-		next;
-		mes "[保安队长]";
-		mes "Peace never lasts long...";
-		mes "Some other fiends will";
-		mes "replace the Z Gang soon.";
-		mes "When that happens, I hope";
-		mes "we can count on you again.";
-		close;
-	}
-	else {
-		mes "=========公布通缉令=========";
-		mes "Please report any information";
-		mes "regarding these criminals to";
-		mes "the Rune-Midgarts Kingdom's";
-		mes "Homeland Security Office.";
-		next;
-		mes "=========公布通缉令=========";
-		mes "^0000ff路易 庞 希勒肯斯^000000的男性、";
-		mes "^0000ff玛莎 海伦缇贞^000000的女性、";
-		mes "^0000ff凯蒂^000000的小猫";
-		next;
-		mes "=========公布通缉令=========";
-		mes "These infamous members";
-		mes "of the Z Gang are suspected";
-		mes "of stealing national treasure,";
-		mes "committing fraud, forgery,";
-		mes "and promoting overall";
-		mes "depravity and immorality.";
-		next;
-		mes "=========公布通缉令=========";
-		mes "Anyone that captures";
-		mes "the listed criminals will";
-		mes "be rewarded with the Book";
-		mes "of Forbidden Mystery, one";
-		mes "of the kingdom's treasures.";
-		close;
-	}
-
-//OnInit:
-//	enablenpc "Wanted Notice#edq";
-//	end;
+/*
+OnInit:
+	enablenpc "悬赏通缉公告#edq";
+	end;
+*/
 
 OnEnable:
-	enablenpc "Wanted Notice#edq";
+	enablenpc "悬赏通缉公告#edq";
 	end;
 
 OnDisable:
-	disablenpc "Wanted Notice#edq";
+	disablenpc "悬赏通缉公告#edq";
 	end;
 }
 
@@ -6311,12 +6228,12 @@ prontera,148,326,3	script	保安队长#edq	734,{
 		mes "The Homeland Security Office";
 		mes "of the Rune-Midgarts Kingdom";
 		mes "is looking for any information";
-		mes "regarding the Z Gang.";
+		mes "regarding Z集团.";
 		next;
 		mes "[保安队长]";
-		mes "There are three members:";
-		mes "路易 庞 希勒肯斯 a.k.a.";
-		mes "陆易, 玛莎 海伦缇贞 a.k.a.";
+		mes "该组织的成员如下:";
+		mes "路易 庞 希勒肯斯";
+		mes "陆易, 玛莎 海伦缇贞";
 		mes "玛莎, and 凯蒂 a.k.a.";
 		mes "凯蒂 must be captured!";
 		set zdan_edq,2;
@@ -6324,13 +6241,18 @@ prontera,148,326,3	script	保安队长#edq	734,{
 	}
 	if ((zdan_edq == 1) && (BaseLevel < 70)) {
 		mes "[保安队长]";
-		mes "Oh, were you interested";
-		mes "in pursuing the criminals";
-		mes "listed in the Wanted notice?";
-		mes "I'm sorry, but you're not";
-		mes "ready for that kind of task...";
-		mes "But I encourge you to train!";
-		mes "Thank you.";
+		mes "嗯... 你也是看到通缉令后";
+		mes "过来的吗? 呵呵... 你真是";
+		mes "优秀的青年啊";
+		next;
+		mes "[保安队长]";
+		mes "不过以你的实力，还不足以";
+		mes "对付那些凶神恶煞的";
+		mes "恶徒们...";
+		next;
+		mes "[保安队长]";
+		mes "请你再去磨练提升实力后，一同";
+		mes "协助铲除威胁王国的恶势力吧";
 		close;
 	}
 	if (zdan_edq == 2) {
@@ -6390,32 +6312,29 @@ prontera,148,326,3	script	保安队长#edq	734,{
 				break;
 			case 2:
 				mes "[保安队长]";
-				mes "玛莎 海伦缇贞 is the";
-				mes "second daughter of Alberta's";
-				mes "Hertizan family. No one knows";
-				mes "why she ran away from home";
-				mes "at the age of twenty.";
+				mes "玛莎 海伦缇贞是艾尔贝塔的海伦缇贞";
+				mes "商团的次女，听说约20岁时离家";
+				mes "出走后，就与家里断绝了";
+				mes "关系... 真是让人为难啊...";
 				next;
 				mes "[保安队长]";
-				mes "玛莎 handles the Z Gang's";
-				mes "finances. It's a shame that";
-				mes "such a talented merchant";
-				mes "has stooped to thievery. ";
+				mes "他不愧是海伦缇贞商团的出身，";
+				mes "因善于经济手腕，所以负责组织的";
+				mes "资金体系... 真是...";
+				mes "这对家族有负面影响";
 				break;
 			case 3:
 				mes "[保安队长]";
-				mes "We initially believed";
-				mes "that 凯蒂 was just";
-				mes "陆易 and 玛莎's pet";
-				mes "cat... But it's actually a";
-				mes "master criminal. Approach";
-				mes "it with extreme caution!";
+				mes "凯蒂的特别之处是它非人类";
+				mes "而是一只小猫，刚开始";
+				mes "调查时以为只是路易和玛莎的";
+				mes "宠物，但根据多项资料显示，";
+				mes "它有单独犯罪的嫌疑";
 				next;
 				mes "[保安队长]";
-				mes "That's all I know about";
-				mes "that animal. The true";
-				mes "nature of 凯蒂 is";
-				mes "shrouded in mystery.";
+				mes "对于这只动物，由于尚未掌握到";
+				mes "任何情报，因此无法提供你更多";
+				mes "情报而感到不好意思";
 				break;
 			case 4:
 				mes "[保安队长]";
@@ -6431,12 +6350,11 @@ prontera,148,326,3	script	保安队长#edq	734,{
 			}
 			next;
 			mes "[保安队长]";
-			mes "而王国也尚未掌握更多情报";
+			mes "由于王国也尚未掌握更多情报";
 			mes "而焦虑当中，所以我们需要";
 			mes "像你这样年轻有为的力量，";
 			mes "我很期待你的表现";
 			close;
-
 		case 3:
 			mes "[保安队长]";
 			mes "呼.. 最近他们成为王国上下";
@@ -6477,7 +6395,7 @@ prontera,148,326,3	script	保安队长#edq	734,{
 		next;
 		mes "[保安队长]";
 		mes "What's that?! You really";
-		mes "found the Z Gang's hideout,";
+		mes "found Z集团's hideout,";
 		mes "captured them, and retrieved";
 		mes "the forbidden book?";
 		next;
@@ -6500,12 +6418,13 @@ prontera,148,326,3	script	保安队长#edq	734,{
 		getexp 1000000,0;
 		close;
 	}
-	mes "[保安队长]";
-	mes "All those that oppose";
-	mes "the peace and safety of";
-	mes "our kingdom will not be";
-	mes "spared the fury of our";
-	mes "righteous swords!";
+	mes "[王国的保安队长]";
+	mes "扰乱王国安定和治安的";
+	mes "恶徒们...";
+	mes "都会被我和勇猛的骑士团所一扫而空";
+	next;
+	mes "[维持王国治安的士兵]";
+	mes "喔耶!!!!!!!";
 	close;
 }
 
@@ -6613,7 +6532,7 @@ prt_in,168,18,1	script	发兑司	65,2,2,{
 			mes "[发兑司]";
 			mes "I assume you already know";
 			mes "the basic information about";
-			mes "the Z Gang, their members,";
+			mes "Z集团, their members,";
 			mes "et cetera. I'm not sure why";
 			mes "they've gone on such a brazen";
 			mes "crime spree so suddenly.";
@@ -6627,11 +6546,11 @@ prt_in,168,18,1	script	发兑司	65,2,2,{
 			mes "dismissed for my failure.";
 			next;
 			mes "[发兑司]";
-			mes "I am aware that the Z Gang";
+			mes "I am aware that Z集团";
 			mes "has many informers in their";
 			mes "employ, and that the Rogue";
 			mes "Guild are still investigating";
-			mes "the Z Gang on their own.";
+			mes "Z集团 on their own.";
 			next;
 			mes "[发兑司]";
 			mes "I suggest meeting one";
@@ -6707,7 +6626,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 			mes "and talk right in my ear.";
 			next;
 			input .@input$;
-			if (.@input$ == "The dawn is yet to come.") {
+			if (.@input$ == "黎明尚未到来") {
 				mes "[梅莉贝尔]";
 				mes "发兑司 sent you?!";
 				mes "I'm surprised he finally";
@@ -6719,7 +6638,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 				switch(select("Ask About Z Gang:发兑司 says, ''Hi.''")) {
 				case 1:
 					mes "[梅莉贝尔]";
-					mes "The Z Gang again?";
+					mes "Z集团 again?";
 					mes "I guess he's still mad";
 					mes "about capturing them.";
 					mes "It's not a big deal for me";
@@ -6739,7 +6658,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 					mes "you if you can beat him at";
 					mes "gambling. Whether you return";
 					mes "or not, I'm gonna continue";
-					mes "investigating the Z Gang for";
+					mes "investigating Z集团 for";
 					mes "the Rogue Guild and 发兑司.";
 					set zdan_edq,5;
 					break;
@@ -6857,7 +6776,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 				break;
 			case 2:
 				mes "[梅莉贝尔]";
-				mes "Well, the Z Gang is";
+				mes "Well, Z集团 is";
 				mes "responsible for a series";
 				mes "of thefts lately. They've";
 				mes "only been stealing jewels";
@@ -6870,7 +6789,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 				mes "[梅莉贝尔]";
 				mes "Well, we don't know where";
 				mes "they're hiding out. If that";
-				mes "was the case, the Z Gang";
+				mes "was the case, Z集团";
 				mes "would already be caught!";
 				mes "They even got away from";
 				mes "us Rogues. Crazy, huh?";
@@ -6878,7 +6797,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 				mes "[梅莉贝尔]";
 				mes "The Rogue Guild has got";
 				mes "the best intel network so...";
-				mes "The Z Gang probably has";
+				mes "Z集团 probably has";
 				mes "informers everywhere in";
 				mes "all the towns. It's the only";
 				mes "way they can escape us.";
@@ -6888,7 +6807,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 				mes "If we can catch one of";
 				mes "their informers, one of";
 				mes "them'll spill the beans";
-				mes "on where the Z Gang is";
+				mes "on where Z集团 is";
 				mes "hiding. Worth a shot, yeah?";
 				next;
 				set .@c,.@c+1;
@@ -6998,7 +6917,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 		mes "to Goohoo Ahn in Payon,";
 		mes "and ask if he finished";
 		mes "decoding that secret letter";
-		mes "from the Z Gang already?";
+		mes "from Z集团 already?";
 		close;
 	}
 	if (zdan_edq == 14) {
@@ -7006,7 +6925,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 		mes "Oh, Goohoo decoded everything?";
 		mes "Let's see... Something about";
 		mes "the 禁止的神秘术书...^FFFFFF ^000000 Ah. There we go! The location";
-		mes "of the Z Gang's hideout!";
+		mes "of Z集团's hideout!";
 		mes "Heh heh! We got 'em!";
 		next;
 		mes "[梅莉贝尔]";
@@ -7038,7 +6957,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 	if ((zdan_edq > 14) && (zdan_edq < 18)) {
 		mes "[梅莉贝尔]";
 		mes "We're definitely sure";
-		mes "that the Z Gang's hideout";
+		mes "that Z集团's hideout";
 		mes "is near the secret path";
 		mes "to the South Morroc";
 		mes "underground. You";
@@ -7054,7 +6973,7 @@ in_rogue,359,116,3	script	梅莉贝尔	747,{
 	if (zdan_edq > 18) {
 		mes "[梅莉贝尔]";
 		mes "Nice work! You captured";
-		mes "the Z Gang! The kingdom";
+		mes "Z集团! The kingdom";
 		mes "musta given you a really";
 		mes "big reward, huh?";
 		next;
@@ -7801,7 +7720,7 @@ payon,192,176,3	script	Gooho Ahn	903,{
 			mes "Please hurry!";
 			mes "I'm sure 梅莉贝尔 is";
 			mes "waiting to learn the";
-			mes "whereabouts of the Z Gang,";
+			mes "whereabouts of Z集团,";
 			mes "and this letter might have";
 			mes "a clue. Oh, and remember...";
 			next;
@@ -7882,7 +7801,7 @@ moc_ruins,90,67,3	script	Suspicious Man#1	99,2,2,{
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "That must have been";
-		mes "an informer for the Z Gang.";
+		mes "an informer for Z集团.";
 		mes "He can't have gotten too far:";
 		mes "I have a chance to catch him!";
 		set zdan_edq,10;
@@ -7920,7 +7839,7 @@ moc_ruins,90,67,3	script	Suspicious Man#1	99,2,2,{
 		mes "[" + strcharinfo(0) + "]";
 		mes "Haha! Got you!";
 		mes "You're an informer for";
-		mes "the Z Gang, aren't you?";
+		mes "Z集团, aren't you?";
 		next;
 		mes "[????]";
 		mes "I... I... d-don't";
@@ -7958,7 +7877,7 @@ moc_ruins,90,67,3	script	Suspicious Man#1	99,2,2,{
 		mes "Alright.";
 		mes "Let's start by you";
 		mes "telling me where";
-		mes "I can find the Z Gang.";
+		mes "I can find Z集团.";
 		next;
 		mes "[Z Gang Informer]";
 		mes "I... I really don't";
@@ -8077,7 +7996,7 @@ OnTouch:
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "That must have been";
-		mes "an informer for the Z Gang.";
+		mes "an informer for Z集团.";
 		mes "He can't have gotten too far:";
 		mes "I have a chance to catch him!";
 		set zdan_edq,10;
@@ -8125,7 +8044,7 @@ moc_ruins,78,167,3	script	Suspicious Man#2	99,2,2,{
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "That must have been";
-		mes "an informer for the Z Gang.";
+		mes "an informer for Z集团.";
 		mes "He can't have gotten too far:";
 		mes "I have a chance to catch him!";
 		set zdan_edq,10;
@@ -8140,7 +8059,7 @@ moc_ruins,78,167,3	script	Suspicious Man#2	99,2,2,{
 		mes "[" + strcharinfo(0) + "]";
 		mes "Haha! Got you!";
 		mes "You're an informer for";
-		mes "the Z Gang, aren't you?";
+		mes "Z集团, aren't you?";
 		next;
 		mes "[????]";
 		mes "I... I... d-don't";
@@ -8178,7 +8097,7 @@ moc_ruins,78,167,3	script	Suspicious Man#2	99,2,2,{
 		mes "Alright.";
 		mes "Let's start by you";
 		mes "telling me where";
-		mes "I can find the Z Gang.";
+		mes "I can find Z集团.";
 		next;
 		mes "[Z Gang Informer]";
 		mes "I... I really don't";
@@ -8322,7 +8241,7 @@ OnTouch:
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "That must have been";
-		mes "an informer for the Z Gang.";
+		mes "an informer for Z集团.";
 		mes "He can't have gotten too far:";
 		mes "I have a chance to catch him!";
 		set zdan_edq,10;
@@ -8331,9 +8250,9 @@ OnTouch:
 	end;
 }
 
-moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
+moc_fild17,209,235,0	script	奇特的石碑#ganz	111,4,4,{
 	if (((zdan_edq == 15) || (zdan_edq == 16) || (zdan_edq == 17)) && ($@door2 == 0)) {
-		mes "[Odd Slab]";
+		mes "[奇特的石碑]";
 		mes "^FF0000*Creak Creak*";
 		mes "Etner sspawrod.^000000";
 		next;
@@ -8344,7 +8263,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 		mes "where have I heard";
 		mes "talking like this before?";
 		next;
-		mes "[Odd Slab]";
+		mes "[奇特的石碑]";
 		mes "^FF0000*Creak Creak*";
 		mes "Etner sspawrod.^000000";
 		next;
@@ -8357,7 +8276,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 		mes "like... A poor excuse";
 		mes "for language to me.";
 		next;
-		mes "[Odd Slab]";
+		mes "[奇特的石碑]";
 		mes "^FF0000*Creak Creak*";
 		mes "Etner sspawrod.^000000";
 		next;
@@ -8366,8 +8285,8 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 		mes "I should talk to it. Um...";
 		next;
 		input .@input$;
-		if (.@input$ == "Weii arr prowd Z G gna") {
-			mes "[Odd Slab]";
+		if (.@input$ == "沃们始焦傲的里子团") {
+			mes "[奇特的石碑]";
 			mes "^FF0000*Creak Creak*";
 			mes "Etner n2d sspawrod.^000000";
 			next;
@@ -8378,8 +8297,8 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 			mes "Now what do I say?";
 			next;
 			input .@input$;
-			if (.@input$ == "Aynoen hwo sspotp uys") {
-				mes "[Odd Slab]";
+			if (.@input$ == "主荡沃们陆的家或们") {
+				mes "[奇特的石碑]";
 				mes "^FF0000*Creak Creak*";
 				mes "Etner r3d sspawrod.^000000";
 				next;
@@ -8388,8 +8307,8 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 				mes "track. Now what do I say?";
 				next;
 				input .@input$;
-				if (.@input$ == "wlil eb kckide on htier ssa!") {
-					mes "[Odd Slab]";
+				if (.@input$ == "偶补愧劳里们得枷互") {
+					mes "[奇特的石碑]";
 					mes "*Creak Creak*";
 					mes "*Creak Creak*";
 					next;
@@ -8415,7 +8334,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 						mes "wrong? It just stopped";
 						mes "working all of a sudden.";
 						next;
-						mes "[Odd Slab]";
+						mes "[奇特的石碑]";
 						mes "^FF0000Rrsoy, rrsoy.";
 						mes "Ai cn'at elt yoo ni ofr nwo. Plzea ecmo ckba tela.^000000";
 						next;
@@ -8429,7 +8348,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 					}
 				}
 				else {
-					mes "[Odd Slab]";
+					mes "[奇特的石碑]";
 					mes "^666666*Pzzzzz*^000000";
 					next;
 					mes "[" + strcharinfo(0) + "]";
@@ -8442,7 +8361,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 				}
 			}
 			else {
-				mes "[Odd Slab]";
+				mes "[奇特的石碑]";
 				mes "^666666*Pzzzzz*^000000";
 				next;
 				mes "[" + strcharinfo(0) + "]";
@@ -8455,7 +8374,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 			}
 		}
 		else {
-			mes "[Odd Slab]";
+			mes "[奇特的石碑]";
 			mes "^666666*Pzzzzz*^000000";
 			next;
 			mes "[" + strcharinfo(0) + "]";
@@ -8468,14 +8387,14 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 		}
 	}
 	if (((zdan_edq == 15) || (zdan_edq == 16) || (zdan_edq == 17)) && ($@door2 > 0)) {
-		mes "[Odd Slab]";
+		mes "[奇特的石碑]";
 		mes "*Creak Creak*";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "This slab looks pretty";
 		mes "strange. Is it making";
 		mes "noises? Hmm... Maybe this";
-		mes "is a clue to the Z Gang!";
+		mes "is a clue to Z集团!";
 		mes "I'll come back later";
 		mes "to investigate this~";
 		close;
@@ -8483,7 +8402,7 @@ moc_fild17,209,235,0	script	Odd Slab	111,4,4,{
 	if (zdan_edq > 17) {
 		mes "[" + strcharinfo(0) + "]";
 		mes "This used to be";
-		mes "where the Z Gang";
+		mes "where Z集团";
 		mes "would hide out.";
 		mes "Good riddance! ";
 		close;
@@ -8521,10 +8440,10 @@ OnTouch:
 z_agit,98,44,0	script	EntranceCheck#1	-1,10,10,{
 OnTouch:
 	if (((zdan_edq == 15) || (zdan_edq == 16)) && ($@monster_zgang == 0)) {
-		set $@monster,1;
+		set $@monster_zgang,1;
 		donpcevent "#zdan_broad::OnEnable";
 	}
-	else if (((zdan_edq == 15) || (zdan_edq == 16)) && ($@monster > 0)) {
+	else if (((zdan_edq == 15) || (zdan_edq == 16)) && ($@monster_zgang > 0)) {
 		end;
 	}
 	else if (zdan_edq == 17) {
@@ -8540,7 +8459,7 @@ OnTouch:
 		mes "terribly wrong, hasn't";
 		mes "it? Let me go baaaack~!";
 		close2;
-		set $@monster,0;
+		set $@monster_zgang,0;
 		set $@door2,0;
 		warp "moc_fild17",209,235;
 	}
@@ -8549,8 +8468,8 @@ OnTouch:
 
 z_agit,98,92,0	script	EntranceCheck#2	-1,10,10,{
 OnTouch:
-	if (((zdan_edq == 15) || (zdan_edq == 16)) && ($@monster == 0)) {
-		set $@monster,1;
+	if (((zdan_edq == 15) || (zdan_edq == 16)) && ($@monster_zgang == 0)) {
+		set $@monster_zgang,1;
 		donpcevent "#zdan_broad::OnEnable";
 	}
 	else if (((zdan_edq == 15) || (zdan_edq == 16)) && ($@monster_zgang > 0)) {
@@ -8617,7 +8536,7 @@ OnTimer11000:
 	end;
 
 OnTimer13000:
-	mapannounce "z_agit","玛莎: Shut up, both of you! I don't know who you are, but you must have a lot of guts to mess with the Z Gang!",bc_map,"0xFFFF00";
+	mapannounce "z_agit","玛莎: Shut up, both of you! I don't know who you are, but you must have a lot of guts to mess with Z集团!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer15000:
@@ -8691,7 +8610,7 @@ OnMyMobDead:
 		mes "know what to do, meow!";
 		next;
 		mes "[陆易]";
-		mes "The Z Gang's not going";
+		mes "Z集团's not going";
 		mes "to surrender yet! Come";
 		mes "forth, my loyal servants";
 		mes "of the darkness!";
@@ -8759,7 +8678,7 @@ z_agit,97,101,3	script	陆易	931,{
 		next;
 		mes "[陆易]";
 		mes "I... I can't accept";
-		mes "our defeat! The Z Gang";
+		mes "our defeat! Z集团";
 		mes "won't go down so easily!";
 		mes "Come forth, my demon";
 		mes "spawn minions of doom!";
@@ -8786,7 +8705,7 @@ z_agit,97,101,3	script	陆易	931,{
 		mes "[玛莎]";
 		mes "Let's just surrender,";
 		mes "陆易. It looks like";
-		mes "the Z Gang is finished.";
+		mes "Z集团 is finished.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Anyway, the Rogue Guild";
@@ -8881,7 +8800,7 @@ z_agit,99,101,3	script	玛莎	101,{
 		next;
 		mes "[陆易]";
 		mes "I... I can't accept";
-		mes "our defeat! The Z Gang";
+		mes "our defeat! Z集团";
 		mes "won't go down so easily!";
 		mes "Come forth, my demon";
 		mes "spawn minions of doom!";
@@ -8908,7 +8827,7 @@ z_agit,99,101,3	script	玛莎	101,{
 		mes "[玛莎]";
 		mes "Let's just surrender,";
 		mes "陆易. It looks like";
-		mes "the Z Gang is finished.";
+		mes "Z集团 is finished.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Anyway, the Rogue Guild";
@@ -9000,7 +8919,7 @@ z_agit,95,101,3	script	凯蒂	876,{
 		next;
 		mes "[陆易]";
 		mes "I... I can't accept";
-		mes "our defeat! The Z Gang";
+		mes "our defeat! Z集团";
 		mes "won't go down so easily!";
 		mes "Come forth, my demon";
 		mes "spawn minions of doom!";
@@ -9027,7 +8946,7 @@ z_agit,95,101,3	script	凯蒂	876,{
 		mes "[玛莎]";
 		mes "Let's just surrender,";
 		mes "陆易. It looks like";
-		mes "the Z Gang is finished.";
+		mes "Z集团 is finished.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "Anyway, the Rogue Guild";
@@ -9747,7 +9666,7 @@ comodo,339,224,3	script	躲藏的男子#nd	881,{
 			select("Why are you hiding here?");
 			mes "[" + strcharinfo(0) + "]";
 			mes "Why are you hiding here?";
-			mes "Didn't the Z Gang hire you";
+			mes "Didn't Z集团 hire you";
 			mes "to dig up some treasure?";
 			next;
 			mes "[躲藏的男子]";
@@ -9756,10 +9675,10 @@ comodo,339,224,3	script	躲藏的男子#nd	881,{
 			mes "[躲藏的男子]";
 			mes "Huh? Wait, tell me the";
 			mes "truth. Did you actually";
-			mes "meet the Z Gang?";
+			mes "meet Z集团?";
 			next;
 			mes "[" + strcharinfo(0) + "]";
-			mes "I not only met the Z Gang,";
+			mes "I not only met Z集团,";
 			mes "I also captured them. I've";
 			mes "come looking for you to";
 			mes "find out more about this";
@@ -9990,7 +9909,7 @@ moc_fild18,108,116,0	script	#treasure	844,{
 		set .@partymembercount,$@partymembercount;
 		if (.@partymembercount > 1) {
 			if (((.@input$ == "OpenSesame") && (treasure_nd == 9)) || ((.@input$ == "UnlockTreasure") && (treasure_nd == 10))) {
-				mes "^3355FFThe Z Gang must have split";
+				mes "^3355FFZ集团 must have split";
 				mes "the spell document in two";
 				mes "parts because one person";
 				mes "isn't enough to open this";
@@ -11560,18 +11479,16 @@ prontera,163,204,3	script	来自梦罗克的人	99,{
 	}
 	else if (rumour_nd == 1) {
 		mes "[梦罗克游客]";
-		mes "Shouldn't you be";
-		mes "looking for a Rogue";
-		mes "agent to talk to?";
-		mes "I mean, maybe you";
-		mes "can pitch in and";
-		mes "help them out.";
+		mes "你喜欢找别人的";
+		mes "麻烦是不是...";
+		mes "干嘛老打扰别人";
+		mes "休息啊!";
 		close;
 	}
 	else if (rumour_nd > 1) {
 		if (zdan_edq > 12) {
 			mes "[梦罗克游客]";
-			mes "So the Z Gang was what";
+			mes "So Z集团 was what";
 			mes "those crazy rumors were";
 			mes "all about. Good to hear";
 			mes "that they're all in jail.";
@@ -11589,7 +11506,7 @@ prontera,163,204,3	script	来自梦罗克的人	99,{
 
 in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 	if (checkweight(907,200) == 0) {
-		mes "[Guildsman]";
+		mes "[公会成员]";
 		mes "You're carrying too";
 		mes "much stuff on you.";
 		mes "Take a load off, put";
@@ -11601,7 +11518,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 	if (rumour_nd == 0) {
 		if (zdan_edq == 0) {
 			if (BaseJob == Job_Rogue) {
-				mes "[Guildsman]";
+				mes "[公会成员]";
 				mes "Man, it feels much safer";
 				mes "hanging out in an alley";
 				mes "than some crowded joint.";
@@ -11611,7 +11528,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 				close;
 			}
 			else {
-				mes "[Guildsman]";
+				mes "[公会成员]";
 				mes "Hey, I don't think";
 				mes "you're supposed to be";
 				mes "here. You better get";
@@ -11622,7 +11539,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 			}
 		}
 		else if ((zdan_edq > 0) && (zdan_edq < 13)) {
-			mes "[Guildsman]";
+			mes "[公会成员]";
 			mes "Hey, I don't think";
 			mes "I can help you out.";
 			mes "You're pretty much";
@@ -11630,7 +11547,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 			close;
 		}
 		else {
-			mes "[Guildsman]";
+			mes "[公会成员]";
 			mes "Huh. I hate clean-up";
 			mes "duty. It's always better";
 			mes "to make messes than to";
@@ -11639,80 +11556,89 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 		}
 	}
 	else if (rumour_nd == 1) {
-		mes "[Guildsman]";
-		mes "Yeah, we're investigating";
-		mes "the strange crimes that are";
-		mes "going on around the kingdom.";
-		mes "How'd you know about that?";
+		mes "[公会成员]";
+		mes "你说传闻吗..";
+		mes "没错，各地所发生的";
+		mes "古怪事件，都是";
+		mes "由我们来调查...";
 		next;
-		switch(select("I was just...:Can I help?")) {
+		mes "[公会成员]";
+		mes "你是怎么知道的呢?";
+		next;
+		switch(select("没啦，只是...:我想帮忙")) {
 		case 1:
-			mes "[Guildsman]";
-			mes "Just what...?";
-			mes "Speak up, pal.";
+			mes "[公会成员]";
+			mes "嗯，那就继续怎你的路吧";
+			next;
+			mes "[公会成员]";
+			mes "真是个奇怪的人啊，啧!";
 			close;
 		case 2:
 			if (zdan_edq > 10) {
-				mes "[Guildsman]";
-				mes "So you wanted to help";
-				mes "us out? Heck, we could";
-				mes "use the help, I guess.";
-				mes "I need you to go on a bit";
-				mes "of a trip for me, so get";
-				mes "some provisions ready, yeah?";
+				mes "[公会成员]";
+				mes "嗯，刚好我缺人手，";
+				mes "正想雇人呢，";
+				mes "你来正好让我松口气";
+				next;
+				mes "[公会成员]";
+				mes "在开始接受任务之前，";
+				mes "先做好旅行的准备吧，";
+				mes "等你准备好后，";
+				mes "再来吧";
 				set rumour_nd,2;
+				close;
 			}
-			close;
 		}
 	}
 	else if (rumour_nd == 2) {
-		mes "[Guildsman]";
-		mes "You all ready and";
-		mes "everything? Good.";
-		mes "Now, I need you to";
-		mes "deliver some intel to";
-		mes "the other Rogues for me.";
-		mes "Think you can do that?";
+		mes "[公会成员]";
+		mes "你都做好旅行的准备了吗?";
+		mes "旅途很遥远喔";
 		next;
-		mes "[Guildsman]";
-		mes "First, I want you to";
-		mes "go to Al De Baran.";
-		mes "Find our guy, and help";
-		mes "him out any way you can.";
-		mes "Us Rogues are hard to";
-		mes "find, but you'll figure it out.";
+		mes "[公会成员]";
+		mes "由于时间紧迫我要长话短说，";
+		mes "我来开始说明工作内容吧";
 		next;
-		mes "[Guildsman]";
-		mes "I know that's probably";
-		mes "not enough instruction,";
-		mes "but that's just the first";
-		mes "step, anyway. Good luck.";
+		mes "[公会成员]";
+		mes "为了搜集各地方的情报，";
+		mes "我们派出了流氓公会成员，";
+		mes "你去见他们候帮忙传达情报，";
+		mes "或他们有需要帮忙时提供协助";
+		mes "就可以了，你首先要去的地方是";
+		mes "艾尔帕兰";
+		next;
+		mes "[公会成员]";
+		mes "派到那里的流氓同事，";
+		mes "已经掌握好情势了，";
+		mes "不会托你太难的事情，";
+		mes "反而是跑遍全国才比较";
+		mes "辛苦，所以找流氓公会";
+		mes "成员可能更累";
+		next;
+		mes "[公会成员]";
+		mes "顺便跟你说一下...";
+		mes "派到村落的所有公会成员，";
+		mes "应该都藏匿在村落南边的";
+		mes "隐密地方";
+		next;
+		mes "[公会成员]";
+		mes "那么，辛苦你了...";
 		set rumour_nd,3;
 		close;
 	}
 	else if (rumour_nd == 3) {
-		mes "[Guildsman]";
-		mes "Hey, you gotta get";
-		mes "goin' to Al De Baran,";
-		mes "and find one of us Rogues";
-		mes "working on the investigation.";
-		mes "I thought you wanted to help?";
-		next;
-		mes "[Guildsman]";
-		mes "Here's a bit of a tip~";
-		mes "Us Rogue agents usually";
-		mes "try to hide out in the";
-		mes "south side of towns.";
-		mes "Bit of a tradition.";
+		mes "[公会成员]";
+		mes "你还没有出发吗?";
+		mes "请你去艾尔帕兰";
 		close;
 	}
 	else if (rumour_nd == 24) {
-		mes "[Guildsman]";
+		mes "[公会成员]";
 		mes "What's this, a report";
 		mes "from Al De Baran? 'Kay,";
 		mes "let me give it a read...";
 		next;
-		mes "[Guildsman]";
+		mes "[公会成员]";
 		mes "Huh, okay. Looks like";
 		mes "your next stop is gonna";
 		mes "be in Geffen. Look for our";
@@ -11726,7 +11652,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 		close;
 	}
 	else if (rumour_nd == 25) {
-		mes "[Guildsman]";
+		mes "[公会成员]";
 		mes "Hey, why haven't you";
 		mes "left for Geffen? Our";
 		mes "agent oughta be in the";
@@ -11737,15 +11663,15 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 	}
 	else if (rumour_nd == 21) {
 		if (zdan_edq > 12) {
-			mes "[Guildsman]";
-			mes "Finally, the Z Gang";
+			mes "[公会成员]";
+			mes "Finally, Z集团";
 			mes "case is closed. Those";
 			mes "guys really gave us some";
 			mes "trouble. Why the hell did";
 			mes "they stir up so much ruckus";
 			mes "in the kingdom, anyhow?";
 			next;
-			mes "[Guildsman]";
+			mes "[公会成员]";
 			mes "Listen, I wanna thank";
 			mes "you for pitching in and";
 			mes "helping out. It's a small";
@@ -11757,7 +11683,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 			close;
 		}
 		else {
-			mes "[Guildsman]";
+			mes "[公会成员]";
 			mes "Listen, I wanna thank";
 			mes "you for pitching in and";
 			mes "helping out. It's a small";
@@ -11770,7 +11696,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 		}
 	}
 	else if (rumour_nd == 22) {
-		mes "[Guildsman]";
+		mes "[公会成员]";
 		mes "Hey, you were really";
 		mes "a big help earlier.";
 		mes "Can we count on you";
@@ -11780,7 +11706,7 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 		close;
 	}
 	else {
-		mes "[Guildsman]";
+		mes "[公会成员]";
 		mes "I don't know who you're";
 		mes "lookin' for, but you";
 		mes "got the wrong guy.";
@@ -11793,11 +11719,8 @@ in_rogue,355,28,5	script	负责情报的流氓公会会员	118,{
 aldebaran,114,56,5	script	流氓公会情报员#nd0	828,{
 	if (rumour_nd < 3) {
 		mes "[零零七]";
-		mes "Listen, I'm working on";
-		mes "an important assignment";
-		mes "for the Rogue Guild.";
-		mes "Would let lemme alone";
-		mes "so I can do what I gotta?";
+		mes "听好了，身为情报员的我正在搜集情报，";
+		mes "所以请别打扰乱我的思绪了!";
 		close;
 	}
 	else if (rumour_nd == 3) {
@@ -11807,7 +11730,7 @@ aldebaran,114,56,5	script	流氓公会情报员#nd0	828,{
 			mes "Eh, thanks for comin' so";
 			mes "far. I've been collecting";
 			mes "intel here in Al De Baran.";
-			mes "I'm pretty sure the Z Gang's";
+			mes "I'm pretty sure Z集团's";
 			mes "spreading rumors around here.";
 			next;
 			mes "[零零七]";
@@ -11815,7 +11738,7 @@ aldebaran,114,56,5	script	流氓公会情报员#nd0	828,{
 			mes "people there's gonna be";
 			mes "a war comin', but... It";
 			mes "seems like a load of huey.";
-			mes "The Z Gang's captured so";
+			mes "Z集团's captured so";
 			mes "the rumor'll just die out...";
 			next;
 			mes "[零零七]";
@@ -11901,14 +11824,14 @@ aldebaran,114,56,5	script	流氓公会情报员#nd0	828,{
 			mes "helping out. I sure";
 			mes "hope the kingdom can";
 			mes "enjoy a little peace";
-			mes "with the Z Gang out";
+			mes "with Z集团 out";
 			mes "of the picture.";
 			close;
 		}
 		else {
 			mes "[零零七]";
 			mes "Well, we've tracked";
-			mes "down the Z Gang. All we";
+			mes "down Z集团. All we";
 			mes "gotta do now is get them!";
 			close;
 		}
@@ -11926,17 +11849,13 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 	if (rumour_nd < 4) {
 		if (zdan_edq > 12) {
 			mes "[流氓公会情报员]";
-			mes "Are you the one that's";
-			mes "been helping to take";
-			mes "down the Z Gang? Nice!";
+			mes "你也在帮忙击败Z集团吗? 真是太好了!";
 			close;
 		}
 		else {
 			mes "[流氓公会情报员]";
-			mes "If you got nothing";
-			mes "to do with me, then...";
-			mes "I got nothing to do";
-			mes "with you. Later!";
+			mes "如果你找我没事的话，";
+			mes "那么我也没有事情相求啦!";
 			close;
 		}
 	}
@@ -11949,7 +11868,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 			mes "kinda hard to find me, eh?";
 			next;
 			mes "[流氓公会情报员]";
-			mes "The Z Gang's been";
+			mes "Z集团's been";
 			mes "spreading rumors about";
 			mes "ghosts pouring out of";
 			mes "Geffen Tower. Just to be";
@@ -11994,13 +11913,10 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 	}
 	else if (rumour_nd == 5) {
 		mes "[流氓公会情报员]";
-		mes "Hey, you done hunting";
-		mes "down the monsters in";
-		mes "Geffen Tower yet?";
-		mes "I hope you brought";
-		mes "the stuff...";
+		mes "嘿，在吉芬塔里面把东西给收集好了吗?";
+		mes "让我看看你拿了些什么来?";
 		next;
-		switch(select("Give Items:I forgot what you need.")) {
+		switch(select("把东西给他:我忘记你要什么东西了")) {
 		case 1:
 			if ((countitem(1062) > 0) && (countitem(944) > 0) && (countitem(1038) > 0) && (countitem(1060) > 0) && (countitem(1059) > 0)) {
 				delitem 1062,1; //Pumpkin_Head
@@ -12013,7 +11929,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 				mes "Thanks. This stuff";
 				mes "should help the people";
 				mes "in Geffen calm down a bit.";
-				mes "The Z Gang's been doin'";
+				mes "Z集团's been doin'";
 				mes "all these things to make them";
 				mes "believe the monsters are loose.";
 				next;
@@ -12074,7 +11990,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 		next;
 		if (zdan_edq > 12) {
 			mes "[零零七]";
-			mes "So... The Z Gang's";
+			mes "So... Z集团's";
 			mes "responsible for those";
 			mes "rumors about the ghosts";
 			mes "running loose in Geffen.";
@@ -12109,7 +12025,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 		}
 		else {
 			mes "[流氓公会情报员]";
-			mes "The Z Gang's been";
+			mes "Z集团's been";
 			mes "spreading rumors about";
 			mes "ghosts pouring out of";
 			mes "Geffen Tower. Just to be";
@@ -12147,7 +12063,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 		if (zdan_edq > 12) {
 			mes "[零零七]";
 			mes "Hey, while you were";
-			mes "gone, I heard the Z Gang";
+			mes "gone, I heard Z集团";
 			mes "was finally captured.";
 			mes "Big relief to hear it.";
 			next;
@@ -12172,7 +12088,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 					mes "Thanks. This stuff";
 					mes "should help the people";
 					mes "in Geffen calm down a bit.";
-					mes "The Z Gang's been doin'";
+					mes "Z集团's been doin'";
 					mes "all these things to make them";
 					mes "believe the monsters are loose.";
 					next;
@@ -12233,7 +12149,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 					mes "Thanks. This stuff";
 					mes "should help the people";
 					mes "in Geffen calm down a bit.";
-					mes "The Z Gang's been doin'";
+					mes "Z集团's been doin'";
 					mes "all these things to make them";
 					mes "believe the monsters are loose.";
 					next;
@@ -12278,7 +12194,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 			mes "[零零七]";
 			mes "Looks like there'll";
 			mes "be some peace and quiet";
-			mes "with the Z Gang all locked up.";
+			mes "with Z集团 all locked up.";
 			mes "Those guys were a double";
 			mes "heaping of trouble if";
 			mes "you ask me. Huh.";
@@ -12287,7 +12203,7 @@ geffen,91,36,5	script	流氓公会情报员#nd1	828,{
 			mes "[零零七]";
 			mes "Keep up the good work!";
 			mes "With guys like you on";
-			mes "our side, the Z Gang'll";
+			mes "our side, Z集团'll";
 			mes "caught sooner than later.";
 		}
 		close;
@@ -12451,7 +12367,7 @@ payon,209,44,5	script	流氓公会情报员#nd2	828,{
 		next;
 		if (zdan_edq > 12) {
 			mes "[零零七]";
-			mes "The Z Gang poisoned";
+			mes "Z集团 poisoned";
 			mes "one of the water wells";
 			mes "here in Payon. All the";
 			mes "water's black now. We gotta";
@@ -12802,7 +12718,7 @@ comodo,233,199,5	script	流氓公会情报员#nd3	810,{
 			mes "[零零七]";
 			mes "You're the one";
 			mes "that helped take";
-			mes "down the Z Gang?";
+			mes "down Z集团?";
 			mes "Heh! Good work~";
 			close;
 		}
@@ -13066,7 +12982,7 @@ morocc,116,39,3	script	流氓公会情报员#nd4	779,{
 		next;
 		if (zdan_edq > 12) {
 			mes "[零零七]";
-			mes "The Z Gang has been";
+			mes "Z集团 has been";
 			mes "causing trouble everywhere.";
 			mes "It's just mischief, but...";
 			mes "If I got my hands on them...";

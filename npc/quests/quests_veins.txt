@@ -4,13 +4,13 @@
 // ---------------------------------
 // - 菲音斯 地区任务脚本 - 
 //===================================
-// 版本：1.3a
+// 版本：1.7
 //====================================
 //= 捡石头的老人:
 //= - 帮助老人完成他的工作
 //= - 任务变数: veins_stone (最大 8)
 //
-//= 间谍任务:
+//= 吟游诗人的故事:
 //= - 帮助吟游诗人证明他的清白
 //= - 任务变数: que_sch (最大 26)
 //
@@ -28,139 +28,126 @@
 ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 
 	if ((MaxWeight - Weight) < 2000) {
-		mes "- Wait a moment! -";
-		mes "- Currently you are carrying -";
-		mes "- too many items with you. -";
-		mes "- Please come back after -";
-		mes "- you put some items into Kafra Storage. -";
+		mes "负重量不足";
 		close;
 	}
 	if ((veins_stone == 0) && (BaseLevel > 59)) {
 		mes "[嘉巴鲁]";
-		mes "My back is killing me";
-		mes "after stooping over to";
-		mes "pick up stones all day long...";
-		mes "The pain... It's unbearable!";
+		mes "唉呦 我的腰啊...";
+		mes "捡了一整天的石头，";
+		mes "唉呦 我的腰啊..";
 		next;
-		switch(select("Bend with your knees, yo.:Gosh, how bad is it?")) {
+		switch(select("唉呦 你怎么不小心一点呢:会很痛吗?")) {
 		case 1:
 			mes "[嘉巴鲁]";
-			mes "Whippersnapper!";
-			mes "I didn't ask you for";
-			mes "your advice! Don't";
-			mes "patronize an old man!";
+			mes "你这个家伙";
+			mes "觉得我看起来很可怜嘛!";
+			mes "怎么这么大胆的";
+			mes "敢对大人说忠告呢，";
+			mes "唉呦... 最近这些年轻人...";
 			close;
 		case 2:
 			mes "[嘉巴鲁]";
-			mes "Oh, it hurts so much, it's";
-			mes "almost crippling. But I don't";
-			mes "have any choice. I need to";
-			mes "get enough stops to fill";
-			mes "this gap if I want to get";
-			mes "paid. Arrrrgh, damn it!";
+			mes "嗯? 昨天在搬运时的时候";
+			mes "不慎闪到腰的关系，";
+			mes "咻呜... 要把这个填满之后";
+			mes "才能得到工资啊...";
 			next;
 			mes "[嘉巴鲁]";
-			mes "If I don't get enough";
-			mes "money to pay for my";
-			mes "granddaughter's medicine,";
-			mes "I won't be able to buy any";
-			mes "medicine for my granddaughter!";
-			mes "And that will be horrible! Ag!";
+			mes "这样才能赚点家补";
+			mes "做为孙女的医药费啊... 唉呦..";
 			next;
-			select("Can I help?");
+			select("需要我帮助吗?");
 			mes "[嘉巴鲁]";
-			mes "I appreciate your kindness,";
-			mes "stranger, but no. I have";
-			mes "to do this on my own.";
-			mes "A man must have his pride....";
+			mes "嗯嗯?";
+			mes "唉呦... 我虽然看起来是这样，";
+			mes "不过处理事情我也能";
+			mes "处理.....";
 			next;
-			mes "^333333*Snap*^000000";
+			mes "^333333*喀喳*^000000";
 			next;
 			mes "[嘉巴鲁]";
-			mes "Argh! My back...!";
-			mes "This was totally";
-			mes "unforeseeable!";
-			mes "Please! Please,";
-			mes "for the love of Freya,";
-			mes "please help me!";
+			mes "喔! 唉呦呦 唉呦 我的腰啊..";
+			mes "喔喔喔....";
+			mes "这个真的对不起你啊，";
+			mes "对初次见面的你";
+			mes "还要麻烦这些事情...唉呦呦";
 			next;
-			select("I will help you.");
+			select(" 别说这种话啦");
 			mes "[嘉巴鲁]";
-			mes "Thank you!";
-			mes "Thanks so much!";
+			mes "这个真的谢谢你啦，";
+			mes "唉咻...";
 			next;
-			select("What do you want me to do?");
+			select("请问要帮助你做什么事情呢?");
 			mes "[嘉巴鲁]";
-			mes "Ow-ow-ow! Oh... Okay...";
-			mes "You see those all dark";
-			mes "stones stuck in the ground?";
-			mes "Those are what I need to";
-			mes "pick up. Now don't go";
-			mes "lifting rocks just yet...";
+			mes "唉呦 腰啊...";
+			mes "我所做的事情就是，";
+			mes "看到这附近的话";
+			mes "有时候会看到一些黑色的石头的?";
 			next;
 			mes "[嘉巴鲁]";
-			mes "I asked some other old";
-			mes "man in town, 阿沙乐, to";
-			mes "make me something to help";
-			mes "with my back. He was going";
-			mes "to help me if I gave hi--";
-			mes "ARGH! My back! It hurts!";
+			mes "把那些石头捡起来之后送到那工厂的话，";
+			mes "会得到一天的工资";
 			next;
 			mes "[嘉巴鲁]";
-			mes "It hurts so bad! But it's";
-			mes "especially painful right";
-			mes "when I'm about to finish";
-			mes "sentences in which I intend to";
-			mes "tell you important informat--";
-			mes "ARRRGH! Find 阿沙乐! Quickly!";
+			mes "唉呦，我这样讲";
+			mes "并不是叫你帮我去捡那些石头的意思，";
+			mes "只是腰实在是有点不太好，";
+			mes "我委托我们村落里的个性怪异的老伯";
+			mes "请他帮忙制作出一样东西而已";
+			next;
+			mes "[嘉巴鲁]";
+			mes "只是我身体有点不太好，";
+			mes "那老伯叫我找的东西";
+			mes "我还没找到啊";
+			next;
+			mes "[嘉巴鲁]";
+			mes "所以请你到老伯那里去";
+			mes "把那些东西拿给他后，";
+			mes "再把那老伯所做的东西重新拿回来~";
+			mes "给我的话就可以啦";
 			next;
 			while(1) {
-				mes "[嘉巴鲁]";
-				mes "Wait, wait...";
-				mes "Maybe I can answer";
-				mes "a few of your questions";
-				mes "before my body is wracked";
-				mes "with throbbing pain. Let's...";
-				mes "Let's at least give it a try.";
+				mes "我想委托你的事情只有这些而已，";
+				mes "请问还有什么疑问要问我吗?";
 				next;
-				switch(select("What's with these stones?:Where's the old man?:Nothing.")) {
+				switch(select("请问那些石头是什么?:请问制作东西的老伯在哪里:没有疑问")) {
 				case 1:
 					mes "[嘉巴鲁]";
-					mes "Well, we use these dark";
-					mes "stones because they're";
-					mes "pretty and easy to process.";
-					mes "They're sort of a specialty";
-					mes "of this town. I get paid to";
-					mes "harvest these handy rocks.";
+					mes "你说这个吗?";
+					mes "嗯.. 像我们这种人哪会知道啊，";
+					mes "本来这个石头很容易加工";
+					mes "色彩也很美丽，";
+					mes "或许也可以说成村落的特产品吧?";
 					next;
 					mes "[嘉巴鲁]";
-					mes "We can sell these to tourists,";
-					mes "and we even have a factory";
-					mes "that uses these stones.";
-					mes "Still, it's not like the";
-					mes "townspeople are getting";
-					mes "rich off these stones.";
+					mes "就做成一些东西";
+					mes "卖给老百姓了，";
+					mes "不知道从何时开始";
+					mes "外地来的人开始大量的采购，";
+					mes "自从那以后工厂就开始进驻了";
+					mes "就开始大量的采购这些东西";
 					next;
 					mes "[嘉巴鲁]";
-					mes "All of us are still";
-					mes "barely making a living...";
-					next;
+					mes "所幸村落里的人们";
+					mes "能适当的赚到一些钱了 只是....";
+					mes "其实大家只是";
+					mes "勉强的糊口水准而已啊...";
+					close2;
 					break;
 				case 2:
 					mes "[嘉巴鲁]";
-					mes "阿沙乐? He's inside";
-					mes "the Tool Shop. You";
-					mes "can't miss him... Just";
-					mes "look for the man with";
-					mes "the crazy eyes!";
-					next;
+					mes "那老伯在村落里道具店里";
+					mes "大概看就知道是那个人";
+					mes "会马上被你";
+					mes "认出来的";
+					close2;
 					break;
 				case 3:
 					mes "[嘉巴鲁]";
-					mes "感谢你的帮忙!";
+					mes "那就麻烦你啦，";
 					mes "假如那老伯不在道具店的话，";
-					mes "就请你到酒店里看一看吧，";
-					mes "会在两个地方的其中之一";
+					mes "就请你到酒店里看一看吧";
 					set veins_stone,1;
 					close;
 				}
@@ -170,11 +157,10 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 	else if (veins_stone == 1) {
 		mes "[嘉巴鲁]";
 		mes "假如那老伯不在道具店的话，";
-		mes "就请你到酒店里看一看吧，";
-		mes "会在两个地方的其中之一";
+		mes "就请你到酒店里看一看吧，会在两个地方的其中之一";
 		close;
 	}
-	else if ((veins_stone > 1) && (veins_stone < 4)) {
+	else if (veins_stone < 4) {
 		mes "[嘉巴鲁]";
 		mes "Geez, 阿沙乐 sure can";
 		mes "be fussy. Still, do your";
@@ -240,7 +226,7 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 	else if (veins_stone < 7) {
 		mes "[嘉巴鲁]";
 		mes "Thanks again for your help!";
-		mes "What did Absar call this";
+		mes "What did Asbar call this";
 		mes "thing again? A Tactile...";
 		mes "Extendable... Damn it...";
 		mes "Why's the name so long?";
@@ -257,19 +243,20 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 		mes "like to give you something.";
 		next;
 		mes "[嘉巴鲁]";
-		mes "Ah, here we are. I found";
-		mes "these while harvesting stones";
-		mes "I was told that adventurers";
-		mes "find these useful. Anyway,";
-		mes "I hope you like these rocks...";
+		mes "之前收集这些石头的时候";
+		mes "很巧遇的捡到了这个家伙，";
+		mes "是个非常宝贵的矿物，";
+		mes "尤其是对你这样的旅行者来说，";
+		mes "拜托请你收下这个好吗";
+		mes "就想成是我最起码的诚意啊";
 		set veins_stone,8;
 		getexp 300000,0;
-		getitem 985,3; //Elunium
+		getitem 985,3; //铝
 		close;
 	}
 	else if (veins_stone > 7) {
 		mes "[嘉巴鲁]";
-		mes "Thanks to you and Absar,";
+		mes "Thanks to you and Asbar,";
 		mes "my poor back hasn't been";
 		mes "bothering me at all lately.";
 		mes "I should be taking better";
@@ -277,9 +264,8 @@ ve_fild05,257,130,4	script	敲打腰部的 老人#ve	945,{
 		close;
 	}
 	mes "[嘉巴鲁]";
-	mes "I'm sorry dear.";
-	mes "You're not strong enough for this kind of work.";
-	mes "Put on some muscle and talk to me again.";
+	mes "抱歉啊，年青人，你看起那么瘦弱，应该没办法胜任这工作吧";
+	mes "多锻炼点肌肉后再来找我吧";
 	close;
 }
 
@@ -293,89 +279,102 @@ ve_in,169,310,6	script	看起来怪异的 爷爷#ve	121,{
 	}
 	else if (veins_stone == 1) {
 		mes "[阿沙乐]";
-		mes "I'm so close to";
-		mes "completion. Now, if";
-		mes "I just turn this here...";
+		mes "呜喜喜喜喜喜，";
+		mes "";
+		mes "没剩多少了... 呜喜喜喜";
+		mes "只要做这个的话...";
 		next;
-		if (select("Excuse me...:........") == 1) {
+		if (select("请问...:.......") == 1) {
 			mes "[阿沙乐]";
-			mes "What?! Who dares";
-			mes "disturb me?! N-no!";
-			mes "Look! Look what you did!";
-			mes "You made me screw up!";
+			mes "什么呀?!";
 			next;
-			specialeffect 90; //EF_LORD
+			mes "[阿沙乐]";
+			mes "喔?!?!?";
+			next;
+			specialeffect EF_LORD;
 			percentheal 30,0;
 			next;
 			mes "[阿沙乐]";
-			mes "!@#$%#@#$!*~";
-			mes "F$#@#%^^^&&!";
+			mes "那不是 我xxxxx 哔~ 哔~";
+			mes "哔哔~ 哔哔哔...";
+			next;
+			mes "[阿沙乐]";
+			mes "洽啊!";
+			next;
+			mes "[阿沙乐]";
+			mes "你到底什么玩意啊!!!";
+			mes "请你闪一边去吧";
 			close2;
 			warp "ve_in",262,309;
 			end;
 		}
 		mes "[阿沙乐]";
-		mes "Oh, no...";
+		mes "...........";
+		mes "这个真是的...";
 		next;
-		specialeffect 86; //"Strange Old Man#ve" EF_ASPERSIO
-		next;
-		mes "[阿沙乐]";
-		mes "How...?!";
-		mes "No! I failed again!";
-		mes "D-DAAAAAAAAAAAMN IIIII--";
+		specialeffect EF_ASPERSIO;
 		next;
 		mes "[阿沙乐]";
-		mes "Huh? What are you...";
-		mes "What do you want?";
+		mes "喀啊!";
+		mes "又失败啦!";
+		mes "啊 这个真是的...哔~ 哔哔..";
+		mes "哔哔哔~ 哔~~~";
 		next;
-		select("Oh, I-I'm...");
 		mes "[阿沙乐]";
-		mes "Spit it out. Tell me";
-		mes "what you want, not your";
-		mes "name. Hurry, can't you";
-		mes "see that I'm busy?";
+		mes "喀啊!";
+		mes "泣?";
+		mes "你是谁啊?";
 		next;
-		if (select("I... I'm sorry.:I'm here for Mr. 嘉巴鲁...") == 1) {
+		select("啊 我..我..");
+		mes "[阿沙乐]";
+		mes "啊 我不管你是什么样的家伙";
+		mes "找我有什么事吗?";
+		mes "泣? 这什么玩意一直在烦我啊";
+		mes "洽啊!";
+		next;
+		if (select("抱..抱歉:我是受嘉巴鲁先生的委托...") == 1) {
 			mes "[阿沙乐]";
-			mes "If only you didn't";
-			mes "interrupt me! Then";
-			mes "I'd already have...";
-			mes "Ugh! Back to work!";
+			mes "呜呜....";
+			mes "只要你在妨碍我一点点";
+			mes "啊喔...";
 			close;
 		}
 		mes "[阿沙乐]";
-		mes "嘉巴鲁? What does...";
-		mes "Oh. Never mind. I think";
-		mes "I remember what he asked";
-		mes "me to make him. So did";
-		mes "you bring all the materials?";
+		mes "什么? 是受 嘉巴鲁老伯";
+		mes "委托而来的啊?";
+		mes "那老伯有什么样的委托...";
 		next;
-		if (select("Yes:What materials...?") == 1) {
+		mes "[阿沙乐]";
+		mes "嗯嗯.... 那死老伯";
+		mes "之前有叫我帮他";
+		mes "制作一个奇怪的东西，";
+		mes "那么材料有带来吗?";
+		next;
+		if (select("是的 材料有带来:材料吗? 我没听说过耶...") == 1) {
 			mes "[阿沙乐]";
-			mes "Great, we can get";
-			mes "started and m--";
-			mes "Liar. You don't even know";
-			mes "what you're supposed to";
-			mes "bring me, do you?!";
-			mes "Get out of here!";
+			mes "呵噢，真的有带材料来吗?";
+			mes "让我看看? ...............洽啊~!";
+			mes "你这家伙是什么啊? 我从来没有对";
+			mes "嘉巴鲁说过材料的事情啊 洽啊!";
+			mes "真是的 哔~ 哔哔~ 马上给我出去!";
 			close2;
 			warp "ve_in",262,309;
 			end;
 		}
 		mes "[阿沙乐]";
-		mes "Of course. I didn't tell him";
-		mes "what materials I needed";
-		mes "anyway. Heh heh! Now, this";
-		mes "is what I need you to bring.";
-		mes "Listen up, okay? And hurry.";
+		mes "当然没听说过吧，";
+		mes "因为我没告诉过他啊，呵呵呵";
+		mes "所以请你马上帮我寻找";
+		mes "把我所说的材料带回来吧";
 		next;
 		mes "[阿沙乐]";
-		mes "^4D4DFF5 Maneater Roots^000000,";
-		mes "^4D4DFF2 Glacial Hearts^000000, and";
-		mes "^4D4DFF5 Steel^000000. If you don't";
-		mes "come back soon, then";
-		mes "I won't help you. I've got";
-		mes "projects I'm working on!";
+		mes "若不赶快准备带回来的话";
+		mes "我就不会帮你制作的，你就这样知道吧，";
+		mes "嗯嘻嘻，所需要的材料是 '^4D4DFF5钢铁 5个、";
+		mes "噬人树根 5个、冰心脏 2个^000000";
+		mes "要制作出什么东西";
+		mes "你这家伙是没必要知道的";
+		mes "你去把材料带来吧";
 		set veins_stone,2;
 		close;
 	}
@@ -393,21 +392,17 @@ ve_in,169,310,6	script	看起来怪异的 爷爷#ve	121,{
 			mes "You won't have to";
 			mes "wait long to see";
 			mes "my great invention!";
-			delitem 999,5; //Steel
-			delitem 1033,5; //Root_Of_Maneater
-			delitem 7561,2; //Ice_Heart
+			delitem 999,5; //钢铁
+			delitem 1033,5; //噬人树根
+			delitem 7561,2; //冰心脏
 			set veins_stone,3;
 			close2;
-			specialeffect 50; //"Strange Old Man#ve" EF_FIRESPLASHHIT
+			specialeffect EF_FIRESPLASHHIT;
 			end;
 		}
 		mes "[阿沙乐]";
-		mes "What the hell?";
-		mes "Hurry and bring";
-		mes "^4D4DFF5 Maneater Roots^000000,";
-		mes "^4D4DFF2 Glacial Hearts^000000, and";
-		mes "^4D4DFF5 Steel^000000! Do you think";
-		mes "I'm doing this for fun?!";
+		mes "啊?! 这是什么 都还没收集到嘛!";
+		mes "马上出去帮我收集回来!";
 		close;
 	}
 	else if (veins_stone == 3) {
@@ -618,55 +613,56 @@ ve_in02,68,39,7	script	Factory Worker#ve2	943,{
 	close;
 }
 
-// 间谍任务
+// 吟游诗人的故事
 //============================================================ 
 prontera,202,122,0	script	小孩#sch	703,{
 	if (que_sch == 0) {
 		mes "[卢尼]";
-		mes "Where the heck";
-		mes "is it? I don't... Where...?";
-		mes "He's got to be around here";
-		mes "somewhere, I think...";
+		mes "嗯.....";
+		mes "到底在哪里啊..";
+		mes "唉呦 真是的...";
 		next;
-		if (select("What's wrong?:...") == 1) {
+		if (select("有发生什么事吗?:...") == 1) {
 			mes "[卢尼]";
-			mes "Oh, it's just...";
-			mes "Some guy sent me on a";
-			mes "delivery errand, but I can't";
-			mes "find the recipient. He said";
-			mes "that I can't miss him, but";
-			mes "I still can't figure it out.";
+			mes "是?";
+			mes "我是帮人家跑腿的";
+			mes "但不知道要往哪里去啊，";
+			mes "因为叫我跑腿的那位叔叔";
+			mes "没有详细的告诉我啊...";
 			next;
 			mes "[卢尼]";
-			mes "I should have asked for";
-			mes "the exact location. I mean,";
-			mes "if I don't find him, then I'll";
-			mes "never get paid for doing";
-			mes "this delivery. ^333333*Sigh*^000000";
+			mes "他说直接去那边去找就好了，";
+			mes "所以我就在这边找";
+			mes "不过在哪里就是看不到啊，";
+			mes "只要把这个东西传递出去的话，";
+			mes "那位叔叔说 会给我跑路费的";
 			next;
-			if (select("Sounds tough. Good luck!:Do you need any help?") == 1) {
+			if (select("辛苦你啦，好好加油吧:需要我的帮忙吗?") == 1) {
 				mes "[卢尼]";
-				mes "Thanks. I think";
-				mes "I just might need it.";
-				mes "Where could this guy";
-				mes "be? If he's expecting";
-				mes "a delivery, he should";
-				mes "make himself easy to find...";
+				mes "是，";
+				mes "唉呦，要去哪里找呢";
 				close;
 			}
 			mes "[卢尼]";
-			mes "Yeah, sure, it'd be great";
-			mes "if you could help me. Let's";
-			mes "see, I need to deliver this";
-			mes "letter to a bard named...";
-			mes "It was... Ah, ^FF0000拉斯达 Midar^000000!";
+			mes "呜哇! 真的吗?";
+			mes "若能帮助我的话 真的谢谢你啊，嘿嘿";
+			mes "呜嗯";
 			next;
 			mes "[卢尼]";
-			mes "I've looked everywhere";
-			mes "in town for someone that";
-			mes "looks like a Bard, but I'm";
-			mes "not having any luck. If you";
-			mes "find him, would you tell me?";
+			mes "正确要跑腿的事情是，";
+			mes "把这封信传递给";
+			mes "某位 吟游诗人叔叔即可，";
+			mes "名字叫...拉. 拉斯....";
+			mes "啊! '^FF0000拉斯达 米达勒^000000'的样子";
+			next;
+			mes "[卢尼]";
+			mes "说是在村落里";
+			mes "怎么找就是看不到啊，";
+			mes "能找的地方都找遍了";
+			next;
+			mes "[卢尼]";
+			mes "那么我也会继续寻找，";
+			mes "也请你多多的帮忙吧";
 			set que_sch,1;
 			close;
 		}
@@ -674,11 +670,9 @@ prontera,202,122,0	script	小孩#sch	703,{
 	}
 	else if (que_sch == 1) {
 		mes "[卢尼]";
-		mes "I still haven't";
-		mes "found 拉斯达 Midar.";
-		mes "Would you let me know";
-		mes "if you find him so that";
-		mes "I can deliver his letter?";
+		mes "还没有找到吗?";
+		mes "唉呦 真是...";
+		mes "到底是在哪里啊?";
 		close;
 	}
 	else if (que_sch == 2) {
@@ -691,131 +685,109 @@ prontera,202,122,0	script	小孩#sch	703,{
 		}
 		else {
 			mes "[卢尼]";
-			mes "Wow, did you really";
-			mes "find 拉斯达 Midar?";
-			mes "Why couldn't I find him?";
-			mes "Anyway, thank you so much";
-			mes "for your help. I thought I was";
-			mes "going to fail my delivery!";
+			mes "呜哇! 找到那个人了吗?";
+			mes "怎样找就是找不到啊，";
+			mes "嘿嘿 谢谢你的帮忙";
 			next;
-			select("He asked me to give you this.");
+			select("他说要把这个转交给你");
 			mes "[卢尼]";
-			mes "Hey, alright! Thanks";
-			mes "for the cash! Heh heh~";
+			mes "呜哇~";
+			mes "真的谢谢你，";
+			mes "嘻嘻";
 			set zeny,zeny-100;
 			set que_sch,3;
 			close;
 		}
 	}
 	mes "[卢尼]";
-	mes "Nice day out, isn't it?";
+	mes "嘿嘿，";
+	mes "是不错的一天啊?";
 	close;
 }
 
 prt_church,89,108,6	script	吟游诗人#sch	741,{
-
 	if ((MaxWeight-Weight) < 2000) {
-		mes "^3355FFWait a second!";
-		mes "Right now, you're carrying";
-		mes "too many things with you.";
-		mes "Please come back after";
-		mes "using the Kafra Service";
-		mes "to store some of your items.^000000";
+		mes "^3355FF负重量不足!^000000";
 		close;
 	}
-
 	if (que_sch < 1) {
 		mes "[拉斯达]";
-		mes "Hello there, isn't today";
-		mes "such a wonderful day?";
-		mes "Nice weather always";
-		mes "inspires the poet in me,";
-		mes "and I can't seem to stop";
-		mes "singing my heart out~";
+		mes "你好~";
+		mes "真的是一个好天吧?";
+		mes "这种天在心里面";
+		mes "会涌起很多诗词，";
+		mes "不得不唱起歌来";
 		close;
 	}
 	else if (que_sch == 1) {
 		mes "[拉斯达]";
-		mes "Why, what a glorious";
-		mes "day! I should sing a song";
-		mes "in praise of its wonder!";
-		mes "Ooooh... La la la-la~";
-		mes "Girls, girls, giiiirls...";
+		mes "啊啊..";
+		mes "这种天就要唱歌啊，";
+		mes "啊啊..";
 		next;
-		switch(select("Excuse me...:......")) {
+		mes "[拉斯达]";
+		mes "这种天~ 要唱歌~";
+		mes "嗯嗯~~ 嗯嗯~~";
+		next;
+		switch(select("请问...:......")) {
 		case 1:
 			mes "[拉斯达]";
-			mes "Why, what a glorious";
-			mes "day! I should sing a song";
-			mes "in praise of its wonder!";
-			mes "Ooooh... La la la-la~";
-			mes "Girls, girls, giiiirls...";
+			mes "去外面旅行啰~ 鲁卢啦啦~";
+			mes "嗯?";
+			mes "喂 你听不到我在唱歌吗?";
+			mes "等到我唱完歌之后再来找我吧，";
+			mes "嗯哼嗯哼~";
 			close;
 		case 2:
 			mes "[拉斯达]";
-			mes "Girls, girls, giiiirls...";
-			mes "Making my heart";
-			mes "beat like... Like it's";
-			mes "going too fast. My heart's";
-			mes "racing... And you're at the";
-			mes "finish line--Love Champion!";
+			mes "去外面旅行啰~ 噜卢啦啦~";
+			mes "快乐的去旅行啰~ 噜卢啦啦~";
+			mes ".....";
 			next;
 			mes "[拉斯达]";
-			mes "Oh? Don't stare at me";
-			mes "like that, you're making";
-			mes "me blush. Did you need to";
-			mes "talk to me or something?.";
+			mes "喂 你这样的瞪眼看我";
+			mes "我会害羞的，若没有什么事的话";
+			mes "请你到别的地方去吧";
 			next;
-			switch(select("I'm sorry.:Are you ^ff0000拉斯达 Midar^000000?")) {
+			switch(select("打扰了:请问你就是^ff0000拉斯达 米达勒^000000吗?")) {
 			case 1:
 				mes "[拉斯达]";
-				mes "Oh, that's alright.";
-				mes "...............................";
-				mes "Girl, I'll laugh at all your";
-				mes "jokes, and agree with yourv";
-				mes "politics~ You're hot! But";
-				mes "baby, you're dumb as bricks~";
+				mes "对嘛";
+				mes "对嘛，不要打扰到我的宝贵时间嘛";
 				close;
 			case 2:
 				mes "[拉斯达]";
-				mes "Oh? Oh, yes, that's me.";
-				mes "How can I help you?";
+				mes "嗯?";
+				mes "呵呵... 有什么事情吗?";
 				next;
-				select("I'm here to deliver this to you.");
+				select("我想把这个交给你 正在找你呢");
 				mes "[拉斯达]";
-				mes "Ah! He must have finally";
-				mes "sent it. Would you please";
-				mes "give me a second? Let's see...";
+				mes "嗯....这个...";
+				mes "啊哈... 是那位朋友送来的嘛，";
+				mes "让我看看，啊啊 请你稍等一下";
 				next;
-				mes "^3355FF拉斯达 opened the letter";
-				mes "and started reading it.^000000";
-				next;
-				mes "[拉斯达]";
-				mes "Umm...";
-				mes "Oh, no...";
+				mes "^3355FF拉斯达马上拆开信封开始阅读了^000000";
 				next;
 				mes "[拉斯达]";
-				mes "Ah, I'm sorry for";
-				mes "making you wait.";
-				mes "Here, please give";
-				mes "this money to that";
-				mes "kid that was supposed";
-				mes "to come find me here.";
+				mes "嗯嗯...";
+				mes "这样...";
+				next;
+				mes "[拉斯达]";
+				mes "啊，我让你久等了，";
+				mes "请把这个交给那个小孩吧，";
+				mes "嗯..";
+				mes "那么...";
 				set que_sch,2;
 				set zeny,zeny+100;
 				next;
 				mes "[拉斯达]";
-				mes "I'd like you to come";
-				mes "talk to me again later";
-				mes "if you have the time";
-				mes "See you around~";
+				mes "并且以后有空的话请再来一趟吧";
 				close;
 			}
 		}
 	}
 	else if (que_sch == 2) {
-		mes "^3355FF拉斯达 seems to be";
-		mes "lost in deep thought.^000000";
+		mes "他进入到沉思的状态中";
 		close;
 	}
 	else if (que_sch == 3) {
@@ -2407,9 +2379,9 @@ OnInit:
 prontera,109,161,6	script	青年#sch	83,{
 	if (que_sch < 20) {
 		mes "[恰达]";
-		mes "What a boring day...";
-		mes "Perhaps I'll stave the";
-		mes "dreariness with song~";
+		mes "好无聊啊，";
+		mes "呵嗯..这时候要唱歌，";
+		mes "呵嗯....";
 		close;
 	}
 	else if (que_sch == 20) {
@@ -2630,10 +2602,10 @@ comodo,135,299,0	script	青年#sch2	809,{
 
 // Siblings Quest
 //============================================================ 
-veins,327,185,3	script	Kid#camelcamel	944,{
+veins,327,185,3	script	小孩#camelcamel	944,{
 	if (MISC_QUEST & 8192) {
 		if (rachel_camel == 0) {
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "*Sob*";
 			next;
 			mes "^3355FFThis sobbing child";
@@ -2644,7 +2616,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "crying? Are you lost?";
 			mes "Where's your mommy?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "My... Mom's";
 			mes "at home...";
 			next;
@@ -2658,7 +2630,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "trouble finding";
 			mes "your way back home?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "No! I'm ten years old!";
 			mes "I can find my way home,";
 			mes "even with my eyes closed!";
@@ -2671,7 +2643,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "Can you tell me";
 			mes "why you're crying?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "I... ^333333*Sniff*^000000";
 			mes "I-I went to... Th-...";
 			mes "Volcan.... w-w-with";
@@ -2683,7 +2655,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "you can tell me about what";
 			mes "happened a little more slowly.";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "*^333333Sob*^000000 ...It's just...";
 			mes "I went to Thor Volcano";
 			mes "with my little sister to see";
@@ -2691,25 +2663,25 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "But then, we met some...";
 			mes "Scary people there... and...";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "I got scared, so... So...";
 			mes "My sister... Wah~! *Sob*";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "*Sob*";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "I-I ran away from them...";
 			mes "But I left my sister over";
 			mes "there with those weird men...";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Mom's sick, and dad's";
 			mes "always at work... He's";
 			mes "the captain of a ship, so...";
 			mes "I don't think they can help.";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Can you help me please,";
 			mes "and bring my sister back?";
 			mes "*Sniff* Please? I promise";
@@ -2724,7 +2696,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "like? Are you sure that there";
 			mes "were people there?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "I... I don't know!";
 			mes "I got so scared, I just";
 			mes "ran away! I... I didn't";
@@ -2743,7 +2715,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 				mes "someone else will come";
 				mes "along to save your sister.";
 				next;
-				mes "[Kid Karyn]";
+				mes "[嘉琳]";
 				mes "Wah~";
 				close;
 			case 2:
@@ -2752,7 +2724,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 				mes "I can do. I'll try my best";
 				mes "to find your sister.";
 				next;
-				mes "[Kid Karyn]";
+				mes "[嘉琳]";
 				mes "Thank you so much!";
 				mes "Please find my sister";
 				mes "Curdie soon! Oh, I hope";
@@ -2778,7 +2750,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			close;
 		}
 		else if (rachel_camel == 2) {
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "W-were you able";
 			mes "to find my sister?";
 			mes "Is she alright?";
@@ -2788,7 +2760,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "I found her,";
 			mes "she's alright but...";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "What? Why isn't";
 			mes "she with you?";
 			next;
@@ -2800,7 +2772,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "a forge or a locksmith that";
 			mes "might be able to help her?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Oh! Oh, there's a";
 			mes "locksmith in the market";
 			mes "street! You can ask him";
@@ -2883,7 +2855,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "if I want to free Curdie.";
 			close;
 		}
-		else if ((rachel_camel >= 12) && (rachel_camel <= 16)) {
+		else if (rachel_camel <= 16) {
 			mes "["+strcharinfo(0)+"]";
 			mes "Well... I found the";
 			mes "camel. Now I need to get";
@@ -2945,7 +2917,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "to free Curdie. I'm";
 			mes "gonna go save her now.";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Thank you so much!";
 			mes "Please bring back Curdie";
 			mes "as soon as you can! ^333333*Sob*^000000";
@@ -2958,21 +2930,21 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "with a Butterfly Wing.";
 			mes "Did she come back safe?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Yes, Curdie's back";
 			mes "and she's resting in";
 			mes "the hospital right now.";
 			mes "Thank you so much for";
 			mes "all of your help!";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "I'm not sure what's wrong";
 			mes "with Curdie, though. Ever";
 			mes "since she got back, she gets";
 			mes "frightened whenever she";
 			mes "sees the soldiers in town.";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "I promise to tell my dad";
 			mes "about what you did after he";
 			mes "comes back from overseas.";
@@ -2985,7 +2957,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "when Curdie's released";
 			mes "from the hospital.";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Yes, please do.";
 			mes "I promise to help you";
 			mes "whenever you need me!";
@@ -2997,7 +2969,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "take good care of your mother";
 			mes "and sister. You got that?";
 			next;
-			mes "[Kid Karyn]";
+			mes "[嘉琳]";
 			mes "Got it!";
 			next;
 			mes "["+strcharinfo(0)+"]";
@@ -3005,12 +2977,92 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 			mes "It's a promise, then.";
 			mes "I'll see you later~";
 			set rachel_camel,25;
-			specialeffect2 253; // EF_ABSORBSPIRITS
+			specialeffect2 EF_ABSORBSPIRITS;
 			getexp 1000000,700000;
 			close;
 		}
 		else {
-			mes "[Kid Karyn]";
+// Start Nameless Island Access Quest Addition
+			if (aru_monas == 15) {
+				mes "[嘉琳]";
+				mes "Hi! It's good to see";
+				mes "you again! Kurdi just came";
+				mes "back home from the hospital,";
+				mes "and is getting better everyday!";
+				mes "Ah, and I've been taking care";
+				mes "of her, just like I promised~";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "Really? That's good";
+				mes "You should be proud~";
+				next;
+				mes "[嘉琳]";
+				mes "^666666*Blush*^000000 Heh heh!";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "Anyway, I was wondering";
+				mes "if you could help me.";
+				mes "Your dad's a fisherman,";
+				mes "right? Would you mind";
+				mes "asking him if I could";
+				mes "borrow his boat?";
+				next;
+				mes "[嘉琳]";
+				mes "Well... Actually...";
+				mes "The pope said that my";
+				mes "dad isn't allowed to use";
+				mes "his boat for a while...";
+				mes "I'm not sure why...";
+				next;
+				mes "[嘉琳]";
+				mes "So yeah. Dad's not allowed";
+				mes "to go out to sea right now.";
+				mes "But it should be okay if it's";
+				mes "you, right? Hey, you helped";
+				mes "me, so I hafta help you, right?";
+				next;
+				mes "[嘉琳]";
+				mes "My dad is really mad that";
+				mes "he can't use his boat so";
+				mes "maybe we better not tell";
+				mes "him you want to use it. Let's";
+				mes "keep it our secret, okay?";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "S-sure thing!";
+				next;
+				mes "[嘉琳]";
+				mes "Anyway, his boat is the";
+				mes "only one on the south beach";
+				mes "since all the other fishermen";
+				mes "dock theirs boats in other";
+				mes "places. Also, my dad's boat";
+				mes "will rust if no one uses it.";
+				next;
+				mes "["+strcharinfo(0)+"]";
+				mes "Great! Thanks so much";
+				mes "for your help, Karyn~";
+				mes "I'll be sure to take";
+				mes "good care of your dad's";
+				mes "boat. I only need it for";
+				mes "a little while, anyway.";
+				next;
+				mes "[嘉琳]";
+				mes "Heh heh! Thanks!";
+				mes "I'm happy that";
+				mes "I can help you too!";
+				set aru_monas,16;
+				close;
+			}
+			else if (aru_monas > 15) {
+				mes "[嘉琳]";
+				mes "Hi! How do you like";
+				mes "fishing on my dad's boat?";
+				mes "Oh, and Kurdi says hi!";
+				close;
+			}
+// End Nameless Island Access Quest Addition.
+			mes "[嘉琳]";
 			mes "Hello, hello!";
 			mes "Hey, did you need";
 			mes "me to help you? No...?";
@@ -3020,7 +3072,7 @@ veins,327,185,3	script	Kid#camelcamel	944,{
 		}
 	}
 	else {
-		mes "[Kid Karyn]";
+		mes "[嘉琳]";
 		mes "^333333*Sob*^000000...";
 		mes "^333333*Sob*^000000...";
 		close;
@@ -3852,7 +3904,6 @@ veins,181,166,3	script	Lockenlock	900,{
 			mes "the key, so I can get it done";
 			mes "as soon as you can bring";
 			mes "me the Steel. I'll be waiting.";
-			close;
 		}
 	}
 	else if (rachel_camel == 23) {
@@ -5509,25 +5560,17 @@ OnTouch:
 	end;
 }
 
-veins,159,171,3	script	Towner#vol	945,{
-	mes "[Towner]";
-	mes "The small office on the";
-	mes "2nd floor of this weapon";
-	mes "shop is occupied by a";
-	mes "geologist. At least, he's";
-	mes "supposed to be one...";
+veins,159,171,3	script	村落 居民#vol	945,{
+	mes "[村落 居民]";
+	mes "这武器店2楼有个小小的地质学研究所的办公室啊，他说他是学者，每天却在酒店里喝着酒过活啊?";
 	next;
-	mes "[Towner]";
-	mes "The guy might be a quack:";
-	mes "all he does is drink and";
-	mes "flirt with skanky women";
-	mes "all day. I thought scholars";
-	mes "are supposed to read and study";
-	mes "and discover things, you know?";
+	mes "[村落 居民]";
+	mes "学者的话应该是每天晚上盯著书做研究的人不是吗?";
+	mes "我绝对不会让我的孙子去当学者啊~";
 	close;
 }
 
-ve_in,233,116,3	script	Drunken Man#vol	901,{
+ve_in,233,116,3	script	喝醉酒的 男人#vol	901,{
 	//if (max_max_c1 == 1) {
 	//	mes "^3355FFWait a second!";
 	//	mes "Right now, you're carrying";
@@ -5547,17 +5590,17 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		close;
 	}
 	if (aru_vol < 7) {
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "So... ^333333*Urp*^000000";
 		mes "So then I said...";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "''^3131FFHey, buddy! A man";
 		mes "uses his back to talk,";
 		mes "not his fists! You wanna";
 		mes "piece of me? Bring it on!^000000''";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Then he got all";
 		mes "scared, and ran away!";
 		mes "Hahahaha! Guess I look";
@@ -5569,7 +5612,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "Oh, my God!";
 		mes "You're so cool~!";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Well... Anyone would";
 		mes "have done it. I was just";
 		mes "being a gentleman.";
@@ -5577,17 +5620,17 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		close;
 	}
 	else if (aru_vol == 7) {
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "So... ^333333*Urp*^000000";
 		mes "So then I said...";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "''^3131FFHey, buddy! A man";
 		mes "uses his back to talk,";
 		mes "not his fists! You wanna";
 		mes "piece of me? Bring it on!^000000''";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Then he got all";
 		mes "scared, and ran away!";
 		mes "Hahahaha! Guess I look";
@@ -5599,7 +5642,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "Oh, my God!";
 		mes "You're so cool~!";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Well... Anyone would";
 		mes "have done it. I was just";
 		mes "being a gentleman.";
@@ -5610,7 +5653,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "you the executive director";
 		mes "of the Veins Geological Team?";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Yeah, sure! Executive";
 		mes "director, deputy director,";
 		mes "director, researcher, CEO,";
@@ -5618,7 +5661,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "doesn't sound right. Hah!";
 		mes "I'm all of those~";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "I'm the executive director...";
 		mes "I'm the only one that works";
 		mes "at the institute, really.";
@@ -5636,7 +5679,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "Maybe...";
 		mes "Maybe even ^FF0000urgent^000000.";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Wha--? Hey, what day";
 		mes "is it today? Damn it!";
 		mes "Fine, fine, time to get";
@@ -5644,7 +5687,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "really enjoying myself too!";
 		mes "Argh, I never wanna be sober!";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "But... Working is the";
 		mes "only way for me to afford";
 		mes "all this drinking... Such";
@@ -5656,7 +5699,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "longer and talk with";
 		mes "us? Pleeeeeease?";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Sorry, ladies,";
 		mes "but duty calls.";
 		mes "Hahahahahahha~";
@@ -5666,7 +5709,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "[Ladies]";
 		mes "Please don't go~";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Ahem!";
 		mes "Let's see now.";
 		mes "What'd be best...?";
@@ -5674,19 +5717,19 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "..............................";
 		mes "..............................";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "..............................";
 		mes "..............................";
 		mes "........................Right!";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Hey, you.";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Yes?";
 		next;
 		emotion e_no1;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "I hereby promote you as";
 		mes "chief researcher of the";
 		mes "Veins Geological Research";
@@ -5698,7 +5741,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "I don't understand";
 		mes "what you're talking about!";
 		next;
-		mes "[Drunken Man]";
+		mes "[喝醉酒的 男人]";
 		mes "Heh! You should be grateful";
 		mes "that I'm accepting you as my";
 		mes "student! Everyone'd be proud";
@@ -5709,7 +5752,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "["+strcharinfo(0)+"]";
 		mes "Hey, I never--";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Ah-ah! Now that you're";
 		mes "my student, I expect you";
 		mes "to work hard if you're going";
@@ -5717,7 +5760,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "first--go to my office and";
 		mes "clear up my belated business.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Here, take this ^FF0000reference";
 		mes "guide^000000 with you to my office.";
 		mes "When you check my desk, you'll";
@@ -5725,13 +5768,13 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "form^000000. You'll need to bring all";
 		mes "that stuff to Thor Volcano.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "When you get to Thor Volcano,";
 		mes "use the pryometer to check the";
 		mes "volcano's temperature, and";
 		mes "fill out the report form.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Take the filled report";
 		mes "form to the geology camp";
 		mes "that's deep inside the volcano";
@@ -5739,7 +5782,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "confirmation on it. That's";
 		mes "not so hard now, is it?";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Ahh, I've also decided";
 		mes "to take these lovely ladies";
 		mes "on as my students as well~";
@@ -5752,7 +5795,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "Oh~! You'll really";
 		mes "teach us geology?";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Oh, right! When they";
 		mes "ask you about the volcano's";
 		mes "temperature when you submit";
@@ -5760,7 +5803,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "camp, make something up.";
 		mes "Make sure it sounds bad!";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Words like ''explosion,''";
 		mes "''disaster,'' and ''collatoral";
 		mes "damage'' would be perfect.";
@@ -5778,7 +5821,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		close;
 	}
 	else if ((aru_vol > 7) && (aru_vol < 24)) {
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Hey, you'd better hurry";
 		mes "it up. I mean, you're the";
 		mes "one that found that notice";
@@ -5786,7 +5829,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "You know how important";
 		mes "this work is to us!";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Get the pyrometer,";
 		mes "and go to Thor Volcano";
 		mes "to fill out the report";
@@ -5795,7 +5838,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		close;
 	}
 	else if (aru_vol == 24) {
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Well, those are";
 		mes "nice legs, but they're";
 		mes "not the best pair I've see--";
@@ -5803,13 +5846,13 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "["+strcharinfo(0)+"]";
 		mes "I'm back.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "*Ahem* And that's how";
 		mes "erosion... Works. Tomorrow,";
 		mes "I'll teach you ladies all";
 		mes "about rocks. All of them.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Welcome back! So,";
 		mes "how was the volcanic";
 		mes "temperature report?";
@@ -5821,7 +5864,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "exaggerate the temperature?";
 		mes "What about the camp?";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Oh, don't worry about";
 		mes "the temperature. It's";
 		mes "supposed to go up.";
@@ -5832,14 +5875,14 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "maybe the pryometer";
 		mes "might be broken.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Heh! You're right~";
 		mes "I broke it on purpose.";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "What?!";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "You know, it's hard for";
 		mes "scholars like me to make";
 		mes "a decent living. Hell, I was";
@@ -5847,7 +5890,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "temperature measuring job";
 		mes "from the geological camp.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Those guys've been trying";
 		mes "to fire me ever since they";
 		mes "realized the volcano became";
@@ -5855,7 +5898,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "fire me if there's proof that";
 		mes "it might go off anytime!";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Then, when they're all";
 		mes "panicked, I calmly and";
 		mes "suavely offer a solution";
@@ -5867,13 +5910,13 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "So...";
 		mes "You're a con man.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Awww, don't look at";
 		mes "me like that. I'm a real";
 		mes "scientist. Come on...";
 		mes "Oh, come on...";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Look, why don't you head";
 		mes "back to my institute and";
 		mes "check out my bookshelf?";
@@ -5881,7 +5924,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "where I keep all sorts";
 		mes "of nifty little goodies.";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "You can have the very";
 		mes "first thing that pops out";
 		mes "of that box. I wonder if the";
@@ -5889,7 +5932,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		mes "with good fortune. You";
 		mes "might get something good~";
 		next;
-		mes "[Geologist Gio]";
+		mes "[地质学家 基欧]";
 		mes "Consider it your";
 		mes "payment for a job";
 		mes "well done. Good work!";
@@ -5901,17 +5944,17 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 		delitem 7705,1; //Note_Of_Geologist
 		close;
 	}
-	mes "[Drunken Man]";
+	mes "[喝醉酒的 男人]";
 	mes "So... ^333333*Urp*^000000";
 	mes "So then I said...";
 	next;
-	mes "[Drunken Man]";
+	mes "[喝醉酒的 男人]";
 	mes "''^3131FFHey, buddy! A man";
 	mes "uses his back to talk,";
 	mes "not his fists! You wanna";
 	mes "piece of me? Bring it on!^000000''";
 	next;
-	mes "[Drunken Man]";
+	mes "[喝醉酒的 男人]";
 	mes "Then he got all";
 	mes "scared, and ran away!";
 	mes "Hahahaha! Guess I look";
@@ -5923,7 +5966,7 @@ ve_in,233,116,3	script	Drunken Man#vol	901,{
 	mes "Oh, my God!";
 	mes "You're so cool~!";
 	next;
-	mes "[Drunken Man]";
+	mes "[喝醉酒的 男人]";
 	mes "Well... Anyone would";
 	mes "have done it. I was just";
 	mes "being a gentleman.";
@@ -6498,13 +6541,11 @@ OnTouch:
 		end;
 	}
 	else if (aru_vol == 14) {
-		enablenpc "上校 毕图#1";
 		mes "[上校 毕图]";
 		mes "What are you still";
 		mes "doing standing there?";
 		mes "Don't slack off! Come!";
 		close2;
-		disablenpc "上校 毕图#1";
 		warp "thor_camp",156,68;
 		end;
 	}
@@ -6554,7 +6595,6 @@ OnTouch:
 		end;
 	}
 	else if (aru_vol == 14) {
-		enablenpc "上校 毕图#2";
 		mes "[上校 毕图]";
 		mes "What are you still";
 		mes "doing standing there?";
@@ -6568,14 +6608,12 @@ OnTouch:
 }
 
 thor_camp,187,228,5	script	上校 毕图#1	946,{
-	end;
 OnInit:
 	disablenpc "上校 毕图#1";
 	end;
 }
 
 thor_camp,155,175,7	script	上校 毕图#2	946,{
-	end;
 OnInit:
 	disablenpc "上校 毕图#2";
 	end;
@@ -6623,13 +6661,13 @@ thor_camp,159,74,3	script	上校 毕图#3	946,{
 			mes "Who do we fight for?";
 			mes "Who do we live for?";
 			next;
-			if (select("Odin:Freya:Thor") == 2) {
+			if (select("奥丁:菲依雅:托尔") == 2) {
 				break;
 			}
 			mes "[上校 毕图]";
 			mes "You idiot!";
 			percentheal -10,0;
-			specialeffect2 1; // EF_HIT2
+			specialeffect2 EF_HIT2;
 			next;
 		}
 		mes "[上校 毕图]";
@@ -6686,17 +6724,13 @@ thor_camp,159,74,3	script	上校 毕图#3	946,{
 		next;
 		while(1) {
 			mes "[上校 毕图]";
-			mes "^FF0000as a devoted servant";
-			mes "of Goddess Freya";
+			mes "^FF0000大 阿卢纳贝兹教国 菲依雅女神忠诚的侍从";
 			next;
 			input .@input$;
-			set .@answer$,"as a devoted servant of Goddess Freya";
+			set .@answer$,"大 阿卢纳贝兹教国 菲依雅女神忠诚的侍从";
 			if (.@input$ == .@answer$) {
 				mes "["+strcharinfo(0)+"]";
-				mes "as a devoted servant";
-				mes "of Goddess Freya, the";
-				mes "patron saint of the";
-				mes "great Arunafeltz,^000000";
+				mes "大 阿卢纳贝兹教国 菲依雅女神忠诚的侍从^000000";
 				next;
 				break;
 			}
@@ -6708,16 +6742,13 @@ thor_camp,159,74,3	script	上校 毕图#3	946,{
 		}
 		while(1) {
 			mes "[上校 毕图]";
-			mes "^FF0000I pledge my honor to";
-			mes "overthrow our mortal enemy";
+			mes "^FF0000把宿敌 卢恩--米德加兹王国打倒";
 			next;
 			input .@input$;
-			set .@answer$,"I pledge my honor to overthrow our mortal enemy";
+			set .@answer$,"把宿敌 卢恩--米德加兹王国打倒";
 			if (.@input$ == .@answer$) {
 				mes "["+strcharinfo(0)+"]";
-				mes "I pledge my honor to";
-				mes "overthrow our mortal enemy,";
-				mes "the Rune-Midgarts Kingdom.";
+				mes "把宿敌 卢恩--米德加兹王国打倒";
 				next;
 				break;
 			}
@@ -6729,14 +6760,13 @@ thor_camp,159,74,3	script	上校 毕图#3	946,{
 		}
 		while(1) {
 			mes "[上校 毕图]";
-			mes "^FF0000I will show no mercy^000000";
+			mes "^FF0000为了 菲依雅女神完全的复活^000000";
 			next;
 			input .@input$;
-			set .@answer$,"I will show no mercy";
+			set .@answer$,"为了 菲依雅女神完全的复活";
 			if (.@input$ == .@answer$) {
 				mes "["+strcharinfo(0)+"]";
-				mes "I will show no mercy.";
-				mes "Nothing will stay my hand.^000000";
+				mes "为了 菲依雅女神完全的复活^000000";
 				next;
 				break;
 			}
@@ -6748,17 +6778,13 @@ thor_camp,159,74,3	script	上校 毕图#3	946,{
 		}
 		while(1) {
 			mes "[上校 毕图]";
-			mes "^FF0000I shall devote";
-			mes "my entire life^000000";
+			mes "^FF0000直到生命被结束的最后一刻为止 发誓绝对不会放下刀的^000000";
 			next;
 			input .@input$;
-			set .@answer$,"I shall devote my entire life";
+			set .@answer$,"直到生命被结束的最后一刻为止 发誓绝对不会放下刀的";
 			if (.@input$ == .@answer$) {
 				mes "["+strcharinfo(0)+"]";
-				mes "I shall devote my";
-				mes "entire life to the";
-				mes "full recovery of";
-				mes "Goddess Freya.^000000";
+				mes "直到生命被结束的最后一刻为止 发誓绝对不会放下刀的^000000";
 				next;
 				break;
 			}
@@ -6770,15 +6796,13 @@ thor_camp,159,74,3	script	上校 毕图#3	946,{
 		}
 		while(1) {
 			mes "[上校 毕图]";
-			mes "^FF0000Down with the";
-			mes "Rune-Midgarts Kingdom!^000000";
+			mes "^FF0000打倒 卢恩--米德加兹 !!^000000";
 			next;
 			input .@input$;
-			set .@answer$,"Down with the Rune-Midgarts Kingdom!";
+			set .@answer$,"打倒 卢恩--米德加兹 !!";
 			if (.@input$ == .@answer$) {
 				mes "["+strcharinfo(0)+"]";
-				mes "Down with the";
-				mes "Rune-Midgarts Kingdom!^000000";
+				mes "打倒 卢恩--米德加兹 !!^000000";
 				next;
 				break;
 			}
@@ -7028,43 +7052,43 @@ thor_camp,150,65,3	script	Dummy#1::VeinsDummy	111,{
 		mes "["+strcharinfo(0)+"]";
 		mes "Yes, sir!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "One!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Two!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Three!!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Four!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Five!!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Six!!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Seven!!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Eight!!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Nine!";
 		next;
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		mes "["+strcharinfo(0)+"]";
 		mes "Ten!";
 		set aru_vol,20;
@@ -7072,7 +7096,7 @@ thor_camp,150,65,3	script	Dummy#1::VeinsDummy	111,{
 	}
 	else if (aru_vol == 20) {
 		mes "^3355FF*THUD*^000000";
-		specialeffect 1; //EF_HIT2
+		specialeffect EF_HIT2;
 		emotion e_omg,1;
 		next;
 		mes "[上校 毕图]";
@@ -7347,6 +7371,6 @@ ve_in,239,107,1	script	Male Customer#ve2	943,{
 	mes "my only friend in";
 	mes "all the world...";
 	mes "A toast... To drinking!";
-	specialeffect 86; //"Male Customer#ve2" EF_ASPERSIO
+	specialeffect EF_ASPERSIO;
 	close;
 }

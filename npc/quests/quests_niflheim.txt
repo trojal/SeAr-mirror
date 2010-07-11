@@ -208,7 +208,10 @@ nif_in,31,20,3	script	库兹咖希纳	794,{
 	close;
 }
 
-niflheim,169,71,5	script	#1	139,2,2,{
+niflheim,169,71,1	script	#1	111,1,1,{
+	end;
+
+OnTouch:
 	if(MISC_QUEST & 32 || nif_piano&8) end;
 
 	mes "- 你发现在坟墓附近 -";
@@ -225,7 +228,10 @@ L_end:
 	close;
 }
 
-niflheim,208,103,5	script	#2	139,2,2,{
+niflheim,208,103,1	script	#2	111,1,1,{
+	end;
+
+OnTouch:
 	if(MISC_QUEST & 32 || nif_piano&32) end;
 	if(nif_piano&16){
 		mes "- 你在刚挖出来的地方 -";
@@ -254,7 +260,10 @@ niflheim,208,103,5	script	#2	139,2,2,{
 	close;
 }
 
-nif_in,115,181,5	script	#4	139,3,3,{
+nif_in,115,181,1	script	#4	111,1,1,{
+	end;
+
+OnTouch:
 	mes "- 你在钢琴脱落的部分 -";
 	if((MISC_QUEST & 32)==0) mes "- with a few keys missing  -";
 	if(MISC_QUEST & 32) mes "- with one key missing -";
@@ -272,7 +281,10 @@ nif_in,115,181,5	script	#4	139,3,3,{
 }
 
 
-nif_in,118,151,5	script	#5	139,3,3,{
+nif_in,118,151,0	script	#5	111,1,1,{
+	end;
+
+OnTouch:
 	if((MISC_QUEST & 32)==0) end;
 	mes "- 你身体延长的影子 -";
 	mes "- 刚好迭在脱落 -";
