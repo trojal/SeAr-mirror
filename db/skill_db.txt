@@ -584,7 +584,7 @@
 541,9,6,4,4,0x2,2:2:3:3:4,5,1,yes,0,0,0,magic,0,	NJ_RAIGEKISAI,雷击碎
 542,9,8,1,4,0,3,5,1,yes,0,0,5:6:7:8:9,magic,0,	NJ_KAMAITACHI,朔风
 543,0,6,4,0,0x1,0,5,1,yes,0,0,0,none,0,		NJ_NEN,念
-544,-5,6,1,0,0x40,0,10,1,no,0,0,0,weapon,0,	NJ_ISSEN,一闪击
+544,-5,8,1,0,0x40,0,10,-7,no,0,0,0,weapon,0,	NJ_ISSEN,一闪击
 
 // Additional NPC Skills (Episode 11.3)
 653,0,8,4,0,0x6,5:7:9:11:13:5:7:9:11:13,10,3,no,0,0x2,0,magic,0,	NPC_EARTHQUAKE,地裂术
@@ -670,7 +670,7 @@
 2005,-2,6,1,4,0x02,3,5,1,no,0,0,0,weapon,2,	RK_WINDCUTTER,裂风之刃
 2006,-5,6,4,0,0x2,3,5,1,no,0,0,0,weapon,1,	RK_IGNITIONBREAK,爆裂之刃
 2007,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		RK_DRAGONTRAINING,训龙术
-2008,7,6,2,3,0xC2,1:1:1:2:2:2:3:3:4:4,10,1,no,0,0,0,misc,0,	RK_DRAGONBREATH,龙之吐息
+2008,9,6,2,3,0xEA,1:1:1:2:2:2:3:3:4:4,10,1,no,0,0,0,weapon,0,	RK_DRAGONBREATH,龙之吐息
 2009,0,6,4,0,0x3,3:4:5:6:7,5,1,no,0,0,0,none,2,	RK_DRAGONHOWLING,龙之咆哮
 2010,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RK_RUNEMASTERY,符文掌握
 2011,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_MILLENNIUMSHIELD,千年之盾

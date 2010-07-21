@@ -104,6 +104,7 @@ bonus bSPDrainValue,n;			物理攻击时，SP 变化 n
 bonus2 bSPGainValueOnSKill,x,n;		使用技能 x 后得到SP n
 bonus2 bHPGainValueOnSKill,x,n;		使用技能 x 后得到HP n
 bonus2 bSPDrainValue,n,x;		物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
+bonus2 bSPDrainValueRace,r,x;		物理攻击时, 种族为 r 的对象 SP 变化 n
 bonus2 bSPVanishRate,n,x;		攻击时 n/10 % 几率减少 x% 对方SP
 bonus2 bHPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到HP
 bonus2 bSPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到SP
