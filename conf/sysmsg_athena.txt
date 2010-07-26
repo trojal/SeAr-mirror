@@ -132,8 +132,8 @@
 131: 已加载城堡 %d (公会 %d)%s
 132: 无法读取
 133: 角色 %d 的公会 %d 未找到!%s
-134: 公会 %d:%s 已经有太多成员了 (%d), 最大支持 %d%s
-135: 公会 %d:%s, 成员 %d:%s 无效等级 %d%s
+134: 公会 %d:%s 已经有太多成员了 (%d), 最大支持 %d %s
+135: 公会 %d:%s, 成员 %d:%s 无效等级 %d %s
 136: 公会已创建
 137: info not found
 138: 已退出公会
@@ -171,7 +171,7 @@
 170: 删除宠物请求
 171: 已创建宠物
 172: 从数据库 - id: %d 完成加载仓库信息(总共: %d)%s
-173: 公会仓库信息储存在数据库 - 公会: %d%s
+173: 公会仓库信息储存在数据库 - 公会: %d %s
 174: 从数据库 - id: %d 完成加载公会仓库信息(总共: %d)%s
 175: 设置角色服务器IP
 176: 设置角色服务器端口
@@ -269,11 +269,11 @@
 268: 内存管理器: 内存溢出未发现。
 269: 内存管理器: 内存溢出发现并修复。
 270: 内存管理器初始化
-271: (mapindex_add) 地图编号 (%d) 来自 \"%s\" 超过范围 (最大为 %d)%s
+271: (mapindex_add) 地图编号 (%d) 来自 "%s" 超过范围 (最大为 %d)%s
 272: (mapindex_add) 无法添加无名地图.%s
 273: (mapindex_add) 地图名 %s 太长. 限制为 %d 字节.%s
-274: (mapindex_add) 覆盖编号 %d: 地图 \"%s\" -> \"%s\"%s
-275: mapindex_name2id: 地图 \"%s\" 没有在编号列表中找到!%s
+274: (mapindex_add) 覆盖编号 %d: 地图 "%s" -> "%s"%s
+275: mapindex_name2id: 地图 "%s" 没有在编号列表中找到!%s
 276: mapindex_id2name: 请求缓存中不存在的地图编号 [%d] 的名字.%s
 277: 无法读取地图编号设置文件
 278: 完成加载插件
@@ -293,24 +293,24 @@
 292: 为数据库连接保持活动状态失败
 293: 输出缓存太小
 294: 正在Ping SQL服务器以保持连接的激活状态...
-295: sv_readdb: \"%s\"第%d行有栏目不够(发现 %d, 至少 %d).%s
-296: sv_readdb: \"%s\"第%d行有太多栏(发现 %d, 最大 %d)。%s
-297: sv_readdb: 在处理文件\"%s\"时，达到最大允许处理条数(%d)。%s
-298: sv_readdb: 无法处理\"%s\"中第%d行的内容%s
+295: sv_readdb: "%s"第%d行有栏目不够(发现 %d, 至少 %d).%s
+296: sv_readdb: "%s"第%d行有太多栏(发现 %d, 最大 %d)。%s
+297: sv_readdb: 在处理文件"%s"时，达到最大允许处理条数(%d)。%s
+298: sv_readdb: 无法处理"%s"中第%d行的内容%s
 299: 完成从
 300: 中读取
 301: 条内容
 302: atcommand_conf: 设置 %s:%d 不完整! 请在 atcommand_athena.conf 按新格式设置.%s
 303: atcommand_conf: 默认 %s 玩家指令等级为 %d.%s
 304: 未知设置 '%s' 在文件 %s 中%s
-305: atcommand_cmddb_read: \"%s\" 的第 %d 行列数不够 (指令 %s)，跳过。%s
-306: atcommand_cmddb_read: 非法格式 (Script栏) 在 \"%s\" 的第 %d 行 (指令 %s)，跳过。%s
-307: atcommand_cmddb_read: 命令已存在 于 \"%s\" 的第 %d 行 (指令 %s)，跳过。%s
-308: atcommand_cmddb_read: 命令已存在 于 \"%s\" 的第 %d 行 (指令 %s)，跳过。%s
+305: atcommand_cmddb_read: "%s" 的第 %d 行列数不够 (指令 %s)，跳过。%s
+306: atcommand_cmddb_read: 非法格式 (Script栏) 在 "%s" 的第 %d 行 (指令 %s)，跳过。%s
+307: atcommand_cmddb_read: 命令已存在 于 "%s" 的第 %d 行 (指令 %s)，跳过。%s
+308: atcommand_cmddb_read: 命令已存在 于 "%s" 的第 %d 行 (指令 %s)，跳过。%s
 309: atcommand_cmddb_read: 达到自定义GM指令上限(%d)!%s
 310: 条指令，其中
 311: 条内容，来自
-312: battle_attr_fix: 未知属性类型: 攻击属性=%d 防御属性类型=%d 防御属性等级=%d%s
+312: battle_attr_fix: 未知属性类型: 攻击属性=%d 防御属性类型=%d 防御属性等级=%d %s
 313: 技能 %d:%s 选定0个目标敌人, 已防止除数为0!%s
 314: 技能 %d:%s 范围为0, 已防止除数为0!%s
 315: 未知攻击类型
@@ -337,7 +337,7 @@
 337: 登入
 338: 登出
 339: 地图服务器切换
-340: auth_db: 节点(状态：%s)超时，来自 %d:%d%s
+340: auth_db: 节点(状态：%s)超时，来自 %d:%d %s
 341: chrif_changeemail: 帐号: %d, 真实email: '%s', 新email: '%s'.%s
 342: 失败 - 玩家不在线
 343: 收到角色的名声列表
@@ -406,7 +406,7 @@
 406: NPC事件:[OnAgitEnd] 通过 @AgitEnd 运行了 (%d) 条事件。%s
 407: NPC事件:[OnAgitStart2] 通过 @AgitStart2 运行了 (%d) 条事件。%s
 408: NPC事件:[OnAgitEnd2] 通过 @AgitEnd2 运行了 (%d) 条事件。%s
-409: merc_hom_evolution: 无法把生命体 %d 进化成 %d%s
+409: merc_hom_evolution: 无法把生命体 %d 进化成 %d %s
 410: 未知菜单选项
 411: merc_hom_alloc: 未知类别 [%d] 来自生命体 '%s', 请求删除。%s
 412: read_homunculusdb : 文件 %s 中不正确的列数, 生命体 %d. 读取 %d 列, 需要50.%s
@@ -467,3 +467,33 @@
 467: 服务器运行在
 468: PK 模式
 469: 地图服务器
+470: 错误行
+471: intif_wis_message 来自 %s 至 %s (信息: '%s')%s
+472: intif_wis_message_to_gm: 来自: '%s', 最小等级: %d, 信息: '%s'.%s
+473: 非法类别
+474: intif_parse_wisend: 玩家: %s, 标记: %d %s
+475: 玩家未找到
+476: intif_parse_LoadGuildStorage: 错误公会id %d 不存在%s
+477: intif_parse_LoadGuildStorage: 收到的仓库已经被一个客户端打开 (玩家 %d:%d)%s
+478: intif_parse_LoadGuildStorage: 收到了已经修改且未保存的仓库! (玩家 %d:%d)%s
+479: 数据大小错误
+480: 完成储存
+481: intif: 由账号 %d 创建了组队%s%s
+482: 无组队信息
+483: intif: 组队成员添加成功, 队伍 (%d), 账号(%d), 角色(%d)%s
+484: intif: 队员退出组队: 队伍(%d), 账号(%d), 角色(%d)%s
+485: 无公会信息
+486: intif: guild info : 数据大小错误 Gid: %d 收到大小: %d 预期大小: %d %s
+487: 公会成员添加成功
+488: 宠物数据
+489: 宠物数据储存失败
+490: 宠物数据删除失败
+491: 创建生命体数据
+492: 生命体数据
+493: 帐号%d的生命体信息储存失败%s
+494: 生命体信息删除失败
+495: intif_parse_questlog: 任务 %d 不存在于DB中。%s
+496: intif_parse_questsave: 无法为角色 %d 储存任务!%s
+497: 创建佣兵数据大小错误
+498: 佣兵数据删除失败
+499: 佣兵数据保存失败
