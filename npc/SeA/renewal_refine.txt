@@ -1,0 +1,321 @@
+//===== eAthena Script =======================================
+//= Renewal Refining NPCs
+//===== By: ==================================================
+//= 5511
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= SeAthena 1.3.200+
+//===== Description: =========================================
+//= [Partial cRO Conversion]
+//= 武器/防具精炼+11~+20
+//=
+//= 精炼函数 精炼部分为Custom
+//= - 精炼材料/金钱为cRO需求
+//= - 精炼失败的两种概率为猜想值(需要请自行修改)
+//===== Additional Comments: =================================
+//= 1.0 First version based on eA. [5511]
+//============================================================
+
+
+
+// +11~+20防具/武器 精炼师
+//============================================================
+prt_in,90,72,4	script	贝斯特里#pro	826,{
+	callfunc "F_NewRefine","贝斯特里";
+	end;
+}
+
+payon_in01,18,132,3	script	贝斯特里#pay	826,{
+	callfunc "F_NewRefine","贝斯特里";
+	end;
+}
+
+morocc_in,60,38,4	script	贝斯特里#moc	826,{
+	callfunc "F_NewRefine","贝斯特里";
+	end;
+}
+
+// +11~+20防具/武器 精炼函数
+//=======================================
+function	script	F_NewRefine	{
+	disable_items;
+	mes "[" + getarg(0) + "]";
+	mes "我是世界上最好的铁匠" + getarg(0) + "！";
+	mes "对于普通的装备，我不提供";
+	mes "精炼服务，我只对精炼值在";
+	mes "10 以上的装备进行精炼。";
+	next;
+	mes "[" + getarg(0) + "]";
+	mes "如果你装备的装备中有精炼";
+	mes "值在10 以上的装备的话，";
+	mes "我可以帮你进行精炼。";
+	mes "你想对哪个装备进行精炼呢？";
+	next;
+
+	setarray .@position$[1], "头部","身体","左手","右手","披肩","鞋子","装饰品1","装饰品2","头部2","头部3";
+	set .@menu$,"";
+	for( set .@i,1; .@i <= 10; set .@i,.@i+1 )
+	{
+		if( getequipisequiped(.@i) )
+			set .@menu$, .@menu$ + "[" + .@position$[.@i] + " - " + getequipname(.@i) + "]";
+		else
+			set .@menu$, .@menu$ + "[" + .@position$[.@i] + "]";
+
+		set .@menu$, .@menu$ + ":";
+	}
+	set .@part,select(.@menu$);
+
+	if(!getequipisequiped(.@part) )
+	{
+		mes "[" + getarg(0) + "]";
+		switch(.@part) {
+		case 1:
+			mes "你的脑袋是装备吗?";
+			break;
+		case 2:
+			mes "你想干嘛……";
+			break;
+		case 3:
+		case 4:
+			mes "就算是我，我也没法把手变成假肢啊……";
+			break;
+		case 5:
+			mes "你知道披肩是什么吗？";
+			break;
+		case 6:
+			mes "你想精炼脚的话，别来找我，去跑马拉松好了。";
+			break;
+		case 7:
+		case 8:
+			mes "装饰品又怎么……算了。";
+			break;
+		case 9:
+			mes "呃……我好像没看到可疑精炼的装备啊？";
+			break;
+		case 10:
+			mes "脑袋不好的话，不应该来找我，而应该去找老师教你……";
+			break;
+		}
+		close2;
+		enable_items;
+		end;
+	}
+	if(!getequipisenableref(.@part)) {
+		mes "[" + getarg(0) + "]";
+		mes "这个东西就算是我也不可能精炼。没办法。";
+		close2;
+		enable_items;
+		end;
+	}
+	if(!getequipisidentify(.@part)) {
+		mes "[" + getarg(0) + "]";
+		mes "没鉴定过的东西拿来干嘛？";
+		close2;
+		enable_items;
+		end;
+	}
+	if(getequiprefinerycnt(.@part) < 10) {
+		mes "[" + getarg(0) + "]";
+		mes "我不是说过了吗？我这里只接收精炼度在10以上的装备。";
+		close2;
+		enable_items;
+		end;
+	}
+
+	// Custom
+	if(getequiprefinerycnt(.@part) >= 20) {
+		mes "[" + getarg(0) + "]";
+		mes "它已经达到最大精炼度了!";
+		close2;
+		enable_items;
+		end;
+	}
+	set .@refineitemid, getequipid(.@part);
+	set .@refinerycnt, getequiprefinerycnt(.@part);
+	switch(getequipweaponlv(.@part)){
+	case 1: // 武器(级数)
+	case 2:
+	case 3:
+	case 4:
+		set .@price,100000;
+		set .@material,6224;
+		break;
+	default: // 防具
+		set .@price,100000;
+		set .@material,6223;
+		break;
+	}
+	mes "[" + getarg(0) + "]";
+	mes "我需要^003366"+getitemname(.@material)+"^000000和" + .@price + " 的精炼费.";
+	mes "确认要精炼吗?";
+	next;
+	if(select("是的:不") == 2){
+		mes "[" + getarg(0) + "]";
+		mes "好...";
+		mes "别着急. 一切随你.";
+		close2;
+		enable_items;
+		end;
+	}
+	mes "[" + getarg(0) + "]";
+	mes "不过我还是要再次提醒你精炼的危险性。";
+	next;
+	mes "["+getarg(0)+"]";
+	mes "精炼的成功率是很低的。";
+	mes "如果失败，你可能会^FF0000失去这件装备^000000，";
+	mes "也有可能这件装备的^FF0000精炼度-3^000000。";
+	mes "你仍想要精炼吗?";
+	next;
+	if(select("是的:不") == 2){
+		mes "[" + getarg(0) + "]";
+		mes "其实我也认为没太有必要冒这个险。";
+		close2;
+		enable_items;
+		end;
+	}
+	if((countitem(.@material) < 1) || (Zeny < .@price)) {
+		mes "[" + getarg(0) + "]";
+		mes "材料不够或者金钱不够的话，";
+		mes "我是没办法帮你精炼的。你";
+		mes "先确认一下，然后再来找我。";
+		close2;
+		enable_items;
+		end;
+	}
+	set Zeny,Zeny-.@price;
+	delitem .@material,1;
+	if(getequipisequiped(.@part) == 0) {
+		mes "[" + getarg(0) + "]";
+		mes "装备怎么不见了？？！";
+		close2;
+		enable_items;
+		end;
+	}
+	if(getequiprefinerycnt(.@part) != .@refinerycnt || getequipid(.@part) != .@refineitemid) {
+		mes "[" + getarg(0) + "]";
+		mes "你有偷换装备吧！";
+		close2;
+		enable_items;
+		end;
+	}
+	if(getequippercentrefinery(.@part) <= rand(100)) {
+		mes "[" + getarg(0) + "]";
+		if(getequippercentrefinery(.@part) > rand(100) || getequippercentrefinery(.@part) > rand(100) || getequippercentrefinery(.@part) > rand(100)) { // 精炼度-3的大约概率 = 精炼成功率 * 3
+			failedrefitem2 .@part,3;
+			mes "可恶啊!";
+			mes "我说过精炼成功的几率很低的!";
+			mes "不过好在装备还在。";
+		}
+		else { // 装备消失的概率 = 100% - 精炼度-3的概率
+			failedrefitem .@part;
+			mes "啊啊啊啊啊！";
+			mes "竟然失败了！";
+			mes "抱歉没能保住你的装备……";
+		}
+		close2;
+		enable_items;
+		end;
+	}
+	mes "["+getarg(0)+"]";
+	successrefitem .@part;
+	Emotion e_heh;
+	mes "呵呵！";
+	mes "成功了~";
+	close2;
+	enable_items;
+	end;
+}
+
+
+// 魔力之石/混沌金属 兑换员
+//============================================================
+prt_in,85,71,4	script	奥斯特里#pro	826,{
+	callfunc "F_BradiumExchange","奥斯特里";
+	end;
+}
+
+payon_in01,14,125,4	script	奥斯特里#pay	826,{
+	callfunc "F_BradiumExchange","奥斯特里";
+	end;
+}
+
+morocc_in,64,41,4	script	奥斯特里#moc	826,{
+	callfunc "F_BradiumExchange","奥斯特里";
+	end;
+}
+
+// 魔力之石/混沌金属 兑换函数
+//=======================================
+function	script	F_BradiumExchange	{
+	if (checkweight(1201,1) == 0) {
+		mes "- 稍等下!!                 -";
+		mes "- 当前你携带了太多东西了.  -";
+		mes "- 先尝试减轻你的重量吧.    -";
+		close;
+	}
+	mes "[" + getarg(0) + "]";
+	mes "如果你能给我3 个神之金属";
+	mes "或3 个铝，就可以交换到1";
+	mes "个魔力之石或1 个混沌金属。";
+	mes "但我需要收取5 万的手续费。";
+	next;
+	switch(select("用神之金属交换魔力之石:用铝交换混沌金属:用精炼魔力之石交换混沌金属:取消")) {
+	case 1:
+		if (countitem(984) > 2 && Zeny > 49999) {
+			set Zeny,Zeny-50000;
+			delitem 984,3;  // 神之金属
+			getitem 6224,1;  // 魔力之石
+			mes "[" + getarg(0) + "]";
+			mes "OK! 来，这是魔力之石。";
+			mes "希望你能好好使用。";
+			close;
+		}
+		else {
+			mes "[" + getarg(0) + "]";
+			mes "材料不够或者金钱不够的话，";
+			mes "我是没办法跟你交换的。你";
+			mes "先确认一下，然后再来找我。";
+			close;
+		}
+	case 2:
+		if (countitem(985) > 2 && Zeny > 49999) {
+			set Zeny,Zeny-50000;
+			delitem 985,3;  // 铝
+			getitem 6223,1;  // 混沌金属
+			mes "[" + getarg(0) + "]";
+			mes "OK! 来，这是混沌金属。";
+			mes "希望你能好好使用。";
+			close;
+		}
+		else {
+			mes "[" + getarg(0) + "]";
+			mes "材料不够或者金钱不够的话，";
+			mes "我是没办法跟你交换的。你";
+			mes "先确认一下，然后再来找我。";
+			close;
+		}
+	case 3:
+		if (countitem(6090) > 0 && Zeny > 49999) {
+			set Zeny,Zeny-50000;
+			delitem 6090,1;  // 精炼魔力之石
+			getitem 6223,1;  // 混沌金属
+			mes "[" + getarg(0) + "]";
+			mes "精炼魔力之石要稍微贵一点……";
+			mes "我只能用1 个混沌金属来和";
+			mes "你交换。希望你能好好使用。";
+			close;
+		}
+		else {
+			mes "[" + getarg(0) + "]";
+			mes "材料不够或者金钱不够的话，";
+			mes "我是没办法跟你交换的。你";
+			mes "先确认一下，然后再来找我。";
+			close;
+		}
+	case 4:
+		mes "[" + getarg(0) + "]";
+		mes "你很无聊吗？";
+		close;
+	}
+}
