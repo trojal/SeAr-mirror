@@ -3078,15 +3078,15 @@
 6101,Attendance_Card,Attendance Card,3,0,,10,,,,,,,,,,,,,{},{},{}
 6102,Report_On_Splendide,Report On Splendide,3,0,,10,,,,,,,,,,,,,{},{},{}
 6103,Report_On_Manuk,Report On Manuk,3,0,,10,,,,,,,,,,,,,{},{},{}
-6104,Big_Cell,Big Cell,3,0,,10,,,,,,,,,,,,,{},{},{}
-6105,Morning_Dew,Morning Dew,3,0,,10,,,,,,,,,,,,,{},{},{}
-6106,Well_Ripened_Berry,Well Ripened Strawberry,3,0,,10,,,,,,,,,,,,,{},{},{}
-6107,Sunset_On_The_Rock,Sunset Cocktail,3,0,,10,,,,,,,,,,,,,{},{},{}
-6108,Apple_Pudding,Apple Pudding,3,0,,10,,,,,,,,,,,,,{},{},{}
-6109,Plant_Neutrient,Plant Nutrition,3,0,,10,,,,,,,,,,,,,{},{},{}
-6110,Vital_Flower,Flower of Life,3,0,,10,,,,,,,,,,,,,{},{},{}
-6111,Mystic_Stone,Magic of Stone,3,0,,10,,,,,,,,,,,,,{},{},{}
-6112,Fresh_Plant,Fresh Grass,3,0,,10,,,,,,,,,,,,,{},{},{}
+6104,Big_Cell,Big Cell,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6105,Morning_Dew,Morning Dew,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6106,Well_Ripened_Berry,Well Ripened Strawberry,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6107,Sunset_On_The_Rock,Sunset Cocktail,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6108,Apple_Pudding,Apple Pudding,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6109,Plant_Neutrient,Plant Nutrition,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6110,Vital_Flower,Flower of Life,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6111,Mystic_Stone,Magic of Stone,3,1000,,10,,,,,,,,,,,,,{},{},{}
+6112,Fresh_Plant,Fresh Grass,3,1000,,10,,,,,,,,,,,,,{},{},{}
 6113,Vital_Flower_,Flower of Life,3,1000,,10,,,,,,,,,,,,,{},{},{}
 6114,Flame_Gemstone,Gemstone of Fire,3,1000,,10,,,,,,,,,,,,,{},{},{}
 6115,Bun_,Child Dumpling,3,1000,,10,,,,,,,,,,,,,{},{},{}
@@ -4634,8 +4634,8 @@
 12326,J_Firecracker,J Firecracker,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12327,Charm_Of_Luck,Charm Of Luck,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12328,Charm_Of_Happiness,Charm Of Happiness,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCLUK,3600000,20; },{},{}
-12329,Recall_MaleGM,Recall MaleGM,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12330,Recall_FemaleGM,Recall FemaleGM,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12329,Recall_MaleGM,Recall MaleGM,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ mercenary_create 2000,1800000; },{},{}
+12330,Recall_FemaleGM,Recall FemaleGM,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ mercenary_create 2001,1800000; },{},{}
 12331,Ginseng,Ginseng,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 6,0; },{},{}
 12332,Fruit_Juice,Fruit Juice,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,6; },{},{}
 12333,Ansila,Ä§Á¦Ê¯,0,100,,10,,,,,0x00000100,7,2,,,,,,{ percentheal 0,15; },{},{}
@@ -4912,7 +4912,7 @@
 13035,Sandstorm,Sandstorm,4,20,,600,50,,1,4,0x00001000,2,2,2,2,70,1,1,{},{},{}
 13036,BF_Dagger1,Brave Assassin's Damascus,4,0,,0,120,,1,0,0x028F5EEF,7,2,2,3,80,1,1,{ bonus bStr,1; bonus bAgi,1; bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; if (Class == Job_Ninja || Class == Job_Rogue || Class == Job_Stalker) bonus bMatk,90; },{},{}
 13037,BF_Dagger2,Valorous Assassin's Damascus,4,0,,0,120,,1,0,0x029E7CEB,7,2,2,3,80,1,1,{ bonus bStr,1; bonus bAgi,1; bonus2 bAddRace,RC_DemiHuman,75; bonus bUnbreakableWeapon,0; autobonus "{ bonus bDefRatioAtkRace,RC_Boss; bonus bDefRatioAtkRace,RC_NonBoss; }",10,6000,BF_WEAPON,"{ specialeffect2 EF_HASTEUP; }"; if (Class == Job_Ninja || Class == Job_Rogue || Class == Job_Stalker) bonus bMatk,90; },{},{}
-13038,Dagger_Of_Hunter,×·×ÙÕß¶Ì½£,4,20,,700,120,,1,3,0x00020000,2,2,2,3,70,1,1,{ bonus bStr,1; bonus bAgi,2; bonus bDex,1; bonus4 bAutoSpellOnSkill,"RG_BACKSTAP","SM_BASH",100,10; bonus2 bSkillAtk,"RG_BACKSTAP",20; },{},{}
+13038,Dagger_Of_Hunter,×·×ÙÕß¶Ì½£,4,20,,700,120,,1,3,0x00020000,2,2,2,3,70,1,1,{ bonus bStr,1; bonus bAgi,2; bonus bDex,1; bonus4 bAutoSpellOnSkill,"RG_BACKSTAP","SM_BASH",10,100; bonus2 bSkillAtk,"RG_BACKSTAP",20; },{},{}
 13039,Ivory_Knife,ÏóÑÀØ°Ê×,4,20,,700,130,,1,2,0x000F5EEE,2,2,2,3,50,1,1,{ bonus bAgi,2; bonus bAspdRate,3; bonus2 bAddEff,Eff_Bleeding,300; bonus3 bAutoSpell,"NPC_CRITICALWOUNDS",1,30; },{},{}
 13040,N_Cutter,Novice Cutter,4,1,,0,50,,1,3,0xFE9F7EEF,7,2,2,1,1,0,1,{},{},{}
 13041,N_Main_Gauche,Novice Main Gauche,4,1,,0,65,,1,3,0xFE9F7EEF,7,2,2,1,1,0,1,{},{},{}
@@ -4989,14 +4989,14 @@
 13258,Kunai_Of_Fierce_Flame,»ðÑæ·Éµ¶,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Fire; },{},{}
 13259,Kunai_Of_Deadly_Poison,¾Þ¶¾·Éµ¶,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Poison; bonus2 bAddEff,Eff_Poison,500; },{},{}
 // Genetic Created Bombs And Lumps
-13260,Apple_Bomb,Æ»¹ûÕ¨µ¯,3,10,,10,,,,,,,,,,,,,{},{},{}
-13261,Coconut_Bomb,Ò¬×ÓÕ¨µ¯,3,10,,10,,,,,,,,,,,,,{},{},{}
-13262,Melon_Bomb,¹þÃÜ¹ÏÕ¨µ¯,3,10,,10,,,,,,,,,,,,,{},{},{}
-13263,Pineapple_Bomb,²¤ÂÜÕ¨µ¯,3,10,,10,,,,,,,,,,,,,{},{},{}
-13264,Banana_Bomb,Ïã½¶Õ¨µ¯,3,10,,10,,,,,,,,,,,,,{},{},{}
-13265,Black_Lump,ºÚÉ«¿é,3,10,,10,,,,,,,,,,,,,{},{},{}
-13266,Hard_Black_Lump,¼áÓ²µÄºÚÉ«¿é,3,10,,10,,,,,,,,,,,,,{},{},{}
-13267,Extremely_Hard_Black_Lump,·Ç³£¼áÓ²µÄºÚÉ«¿é,3,10,,10,,,,,,,,,,,,,{},{},{}
+13260,Apple_Bomb,Æ»¹ûÕ¨µ¯,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13261,Coconut_Bomb,Ò¬×ÓÕ¨µ¯,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13262,Melon_Bomb,¹þÃÜ¹ÏÕ¨µ¯,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13263,Pineapple_Bomb,²¤ÂÜÕ¨µ¯,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13264,Banana_Bomb,Ïã½¶Õ¨µ¯,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13265,Black_Lump,ºÚÉ«¿é,10,500,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13266,Hard_Black_Lump,¼áÓ²µÄºÚÉ«¿é,10,500,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13267,Extremely_Hard_Black_Lump,·Ç³£¼áÓ²µÄºÚÉ«¿é,10,500,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
 13268,Mysterious_Powder,ÉñÃØ·ÛÄ©,3,10,,10,,,,,,,,,,,,,{},{},{}
 // Generic Created Throwable Booster Items
 13269,Throwing_Boost_500,Throwing Boost 500,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -6065,10 +6065,10 @@
 //16589,Thoughtful_Hat_Box
 //16590,Thoughtful_Hat_Box
 // Mechanic Mado Gear Cannonball Ammo
-18000,Cannon_Ball,¼ÓÅ©ÅÚµ¯,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,3,{},{},{}
-18001,Holy_Cannon_Ball,Ê¥_¼ÓÅ©ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,3,{ bonus bAtkEle,Ele_Holy; },{},{}
-18002,Dark_Cannon_Ball,°µ_¼ÓÅ©ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,3,{ bonus bAtkEle,Ele_Dark; },{},{}
-18003,Soul_Cannon_Ball,Äî_¼ÓÅ©ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,3,{ bonus bAtkEle,Ele_Ghost; },{},{}
-18004,Iron_Cannon_Ball,¸Ö_¼ÓÅ©ÅÚµ¯,10,500,,10,250,,,,0x00000400,8,2,32768,,1,,3,{},{},{}
+18000,Cannon_Ball,¼ÓÅ©ÅÚµ¯,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
+18001,Holy_Cannon_Ball,Ê¥_¼ÓÅ©ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
+18002,Dark_Cannon_Ball,°µ_¼ÓÅ©ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
+18003,Soul_Cannon_Ball,Äî_¼ÓÅ©ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
+18004,Iron_Cannon_Ball,¸Ö_¼ÓÅ©ÅÚµ¯,10,500,,10,250,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
 //18101,Bow_Of_Rudra
 18103,Mystic_Bow,ÉñµzµÄ¹­,4,10,,170,75,,,,0x00100800,8,2,34,3,105,1,11,{ bonus bMatk,100; bonus bInt,4; bonus2 bSPGainValueOnSKill,"RA_ARROWSTORM",-10; },{},{}
