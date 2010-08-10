@@ -73,3 +73,4 @@ OnPCPartyLeaveEvent	玩家离开组队时，运行标签下的脚本。脚本对离开队伍者运行。
 OnPCGuildCreateEvent	玩家创建公会时，运行标签下的脚本。脚本对创建公会者运行。
 OnPCGuildJoinEvent	玩家加入公会时，运行标签下的脚本。脚本对加入公会者运行。
 OnPCGuildLeaveEvent	玩家离开公会时，运行标签下的脚本。脚本对离开公会者运行。
+OnNPCDropItemEvent	魔物掉落物品事件。关联杀死该魔物的玩家，赋予关联者变量@dropitem_id
