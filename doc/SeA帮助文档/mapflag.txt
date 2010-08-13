@@ -48,8 +48,8 @@ indoors			室内
 nogo			无法用指令到达
 nobaseexp		没有基本经验
 nojobexp		没有职业经验
-nomobloot		普通魔物不掉落物品
-nomvploot		MVP魔物不掉落物品
+nomobloot		所有魔物掉落物品的几率的比率,100为不掉落，0为正常，小于0增加掉率，-100为2倍。
+nomvploot		MVP魔物不掉落MVP物品
 noloot			所有魔物不掉落物品
 nightenabled		黑夜
 restricted		所有列出技能物品受限地图(设置道具或技能id为 -1 时，对所有物品有效)
@@ -62,3 +62,4 @@ partylock		无法加入组队
 guildlock		无法加入公会
 noautoloot		无法自动拾取
 nomobinfo		不显示魔物等级血量等信息
+notalk			所在地图无法收到聊天频道所有信息

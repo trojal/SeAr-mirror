@@ -301,6 +301,8 @@ mf_town	52
 mf_autotrade	53
 mf_allowks	54
 mf_monster_noteleport	55
+mf_droprate	56
+mf_nochat	57
 
 cell_walkable	0
 cell_shootable	1
