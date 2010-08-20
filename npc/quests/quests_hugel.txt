@@ -8441,7 +8441,8 @@ hu_in01,14,11,4	script	拉萝拉	70,{
 					case 2:
 						break;
 				}
-				break;
+				// Allow fall-through into the next case statment as this is a minor bug in aegis.
+				//break;
 			
 			case 2:
 				mes "[拉萝拉]";

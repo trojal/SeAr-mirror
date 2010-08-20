@@ -3,7 +3,7 @@
 //===== By: ==================================================
 //= L0ne_W0lf
 //===== Current Version: =====================================
-//= 1.0
+//= 1.5
 //===== Compatible With: =====================================
 //= eAthena SVN
 //===== Description: =========================================
@@ -11,6 +11,11 @@
 //= Seal away the Great Demon Baphomet.
 //===== Additional Comments: =================================
 //= 1.0 First version. [L0ne_W0lf]
+//= 1.1 Added setquest for instance cooldown. [L0ne_W0lf]
+//= 1.2 Fixed Torch#12 not being disabled. (bugreport:4044) [L0ne_w0lf]
+//= 1.3 Fixed cutins not being removed. (bugreport:4117) [L0ne_w0lf]
+//= 1.4 Fixed some typos. [Gepard]
+//= 1.5 Fixed not being able to enter dungeon for the first two hours.
 //===== 翻译: =================================
 //= 翻译 Blue狮子 QQ: 88369337
 //= 校对 5511 (队长检查，和6001数量检查)
@@ -19,6 +24,7 @@
 
 // Sealed Catacomb Entrance
 monk_test,309,146,3	script	修道士 帕特里克	412,{
+	if (checkquest(3040)>=0) erasequest 3040;
 	cutin "ins_cata_pri_n",2;
 	mes "[修道士 帕特里克]";
 	mes "这个世界的平静即将被打破...恶魔即将把他们邪恶的双手再次伸向这个世界...从灾难诞生之地而来...";
@@ -72,9 +78,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			next;
 			mes "[修道士 帕特里克]";
 			mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
-			close2;
-			cutin "",255;
-			end;
+			break;
 		case 2:
 			cutin "ins_cata_pri_n",2;
 			mes "[修道士 帕特里克]";
@@ -82,10 +86,9 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			next;
 			mes "[修道士 帕特里克]";
 			mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
-			close2;
-			cutin "",255;
-			end;
+			break;
 		}
+		break;
 	case 2:
 		if (BaseLevel > 74) {
 
@@ -94,137 +97,121 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			set .@partymembercount,$@partymembercount;
 			copyarray .@partymembername$[0],$@partymembername$[0],.@partymembercount;
 
-			mes "[修道士 帕特里克]";
-			mes "你是说准备进入这个邪恶的墓穴, 将巴风特重新封印???";
+			mes "[Friar Patrick]";
+			mes "Do you mean you'll go to the grave and reseal Baphomet?";
 			next;
-			set .@ins_bapho_check,checkquest(3040,PLAYTIME);
+
+			// 12 hour cooldown
+			set .@ins_bapho_check,checkquest(3046,PLAYTIME);
+			// Two hour play limit
 			set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
 
-			if ((.@ins_bapho_check != 2) && (.@ins_bapho_check2 == 2)) {
-				mes "[修道士 帕特里克]";
-				mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
-				close2;
-				cutin "",255;
-				end;
-			}
+			if (.@ins_bapho_check < 2) {
+				if (.@ins_bapho_check == -1) {
+					if ((getpartyleader(.@party_id,2) == getcharid(0)) && (.@partymembercount > 1)) {
+						set .@instance, instance_create("Sealed Catacombs", .@party_id);
+						if (.@instance < 0) {
+							mes "[修道士 帕特里克]";
+							mes "队伍名字是 "+getpartyname(.@party_id)+"...";
+							mes "队长的名字 "+.@partymembername$[0]+"...";
+							mes "唔...好像有点问题...我再检查一次,请稍等.";
+						}
+						else {
 
-			if (.@ins_bapho_check == -1) {
-				if ((getpartyleader(.@party_id,2) == getcharid(0)) && (.@partymembercount > 1)) {
-					set .@instance, instance_create("Sealed Catacombs", .@party_id);
-					if (.@instance < 0) {
-						mes "[修道士 帕特里克]";
-						mes "队伍名字是 "+getpartyname(.@party_id)+"...";
-						mes "队长的名字 "+.@partymembername$[0]+"...";
-						mes "唔...好像有点问题...我再检查一次,请稍等.";
-						close2;
-						cutin "",255;
+							for( set .@i, 1; .@i <= 2; set .@i, .@i + 1 ) {
+								if( instance_attachmap("" + .@i + "@cata", .@instance) == "" )
+									break;
+							}
+							if( .@i < 2 ) {
+								instance_destroy(.@instance);
+								close;
+							}
+
+							instance_attach(.@instance);
+							instance_set_timeout 14400,300,.@instance;
+							instance_init(.@instance);
+
+							// First Floor
+							disablenpc instance_npcname("远古英雄的灵魂#1F", instance_id());
+							disablenpc instance_npcname("ins_bapho_to_2f", instance_id());
+
+							for( set .@i, 1; .@i < 13; set .@i, .@i + 1 ) {
+								disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"T", instance_id());
+								disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"F", instance_id());
+							}
+							for( set .@i, 1; .@i <= 12; set .@i, .@i + 1 ) {
+								disablenpc instance_npcname("火把#"+.@i, instance_id());
+							}
+
+							// Second Floor
+							disablenpc instance_npcname("ins_baphomet_1f_timer", instance_id());
+							disablenpc instance_npcname("ins_2f_enter_broad", instance_id());
+							disablenpc instance_npcname("封印#0", instance_id());
+							disablenpc instance_npcname("封印#2", instance_id());
+							disablenpc instance_npcname("封印#4", instance_id());
+							disablenpc instance_npcname("封印#8", instance_id());
+							disablenpc instance_npcname("封印#10", instance_id());
+							disablenpc instance_npcname("远古英雄的灵魂#2F", instance_id());
+							disablenpc instance_npcname("control_baphomet", instance_id());
+							disablenpc instance_npcname("ins_2f_hero_broad2", instance_id());
+							disablenpc instance_npcname("2f_callmon_pattern_c", instance_id());
+							disablenpc instance_npcname("2f_callmon_pattern", instance_id());
+							disablenpc instance_npcname("ins_2f_hero_pattern_c", instance_id());
+							disablenpc instance_npcname("ins_2f_hero_pattern", instance_id());
+
+							// Pick proper grave
+							donpcevent instance_npcname("ins_baphomet_lotto", instance_id())+"::OnEnable";
+
+							// Spawn monsters.
+							donpcevent instance_npcname("ins_1f_spawn_mobs", instance_id())+"::OnEnable";
+
+							mes "[修道士 帕特里克]";
+							mes "队伍名字是 "+getpartyname(.@party_id)+"...";
+							mes "队长名字是 "+.@partymembername$[0]+"...";
+							mes "Okay...我将调节墓穴封印以便你和你的同伴能够进入.";
+							next;
+							mes "[修道士 帕特里克]";
+							mes "封印的调节结束时,你会看到一个标志，到时就可以进去了.";
+							mes "请等待标志出现.";
+							next;
+							mes "[修道士 帕特里克]";
+							mes "当你看到标志时,把手放在墓穴的祭坛上,这样就可以进入墓穴内部了.";
+							next;
+							mes "[修道士 帕特里克]";
+							mes "有件事你必须记住: 任何进入墓穴的人都将受到巴风特的诅咒. 在被诅咒期间将无法离开和进入墓穴.";
+							next;
+							mes "[修道士 帕特里克]";
+							mes "还有一件事...在受诅咒的区域里,一些通过外部物理防御力来增加保护的技能将被封印影响.";
+							next;
+							mes "[修道士 帕特里克]";
+							mes "比如 ^0000FF暗之障壁, 圣母之祈福^000000... 因此进入墓穴前你最好做好准备.";
+						}
 					}
 					else {
-
-						for( set .@i, 1; .@i <= 2; set .@i, .@i + 1 ) {
-							if( instance_attachmap("" + .@i + "@cata", .@instance) == "" )
-								break;
-						}
-						if( .@i < 2 ) {
-							instance_destroy(.@instance);
-							close;
-						}
-
-						instance_attach(.@instance);
-						instance_set_timeout 14400,300,.@instance;
-						instance_init(.@instance);
-
-						// First Floor
-						disablenpc instance_npcname("远古英雄的灵魂#1F", instance_id());
-						disablenpc instance_npcname("ins_bapho_to_2f", instance_id());
-						for( set .@i, 1; .@i < 13; set .@i, .@i + 1 ) {
-							disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"T", instance_id());
-							disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"F", instance_id());
-						}
-						for( set .@i, 1; .@i <= 12; set .@i, .@i + 1 ) {
-							disablenpc instance_npcname("火把#"+.@i, instance_id());
-						}
-
-						// Second Floor
-						disablenpc instance_npcname("ins_baphomet_1f_timer", instance_id());
-						disablenpc instance_npcname("ins_2f_enter_broad", instance_id());
-						disablenpc instance_npcname("封印#0", instance_id());
-						disablenpc instance_npcname("封印#2", instance_id());
-						disablenpc instance_npcname("封印#4", instance_id());
-						disablenpc instance_npcname("封印#8", instance_id());
-						disablenpc instance_npcname("封印#10", instance_id());
-						disablenpc instance_npcname("远古英雄的灵魂#2F", instance_id());
-						disablenpc instance_npcname("control_baphomet", instance_id());
-						disablenpc instance_npcname("ins_2f_hero_broad2", instance_id());
-						disablenpc instance_npcname("2f_callmon_pattern_c", instance_id());
-						disablenpc instance_npcname("2f_callmon_pattern", instance_id());
-						disablenpc instance_npcname("ins_2f_hero_pattern_c", instance_id());
-						disablenpc instance_npcname("ins_2f_hero_pattern", instance_id());
-
-						// Pick proper grave
-						donpcevent instance_npcname("ins_baphomet_lotto", instance_id())+"::OnEnable";
-
-						// Spawn monsters.
-						donpcevent instance_npcname("ins_1f_spawn_mobs", instance_id())+"::OnEnable";
-
 						mes "[修道士 帕特里克]";
-						mes "队伍名字是 "+getpartyname(.@party_id)+"...";
-						mes "队长名字是 "+.@partymembername$[0]+"...";
-						mes "Okay...我将调节墓穴封印以便你和你的同伴能够进入.";
+						mes "唔...我很欣赏你的勇气, 但是, 我不会允许任何人单独进入这里. 如果是一支队伍我倒是可以考虑.";
 						next;
 						mes "[修道士 帕特里克]";
-						mes "封印的调节结束时,你会看到一个标志，到时就可以进去了.";
-						mes "请等待标志出现.";
-						next;
-						mes "[修道士 帕特里克]";
-						mes "当你看到标志时,把手放在墓穴的祭坛上,这样就可以进入墓穴内部了.";
-						next;
-						mes "[修道士 帕特里克]";
-						mes "有件事你必须记住: 任何进入墓穴的人都将受到巴风特的诅咒. 在被诅咒期间将无法离开和进入墓穴.";
-						next;
-						mes "[修道士 帕特里克]";
-						mes "还有一件事...在受诅咒的区域里,一些通过外部物理防御力来增加保护的技能将被封印影响.";
-						next;
-						mes "[修道士 帕特里克]";
-						mes "比如 ^0000FF暗之障壁, 圣母之祈福^000000... 因此进入墓穴前你最好做好准备.";
-						close2;
-						cutin "",255;
+						mes "当队长获得进入许可时, 队伍的其他成员才能随后进入. 这是修道院的规矩.";
 					}
-					end;
 				}
-				else {
+				else if ((.@ins_bapho_check == 0) || (.@ins_bapho_check == 1)) {
 					mes "[修道士 帕特里克]";
-					mes "唔...我很欣赏你的勇气, 但是, 我不会允许任何人单独进入这里. 如果是一支队伍我倒是可以考虑.";
+					mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
+				}
+				else if (.@ins_bapho_check == 2) {
+					mes "[修道士 帕特里克]";
+					mes "唔... 看起来巴风特的诅咒变弱了,现在我可以移除诅咒了.";
 					next;
 					mes "[修道士 帕特里克]";
-					mes "当队长获得进入许可时, 队伍的其他成员才能随后进入. 这是修道院的规矩.";
-					close2;
-					cutin "",255;
-					end;
+					mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
+					next;
+					if (checkquest(3046)) erasequest 3046;
+					if (checkquest(3041)) erasequest 3041;
+					if (checkquest(3045)) erasequest 3045;
+					mes "[修道士 帕特里克]";
+					mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
 				}
-			}
-			else if ((.@ins_bapho_check == 0) || (.@ins_bapho_check == 1)) {
-				mes "[修道士 帕特里克]";
-				mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
-				close2;
-				cutin "",255;
-				end;
-			}
-			else if (.@ins_bapho_check == 2) {
-				mes "[修道士 帕特里克]";
-				mes "唔... 看起来巴风特的诅咒变弱了,现在我可以移除诅咒了.";
-				next;
-				mes "[修道士 帕特里克]";
-				mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
-				next;
-				erasequest 3040;
-				erasequest 3041;
-				erasequest 3045;
-				mes "[修道士 帕特里克]";
-				mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
-				close2;
-				cutin "",255;
-				end;
 			}
 		}
 		else {
@@ -233,10 +220,8 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			next;
 			mes "[修道士 帕特里克]";
 			mes "请多锻炼锻炼再来吧.";
-			close2;
-			cutin "",255;
 		}
-		end;
+		break;
 	case 3:
 		if (.@doll == 1) {
 			mes "[修道士 帕特里克]";
@@ -255,9 +240,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			mes "[修道士 帕特里克]";
 			mes "去修道院大厅附近找 ^0000FF锈蚀的黑手^000000 ...它能帮你用这个娃娃做点什么.";
 			setquest 3042;
-			close2;
-			cutin "",255;
-			end;
+			break;
 		}
 	case 4:
 		mes "[修道士 帕特里克]";
@@ -265,16 +248,17 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 		next;
 		mes "[修道士 帕特里克]";
 		mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
-		close2;
-		cutin "",255;
-		end;
+		break;
 	}
+	close2;
+	cutin "",255;
+	end;
 }
 
 monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
-	if (countitem(6002) > 0) {
+	if (checkquest(3040)>=0) erasequest 3040;
+	if (countitem(6002) > 0)
 		delitem 6002,countitem(6002); //Token_Of_Apostle门徒的标示
-	}
 	mes "这个石墓穴上有一个巨大、邪恶山羊角的雕像,不详的感觉从中散发出来.";
 	next;
 	switch(select("触碰它:退后")) {
@@ -288,19 +272,14 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 		set .@instance, instance_id(1);
 		instance_attach(.@instance);
 
-		set .@ins_bapho_check,checkquest(3040,PLAYTIME);
+		// 12 hour cooldown
+		set .@ins_bapho_check,checkquest(3046,PLAYTIME);
+		// Two hour play limit
 		set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
 
-		if ((.@ins_bapho_check != 2) && (.@ins_bapho_check2 == 2)) {
-			mes "[修道士 帕特里克]";
-			mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
-			close;
-		}
-
-		if (.@ins_bapho_check == -1) {
+		if ((.@ins_bapho_check == -1) || ((.@ins_bapho_check2 >= 0) && (.@ins_bapho_check2 < 2))) {
 			if (has_instance("1@cata") == "") {
 				mes "摸起来很冰冷,但是并没有任何反应.";
-				close;
 			}
 			//else if (ret == 2) {
 			//	mes "It's cold to the touch. But, there is no response.";
@@ -310,20 +289,18 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 				mes "[修道士 帕特里克]";
 				mes "要进入这个地方你必须有一个队伍.";
 				mes "请加入一个队伍后再来.";
-				close;
 			}
 			//else if (ret == 0) {
 			else {
 				mapannounce "monk_test","队伍 [" + getpartyname(.@party_id) + "] 的成员 [" + strcharinfo(0) + "] 进入了封印神殿",bc_map,"0x00ff99";
-				setquest 3040;
+				setquest 3046;
+				setquest 3045;
 				warp "1@cata",100,224;
-				close;
 			}
 		}
 		else if ((.@ins_bapho_check == 0) || (.@ins_bapho_check == 1)) {
 			mes "[修道士 帕特里克]";
 			mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
-			close;
 		}
 		else if (.@ins_bapho_check == 2) {
 			mes "[修道士 帕特里克]";
@@ -332,17 +309,18 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 			mes "[修道士 帕特里克]";
 			mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
 			specialeffect2 EF_HOLYHIT;
-			erasequest 3040;
-			erasequest 3041;
-			erasequest 3045;
+			if (checkquest(3046)) erasequest 3046;
+			if (checkquest(3041)) erasequest 3041;
+			if (checkquest(3045)) erasequest 3045;
 			next;
 			mes "[修道士 帕特里克]";
 			mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
-			close;
 		}
+		break;
 	case 2:
-		close;
+		break;
 	}
+	close;
 }
 
 prt_monk,261,91,3	script	锈蚀的黑手#edq	826,{
@@ -996,13 +974,13 @@ OnTouch:
 		else {
 			mes "[远古英雄的灵魂]";
 			mes "再次提醒你, 我需要一个小时后才能完成实体化. 因此你们要在这个时间里完成需要做的准备.";
-			set 'ins_baphomet,3;
+			//set 'ins_baphomet,3;
 		}
 		close2;
 		cutin "",255;
 		end;
 	}
-	else if (('ins_baphomet == 3) && (getpartyleader(.@party_id,2) == getcharid(0))) {
+	else if ('ins_baphomet == 3) {
 		cutin "ins_cata_champ_n",2;
 		mes "[远古英雄的灵魂]";
 		mes "你收集好 ^0000FF10个战神的精魄^000000 和 ^0000FF门徒的标示^000000 了吗?";
@@ -1039,7 +1017,7 @@ OnTouch:
 		cutin "",255;
 		end;
 	}
-	else if (('ins_baphomet == 4) && (getpartyleader(.@party_id,2) == getcharid(0))) {
+	else if ('ins_baphomet == 4) {
 		cutin "ins_cata_champ_n",2;
 		mes "[远古英雄的灵魂]";
 		mes "准备好了吗? 我现在打开封印之门, 你要携带 ^0000FF门徒的标示^000000.";
@@ -2158,9 +2136,9 @@ OnTouch:
 
 2@cata,80,63,4	script	远古英雄的灵魂#2F	411,{
 	cutin "ins_cata_champ_s",2;
-	erasequest 3041;
-	erasequest 3040;
-	setquest 3040;
+	if (checkquest(3041)) erasequest 3041;
+	if (checkquest(3046)) erasequest 3046;
+	setquest 3046;
 	mes "[远古英雄的灵魂]";
 	mes "做得不错, 我的孩子们. 你满足了我和我的同伴们长久以来都无法达成的期望.";
 	next;
@@ -2246,7 +2224,7 @@ OnDisable:
 OnMyMobDead:
 	if (mobcount("2@cata",instance_npcname("control_baphomet", instance_id())+"::OnMyMobDead") < 1) {
 		set 'ins_baphomet,7;
-		setquest 3040;
+		setquest 3046;
 		erasequest 3041;
 		instance_announce 0, "魔王巴风特 : 不!不不不!! 这怎么可能??? 我怎么又被这些微不足道的人类侮辱了呢??? 你们绝不可能.... 你们绝不可能再次封印我!!!",bc_map,"0xdb7093";
 		enablenpc instance_npcname("远古英雄的灵魂#2F", instance_id());

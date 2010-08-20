@@ -3,7 +3,7 @@
 //===== By: ==================================================
 //= L0ne_W0lf
 //===== Current Version: =====================================
-//= 1.9
+//= 2.1
 //===== Compatible With: =====================================
 //= eAthena SVN
 //===== Description: =========================================
@@ -34,6 +34,10 @@
 //= 1.8 Added a missing " in the GM only NPC.
 //= 1.9 Added Monster Suppression, Bradium Collection, and 
 //=     Laphine Craftsman quests.
+//= 2.0 Added missing global var check in Yggdrasil Dungeon
+//=     floor 2 puzzle. Fixed a typo. Commented out untranslated
+//=     line. [Gepard]
+//= 2.1 Fixed Myterious Rock 31, and Cart Hand Agents.
 //============================================================ 
 
 // Cat Hand Addition.
@@ -158,7 +162,7 @@ spl_fild02,25,211,4	script	Cat Hand Agent#spl	421,{
 			mes "[Cat Hand Agent]";
 			mes "With " + ep13_yong1 + " credit points, we offer the following warp services. Please remember, you can't come back easily once you move to Midgard.";
 			next;
-			if ((ep13_yong1 > 39) && (ep13_yong1 < 49)) {
+			if ((ep13_yong1 > 39) && (ep13_yong1 < 50)) {
 				switch(select("Prontera -> 5500z:Cancel")) {
 				case 1:
 					if (Zeny >= 5500) {
@@ -175,7 +179,7 @@ spl_fild02,25,211,4	script	Cat Hand Agent#spl	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 49) && (ep13_yong1 < 59)) {
+			else if ((ep13_yong1 > 49) && (ep13_yong1 < 60)) {
 				switch(select("Alberta -> 5500z:Prontera -> 5500z:Cancel")) {
 				case 1:
 					if (Zeny >= 5500) {
@@ -203,7 +207,7 @@ spl_fild02,25,211,4	script	Cat Hand Agent#spl	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 59) && (ep13_yong1 < 69)) {
+			else if ((ep13_yong1 > 59) && (ep13_yong1 < 70)) {
 				switch(select("Alberta -> 5025z:Prontera -> 5025z:Izlude -> 5025z:Cancel")) {
 				case 1:
 					if (Zeny >= 5025) {
@@ -242,7 +246,7 @@ spl_fild02,25,211,4	script	Cat Hand Agent#spl	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 69) && (ep13_yong1 < 79)) {
+			else if ((ep13_yong1 > 69) && (ep13_yong1 < 80)) {
 				switch(select("Alberta -> 5025z:Prontera -> 5025z:Izlude -> 5025z:Geffen -> 5025z:Cancel")) {
 				case 1:
 					if (Zeny >= 5025) {
@@ -292,7 +296,7 @@ spl_fild02,25,211,4	script	Cat Hand Agent#spl	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 79) && (ep13_yong1 < 89)) {
+			else if ((ep13_yong1 > 79) && (ep13_yong1 < 90)) {
 				switch(select("Alberta -> 4765z:Prontera -> 4765z:Izlude -> 4765z:Geffen -> 4765z:Payon -> 4765z:Cancel")) {
 				case 1:
 					if (Zeny >= 4765) {
@@ -353,7 +357,7 @@ spl_fild02,25,211,4	script	Cat Hand Agent#spl	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 89) && (ep13_yong1 < 99)) {
+			else if ((ep13_yong1 > 89) && (ep13_yong1 < 100)) {
 				switch(select("Alberta -> 4765z:Prontera -> 4765z:Izlude -> 4765z:Geffen -> 4765z:Payon -> 4765z:Morroc -> 4765z:Cancel")) {
 				case 1:
 					if (Zeny >= 4765) {
@@ -1135,7 +1139,7 @@ man_fild02,132,47,4	script	Cat Hand Agent#man	421,{
 			mes "[Cat Hand Agent]";
 			mes "With " + ep13_yong1 + " credit points, we offer the following warp services. Please remember, you can't come back easily once you move to Midgard.";
 			next;
-			if ((ep13_yong1 > 39) && (ep13_yong1 < 49)) {
+			if ((ep13_yong1 > 39) && (ep13_yong1 < 50)) {
 				switch(select("Prontera -> 5500z:Cancel")) {
 				case 1:
 					if (Zeny >= 5500) {
@@ -1152,7 +1156,7 @@ man_fild02,132,47,4	script	Cat Hand Agent#man	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 49) && (ep13_yong1 < 59)) {
+			else if ((ep13_yong1 > 49) && (ep13_yong1 < 60)) {
 				switch(select("Alberta -> 5500z:Prontera -> 5500z:Cancel")) {
 				case 1:
 					if (Zeny >= 5500) {
@@ -1180,7 +1184,7 @@ man_fild02,132,47,4	script	Cat Hand Agent#man	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 59) && (ep13_yong1 < 69)) {
+			else if ((ep13_yong1 > 59) && (ep13_yong1 < 70)) {
 				switch(select("Alberta -> 5025z:Prontera -> 5025z:Izlude -> 5025z:Cancel")) {
 				case 1:
 					if (Zeny >= 5025) {
@@ -1219,7 +1223,7 @@ man_fild02,132,47,4	script	Cat Hand Agent#man	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 69) && (ep13_yong1 < 79)) {
+			else if ((ep13_yong1 > 69) && (ep13_yong1 < 80)) {
 				switch(select("Alberta -> 5025z:Prontera -> 5025z:Izlude -> 5025z:Geffen -> 5025z:Cancel")) {
 				case 1:
 					if (Zeny >= 5025) {
@@ -1269,7 +1273,7 @@ man_fild02,132,47,4	script	Cat Hand Agent#man	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 79) && (ep13_yong1 < 89)) {
+			else if ((ep13_yong1 > 79) && (ep13_yong1 < 90)) {
 				switch(select("Alberta -> 4765z:Prontera -> 4765z:Izlude -> 4765z:Geffen -> 4765z:Payon -> 4765z:Cancel")) {
 				case 1:
 					if (Zeny >= 4765) {
@@ -1330,7 +1334,7 @@ man_fild02,132,47,4	script	Cat Hand Agent#man	421,{
 					close;
 				}
 			}
-			else if ((ep13_yong1 > 89) && (ep13_yong1 < 99)) {
+			else if ((ep13_yong1 > 89) && (ep13_yong1 < 100)) {
 				switch(select("Alberta -> 4765z:Prontera -> 4765z:Izlude -> 4765z:Geffen -> 4765z:Payon -> 4765z:Morroc -> 4765z:Cancel")) {
 				case 1:
 					if (Zeny >= 4765) {
@@ -2012,7 +2016,7 @@ man_fild02,146,81,0	script	Mysterious Rock#31	844,{
 		else if (.@rhea_ran == 16) {
 			getitem 993,1; //Yellow_Live
 		}
-		else if (.@rhea_ran > 17) {
+		else if (.@rhea_ran == 17) {
 			getitem 6080,1; //Manuk_Coin
 		}
 		else if (.@rhea_ran > 18) {
@@ -5080,6 +5084,7 @@ man_in01,378,276,3	script	Manuk Engineer#ep13_2	453,{
 					mes "[Manuk Engineer]";
 					mes "To prevent our bodies from becoming numb, we need Bradium.";
 					mes "From the Bradium we can extract a special element that we need to survive.";
+					//mes "Ã·?Ãÿ ‚µ???¨≤¢æ≠≥£'”·£";
 					next;
 					mes "[Manuk Engineer]";
 					mes "The mining industry is primary here since our lives depend on it.";
@@ -7615,7 +7620,7 @@ OnInit:
 	enablenpc "#mj01_01";
 	end;
 
-.@get_stone:
+OnTouch:
 	if ((ep13_2_tre == 2) && (countitem(6076) == 1)) {
 		if (countitem(6077) < 10) {
 			specialeffect EF_COUPLECASTING; 
@@ -7687,7 +7692,7 @@ OnInit:
 	enablenpc "#mj01_02";
 	end;
 
-.@get_stone:
+OnTouch:
 	if ((ep13_2_tre == 2) && (countitem(6076) == 1)) {
 		if (countitem(6077) < 10) {
 			specialeffect EF_COUPLECASTING;
