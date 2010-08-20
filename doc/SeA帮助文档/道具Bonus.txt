@@ -198,6 +198,8 @@ bonus bCriticalDef,n;			减少 n% 被爆击几率
 bonus2 bFixDamage,t,n;			在 t 条件下攻击伤害固定为 n (t值见备注10)
 bonus2 bBonusDamage,t,n;		在 t 条件下攻击固定增加伤害 n (t值见备注10)
 bonus2 bFixDamageWhenHit,t,n;		在 t 条件下受到攻击伤害固定为 n (t值见备注10)
+bonus3 bAddEle,n,x,t;			在 t 条件下 对n属性 增加x% 物理伤害 (t值见备注10)(n值见备注2)
+bonus3 bSubEle,n,x,t;			在 t 条件下 对n属性 减少x% 物理伤害 (t值见备注10)(n值见备注2)
 
 //=========================================================
 //=技能效果修正
