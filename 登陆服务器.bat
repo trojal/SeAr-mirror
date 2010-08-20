@@ -1,6 +1,6 @@
 @echo off
 :end
-login-server_sql.exe
+login-server.exe
 echo .
 echo .
 echo 登陆服务器出错! 15秒后重启! 按 Ctrl+C 取消重启!

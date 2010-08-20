@@ -18,7 +18,8 @@
 6.- 其他指令.		(已汉化)
 7.- 副本系统指令.
 8.- 任务系统指令.	(已汉化)
-9.- SeA指令.		(已汉化)
+9.- 战场指令
+10.- SeA指令.		(已汉化)
 
 =====================
 |1.- Basic commands.|
@@ -5648,8 +5649,134 @@ checkquest(<ID>{,PLAYTIME|HUNTING});
 
 ---------------------------------------
 
+===========================
+|9.- 战场指令.|
+===========================
+---------------------------------------
+
+*waitingroom2bg_single("<mapname>",<x>,<y>,"<On Quit Event>","<On Death Event>");
+*waitingroom2bg("<mapname>",<x>,<y>,"<On Quit Event>","<On Death Event>");
+
+<Mapname> and X Y coordinates refer to where the "respawn" base is, where the player group will respawn when they die.
+<On Quit Event> refers to an NPC label that attaches to the character and is run when they relog.
+<On Death Event> refers to an NPC label that attaches to the character and is run when they die. Can be "" for empty.
+
+Unlike the prior command, the latter will attach a GROUP in a waiting room to the battleground, and 
+sets the array $@arenamembers[0] where 0 holds the IDs of the first group, and 1 holds the IDs of the second.
+
+Example:
+	// Battle Group will be refered to as $@KvM01BG_id1, and when they die, respawn at bat_c01,52,129.
+	set $@KvM01BG_id1, waitingroom2bg("bat_c01",52,129,"KvM01_BG::OnGuillaumeQuit","KvM01_BG::OnGuillaumeDie");
+	end;
+
+----------------------------------------
+
+*bg_team_setxy <Battle Group ID>,<x>,<y>;
+
+Update the respawn point of the given battle group to x, y on the same map. The <Battle Group ID> can be retrieved using getcharid(4)
+
+Example:
+	bg_team_setxy getcharid(4),56,212;
+	mapannounce "bat_a01", "Group [1] has taken the work shop, and will now respawn there.",bc_map,"0xFFCE00";
+	end;
+
+----------------------------------------
+
+*bg_warp <Battle Group>,"<Mapname>",<x>,<y>;
+
+Similar to warp command.
+Place all members of <Battle Group> at <mapname> at x y.
+
+Example:
+	//place the battle group one for Tierra Gorge at starting position.
+	bg_warp $@TierraBG1_id1,"bat_a01",352,342;
+	end;
+
+----------------------------------------
+
+*bg_monster <Battle Group>,"<map name>",<x>,<y>,"<name to show>",<mob id>,"<event label>";
+*bg_monster(<Battle Group>,"<map name>",<x>,<y>,"<name to show>",<mob id>,"<event label>");
+
+Similar to monster script command.
+Spawn a monster with allegiance to the given battle group.
+Does not allow for the summoning of multiple monsters.
+Monsters are similar to that in War of Emperium, in that the specified Battle group is considered friendly.
+
+Example:
+	// It can be used in two different ways.
+	bg_monster $@TierraBG1_id2,"bat_a01",167,50,"Food Depot",1910,"Feed Depot#1::OnMyMobDead";
+	end;
+
+	// Alternatively, you can set an ID for the monster using "set".
+	// This becomes useful when used with the command below.
+	set $@Guardian_3, bg_monster($@TierraBG1_id2,"bat_a01",268,204,"Guardian",1949,"NPCNAME::OnMyMobDead");
+	end;
+
+----------------------------------------
+
+*bg_monster_set_team <GID>,<Battle Group>;
+
+This command will change the allegiance if a monster in a battle ground.
+GID can be set when spawning the monster via the bg_monster command.
+
+Example:
+
+	end;
+
+OnEnable:
+	mapannounce "A guardian has been summoned for Battle Group 2!",bc_map,"0xFFCE00";
+	set $@Guardian, bg_monster($@BG_2,"bat_a01",268,204,"Guardian",1949,"NPCNAME::OnMyMobDead");
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	mapannounce "Erm, sorry about that! This monster was meant for Battle Group 1.",bc_map,"0xFFCE00";
+	bg_monster_set_team $@Guardian, $@BG_1;
+	end;
+
+----------------------------------------
+
+*bg_leave;
+
+Removes attached player from their Battle Group.
+
+----------------------------------------
+
+*bg_destroy <Batte Group>;
+
+As the name says, destroys the battle group created for that battle ground.
+
+----------------------------------------
+
+*areapercentheal "<mapname>",<x1>,<y1>,<x2>,<y2>,<hp>,<sp>;
+
+Not exactly limited to battleground use, this will restore HP/SP in a defined area at a percentage.
+
+Example:
+	areapercentheal "bat_a01",52,208,61,217,100,100;
+	end;
+
+----------------------------------------
+
+*bg_get_data(<Battle Group>,<type>);
+
+----------------------------------------
+
+*bg_getareausers
+
+----------------------------------------
+
+*bg_updatescore "<mapname>",<Guillaume Score>,<Croix Score>;
+
+Only usable when the map is defined as type:
+mapflag	<mapname>	battleground	2
+This command will force the update of the displayed scoreboard.
+
+----------------------------------------
+
 ========================
-|9.- SeA 指令|
+|10.- SeA 指令|
 ========================
 ---------------------------------------
 
