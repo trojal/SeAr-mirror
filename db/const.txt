@@ -114,6 +114,27 @@ Job_Royal_Guard2	4082
 Job_Royal_Guard_T2	4083
 Job_Ranger2	4084
 Job_Ranger_T2	4085
+Job_Mechanic2	4086
+Job_Mechanic_T2	4087
+
+Job_Baby_Rune	4096
+Job_Baby_Warlock	4097
+Job_Baby_Ranger	4098
+Job_Baby_Bishop	4099
+Job_Baby_Mechanic	4100
+Job_Baby_Cross	4101
+Job_Baby_Guard	4102
+Job_Baby_Sorcerer	4103
+Job_Baby_Minstrel	4104
+Job_Baby_Wanderer	4105
+Job_Baby_Sura	4106
+Job_Baby_Genetic	4107
+Job_Baby_Chaser	4108
+
+Job_Baby_Rune2	4109
+Job_Baby_Guard2	4110
+Job_Baby_Ranger2	4111
+Job_Baby_Mechanic2	4112
 
 EAJL_2_1	0x100
 EAJL_2_2	0x200
