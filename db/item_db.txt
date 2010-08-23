@@ -2164,6 +2164,30 @@
 4451,Entweihen_Card,ËÀÍöÌÙÂû¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bMatk,100; },{},{}
 4452,Centipede_Larva_Card,±äÒìòÚò¼Ó×³æ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bInt,1; bonus bMatk,3; bonus bMatk2,3; },{},{}
 4453,Hillsrion_Card,Ï£Ë¹Àû°²¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bAtk,25; },{},{}
+//4454
+//4455
+4456,Nidhoggr_Card,ÄáµÂ»ô¸ñµÄÓ°×Ó¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bInt,5; if(Class == Job_Warlock || Class == Job_Warlock_T || Class == Job_High_Wizard) bonus bFixedCastRate,-50; },{},{}
+4457,Naght_Sieger_Card,Ò¹Ê¤Ä§¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bSkillAtk,"MG_NAPALMBEAT",30; bonus2 bSkillAtk,"MG_SOULSTRIKE",30; bonus2 bSkillAtk,"WL_SOULEXPANSION",30; /*bonus2 bSkillAtk,"HW_NAPALMVULCAN",30;*/ },{},{}
+4458,Duneyrr_Card,¶ÅÄù¶û¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bBaseAtk,10; autobonus2 "{ bonus bFlee2,10; }",5,4000,BF_WEAPON,"{ specialeffect2 EF_COIN; }"; },{},{}
+4459,Rata_Card,ËÉÊóÈË¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bMatk,10; autobonus2 "{ bonus bFixedCastRate,-50; }",5,4000,BF_MAGIC,"{ specialeffect2 EF_COIN; }"; },{},{}
+4460,Rhyncho_Card,Ë®ÍÞÍÞ¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bHealPower,4; bonus bUseSPrate,15; },{},{}
+4461,Phylla_Card,Æ¿×Ó¹ÃÄï¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bDex,1; bonus bAgi,1; autobonus2 "{ bonus bCritical,20; }",5,4000,BF_WEAPON,"{ specialeffect2 EF_COIN; }"; },{},{}
+4462,Hardrock_Mammoth_Card,Ó²Ê¯ÃÍáï¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bDef,5; if(getrefine() > 11) { bonus bDef,20; bonus bMaxHPrate,10; } if(getrefine() > 13) { bonus bMaxHPrate,3; } },{},{}
+4463,Tendril_Lion_Card,Èý½ÇÊÞ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bCritical,5; if(getrefine() > 11) { bonus bBaseAtk,35; } if(getrefine() > 13) { bonus bCritical,10;  } },{},{}
+4464,Aunoe_Card,°¢ÎáÅµÒ®¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bCritAtkRate,20; },{},{}
+4465,Fanat_Card,·ºÌØ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,10; if (getiteminfo(getequipid(EQI_HAND_R),11) == 3) bonus bAspd,(getrefine()>9)+(getrefine()>13); },{},{}
+4466,Beholder_Master_Card,´óÑÛ¹ÖÊ×Áì¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bLongAtkRate,3; if (getiteminfo(getequipid(EQI_HAND_R),11) == 11) bonus bAspd,(getrefine()>9)+(getrefine()>13);},{},{}
+4467,Heavy_Metaling_Card,¿óÊ¯²¨Àû¿¨Æ¬,6,20,,10,,,,,,,,64,,,,,{ bonus bStr,2; if(BaseClass == Job_Merchant) { bonus2 bSkillAtk,"MC_CARTREVOLUTION",50; autobonus3 "{ end; }",1000,1000,"MC_CARTREVOLUTION","{ heal 0,-12; }"; } },{},{}
+4468,Dark_Pinguicula_Card,¿ñ±©²¶³æÝÀ¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bBaseAtk,10; bonus2 bAddMonsterDropItemGroup,IG_Poison_Herb,500; },{},{}
+4469,Naga_Card,ÄÉåÈ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Fish,10; },{},{}
+4470,Nepenthes_Card,ÖíÁý²Ý¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Plant,10; },{},{}
+4471,Draco_Egg_Card,µÂÀ­¿ËÁúµ°¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Dragon,10; },{},{}
+4472,Bradium_Golem_Card,îÐÀØ¾ÞÊ¯¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Brute,10; },{},{}
+4473,Ancient_Tree_Card,Ô¶¹ÅÊ÷¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Undead,10; },{},{}
+4474,Zukadam_Card,Ôú¿âÌ¹¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_DemiHuman,10; },{},{}
+4475,Cobalt_Mineral_Card,îÜ¿óÊ¯Ä§¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Formless,10; },{},{}
+4476,Pinguicula_Card,²¶³æÝÀ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Insect,10; },{},{}
+4477,Hell_Apocalypse_Card,µØÓü»úÐµÕ½Ê¿¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Demon,10; },{},{}
 // Armor Enchant System
 //===================================================================
 4700,Strength1,STR+1,6,20,,10,,,,,,,,16,,,,,{ bonus bStr,1; },{},{}

@@ -555,3 +555,10 @@
 54,560,9	// HandMade_Chocolate_
 54,573,9	// Chocolate_Drink
 54,5136,6	// Santa's_Hat_
+// Poison Herbs
+55,7932,1	// Poison_Herb_Nerium
+55,7933,1	// Poison_Herb_Rantana
+55,7934,1	// Poison_Herb_Makulata
+55,7935,1	// Poison_Herb_Seratum
+55,7936,1	// Poison_Herb_Scopolia
+55,7937,1	// Poison_Herb_Amoena
