@@ -398,106 +398,101 @@
 //[The Quality Maker]
 //==== Rune Knight ======
 //----------------------------------------------------------------------------------------------------------------------------
-//--- Nauthusiz Rune - RK_RUNEMASTERY lv. 8 <-- 2 Light Particle, 2 Elder's Branch, 1 Destroyed Armor, 1 Worn Out Scroll
-12725,24,2010,8,7938,2,7939,2,7069,1,618,1
-//--- Raido Rune     - RK_RUNEMASTERY lv. 7 <-- 1 Light Particle, 1 Elder's Branch, 1 Red Gemstone
-12726,24,2010,7,7938,1,7939,1,716,1
-//--- Berkana Rune   - RK_RUNEMASTERY  lv. 9 <-- 1 Elder's Branch, 1 Armor Piece of Dullahan
+//--- Êø¸¿·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 8 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 2 ¹âÁ£, 1 ÆÆÁÑµÄîø¼×Ò»½Ç, 1 ÀÏ¾ÉÄ§·¨Í¼
+12725,24,2010,8,7939,1,7938,2,7069,1,618,1
+//--- µ÷ºÍ·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 7 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 ¹âÁ£, 1 ºìÉ«Ä§Á¦¿óÊ¯
+12726,24,2010,7,7939,1,7938,1,716,1
+//--- ÔÙÉú·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 9 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 ÎÞÂ­ÎäÊ¿µÄîø¼×Ò»½Ç
 12727,24,2010,9,7939,1,7210,1
-//--- Isa Rune       - RK_RUNEMASTERY  lv. 2 <-- 1 Elder's Branch, 1 Burning Heart
+//--- ¾²Ö¹·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 2 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 È¼ÉÕµÄÐÄÔà
 12728,24,2010,2,7939,1,7097,1
-//--- Othila Rune    - RK_RUNEMASTERY  lv. 5 <-- 1 Light Particle, 1 Elder's Branch, 1 Ogre's Tooth 
-12729,24,2010,5,7938,1,7939,1,7002,1
-//--- Uruz Rune      - RK_RUNEMASTERY  lv. 6 <-- 1 Elder's Branch, 1 Honey, 1 Horrendous Hair
-12730,24,2010,6,7939,1,518,1,1048,1
-//--- Thurisaz Rune  - RK_RUNEMASTERY  lv. 1 <-- 1 Elder's Branch, 1 Blue Hair, Claw of Desert Wolf
+//--- ÁªºÏ·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 5 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 ¹âÁ£, 1 ÊÞÈËÈ®³Ý 
+12729,24,2010,5,7939,1,7938,1,7002,1
+//--- ÂÖ»Ø·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 6 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 Éß·¢, 1 ·äÃÛ
+12730,24,2010,6,7939,1,1048,1,518,1
+//--- ×ÔÊ¡·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 1 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 ¸ç²¼ÁéÃ«, É³Ä®Ö®ÀÇµÄÖ¸¼×
 12731,24,2010,1,7939,1,1034,1,7030,1
-//--- Wyrd Rune      - RK_RUNEMASTERY  lv. 3 <-- 1 Light Particle, 1 Elder's Branch, 1 Tangled Chains, 1 Dragon Canine
-12732,24,2010,3,7938,1,7939,1,7221,1,1035,1
-//--- Hagalaz Rune   - RK_RUNEMASTERY  lv. 4 <-- 1 Elder's Branch, 1 Round Shell, 1 Dragon Skin 
+//--- ¿Ö¾å·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 3 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 ¹âÁ£, 1 ²øÈÆµÄËøÁ´, 1 ÁúÑÀ
+12732,24,2010,3,7939,1,7938,1,7221,1,1035,1
+//--- »ÙÃð·ûÎÄÊ¯     - RK_RUNEMASTERY  lv. 4 <-- 1 ÄêÀÏµÄÊ÷Ö¦, 1 Ô²ÐÎÍâÆ¤, 1 ÁúÁÛ 
 12733,24,2010,4,7939,1,1096,1,7123,1
 //----------------------------------------------------------------------------------------------------------------------------
 //==== Guillotine Cross ======
 //----------------------------------------------------------------------------------------------------------------------------
-//--- Paralyze 		- GC_RESEARCHNEWPOISON lv. 1 <-- Poison Creation Kit, 1 Empty Bottle, 20 Poison Toad Skin, 1 Amoena
-12717,25,2024,1,7931,0,713,1,7937,1,7155,20
-//--- Pyrexia 		- GC_RESEARCHNEWPOISON lv. 2 <-- Poison Creation Kit, 1 Empty Bottle, 20 Anolian Skin, 1 Lantana
-12722,25,2024,2,7931,0,713,1,7933,1,7003,10
-//--- Disheart 		- GC_RESEARCHNEWPOISON lv. 3 <-- Poison Creation Kit, 1 Empty Bottle, 10 Decayed Nail, 1 Celatom
-12720,25,2024,3,7931,0,713,1,7935,1,957,10
-//--- Leech End 	- GC_RESEARCHNEWPOISON lv. 4 <-- Poison Creation Kit, 1 Empty Bottle, 1 Scoforia, 1 Nerium
-12718,25,2024,4,7931,0,713,1,7932,1,7936,1
-//--- Antidote 		- GC_RESEARCHNEWPOISON lv. 5 <-- Poison Creation Kit, 1 Empty Bottle, 2 Green Herb, 1 Blue Herb, 1 White Herb
-6128,25,2024,5,7931,0,713,1,511,2,510,1,509,1
-//--- Venom Bleed 	- GC_RESEARCHNEWPOISON lv. 6 <-- Poison Creation Kit, 1 Empty Bottle, 10 Sticky Poison, 1 Izidor
-12724,25,2024,6,7931,0,713,1,709,1,7565,10
-//--- Magic Mushroom 	- GC_RESEARCHNEWPOISON lv. 7 <-- Poison Creation Kit, 1 Empty Bottle, 10 Poison Spore, 1 Makulrata
-12723,25,2024,7,7931,0,713,1,7934,1,7033,10
-//--- Toxin 		- GC_RESEARCHNEWPOISON lv. 8 <-- Poison Creation Kit, 1 Empty Bottle, 10 Sticky Poison, 1 Nerium
-12721,25,2024,8,7931,0,713,1,7932,1,7565,10 
-//--- Oblivion Curse 	- GC_RESEARCHNEWPOISON lv. 9 <-- Poison Creation Kit, 1 Empty Bottle, 10 Mermaid Heart, 1 Izidor
-12719,25,2024,9,7931,0,713,1,709,1,950,10
+//--- Ì±»¾¶¾Ò© 		- GC_RESEARCHNEWPOISON lv. 1 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 20 Å£ÍÜÖ®Æ¤, 1 Í¸¹Ç²Ý
+12717,25,2024,1,7931,0,7134,1,7937,1,7155,20
+//--- ·¢ÈÈ¶¾Ò©		- GC_RESEARCHNEWPOISON lv. 2 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 20 »¢òáÆ¤, 1 ÂíÓ§µ¤
+12722,25,2024,2,7931,0,7134,1,7933,1,7003,10
+//--- ÎÛÈ¾¶¾Ò© 		- GC_RESEARCHNEWPOISON lv. 3 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 25 ÍöÕßÖ¸¼×, 1 Éß×ã²Ý
+12720,25,2024,3,7931,0,7134,1,7935,1,957,25
+//--- ÎüÑª¶¾Ò©  	- GC_RESEARCHNEWPOISON lv. 4 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 1 ÈüÝ¹ÝÐ, 1 ¼ÐÖñÌÒ
+12718,25,2024,4,7931,0,7134,1,7932,1,7936,1
+//--- ½â¶¾¼Á 		- GC_RESEARCHNEWPOISON lv. 5 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 2 ÂÌÉ«Ò©²Ý, 1 À¶É«Ò©²Ý, 1 °×É«Ò©²Ý
+6128,25,2024,5,7931,0,7134,1,511,2,510,1,509,1
+//--- Æ£ÀÍ¶¾Ò©  	- GC_RESEARCHNEWPOISON lv. 6 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 10 ð¤ð¤µÄ¶¾Òº, 1 ÃÔ»ÃÒ©
+12724,25,2024,6,7931,0,7134,1,709,1,7565,10
+//--- ±¬Ð¦¶¾Ò©  	- GC_RESEARCHNEWPOISON lv. 7 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 10 ¶¾Ä§¹½Ñ¿æß, 1 °ßÒ¶Öñ
+12723,25,2024,7,7931,0,7134,1,7934,1,7033,10
+//--- Éñ¾­¶¾Ò©		- GC_RESEARCHNEWPOISON lv. 8 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 10 ð¤ð¤µÄ¶¾Òº, 1 ¼ÐÖñÌÒ
+12721,25,2024,8,7931,0,7134,1,7932,1,7565,10 
+//--- ÍüÈ´¶¾Ò©  	- GC_RESEARCHNEWPOISON lv. 9 <-- ÖÆ¶¾¹¤¾ßÏä, 1 Ò©²§, 10 ÈËÓãÖ®ÐÄ, 1 ÃÔ»ÃÒ©
+12719,25,2024,9,7931,0,7134,1,709,1,950,10
 //----------------------------------------------------------------------------------------------------------------------------
 
 //==============================================
 // Genetic Item Creation
 //==============================================
 //----- Change Material ---- ItemLV=26 ---------
-//-- Thorny Seed <-- GN_CHANGEMATERIAL & Plant Genetic Cultivation Guide &
-6210,26,2494,1,6284,0,587,10
-//-- Vampire Plant Seed <-- GN_CHANGEMATERIAL & Plant Genetic Cultivation Guide &
+//-- ¾£¼¬ÖÖ×Ó		<-- GN_CHANGEMATERIAL & Ö²Îï»ùÒòÔÔÅà·¨ & 10 ÁñÁ«
+6210,26,2494,1,6284,0,576,10
+//-- ÎüÑªÖ²ÎïÖÖ×Ó	<-- GN_CHANGEMATERIAL & Ö²Îï»ùÒòÔÔÅà·¨ & 10 ÊÉÈËÊ÷¸ù
 6211,26,2494,1,6284,0,1033,10
-//-- Bomb Mushroom Seed <-- GN_CHANGEMATERIAL & Plant Genetic Cultivation Guide &
-6212,26,2494,1,6284,0,921,10,7033,5,6245,2
-//6213 <-- Possible item to create with this skill
-//6214 <-- Possible item to create with this skill
-//6215 <-- Possible item to create with this skill
-//6216 <-- Possible item to create with this skill
-//6217 <-- Possible item to create with this skill
+//-- Õ¨µ¯Ä¢¹½ÖÖ×Ó	<-- GN_CHANGEMATERIAL & Ö²Îï»ùÒòÔÔÅà·¨ & 10 Ïã¹½Ñ¿æß, 5 ¶¾Ä§¹½Ñ¿æß, 2 »ðÒ©·ÛÄ©
+6212,26,2494,1,6284,0,921,10,7033,5,6244,2
 
 //----- Mix Cooking ---- ItemLV=27 -------------
-//-- Savage Full Roast <-- GN_MIX_COOKING & Mix Cooking Ingredient Book & 1 Savage Meat, 1 Iron Cooking Skewer, 1 Bituminous Coal
-12429,27,2495,1,11022,0,6249,1,6250,1,6251,1
-//-- Cocktail Warg Blood <-- GN_MIX_COOKING & Mix Cooking Ingredient Book & 3 Wolf's Blood, 2 Cold Ice
-12430,27,2495,1,11022,0,6252,3,6253,2
-//-- Minor Stew <-- GN_MIX_COOKING & Mix Cooking Ingredient Book & 1 Comodo Tropical Fruit, 2 Seasoned Tough Meat, 1 Large Pan
-12431,27,2495,1,11022,0,6258,1,6254,2,6255,1
-//-- Siroma Iced Tea <-- GN_MIX_COOKING & Mix Cooking Ingredient Book & 1 Comodo Tropical Fruit, 3 Powdered Ice, 2 Ice Crystal
-12432,27,2495,1,11022,0,6258,1,6256,3,6257,2
-//-- Drosera Tentacle <-- GN_MIX_COOKING & Mix Cooking Ingredient Book & 3 Drosera Tentacle, 3 Red Herb, 3 Blue Herb, 3 White Herb, 1 Large Pan
-12433,27,2495,1,11022,0,6259,3,507,3,509,3,510,3,6255,1
-//-- Petite Tail Noodles <-- GN_MIX_COOKING & Mix Cooking Ingredient Book & 2 Petite Tail, 1 Fine Noodles, 1 Cold Broth
-12434,27,2495,1,11022,0,6260,2,6261,1,6262,1
+//-- ¿¾Ò°Öí		<-- GN_MIX_COOKING & ×éºÏÅëâ¿ÁÏÀíÊé & 1 Íß¹Þ & 1 Ò°ÖíÈâ, 1 ÁÏÀíÓÃÌúÇ©, 1 ºÚÌ¿
+12429,27,2495,1,11022,0,6248,1,6249,1,6250,1,6251,1
+//-- ÀÇÑª¼¦Î²¾Æ		<-- GN_MIX_COOKING & ×éºÏÅëâ¿ÁÏÀíÊé & 1 Íß¹Þ & 3 ÀÇÑª, 2 º®ÀäµÄ±ù¿é
+12430,27,2495,1,11022,0,6248,1,6252,3,6253,2
+//-- Ð¡Å£ÅÅ		<-- GN_MIX_COOKING & ×éºÏÅëâ¿ÁÏÀíÊé & 1 Íß¹Þ & 2 Å£Í·Èâ, 1 ¾Þ´óµÄ¹ø
+12431,27,2495,1,11022,0,6248,1,6254,2,6255,1
+//-- Ð¡Ñ©ÊÞ±ù²è		<-- GN_MIX_COOKING & ×éºÏÅëâ¿ÁÏÀíÊé & 1 Íß¹Þ & 3 ±ùËéÆ¬, 2 ±ù½á¾§, 1 ¿ËÄ§µºÈÈ´øË®¹û
+12432,27,2495,1,11022,0,6248,1,6256,3,6257,2,6258,1
+//-- Ò©²ÝÕôÃ©¸à²Ë	<-- GN_MIX_COOKING & ×éºÏÅëâ¿ÁÏÀíÊé & 1 Íß¹Þ & 3 Ã©¸à²ËµÄ´¥ÊÖ, 3 ºìÉ«Ò©²Ý, 3 À¶É«Ò©²Ý, 3 °×É«Ò©²Ý, 1 ¾Þ´óµÄ¹ø
+12433,27,2495,1,11022,0,6248,1,6259,3,507,3,509,3,510,3,6255,1
+//-- ±ÏµÛÌØÁúÎ²Ãæ	<-- GN_MIX_COOKING & ×éºÏÅëâ¿ÁÏÀíÊé & 1 Íß¹Þ & 2 ±ÏµÛÌØÁúµÄÎ²°Í, 1 ËØÃæ, 1 Ë¬¿ÚµÄÈâÌÀ
+12434,27,2495,1,11022,0,6248,1,6260,2,6261,1,6262,1
 
 //----- Create Bomb ---- ItemLV=28 -------------
-//-- Apple Bomb <-- GN_MAKEBOMB & Apple Bomb Guide & Apple & Scell & Dark Powder & Detonator
+//-- Æ»¹ûÕ¨µ¯	<-- GN_MAKEBOMB & Æ»¹ûÕ¨µ¯ÖÆÔìÊé & Æ»¹û & Ó²¿Ç & »ðÒ©·ÛÄ© & ÄÔ¹Ü
 13260,28,2496,1,6279,0,512,1,911,1,6244,1,1051,1
-//-- Coconut Bomb <-- GN_MAKEBOMB & Coconut Bomb Guide & Coconut & 2 Dark Powder & Detonator
+//-- Ò¬×ÓÕ¨µ¯	<-- GN_MAKEBOMB & Ò¬¹ûÕ¨µ¯ÖÆÔìÊé & Ò¬¹û & 2 »ðÒ©·ÛÄ© & ÄÔ¹Ü
 13261,28,2496,1,6281,0,6263,1,6244,2,1051,1
-//-- Melon Bomb <-- GN_MAKEBOMB & Melon Bomb Guide & Melon & Sticky Mucus & 2 Dark Powder & Detonator
+//-- ¹þÃÜ¹ÏÕ¨µ¯	<-- GN_MAKEBOMB & Ìð¹ÏÕ¨µ¯ÖÆÔìÊé & Ìð¹Ï & Õ³³íÒºÌå & 2 »ðÒ©·ÛÄ© & ÄÔ¹Ü
 13262,28,2496,1,6282,0,6264,1,938,1,6244,2,1051,1
-//-- Pineapple Bomb <-- GN_MAKEBOMB & Pineapple Bomb Guide & Pineapple & Cactus Needle & 3 Dark Powder & Detonator
+//-- ²¤ÂÜÕ¨µ¯	<-- GN_MAKEBOMB & ²¤ÂÜÕ¨µ¯ÖÆÔìÊé & ²¤ÂÜ & ÏÉÈËÕÆ´Ì & 3 »ðÒ©·ÛÄ© & ÄÔ¹Ü
 13263,28,2496,1,6280,0,6265,1,952,1,6244,3,1051,1
-//-- Banana Bomb <-- GN_MAKEBOMB & Banana Bomb Guide & Banana & 4 Dark Powder & Detonator & (missing item mold powder?)
-13264,28,2496,1,6283,0,513,1,6244,4,1051,1
+//-- Ïã½¶Õ¨µ¯	<-- GN_MAKEBOMB & Ïã½¶Õ¨µ¯ÖÆÔìÊé & Ïã½¶ & 4 »ðÒ©·ÛÄ© & ÄÔ¹Ü & Ã¹¾ú·ÛÄ©
+13264,28,2496,1,6283,0,513,1,6244,4,1051,1,7001,1
 
 //----- Special Pharmacy ---- ItemLV=29 --------
-//-- HP Potions (Small) <-- GN_S_PHARMACY & 10 Empty Bottles, 5 Monster Food, 10 White Herb, 1 Spicy Sauce
-12422,29,2497,1,713,10,528,5,509,10,7455,1
-//-- HP Potions (Medium) <-- GN_S_PHARMACY & 10 Empty Bottles, 10 White Herb, 10 Yellow Herb, 1 Spicy Sauce
-12423,29,2497,1,713,10,509,10,508,10,7455,1
-//-- HP Potions (Large) <-- GN_S_PHARMACY & 10 Empty Bottles, 15 White Herb, Mastella 3, 1 Holy Water, 1 Spicy Sauce
-12424,29,2497,1,713,10,509,15,522,3,523,1,7455,1
-//-- SP Potions (Small) <-- GN_S_PHARMACY & 10 Empty Bottles, 10 Lemon, 10 Grapes, 1 Sweet Sauce
-12425,29,2497,1,713,10,568,10,514,10,7453,1
-//-- SP Potions (Medium) <-- GN_S_PHARMACY & 10 Empty Bottles, 10 Honey, 10 Blue Herb, 1 Sweet Sauce
-12426,29,2497,1,713,10,518,10,510,10,7453,1
-//-- SP Potions (Large) <-- GN_S_PHARMACY & 10 Empty Bottles, 10 Royal Jelly, 10 Blue Herb, 1 Sweet Sauce
-12427,29,2497,1,713,10,526,10,510,10,7453,1
-//-- White Potion Z <-- GN_S_PHARMACY & Improved Potion Creation Manual & 20 White Potion, 10 Test Tube, 10 White Herb, 1 Alcohol
-12428,29,2497,1,6285,0,504,20,1092,10,509,10,970,1
-//-- Vitata 500 <-- GN_S_PHARMACY & Improved Potion Creation Manual & 10 Test Tube, 10 Grapes, 10 Honey, 10 Blue Herb
+//-- HPÔö¼ÓÒ©Ë®(Ð¡)	<-- GN_S_PHARMACY & ÌåÁ¦±¬·¢ÑÐ¾¿Êé & 10 ¿ÕÆ¿, 5 Ä§ÎïËÇÁÏ, 10 °×É«Ò©²Ý, 1 À±Ö­½´
+12422,29,2497,1,11023,0,713,10,528,5,509,10,7455,1
+//-- HPÔö¼ÓÒ©Ë®(ÖÐ)	<-- GN_S_PHARMACY & ÌåÁ¦±¬·¢ÑÐ¾¿Êé & 10 ¿ÕÆ¿, 10 °×É«Ò©²Ý, 10 »ÆÉ«Ò©²Ý, 1 À±Ö­½´
+12423,29,2497,1,11023,0,713,10,508,10,7455,1
+//-- HPÔö¼ÓÒ©Ë®(´ó)	<-- GN_S_PHARMACY & ÌåÁ¦±¬·¢ÑÐ¾¿Êé & 10 ¿ÕÆ¿, 15 °×É«Ò©²Ý, 3 ÂêË¿÷ìÀ­¹ûÊµ, 1 Ê¥Ë®, 1 À±Ö­½´
+12424,29,2497,1,11023,0,713,10,509,15,522,3,523,1,7455,1
+//-- SPPÔö¼ÓÒ©Ë®(Ð¡)	<-- GN_S_PHARMACY & »îÁ¦Ò©Ë®ÖÆÔì·¨ & 10 ¿ÕÆ¿, 10 ÄûÃÊ, 10 ÆÏÌÑ, 1 ÌðÖ­½´
+12425,29,2497,1,11024,0,713,10,568,10,514,10,7453,1
+//-- SPPÔö¼ÓÒ©Ë®(ÖÐ)	<-- GN_S_PHARMACY & »îÁ¦Ò©Ë®ÖÆÔì·¨ & 10 ¿ÕÆ¿, 10 ·äÃÛ, 10 À¶É«Ò©²Ý, 1 ÌðÖ­½´
+12426,29,2497,1,11024,0,713,10,518,10,510,10,7453,1
+//-- SPPÔö¼ÓÒ©Ë®(´ó)	<-- GN_S_PHARMACY & »îÁ¦Ò©Ë®ÖÆÔì·¨ & 10 ¿ÕÆ¿, 10 ·ä½º, 10 À¶É«Ò©²Ý, 1 ÌðÖ­½´
+12427,29,2497,1,11024,0,713,10,526,10,510,10,7453,1
+//-- Å¨Ëõ°×É«Ò©Ë®Z	<-- GN_S_PHARMACY & ¸ß¼¶Ò©Ë®ÖÆÔìÊÖ²á & 10 ¿ÕÊÔ¹Ü, 20 °×É«Ò©Ë®, 10 °×É«Ò©²Ý, 1 ¾Æ¾«
+12428,29,2497,1,6285,0,1092,10,504,20,509,10,970,1
+//-- ºÚÒÏ500		<-- GN_S_PHARMACY & ¸ß¼¶Ò©Ë®ÖÆÔìÊÖ²á & 10 ¿ÕÊÔ¹Ü, 10 ÆÏÌÑ, 10 ·äÃÛ, 10 À¶É«Ò©²Ý
 12436,29,2497,1,6285,0,1092,10,514,10,518,10,510,10
-//-- Concentrated Ceromain Soup <-- GN_S_PHARMACY & & Improved Potion Creation Manual 10 Test Tube, 6 Awakening Potion, 5 Concentration Potion, 5 Spicy Sauce
-12437,29,2497,1,6285,0,1092,10,645,5,656,6,7455,5
+//-- Å¨ËõËÙ¶ÈÈªË®	<-- GN_S_PHARMACY & ¸ß¼¶Ò©Ë®ÖÆÔìÊÖ²á & 10 ¿ÕÊÔ¹Ü, 5 ÐÑ¾õÒ©Ë®, 5 ¼¯ÖÐÒ©Ë®, 5 À±Ö­½´
+12437,29,2497,1,6285,0,1092,10,645,5,656,5,7455,5
 //===============================================

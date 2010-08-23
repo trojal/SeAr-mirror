@@ -452,7 +452,7 @@
 407,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		ASC_CDP,毒液制作
 408,9,6,4,0,0x1,0,1,1,yes,0,0x4,0,none,0,	WE_BABY,爸妈我爱您
 409,9,6,4,0,0x1,3,1,1,yes,0,0x4,1,none,0,	WE_CALLPARENT,爸妈我想念您
-410,9,6,4,0,0x1,3,1,1,yes,0,0x4,1,none,0,	WE_CALLBABY,Call 爸妈我爱您
+410,9,6,4,0,0x1,3,1,1,yes,0,0x4,1,none,0,	WE_CALLBABY,宝贝请来这里
 411,0,6,4,0,0x1,0,10,1,yes,0,0,0,misc,4,		TK_RUN,跑步
 412,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,0,		TK_READYSTORM,回旋准备
 413,-2,8,4,-1,0x2,2,7,-3,no,0,0x200,0,weapon,0,	TK_STORMKICK,回旋踢
@@ -533,10 +533,10 @@
 488,0,6,4,0,0x1,1,5,1,no,0,0x40,0,misc,0,	CG_HERMODE,海罗默德的手杖
 489,9,6,1,0,0x41,0,5,1,no,0,0,0,misc,0,		CG_TAROTCARD,命运的塔罗牌
 490,9,8,1,0,0x40,0,10,1:2:3:4:5:6:7:8:9:10,yes,0,0,0,misc,0,	CR_ACIDDEMONSTRATION,强酸火烟瓶投掷
-491,1,6,2,0,0x1,0,2,1,no,0,0,0,none,0,		CR_CULTIVATION,Plant 培养
+491,1,6,2,0,0x1,0,2,1,no,0,0,0,none,0,		CR_CULTIVATION,植物栽培
 492,0,6,4,0:1:2:3:4:5:6:7:8:9,0x1,0,10,1,no,0,0x2,0,none,0,	ITEM_ENCHANTARMS,武器属性附加
 493,0,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		TK_MISSION,太拳任务
-494,9,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	SL_HIGH,Spirit of 回复
+494,9,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	SL_HIGH,一转上等职业的灵魂
 495,0,6,4,0,0x1,0,1,1,no,0,0x8,0,weapon,0,	KN_ONEHAND,单手剑攻击速度增加
 496,0,6,4,0,0x1,0,1,0,no,0,0x8,0,none,0,		AM_TWILIGHT1,宽广配药
 497,0,6,4,0,0x1,0,1,0,no,0,0x8,0,none,0,		AM_TWILIGHT2,宽广配药
@@ -601,7 +601,7 @@
 662,0,6,4,0,0x2,14,10,1,no,0,0x2,0,weapon,0,	NPC_HELLJUDGEMENT,地狱审判
 663,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDESILENCE,范围沉默
 664,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDEFREEZE,范围冰冻
-665,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDEBLEEDING,Wide 出血攻击
+665,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDEBLEEDING,范围出血
 666,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDESTONE,范围石化
 667,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDECONFUSE,范围混乱
 668,0,6,4,0,0x3,2:5:8:11:14,5,1,no,0,0x2,0,none,0,	NPC_WIDESLEEP,范围睡眠
@@ -623,11 +623,11 @@
 
 // Additional NPC skill (Episode 12)
 682,0,0,4,0,0x1,0,1,1,no,0,0x2,0,none,0,		NPC_TALK,Talk
-683,-9,6,1,-1,0,0,1,1,no,0,0x2,0,none,0,	NPC_HELLPOWER,Hell Power
+683,-9,6,1,-1,0,0,1,1,no,0,0x2,0,none,0,	NPC_HELLPOWER,地狱之力
 684,0,6,4,0,0x3,-1,1,1,no,0,0x2,0,none,0,	NPC_WIDEHELLDIGNITY,Hell Dignity
 685,0,0,4,0,0x1,0,1,1,no,0,0x2,0,none,0,		NPC_INVINCIBLE,Invincible
 686,0,0,4,0,0x1,0,1,1,no,0,0x2,0,none,0,		NPC_INVINCIBLEOFF,Invincible off
-687,0,6,4,0,0x1,0,1,1,yes,0,0x2,0,none,0,	NPC_ALLHEAL,Full Heal
+687,0,6,4,0,0x1,0,1,1,yes,0,0x2,0,none,0,	NPC_ALLHEAL,生命之弦
 
 // Additional Skill (??)
 //688,0,0,0,0,0,0,9,0,no,0,0,0,none,0,		GM_SANDMAN,GM Sandman
@@ -664,7 +664,7 @@
 1019,9,6,1,4,0x1,0,1,1,yes,0,0x1,0,magic,0,	SA_ELEMENTWIND,元素更换(风)
 
 //3rd Class Skills. 
-//卢恩骑士
+// 符文骑士
 2001,0,6,16,0,0x1,0,5,1,yes,0,0,0,weapon,0,	RK_ENCHANTBLADE,附魔之刃
 2002,-5,6,1,-1,0,0,5,0,no,0,0,0,weapon,2,		RK_SONICWAVE,冲击之刃
 2003,0,0,4,0,0x01,0,10,0,no,0,0,0,weapon,1,	RK_DEATHBOUND,死亡捆绑
@@ -685,7 +685,7 @@
 2018,0,0,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_FIGHTINGSPIRIT,战斗意志
 2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,		RK_ABUNDANCE,充沛
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,幻影刺击
-//十字切割者
+// 十字切割者
 2021,5,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化
 2022,3,8,1,-1,0,0,5,7,no,0,0,0,weapon,0,		GC_CROSSIMPACT,十字斩
 2023,3:4:5:6:7,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,GC_DARKILLUSION,暗影步
@@ -703,7 +703,7 @@
 2035,0,6,4,0,0x01,0,5,0,no,0,0,0,none,0,		GC_HALLUCINATIONWALK,疾风步
 2036,0,6,4,-1,0x02,2,5,0,no,0,0,0,weapon,0,	GC_ROLLINGCUTTER,回旋利刃
 2037,7,8,1,-1,0,0,5,10,no,0,0,0,weapon,0,		GC_CROSSRIPPERSLASHER,回旋十字斩
-//大主教
+// 大主教
 2038,9,8,1,6,0x2,1,5,3,no,0,0,0,magic,0,		AB_JUDEX,审判
 2039,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		AB_ANCILLA,辅助者
 2040,9,8,1,6,0,0,10,10,yes,0,0,0,magic,0,		AB_ADORAMUS,赞歌
@@ -721,19 +721,19 @@
 2052,9,6,1,0,0x1,0,5,1,yes,0,0,0,magic,0,		AB_CLEARANCE,驱散
 2053,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,		AB_EXPIATIO,赎罪
 2054,0,6,4,0,0x1,1,10,1,yes,0,0,0,magic,0,	AB_DUPLELIGHT,双重圣光
-2055,-1,6,1,6,0,1,10,1,no,0,0,0,weapon,0,		AB_DUPLELIGHT_MELEE,Duple Light
-2056,-1,6,1,6,0,1,10,1,no,0,0,0,magic,0,		AB_DUPLELIGHT_MAGIC,Duple Light
+2055,-1,6,1,6,0,1,10,1,no,0,0,0,weapon,0,		AB_DUPLELIGHT_MELEE,双重圣光(Melee)
+2056,-1,6,1,6,0,1,10,1,no,0,0,0,magic,0,		AB_DUPLELIGHT_MAGIC,双重圣光(Magic)
 2057,0,6,4,0,0x3,4:5:6:7:8,5,1,no,0,0,0,magic,0,AB_SILENTIUM,寂静
-//术士
+// 大法师
 2201,6,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_WHITEIMPRISON,白色监狱
 2202,9,8,1,8,0,1:1:1:2:2,5,1,yes,0,0,0,magic,0,	WL_SOULEXPANSION,灵魂爆发
-2203,5,8,4,1,0x3,13,5,-3:-4:-5:-6:-7,yes,0,0,0,magic,0,	WL_FROSTMISTY,霜冻爆破
-2204,0,8,4,1,0x2,13,5,-5,yes,0,0,0,magic,0,	WL_JACKFROST,冬将军
+2203,5,8,4,1,0x3,13,5,-3:-4:-5:-6:-7,yes,0,0,0,magic,0,	WL_FROSTMISTY,冰雾
+2204,0,8,4,1,0x2,13,5,-5,yes,0,0,0,magic,0,	WL_JACKFROST,霜冻爆破
 2205,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	WL_MARSHOFABYSS,深渊泥沼
 2206,0,6,4,0,0x1,0,10,1,yes,0,0,0,magic,0,	WL_RECOGNIZEDSPELL,魔法理解
 2207,2,6,1,2,0x3,1:2:2:3:3,5,1,yes,0,0,0,magic,0,	WL_SIENNAEXECRATE,石化诅咒
 2208,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		WL_RADIUS,半径辐射
-2209,0,6,4,0,0x1,0,9:10:11:12:13,1,yes,0,0,0,magic,0,	WL_STASIS,魔力冻结
+2209,0,6,4,0,0x1,0,9:10:11:12:13,1,yes,0,0,0,magic,0,	WL_STASIS,魔力霜冻
 2210,9,6,1,0,0,0,5,1,yes,0,0,0,magic,0,		WL_DRAINLIFE,生命吸收
 2211,9,8,1,3,0x2,3,5,-7,yes,0,0,1,magic,5,	WL_CRIMSONROCK,深红陨石
 2212,9,6,1,3,0,0,5,1,yes,0,0,0,magic,0,		WL_HELLINFERNO,毁灭烈焰
@@ -742,10 +742,10 @@
 2215,9,6,1,4,0x2,5,5,1,yes,0,0x100,0,magic,0,	WL_CHAINLIGHTNING_ATK,连锁闪电_ATK
 2216,9,8,2,2,0,0,5,-10,yes,1,0,5:6:7:8:9,magic,0,		WL_EARTHSTRAIN,大地扭曲
 2217,8,6,1,0,0,0,5,1,yes,0,0,0,magic,0,    	WL_TETRAVORTEX,元素漩涡
-2218,8,6,1,3,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_FIRE,Tetra Vortex Fire
-2219,8,6,1,1,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_WATER,Tetra Vortex Water
-2220,8,6,1,4,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_WIND,Tetra Vortex Wind
-2221,8,6,1,2,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_GROUND,Tetra Vortex Earth
+2218,8,6,1,3,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_FIRE,元素漩涡_FIRE
+2219,8,6,1,1,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_WATER,元素漩涡_WATER
+2220,8,6,1,4,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_WIND,元素漩涡_WIND
+2221,8,6,1,2,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_GROUND,元素漩涡_GROUND
 2222,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,		WL_SUMMONFB,召唤火球
 2223,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,		WL_SUMMONBL,召唤水球
 2224,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,		WL_SUMMONWB,召唤闪电球
@@ -758,7 +758,7 @@
 2231,0,6,4,0,0x1,0,1,1,yes,0,0,0,none,0,		WL_READING_SB,魔法书阅读
 2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SP,魔法保存
 //游侠
-2233,-9,8,1,-1,0x2,4,10,10,no,0,0,0,weapon,0,	RA_ARROWSTORM,箭矢暴风
+2233,-9,8,1,-1,0x2,4,10,10,no,0,0,0,weapon,0,	RA_ARROWSTORM,箭矢风暴
 2234,0,6,4,0,0x3,3,5,2:2:3:4:5,no,0,0,0,weapon,0,		RA_FEARBREEZE,屠戮射击
 2235,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_RANGERMAIN,游侠的决心
 2236,-9,8,1,-1,0,0,10,4,no,0,0,0,weapon,0,	RA_AIMEDBOLT,瞄准射击
@@ -780,13 +780,13 @@
 2252,3,6,2,4,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_VERDURETRAP,青绿陷阱
 2253,3,6,2,3,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_FIRINGTRAP,火焰陷阱
 2254,3,6,2,1,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_ICEBOUNDTRAP,霜冻陷阱
-//机械师
+// 机匠
 2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,魔导机械执照
 2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,		NC_BOOSTKNUCKLE,喷射飞拳
 2257,-5,6,1,-1,0,0,3,1,no,0,0,0,weapon,0,		NC_PILEBUNKER,冲击锥
 2258,13,8,1,-1,0,0,3,1,yes,0,0,0,weapon,0,		NC_VULCANARM,火神炮
 2259,-5,6,1,3,0x2,1,3,1,no,0,0,5,weapon,0,	NC_FLAMELAUNCHER,火焰喷射器
-2260,7,6,2,1,0,0,3,1,no,0,0,0,weapon,0,		NC_COLDSLOWER,缓慢冷冻
+2260,7,6,2,1,0,0,3,1,no,0,0,0,weapon,0,		NC_COLDSLOWER,急速冰冻
 2261,7,6,2,-1,0x40,0,3,1,no,0,0,0,weapon,0,	NC_ARMSCANNON,加农炮
 2262,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_ACCELERATION,涡轮增压
 2263,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_HOVERING,悬浮
@@ -810,7 +810,7 @@
 2281,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_SILVERSNIPER,FAW 银色狙击手
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法傀儡
 2283,-5,6,16,0,0,0,1,0,no,0,0,2,none,0,			NC_DISJOINT,FAW 解除
-//暗影追迹者
+// 逐影
 2284,1,6,1,-1,0x2,3,5,0,no,0,0,0,weapon,0,		SC_FATALMENACE,致命威胁
 2285,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,		SC_REPRODUCE,复制
 2286,0,6,4,0,0x1,0,10,0,yes,0,0,0,none,0,		SC_AUTOSHADOWSPELL,自动影咒
@@ -832,7 +832,7 @@
 2302,7,6,2,0,0,5,3,1,yes,0,0,0,none,0,			SC_MAELSTROM,吸能漩涡
 2303,7,6,2,0,0,0,3,1,yes,0,0,0,none,0,			SC_BLOODYLUST,血腥渴望
 2304,0,6,4,0,0x2,4,3,1,yes,0,0,0,weapon,1,		SC_FEINTBOMB,伪装炸弹
-//皇家护卫
+// 皇家卫士
 2307,11,6,1,-1,0x2,1,5,1,yes,0,0,10,weapon,0,	LG_CANNONSPEAR,重炮枪击
 2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,驱逐点刺
 2309,0,0,4,0,0,2,3,0,yes,0,0,0,none,0,		LG_TRAMPLE,践踏
@@ -852,7 +852,7 @@
 2323,0,8,4,2,0x2,1:1:2:2:3,5,-5,yes,0,0,0,weapon,0,	LG_EARTHDRIVE,大地猛击
 2324,4,8,1,-1,0x0,0,5,1,yes,0,0,0,weapon,0,	LG_HESPERUSLIT,黄昏之光
 2325,0,6,4,0,0x1,0,5,1,yes,0,0x0,0,none,0,	LG_INSPIRATION,圣灵感应
-//修罗
+// 修罗
 2326,4,8,1,0,0,0,10,2,yes,0,0,0,weapon,0,		SR_DRAGONCOMBO,双龙摆尾
 2327,0,8,4,0,0x2,3,5,3,yes,0,0,0,weapon,3,	SR_SKYNETBLOW,天罗地网
 2328,0,6,4,0,0x2,11,5,1,no,0,0,0,weapon,0,	SR_EARTHSHAKER,地震波
@@ -876,7 +876,7 @@
 2346,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_ENERGYGAIN,点穴-气
 2347,2,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		SR_GENTLETOUCH_CHANGE,点穴-迅
 2348,2,6,16,0,0x1,0,5,1,no,0,0,0,weapon,0,	SR_GENTLETOUCH_REVITALIZE,点穴-生
-//流浪舞者/宫廷乐师
+// 漫游舞者/宫廷乐师
 2350,0,6,4,0,0x3,7:8:9:10:11,5,1,yes,0,0,0,weapon,0,	WA_SWING_DANCE,摇摆舞
 2351,0,6,4,0,0x3,7:8:9:10:11,5,1,yes,0,0,0,weapon,0,	WA_SYMPHONY_OF_LOVER,爱之交响曲
 2352,0,6,4,0,0x3,7:8:9:10:11,5,1,yes,0,0,0,weapon,0,	WA_MOONLIT_SERENADE,月光小夜曲
@@ -906,7 +906,7 @@
 2432,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,夕阳之歌
 2433,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_BEYOND_OF_WARCRY,远古呐喊
 2434,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_UNLIMITED_HUMMING_VOICE,无限吟唱
-//召唤士
+// 元素使
 2443,0,6,4,3,0,0,5,0,yes,0,0,0,magic,0,		SO_FIREWALK,火焰路径
 2444,0,6,4,4,0,0,5,0,yes,0,0,0,magic,0,		SO_ELECTRICWALK,电流路径
 2445,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,		SO_SPELLFIST,魔力之拳
@@ -920,7 +920,7 @@
 2453,8,6,2,0,0x1,0,5,1,yes,0,0,0,none,0,		SO_VACUUM_EXTREME,黑洞
 2454,9,6,1,4,0x2,1:1:2:2:3,5,1,yes,0,0,0,magic,0,	SO_VARETYR_SPEAR,闪电之枪
 2455,9,6,1,0,0x3,1:1:2:2:3,5,1,yes,0,0,0,magic,0,	SO_ARRULLO,群体催眠
-//基因学家
+// 基因学者
 2474,0,0,0,0,0,0,5,0,no,0,0,0,weapon,0,		GN_TRAINING_SWORD,单手剑使用熟练度
 2475,0,0,0,0,0,0,5,0,no,0,0,0,weapon,0,		GN_REMODELING_CART,手推车强化
 2476,0,6,4,0,0x2,2,5,0,no,0,0,0,weapon,2,		GN_CART_TORNADO,手推车龙卷风
@@ -931,7 +931,7 @@
 2481,9,6,1,0,0,3:5:7:9:11,5,1,yes,0,0,0,magic,0,	GN_SPORE_EXPLOSION,爆炸孢子
 2482,9,6,16,0,0,0,5,1,yes,0,0,1,weapon,2,		GN_WALLOFTHORN,荆棘之墙
 2483,9,6,2,0,0x2,5,10,1,yes,0,0,3:4:4:5:5:6:6:7:7:8,none,0,		GN_CRAZYWEED,疯狂野草
-2484,0,6,1,2,0,0,10,0,no,0,0,0,magic,0,		GN_CRAZYWEED_ATK,疯狂野草
+2484,0,6,1,2,0,0,10,0,no,0,0,0,magic,0,		GN_CRAZYWEED_ATK,疯狂野草_ATK
 2485,9,6,2,3,0,0,5,1,yes,0,0,0,magic,0,			GN_DEMONIC_FIRE,疯狂火焰
 2486,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION,火焰爆炸
 2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_SMOKE_POWDER,火焰爆炸 Smoke Powder
@@ -947,7 +947,7 @@
 2497,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,		GN_S_PHARMACY,特殊药剂学
 //2498,0,0,0,0,0,0,0,0,no,0,0,0,none,0,			GN_SLINGITEM_RANGEMELEEATK,物品投掷RANGEMELEEATK
 
-2515,9,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,	AB_SACRAMENT,圣礼
+2515,9,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,	AB_SECRAMENT,圣礼
 //2516,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		WM_SEVERE_RAINSTORM_MELEE,狂风暴雨Melee
 2517,0,6,4,-1,0x2,5:5:6:6:7,5,1,yes,0,0x0,0,weapon,0,	SR_HOWLINGOFLION,狮子吼
 2518,3,6,2,-1,0x2,2:2:3:3:4,5,1,no,0,0,0,weapon,0,	SR_RIDEINLIGHTNING,雷光弹
@@ -971,46 +971,46 @@
 8016,4,6,4,-1,0xD2,4,3,1,no,0,0,0,misc,0,        HVAN_EXPLOSION,生物爆炸
 
 // Mercenary Skill Place holders
-8201,-1,6,1,-1,0,0,10,1,no,0,0,0,weapon,0,	MS_BASH,Bash
-8202,0,6,4,3,0x2,2,10,1,no,0,0,0,weapon,2,	MS_MAGNUM,Magnum_Break
-8203,-2,6,1,-1,0x2,1,10,1,no,33,0,0,weapon,1,	MS_BOWLINGBASH,Bowling_Bash
-8204,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	MS_PARRYING,Parry
-8205,0,6,4,0,0,0,10,1,no,0,0,0,weapon,0,	MS_REFLECTSHIELD,Shield_Reflect
-8206,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,0,	MS_BERSERK,Frenzy
-8207,-9,8,1,-1,0,0,10,2,no,0,0,0,weapon,0,	MA_DOUBLE,Double_Strafe
-8208,-9,6,2,-1,0x2,2,10,1,no,0,0,0,weapon,2,	MA_SHOWER,Arrow_Shower
-8209,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,6:7:8:9:10,	MA_SKIDTRAP,Skid_Trap
-8210,3,6,2,2,0x40,0,5,1,no,0,0x80,0,misc,0,	MA_LANDMINE,Land_Mine
-8211,3,6,2,0,0x3,2,5,1,no,0,0x80,0,misc,0,	MA_SANDMAN,Sandman
-8212,3,6,2,1,0x42,1,5,1,no,0,0x80,0,weapon,0,	MA_FREEZINGTRAP,Freezing_Trap
-8213,2,6,32,0,0x1,0,1,1,no,0,0,0,misc,0,	MA_REMOVETRAP,Remove_Trap
-8214,-9,6,1,-1,0x2,0,1,1,no,0,0x1,0,weapon,6,	MA_CHARGEARROW,Arrow_Repel
-8215,9,8,1,-1,0,2,5,1,yes,0,0,13,weapon,0,	MA_SHARPSHOOTING,Focused_Arrow_Strike
-8216,-2,8,1,-1,0,0,10,3,no,0,0,0,weapon,0,	ML_PIERCE,Pierce
-8217,-2,6,1,-1,0x1,0,10,1,no,33,0,0,weapon,3,	ML_BRANDISH,Brandish_Spear
-8218,5,8,1,-1,0,0,5,5,no,0,0,0,weapon,0,	ML_SPIRALPIERCE,Spiral_Pierce
-8219,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	ML_DEFENDER,Defending_Aura
-8220,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	ML_AUTOGUARD,Guard
-8221,7:8:9:10:11,6,16,0,0x1,0,5,1,yes,0,0x600,0,none,0,	ML_DEVOTION,Sacrifice
-8222,0,6,4,0,0x3,-1,5,1,yes,0,0,0,magic,0,	MER_MAGNIFICAT,Magnificat
-8223,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	MER_QUICKEN,Two-Hand_Quicken
-8224,0,6,4,3,0x3,3,1,1,yes,0,0,0,magic,0,	MER_SIGHT,Sight
-8225,1,8,1,-1,0,0,5,3,no,0,0,0,weapon,0,	MER_CRASH,Crash
-8226,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_REGAIN,Regain
-8227,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_TENDER,Tender
-8228,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_BENEDICTION,Benediction
-8229,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_RECUPERATE,Recuperate
-8230,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_MENTALCURE,Mental_Cure
-8231,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_COMPRESS,Compress
-8232,9,6,1,0,0x1,0,10,1,no,0,0,0,none,0,	MER_PROVOKE,Provoke
-8233,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,0,	MER_AUTOBERSERK,Berserk
-8234,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_DECAGI,Decrease_AGI
-8235,0,6,4,0,0x1,0,1,1,yes,0,0,0,none,0,		MER_SCAPEGOAT,Scapegoat
-8236,5,6,1,0,0x1,0,10,0,yes,0,0,0,magic,0,	MER_LEXDIVINA,Lex_Divina
-8237,9,6,1,0,0x1,0,1,1,yes,0,0,0,magic,0,	MER_ESTIMATION,Sense
-8238,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_KYRIE,Kyrie Eleison
-8239,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_BLESSING,Blessing
-8240,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_INCAGI,Increase Agility
+8201,-1,6,1,-1,0,0,10,1,no,0,0,0,weapon,0,	MS_BASH,狂击
+8202,0,6,4,3,0x2,2,10,1,no,0,0,0,weapon,2,	MS_MAGNUM,怒爆
+8203,-2,6,1,-1,0x2,1,10,1,no,33,0,0,weapon,1,	MS_BOWLINGBASH,怪物互击
+8204,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	MS_PARRYING,双剑挌挡
+8205,0,6,4,0,0,0,10,1,no,0,0,0,weapon,0,	MS_REFLECTSHIELD,反射盾
+8206,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,0,	MS_BERSERK,狂怒之枪
+8207,-9,8,1,-1,0,0,10,2,no,0,0,0,weapon,0,	MA_DOUBLE,二连矢
+8208,-9,6,2,-1,0x2,2,10,1,no,0,0,0,weapon,2,	MA_SHOWER,箭雨
+8209,3,6,2,0,0x1,0,5,1,no,0,0x80,0,misc,6:7:8:9:10,	MA_SKIDTRAP,滑动陷阱
+8210,3,6,2,2,0x40,0,5,1,no,0,0x80,0,misc,0,	MA_LANDMINE,地雷陷阱
+8211,3,6,2,0,0x3,2,5,1,no,0,0x80,0,misc,0,	MA_SANDMAN,睡魔陷阱
+8212,3,6,2,1,0x42,1,5,1,no,0,0x80,0,weapon,0,	MA_FREEZINGTRAP,霜冻陷阱
+8213,2,6,32,0,0x1,0,1,1,no,0,0,0,misc,0,	MA_REMOVETRAP,陷阱移除
+8214,-9,6,1,-1,0x2,0,1,1,no,0,0x1,0,weapon,6,	MA_CHARGEARROW,冲锋箭
+8215,9,8,1,-1,0,2,5,1,yes,0,0,13,weapon,0,	MA_SHARPSHOOTING,锐利射击
+8216,-2,8,1,-1,0,0,10,3,no,0,0,0,weapon,0,	ML_PIERCE,连刺攻击
+8217,-2,6,1,-1,0x1,0,10,1,no,33,0,0,weapon,3,	ML_BRANDISH,骑乘攻击
+8218,5,8,1,-1,0,0,5,5,no,0,0,0,weapon,0,	ML_SPIRALPIERCE,螺旋击刺
+8219,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	ML_DEFENDER,光之盾
+8220,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	ML_AUTOGUARD,自动防御
+8221,7:8:9:10:11,6,16,0,0x1,0,5,1,yes,0,0x600,0,none,0,	ML_DEVOTION,牺牲
+8222,0,6,4,0,0x3,-1,5,1,yes,0,0,0,magic,0,	MER_MAGNIFICAT,莫纳的祝福
+8223,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	MER_QUICKEN,加速武器
+8224,0,6,4,3,0x3,3,1,1,yes,0,0,0,magic,0,	MER_SIGHT,狙杀瞄准
+8225,1,8,1,-1,0,0,5,3,no,0,0,0,weapon,0,	MER_CRASH,撞击
+8226,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_REGAIN,恢复
+8227,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_TENDER,痊愈术
+8228,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_BENEDICTION,祝福
+8229,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_RECUPERATE,复原
+8230,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_MENTALCURE,精神治愈
+8231,9,6,16,0,0x1,0,1,1,yes,0,0x1000,0,magic,0,	MER_COMPRESS,压制
+8232,9,6,1,0,0x1,0,10,1,no,0,0,0,none,0,	MER_PROVOKE,挑衅
+8233,0,6,4,0,0x1,0,1,1,no,0,0,0,weapon,0,	MER_AUTOBERSERK,狂暴状态
+8234,9,6,1,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_DECAGI,缓速术
+8235,0,6,4,0,0x1,0,1,1,yes,0,0,0,none,0,		MER_SCAPEGOAT,替罪羊
+8236,5,6,1,0,0x1,0,10,0,yes,0,0,0,magic,0,	MER_LEXDIVINA,沉默之术
+8237,9,6,1,0,0x1,0,1,1,yes,0,0,0,magic,0,	MER_ESTIMATION,怪物情报
+8238,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_KYRIE,虔诚祈祷
+8239,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_BLESSING,祝福
+8240,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_INCAGI,敏捷增加
 
 // Summons skills. 
 //8416,0,0,0,0,0,0,9,0,no,0,0,0,none,0		EL_AQUAPLAY,
