@@ -1,33 +1,29 @@
 //===== eAthena Script =======================================
-//= Louyang Fields Monster Spawn Script
+//= Louyang Fields Renewal Monster Spawn Script
 //===== By: ==================================================
-//= Evera/Lorri
+//= Chilly
 //===== Current Version: =====================================
-//= 1.2
+//= 1.0+
 //===== Compatible With: =====================================
 //= Any Athena Version
+//===== Description: =========================================
+//= Official kRO renewal monster spawns
 //===== Additional Comments: =================================
-//= 1.1 updated by MasterOfMuppets
-//= 1.2 Official kRO 10.1 spawns [Playtester]
+//= 1.0 First Release
+//= 1.0+ Corrected Most Official Renewal Spawn [5511]
 //============================================================
 
 //==================================================
 // lou_fild01 - Louyang Field
 //==================================================
-lou_fild01,224,315,100,50	monster	´ó½ÅÐÜ	1060,7,0,0,0
-lou_fild01,203,225,110,35	monster	´ó½ÅÐÜ	1060,4,60000,30000,1
-lou_fild01,273,128,75,50	monster	´ó½ÅÐÜ	1060,4,0,0,0
-lou_fild01,224,315,100,50	monster	´Ìâ¬³æ	1103,7,0,0,0
-lou_fild01,203,225,110,35	monster	´Ìâ¬³æ	1103,7,0,0,0
-lou_fild01,273,128,75,50	monster	´Ìâ¬³æ	1103,7,0,0,0
-lou_fild01,224,315,100,50	monster	ó«òë	1139,10,0,0,0
-lou_fild01,203,225,110,35	monster	ó«òë	1139,10,0,0,0
-lou_fild01,273,128,75,50	monster	ó«òë	1139,10,0,0,0
-lou_fild01,224,315,100,50	monster	Ã×¸â	1516,8,0,0,0
-lou_fild01,203,225,110,35	monster	Ã×¸â	1516,15,60000,30000,1
-lou_fild01,273,128,75,50	monster	Ã×¸â	1516,7,0,0,0
-lou_fild01,224,315,100,50	monster	¶¾Éß	1030,2,0,0,0
-lou_fild01,203,225,110,35	monster	¶¾Éß	1030,1,0,0,0
-lou_fild01,273,128,75,50	monster	¶¾Éß	1030,2,0,0,0
+lou_fild01,224,315,100,50	monster	ó«òë	1139,6,0,0,0
+lou_fild01,203,225,110,35	monster	ó«òë	1139,6,0,0,0
+lou_fild01,273,128,75,50	monster	ó«òë	1139,7,0,0,0
+lou_fild01,224,315,100,50	monster	Ã×¸â	1516,15,0,0,0
+lou_fild01,203,225,110,35	monster	Ã×¸â	1516,15,0,0,0
+lou_fild01,273,128,75,50	monster	Ã×¸â	1516,10,0,0,0
+lou_fild01,224,315,100,50	monster	Ð°¶ñÏòÈÕ¿û	1368,6,0,0,0
+lou_fild01,203,225,110,35	monster	Ð°¶ñÏòÈÕ¿û	1368,6,0,0,0
+lou_fild01,273,128,75,50	monster	Ð°¶ñÏòÈÕ¿û	1368,7,0,0,0
 lou_fild01,0,0,0,0	monster	ºÚ¹½	1084,5,0,0,0
 lou_fild01,0,0,0,0	monster	»Æ²Ý	1081,10,0,0,0

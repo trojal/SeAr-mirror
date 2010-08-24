@@ -1,20 +1,24 @@
 //===== eAthena Script =======================================
-//= Moscovia Fields Monster Spawn Script
+//= Moscovia Fields Renewal Monster Spawn Script
 //===== By: ==================================================
-//= Athena (1.0)
+//= Chilly
 //===== Current Version: =====================================
-//= 1.0
+//= 1.0+
 //===== Compatible With: =====================================
 //= Any Athena Version
+//===== Description: =========================================
+//= Official kRO renewal monster spawns
 //===== Additional Comments: =================================
-//= 1.0 Added spawns [Playtester]
+//= 1.0 First Release
+//= 1.0+ Corrected Most Official Renewal Spawn [5511]
+//============================================================
 
 //==================================================
 // mosk_fild02 - Moscovia Field
 //==================================================
-mosk_fild02,0,0,0,0	monster	´ó½ÅÐÜ	1060,40,0,0,0
-mosk_fild02,0,0,0,0	monster	´Ìâ¬³æ	1103,20,0,0,0
-mosk_fild02,0,0,0,0	monster	ó«òë	1139,30,0,0,0
-mosk_fild02,0,0,0,0	monster	²¨Àû	1002,10,0,0,0
+mosk_fild02,0,0,0,0	monster	ºÚÉß	1037,40,0,0,0
+mosk_fild02,0,0,0,0	monster	Ð°¶ñÏòÈÕ¿û	1368,5,0,0,0
+mosk_fild02,0,0,0,0	monster	ó«òë	1139,10,0,0,0
+mosk_fild02,0,0,0,0	monster	°¬¼ªÅ·òÚò¼	1099,30,0,0,0
 mosk_fild02,0,0,0,0	monster	»Æ²Ý	1081,5,0,0,0
 mosk_fild02,0,0,0,0	monster	°×²Ý	1082,5,10000,0,0
