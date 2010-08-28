@@ -719,7 +719,7 @@
 1428,Long_Horn_M,Long Horn,4,20,,1000,150,,3,1,0x00004082,2,2,2,4,65,1,4,{ bonus bAtkEle,Ele_Holy; bonus2 bAddEff,Eff_Bleeding,500; skill "TF_DETOXIFY",1; bonus bUnbreakableWeapon,0; if(isequipped(2115)) bonus3 bAutoSpellWhenHit,"HP_ASSUMPTIO",2,5; },{},{}
 1429,Hunting_Spear_M,Hunting Spear,4,0,,4200,180,,3,1,0x00004082,2,2,34,4,60,1,4,{ bonus bIgnoreDefRace,RC_Brute; bonus3 bAddMonsterDropItem,517,RC_Brute,1000; bonus3 bAutoSpell,"LK_JOINTBEAT",3,500; },{},{}
 1430,Pike_C,Pike,4,0,,0,74,,3,0,0x00004082,7,2,2,1,1,0,4,{ bonus2 bAddSize,0,70; bonus2 bAddSize,1,70; bonus2 bAddSize,2,70; },{},{}
-1433,Imperial_Spear,帝国长枪,4,10,,180,180,,4,1,0x00004000,8,2,2,3,102,1,4,{ bonus bMatk,40; bonus2 bSkillAtk,"LG_CANNONSPEAR",20+(getrefine()/2)*2; bonus2 bSkillAtk,"LG_BANISHINGPOINT",20+(getrefine()/2)*2; if(isequipped(2153)) { bonus2 bSkillAtk,"LG_RAYOFGENESIS",10; bonus2 bSkillAtk,"CR_GRANDCROSS",10; } },{},{}
+1433,Imperial_Spear,帝国长枪,4,10,,180,180,,4,1,0x00004000,8,2,2,3,102,1,4,{ bonus bMatk,40; bonus2 bSkillAtk,"LG_CANNONSPEAR",20+(getrefine()/2)*1; bonus2 bSkillAtk,"LG_BANISHINGPOINT",20+(getrefine()/2)*1; if(isequipped(2153)) { bonus2 bSkillAtk,"LG_RAYOFGENESIS",10; bonus2 bSkillAtk,"CR_GRANDCROSS",10; } },{},{}
 // 2-Handed Spears
 1451,Guisarme,弯刃长矛,4,13000,,1000,84,,3,2,0x00004082,7,2,34,2,18,1,5,{},{},{}
 1452,Guisarme_,弯刃长矛,4,13000,,1000,84,,3,3,0x00004082,7,2,34,2,18,1,5,{},{},{}
@@ -1671,17 +1671,17 @@
 2799,Kuirpenring,Kuirpenring,5,0,,100,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bMdef,1; },{},{}
 // Mechanic Mado Accessorys
 //===================================================================
-2800,Accelerator,加速装置,5,100000,,100,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bAgi,2; },{},{}
-2801,Hovering_Booster,悬浮推进器,5,100000,,2000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bAgi,1; },{},{}
+2800,Accelerator,涡轮增压装置,5,100000,,100,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bAgi,2; },{},{}
+2801,Hovering_Booster,悬浮助推器,5,100000,,2000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bAgi,1; },{},{}
 2802,Suicidal_Device,自爆装置,5,500000,,1000,,0,,1,0x00000400,8,2,136,,99,0,0,{},{},{}
-2803,Shape_Shifter,变形装置,5,100000,,500,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bInt,3; },{},{}
-2804,Cooling_Device,冷却系统,5,100000,,2500,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2805,Magnetic_Field_Generator,磁场发生器,5,100000,,6000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2806,Barrier_Builder,防御罩,5,150000,,8000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2807,Repair_Kit,维修组件,5,200000,,400,,0,,1,0x00000400,8,2,136,,99,0,0,{},{},{}
-2808,Camouflage_Generator,光学迷彩发生器,5,10,,1000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bAgi,3; },{},{}
-2809,High_Quality_Cooler,高级冷却系统,5,10,,2500,,0,,1,0x00000400,7,2,136,,99,0,0,{ bonus bDex,1; },{},{}
-2810,Special_Cooler,特殊冷却系统,5,10,,2500,,0,,1,0x00000400,7,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2803,Shape_Shifter,装甲变更装置,5,100000,,500,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bInt,3; },{},{}
+2804,Cooling_Device,冷却装置,5,100000,,2500,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2805,Magnetic_Field_Generator,磁场生成器,5,100000,,6000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2806,Barrier_Builder,屏障生成器,5,150000,,8000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2807,Repair_Kit,维修工具箱,5,200000,,400,,0,,1,0x00000400,8,2,136,,99,0,0,{},{},{}
+2808,Camouflage_Generator,光学迷彩发生器,5,250000,,1000,,0,,1,0x00000400,8,2,136,,99,0,0,{ bonus bAgi,3; },{},{}
+2809,High_Quality_Cooler,高级冷却装置,5,100000,,2500,,0,,1,0x00000400,7,2,136,,99,0,0,{ bonus bDex,1; },{},{}
+2810,Special_Cooler,特殊冷却装置,5,100000,,2500,,0,,1,0x00000400,7,2,136,,99,0,0,{ bonus bDex,1; },{},{}
 2811,Freya_Spirit_Bracelet1,Freya Spirit Bracelet,5,0,,200,,1,,0,0xFFFFFFFF,7,2,136,,20,0,0,{ bonus bAllStats,1; },{},{}
 2812,Freya_Spirit_Bracelet2,Freya Spirit Bracelet,5,0,,200,,1,,0,0xFFFFFFFF,7,2,136,,20,0,0,{ bonus bAllStats,1; },{},{}
 2813,Freya_Spirit_Bracelet3,Freya Spirit Bracelet,5,0,,200,,1,,0,0xFFFFFFFF,7,2,136,,20,0,0,{ bonus bAllStats,1; },{},{}
@@ -3118,15 +3118,15 @@
 6117,Imp_Pet_Coupon,Imp Pet Exchange Coupon,3,0,,10,,,,,,,,,,,,,{},{},{}
 6118,Chung_E_Pet_Coupon,Chung E Exchange Coupon,3,0,,10,,,,,,,,,,,,,{},{},{}
 6119,Natural_Leather,Natural Leather,3,0,,10,,,,,,,,,,,,,{},{},{}
-6120,Face_Paint,颜面涂料,3,10,,20,,,,,,,,,,,,,{},{},{}
-6121,Makeover_Brush,化妆笔,3,10,,0,,,,,,,,,,,,,{},{},{}
-6122,Paint_Brush,颜料笔,3,10,,0,,,,,,,,,,,,,{},{},{}
-6123,Surface_Paint,地面涂料,3,10,,30,,,,,,,,,,,,,{},{},{}
-6124,Wolf's_Flute,狼笛,3,250,,0,,,,,,,,,,,,,{},{},{}
+6120,Face_Paint,化妆颜料,3,120,,20,,,,,,,,,,,,,{},{},{}
+6121,Makeover_Brush,化妆刷,3,10,,0,,,,,,,,,,,,,{},{},{}
+6122,Paint_Brush,毛刷,3,10,,0,,,,,,,,,,,,,{},{},{}
+6123,Surface_Paint,墙面漆,3,200,,30,,,,,,,,,,,,,{},{},{}
+6124,Wolf's_Flute,狼笛,3,10,,0,,,,,,,,,,,,,{},{},{}
 6125,Lucky_Box,Lucky Box,3,0,,10,,,,,,,,,,,,,{},{},{}
 6126,Happy_Box,Happy Box,3,0,,10,,,,,,,,,,,,,{},{},{}
 6127,Purification_Stone,Purification Stone,3,0,,10,,,,,,,,,,,,,{},{},{}
-6128,Guillotine_Antidote,解毒剂,3,10,,0,,,,,,,,,,,,,{},{},{}
+6128,Guillotine_Antidote,解毒剂,3,0,,0,,,,,,,,,,,,,{},{},{}
 6129,Ticket_Nightmare,Ticket Nightmare,3,0,,10,,,,,,,,,,,,,{},{},{}
 6130,Ticket_Loli_Ruri,Ticket Loli Ruri,3,0,,10,,,,,,,,,,,,,{},{},{}
 6131,Ticket_Goblin_Leader,Ticket Goblin Leader,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -3142,10 +3142,10 @@
 6141,Ticket_Shinobi,Ticket Shinobi,3,0,,10,,,,,,,,,,,,,{},{},{}
 6142,Ticket_Golem,Ticket Golem,3,0,,10,,,,,,,,,,,,,{},{},{}
 6143,Ticket_Civil_Servant,Ticket Civil Servant,3,0,,10,,,,,,,,,,,,,{},{},{}
-6144,Heartbroken_Tears,Heartbroken Tears,3,0,,10,,,,,,,,,,,,,{},{},{}
-6145,Vulcan_Bullet,火神子弹,3,10,,2,,,,,,,,,,,,,{},{},{}
-6146,Magic_Gear_Fuel,魔导装甲燃料,3,300,,30,,,,,,,,,,,,,{},{},{}
-6147,Liquid_Condensed_Bullet,液冷子弹,3,100,,3,,,,,,,,,,,,,{},{},{}
+6144,Heartbroken_Tears,心痛的眼泪,3,1000,,2,,,,,,,,,,,,,{},{},{}
+6145,Vulcan_Bullet,机关炮子弹,3,10,,2,,,,,,,,,,,,,{},{},{}
+6146,Magic_Gear_Fuel,魔导机械燃料,3,300,,30,,,,,,,,,,,,,{},{},{}
+6147,Liquid_Condensed_Bullet,液体冷却弹,3,100,,3,,,,,,,,,,,,,{},{},{}
 6148,Chocolate_Of_Eternity,Chocolate Of Eternity,3,0,,10,,,,,,,,,,,,,{},{},{}
 6149,Plain_Chocolate,Plain Chocolate,3,0,,10,,,,,,,,,,,,,{},{},{}
 6150,Key_Of_The_Mansion,御宅的钥匙,3,10,,0,,,,,,,,,,,,,{},{},{}
@@ -3187,62 +3187,62 @@
 6186,Monkey_Wrench,活动扳手,3,500,,10,,,,,,,,,,,,,{},{},{}
 6187,Blank_Card,Blank Card,3,0,,10,,,,,,,,,,,,,{},{},{}
 //6188,Slotting_Advertisement,Slotting Advertisement,
-6189,Magic_Book_(Fire_Bolt),魔法书(火箭术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6190,Magic_Book_(Cold_Bolt),魔法书(冰箭术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6191,Magic_Book_(Lightning_Bolt),魔法书(雷击术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6192,Magic_Book_(Storm_Gust),魔法书(暴风雪),3,10,,10,,,,,,,,,,,,,{},{},{}
-6193,Magic_Book_(Lord_Of_Vermillion),魔法书(怒雷强击),3,10,,10,,,,,,,,,,,,,{},{},{}
-6194,Magic_Book_(Meteor_Storm),魔法书(陨石术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6195,Magic_Book_(Comet),魔法书(破坏的彗星),3,10,,10,,,,,,,,,,,,,{},{},{}
-6196,Magic_Book_(Tetra_Vortex),魔法书(四相漩涡),3,10,,10,,,,,,,,,,,,,{},{},{}
-6197,Magic_Book_(Thunder_Storm),魔法书(雷爆术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6198,Magic_Book_(Jupitel_Thunder),魔法书(雷鸣术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6199,Magic_Book_(Water_Ball),魔法书(水球术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6200,Magic_Book_(Heaven's_Drive),魔法书(崩裂术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6201,Magic_Book_(Earth_Spike),魔法书(地震术),3,10,,10,,,,,,,,,,,,,{},{},{}
-6202,Magic_Book_(Earth_Strain),魔法书(大地的扭曲),3,10,,10,,,,,,,,,,,,,{},{},{}
-6203,Magic_Book_(Chain_Lightning),魔法书(连锁闪电),3,10,,10,,,,,,,,,,,,,{},{},{}
-6204,Magic_Book_(Crimson_Rock),魔法书(猩红岩石),3,10,,10,,,,,,,,,,,,,{},{},{}
-6205,Magic_Book_(Drain_Life),魔法书(生命吸收),3,10,,10,,,,,,,,,,,,,{},{},{}
+6189,Magic_Book_(Fire_Bolt),魔法书(火箭术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6190,Magic_Book_(Cold_Bolt),魔法书(冰箭术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6191,Magic_Book_(Lightning_Bolt),魔法书(雷击术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6192,Magic_Book_(Storm_Gust),魔法书(暴风雪),3,0,,0,,,,,,,,,,,,,{},{},{}
+6193,Magic_Book_(Lord_Of_Vermillion),魔法书(怒雷强击),3,0,,0,,,,,,,,,,,,,{},{},{}
+6194,Magic_Book_(Meteor_Storm),魔法书(陨石术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6195,Magic_Book_(Comet),魔法书(破坏彗星),3,0,,0,,,,,,,,,,,,,{},{},{}
+6196,Magic_Book_(Tetra_Vortex),魔法书(元素漩涡),3,0,,0,,,,,,,,,,,,,{},{},{}
+6197,Magic_Book_(Thunder_Storm),魔法书(雷爆术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6198,Magic_Book_(Jupitel_Thunder),魔法书(雷鸣术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6199,Magic_Book_(Water_Ball),魔法书(水球术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6200,Magic_Book_(Heaven's_Drive),魔法书(崩裂术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6201,Magic_Book_(Earth_Spike),魔法书(地震术),3,0,,0,,,,,,,,,,,,,{},{},{}
+6202,Magic_Book_(Earth_Strain),魔法书(大地扭曲),3,0,,0,,,,,,,,,,,,,{},{},{}
+6203,Magic_Book_(Chain_Lightning),魔法书(连锁闪电),3,0,,0,,,,,,,,,,,,,{},{},{}
+6204,Magic_Book_(Crimson_Rock),魔法书(深红陨石),3,0,,0,,,,,,,,,,,,,{},{},{}
+6205,Magic_Book_(Drain_Life),魔法书(生命吸收),3,0,,0,,,,,,,,,,,,,{},{},{}
 //6206,I_Love_You,I Love You,
 //6207,Thanks,Thanks,
 //6208,Respect,Respect,
 //6209,Knight_Of_Honor,Knight Of Honor,
-6210,Thorny_Seed,刺藤的种子,3,10,,10,,,,,,,,,,,,,{},{},{}
-6211,Bloodsucker_Seed,吸血植物的种子,3,10,,10,,,,,,,,,,,,,{},{},{}
-6212,Bomb_Mushroom_Spores,炸弹香菇的种子,3,10,,10,,,,,,,,,,,,,{},{},{}
-6213,Explosive_Powder,爆炸粉,3,10,,10,,,,,,,,,,,,,{},{},{}
-6214,Smokescreen_Powder,烟雾粉,3,10,,10,,,,,,,,,,,,,{},{},{}
-6215,Tear_Gas,催泪瓦斯,3,10,,10,,,,,,,,,,,,,{},{},{}
-6216,Oil_Bottle,油瓶,3,10,,10,,,,,,,,,,,,,{},{},{}
-6217,Mandragora_Flowerpot,曼陀萝盆栽,3,10,,10,,,,,,,,,,,,,{},{},{}
-6223,Kalunium,Kalunium,3,10,,10,,,,,,,,,,,,,{},{},{}
-6224,Bradium,Bradium,3,10,,10,,,,,,,,,,,,,{},{},{}
-6225,High_Density_Kalunium,High Density Kalunium,3,10,,10,,,,,,,,,,,,,{},{},{}
-6226,High_Density_Bradium,High Density Bradium,3,10,,10,,,,,,,,,,,,,{},{},{}
+6210,Thorny_Seed,荆棘种子,3,600,,1,,,,,,,,,,,,,{},{},{}
+6211,Bloodsucker_Seed,吸血植物种子,3,800,,1,,,,,,,,,,,,,{},{},{}
+6212,Bomb_Mushroom_Spores,炸弹蘑菇孢子,3,1000,,1,,,,,,,,,,,,,{},{},{}
+6213,Explosive_Powder,炸弹粉末,3,500,,1,,,,,,,,,,,,,{},{},{}
+6214,Smokescreen_Powder,烟幕粉末,3,500,,1,,,,,,,,,,,,,{},{},{}
+6215,Tear_Gas,催泪瓦斯,3,500,,1,,,,,,,,,,,,,{},{},{}
+6216,Oil_Bottle,油瓶,3,1000,,1,,,,,,,,,,,,,{},{},{}
+6217,Mandragora_Flowerpot,曼陀萝魔花花盆,3,2000,,1,,,,,,,,,,,,,{},{},{}
+6223,Kalunium,混沌金属,3,2000,,150,,,,,,,,,,,,,{},{},{}
+6224,Bradium,魔力之石,3,2000,,150,,,,,,,,,,,,,{},{},{}
+6225,High_Density_Kalunium,高密度 混沌金属,3,0,,10,,,,,,,,,,,,,{},{},{}
+6226,High_Density_Bradium,高密度 魔力之石,3,0,,10,,,,,,,,,,,,,{},{},{}
 //6243,WPS_Point_Token
-6244,Dark_Powder,火药粉,3,10,,10,,,,,,,,,,,,,{},{},{}
-6245,Black_Powder,黑炭粉,3,10,,10,,,,,,,,,,,,,{},{},{}
-6246,Yellow_Powder,黄色粉末,3,10,,10,,,,,,,,,,,,,{},{},{}
-6247,White_Powder,白色粉末,3,10,,10,,,,,,,,,,,,,{},{},{}
-6248,Stew_Pot,杂烩菜,3,10,,10,,,,,,,,,,,,,{},{},{}
-6249,Savage_Meat,野猪肉,3,10,,10,,,,,,,,,,,,,{},{},{}
-6250,Iron_Cooking_Skewer,料理用铁串,3,10,,10,,,,,,,,,,,,,{},{},{}
-6251,Bituminous_Coal,黑炭,3,10,,10,,,,,,,,,,,,,{},{},{}
-6252,Wolf's_Blood,野狼的血,3,10,,10,,,,,,,,,,,,,{},{},{}
-6253,Cold_Ice,寒冷的冰块,3,10,,10,,,,,,,,,,,,,{},{},{}
-6254,Seasoned_Tough_Meat,药味的牛肉,3,10,,10,,,,,,,,,,,,,{},{},{}
-6255,Large_Pan,大锅子,3,10,,10,,,,,,,,,,,,,{},{},{}
-6256,Powdered_Ice,冰的碎片,3,10,,10,,,,,,,,,,,,,{},{},{}
-6257,Ice_Crystal,冰的结晶,3,10,,10,,,,,,,,,,,,,{},{},{}
-6258,Comodo_Tropical_Fruit,克魔岛热带水果,3,10,,10,,,,,,,,,,,,,{},{},{}
-6259,Drosera_Feeler,捕虫草的触手,3,10,,10,,,,,,,,,,,,,{},{},{}
-6260,Petite_Tail,毕帝特龙的尾巴,3,10,,10,,,,,,,,,,,,,{},{},{}
-6261,Fine_Noodles,素面,3,10,,10,,,,,,,,,,,,,{},{},{}
-6262,Cold_Broth,冰冷的肉汁,3,10,,10,,,,,,,,,,,,,{},{},{}
-6263,Coconut,椰子,3,10,,10,,,,,,,,,,,,,{},{},{}
-6264,Melon,哈密瓜,3,10,,10,,,,,,,,,,,,,{},{},{}
-6265,Pineapple,菠萝,3,10,,10,,,,,,,,,,,,,{},{},{}
+6244,Dark_Powder,火药粉末,3,10,,1,,,,,,,,,,,,,{},{},{}
+6245,Black_Powder,黑色粉末,3,100,,1,,,,,,,,,,,,,{},{},{}
+6246,Yellow_Powder,黄色粉末,3,100,,1,,,,,,,,,,,,,{},{},{}
+6247,White_Powder,白色粉末,3,100,,1,,,,,,,,,,,,,{},{},{}
+6248,Stew_Pot,瓦罐,3,600,,10,,,,,,,,,,,,,{},{},{}
+6249,Savage_Meat,野猪肉,3,100,,10,,,,,,,,,,,,,{},{},{}
+6250,Iron_Cooking_Skewer,料理用铁签,3,300,,10,,,,,,,,,,,,,{},{},{}
+6251,Bituminous_Coal,黑炭,3,300,,10,,,,,,,,,,,,,{},{},{}
+6252,Wolf's_Blood,狼血,3,100,,10,,,,,,,,,,,,,{},{},{}
+6253,Cold_Ice,寒冷的冰块,3,100,,10,,,,,,,,,,,,,{},{},{}
+6254,Seasoned_Tough_Meat,牛头肉,3,100,,10,,,,,,,,,,,,,{},{},{}
+6255,Large_Pan,巨大的锅,3,500,,10,,,,,,,,,,,,,{},{},{}
+6256,Powdered_Ice,冰碎片,3,100,,10,,,,,,,,,,,,,{},{},{}
+6257,Ice_Crystal,冰结晶,3,100,,10,,,,,,,,,,,,,{},{},{}
+6258,Comodo_Tropical_Fruit,克魔岛热带水果,3,800,,10,,,,,,,,,,,,,{},{},{}
+6259,Drosera_Feeler,茅膏菜的触手,3,100,,10,,,,,,,,,,,,,{},{},{}
+6260,Petite_Tail,毕帝特龙的尾巴,3,100,,10,,,,,,,,,,,,,{},{},{}
+6261,Fine_Noodles,素面,3,500,,10,,,,,,,,,,,,,{},{},{}
+6262,Cold_Broth,爽口的肉汤,3,400,,10,,,,,,,,,,,,,{},{},{}
+6263,Coconut,椰果,3,100,,10,,,,,,,,,,,,,{},{},{}
+6264,Melon,甜瓜,3,100,,10,,,,,,,,,,,,,{},{},{}
+6265,Pineapple,菠萝,3,100,,10,,,,,,,,,,,,,{},{},{}
 //6266,Test_Item_27,Test Item 27,3,10,,10,,,,,,,,,,,,,{},{},{}
 //6267,Test_Item_28,Test Item 28,3,10,,10,,,,,,,,,,,,,{},{},{}
 //6268,Test_Item_29,Test Item 29,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -3256,13 +3256,13 @@
 //6276,Test_Item_37,Test Item 37,3,10,,10,,,,,,,,,,,,,{},{},{}
 //6277,Test_Item_38,Test Item 38,3,10,,10,,,,,,,,,,,,,{},{},{}
 //6278,Test_Item_39,Test Item 39,3,10,,10,,,,,,,,,,,,,{},{},{}
-6279,Apple_Bomb_Guidebook,苹果炸弹制作说明书,3,10,,10,,,,,,,,,,,,,{},{},{}
-6280,Pineapple_Bomb_Guidebook,菠萝炸弹制作说明书,3,10,,10,,,,,,,,,,,,,{},{},{}
-6281,Coconut_Bomb_Guidebook,椰子炸弹制作说明书,3,10,,10,,,,,,,,,,,,,{},{},{}
-6282,Melon_Bomb_Guidebook,哈密瓜炸弹制作说明书,3,10,,10,,,,,,,,,,,,,{},{},{}
-6283,Banana_Bomb_Guidebook,香蕉炸弹制作说明书,3,10,,10,,,,,,,,,,,,,{},{},{}
-6284,Plant_Genetic_Cultivation_Guide,植物种子制作说明书e,3,10,,10,,,,,,,,,,,,,{},{},{}
-6285,Improved_Potion_Creation_Manual,高级药水制作说明书,3,10,,10,,,,,,,,,,,,,{},{},{}
+6279,Apple_Bomb_Guidebook,苹果炸弹制造书,3,100000,,10,,,,,,,,,,,,,{},{},{}
+6280,Pineapple_Bomb_Guidebook,菠萝炸弹制造书,3,100000,,10,,,,,,,,,,,,,{},{},{}
+6281,Coconut_Bomb_Guidebook,椰果炸弹制造书,3,100000,,10,,,,,,,,,,,,,{},{},{}
+6282,Melon_Bomb_Guidebook,甜瓜炸弹制造书,3,100000,,10,,,,,,,,,,,,,{},{},{}
+6283,Banana_Bomb_Guidebook,香蕉炸弹制造书,3,100000,,10,,,,,,,,,,,,,{},{},{}
+6284,Plant_Genetic_Cultivation_Guide,植物基因栽培法,3,100000,,10,,,,,,,,,,,,,{},{},{}
+6285,Improved_Potion_Creation_Manual,高级药水制造手册,3,100000,,10,,,,,,,,,,,,,{},{},{}
 //6286,Gym_Pass
 //6287,New_Clothing_Dye_Coupon
 //6288,Summer_Happy_Box
@@ -3273,7 +3273,7 @@
 //6293,Token_Of_Siegfried
 //6294,Marriage_Covenant
 //6295,Original_Clothing_Dye_Coupon
-6297,Empty_Potion_Bottle,空药水瓶,3,10,,10,,,,,,,,,,,,,{},{},{}
+6297,Empty_Potion_Bottle,投掷瓶,3,300,,10,,,,,,,,,,,,,{},{},{}
 //6298,Crushed_Pumpkin
 //6299,Worn_Fabric
 6304,Unknown,邪派功动证,3,10,,0,,,,,,,,,,,,,{},{},{}
@@ -4149,16 +4149,16 @@
 7928,Brazilian_Flag_,Brazilian Flag,3,0,,10,,,,,,,,,,,,,{},{},{}
 7929,Golden_Coin_,Golden Coin,3,0,,10,,,,,,,,,,,,,{},{},{}
 7930,Cowking's_Nose_Ring,Cowking's Nose Ring,3,0,,10,,,,,,,,,,,,,{},{},{}
-7931,Poison_Kit,Poison Kit,3,10,,10,,,,,,,,,,,,,{},{},{}
-7932,Poison_Herb_Nerium,Poison Herb Nerium,3,10,,10,,,,,,,,,,,,,{},{},{}
-7933,Poison_Herb_Rantana,Poison Herb Rantana,3,10,,10,,,,,,,,,,,,,{},{},{}
-7934,Poison_Herb_Makulata,Poison Herb Makulata,3,10,,10,,,,,,,,,,,,,{},{},{}
-7935,Poison_Herb_Seratum,Poison Herb Seratum,3,10,,10,,,,,,,,,,,,,{},{},{}
-7936,Poison_Herb_Scopolia,Poison Herb Scopolia,3,10,,10,,,,,,,,,,,,,{},{},{}
-7937,Poison_Herb_Amoena,Poison Herb Amoena,3,10,,10,,,,,,,,,,,,,{},{},{}
-7938,Light_Granule,光的粒子,3,10,,10,,,,,,,,,,,,,{},{},{}
-7939,Elder_Branch,长老树枝,3,10,,10,,,,,,,,,,,,,{},{},{}
-7940,Special_Alloy_Trap,特殊合金陷阱,3,10,,10,,,,,,,,,,,,,{},{},{}
+7931,Poison_Kit,制毒工具箱,3,1,,10,,,,,,,,,,,,,{},{},{}
+7932,Poison_Herb_Nerium,毒草 夹竹桃,3,1,,10,,,,,,,,,,,,,{},{},{}
+7933,Poison_Herb_Rantana,毒草 马缨丹,3,1,,10,,,,,,,,,,,,,{},{},{}
+7934,Poison_Herb_Makulata,毒草 斑叶竹,3,1,,10,,,,,,,,,,,,,{},{},{}
+7935,Poison_Herb_Seratum,毒草 蛇足草,3,1,,10,,,,,,,,,,,,,{},{},{}
+7936,Poison_Herb_Scopolia,毒草 赛莨菪,3,1,,10,,,,,,,,,,,,,{},{},{}
+7937,Poison_Herb_Amoena,毒草 透骨草,3,1,,10,,,,,,,,,,,,,{},{},{}
+7938,Light_Granule,光粒,3,1000,,10,,,,,,,,,,,,,{},{},{}
+7939,Elder_Branch,年老的树枝,3,1000,,10,,,,,,,,,,,,,{},{},{}
+7940,Special_Alloy_Trap,特殊合金陷阱,3,200,,2,,,,,,,,,,,,,{},{},{}
 7941,Halloween_Ticket,Halloween Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 7942,Letter_From_Chico,Letter From Chico,3,0,,10,,,,,,,,,,,,,{},{},{}
 7943,Caskinya,Caskinya,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -4296,9 +4296,9 @@
 11017,Reward_List_Book2,Reward List Book 2,3,0,,10,,,,,,,,,,,,,{},{},{}
 11018,Splendide_Selling_Item,Splendide Selling Item,3,0,,10,,,,,,,,,,,,,{},{},{}
 11019,Manuk_Selling_Item,Manuk Selling Item,3,0,,10,,,,,,,,,,,,,{},{},{}
-11022,Mix_Cooking_Ingredient_Book_1,组合料理制作说明书,3,10,,50,,,,,,,,,,,,,{},{},{}
-11023,Vitality_Boost_Research_Book,(HP/SP)增加药水制作说明书,3,10,,50,,,,,,,,,,,,,{},{},{}
-11024,Energy_Drink_Formula,能量饮料制作说明书,3,10,,50,,,,,,,,,,,,,{},{},{}
+11022,Mix_Cooking_Ingredient_Book_1,组合烹饪料理书,3,100000,,50,,,,,,,,,,,,,{},{},{}
+11023,Vitality_Boost_Research_Book,体力爆发研究书,3,100000,,50,,,,,,,,,,,,,{},{},{}
+11024,Energy_Drink_Formula,活力药水制造法,3,100000,,50,,,,,,,,,,,,,{},{},{}
 // More Usable Items
 //===================================================================
 11500,Light_Yellow_Pot,轻盈黄色药水,0,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(175,235),0; },{},{}
@@ -4314,7 +4314,7 @@
 11510,Coke_Zero,Coke Zero,0,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 11511,Coke_No_Cal,Coke No Cal,0,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 11512,Coca_Cola,Coca Cola,0,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-11513,Cough_Drop,润喉糖,3,10,,1,,,,,,,,,,,,,{ itemheal rand(15,35),0; },{},{}
+11513,Cough_Drop,润喉糖,3,200,,1,,,,,,,,,,,,,{ itemheal rand(15,35),0; },{},{}
 11515,Coconut,Coconut,0,1500,,1200,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(275,305),0; },{},{}
 11516,Acai_Fruit,Acai Fruit,0,15,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(65,95),0; },{},{}
 11518,Cure_Free,大治愈药水,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -4364,7 +4364,7 @@
 12030,Box_Of_Grudge,怨恨的箱子,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ATKPOTION,60000,20; },{},{}
 12031,Sleepy_Box,睡眠的箱子,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_MATKPOTION,60000,20; },{},{}
 12032,Box_Of_Storm,暴雨的箱子,11,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ITEM_ENCHANTARMS",2; },{},{}
-12033,Box_Of_Sunlight,阳光的箱子,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_Intravision,20000,0; },{},{}
+12033,Box_Of_Sunlight,阳光的箱子,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_Intravision,30000,0; },{},{}
 12034,Painting_Box,昏眩的箱子,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,9; if(rand(1000)<300) sc_start SC_Silence,30000,0; },{},{}
 12035,Lotto_Box01,号码箱,2,0,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem rand(7361,7370),1; },{},{}
 12036,Lotto_Box02,号码箱,2,0,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem rand(7371,7380),1; },{},{}
@@ -4670,7 +4670,7 @@
 12338,Grilled_Corn,Grilled Corn,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCSTR,180000,2; sc_start SC_INCINT,180000,2; sc_start SC_INCAGI,180000,2; },{},{}
 12339,Cherish_Box_Ori,Cherish Box Ori,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Cherish_Box_Ori),1; },{},{}
 12340,Mysterious_Rice_Powder,Mysterious Rice Powder,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1815; },{},{}
-12341,Special_Alloy_Trap_Box,特殊合金陷阱箱子,2,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 7940,100; },{},{}
+12341,Special_Alloy_Trap_Box,特殊合金陷阱箱子,2,20000,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 7940,100; },{},{}
 12342,Manuk's_Opportunity,Manuk's Opportunity,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_POTION_BERSERK; sc_start SC_MANU_ATK,600000,10; },{},{}
 12343,Manuk's_Courage,Manuk's Courage,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_GUARD; sc_start SC_MANU_DEF,600000,10; },{},{}
 12344,Pinguicula's_fruit_Jam,Pinguicula's Fruit Jam,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_POTION_BERSERK; sc_start SC_SPL_ATK,600000,10; },{},{}
@@ -4709,21 +4709,21 @@
 12377,Mysterious_PET_Bottle2,Mysterious PET Bottle2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12378,2009_Rice_Cake_Soup,2009 Rice Cake Soup,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12379,Pope's_Cookie,Pope's Cookie,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12380,Desert_Wolf_Babe_Scroll,沙漠幼狼召唤书,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12380,Desert_Wolf_Babe_Scroll,转职考试用 笛子,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12381,ValkyrieA_Scroll,古代语言卷轴1,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12382,ValkyrieB_Scroll,古代语言卷轴2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12383,Vulcan_Bullet_Magazine,火神子弹盒,2,0,,500,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 6145,1000; },{},{}
-12384,Rainbow_Ruby_Water,彩虹宝石Water,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12385,Rainbow_Ruby_Fire,彩虹宝石Fire,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12386,Rainbow_Ruby_Wind,彩虹宝石Wind,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12387,Rainbow_Ruby_Earth,彩虹宝石Earth,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12383,Vulcan_Bullet_Magazine,机关炮弹仓,2,11000,,500,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 6145,1000; },{},{}
+12384,Rainbow_Ruby_Water,彩虹宝石-水,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12385,Rainbow_Ruby_Fire,彩虹宝石-地,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12386,Rainbow_Ruby_Wind,彩虹宝石-火,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12387,Rainbow_Ruby_Earth,彩虹宝石-风,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12388,Runstone_Crush,Runstone Crush,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12389,Runstone_Storm,Runstone Storm,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12390,Runstone_Millennium,Runstone Millennium,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12391,Lucky_Egg_C,Lucky Egg C,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12392,RepairA,修理道具A,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12393,RepairB,修理道具B,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12394,RepairC,修理道具C,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12392,RepairA,维修工具 A,2,220,,100,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12393,RepairB,维修工具 B,2,500,,100,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12394,RepairC,维修工具 C,2,1100,,100,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12395,Tantanmen,Tantanmen,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12396,Fools_Day_Box,Fools Day Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ if(rand(1,10)==1) itemskill "AL_TELEPORT",1; else if(rand(1,10)==2) itemskill "AL_TELEPORT",3; else if(rand(1,10)==3) percentheal 50,0; else if(rand(1,10)==4) percentheal 0,50; else if(rand(1,10)==5) end; else if(rand(1,10)==6) getitem 512,1; else if(rand(1,10)==7) itemskill "ALL_REVERSEORCISH",1; else if(rand(1,10)==8) specialeffect2 247; else if(rand(1,10)==9) specialeffect2 338; else specialeffect2 10; },{},{}
 12397,Fools_Day_Box2,Fools Day Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ if(rand(1,10)==1) itemskill "TF_DETOXIFY",1; else if(rand(1,10)==2) itemskill "TF_PICKSTONE",1; else if(rand(1,10)==3) itemskill "BA_FROSTJOKER",1; else if(rand(1,10)==4) itemskill "DC_SCREAM",1; else if(rand(1,10)==5) end; else if(rand(1,10)==6) getitem 909,1; else if(rand(1,10)==7) itemskill "AL_RUWACH",1; else if(rand(1,10)==8) specialeffect2 328; else if(rand(1,10)==9) specialeffect2 68; else specialeffect2 196; },{},{}
@@ -4767,28 +4767,28 @@
 12714,Easter_Scroll,Easter Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Easter_Scroll),1; },{},{}
 12715,Black_Treasure_Chest,Black Treasure Chest,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12716,Indian_Rice_Cake,Indian Rice Cake,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12717,Poison_Paralysis,瘫痪毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PARALIZE,300000,0; },{},{}
-12718,Poison_Leech,吸血毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_LEECHEND,300000,0; },{},{}
-12719,Poison_Oblivion,忘却毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_OBLIVIONCURSE,300000,0; },{},{}
-12720,Poison_Contamination,污染毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_DISHEART,300000,0; },{},{}
-12721,Poison_Numb,神经毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_TOXIN,300000,0; },{},{}
-12722,Poison_Fever,发热毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PYREXIA,300000,0; },{},{}
-12723,Poison_Laughing,爆笑毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_MUSHROOM,300000,0; },{},{}
-12724,Poison_Fatigue,疲劳毒药,0,100,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_VENOMBLEED,15000,0; },{},{}
-12725,Runstone_Nosiege,束缚符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_REFRESH",1; },{},{}
-12726,Runstone_Rhydo,调和符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_CRUSHSTRIKE",1; },{},{}
-12727,Runstone_Verkana,再生符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_MILLENNIUMSHIELD",1; },{},{}
-12728,Runstone_Isia,静止符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_VITALITYACTIVATION",1; },{},{}
-12729,Runstone_Asir,联合符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_FIGHTINGSPIRIT",1; },{},{}
-12730,Runstone_Urj,轮回符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_ABUNDANCE",1; },{},{}
-12731,Runstone_Turisus,自省符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_GIANTGROWTH",1; },{},{}
-12732,Runstone_Pertz,恐惧符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STORMBLAST",1; },{},{}
-12733,Runstone_Hagalas,毁灭符文石,11,100,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STONEHARDSKIN",1; },{},{}
-12734,Runstone_Quality,高级_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12735,Runstone_Ancient,古代_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12736,Runstone_Mystic,神秘_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12737,Runstone_Ordinary,普通_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
-12738,Runstone_Rare,珍稀_符文原石,0,100,,100,,,,,0x00000080,8,2,,,,,,{ produce 24; },{},{}
+12717,Poison_Paralysis,瘫痪毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PARALIZE,300000,0; },{},{}
+12718,Poison_Leech,吸血毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_LEECHEND,300000,0; },{},{}
+12719,Poison_Oblivion,忘却毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_OBLIVIONCURSE,300000,0; },{},{}
+12720,Poison_Contamination,污染毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_DISHEART,300000,0; },{},{}
+12721,Poison_Numb,神经毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_TOXIN,300000,0; },{},{}
+12722,Poison_Fever,发热毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PYREXIA,300000,0; },{},{}
+12723,Poison_Laughing,爆笑毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_MUSHROOM,300000,0; },{},{}
+12724,Poison_Fatigue,疲劳毒药,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_VENOMBLEED,15000,0; },{},{}
+12725,Runstone_Nosiege,束缚符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_REFRESH",1; },{},{}
+12726,Runstone_Rhydo,调和符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_CRUSHSTRIKE",1; },{},{}
+12727,Runstone_Verkana,再生符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_MILLENNIUMSHIELD",1; },{},{}
+12728,Runstone_Isia,静止符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_VITALITYACTIVATION",1; },{},{}
+12729,Runstone_Asir,联合符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_FIGHTINGSPIRIT",1; },{},{}
+12730,Runstone_Urj,轮回符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_ABUNDANCE",1; },{},{}
+12731,Runstone_Turisus,自省符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_GIANTGROWTH",1; },{},{}
+12732,Runstone_Pertz,恐惧符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STORMBLAST",1; },{},{}
+12733,Runstone_Hagalas,毁灭符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STONEHARDSKIN",1; },{},{}
+12734,Runstone_Quality,高级 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
+12735,Runstone_Ancient,古代 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
+12736,Runstone_Mystic,神秘 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
+12737,Runstone_Ordinary,普通 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
+12738,Runstone_Rare,珍稀 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
 12739,Snow_Flower,Snow Flower,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12740,Inc_Str_Scroll,Inc Str Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12741,Inc_Int_Scroll,Inc Int Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -5013,15 +5013,15 @@
 13258,Kunai_Of_Fierce_Flame,火焰飞刀,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Fire; },{},{}
 13259,Kunai_Of_Deadly_Poison,巨毒飞刀,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Poison; bonus2 bAddEff,Eff_Poison,500; },{},{}
 // Genetic Created Bombs And Lumps
-13260,Apple_Bomb,苹果炸弹,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13261,Coconut_Bomb,椰子炸弹,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13262,Melon_Bomb,哈密瓜炸弹,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13263,Pineapple_Bomb,菠萝炸弹,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13264,Banana_Bomb,香蕉炸弹,10,10,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13265,Black_Lump,黑色块,10,500,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13266,Hard_Black_Lump,坚硬的黑色块,10,500,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13267,Extremely_Hard_Black_Lump,非常坚硬的黑色块,10,500,,10,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
-13268,Mysterious_Powder,神秘粉末,3,10,,10,,,,,,,,,,,,,{},{},{}
+13260,Apple_Bomb,苹果炸弹,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13261,Coconut_Bomb,椰果炸弹,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13262,Melon_Bomb,甜瓜炸弹,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13263,Pineapple_Bomb,菠萝炸弹,100,10,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13264,Banana_Bomb,香蕉炸弹,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13265,Black_Lump,黑色聚合物,10,500,,50,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13266,Hard_Black_Lump,黑色坚硬的聚合物,10,500,,50,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13267,Extremely_Hard_Black_Lump,非常坚硬的聚合物,10,500,,50,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13268,Mysterious_Powder,未知粉末,3,10,,10,,,,,,,,,,,,,{},{},{}
 // Generic Created Throwable Booster Items
 13269,Throwing_Boost_500,Throwing Boost 500,3,10,,10,,,,,,,,,,,,,{},{},{}
 13270,Throwing_Full_Swing_K,Throwing Full Swing K,3,10,,10,,,,,,,,,,,,,{},{},{}
@@ -6020,7 +6020,7 @@
 16001,Red_Square_Bag,红色手提包,4,20,,500,130,,,2,0x0004C5B2,2,2,2,4,50,1,8,{ bonus bMaxHP,200; bonus2 bSkillAtk,"AM_ACIDTERROR",20; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus2 bAddMonsterDropItem,501,50; bonus2 bAddMonsterDropItem,502,20; bonus2 bAddMonsterDropItem,503,20; bonus2 bAddMonsterDropItem,504,20; bonus2 bAddMonsterDropItem,505,10; if(readparam(bStr)>=95) bonus2 bAddEff,Eff_Stun,500; },{},{}
 16002,Stunner_C,Stunner C,2,20,,2000,140,,1,0,0x00008110,7,2,2,3,27,1,8,{ bonus2 bAddEff,Eff_Stun,1000; bonus2 bAddSize,0,40; bonus2 bAddSize,1,40; bonus2 bAddSize,2,40; },{},{}
 16003,Kalga_Mace,Kalga Mace,4,10,,1500,175,,1,2,0x0004C580,8,2,2,3,100,1,8,{},{},{}
-16010,Red_Ether_Bag,红乙太包,4,10,,100,15,,,1,0x00040000,8,2,2,3,102,1,8,{ bonus bMatk,100; bonus2 bSkillAtk,"GN_CRAZYWEED",20; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",20; if(getrefine() >= 6) { bonus2 bSkillAtk,"GN_CRAZYWEED",(getrefine()-5)*2; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",(getrefine()-5)*2; } },{},{}
+16010,Red_Ether_Bag,红乙太包,4,10,,100,15,,,1,0x00040000,8,2,2,3,102,1,8,{ bonus bMatk,100; bonus2 bSkillAtk,"GN_CRAZYWEED",30; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",30; if(getrefine() >= 6) { bonus2 bSkillAtk,"GN_CRAZYWEED",(getrefine()-5)*2; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",(getrefine()-5)*2; } },{},{}
 16134,King_Frog_Hat_Box,King Frog Hat Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 16135,Evil's_Bone_Hat_Box,Evil's Bone Hat Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 16247,Dragon_Arhat_Mask_Box,Dragon Arhat Mask Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -6089,10 +6089,10 @@
 //16589,Thoughtful_Hat_Box
 //16590,Thoughtful_Hat_Box
 // Mechanic Mado Gear Cannonball Ammo
-18000,Cannon_Ball,加农炮弹,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
-18001,Holy_Cannon_Ball,圣_加农炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
-18002,Dark_Cannon_Ball,暗_加农炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
-18003,Soul_Cannon_Ball,念_加农炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
-18004,Iron_Cannon_Ball,钢_加农炮弹,10,500,,10,250,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
+18000,Cannon_Ball,炮弹,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
+18001,Holy_Cannon_Ball,神圣炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
+18002,Dark_Cannon_Ball,黑暗炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
+18003,Soul_Cannon_Ball,灵魂炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
+18004,Iron_Cannon_Ball,铁炮弹,10,500,,10,250,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
 //18101,Bow_Of_Rudra
 18103,Mystic_Bow,神祕的弓,4,10,,170,75,,,,0x00100800,8,2,34,3,105,1,11,{ bonus bMatk,100; bonus bInt,4; bonus2 bSPGainValueOnSKill,"RA_ARROWSTORM",-10; },{},{}

@@ -1,0 +1,469 @@
+//===== eAthena Script =======================================
+//= 3rd Jobs Merchants
+//===== By: ==================================================
+//= 5511
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= SeAthena 1.3.200+
+//===== Description: =========================================
+//= [Most cRO Conversion]
+//
+//= 符文骑士
+//= - 符文石销售员
+//= - 龙骑消除兵
+//= - 龙骑管理兵
+//=
+//= 十字切割者
+//= - 毒草销售员
+//=
+//= 大主教
+//= - NO INFO.
+//=
+//= 大法师
+//= - NO INFO.
+//=
+//= 游侠
+//= - 合金陷阱贩卖员
+//=
+//= 机匠
+//= - 魔导机械管理兵(魔导与手推车不共存)
+//=
+//= 逐影
+//= - NO INFO.
+//=
+//= 皇家卫士
+//= - 狮鹫消除兵
+//= - 狮鹫管理兵
+//=
+//= 修罗
+//= - NO INFO.
+//=
+//= 漫游舞者/宫廷乐师
+//= - 润喉糖/眼泪贩卖员
+//=
+//= 元素使
+//= - NO INFO.
+//=
+//= 基因学者
+//= - 热带水果商人
+//= - 材料商人
+//= - 制造书销售员
+//===== Additional Comments: =================================
+//= 1.0 First version. [5511]
+//============================================================
+
+// 符文骑士
+prontera,168,228,3	script	符文石销售员#Rune	853,{
+	if (checkweight(1201,1) == 0) {
+		mes "等一下!";
+		mes "当前你带了太多东西了!";
+		close;
+	}
+	mes "[符文石销售员]";
+	mes "你需要符文石吗?!";
+	mes "从我这里买就行了!";
+	mes "告诉我你需要什么符文石.";
+	next;
+	switch(select("高级符文原石:普通符文原石")) {
+	case 1:
+		callsub S_SellRunstone,12734,2500; // 高级符文原石
+		break;
+	case 2:
+		callsub S_SellRunstone,12736,1000; // 普通符文原石
+		break;
+	}
+	close;
+
+S_SellRunstone:
+	mes "[符文石销售员]";
+	mes "你想买"+getitemname(getarg(0))+"啊!";
+	mes "只要"+getarg(1)+"z就行!";
+	mes "告诉我你需要多少个, 最多可以";
+	mes "购买2000个!";
+	next;
+	input .@input,0,2001;
+	if (.@input < 1 || .@input > 2000) {
+		mes "[符文石销售员]";
+		mes "不买的话, 就给我走开!";
+		close;
+	}
+	set .@price,.@input*getarg(1);
+	mes "[符文石销售员]";
+	mes ""+.@input+"个一共"+.@price+"z.";
+	mes "是否继续?";
+	next;
+	if(select("是的:不") == 2) {
+		mes "[符文石销售员]";
+		mes "不买的话, 就给我走开!";
+		close;
+	}
+	if (Zeny < getarg(1)) {
+		mes "[符文石销售员]";
+		mes "钱! 钱! 钱! 钱不够啊!";
+		mes "你先确认下好吧!";
+		close;
+	}
+	set zeny,zeny-.@price;
+	getitem getarg(0),.@input;
+	mes "[符文石销售员]";
+	mes "下次再来还可以买, 谢谢惠顾!";
+	close;
+}
+
+// 十字切割者
+morocc,190,96,3	script	毒草销售员#GltCross	877,{
+	if (checkweight(1201,1) == 0) {
+		mes "等一下!";
+		mes "当前你带了太多东西了!";
+		close;
+	}
+	mes "[毒草销售员]";
+	mes "我是专门出售毒草的毒草商人.";
+	mes "你想买点什么呢?";
+	mes "毒草的价格全部都是4000z.";
+	next;
+	switch(select("夹竹桃:马缨丹:斑叶竹:蛇足草:赛莨菪:透骨草:制毒工具箱")) {
+	case 1:
+		callsub S_SellPoisonHerb,7932,4000; // 夹竹桃
+		break;
+	case 2:
+		callsub S_SellPoisonHerb,7933,4000; // 马缨丹
+		break;
+	case 3:
+		callsub S_SellPoisonHerb,7934,4000; // 斑叶竹
+		break;
+	case 4:
+		callsub S_SellPoisonHerb,7935,4000; // 蛇足草
+		break;
+	case 5:
+		callsub S_SellPoisonHerb,7936,4000; // 赛莨菪
+		break;
+	case 6:
+		callsub S_SellPoisonHerb,7937,4000; // 透骨草
+		break;
+	case 7:
+		mes "[毒草销售员]";
+		mes "制毒工具箱只能买1个,";
+		mes "价格是5000z, 要买吗?";
+		next;
+		if(select("是的:不") == 2) {
+			mes "[毒草销售员]";
+			mes "这样啊? 那我知道了.";
+			close;
+		}
+		if (Zeny < 5000) {
+			mes "[毒草销售员]";
+			mes "钱! 钱! 钱! 钱不够啊!";
+			mes "你先确认下好吧!";
+			close;
+		}
+		set zeny,zeny-5000;
+		getitem 7931,1;	// 制毒工具箱
+		mes "[毒草销售员]";
+		mes "这是你要的制毒工具箱.";
+		close;
+	}
+	close;
+
+S_SellPoisonHerb:
+	mes "[毒草销售员]";
+	mes "你想买几个呢?";
+	mes "最多可以购买2000个, 如果想取消, 请输入0";
+	next;
+	input .@input,0,2001;
+	if (.@input < 1) {
+		mes "[毒草销售员]";
+		mes "交易取消.";
+		close;
+	}
+	if (.@input > 2000) {
+		mes "[毒草销售员]";
+		mes "确定好数量轻告诉我.";
+		close;
+	}
+	set .@price,.@input*getarg(1);
+	mes "[毒草销售员]";
+	mes ""+.@input+"个一共"+.@price+"z.";
+	mes "是否继续?";
+	next;
+	if(select("是的:不") == 2) {
+		mes "[毒草销售员]";
+		mes "这样啊? 那我知道了.";
+		close;
+	}
+	if (Zeny < getarg(1)) {
+		mes "[毒草销售员]";
+		mes "钱! 钱! 钱! 钱不够啊!";
+		mes "你先确认下好吧!";
+		close;
+	}
+	set zeny,zeny-.@price;
+	getitem getarg(0),.@input;
+	mes "[毒草销售员]";
+	mes "这是你要的毒草.";
+	close;
+}
+lhz_in02,16,205,4	duplicate(毒草销售员#GltCross)	毒草销售员#GltCross1	877
+
+// 大主教
+
+
+// 大法师
+
+
+// 游侠
+mid_camp,129,284,4	shop	舷梯专家#Ranger	66,7940:-1,12341:-1
+lighthalzen,337,240,2	duplicate(舷梯专家#Ranger)	舷梯专家#Ranger1	66
+payon,123,109,4	duplicate(舷梯专家#Ranger)	舷梯专家#Ranger2	66
+
+// 机匠
+prontera,163,178,3	script	魔导机械管理兵#Mechanic	105,{
+	if(baseClass != Job_Merchant || !(Upper&4)){
+		mes "[魔导机械管理兵]";
+		mes "你有什么事情吗?";
+		mes "魔导机械是机械师专用的东西.";
+		close;
+	}
+	if(!getskilllv("NC_MADOLICENCE")) {
+		mes "[魔导机械管理兵]";
+		mes "请先获得魔导机械执照.";
+		close;
+	}
+	mes "[魔导机械管理兵]";
+	mes "是机械师啊. 你想使用手推车呢?";
+	mes "还是想搭乘魔导机械呢?";
+	next;
+	switch(select("租用手推车:搭乘魔导机械:不搭乘")) {
+	case 1:
+		if(checkcart()) {
+			mes "[魔导机械管理兵]";
+			mes "你现在正在使用一辆手推车.";
+			close;
+		}
+		if(checkriding()) {
+			mes "[魔导机械管理兵]";
+			mes "租用手推车会收回你的魔导机械.";
+			mes "确认租用吗?";
+			next;
+			if(select("是的:不") == 2) close;
+		}
+		mes "[魔导机械管理兵]";
+		mes "希望你好好使用~";
+		setriding 0;
+		setcart;
+		break;
+	case 2:
+		if(checkriding()) {
+			mes "[魔导机械管理兵]";
+			mes "你已经搭乘魔导机械了.";
+			close;
+		}
+		if(checkcart()) {
+			mes "[魔导机械管理兵]";
+			mes "租用手推车会收回你的魔导机械.";
+			mes "确认租用吗?";
+			next;
+			if(select("是的:不") == 2) close;
+		}
+		mes "[魔导机械管理兵]";
+		mes "请坐上去, 希望你好好使用~";
+		setcart 0;
+		setriding;
+		break;
+	}
+	close;
+}
+
+prt_in,175,137,4	shop	黑市商人#Mechanic	49,2139:-1,2800:-1,2801:-1,2802:-1,2803:-1,2804:-1,2805:-1,2806:-1,2807:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,12392:-1,6145:-1,6146:-1,6147:-1,6186:-1,2808:-1
+mid_camp,184,263,4	duplicate(黑市商人#Mechanic)	黑市商人#Mechanic1	49
+ra_in01,256,265,4	duplicate(黑市商人#Mechanic)	黑市商人#Mechanic2	49
+
+// 逐影
+
+
+// 符文骑士 & 皇家卫士
+prontera,125,208,5	script	兽骑消除兵#Royal	105,{
+	mes "[兽骑消除兵]";
+	mes "这项服务是专为骑乘兽骑, 但因";
+	mes "为某些特殊情况, 必须从兽骑上";
+	mes "下来的人士准备的.";
+	if(baseClass != Job_Swordman || !checkriding()) close;
+	next;
+	mes "[兽骑消除兵]";
+	if(BaseJob == Job_Knight && Upper < 4) mes "你骑乘的是大嘴鸟呀.";
+	if(BaseJob == Job_Knight && Upper&4) mes "你骑乘的是龙呀.";
+	if(BaseJob == Job_Crusader) mes "你骑乘的是狮鹫呀.";
+	mes "你想要下来吗?";
+	next;
+	if(select("是的:不") == 2) {
+		mes "[兽骑消除兵]";
+		mes "好吧, 改主意了就回来找我.";
+		close;
+	}
+	mes "[兽骑消除兵]";
+	mes "很久没用脚走路了吧.";
+	mes "感觉怎么样?";
+	setriding 0;
+	close;
+}
+
+prontera,130,213,5	script	兽骑管理兵#Royal	105,{
+	if(baseClass != Job_Swordman || !(Upper&4)){
+		mes "[兽骑管理兵]";
+		mes "这里是为了符文骑士, 皇家卫士";
+		mes "管理兽骑的地方.";
+		close;
+	}
+	if(BaseJob == Job_Knight && !getskilllv("RK_DRAGONTRAINING")) {
+		mes "[兽骑管理兵]";
+		mes "请你先学会训龙术.";
+		close;
+	}
+	if(BaseJob == Job_Crusader && !getskilllv("KN_RIDING")) {
+		mes "[兽骑管理兵]";
+		mes "请你先学会骑乘术.";
+		close;
+	}
+	mes "[兽骑管理兵]";
+	if(BaseJob == Job_Knight) mes "欢迎光临, 想领一只龙吗?";
+	if(BaseJob == Job_Crusader) mes "欢迎光临, 想领一只狮鹫吗?";
+	next;
+	if(select("是的:不") == 2) {
+		mes "[兽骑管理兵]";
+		mes "好吧, 辛苦你了.";
+		close;
+	}
+	if(checkriding()) {
+		mes "[兽骑管理兵]";
+		if(BaseJob == Job_Knight) mes "你已经骑了一只龙了.";
+		if(BaseJob == Job_Crusader) mes "你已经骑了一只狮鹫了";
+		close;
+	}
+	mes "[兽骑管理兵]";
+	mes "请你坐好~";
+	setriding;
+	close;
+}
+
+// 修罗
+
+
+// 漫游舞者/宫廷乐师
+comodo,196,162,3	shop	哈丽布#Mechanic	479,11513:-1,6144:-1
+
+// 元素使
+
+
+// 基因学者
+comodo,106,213,5	shop	热带水果商人#Mechanic	724,6258:-1
+
+alde_alche,38,182,2	shop	材料商人#Mechanic	755,6250:-1,6251:-1,6255:-1,6261:-1,6262:-1,6297:-1
+
+alde_alche,31,186,2	script	制造书销售员#Mechanic	883,{
+	if (checkweight(1201,1) == 0) {
+		mes "等一下!";
+		mes "当前你带了太多东西了!";
+		close;
+	}
+	mes "[制造书销售员]";
+	mes "你好, 我这里出售基因学者使用";
+	mes "的^0000FF特殊制造书^000000.";
+	next;
+	mes "[制造书销售员]";
+	mes "基因学者必须拥有制造书, 才能";
+	mes "发动技能.";
+	next;
+	mes "[制造书销售员]";
+	mes "拥有的书的种类越多, 可以使用";
+	mes "的技能种类当然就越多了.";
+	next;
+	mes "[制造书销售员]";
+	mes "由于这里出售的是特殊的书, 因";
+	mes "此^FF0000不卖其它物品^000000.";
+	mes "敬请谅解.";
+	next;
+	mes "[制造书销售员]";
+	mes "你想看看制造书吗?";
+	next;
+	if(select("是的:不") == 2) {
+		mes "[制造书销售员]";
+		mes "欢迎下次光临. 再见.";
+		close;
+	}
+	mes "[制造书销售员]";
+	mes "好的, 我把制造书清单给你看看.";
+	while(1) {
+		next;
+		switch(select("苹果炸弹制造书:菠萝炸弹制造书:椰果炸弹制造书:甜瓜炸弹制造书:香蕉炸弹制造书:植物基因栽培法:高级药水制造手册:组合烹饪料理书:体力爆发研究书:活力药水制造法:结束购买.")) {
+		case 1:
+			callsub S_SellManual,6279,100000; // 苹果炸弹制造书
+			break;
+		case 2:
+			callsub S_SellManual,6280,100000; // 菠萝炸弹制造书
+			break;
+		case 3:
+			callsub S_SellManual,6281,100000; // 椰果炸弹制造书
+			break;
+		case 4:
+			callsub S_SellManual,6282,100000; // 甜瓜炸弹制造书
+			break;
+		case 5:
+			callsub S_SellManual,6283,100000; // 香蕉炸弹制造书
+			break;
+		case 6:
+			callsub S_SellManual,6284,100000; // 植物基因栽培法
+			break;
+		case 7:
+			callsub S_SellManual,6285,100000; // 高级药水制造手册
+			break;
+		case 8:
+			callsub S_SellManual,11022,100000; // 组合烹饪料理书
+			break;
+		case 9:
+			callsub S_SellManual,11023,100000; // 体力爆发研究书
+			break;
+		case 10:
+			callsub S_SellManual,11024,100000; // 活力药水制造法
+			break;
+		case 11:
+			mes "[制造书销售员]";
+			mes "欢迎下次光临. 谢谢, 再见.";
+			close;
+		}
+		close;
+
+S_SellManual:
+		mes "[制造书销售员]";
+		mes "^0000FF["+getitemname(getarg(0))+"]^000000的价格是"+getarg(1)+"z.";
+		mes "请告诉我您想买几本.";
+		next;
+		input .@input,0,2001;
+		if (.@input < 1 || .@input > 2000) {
+			mes "[制造书销售员]";
+			mes "想看看其它书吗?";
+			continue;
+		}
+		set .@price,.@input*getarg(1);
+		mes "[制造书销售员]";
+		mes "购买"+.@input+"^0000FF["+getitemname(getarg(0))+"]^000000.";
+		mes "是否继续?";
+		next;
+		if(select("是的:不") == 2) {
+			mes "[制造书销售员]";
+			mes "购买制造书的时候, 应该要慎重一些.";
+			close;
+		}
+		if (Zeny < getarg(1)) {
+			mes "[制造书销售员]";
+			mes "不好意思, 你的钱好像不够.";
+			close;
+		}
+		set zeny,zeny-.@price;
+		getitem getarg(0),.@input;
+		mes "[制造书销售员]";
+		mes "谢谢您的支持.";
+		mes "欢迎下次再来.";
+		close;
+	}
+}
