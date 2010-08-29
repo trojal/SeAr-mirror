@@ -377,7 +377,7 @@ function	script	F_KafCart	{
 	if(baseClass != Job_Merchant){
 		mes "["+ strnpcinfo(0) +"]";
 		mes "很抱歉，";
-		mes "手推车是商人和铁匠、炼金术师专用的服务";
+		mes "手推车是商人和铁匠、炼金术师、机匠和基因学家专用的服务";
 		return 1;
 	}
 	// Make sure the invoking character does not have a cart already
@@ -385,6 +385,13 @@ function	script	F_KafCart	{
 		if(getarg(1) == 13) mes "[卡普拉 职员]";
 		else mes "["+ strnpcinfo(0) +"]";
 		mes "你已经租过手推车了";
+		return 1;
+	}
+	// 机匠搭乘魔导机械无法租用手推车
+	else if(checkriding() == 1){
+		if(getarg(1) == 13) mes "[卡普拉 职员]";
+		else mes "["+ strnpcinfo(0) +"]";
+		mes "搭乘魔导机械时无法租用手推车.";
 		return 1;
 	}
 

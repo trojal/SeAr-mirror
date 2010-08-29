@@ -33,8 +33,8 @@
 491,4	//植物栽培
 530,4	//NJ_KIRIKAGE
 691,4	//CASH_ASSUMPITO
-2044,4;	//圣灵降临
-2023,4;	//暗影步
+2044,4	//圣灵降临
+2023,4	//暗影步
 
 //BATTLEGROUND  
 26,8	//AL_TELEPORT  
@@ -61,7 +61,7 @@
 438,8	//SG_SUN_BLESS  
 439,8	//SG_MOON_BLESS  
 440,8	//SG_STAR_BLESS
-691,4  //CASH_ASSUMPITO
+691,8  //CASH_ASSUMPITO
 
 //mixed
 488,3	//海罗默德的手杖
@@ -103,7 +103,7 @@
 361,512 //HP_ASSUMPTIO 
 691,512 //CASH_ASSUMPTIO
 
-//Zone 6 - Endless Tower
+//Zone 7 - Endless Tower
 26,2048	// Teleport
 219,2048// Snatch
 27,2048	// Warp Portal
