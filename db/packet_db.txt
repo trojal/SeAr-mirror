@@ -1412,8 +1412,8 @@ packet_ver: 25
 //0x07e2,8
 
 //2009-08-18aRagexeRE
-//0x07e3,6
-//0x07e4,-1
+0x07e3,6
+0x07e4,-1,itemlistwindowselected,2:4:8
 //0x07e6,8
 
 //2009-08-25aRagexeRE

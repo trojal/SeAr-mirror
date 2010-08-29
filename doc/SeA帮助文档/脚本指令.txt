@@ -6081,7 +6081,7 @@ This command will force the update of the displayed scoreboard.
 
 ---------------------------------------
 
-*checkguildalliance <公会id>
+*checkalliance <公会id>
 
 	返回1: 与此公会同盟
 	返回0: 与此公会无关

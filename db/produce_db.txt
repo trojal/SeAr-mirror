@@ -443,12 +443,14 @@
 // Genetic Item Creation
 //==============================================
 //----- Change Material ---- ItemLV=26 ---------
-//-- 荆棘种子		<-- GN_CHANGEMATERIAL & 植物基因栽培法 & 10 榴莲
-6210,26,2494,1,6284,0,576,10
-//-- 吸血植物种子	<-- GN_CHANGEMATERIAL & 植物基因栽培法 & 10 噬人树根
-6211,26,2494,1,6284,0,1033,10
-//-- 炸弹蘑菇种子	<-- GN_CHANGEMATERIAL & 植物基因栽培法 & 10 香菇芽孢, 5 毒魔菇芽孢, 2 火药粉末
-6212,26,2494,1,6284,0,921,10,7033,5,6244,2
+//-- Phracon [8] <-- GN_CHANGEMATERIAL Lv1, 40 Spawn, 40 Glass Bead
+1010,26,2494,1,908,40,746,40
+//-- Witch Starsand [2] <-- GN_CHANGEMATERIAL Lv1, 10 Insect Feeler, 15 Chung Jah
+1061,26,2494,1,928,10,735,15
+// Throwable HP Increase Potion (Small) [10] <-- GN_CHANGEMATERIAL Lv1, 10 'Throwing Bottle', 10 HP Potions (Small)
+13275,26,2494,1,6297,10,12422,10
+// Throwable SP Increase Potion (Small) [10] <-- GN_CHANGEMATERIAL Lv1, 10 'Throwing Bottle', 10 SP Potions (Small)
+13278,26,2494,1,6297,10,12425,10
 
 //----- Mix Cooking ---- ItemLV=27 -------------
 //-- 烤野猪		<-- GN_MIX_COOKING & 组合烹饪料理书 & 1 瓦罐 & 1 野猪肉, 1 料理用铁签, 1 黑炭
@@ -477,6 +479,12 @@
 13264,28,2496,1,6283,0,513,1,6244,4,1051,1,7001,1
 
 //----- Special Pharmacy ---- ItemLV=29 --------
+//-- 荆棘种子		<-- GN_CHANGEMATERIAL & 植物基因栽培法 & 10 榴莲
+6210,29,2494,1,6284,0,576,10
+//-- 吸血植物种子	<-- GN_CHANGEMATERIAL & 植物基因栽培法 & 10 噬人树根
+6211,29,2494,1,6284,0,1033,10
+//-- 炸弹蘑菇种子	<-- GN_CHANGEMATERIAL & 植物基因栽培法 & 10 香菇芽孢, 5 毒魔菇芽孢, 2 火药粉末
+6212,29,2494,1,6284,0,921,10,7033,5,6244,2
 //-- HP增加药水(小)	<-- GN_S_PHARMACY & 体力爆发研究书 & 10 空瓶, 5 魔物饲料, 10 白色药草, 1 辣汁酱
 12422,29,2497,1,11023,0,713,10,528,5,509,10,7455,1
 //-- HP增加药水(中)	<-- GN_S_PHARMACY & 体力爆发研究书 & 10 空瓶, 10 白色药草, 10 黄色药草, 1 辣汁酱
