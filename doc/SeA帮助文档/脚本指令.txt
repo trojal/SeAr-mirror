@@ -6057,6 +6057,18 @@ This command will force the update of the displayed scoreboard.
 	类型3：全组队：script4each "<脚本>",3,玩家cid; 
 	类型4：全公会：script4each "<脚本>",4,玩家cid;
 	类型5：全阵营：script4each "<脚本>",5,玩家cid;
+	类型6：全区域：script4each "<脚本>",6,"地图名",坐标x0,坐标y0,坐标x1,坐标y1;
+
+---------------------------------------
+
+*script4eachmob "<脚本>",<类型>{,...}
+
+	该命令仅支持setmobdata指令，setmobdata指令中的魔物GID请用变量“$@4eachmobgid”代替。
+
+	类型0：全服：script4eachmob "<脚本>",0;
+	类型1：全地图：script4eachmob "<脚本>",1,"地图名";
+	类型2：全区域：script4eachmob "<脚本>",2,"地图名",坐标x0,坐标y0,坐标x1,坐标y1;
+	类型5：全阵营：script4eachmob "<脚本>",3,阵营编号;
 
 ---------------------------------------
 
@@ -6066,6 +6078,14 @@ This command will force the update of the displayed scoreboard.
 	标识0：关闭
 	标识1：打开
 	未指定默认1。
+
+---------------------------------------
+
+*checkguildalliance <公会id>
+
+	返回1: 与此公会同盟
+	返回0: 与此公会无关
+	返回-1: 其他错误
 
 ---------------------------------------
 结束。
