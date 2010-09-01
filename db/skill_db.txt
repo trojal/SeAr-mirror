@@ -944,7 +944,7 @@
 2481,9,6,1,0,0,3:5:7:9:11,5,1,yes,0,0,0,magic,0,	GN_SPORE_EXPLOSION,±¬Õ¨æß×Ó
 2482,9,6,16,0,0,0,5,1,yes,0,0,1,weapon,2,		GN_WALLOFTHORN,¾£¼¬Ö®Ç½
 2483,9,6,2,0,0x2,5,10,1,yes,0,0,3:4:4:5:5:6:6:7:7:8,none,0,		GN_CRAZYWEED,·è¿ñÒ°²Ý
-2484,0,6,1,2,0,0,10,0,no,0,0,0,magic,0,		GN_CRAZYWEED_ATK,·è¿ñÒ°²Ý_ATK
+2484,0,6,1,2,0x88,0,10,0,no,0,0,0,magic,0,		GN_CRAZYWEED_ATK,·è¿ñÒ°²Ý_ATK
 2485,9,6,2,3,0,0,5,1,yes,0,0,0,magic,0,			GN_DEMONIC_FIRE,·è¿ñ»ðÑæ
 2486,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION,»ðÑæ±¬Õ¨
 2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_SMOKE_POWDER,»ðÑæ±¬Õ¨ Smoke Powder
