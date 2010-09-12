@@ -2641,9 +2641,9 @@ OnRecvCastlear05:
 	end;
 }
 
-aru_gld,289,112,6	duplicate(ar05_Flag)	°ÍÄÃµÏË¹#flag_ar05_2	722
+aru_gld,350,98,6	duplicate(ar05_Flag)	°ÍÄÃµÏË¹#flag_ar05_2	722
 
-aru_gld,289,103,6	script	°ÍÄÃµÏË¹#flag_ar05_3::ar05_Flag2	722,{
+aru_gld,350,98,6	script	°ÍÄÃµÏË¹#flag_ar05_3::ar05_Flag2	722,{
 	set .@GID, GetCastleData("arug_cas05",1);
 	if (.@GID == 0) {
 		mes "[ °¢Â¬ÄÉ±´×È ½Ì¹ú ¹«¸æÁî ]";

@@ -1292,7 +1292,7 @@
 2380,Medic_Robe,医护兵的_外袍,5,0,,0,,3,,1,0x00008110,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2539) && isequipped(2436)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bInt,3; bonus bMaxHPRate,12; bonus2 bCastrate,156,-50; bonus bHealPower,6; autobonus2 "{ bonus bDefEle,Ele_Ghost; }",30,10000,BF_WEAPON,"{ specialeffect2 EF_ENERGYCOAT; }"; }; },{},{}
 2381,Elite_Archer_Suit,精锐弓兵_外套,5,0,,0,,3,,1,0x00180808,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2539) && isequipped(2436)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bDex,3; bonus bMaxHPRate,12; bonus bLongAtkDef,10; bonus bDelayRate,-25; }; },{},{}
 2382,Elite_Shooter_Suit,精锐射手的_外套,5,0,,0,,3,,1,0x01000000,7,2,16,,80,1,0,{ bonus bMaxHP,150; bonus bMdef,2; bonus2 bSubRace,RC_DemiHuman,2; if (isequipped(2540) && isequipped(2437)) { bonus2 bSubRace,RC_NonDemiHuman,-300; bonus bDex,3; bonus bMaxHPRate,12; bonus bLongAtkDef,10; bonus bDelayRate,-25; }; },{},{}
-2383,Brynhild,布林喜德,5,0,,400,,,,0,0xFFFFFFFF,7,2,16,,94,0,0,{ bonus bMdef,10; bonus bMaxHP,20*BaseLevel; bonus bMaxSP,5*BaseLevel; bonus2 bAddRace,RC_NonBoss,10; bonus2 bAddRace,RC_Boss,10; bonus bMatkRate,10; bonus bUnbreakableArmor,0; bonus bNoKnockback,0; },{},{}
+2383,Brynhild,布林喜德,5,0,,400,,10,,0,0xFFFFFFFF,7,2,16,,94,0,0,{ bonus bMdef,10; bonus bMaxHP,20*BaseLevel; bonus bMaxSP,5*BaseLevel; bonus2 bAddRace,RC_NonBoss,10; bonus2 bAddRace,RC_Boss,10; bonus bMatkRate,10; bonus bUnbreakableArmor,0; bonus bNoKnockback,0; },{},{}
 2384,Spritual_Tunic,Spiritual Tunic,5,20,,0,,10,,0,0xFFFFFFFF,7,2,16,,0,0,0,{ bonus bMaxHP,800; bonus2 bResEff,Eff_Freeze,10000; bonus2 bSubEle,Ele_Earth,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Poison,20; bonus2 bSubEle,Ele_Holy,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Ghost,20; bonus2 bSubEle,Ele_Undead,20; },{},{}
 2385,Recuperative_Armor,Recuperative Armor,5,20,,0,,12,,0,0xFFFFFFFF,7,2,16,,0,0,0,{ bonus bNoRegen,1; bonus bNoRegen,2; bonus bHPGainValue,60; bonus bSPGainValue,6; bonus bMagicHPGainValue,60; bonus bMagicSPGainValue,6; },{},{ heal 0,-100; }
 2386,Chameleon_Armor,变色龙铠甲,5,20,,1700,,5,,0,0x000FDF80,2,2,16,,70,1,0,{ bonus bMaxHP,(BaseLevel*7); bonus bMaxSP,(BaseLevel/2); autobonus2 "{ bonus bNoMagicDamage,100; }",10,2000,BF_MAGIC,"{ specialeffect2 EF_ENERGYCOAT; }"; if( BaseClass == Job_Mage || BaseClass == Job_Archer || BaseClass == Job_Acolyte ) bonus bMdef,5; else if( BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief ) bonus bDef,3; },{},{}
@@ -5745,11 +5745,11 @@
 12733,Runstone_Hagalas,Hagalaz Rune,11,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ if(BaseJob == Job_Rune_Knight) itemskill "RK_STONEHARDSKIN",1; },{},{}
 
 // Rune Knight Rune Ores
-12734,Runstone_Quality,Luxurious Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 25; },{},{}
-12735,Runstone_Ancient,Ancient Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 25; },{},{}
-12736,Runstone_Mystic,Mystic Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 25; },{},{}
-12737,Runstone_Ordinary,General Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 25; },{},{}
-12738,Runstone_Rare,Rare Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 25; },{},{}
+12734,Runstone_Quality,Luxurious Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 24; },{},{}
+12735,Runstone_Ancient,Ancient Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 24; },{},{}
+12736,Runstone_Mystic,Mystic Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 24; },{},{}
+12737,Runstone_Ordinary,General Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 24; },{},{}
+12738,Runstone_Rare,Rare Rune,0,100,,100,,,,,0xFFFFFFFF,24,2,,,,,,{ produce 24; },{},{}
 
 // Genetic Created Bombs And Lumps
 13260,苹果炸弹,Apple Bomb,3,10,,10,,,,,,,,,,,,,{},{},{}
