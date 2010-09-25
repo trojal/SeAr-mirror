@@ -1374,6 +1374,7 @@ of possible equipment slots.
 ---------------------------------------
 
 *getinventorylist;
+*getcartlist;
 
 This command sets a bunch of arrays with a complete list of whatever the 
 invoking character has in their inventory, including all the data needed to 
@@ -1394,6 +1395,7 @@ recreate these items perfectly if they are destroyed. Here's what you get:
 		@inventorylist_durability[]- 耐久度
 		@inventorylist_maxdur[]    - 最大耐久度
 		@inventorylist_count       - 物品栏中物品数
+	*以上变量中把inventory改为cart即为对应的getcartlist用法。
 
 This could be handy to save/restore a character's inventory, since no other 
 command returns such a complete set of data, and could also be the only way to 
@@ -6087,5 +6089,25 @@ This command will force the update of the displayed scoreboard.
 	返回0: 与此公会无关
 	返回-1: 其他错误
 
+---------------------------------------
+
+*status_calc
+
+举例: {
+OnPCSCEndEvent:
+OnPCSCStartEvent:
+	status_calc();
+	end;
+OnPCStatCalcEvent:
+	if(sc_check(SC_EDP))
+	{
+		bonus2 bSkillAtk,"GC_CROSSIMPACT",200;
+		bonus2 bSkillAtk,"GC_COUNTERSLASH",200;
+		bonus2 bSkillAtk,"AS_SONICBLOW",200;
+		bonus2 bSkillAtk,"ASC_BREAKER",200;
+	}
+}
+
+作用：致命吐毒对上述技能伤害翻倍。
 ---------------------------------------
 结束。
