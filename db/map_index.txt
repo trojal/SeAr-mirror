@@ -785,6 +785,10 @@ dic_dun02
 job3_gen01 
 s_atelier 
 job3_sha01 
+bif_fild01
+bif_fild02
+1@mist
+mora
 //evt_zombie
 //evt_coke
 //ac_sl_area

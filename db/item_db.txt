@@ -916,7 +916,7 @@
 1714,Kakkung,角弓,4,42000,,1100,100,,5,1,0x000A0848,7,2,34,3,33,1,11,{},{},{}
 1715,Arbalest_,亚伯雷弓,4,48000,,1000,90,,5,2,0x000A0848,7,2,34,3,33,1,11,{ bonus bDex,2; },{},{}
 1716,Kakkung_,角弓,4,42000,,1100,100,,5,2,0x000A0848,7,2,34,3,33,1,11,{},{},{}
-1718,Hunter_Bow,猎人之弓,4,64000,,1500,125,,5,0,0x00000800,7,2,34,3,33,1,11,{},{},{}
+1718,Hunter_Bow,猎人之弓,4,64000,,1500,125,,5,0,0x00000800,7,2,34,3,33,1,11,{ if(isequipped(1774)) bonus bLongAtkRate,50; },{},{}
 1719,Bow_Of_Roguemaster,盗贼之弓,4,20,,500,75,,11,0,0x00000040,7,2,34,4,48,1,11,{},{},{}
 1720,Bow_Of_Rudra,炽天使之弓,4,20,,1200,150,,5,0,0x000A0808,7,2,34,4,48,1,11,{ bonus bAtkEle,Ele_Holy; bonus bInt,5; skill "AL_CURE",1; skill "AL_HEAL",1; bonus2 bResEff,Eff_Poison,5000; bonus2 bResEff,Eff_Curse,5000; bonus2 bResEff,Eff_Silence,5000; bonus2 bResEff,Eff_Confusion,5000; bonus2 bResEff,Eff_Blind,5000; },{},{}
 1721,Repeting_CrossBow,十字机弩,4,89000,,2000,95,,9,1,0x00020840,7,2,34,3,65,1,11,{},{},{}
@@ -924,7 +924,7 @@
 1723,Luna_Bow,露娜弓,4,20,,2000,100,,5,2,0x00000800,7,2,34,3,30,1,11,{ bonus bDef,2+3*(getrefine()>5)+2*(getrefine()>8); if(isequipped(2718)) { bonus bDex,1; bonus bMaxSP,50; bonus bSPrecovRate,10; } },{},{}
 1724,Dragon_Wing,天龙之翼,4,20,,1200,100,,5,0,0x000A0848,7,2,34,4,60,1,11,{ bonus3 bAddMonsterDropItem,1765,RC_Dragon,300; bonus bIgnoreDefRace,RC_Dragon; },{},{}
 1725,Bow_Of_Minstrel,吟游诗人的弓,4,20,,1700,120,,5,1,0x00080800,7,2,34,4,70,1,11,{ bonus bInt,2; bonus bSPrecovRate,10; },{},{}
-1726,Hunter_Bow_,猎人之弓,4,64000,,1500,125,,5,1,0x00000800,7,2,34,3,33,1,11,{},{},{}
+1726,Hunter_Bow_,猎人之弓,4,64000,,1500,125,,5,1,0x00000800,7,2,34,3,33,1,11,{ if(isequipped(1774)) bonus bLongAtkRate,50; },{},{}
 1727,Balistar_,贝利斯塔强弩,4,124000,,3500,145,,5,1,0x00080800,7,2,34,4,77,1,11,{},{},{}
 1728,Balistar_C,贝利斯塔强弩,4,1,,0,194,,5,0,0x00080800,7,2,34,4,1,0,11,{ bonus bLongAtkRate,20; },{},{}
 1729,Bow_Of_Rudra_C,Refined Rudra Bow,4,2,,0,185,,5,0,0x000A0808,7,2,34,4,1,0,11,{ bonus bAtkEle,Ele_Holy; bonus bInt,5; skill "AL_CURE",1; skill "AL_HEAL",1; },{},{}
@@ -944,7 +944,7 @@
 1743,Krieger_Bow1,Glorious Hunter Bow,4,0,,0,100,,5,0,0x001A0848,7,2,34,4,80,1,11,{ bonus2 bAddRace,RC_DemiHuman,55; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bCritAtkRate,(getrefine()>10?10:getrefine()) * 2; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-4)*((getrefine()>14?14:getrefine())-4); bonus2 bIgnoreDefRate,RC_DemiHuman,5; } if(getrefine() > 8) bonus2 bSkillAtk,"AC_DOUBLE",20; },{},{}
 1744,Bow_Of_Evil,Bow Of Evil,4,0,,0,170,,5,0,0x000A0848,7,2,34,4,1,0,11,{ bonus2 bSkillAtk,"AC_DOUBLE",25; bonus bDex,2; },{},{}
 1745,Falken_Blitz,闪电隼,4,0,,1000,100,,5,2,0x00000800,2,2,34,3,50,1,11,{ bonus2 bSkillAtk,"SN_SHARPSHOOTING",10; bonus2 bSkillAtk,"AC_DOUBLE",10; bonus2 bSkillAtk,"AC_CHARGEARROW",10; },{},{}
-1746,Elven_Bow,Elven Bow,4,10,,1500,160,,5,1,0x00180800,8,2,34,3,100,1,11,{ bonus bDex,2; },{},{}
+1746,Elven_Bow,Elven Bow,4,10,,1500,160,,5,1,0x00180800,8,2,34,3,100,1,11,{ bonus bDex,2; if(isequipped(1773)) bonus bLongAtkRate,50; },{},{}
 1747,P_Bow1,P.Bow I,4,0,,0,82,,5,0,0x000A0848,7,2,34,2,26,0,11,{},{},{}
 1748,P_Bow2,P.Bow II,4,0,,0,120,,5,0,0x000A0848,7,2,34,2,40,0,11,{},{},{}
 1749,Traveler's_Bow,Traveler's Bow,4,20,,500,40,,5,0,0x000A0848,7,2,34,2,1,1,11,{ bonus bDex,2; },{},{}
@@ -972,6 +972,8 @@
 1770,Iron_Arrow,铁箭矢,10,2,,1,30,,,,0x000A1848,7,2,32768,,1,,1,{},{},{}
 1771,Venom_Knife,毒刃,10,50,,5,30,,,,0x00001000,7,2,32768,,1,,2,{},{},{}
 1772,Holy_Arrow,神圣的箭矢,10,3,,2,50,,,,0x000A1848,7,2,32768,,1,,1,{ bonus bAtkEle,Ele_Holy; bonus2 bAddRace,RC_Demon,5; },{},{}
+1773,Elven_Arrow,精灵箭矢,10,5,,1,45,,,,0x000A1848,2,2,32768,,100,,1,{},{},{}
+1774,Hunting_Arrow,狩猎箭矢,10,5,,1,35,,,,0x000A1848,7,2,32768,,1,,1,{},{},{}
 // Knuckles
 1801,Waghnakh,虎爪拳套,4,8000,,400,30,,1,3,0x00008100,7,2,2,1,1,1,12,{},{},{}
 1802,Waghnakh_,虎爪拳套,4,8000,,400,30,,1,4,0x00008100,7,2,2,1,1,1,12,{},{},{}
@@ -1079,6 +1081,10 @@
 2004,Kronos,科洛斯之杖,4,0,,1000,30,,1,0,0x00010204,2,2,34,4,50,1,10,{ bonus bMatk,240; bonus bInt,3+(getrefine()/2); bonus bMaxHP,300+(50*getrefine()/2); autobonus "{ bonus bMatkRate,12; bonus bUseSPRate,20; }",1,5000,BF_MAGIC,"{ specialeffect2 EF_ENHANCE; }"; },{},{}
 2005,Dea_Staff,西亚之杖,4,20,,1000,30,,1,1,0x00008110,2,2,34,3,50,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,220; bonus bInt,6; bonus bVit,2; bonus bMatkRate,getrefine()/2; autobonus3 "{ end; }",20,1000,"AL_HEAL","{ specialeffect2 EF_MAGICALATTHIT; heal 0,200;  }"; },{},{}
 2006,Guardian_Of_Light_Wand,Guardian Of Light Wand,4,20,,1900,80,,1,0,0x00010204,2,2,34,3,60,1,10,{ bonus bMatkRate,18; bonus bInt,6; bonus bMaxSP,150; },{},{}
+2007,Golden_Lord_Staff,黄金领主权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Wind; bonus2 bSkillAtk,"WZ_JUPITEL",12; },{},{}
+2008,Aqua_Staff,水蓝权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Water; bonus2 bSkillAtk,"MG_COLDBOLT",12; bonus2 bSkillAtk,"MG_FROSTDIVER",12; },{},{}
+2009,Crimson_Staff,深红权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Fire; bonus2 bSkillAtk,"MG_FIREBOLT",10; bonus2 bSkillAtk,"MG_FIREBALL",10; },{},{}
+2010,Forest_Staff,森林权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Earth; bonus2 bSkillAtk,"WZ_EARTHSPIKE",10; bonus2 bSkillAtk,"WZ_HEAVENDRIVE",10; },{},{}
 // Shields
 //===================================================================
 2101,Guard,铁盾,5,500,,300,,20,,0,0xFFFFFFFF,7,2,32,,0,1,1,{},{},{}
@@ -1134,6 +1140,7 @@
 2151,Reinforcement_Shield,Reinforcement Shield,5,0,,1300,,60,,1,0x00004082,7,2,32,,0,1,3,{ bonus bMaxHPrate,3; },{},{}
 2152,Unknown,反恶魔钢盾,5,10,,,,120,,,0xFFFFFFFF,3,2,33,,,1,,{bonus2 bSubRace,7,25;bonus2 bSubRace,6,25;},{},{}
 2153,Imperial_Guard,帝国铁盾,5,10,,250,,120,,1,0x00004000,8,2,32,,102,1,1,{bonus bMdef,5;bonus2 bSkillAtk,"LG_SHIELDPRESS",20;if(getrefine() >= 6) {bonus2 bSkillAtk,"LG_SHIELDPRESS",(getrefine()-5)*2;}},{},{}
+2156,Bible_Promise_Vol1,圣经允诺 第1册 ,5,20,,500,,1,,1,0x00000100,2,2,32,,110,1,1,{},{},{}
 2199,Ahura_Mazda,圆盾,5,1,,10,,100,,0,0xFFFFFFFF,7,2,32,,1,1,0,{ bonus bAllStats,50; bonus bMdef,99; bonus bShortWeaponDamageReturn,100; bonus2 bSubRace,RC_DemiHuman,95; skill "CR_FULLPROTECTION",5; Skill "WZ_ESTIMATION",1; Skill "ST_FULLSTRIP",5; Skill "HW_MAGICPOWER", 10; bonus bMaxHPRate,200; bonus bNoGemStone,0;  bonus bSpeedRate,25; },{ sc_start4 SC_ENDURE,60000,10,0,0,1; },{ sc_end SC_ENDURE; }
 // Headgears
 //===================================================================
@@ -1403,6 +1410,10 @@
 2462,Sleipnir_R,Sleipnir,5,0,,3500,,40,,0,0xFFFFFFFF,7,2,64,,94,0,0,{ bonus bMdef,10; bonus bInt,25; bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bSPrecovRate,25; bonus bSpeedRate,25; },{},{}
 2463,Unknown,野性的长靴,5,10,,0,,12,,,0xFFFFFFFF,3,2,64,,75,,,{ bonus bUnbreakableWeapon,0; },{},{}
 2465,Dance_Shoes,舞鞋,5,10,,30,,15,,1,0x00100000,8,1,64,,105,1,,{ bonus bAspdRate,2; bonus bAgi,1; bonus2 bSPGainValueOnSKill,"WA_SWING_DANCE",32; },{},{}
+2467,Golden_Lord_Shoes,黄主领主鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Wind,15; },{},{}
+2468,Aqua_Shoes,水蓝鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Water,15; },{},{}
+2469,Crimson_Shoes,深红鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Fire,15; },{},{}
+2470,Forest_Shoes,森林鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Earth,15; },{},{}
 // Garments
 //===================================================================
 2501,Hood,连帽披肩,5,1000,,200,,4,,0,0xFFFFFFFF,7,2,4,,0,1,0,{},{},{}
@@ -1469,6 +1480,7 @@
 2562,Reinforcement_Muffler,Reinforcement Muffler,5,0,,200,,13,,1,0xFFFFFFFE,7,2,4,,0,1,0,{ bonus bMaxHPRate,3; },{},{}
 2563,Reinforcement_Manteau,Reinforcement Manteau,5,0,,300,,18,,1,0x006654E2,7,2,4,,0,1,0,{ bonus bMaxHPRate,3; },{},{}
 2564,Unknown,野性的尾巴,5,10,,0,,16,,,0xFFFFFFFF,3,2,4,,75,,,{bonus bUnbreakableWeapon,0;},{},{}
+2568,Loki's_Muffler,洛奇的披肩,5,20,,400,,1,,0,0xFFFFFFFE,2,2,4,,100,1,0,{ bonus bAgi,1; bonus2 bSkillAtk,"GC_CROSSIMPACT",5; },{},{}
 // Accessories
 //===================================================================
 2601,Ring,力量戒指,5,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,20,0,0,{ bonus bStr,2; },{},{}
@@ -1710,6 +1722,14 @@
 2844,Unknown,艾尔狄卡思泰斯之光,5,10,,10,,0,,,0xFFFFFFFF,7,2,136,,80,0,0,{},{},{}
 2853,Unknown,念动宝玉,5,10,,20,,2,,,0x001FDF80,8,2,136,,110,1,0,{bonus bMaxSP,30;bonus bMdef,1;bonus bInt,3;bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",10;},{},{}
 2854,Glove_Of_Alchemy,炼金术手套,5,10,,10,,1,,,0x001FDF80,8,2,136,,125,1,0,{ bonus bMdef,2; bonus bInt,1; bonus2 bSkillAtk,"SO_FIREWALK",10; bonus2 bSkillAtk,"SO_DIAMONDDUST",10; bonus5 bAutoSpell,"MG_FIREBALL",5,100,BF_MAGIC,0; },{},{}
+2858,Guardian_Pendant,保护者的饰品,5,20,,0,,0,,0,0xFFFFFFFE,2,2,136,,70,0,0,{},{},{}
+2859,Golden_Lord_Orb,黄金领主宝珠,5,20,,200,,2,,1,0x00000200,2,2,136,,100,0,0,{ bonus bMdef,2; bonus bInt,1; bonus2 bSubEle,Ele_Wind,15; bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",3,10; },{},{}
+2860,Aqua_Orb,水蓝宝珠,5,20,,200,,2,,1,0x00000200,2,2,136,,100,0,0,{ bonus bMdef,2; bonus bInt,1; bonus2 bSubEle,Ele_Water,15; bonus3 bAutoSpellWhenHit,"WZ_FROSTNOVA",3,10; },{},{}
+2861,Crimson_Orb,深红宝珠,5,20,,200,,2,,1,0x00000200,2,2,136,,100,0,0,{ bonus bMdef,2; bonus bInt,1; bonus2 bSubEle,Ele_Fire,15; bonus3 bAutoSpellWhenHit,"WZ_SIGHTRASHER",3,10; },{},{}
+2862,Forest_Orb,森林宝珠,5,20,,200,,2,,1,0x00000200,2,2,136,,100,0,0,{ bonus bMdef,2; bonus bInt,1; bonus2 bSubEle,Ele_Earth,15; bonus3 bAutoSpellWhenHit,"WZ_QUAGMIRE",3,10; },{},{}
+2864,Healing_Light,治疗圣光之戒,5,20,,0,,0,,0,0x00000100,2,2,136,,110,0,0,{ bonus bVit,2; bonus bHealPower,2; },{},{}
+2865,Cathedral_Seal,教堂封印之戒,5,20,,0,,0,,0,0x00000100,2,2,136,,110,0,0,{ bonus bInt,2; bonus bHealPower,2; },{},{}
+2866,Arch_Bishop_Ring,大主教之戒,5,20,,0,,0,,0,0x00000100,2,2,136,,110,0,0,{ bonus bDex,2; bonus bHealPower,2; },{},{}
 // Cards
 //===================================================================
 4001,Poring_Card,波利卡片,6,20,,10,,,,,,,,16,,,,,{ bonus bLuk,2; bonus bFlee2,1; },{},{}
@@ -3305,6 +3325,9 @@
 6362,Yellow_Wish_Point,风灵精华,3,100,,5,,,,,,,,,,,,,{},{},{}
 6363,Lime_Green_Point,地灵精华,3,100,,5,,,,,,,,,,,,,{},{},{}
 //6376,KVM_Badge
+6393,Round_Feather,环状羽毛,3,700,,10,,,,,,,,,,,,,{},{},{}
+6394,Golden_Hair2,金色毛发,3,650,,10,,,,,,,,,,,,,{},{},{}
+6395,Magic_Fairy_Dust,精灵魔法粉末,3,820,,10,,,,,,,,,,,,,{},{},{}
 7001,Mould_Powder,霉菌粉末,3,466,,10,,,,,,,,,,,,,{},{},{}
 7002,Ogre_Tooth,兽人之牙,3,658,,10,,,,,,,,,,,,,{},{},{}
 7003,Anolian_Skin,虎蜥皮,3,968,,10,,,,,,,,,,,,,{},{},{}
@@ -4322,6 +4345,11 @@
 11515,Coconut,Coconut,0,1500,,1200,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(275,305),0; },{},{}
 11516,Acai_Fruit,Acai Fruit,0,15,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(65,95),0; },{},{}
 11518,Cure_Free,大治愈药水,3,10,,10,,,,,,,,,,,,,{},{},{}
+11519,Beef_Toast,牛肉堡,2,650,,40,,,,,0xFFFFFFFF,31,2,,,,,,{ itemheal 200,0; },{},{}
+11520,Mora_Mandarin,莫拉柑橘,2,500,,20,,,,,0xFFFFFFFF,2,2,,,100,,,{ itemheal 0,50; },{},{}
+11522,Red_Laphine_Sap,红色西拉皮汁,2,2000,,100,,,,,0xFFFFFFFF,2,2,,,100,,,{ itemheal 400,0; },{},{}
+11523,Yellow_Laphine_Sap,黄色西拉皮汁,2,2400,,120,,,,,0xFFFFFFFF,2,2,,,110,,,{ itemheal 600,0; },{},{}
+11524,White_Laphine_Sap,白色西拉皮汁,2,2800,,120,,,,,0xFFFFFFFF,2,2,,,120,,,{ itemheal 800,0; },{},{}
 11701,Girl_Bunch_Of_Flower,Girl Bunch of Flowers,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(105,145),0; },{},{}
 11702,Moon_Cookie,月果子,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_end SC_Poison; sc_end SC_Silence; sc_end SC_Blind; sc_end SC_Confusion; sc_end SC_Curse; sc_end SC_Hallucination; },{},{}
 11703,Mysterious_Blood,Mystery Blood,0,,,1,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(25,35); },{},{}
@@ -4755,6 +4783,9 @@
 12436,Vitata_500,Vitata 500,3,10,,10,,,,,,,,,,,,,{},{},{}
 12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,3,10,,10,,,,,,,,,,,,,{},{},{}
 12475,Cure_Photo,Cure Photo,3,10,,10,,,,,,,,,,,,,{},{},{}
+12561,Mysterious_Seeds,神秘的种子,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
+12573,Fruit_Basket,水果篮,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}
+12574,Mora_Berry,莫拉浆果,2,0,,20,,,,,0xFFFFFFFF,2,2,,,120,,,{ itemheal 0,50; },{},{}
 12701,Old_Blue_Box_F,神秘箱子,2,,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12702,Old_Bleu_Box,神秘蓝箱,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_BleuBox),1; getitem groupranditem(IG_BleuBox),1; },{},{}
 12703,Holy_Egg_2,Holy Egg,11,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -6020,6 +6051,11 @@
 15012,Purity_Robe,Purity Robe,5,20,,400,,42,,1,0xFFFFFFFF,7,2,16,,22,1,0,{ bonus bHealPower,5; },{},{}
 15013,Clair_Suit,Clair Suit,5,20,,2800,,58,,1,0xFFFFFFFE,7,2,16,,22,1,0,{},{},{}
 15014,Black_Armor,Black Armor,5,20,,4500,,93,,1,0x00004082,8,2,16,,100,1,0,{},{},{}
+15024,Scruffy_Coat,破旧的大衣,5,20,,10,,1,,0,0xFFFFFFFE,2,2,16,,1,1,0,{},{},{}
+15025,Golden_Lord_Robe,黄金领主外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Wind; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,85,-30; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
+15026,Aqua_Robe,水蓝外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Water; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,89,-30; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
+15027,Crimson_Robe,深红外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Fire; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,83,-30; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
+15028,Forest_Robe,森林外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Earth; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,91,-10; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
 16000,Erde,艾尔德之杖,4,20,,500,130,,,2,0x0004C5B2,2,2,2,4,50,1,8,{ bonus2 bSkillAtk,"AM_ACIDTERROR",20; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus bMaxSP,50; bonus bHealPower,10; },{},{}
 16001,Red_Square_Bag,红色手提包,4,20,,500,130,,,2,0x0004C5B2,2,2,2,4,50,1,8,{ bonus bMaxHP,200; bonus2 bSkillAtk,"AM_ACIDTERROR",20; bonus2 bSkillAtk,"AM_DEMONSTRATION",20; bonus2 bAddMonsterDropItem,501,50; bonus2 bAddMonsterDropItem,502,20; bonus2 bAddMonsterDropItem,503,20; bonus2 bAddMonsterDropItem,504,20; bonus2 bAddMonsterDropItem,505,10; if(readparam(bStr)>=95) bonus2 bAddEff,Eff_Stun,500; },{},{}
 16002,Stunner_C,Stunner C,2,20,,2000,140,,1,0,0x00008110,7,2,2,3,27,1,8,{ bonus2 bAddEff,Eff_Stun,1000; bonus2 bAddSize,0,40; bonus2 bAddSize,1,40; bonus2 bAddSize,2,40; },{},{}
