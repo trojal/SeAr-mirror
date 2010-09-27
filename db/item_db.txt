@@ -3019,11 +3019,11 @@
 //5852,Easter_Egg_Shell
 // More Etc Items
 //===================================================================
-6000,Dark_Ashes,Ashes of Darkness,3,,,0,,,,,,,,,,,,,{},{},{}
-6001,Essence_Of_Fire,Essence of Fire,3,,,10,,,,,,,,,,,,,{},{},{}
-6002,Token_Of_Apostle,Token of Apostles,3,,,10,,,,,,,,,,,,,{},{},{}
-6003,Soul_Pendant,Pendant of Spirit,3,,,10,,,,,,,,,,,,,{},{},{}
-6004,Bapho_Doll,Cursed Baphomet Doll,3,,,10,,,,,,,,,,,,,{},{},{}
+6000,Dark_Ashes,Ashes of Darkness,3,0,,0,,,,,,,,,,,,,{},{},{}
+6001,Essence_Of_Fire,Essence of Fire,3,0,,10,,,,,,,,,,,,,{},{},{}
+6002,Token_Of_Apostle,Token of Apostles,3,0,,10,,,,,,,,,,,,,{},{},{}
+6003,Soul_Pendant,Pendant of Spirit,3,0,,10,,,,,,,,,,,,,{},{},{}
+6004,Bapho_Doll,Cursed Baphomet Doll,3,0,,10,,,,,,,,,,,,,{},{},{}
 6005,New_Year_Rice_Cake,New Year Rice Cake,3,0,,10,,,,,,,,,,,,,{},{},{}
 6006,Rice_Cake_Delivery_Box,Rice Cake Delivery Box,3,0,,10,,,,,,,,,,,,,{},{},{}
 6007,New_Year_Rice_Cake_Soup,New Year Rice Cake Soup,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -3042,7 +3042,7 @@
 6021,Peaked_Hat,Peaked Hat,3,432,,10,,,,,,,,,,,,,{},{},{}
 6022,Hard_Skin,Hard Skin,3,0,,10,,,,,,,,,,,,,{},{},{}
 6023,Mystic_Horn,Mystic Horn,3,1000,,10,,,,,,,,,,,,,{},{},{}
-6024,17Carat_Dia,17 Carat Diamond,3,0,,10,,,,,,,,,,,,,{},{},{}
+6024,17_Carat_Diamond,17 Carat Diamond,3,0,,500,,,,,,,,,,,,,{},{},{}
 6025,Towel_Of_Memory,Towel of Memory,3,0,,10,,,,,,,,,,,,,{},{},{}
 6026,Marriage_Covenant,Marriage Certificate,3,0,,10,,,,,,,,,,,,,{},{},{}
 6027,Crystal_Of_Feardoom,Crystal Of Feardom,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -3064,8 +3064,8 @@
 6043,Letter_From_Lugen,Letter from Lugen,3,0,,10,,,,,,,,,,,,,{},{},{}
 6044,Letter_From_Otto,Letter from Otto,3,0,,10,,,,,,,,,,,,,{},{},{}
 6045,Supply_Box,supply Boxes,3,0,,10,,,,,,,,,,,,,{},{},{}
-6046,Clothing_Dye_Coupon,Clothing Dye Coupon,3,0,,10,,,,,,,,,,,,,{},{},{}
-6047,Clothing_Dye_Coupon2,Clothing Dye Coupon_II,3,0,,10,,,,,,,,,,,,,{},{},{}
+6046,Clothing_Dye_Coupon,Clothing Dye Coupon,3,0,,0,,,,,,,,,,,,,{},{},{}
+6047,Clothing_Dye_Coupon2,Clothing Dye Coupon_II,3,0,,0,,,,,,,,,,,,,{},{},{}
 6048,Unidentified_Mineral,Unidentified Mineral,3,0,,10,,,,,,,,,,,,,{},{},{}
 6049,Marlin,Marlin,3,0,,10,,,,,,,,,,,,,{},{},{}
 6050,Mercenary_Contract,Mercenary Contract,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -3386,9 +3386,9 @@
 7056,Payroll_Of_Kafra,卡普拉薪资明细表,3,1,,50,,,,,,,,,,,,,{},{},{}
 7057,Gallar_Horn,角笛,3,1,,500,,,,,,,,,,,,,{},{},{}
 7058,Gullraifnir,魔法铁链,3,1,,500,,,,,,,,,,,,,{},{},{}
-7059,Cargo_Free_Ticket,卡普拉仓库 免费利用券,3,1,,0,,,,,,,,,,,,,{},{},{}
-7060,Warp_Free_Ticket,卡普拉传送点 免费利用券,3,1,,0,,,,,,,,,,,,,{},{},{}
-7061,Cart_Free_Ticket,卡普拉手推车 免费利用券,3,1,,0,,,,,,,,,,,,,{},{},{}
+7059,Cargo_Free_Ticket,卡普拉仓库 免费利用券,3,1,,10,,,,,,,,,,,,,{},{},{}
+7060,Warp_Free_Ticket,卡普拉传送点 免费利用券,3,1,,10,,,,,,,,,,,,,{},{},{}
+7061,Cart_Free_Ticket,卡普拉手推车 免费利用券,3,1,,10,,,,,,,,,,,,,{},{},{}
 7062,Broken_Turtle_Shell,乌龟背壳,3,280,,10,,,,,,,,,,,,,{},{},{}
 7063,Soft_Feather,柔软的羽毛,3,280,,10,,,,,,,,,,,,,{},{},{}
 7064,Dragon_Fly_Wing,蜻蜓的翅膀,3,520,,10,,,,,,,,,,,,,{},{},{}
@@ -3949,18 +3949,18 @@
 7620,Enriched_Oridecon,浓缩神之金属,3,2,,10,,,,,,,,,,,,,{},{},{}
 7621,Token_Of_Siegfried,原地复活之证,3,2,,10,,,,,,,,,,,,,{},{},{}
 7622,New_Style_Coupon,美发礼卷,3,0,,10,,,,,,,,,,,,,{},{},{}
-7623,Name_Change_Coupon,Name Change Coupon,3,2,,10,,,,,,,,,,,,,{},{},{}
+7623,Name_Change_Coupon,Name Change Coupon,3,2,,0,,,,,,,,,,,,,{},{},{}
 //
 7701,Dragon_Spirit,神龙的魂魄,3,2,,10,,,,,,,,,,,,,{},{},{}
 7702,Special_Cogwheel,特别的齿轮,3,2,,10,,,,,,,,,,,,,{},{},{}
-7703,Piece_Of_Cogwheel,齿轮碎片,3,2,,0,,,,,,,,,,,,,{},{},{}
+7703,Piece_Of_Cogwheel,齿轮碎片,3,2,,10,,,,,,,,,,,,,{},{},{}
 7704,Broken_Thermometer,坏掉的温度测量器,3,2,,0,,,,,,,,,,,,,{},{},{}
-7705,Note_Of_Geologist,地质学者的便条纸,3,20,,40,,,,,,,,,,,,,{},{},{}
+7705,Note_Of_Geologist,地质学者的便条纸,3,2,,0,,,,,,,,,,,,,{},{},{}
 7706,Spoiled_Carrot_Juice,Spoiled Carrot Juice,3,20,,40,,,,,,,,,,,,,{},{},{}
 7707,Spoiled_Banana_Juice,Spoiled Banana Juice,3,20,,40,,,,,,,,,,,,,{},{},{}
 7708,Spoiled_Apple_Juice,Spoiled Apple Juice,3,20,,40,,,,,,,,,,,,,{},{},{}
-7709,Spoiled_Grape_Juice,Spoiled Grape Juice,3,600,,30,,,,,,,,,,,,,{},{},{}
-7710,Black_Gemstone,Black Gemstone,3,0,,10,,,,,,,,,,,,,{},{},{}
+7709,Spoiled_Grape_Juice,Spoiled Grape Juice,3,20,,40,,,,,,,,,,,,,{},{},{}
+7710,Black_Gemstone,Black Gemstone,3,600,,30,,,,,,,,,,,,,{},{},{}
 7711,Update_Ticket,活动票券,3,0,,10,,,,,,,,,,,,,{},{},{}
 7712,Nokia5500,诺基亚5500,3,0,,10,,,,,,,,,,,,,{},{},{}
 7713,BlueCard_A_,Blue A Card,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -3969,7 +3969,7 @@
 7716,Strawberry_Choco_Recipe,草莓巧克力 食谱,3,0,,0,,,,,,,,,,,,,{},{},{}
 7717,Choco_Tart_Recipe,巧克力塔 食谱,3,0,,0,,,,,,,,,,,,,{},{},{}
 7718,Cacao_Bean,可可豆,3,0,,10,,,,,,,,,,,,,{},{},{}
-7719,BlueCard_G,Blue G Card,3,0,,1,,,,,,,,,,,,,{},{},{}
+7719,BlueCard_G,Blue G Card,3,0,,10,,,,,,,,,,,,,{},{},{}
 7720,Gold_Coin_US,黄金钱币,3,100,,10,,,,,,,,,,,,,{},{},{}
 7721,Treasure_Box_,宝物箱子,3,100,,500,,,,,,,,,,,,,{},{},{}
 7722,Debt_Note,借据,3,20,,0,,,,,,,,,,,,,{},{},{}
@@ -4023,7 +4023,7 @@
 7770,Sweet_Rice,糯米,3,0,,10,,,,,,,,,,,,,{},{},{}
 7771,Lotus_Leaf,荷花叶,3,0,,10,,,,,,,,,,,,,{},{},{}
 7772,String,绳子,3,0,,10,,,,,,,,,,,,,{},{},{}
-7773,War_Badge,Heroism Badge,3,,1,0,,,,,,,,,,,,,{},{},{}
+7773,War_Badge,Heroism Badge,3,0,,0,,,,,,,,,,,,,{},{},{}
 7774,Chung_E_Ticket,小青蛋交换券,3,0,,10,,,,,,,,,,,,,{},{},{}
 7775,Spring_Rabbit_Ticket,捣药小玉兔蛋交换券,3,0,,10,,,,,,,,,,,,,{},{},{}
 7776,Max_Weight_Up_Scroll,健身房会员券,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -4044,7 +4044,7 @@
 7791,Fawner_Coupon8,Free Coupon 8,3,0,,10,,,,,,,,,,,,,{},{},{}
 7792,Guyak,蒟蒻,3,0,,10,,,,,,,,,,,,,{},{},{}
 7793,Golden_Apple,Golden Apple,3,0,,0,,,,,,,,,,,,,{},{},{}
-7794,Fate_Of_Crow,The Crow of Destiny,3,0,,10,,,,,,,,,,,,,{},{},{}
+7794,Fate_Of_Crow,The Crow of Destiny,3,0,,0,,,,,,,,,,,,,{},{},{}
 7795,Mami_Photo_Album,Mammi's Photo Album,3,2,,10,,,,,,,,,,,,,{},{},{}
 7796,Author_Autograph,Author's Autograph,3,2,,10,,,,,,,,,,,,,{},{},{}
 7797,Author_Memo,Author's Memo,3,2,,10,,,,,,,,,,,,,{},{},{}
@@ -4077,9 +4077,9 @@
 7824,Spirit_Liquor,灵魂酒,3,20,,10,,,,,,,,,,,,,{},{},{}
 7825,Heroic_Stone,Heroic Stone,3,20,,10,,,,,,,,,,,,,{},{},{}
 7826,Continental_Guard_Paper,Continental Guard Paper,3,0,,0,,,,,,,,,,,,,{},{},{}
-7827,Mineral_Report,Mineral Report,3,0,,10,,,,,,,,,,,,,{},{},{}
-7828,BF_Badge1,Bravery Badge,3,,1,0,,,,,,,,,,,,,{},{},{}
-7829,BF_Badge2,Valor Badge,3,,1,0,,,,,,,,,,,,,{},{},{}
+7827,Mineral_Report,Mineral Report,3,0,,0,,,,,,,,,,,,,{},{},{}
+7828,BF_Badge1,Bravery Badge,3,0,,0,,,,,,,,,,,,,{},{},{}
+7829,BF_Badge2,Valor Badge,3,0,,0,,,,,,,,,,,,,{},{},{}
 7830,Goddess_Tear,女神的眼泪,3,1,,500,,,,,,,,,,,,,{},{},{}
 7831,Valkyrie_Token,巴基力的象征,3,1,,500,,,,,,,,,,,,,{},{},{}
 7832,Brynhild_Armor_Piece,布林喜德的铠甲一角,3,1,,500,,,,,,,,,,,,,{},{},{}
@@ -4089,12 +4089,12 @@
 7836,Dawn_Essence,黎明的清水,3,1,,500,,,,,,,,,,,,,{},{},{}
 7837,Cold_Moonlight,冰冷的月光,3,1,,500,,,,,,,,,,,,,{},{},{}
 7838,Hazy_Starlight,黑萤萤的星光,3,1,,500,,,,,,,,,,,,,{},{},{}
-7839,Crystal_Key,水晶钥匙,3,1,,0,,,,,,,,,,,,,{},{},{}
-7840,Valkyrie_Gift,巴基力的礼物,3,1,,0,,,,,,,,,,,,,{},{},{}
-7841,Spotted_Paper,Spotted Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
-7842,Torn_Paper,Torn Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
-7843,Old_Paper,Old Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
-7844,Burnt_Paper,Burnt Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
+7839,Crystal_Key,水晶钥匙,3,0,,0,,,,,,,,,,,,,{},{},{}
+7840,Valkyrie_Gift,巴基力的礼物,3,0,,0,,,,,,,,,,,,,{},{},{}
+7841,Spotted_Paper,Spotted Paper,3,0,,0,,,,,,,,,,,,,{},{},{}
+7842,Torn_Paper,Torn Paper,3,0,,0,,,,,,,,,,,,,{},{},{}
+7843,Old_Paper,Old Paper,3,0,,0,,,,,,,,,,,,,{},{},{}
+7844,Burnt_Paper,Burnt Paper,3,0,,0,,,,,,,,,,,,,{},{},{}
 7845,Copy_Of_Spotted_Paper,Copy Of Spotted Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
 7846,Copy_Of_Torn_Paper,Copy Of Torn Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
 7847,Copy_Of_Old_Paper,Copy Of Old Paper,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -4141,31 +4141,31 @@
 7888,Bag_Of_Nuts,坚果类袋子,3,0,,30,,,,,,,,,,,,,{},{},{}
 7889,Chicken_Feed,好吃的鸡喂食,3,0,,20,,,,,,,,,,,,,{},{},{}
 7891,Mug,Mug,3,2,,100,,,,,,,,,,,,,{},{},{}
-7892,Charcoal,Charcoal,3,0,,10,,,,,,,,,,,,,{},{},{}
-7893,Sulfur,Sulphur,3,0,,10,,,,,,,,,,,,,{},{},{}
-7894,Nitrate,Nitric Acid,3,0,,10,,,,,,,,,,,,,{},{},{}
-7895,TRO_Memory_Book01,Rama5 Book,3,0,,10,,,,,,,,,,,,,{},{},{}
-7896,TRO_Memory_Book02,Loykrathong Book,3,0,,10,,,,,,,,,,,,,{},{},{}
-7897,TRO_Memory_Book03,Constitution Book,3,0,,10,,,,,,,,,,,,,{},{},{}
-7898,VVS_Balmung,VV Strong Balmung,3,0,,10,,,,,,,,,,,,,{},{},{}
-7899,Spiritualist_Dagger,Dagger Of Psychic,3,0,,10,,,,,,,,,,,,,{},{},{}
+7892,Charcoal,Charcoal,3,10,,10,,,,,,,,,,,,,{},{},{}
+7893,Sulfur,Sulphur,3,10,,10,,,,,,,,,,,,,{},{},{}
+7894,Nitrate,Nitric Acid,3,10,,10,,,,,,,,,,,,,{},{},{}
+7895,TRO_Memory_Book01,Rama5 Book,3,0,,0,,,,,,,,,,,,,{},{},{}
+7896,TRO_Memory_Book02,Loykrathong Book,3,0,,0,,,,,,,,,,,,,{},{},{}
+7897,TRO_Memory_Book03,Constitution Book,3,0,,0,,,,,,,,,,,,,{},{},{}
+7898,VVS_Balmung,VV Strong Balmung,3,0,,0,,,,,,,,,,,,,{},{},{}
+7899,Spiritualist_Dagger,Dagger Of Psychic,3,0,,0,,,,,,,,,,,,,{},{},{}
 7900,Jenoss_Ring1,Jonathan Family Ring,3,0,,0,,,,,,,,,,,,,{},{},{}
 7901,Jenoss_Ring2,Jillberriel Family Ring,3,0,,0,,,,,,,,,,,,,{},{},{}
 7902,Jenoss_Ring3,Jessur Family Ring,3,0,,0,,,,,,,,,,,,,{},{},{}
 7903,Jenoss_Ring4,Jenoss Family Ring,3,0,,0,,,,,,,,,,,,,{},{},{}
 7904,Piano_Key,Piano Key,3,0,,0,,,,,,,,,,,,,{},{},{}
-7905,Rok_Star_Badge_,Rok Star 2,3,0,,0,,,,,,,,,,,,,{},{},{}
+7905,Rok_Star_Badge_,Rok Star Badge,3,20,,100,,,,,,,,,,,,,{},{},{}
 7906,Poppy_Wreath,Poppy Wreath,3,0,,0,,,,,,,,,,,,,{},{},{}
-7907,Bobbin_Of_Goddess,Bobbin Of Goddess,3,0,,0,,,,,,,,,,,,,{},{},{}
+7907,Bobbin_Of_Goddess,Bobbin Of Goddess,3,20,,10,,,,,,,,,,,,,{},{},{}
 7908,Louise_Beauty_Coupon,路易士的美容优惠券,3,0,,10,,,,,,,,,,,,,{},{},{}
 7909,Stolen_Cookie,被偷窃的饼干,3,0,,10,,,,,,,,,,,,,{},{},{}
 7910,Stolen_Candy,被偷窃的糖果,3,0,,10,,,,,,,,,,,,,{},{},{}
 7911,Yulia_Hat,律丽的帽子,3,0,,10,,,,,,,,,,,,,{},{},{}
-7912,Portable_Snowman,Portable Snowman Machine,3,0,,10,,,,,,,,,,,,,{},{},{}
-7913,Test_Certificate,Battle Test Certificate,3,0,,10,,,,,,,,,,,,,{},{},{}
-7914,Ancient_Document_TW,Ancient Language Document,3,0,,10,,,,,,,,,,,,,{},{},{}
-7915,Copper_Coin_,Bronze Coin,3,100,,10,,,,,,,,,,,,,{},{},{}
-7916,Silver_Coin_,Silver Coin,3,100,,10,,,,,,,,,,,,,{},{},{}
+7912,Portable_Snowman,Portable Snowman Machine,3,0,,0,,,,,,,,,,,,,{},{},{}
+7913,Test_Certificate,Battle Test Certificate,3,0,,0,,,,,,,,,,,,,{},{},{}
+7914,Ancient_Document_TW,Ancient Language Document,3,10,,0,,,,,,,,,,,,,{},{},{}
+7915,Copper_Coin_,Bronze Coin,3,0,,0,,,,,,,,,,,,,{},{},{}
+7916,Silver_Coin_,Silver Coin,3,0,,0,,,,,,,,,,,,,{},{},{} 
 7917,Magic_Potion,Magic Potion,3,100,,10,,,,,,,,,,,,,{},{},{}
 7918,Particle_Of_Memory,Memory Fragment,3,100,,10,,,,,,,,,,,,,{},{},{}
 7919,Festival_Ticket,Festival Tickets,3,100,,10,,,,,,,,,,,,,{},{},{}
@@ -4312,7 +4312,7 @@
 11006,Blood_Flower01,含血之花第1集,3,8000,,0,,,,,,,,,,,,,{},{},{}
 11007,Blood_Flower02,含血之花第2集,3,8000,,0,,,,,,,,,,,,,{},{},{}
 11008,Barmund,人名大字典的考贝版,3,10000,,0,,,,,,,,,,,,,{},{},{}
-11009,Adventure_Story02,青年传记系列第2集,3,8000,,10,,,,,,,,,,,,,{},{},{}
+11009,Adventure_Story02,青年传记系列第2集,3,8000,,0,,,,,,,,,,,,,{},{},{}
 11010,Reward_List_Book,Reward List Book,3,0,,10,,,,,,,,,,,,,{},{},{}
 11011,Barmund_Note,Varmunt's Note,3,0,,10,,,,,,,,,,,,,{},{},{}
 11012,Expedition_Report,Expedition Report,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -4684,9 +4684,9 @@
 12320,Pineapple_Juice,Schwartzwald Pine Jubilee,0,0,,300,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCHIT,600000,10; sc_start SC_INCFLEE2,600000,20; },{},{}
 12321,Spicy_Sandwich,Arunafeltz Desert Sandwich,0,0,,300,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCCRI,600000,7; },{},{}
 12322,Chocolate_Pie,Chocolate Pie,0,0,,300,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,5; },{},{}
-12323,N_Fly_Wing,Novice Fly Wing,11,1,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "AL_TELEPORT",1; },{},{}
-12324,N_Butterfly_Wing,Novice Butterfly Wing,11,1,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "AL_TELEPORT",3; },{},{}
-12325,N_Magnifier,Novice Magnifier,11,1,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "MC_IDENTIFY",1; },{},{}
+12323,N_Fly_Wing,Novice Fly Wing,11,1,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "AL_TELEPORT",1; },{},{}
+12324,N_Butterfly_Wing,Novice Butterfly Wing,11,1,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "AL_TELEPORT",3; },{},{}
+12325,N_Magnifier,Novice Magnifier,11,1,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "MC_IDENTIFY",1; },{},{}
 12326,J_Firecracker,J Firecracker,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12327,Charm_Of_Luck,Charm Of Luck,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12328,Charm_Of_Happiness,Charm Of Happiness,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCLUK,3600000,20; },{},{}

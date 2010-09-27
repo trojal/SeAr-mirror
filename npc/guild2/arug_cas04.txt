@@ -2639,7 +2639,7 @@ OnRecvCastlear04:
 	end;
 }
 
-aru_gld,306,348,0	duplicate(ar04_Flag)	吉本#flag_ar04_2	722
+aru_gld,306,348,6	duplicate(ar04_Flag)	吉本#flag_ar04_2	722
 
 aru_gld,301,318,4	script	吉本#flag_ar04_3::ar04_Flag2	722,{
 	set .@GID, GetCastleData("arug_cas04",1);
@@ -2673,4 +2673,4 @@ OnRecvCastlear04:
 	end;
 }
 
-aru_gld,306,348,0	duplicate(ar04_Flag2)	吉本#flag_ar04_4	722
+aru_gld,313,318,4	duplicate(ar04_Flag2)	吉本#flag_ar04_4	722
