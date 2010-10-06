@@ -5,21 +5,21 @@
 //
 // 01. MobID			宠物的魔物ID
 // 02. Name			DB中的宠物名
-// 02. JName			捕捉时的显示名
-// 03. LureID			诱饵道具ID
-// 04. EggID			宠物蛋ID
-// 05. EquipID			装饰品ID
-// 06. FoodID			食物ID
-// 07. Fullness			每 [饥饿延时] 秒减少的饥饿感
-// 08. HungeyDelay		喂养后要变饿所需的时间 (默认: 60 秒)
-// 09. R_Hungry			喂养时增加的亲密度
-// 10. R_Full			过度喂养后减少的亲密度
-// 11. Intimate			初始亲密度
-// 12. Die			角色死亡时减少的亲密度
-// 13. Capture			捕捉成功率 (10000 = 100%)
-// 14. Speed			宠物移动速度 (Defaul: 150)
-// 15. S_Performance		特殊表现 (Yes = 1, No = 0)
-// 16. talk_convert_class	禁止宠物说话 (不说话时他们会做 /! 表情.)
+// 03. JName			捕捉时的显示名
+// 04. LureID			诱饵道具ID
+// 05. EggID			宠物蛋ID
+// 06. EquipID			装饰品ID
+// 07. FoodID			食物ID
+// 08. Fullness			每 [饥饿延时] 秒减少的饥饿感
+// 09. HungeyDelay		喂养后要变饿所需的时间 (默认: 60 秒)
+// 10. R_Hungry			喂养时增加的亲密度
+// 11. R_Full			过度喂养后减少的亲密度
+// 12. Intimate			初始亲密度
+// 13. Die			角色死亡时减少的亲密度
+// 14. Capture			捕捉成功率 (10000 = 100%)
+// 15. Speed			宠物移动速度 (Defaul: 150)
+// 16. S_Performance		特殊表现 (Yes = 1, No = 0)
+// 17. talk_convert_class	禁止宠物说话 (不说话时他们会做 /! 表情.)
 //注意: The max value (100%) of attack_rate, defense_rate & change_target_rate is 10000.
 
 //理论上你可以使用任何脚本指令, 但是只在读取宠物时引发一次
