@@ -101,6 +101,8 @@ bonus bHPGainValue,n;			以物理攻击杀死魔物时得到 n HP
 bonus bMagicSPGainValue,n;		以魔法攻击杀死魔物时得到 n SP
 bonus bMagicHPGainValue,n;		以魔法攻击杀死魔物时得到 n HP
 bonus bSPDrainValue,n;			物理攻击时，SP 变化 n 
+bonus bUseSPrate,n;			SP消耗 + n%
+bonus2 bUseSPrate,x,n;			技能 x SP消耗 + n%
 bonus2 bSPGainValueOnSKill,x,n;		使用技能 x 后得到SP n
 bonus2 bHPGainValueOnSKill,x,n;		使用技能 x 后得到HP n
 bonus2 bSPDrainValue,n,x;		物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
@@ -150,7 +152,6 @@ bonus bAtkEle,n;			物理攻击附加属性 n (n值见备注2)
 bonus bDefEle,n;			防御附加属性 n (n值见备注2)
 bonus bSplashRange n;			溅射伤害范围 n (n值见备注3)
 bonus bSplashAddRange n;		溅射伤害范围 + n (n值见备注3)
-bonus bUseSPrate,n;			SP消耗 + n%
 bonus bDoubleRate,n;			二刀连击率 n% (所有武器有效 | 最大值有效)
 bonus bDoubleAddRate,n;			二刀连击率 + n% (所有武器有效)
 bonus bPerfectHitRate,n;		必中攻击率 n% (最大值有效)
