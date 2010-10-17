@@ -3,7 +3,7 @@
 //===== By: ==================================================
 //= Athena (1.0)
 //===== Current Version: =====================================
-//= 2.5
+//= 2.6
 //===== Compatible With: =====================================
 //= Any Athena Version
 //===== Description: =========================================
@@ -22,7 +22,7 @@
 //=	as I get more information.
 //= 2.4b Corrected Warp points for Juno castles 1, 4 and 5. [L0ne_W0lf]
 //= 2.5 Updated Schwaltzvalt warps and added Arunafeltz. [L0ne_W0lf]
-//= 2.6 Fixed warp position between Juno and Schwaltzvalt Realm. [Gepard] 
+//= 2.6 Fixed warp position between Juno and Schwaltzvalt Realm. [Gepard]
 //============================================================
 
 
