@@ -912,7 +912,7 @@
 2445,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,		SO_SPELLFIST,Ä§Á¦Ö®È­
 2446,9,8,2,2,0,0,5,-3,yes,0,0,0,magic,0,	SO_EARTHGRAVE,ÑÒÇ¹
 2447,9,6,2,1,0,0,5,-5,yes,0,0,0,magic,0,			SO_DIAMONDDUST,×êÊ¯ÐÇ³¾
-2448,9,6,1,5,0,0,5,1,yes,0,0,0,magic,0,				SO_POISON_BUSTER,¾ç¶¾±¬·¢
+2448,9,6,1,5,0x20,0,5,1,yes,0,0,0,magic,0,				SO_POISON_BUSTER,¾ç¶¾±¬·¢
 2449,9,6,2,0,0,0,5,1,yes,0,0,0,magic,0,		SO_PSYCHIC_WAVE,¾«Éñ³å»÷
 2450,9,6,2,5,0,0,5,1,yes,0,0,0,magic,0,				SO_CLOUD_KILL,¶¾ÔÆÊõ
 2451,9,6,16,0,0x1,0,5,1,yes,0,0,0,none,0,			SO_STRIKING,Èñ»¯ÎäÆ÷
