@@ -48,7 +48,7 @@ OnPCLoadMapEvent	玩家登陆地图时，运行标签下的脚本，默认情况下只有loadevent标签的
 			赋予关联者变量@premap$，表示上一张地图。
 OnPCBaseLvUpEvent	玩家基本等级上升时，运行标签下的脚本
 OnPCJobLvUpEvent	玩家职业等级上升时，运行标签下的脚本
-OnPCStatCalcEvent	玩家每次进行属性运算时，运行标签下的脚本。
+OnPCStatCalcEvent	玩家每次进行属性运算时，运行标签下的脚本。与装备脚本类似，该标签下的脚本将无视玩家是否已经存在NPC关联，直接执行。
 	举例：
 	-	script	NPC	-1,{
 	OnPCStatCalcEvent:
