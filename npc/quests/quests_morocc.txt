@@ -1892,11 +1892,11 @@ OnInit:
 
 OnEnable:
 	enablenpc "ºÚ°µÖ®Í½#edq";
-	donpcevent "Time-Space Gap#edq::OnDisable";
 	end;
 
 OnDisable:
 	disablenpc "ºÚ°µÖ®Í½#edq";
+	donpcevent "Time-Space Gap#edq::OnDisable";
 	end;
 }
 
