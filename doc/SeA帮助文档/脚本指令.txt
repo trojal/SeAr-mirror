@@ -19,7 +19,8 @@
 7.- 副本系统指令.
 8.- 任务系统指令.	(已汉化)
 9.- 战场指令
-10.- SeA指令.		(已汉化)
+10.- 佣兵指令.
+11.- SeA指令.		(已汉化)
 
 =====================
 |1.- Basic commands.|
@@ -1628,15 +1629,12 @@ This will print a full date and time like 'YYYY-MM/DD HH:MM:SS'.
 This function will return a number of users on a map or the whole server. What 
 it returns is specified by Type.
 
-Type is a bitmask, add up to get the effects you want:
+Type can be one of the following values, which control what will be returned:
 
-  0 - This will count all characters on the same map as the current NPC.
-      (By default, it will count people on the same map as the character)
-  1 - Return the amount of players for the entire server.
-      (By default, only the players on the map will be counted.)
-      
-So 'getusers(0)' will return the number of characters on the same map as the 
-invoking character, while 'getusers(1)' will give the count for entire server.
+  0 - Count of all characters on the map of the invoking character. 
+  1 - Count of all characters in the entire server.
+  8 - Count of all characters on the map of the NPC the script is
+      running in. 
 
 ---------------------------------------
 
@@ -5280,6 +5278,23 @@ atoi 转换十进制数字而 axtoi 转换十六进制.
 结婚成功是播放结婚效果 (音乐等)
 结婚脚本中有实例.
 
+---------------------------------------
+
+*setfont <字体>
+This command sets the current RO client interface font to one of the
+fonts stored in data\*.eot by using an ID of the font. When the ID
+of the currently used font is used, default interface font is used again.
+     0 - Default
+     1 - RixLoveangel
+     2 - RixSquirrel
+     3 - NHCgogo
+     4 - RixDiary
+     5 - RixMiniHeart
+     6 - RixFreshman
+     7 - RixKid 
+     8 - RixMagic
+     9 - RixJJangu 
+
 --------------------------------------
 
 * 宠物AI命令
@@ -5744,8 +5759,59 @@ This command will force the update of the displayed scoreboard.
 
 ----------------------------------------
 
+==========================
+|10.- Mercenary commands.|
+==========================
+---------------------------------------
+
+*mercenary_create <class>,<contract time>;
+
+This command summons a mercenary of given class, for given amount of
+time in milliseconds. Typically used in item scripts of mercenary
+scrolls.
+
+----------------------------------------
+
+*mercenary_heal <hp>,<sp>;
+
+This command works like 'heal', but affects the mercenary of the
+currently attached character.
+
+----------------------------------------
+
+*mercenary_sc_start <type>,<tick>,<val1>;
+
+This command works like 'sc_start', but affects the mercenary of the
+currently attached character.
+
+----------------------------------------
+
+*mercenary_get_calls(<guild>);
+*mercenary_set_calls <guild>,<value>;
+
+Sets or gets the mercenary calls value for given guild for currently
+attached character. Guild can be one or the following constants:
+
+    ARCH_MERC_GUILD
+    SPEAR_MERC_GUILD
+    SWORD_MERC_GUILD
+
+----------------------------------------
+
+*mercenary_get_faith(<guild>);
+*mercenary_set_faith <guild>,<value>;
+
+Sets or gets the mercenary faith value for given guild for currently
+attached character. Guild can be one or the following constants:
+
+    ARCH_MERC_GUILD
+    SPEAR_MERC_GUILD
+    SWORD_MERC_GUILD
+
+---------------------------------------
+
 ========================
-|10.- SeA 指令|
+|11.- SeA 指令|
 ========================
 ---------------------------------------
 
