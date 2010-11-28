@@ -2980,6 +2980,10 @@ This command will fill the given array with the ID of items whose name matches t
 
 *delitem <item id>,<amount>{,<account ID>};
 *delitem "<item name>",<amount>{,<account ID>};
+*delcartitem <item id>,<amount>{,<account ID>};
+*delcartitem "<item name>",<amount>{,<account ID>};
+*delstorageitem <item id>,<amount>{,<account ID>};
+*delstorageitem "<item name>",<amount>{,<account ID>};
 
 This command will take a specified amount of items from the invoking character. 
 As all the item commands, this one uses the ID of the item found inside 
@@ -3010,6 +3014,10 @@ Check 'getitem2' to understand its expanded parameters.
 
 *countitem(<item id>)
 *countitem("<item name>")
+*countcartitem(<item id>)
+*countcartitem("<item name>")
+*countstorageitem(<item id>)
+*countstorageitem("<item name>")
 
 This function will return the number of items for the specified item ID that the 
 invoking character has in the inventory.
