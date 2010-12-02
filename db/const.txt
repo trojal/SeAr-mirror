@@ -485,6 +485,11 @@ bSCDef		1905
 bChangeRace	1906
 bFixedAspd	1907
 bBaseAspd	1908
+bFixedCastValue	1909
+bCastValue	1910
+bCooldownValue	1911
+bDelayValue	1912
+bUseSPValue	1913
 
 bRestartFullRecover	2000
 bNoCastCancel	2001
