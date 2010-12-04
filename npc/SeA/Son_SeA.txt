@@ -1,5 +1,6 @@
 //
 //SeA孙燕姿
+//非仿官方服务器请勿使用此脚本
 //
 
 prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
@@ -430,16 +431,19 @@ prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
 				mes "[SeA服务员]";
 				switch(BaseJob)
 				{
-					case 10:
-						if(Upper&4) { setarray .@option[0],2500,2,2255; break; }
-					case 18:
-					case 23:
+					case Job_Blacksmith:
+						if(Upper&4 && !checkriding()) { setarray .@option[0],2500,2,2255; break; }
+					case Job_Alchemist:
+					case Job_SuperNovice:
 						setarray .@option[0],800,1,39; break;
-					case 7:
+					case Job_Knight:
 						if(Upper&4) { setarray .@option[0],800,2,2007; break; }
-					case 14:
+					case Job_Crusader:
 						setarray .@option[0],2500,2,63; break;
-					case 11: setarray .@option[0],2500,4,127; break;
+					case Job_Hunter:
+						if(!checkwarg()) { 
+							setarray .@option[0],2500,4,127; break;
+						}
 					default: mes "没有适合你的道具"; cutin "son",255; close;
 				}
 				if (Zeny<.@option[0]) {

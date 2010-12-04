@@ -8,6 +8,7 @@
 CREATE TABLE `picklog` (
   `id` int(11) NOT NULL auto_increment,
   `time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `account_id` int(11) NOT NULL default '0',
   `char_id` int(11) NOT NULL default '0',
   `type` enum('M','P','L','T','V','S','N','C','A','R','G','E') NOT NULL default 'P',
   `nameid` int(11) NOT NULL default '0',
@@ -28,6 +29,7 @@ CREATE TABLE `picklog` (
 CREATE TABLE `zenylog` (
   `id` int(11) NOT NULL auto_increment,
   `time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `account_id` int(11) NOT NULL default '0',
   `char_id` int(11) NOT NULL default '0',
   `src_id` int(11) NOT NULL default '0',
   `type` enum('M','T','V','S','N','A','E') NOT NULL default 'S',
@@ -43,6 +45,7 @@ CREATE TABLE `zenylog` (
 CREATE TABLE `cashlog` (
   `id` int(11) NOT NULL auto_increment,
   `time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `account_id` int(11) NOT NULL default '0',
   `char_id` int(11) NOT NULL default '0',
   `type` enum('C','K') NOT NULL default 'C',
   `amount` int(11) NOT NULL default '0',
