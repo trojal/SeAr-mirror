@@ -538,6 +538,9 @@ bMagicSPGainValue	2043
 bMagicHPGainValue	2044
 bSPGainValueOnSkill	2045
 bHPGainValueOnSkill	2046
+bNoSteal	2047
+bNoStealCoin	2048
+bNoSnatch	2049
 
 EQI_HEAD_TOP	1
 EQI_ARMOR	2

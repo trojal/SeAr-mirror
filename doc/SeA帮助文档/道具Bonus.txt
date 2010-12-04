@@ -149,6 +149,7 @@ bonus bUnbreakableShoes,n;		鞋子无法损坏。n无意义
 bonus bShortWeaponDamageReturn,n;	反射 n% 近距离物理伤害
 bonus bLongWeaponDamageReturn,n;	反射 n% 远距离物理伤害
 bonus bMagicDamageReturn,n;		n% 几率反射全部魔法伤害
+bonus bNoSteal,n;			减少被偷窃几率n/10000
 
 //=========================================================
 //=人物攻击性能力
