@@ -951,8 +951,8 @@
 2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_SMOKE_POWDER,火焰爆炸 Smoke Powder
 2488,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_TEAR_GAS,火焰爆炸 Tear Gas
 2489,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,		GN_FIRE_EXPANSION_ACID,火焰爆炸 Acid
-2490,7,6,2,0,0x3,1,5,1,yes,0,0,2:3:4:5:6,none,0,		GN_HELLS_PLANT,地狱植物
-2491,0,6,1,0,0,0,5,1,no,0,0,0,magic,0,			GN_HELLS_PLANT_ATK,地狱植物 Attack
+2490,7,6,2,0,0,1,5,1,yes,0,0,2:3:4:5:6,none,0,		GN_HELLS_PLANT,地狱植物
+2491,0,6,1,0,0x8,0,5,1,no,0,0,0,misc,0,			GN_HELLS_PLANT_ATK,地狱植物 Attack
 2492,9,6,4,0,0x2,10,5,1,yes,0,0,0,none,0,			GN_MANDRAGORA,曼陀罗的嚎叫
 2493,11,6,1,0,0,0,8,1,yes,0,0,0,weapon,0,			GN_SLINGITEM,物品投掷
 2494,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,			GN_CHANGEMATERIAL,物品改造
