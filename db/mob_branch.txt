@@ -3,7 +3,7 @@
 // Structure of Database:
 // MobID,DummyName,Rate
 
-0,SCORPION,Scorpion,1001
+0,Scorpion,1001
 1001,Ð«×Ó,214285
 1002,²¨Àû,1000000
 1004,·ä±ø,357142
