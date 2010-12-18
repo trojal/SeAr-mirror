@@ -1027,18 +1027,18 @@
 8240,9,6,16,0,0x1,0,10,1,yes,0,0,0,magic,0,	MER_INCAGI,敏捷增加
 
 // Elemental Spirits Skills
-8401,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_CIRCLE_OF_FIRE,烈焰之环
-8402,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_FIRE_CLOAK,火焰斗篷
-8403,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_FIRE_MANTLE,火焰披风
-8404,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_WATER_SCREEN,水之守护
-8405,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_WATER_DROP,豪雨
-8406,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_WATER_BARRIER,水之障壁
-8407,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_WIND_STEP,闪现
-8408,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_WIND_CURTAIN,风之魂
-8409,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_ZEPHYR,风之结界
-8410,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_SOLID_SKIN,皮肤固化
-8411,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_STONE_SHIELD,岩石盾
-8412,0,0,0,0,0,0,3,0,no,0,0,0,none,0,		EL_POWER_OF_GAIA,天神下凡
+8401,9,6,16,0,0x1,0,1,1,no,0,0,0,none,3,	EL_CIRCLE_OF_FIRE,烈焰之环
+8402,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_FIRE_CLOAK,火焰斗篷
+8403,9,6,16,0,0x1,0,1,1,no,0,0,0,none,2,	EL_FIRE_MANTLE,火焰披风
+8404,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_WATER_SCREEN,水之守护
+8405,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_WATER_DROP,豪雨
+8406,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_WATER_BARRIER,水之障壁
+8407,9,6,16,0,0x1,0,1,1,no,0,0,0,none,2,	EL_WIND_STEP,闪现
+8408,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_WIND_CURTAIN,风之魂
+8409,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_ZEPHYR,风之结界
+8410,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_SOLID_SKIN,皮肤固化
+8411,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_STONE_SHIELD,岩石盾
+8412,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_POWER_OF_GAIA,天神下凡
 8413,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_PYROTECHNIC,烈焰强化
 8414,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_HEATER,急速升温
 8415,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	EL_TROPIC,灼热地带
