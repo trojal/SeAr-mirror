@@ -2,6 +2,9 @@
 cd conf/battle
 if exist Renewal_.conf del Renewal_.conf
 copy Renewal.conf Renewal_temp.conf
+cd ../import
+if exist char_renewal_temp.conf del char_renewal_temp.conf
+copy char_prerenewal.conf char_renewal_temp.conf
 cd ../../npc
 if exist scripts_monsters.conf del scripts_monsters.conf
 if exist scripts_warps.conf del scripts_warps.conf
