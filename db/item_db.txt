@@ -1633,7 +1633,7 @@
 2749,Linen_Glove,ÑÇÂé²¼ÊÖÌ×,5,0,,120,,1,,1,0xFDF80,2,2,136,,90,0,0,{ bonus bMdef,2; bonus bAgi,2; bonus bDex,1; if( isequipped(2390) ) bonus bFlee2,5; },{},{}
 //2750,Summer_Night_Dream,Summer Night Dream,5,0,,0,,0,,0,0x18315,7,2,136,,0,0,0,{},{},{}
 2751,Academy_Badge,Academy of Badge,5,0,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ if(BaseLevel < 80) { bonus bMaxHP,400; bonus bMaxSP,200; } },{},{}
-2752,Praxinus_C,Praxinus,5,0,,0,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{ bonus2 bAddRace,RC_NonBoss,5; bonus2 bAddRace,RC_Boss,5;3 bonus bMatkrate,5; },{},{}
+2752,Praxinus_C,Praxinus,5,0,,0,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{ bonus2 bAddRace,RC_NonBoss,5; bonus2 bAddRace,RC_Boss,5; bonus bMatkrate,5; },{},{}
 2753,Beholder_Ring,Beholder Ring,5,0,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus2 bExpAddRace,RC_Formless,15; },{},{}
 2754,Hallow_Ring,Hallow Ring,5,0,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus2 bExpAddRace,RC_undead,15; },{},{}
 2755,Clamorous_Ring,Clamourous Ring,5,0,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus2 bExpAddRace,RC_Brute,15; },{},{}
