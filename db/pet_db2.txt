@@ -20,6 +20,11 @@
 // 15. Speed			宠物移动速度 (Defaul: 150)
 // 16. S_Performance		特殊表现 (Yes = 1, No = 0)
 // 17. talk_convert_class	禁止宠物说话 (不说话时他们会做 /! 表情.)
+// 18. attack_rate		宠物在玩家攻击时攻击的几率(要求达到pet_support_min_friendly亲密度).
+// 19. defence_attack_rate	宠物在玩家受到攻击时攻击的几率(要求达到pet_support_min_friendly亲密度).
+// 20. change_target_rate	宠物改变目标的几率
+// 21. pet_script		宠物孵化后运行的脚本
+// 22. loyal_script		宠物孵化后运行的脚本(要求达到pet_equip_min_friendly亲密度, 独立于pet_script).
 //注意: The max value (100%) of attack_rate, defense_rate & change_target_rate is 10000.
 
 //理论上你可以使用任何脚本指令, 但是只在读取宠物时引发一次
