@@ -507,6 +507,7 @@ OnMyMobDead:
 }
 
 1@tower,12,393,0	script	1FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("1FGate102tower", instance_id());
 	end;
@@ -535,6 +536,7 @@ OnMyMobDead:
 }
 
 1@tower,96,393,0	script	2FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("2FGate102tower", instance_id());
 	end;
@@ -566,6 +568,7 @@ OnMyMobDead:
 }
 
 1@tower,184,393,0	script	3FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("3FGate102tower", instance_id());
 	end;
@@ -597,6 +600,7 @@ OnMyMobDead:
 }
 
 1@tower,270,393,0	script	4FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("4FGate102tower", instance_id());
 	end;
@@ -627,6 +631,7 @@ OnMyMobDead:
 }
 
 1@tower,355,393,0	script	5FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("5FGate102tower", instance_id());
 	end;
@@ -656,6 +661,7 @@ OnMyMobDead:
 }
 
 1@tower,12,309,0	script	6FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("6FGate102tower", instance_id());
 	end;
@@ -685,6 +691,7 @@ OnMyMobDead:
 }
 
 1@tower,96,309,0	script	7FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("7FGate102tower", instance_id());
 	end;
@@ -712,6 +719,7 @@ OnMyMobDead:
 }
 
 1@tower,184,309,0	script	8FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("8FGate102tower", instance_id());
 	end;
@@ -740,6 +748,7 @@ OnMyMobDead:
 }
 
 1@tower,270,309,0	script	9FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("9FGate102tower", instance_id());
 	end;
@@ -768,6 +777,7 @@ OnMyMobDead:
 }
 
 1@tower,355,309,0	script	10FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("10FGate102tower", instance_id());
 	end;
@@ -797,6 +807,7 @@ OnMyMobDead:
 }
 
 1@tower,12,222,0	script	11FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("11FGate102tower", instance_id());
 	end;
@@ -824,6 +835,7 @@ OnMyMobDead:
 }
 
 1@tower,96,222,0	script	12FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("12FGate102tower", instance_id());
 	end;
@@ -852,6 +864,7 @@ OnMyMobDead:
 }
 
 1@tower,184,222,0	script	13FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("13FGate102tower", instance_id());
 	end;
@@ -882,6 +895,7 @@ OnMyMobDead:
 }
 
 1@tower,270,222,0	script	14FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("14FGate102tower", instance_id());
 	end;
@@ -914,6 +928,7 @@ OnMyMobDead:
 }
 
 1@tower,355,222,0	script	15FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("15FGate102tower", instance_id());
 	end;
@@ -943,6 +958,7 @@ OnMyMobDead:
 }
 
 1@tower,12,138,0	script	16FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("16FGate102tower", instance_id());
 	end;
@@ -972,6 +988,7 @@ OnMyMobDead:
 }
 
 1@tower,96,138,0	script	17FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("17FGate102tower", instance_id());
 	end;
@@ -999,6 +1016,7 @@ OnMyMobDead:
 }
 
 1@tower,184,138,0	script	18FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("18FGate102tower", instance_id());
 	end;
@@ -1028,6 +1046,7 @@ OnMyMobDead:
 }
 
 1@tower,270,138,0	script	19FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("19FGate102tower", instance_id());
 	end;
@@ -1055,6 +1074,7 @@ OnMyMobDead:
 }
 
 1@tower,355,138,0	script	20FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("20FGate102tower", instance_id());
 	end;
@@ -1085,6 +1105,7 @@ OnMyMobDead:
 }
 
 1@tower,12,51,0	script	21FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("21FGate102tower", instance_id());
 	end;
@@ -1116,6 +1137,7 @@ OnMyMobDead:
 }
 
 1@tower,96,51,0	script	22FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("22FGate102tower", instance_id());
 	end;
@@ -1146,6 +1168,7 @@ OnMyMobDead:
 }
 
 1@tower,184,51,0	script	23FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("23FGate102tower", instance_id());
 	end;
@@ -1174,6 +1197,7 @@ OnMyMobDead:
 }
 
 1@tower,270,51,0	script	24FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("24FGate102tower", instance_id());
 	end;
@@ -1202,6 +1226,7 @@ OnMyMobDead:
 }
 
 1@tower,355,51,0	script	25FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("25FGate102tower", instance_id());
 	end;
@@ -1224,6 +1249,7 @@ OnTimer120000:
 }
 
 1@tower,355,51,0	script	25FGate102tower-2	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("25FGate102tower-2", instance_id());
 	end;
@@ -1282,6 +1308,7 @@ OnMyMobDead:
 }
 
 2@tower,12,393,0	script	26FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("26FGate102tower", instance_id());
 	end;
@@ -1313,6 +1340,7 @@ OnMyMobDead:
 }
 
 2@tower,96,393,0	script	27FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("27FGate102tower", instance_id());
 	end;
@@ -1342,6 +1370,7 @@ OnMyMobDead:
 }
 
 2@tower,184,393,0	script	28FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("28FGate102tower", instance_id());
 	end;
@@ -1374,6 +1403,7 @@ OnMyMobDead:
 }
 
 2@tower,270,393,0	script	29FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("29FGate102tower", instance_id());
 	end;
@@ -1401,6 +1431,7 @@ OnMyMobDead:
 }
 
 2@tower,355,393,0	script	30FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("30FGate102tower", instance_id());
 	end;
@@ -1430,6 +1461,7 @@ OnMyMobDead:
 }
 
 2@tower,12,309,0	script	31FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("31FGate102tower", instance_id());
 	end;
@@ -1462,6 +1494,7 @@ OnMyMobDead:
 }
 
 2@tower,96,309,0	script	32FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("32FGate102tower", instance_id());
 	end;
@@ -1492,6 +1525,7 @@ OnMyMobDead:
 }
 
 2@tower,184,309,0	script	33FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("33FGate102tower", instance_id());
 	end;
@@ -1520,6 +1554,7 @@ OnMyMobDead:
 }
 
 2@tower,270,309,0	script	34FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("34FGate102tower", instance_id());
 	end;
@@ -1550,6 +1585,7 @@ OnMyMobDead:
 }
 
 2@tower,355,309,0	script	35FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("35FGate102tower", instance_id());
 	end;
@@ -1578,6 +1614,7 @@ OnMyMobDead:
 }
 
 2@tower,12,222,0	script	36FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("36FGate102tower", instance_id());
 	end;
@@ -1606,6 +1643,7 @@ OnMyMobDead:
 }
 
 2@tower,96,222,0	script	37FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("37FGate102tower", instance_id());
 	end;
@@ -1633,6 +1671,7 @@ OnMyMobDead:
 }
 
 2@tower,184,222,0	script	38FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("38FGate102tower", instance_id());
 	end;
@@ -1663,6 +1702,7 @@ OnMyMobDead:
 }
 
 2@tower,270,222,0	script	39FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("39FGate102tower", instance_id());
 	end;
@@ -1694,6 +1734,7 @@ OnMyMobDead:
 }
 
 2@tower,355,222,0	script	40FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("40FGate102tower", instance_id());
 	end;
@@ -1720,6 +1761,7 @@ OnMyMobDead:
 }
 
 2@tower,12,138,0	script	41FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("41FGate102tower", instance_id());
 	end;
@@ -1750,6 +1792,7 @@ OnMyMobDead:
 }
 
 2@tower,96,138,0	script	42FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("42FGate102tower", instance_id());
 	end;
@@ -1779,6 +1822,7 @@ OnMyMobDead:
 }
 
 2@tower,184,138,0	script	43FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("43FGate102tower", instance_id());
 	end;
@@ -1809,6 +1853,7 @@ OnMyMobDead:
 }
 
 2@tower,270,138,0	script	44FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("44FGate102tower", instance_id());
 	end;
@@ -1838,6 +1883,7 @@ OnMyMobDead:
 }
 
 2@tower,355,138,0	script	45FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("45FGate102tower", instance_id());
 	end;
@@ -1865,6 +1911,7 @@ OnMyMobDead:
 }
 
 2@tower,12,51,0	script	46FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("46FGate102tower", instance_id());
 	end;
@@ -1894,6 +1941,7 @@ OnMyMobDead:
 }
 
 2@tower,96,51,0	script	47FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("47FGate102tower", instance_id());
 	end;
@@ -1922,6 +1970,7 @@ OnMyMobDead:
 }
 
 2@tower,184,51,0	script	48FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("48FGate102tower", instance_id());
 	end;
@@ -1952,6 +2001,7 @@ OnMyMobDead:
 }
 
 2@tower,270,51,0	script	49FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("49FGate102tower", instance_id());
 	end;
@@ -1982,6 +2032,7 @@ OnMyMobDead:
 }
 
 2@tower,355,51,0	script	50FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("50FGate102tower", instance_id());
 	end;
@@ -2004,6 +2055,7 @@ OnTimer120000:
 }
 
 2@tower,355,51,0	script	50FGate102tower-2	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("50FGate102tower-2", instance_id());
 	end;
@@ -2058,6 +2110,7 @@ OnMyMobDead:
 }
 
 3@tower,12,393,0	script	51FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("51FGate102tower", instance_id());
 	end;
@@ -2089,6 +2142,7 @@ OnMyMobDead:
 }
 
 3@tower,96,393,0	script	52FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("52FGate102tower", instance_id());
 	end;
@@ -2116,6 +2170,7 @@ OnMyMobDead:
 }
 
 3@tower,184,393,0	script	53FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("53FGate102tower", instance_id());
 	end;
@@ -2144,6 +2199,7 @@ OnMyMobDead:
 }
 
 3@tower,270,393,0	script	54FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("54FGate102tower", instance_id());
 	end;
@@ -2173,6 +2229,7 @@ OnMyMobDead:
 }
 
 3@tower,355,393,0	script	55FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("55FGate102tower", instance_id());
 	end;
@@ -2203,6 +2260,7 @@ OnMyMobDead:
 }
 
 3@tower,12,309,0	script	56FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("56FGate102tower", instance_id());
 	end;
@@ -2237,6 +2295,7 @@ OnMyMobDead:
 }
 
 3@tower,96,309,0	script	57FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("57FGate102tower", instance_id());
 	end;
@@ -2267,6 +2326,7 @@ OnMyMobDead:
 }
 
 3@tower,184,309,0	script	58FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("58FGate102tower", instance_id());
 	end;
@@ -2295,6 +2355,7 @@ OnMyMobDead:
 }
 
 3@tower,270,309,0	script	59FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("59FGate102tower", instance_id());
 	end;
@@ -2328,6 +2389,7 @@ OnMyMobDead:
 }
 
 3@tower,355,309,0	script	60FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("60FGate102tower", instance_id());
 	end;
@@ -2359,6 +2421,7 @@ OnMyMobDead:
 }
 
 3@tower,12,222,0	script	61FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("61FGate102tower", instance_id());
 	end;
@@ -2385,6 +2448,7 @@ OnMyMobDead:
 }
 
 3@tower,96,222,0	script	62FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("62FGate102tower", instance_id());
 	end;
@@ -2415,6 +2479,7 @@ OnMyMobDead:
 }
 
 3@tower,184,222,0	script	63FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("63FGate102tower", instance_id());
 	end;
@@ -2446,6 +2511,7 @@ OnMyMobDead:
 }
 
 3@tower,270,222,0	script	64FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("64FGate102tower", instance_id());
 	end;
@@ -2473,6 +2539,7 @@ OnMyMobDead:
 }
 
 3@tower,355,222,0	script	65FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("65FGate102tower", instance_id());
 	end;
@@ -2501,6 +2568,7 @@ OnMyMobDead:
 }
 
 3@tower,12,138,0	script	66FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("66FGate102tower", instance_id());
 	end;
@@ -2531,6 +2599,7 @@ OnMyMobDead:
 }
 
 3@tower,96,138,0	script	67FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("67FGate102tower", instance_id());
 	end;
@@ -2561,6 +2630,7 @@ OnMyMobDead:
 }
 
 3@tower,184,138,0	script	68FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("68FGate102tower", instance_id());
 	end;
@@ -2591,6 +2661,7 @@ OnMyMobDead:
 }
 
 3@tower,270,138,0	script	69FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("69FGate102tower", instance_id());
 	end;
@@ -2619,6 +2690,7 @@ OnMyMobDead:
 }
 
 3@tower,355,138,0	script	70FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("70FGate102tower", instance_id());
 	end;
@@ -2648,6 +2720,7 @@ OnMyMobDead:
 }
 
 3@tower,12,51,0	script	71FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("71FGate102tower", instance_id());
 	end;
@@ -2677,6 +2750,7 @@ OnMyMobDead:
 }
 
 3@tower,96,51,0	script	72FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("72FGate102tower", instance_id());
 	end;
@@ -2708,6 +2782,7 @@ OnMyMobDead:
 }
 
 3@tower,184,51,0	script	73FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("73FGate102tower", instance_id());
 	end;
@@ -2742,6 +2817,7 @@ OnMyMobDead:
 }
 
 3@tower,270,51,0	script	74FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("74FGate102tower", instance_id());
 	end;
@@ -2771,6 +2847,7 @@ OnMyMobDead:
 }
 
 3@tower,355,51,0	script	75FGate102tower	45,1,1,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("75FGate102tower", instance_id());
 	end;
@@ -2793,6 +2870,7 @@ OnTimer120000:
 }
 
 3@tower,355,51,0	script	75FGate102tower-2	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("75FGate102tower", instance_id());
 	end;
@@ -2847,6 +2925,7 @@ OnMyMobDead:
 }
 
 4@tower,12,393,0	script	76FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("76FGate102tower", instance_id());
 	end;
@@ -2877,6 +2956,7 @@ OnMyMobDead:
 }
 
 4@tower,96,393,0	script	77FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("77FGate102tower", instance_id());
 	end;
@@ -2907,6 +2987,7 @@ OnMyMobDead:
 }
 
 4@tower,184,393,0	script	78FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("78FGate102tower", instance_id());
 	end;
@@ -2937,6 +3018,7 @@ OnMyMobDead:
 }
 
 4@tower,270,393,0	script	79FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("79FGate102tower", instance_id());
 	end;
@@ -2964,6 +3046,7 @@ OnMyMobDead:
 }
 
 4@tower,355,393,0	script	80FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("80FGate102tower", instance_id());
 	end;
@@ -2992,6 +3075,7 @@ OnMyMobDead:
 }
 
 4@tower,12,309,0	script	81FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("81FGate102tower", instance_id());
 	end;
@@ -3022,6 +3106,7 @@ OnMyMobDead:
 }
 
 4@tower,96,309,0	script	82FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("82FGate102tower", instance_id());
 	end;
@@ -3051,6 +3136,7 @@ OnMyMobDead:
 }
 
 4@tower,184,309,0	script	83FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("83FGate102tower", instance_id());
 	end;
@@ -3081,6 +3167,7 @@ OnMyMobDead:
 }
 
 4@tower,270,309,0	script	84FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("84FGate102tower", instance_id());
 	end;
@@ -3107,6 +3194,7 @@ OnMyMobDead:
 }
 
 4@tower,355,309,0	script	85FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("85FGate102tower", instance_id());
 	end;
@@ -3136,6 +3224,7 @@ OnMyMobDead:
 }
 
 4@tower,12,222,0	script	86FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("86FGate102tower", instance_id());
 	end;
@@ -3165,6 +3254,7 @@ OnMyMobDead:
 }
 
 4@tower,96,222,0	script	87FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("87FGate102tower", instance_id());
 	end;
@@ -3195,6 +3285,7 @@ OnMyMobDead:
 }
 
 4@tower,184,222,0	script	88FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("88FGate102tower", instance_id());
 	end;
@@ -3224,6 +3315,7 @@ OnMyMobDead:
 }
 
 4@tower,270,222,0	script	89FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("89FGate102tower", instance_id());
 	end;
@@ -3253,6 +3345,7 @@ OnMyMobDead:
 }
 
 4@tower,355,222,0	script	90FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("90FGate102tower", instance_id());
 	end;
@@ -3281,6 +3374,7 @@ OnMyMobDead:
 }
 
 4@tower,12,138,0	script	91FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("91FGate102tower", instance_id());
 	end;
@@ -3311,6 +3405,7 @@ OnMyMobDead:
 }
 
 4@tower,96,138,0	script	92FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("92FGate102tower", instance_id());
 	end;
@@ -3340,6 +3435,7 @@ OnMyMobDead:
 }
 
 4@tower,184,138,0	script	93FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("93FGate102tower", instance_id());
 	end;
@@ -3367,6 +3463,7 @@ OnMyMobDead:
 }
 
 4@tower,270,138,0	script	94FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("94FGate102tower", instance_id());
 	end;
@@ -3397,6 +3494,7 @@ OnMyMobDead:
 }
 
 4@tower,355,138,0	script	95FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("95FGate102tower", instance_id());
 	end;
@@ -3425,6 +3523,7 @@ OnMyMobDead:
 }
 
 4@tower,12,51,0	script	96FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("96FGate102tower", instance_id());
 	end;
@@ -3454,6 +3553,7 @@ OnMyMobDead:
 }
 
 4@tower,96,51,0	script	97FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("97FGate102tower", instance_id());
 	end;
@@ -3485,6 +3585,7 @@ OnMyMobDead:
 }
 
 4@tower,184,51,0	script	98FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("98FGate102tower", instance_id());
 	end;
@@ -3573,6 +3674,7 @@ OnMyMobDead:
 }
 
 4@tower,271,51,0	script	99FGate102tower	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("99FGate102tower", instance_id());
 	end;
@@ -3595,6 +3697,7 @@ OnTimer120000:
 }
 
 4@tower,271,51,0	script	99FGate102tower-2	45,2,2,{
+	end;
 OnInstanceInit:
 	disablenpc instance_npcname("99FGate102tower-2", instance_id());
 	end;
