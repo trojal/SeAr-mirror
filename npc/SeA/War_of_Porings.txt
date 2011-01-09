@@ -188,6 +188,7 @@ poring_w01,96,97,3	script	讲述员小恶魔	738,{
 }
 //============== 报名人员 ==================
 poring_w01,90,97,3	script	报名波利	909,{
+end;
 OnInit:
 		waitingroom "[招募10名大战参加者]",10,"报名波利::OnGo",10;
 		end;
@@ -197,6 +198,7 @@ OnGo:
 		end;
 }
 poring_w01,92,73,3	script	天使招募员	909,{
+end;
 OnInit:
 		waitingroom "[招募5名天使波利队参加者]",5,"天使招募员::OnAngel",5;
 		end;
@@ -218,6 +220,7 @@ OnAngel:
 		end;
 }
 poring_w01,111,73,3	script	恶魔招募员	738,{
+end;
 OnInit:
 		waitingroom "[招募5名恶魔波利队参加者]",5,"恶魔招募员::OnDevil",5;
 		end;
