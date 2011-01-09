@@ -699,7 +699,7 @@
 2031,-1,6,1,5,0,0,5,1,no,0,0,0,weapon,0,		GC_VENOMPRESSURE,剧毒压制
 2032,5,8,2,5,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,毒雾
 2033,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		GC_CLOAKINGEXCEED,高级伪装
-2034,5,6,1,-1,0x02,3,1,1,no,0,0,0,weapon,0,	GC_PHANTOMMENACE,鬼魅之舞
+2034,5,6,4,-1,0x02,3,1,1,no,0,0,0,weapon,0,	GC_PHANTOMMENACE,鬼魅之舞
 2035,0,6,4,0,0x01,0,5,0,no,0,0,0,none,0,		GC_HALLUCINATIONWALK,疾风步
 2036,0,6,4,-1,0x02,2,5,0,no,0,0,0,weapon,0,	GC_ROLLINGCUTTER,回旋利刃
 2037,7,8,1,-1,0,0,5,10,no,0,0,0,weapon,0,		GC_CROSSRIPPERSLASHER,回旋十字斩
