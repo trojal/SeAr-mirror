@@ -3333,7 +3333,7 @@
 6362,Yellow_Wish_Point,风灵精华,3,100,,5,,,,,,,,,,,,,{},{},{}
 6363,Lime_Green_Point,地灵精华,3,100,,5,,,,,,,,,,,,,{},{},{}
 //6376,KVM_Badge
-//6377,Buy_Stall_Permit,Purchase Street Stall License,3,200,,10,,,,,,,,,,,,,{},{},{}
+//6377,Buy_Stall_Permit,简易采购商店执照,3,200,,10,,,,,,,,,,,,,{},{},{}
 //6383,Ropewa_Clues,Ropewa Clues,3,20,,10,,,,,,,,,,,,,{},{},{}
 //6386,Bathroom_Sample,Bathroom Sample,3,20,,10,,,,,,,,,,,,,{},{},{}
 //6387,Teeth_Sample,Teeth Sample,3,20,,10,,,,,,,,,,,,,{},{},{}
@@ -4798,6 +4798,9 @@
 12436,Vitata_500,Vitata 500,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,100; itembonus 500000,"{ bonus bSPrecovRate,20; }"; },{},{}
 12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
 12475,Cure_Photo,Cure Photo,3,10,,10,,,,,,,,,,,,,{},{},{}
+
+//12548,Shabby_Purchase_Street_Stall_License,简易采购商店执照2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
+
 12561,Mysterious_Seeds,神秘的种子,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
 12573,Fruit_Basket,水果篮,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}
 12574,Mora_Berry,莫拉浆果,2,0,,20,,,,,0xFFFFFFFF,2,2,,,120,,,{ itemheal 0,50; },{},{}
@@ -5556,13 +5559,13 @@
 13915,Love_Angel_Box,Love Angel Magic Powder Box,18,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ rentitem 12287,604800; },{},{}
 13916,Squirrel_Box,Squirrel Magic Powder Box,18,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ rentitem 12288,604800; },{},{}
 13917,Gogo_Box,Gogo Magic Powder Box,18,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ rentitem 12289,604800; },{},{}
-//13918,燚rooping_W_Kitty_Box?Koneko Hat Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5372,1; },{},{}
-//13919,燣_Magestic_Goat_Box?Baphomet Horns Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5374,1; },{},{}
-//13920,燬atanic_Chain_P_Box?Flying Evil Wing Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5376,1; },{},{}
-//13921,燗ntique_Pipe_Box?Gentleman's Pipe Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5377,1; },{},{}
-//13922,燫abbit_Ear_Hat_Box?Bunny Top Hat Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5378,1; },{},{}
-//13923,燚arkness_Helm_Box?Dark Randgris Helm Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5373,1; },{},{}
-//13924,燣_Orc_Hero_Helm_Box?Orc Hero Headdress Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5375,1; },{},{}
+//13918,Drooping_W_Kitty_Box,Koneko Hat Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5372,1; },{},{}
+//13919,L_Magestic_Goat_Box,Baphomet Horns Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5374,1; },{},{}
+//13920,Satanic_Chain_P_Box,Flying Evil Wing Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5376,1; },{},{}
+//13921,Antique_Pipe_Box,Gentleman's Pipe Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5377,1; },{},{}
+//13922,Rabbit_Ear_Hat_Box,Bunny Top Hat Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5378,1; },{},{}
+//13923,Darkness_Helm_Box,Dark Randgris Helm Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5373,1; },{},{}
+//13924,L_Orc_Hero_Helm_Box,Orc Hero Headdress Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5375,1; },{},{}
 //13925,Year_Of_Mouse_Scroll,... GoodLuck Scroll,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 13926,Crusader_Card_Box,Crusader Card Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 4371,1; getitem 4311,1; getitem 4319,1; getitem 4331,1; },{},{}
 13927,Alchemist_Card_Box,Alchemist Card Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 4281,1; getitem 4233,1; getitem 4343,1; getitem 4186,1; getitem 4036,1; },{},{}
