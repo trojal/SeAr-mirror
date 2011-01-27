@@ -4837,11 +4837,11 @@
 12731,Runstone_Turisus,自省符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_GIANTGROWTH",1; },{},{}
 12732,Runstone_Pertz,恐惧符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STORMBLAST",1; },{},{}
 12733,Runstone_Hagalas,毁灭符文石,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_STONEHARDSKIN",1; },{},{}
-12734,Runstone_Quality,高级 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
-12735,Runstone_Ancient,古代 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
-12736,Runstone_Mystic,神秘 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
-12737,Runstone_Ordinary,普通 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
-12738,Runstone_Rare,珍稀 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ produce 24; },{},{}
+12734,Runstone_Quality,高级 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ craftrune 2;},{},{}
+12735,Runstone_Ancient,古代 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ craftrune 4; },{},{}
+12736,Runstone_Mystic,神秘 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ craftrune 5; },{},{}
+12737,Runstone_Ordinary,普通 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ craftrune 1; },{},{}
+12738,Runstone_Rare,珍稀 符文原石,0,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ craftrune 3; },{},{}
 12739,Snow_Flower,Snow Flower,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12740,Inc_Str_Scroll,Inc Str Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12741,Inc_Int_Scroll,Inc Int Scroll,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -6159,9 +6159,9 @@
 //16590,Thoughtful_Hat_Box
 // Mechanic Mado Gear Cannonball Ammo
 18000,Cannon_Ball,炮弹,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
-18001,Holy_Cannon_Ball,神圣炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
-18002,Dark_Cannon_Ball,黑暗炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
-18003,Soul_Cannon_Ball,灵魂炮弹,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
-18004,Iron_Cannon_Ball,铁炮弹,10,500,,10,250,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
+18001,Holy_Cannon_Ball,神圣炮弹,10,200,,10,120,,,,0x00040400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
+18002,Dark_Cannon_Ball,黑暗炮弹,10,200,,10,120,,,,0x00040400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
+18003,Soul_Cannon_Ball,灵魂炮弹,10,200,,10,120,,,,0x00040400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
+18004,Iron_Cannon_Ball,铁炮弹,10,500,,10,250,,,,0x00040400,8,2,32768,,1,,8,{},{},{}
 //18101,Bow_Of_Rudra
 18103,Mystic_Bow,神祕的弓,4,10,,170,75,,,,0x00100800,8,2,34,3,105,1,11,{ bonus bMatk,100; bonus bInt,4; bonus2 bSPGainValueOnSKill,"RA_ARROWSTORM",-10; },{},{}
