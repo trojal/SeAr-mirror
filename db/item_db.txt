@@ -3333,7 +3333,7 @@
 6362,Yellow_Wish_Point,风灵精华,3,100,,5,,,,,,,,,,,,,{},{},{}
 6363,Lime_Green_Point,地灵精华,3,100,,5,,,,,,,,,,,,,{},{},{}
 //6376,KVM_Badge
-//6377,Buy_Stall_Permit,简易采购商店执照,3,200,,10,,,,,,,,,,,,,{},{},{}
+6377,Buy_Stall_Permit,简易采购商店执照,3,200,,10,,,,,,,,,,,,,{},{},{}
 //6383,Ropewa_Clues,Ropewa Clues,3,20,,10,,,,,,,,,,,,,{},{},{}
 //6386,Bathroom_Sample,Bathroom Sample,3,20,,10,,,,,,,,,,,,,{},{},{}
 //6387,Teeth_Sample,Teeth Sample,3,20,,10,,,,,,,,,,,,,{},{},{}
@@ -4799,7 +4799,7 @@
 12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
 12475,Cure_Photo,Cure Photo,3,10,,10,,,,,,,,,,,,,{},{},{}
 
-//12548,Shabby_Purchase_Street_Stall_License,简易采购商店执照2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
+12548,Shabby_Purchase_Street_Stall_License,简易采购商店执照2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
 
 12561,Mysterious_Seeds,神秘的种子,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
 12573,Fruit_Basket,水果篮,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}

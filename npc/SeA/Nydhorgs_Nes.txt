@@ -442,6 +442,7 @@ function	script	Allplayer	{
 1@nyd	mapflag	nobranch
 1@nyd	mapflag	noicewall
 1@nyd	mapflag	monster_noteleport
+1@nyd	mapflag	nowarpto	off
 
 2@nyd	mapflag	noteleport
 2@nyd	mapflag	nosave	SavePoint
@@ -449,6 +450,7 @@ function	script	Allplayer	{
 2@nyd	mapflag	nobranch
 2@nyd	mapflag	noicewall
 2@nyd	mapflag	monster_noteleport
+2@nyd	mapflag	nowarpto	off
 
 
 	
