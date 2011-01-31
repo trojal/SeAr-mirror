@@ -692,6 +692,7 @@ CREATE TABLE IF NOT EXISTS `mercenary` (
 CREATE TABLE IF NOT EXISTS `autotrade` (
   `char_id` int(11) NOT NULL default '0',
   `account_id` int(11) unsigned NOT NULL default '0',
+  `cash` int(11) NOT NULL default '0',
   `sex` enum('0','1') NOT NULL default '0',
   `mes` varchar(80) NOT NULL default '',
   PRIMARY KEY  (`char_id`)

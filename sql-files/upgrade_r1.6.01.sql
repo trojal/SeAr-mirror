@@ -1,0 +1,1 @@
+ALTER TABLE `autotrade` ADD COLUMN `cash` int(11) NOT NULL DEFAULT '0';
