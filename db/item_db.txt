@@ -4359,7 +4359,7 @@
 11513,Cough_Drop,润喉糖,3,200,,1,,,,,,,,,,,,,{ itemheal rand(15,35),0; },{},{}
 11515,Coconut,Coconut,0,1500,,1200,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(275,305),0; },{},{}
 11516,Acai_Fruit,Acai Fruit,0,15,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(65,95),0; },{},{}
-11518,Cure_Free,大治愈药水,3,10,,10,,,,,,,,,,,,,{ itemheal 1000,0; sc_end SC_Silence; sc_end SC_Curse; sc_end SC_Bleeding; },{},{}
+11518,Novice_Blue_Potion,初学者蓝色药水,0,10,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(4,5); },{},{}
 11519,Beef_Toast,牛肉堡,2,650,,40,,,,,0xFFFFFFFF,31,2,,,,,,{ itemheal 200,0; },{},{}
 11520,Mora_Mandarin,莫拉柑橘,2,500,,20,,,,,0xFFFFFFFF,2,2,,,100,,,{ itemheal 0,50; },{},{}
 11522,Red_Laphine_Sap,红色西拉皮汁,2,2000,,100,,,,,0xFFFFFFFF,2,2,,,100,,,{ itemheal 400,0; },{},{}
@@ -4776,28 +4776,28 @@
 12397,Fools_Day_Box2,Fools Day Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ if(rand(1,10)==1) itemskill "TF_DETOXIFY",1; else if(rand(1,10)==2) itemskill "TF_PICKSTONE",1; else if(rand(1,10)==3) itemskill "BA_FROSTJOKER",1; else if(rand(1,10)==4) itemskill "DC_SCREAM",1; else if(rand(1,10)==5) end; else if(rand(1,10)==6) getitem 909,1; else if(rand(1,10)==7) itemskill "AL_RUWACH",1; else if(rand(1,10)==8) specialeffect2 328; else if(rand(1,10)==9) specialeffect2 68; else specialeffect2 196; },{},{}
 12411,HE_Battle_Manual,HE Battle Manual,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_EXPBOOST,900000,200; },{},{}
 12412,HE_Bubble_Gum,HE Bubble Gum,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMBOOST,900000,300; },{},{}
-12417,Boost_500,Boost 500,3,10,,10,,,,,,,,,,,,,{},{},{}
-12418,Full_Swing_K,Full Swing K,3,10,,10,,,,,,,,,,,,,{},{},{}
-12419,Manaplus,Manaplus,3,10,,10,,,,,,,,,,,,,{},{},{}
-12420,Muramura_M,Muramura M,3,10,,10,,,,,,,,,,,,,{},{},{}
-12421,Falmons_F,Falmons F,3,10,,10,,,,,,,,,,,,,{},{},{}
-12422,HP_Increase_Potion_(Small),HP Increase Potion (Small),2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 2,0; itembonus 500000,"{ bonus bMaxHP,500+BaseLevel*4/3; }"; },{},{}
-12423,HP_Increase_Potion_(Medium),HP Increase Potion (Medium),2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 3,0; itembonus 500000,"{ bonus bMaxHP,1000+BaseLevel*4/3; }"; },{},{}
-12424,HP_Increase_Potion_(Large),HP Increase Potion (Large),2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; itembonus 500000,"{ bonus bMaxHP,1500+BaseLevel*4/3; }"; },{},{}
-12425,SP_Increase_Potion_(Small),SP Increase Potion (Small),2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,2; itembonus 500000,"{ bonus bMaxSPRate,BaseLevel/10-5; }"; },{},{}
-12426,SP_Increase_Potion_(Medium),SP Increase Potion (Medium),2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,3; itembonus 500000,"{ bonus bMaxSPRate,BaseLevel/10-5; }"; },{},{}
-12427,SP_Increase_Potion_(Large),SP Increase Potion (Large),2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,5; itembonus 500000,"{ bonus bMaxSPRate,BaseLevel/10-5; }"; },{},{}
-12428,Concentrated_White_Potion_Z,Concentrated White Potion Z,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bHPrecovRate,20; }"; },{},{}
-12429,Savage_Full_Roast,Savage Full Roast,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_STRFood, 300000, 20; },{},{}
-12430,Cocktail_Warg_Blood,Cocktail Warg Blood,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INTFood, 300000, 20; },{},{}
-12431,Minor_Stew,Minor Stew,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_VITFood, 300000, 20; },{},{}
-12432,Siroma_Iced_Tea,Siroma Iced Tea,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_DEXFood, 300000, 20; },{},{}
-12433,Drosera_Herb_Salad,Drosera Herb Salad,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_AGIFood, 300000, 20; },{},{}
-12434,Petite_Tail_Noodles,Petite Tail Noodles,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_LUKFood, 300000, 20; },{},{}
-12435,Black_Mass,Black Mass,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itembonus 1800000,"{ bonus bAllStats,-rand(5,10); }"; },{},{}
-12436,Vitata_500,Vitata 500,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,100; itembonus 500000,"{ bonus bSPrecovRate,20; }"; },{},{}
-12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
-12475,Cure_Photo,Cure Photo,3,10,,10,,,,,,,,,,,,,{},{},{}
+12417,Boost_500,Boost 500,3,10,,50,,,,,,,,,,,,,{},{},{}
+12418,Full_Swing_K,Full Swing K,3,10,,50,,,,,,,,,,,,,{},{},{}
+12419,Manaplus,Manaplus,3,10,,50,,,,,,,,,,,,,{},{},{}
+12420,Muramura_M,Muramura M,3,10,,50,,,,,,,,,,,,,{},{},{}
+12421,Falmons_F,Falmons F,3,10,,50,,,,,,,,,,,,,{},{},{}
+12422,HP_Increase_Potion_(Small),HP Increase Potion (Small),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 1,0; itembonus 500000,"{ bonus bMaxHP,500+BaseLevel*4/3; }"; },{},{}
+12423,HP_Increase_Potion_(Medium),HP Increase Potion (Medium),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 2,0; itembonus 500000,"{ bonus bMaxHP,1500+BaseLevel*4/3; }"; },{},{}
+12424,HP_Increase_Potion_(Large),HP Increase Potion (Large),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; itembonus 500000,"{ bonus bMaxHP,2500+BaseLevel*4/3; }"; },{},{}
+12425,SP_Increase_Potion_(Small),SP Increase Potion (Small),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,2; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10-5; }"; },{},{}
+12426,SP_Increase_Potion_(Medium),SP Increase Potion (Medium),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,4; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10; }"; },{},{}
+12427,SP_Increase_Potion_(Large),SP Increase Potion (Large),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,8 itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10+5; }"; },{},{}
+12428,Concentrated_White_Potion_Z,Concentrated White Potion Z,2,10,,70,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bHPrecovRate,20; }"; },{},{}
+12429,Savage_Full_Roast,Savage Full Roast,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_STRFood,1800000,20; },{},{}
+12430,Cocktail_Warg_Blood,Cocktail Warg Blood,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INTFood,1800000,20; },{},{}
+12431,Minor_Stew,Minor Stew,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_VITFood,1800000,20; },{},{}
+12432,Siroma_Iced_Tea,Siroma Iced Tea,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_DEXFood,1800000,20; },{},{}
+12433,Drosera_Herb_Salad,Drosera Herb Salad,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_AGIFood,1800000,20; },{},{}
+12434,Petite_Tail_Noodles,Petite Tail Noodles,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_LUKFood,1800000,20; },{},{}
+12435,Black_Mass,Black Mass,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itembonus 1800000,"{ bonus bAllStats,-rand(5,10); }"; },{},{}
+12436,Vitata_500,Vitata 500,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,100; itembonus 500000,"{ bonus bSPrecovRate,20; }"; },{},{}
+12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
+12475,Cure_Free,Cure_Free,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(1000,1200),0; sc_end SC_Silence; sc_end SC_Bleeding; sc_end SC_Curse; },{},{}
 
 12548,Shabby_Purchase_Street_Stall_License,简易采购商店执照2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
 
@@ -5080,28 +5080,28 @@
 13267,Extremely_Hard_Black_Lump,非常坚硬的聚合物,10,500,,50,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
 13268,Mysterious_Powder,未知粉末,3,10,,10,,,,,,,,,,,,,{},{},{}
 // Generic Created Throwable Booster Items
-13269,Throwing_Boost_500,Throwing Boost 500,3,10,,10,,,,,,,,,,,,,{},{},{}
-13270,Throwing_Full_Swing_K,Throwing Full Swing K,3,10,,10,,,,,,,,,,,,,{},{},{}
-13271,Throwing_Manaplus,Throwing Manaplus,3,10,,10,,,,,,,,,,,,,{},{},{}
-13272,Throwing_Cure_Free,Throwing Cure Free,3,10,,10,,,,,,,,,,,,,{},{},{}
-13273,Throwing_Muramura_M,Throwing Muramura M,3,10,,10,,,,,,,,,,,,,{},{},{}
-13274,Throwing_Falmons_F,Throwing Falmons F,3,10,,10,,,,,,,,,,,,,{},{},{}
-13275,Throwing_Increase_HP_Potion_(Small),Throwing Increase HP Potion (Small),3,10,,10,,,,,,,,,,,,,{},{},{}
-13276,Throwing_Increase_HP_Potion_(Medium),Throwing Increase HP Potion (Medium),3,10,,10,,,,,,,,,,,,,{},{},{}
-13277,Throwing_Increase_HP_Potion_(Large),Throwing Increase HP Potion (Large),3,10,,10,,,,,,,,,,,,,{},{},{}
-13278,Throwing_Increase_SP_Potion_(Small),Throwing Increase SP Potion (Small),3,10,,10,,,,,,,,,,,,,{},{},{}
-13279,Throwing_Increase_SP_Potion_(Medium),Throwing Increase SP Potion (Medium),3,10,,10,,,,,,,,,,,,,{},{},{}
-13280,Throwing_Increase_SP_Potion_(Large),Throwing Increase SP Potion (Large),3,10,,10,,,,,,,,,,,,,{},{},{}
-13281,Throwing_Concentrated_White_Potion_Z,Throwing Concentrated White Potion Z,3,10,,10,,,,,,,,,,,,,{},{},{}
-13282,Throwing_Vitata_500,Throwing Vitata 500,3,10,,10,,,,,,,,,,,,,{},{},{}
-13283,Throwing_Ceromain_Soup,Throwing Ceromain Soup,3,10,,10,,,,,,,,,,,,,{},{},{}
-13284,Throwing_Savage_Full_Roast,Throwing Savage Full Roast,3,10,,10,,,,,,,,,,,,,{},{},{}
-13285,Throwing_Cocktail_Warg_Blood,Throwing Cocktail Warg Blood,3,10,,10,,,,,,,,,,,,,{},{},{}
-13286,Throwing_Minor_Stew,Throwing Minor Stew,3,10,,10,,,,,,,,,,,,,{},{},{}
-13287,Throwing_Siroma_Iced_Tea,Throwing Siroma Iced Tea,3,10,,10,,,,,,,,,,,,,{},{},{}
-13288,Throwing_Drosera_Herb_Salad,Throwing Drosera Herb Salad,3,10,,10,,,,,,,,,,,,,{},{},{}
-13289,Throwing_Petite_Tail_Soup,Throwing Petite Tail Soup,3,10,,10,,,,,,,,,,,,,{},{},{}
-13290,Throwing_Black_Mass,Throwing Black Mass,3,10,,10,,,,,,,,,,,,,{},{},{}
+13269,Throwing_Boost_500,Throwing Boost 500,3,10,,50,,,,,,,,,,,,,{},{},{}
+13270,Throwing_Full_Swing_K,Throwing Full Swing K,3,10,,50,,,,,,,,,,,,,{},{},{}
+13271,Throwing_Manaplus,Throwing Manaplus,3,10,,50,,,,,,,,,,,,,{},{},{}
+13272,Throwing_Cure_Free,Throwing Cure Free,3,10,,50,,,,,,,,,,,,,{},{},{}
+13273,Throwing_Muramura_M,Throwing Muramura M,3,10,,50,,,,,,,,,,,,,{},{},{}
+13274,Throwing_Falmons_F,Throwing Falmons F,3,10,,50,,,,,,,,,,,,,{},{},{}
+13275,Throwing_Increase_HP_Potion_(Small),Throwing Increase HP Potion (Small),3,10,,20,,,,,,,,,,,,,{},{},{}
+13276,Throwing_Increase_HP_Potion_(Medium),Throwing Increase HP Potion (Medium),3,10,,40,,,,,,,,,,,,,{},{},{}
+13277,Throwing_Increase_HP_Potion_(Large),Throwing Increase HP Potion (Large),3,10,,80,,,,,,,,,,,,,{},{},{}
+13278,Throwing_Increase_SP_Potion_(Small),Throwing Increase SP Potion (Small),3,10,,20,,,,,,,,,,,,,{},{},{}
+13279,Throwing_Increase_SP_Potion_(Medium),Throwing Increase SP Potion (Medium),3,10,,40,,,,,,,,,,,,,{},{},{}
+13280,Throwing_Increase_SP_Potion_(Large),Throwing Increase SP Potion (Large),3,10,,80,,,,,,,,,,,,,{},{},{}
+13281,Throwing_Concentrated_White_Potion_Z,Throwing Concentrated White Potion Z,3,10,,70,,,,,,,,,,,,,{},{},{}
+13282,Throwing_Vitata_500,Throwing Vitata 500,3,10,,50,,,,,,,,,,,,,{},{},{}
+13283,Throwing_Ceromain_Soup,Throwing Ceromain Soup,3,10,,50,,,,,,,,,,,,,{},{},{}
+13284,Throwing_Savage_Full_Roast,Throwing Savage Full Roast,3,10,,50,,,,,,,,,,,,,{},{},{}
+13285,Throwing_Cocktail_Warg_Blood,Throwing Cocktail Warg Blood,3,10,,50,,,,,,,,,,,,,{},{},{}
+13286,Throwing_Minor_Stew,Throwing Minor Stew,3,10,,50,,,,,,,,,,,,,{},{},{}
+13287,Throwing_Siroma_Iced_Tea,Throwing Siroma Iced Tea,3,10,,50,,,,,,,,,,,,,{},{},{}
+13288,Throwing_Drosera_Herb_Salad,Throwing Drosera Herb Salad,3,10,,50,,,,,,,,,,,,,{},{},{}
+13289,Throwing_Petite_Tail_Soup,Throwing Petite Tail Soup,3,10,,50,,,,,,,,,,,,,{},{},{}
+13290,Throwing_Black_Mass,Throwing Black Mass,3,10,,50,,,,,,,,,,,,,{},{},{}
 // Ninja Fuuma Shurikens
 13300,Huuma_Bird_Wing,风魔翼飞镖,4,90000,,3000,150,,1,0,0x02000000,7,2,34,4,65,1,22,{ bonus bAtkEle,Ele_Wind; bonus bAgi,-1; bonus bDex,-2; },{},{}
 13301,Huuma_Giant_Wheel,风魔轮飞镖,4,40000,,2500,50,,1,3,0x02000000,7,2,34,4,42,1,22,{ bonus2 bAddEff,Eff_Bleeding,100; },{},{}

@@ -1,0 +1,1 @@
+UPDATE `picklog` SET `nameid` = '12475' WHERE `nameid` = '11518';
