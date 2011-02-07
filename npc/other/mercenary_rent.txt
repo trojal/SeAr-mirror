@@ -4,7 +4,7 @@
 // -----------------------------------------
 // - 佣兵签约 脚本 -
 //========================
-//= 版本：1.1
+//= 版本：1.1+SeAr1.3
 //========================
 
 prontera,41,337,5	script	佣兵公会相关人员#Spear	105,{
@@ -564,7 +564,7 @@ pay_arche,99,167,4	script	佣兵公会相关人员#Bow	732,{
 
 // Mercenary Merchant NPCs
 //============================================================
-prontera,30,337,4	script	佣兵物品销售商#Spear::MercMerchant	700,{
+-	script	佣兵物品销售商#dummy::MercMerchant	-1,{
 	mes "[物品销售商]";
 	mes "你好，";
 	mes "这里贩售与佣兵相关的物品，";
@@ -607,8 +607,10 @@ prontera,30,337,4	script	佣兵物品销售商#Spear::MercMerchant	700,{
 		next;
 		callfunc "F_PurchaseMercItem",12243,3000;
 	}
+	close;
 }
 
+prontera,30,337,4	duplicate(MercMerchant)	佣兵物品销售商#Spear	700
 izlude,56,139,4	duplicate(MercMerchant)	佣兵物品销售商#Sword	892
 pay_arche,102,167,5	duplicate(MercMerchant)	佣兵物品销售商#Bow	879
 

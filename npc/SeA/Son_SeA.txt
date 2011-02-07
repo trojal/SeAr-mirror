@@ -3,7 +3,7 @@
 //非仿官方服务器请勿使用此脚本
 //
 
-prontera,146,92,5	script	SeA服务员::Son_SeA	756,15,15,{
+-	script	SeA服务员::Son_SeA	-1,{
 	cutin "son",2;
 	mes "[SeA服务员]";
 	mes "请你跟我说需要什么样的服务呢？";
@@ -498,6 +498,8 @@ OnTouch:
 	end;
 }
 
+//"普隆德拉"
+prontera,146,92,5	duplicate(Son_SeA)	SeA服务员#1	756,15,15
 //"依斯鲁德岛"
 izlude,134,92,3	duplicate(Son_SeA)	SeA服务员#2	756,15,15
 //"艾尔帕兰"

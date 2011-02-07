@@ -4,7 +4,7 @@
 // ---------------------------------
 // - 2006 新头饰制作 脚本 - 
 //===================================
-// 版本：1.2
+// 版本：1.2+SeAr1.4
 //===================================
 //= 马赛克, 羽毛贝雷帽, 巴基力头具, 河回假面,
 //= 狮子假面, 内人假面, 使道帽, 披额帽
@@ -122,7 +122,7 @@ rachel,152,131,3	script	侠库	928,{
 			mes "[侠库]";
 			mes "I did succeed in making the hat,";
 			mes "but I cannot let it fall into someone else's hand!";
-			mes "The essential of Feathre Beret is";
+			mes "The essential of Feather Beret is";
 			mes "the precise angle of the beret and the feather,";
 			mes "but this hat's angle has become slightly crooked,";
 			mes "and the quality has become too poor to be my artwork!";
@@ -334,9 +334,9 @@ hugel,147,130,3	script	盖尼勒希民	897,{
 		mes "^FF00001 Elder Card, 1 Nightmare Terror Card,^000000";
 		next;
 		mes "[盖尼勒希民]";
-		mes "^1,000 Rune of the Darkness,";
-		mes "^1,000 Bloody Rune,";
-		mes "^and the helm price, 10,000,000 zeny^000000.";
+		mes "^FF00001,000 Rune of the Darkness,";
+		mes "^FF00001,000 Bloody Rune,";
+		mes "^FF0000and the helm price, 10,000,000 zeny^000000.";
 		next;
 		mes "[盖尼勒希民]";
 		mes "It surely is a reasonable price considering that ";
@@ -780,7 +780,8 @@ S_MakeMask:
 		delitem getarg(1),getarg(2);
 		delitem getarg(3),getarg(4);
 		delitem getarg(5),getarg(6);
-		delitem getarg(7),getarg(8);
+		if (getarg(0) == 5169) 
+			delitem getarg(7),getarg(8);
 		getitem getarg(0),1;
 		set moza_tal,0;
 		mes "[青岳望]";

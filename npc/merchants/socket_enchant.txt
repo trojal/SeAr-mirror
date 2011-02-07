@@ -1,16 +1,21 @@
-//=========================
+//===========================================
 // [冥] The PlutoEA Project [王]
 // http://opensvn.csie.org/PlutoEA
 // -----------------------------------------
-// - 打洞 脚本 -
-//=========================
-// 版本: 1.4
-//=========================
-// 部分新开放武器台版尚无，保留英文
-//=========================
+// - EP11.1打洞 脚本 -
+// SeAr2.0
+//===========================================
+// EP12的 雷亚布连 移动至另一个档案
+//===========================================
 
-payon,140,151,5	script	世亚布连::打洞	84,{
-
+//世亚布连(EP11.1)
+-	script	世亚布连#dummy::SocketEnchant	-1,{
+	if (checkweight(1201,1) == 0)
+	{
+		mes "- 负重过大!! -";
+		mes "- 多余物品请移置卡普拉仓库 -";
+		close;
+	}
 	mes "[世亚布连]";
 	mes "我是在一般武器或防具上";
 	mes "进行打洞的技术员，嗯，";
@@ -43,14 +48,10 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "你选C级，那么希望我为你修饰";
 			mes "哪一种C级的武器呢?";
 			next;
-			switch(select("德瑞尹长戟:鞭子:小提琴:水灵之书:地灵之书:火灵之书:风灵之书")) {
-			case 1: setarray .@SK[0],1,1460,1461,40,66,200,1010,10; break;
-			case 2: setarray .@SK[0],1,1950,1951,40,66,200,1010,10; break;
-			case 3: setarray .@SK[0],1,1901,1902,40,66,200,1010,10; break;
-			case 4: setarray .@SK[0],1,1553,1568,40,66,200,1010,10; break;
-			case 5: setarray .@SK[0],1,1554,1569,40,66,200,1010,10; break;
-			case 6: setarray .@SK[0],1,1555,1570,40,66,200,1010,10; break;
-			case 7: setarray .@SK[0],1,1556,1571,40,66,200,1010,10; break;
+			switch(select("德瑞尹长戟:鞭子:小提琴")) {
+			case 1: setarray .@sk[0],1,1460,1461,40,66,200,1010,10; break;
+			case 2: setarray .@sk[0],1,1950,1951,40,66,200,1010,10; break;
+			case 3: setarray .@sk[0],1,1901,1902,40,66,200,1010,10; break;
 			}
 			break;
 		case 2:
@@ -58,19 +59,16 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "你选不难的B级喔，那我为你修饰";
 			mes "哪一种B级的武器呢?";
 			next;
-			switch(select("链锤:长柄短剑:角弓:步兵长矛:海东剑:鲁特琴:钢铁鞭子:虎爪拳套:亚伯雷弓:兽人斧:弯刀:闇盲之锤")) {
-			case 1: setarray .@SK[0],1,1519,1520,40,61,300,1010,10; break;
-			case 2: setarray .@SK[0],2,1219,1220,40,61,300,984,1,999,5; break;
-			case 3: setarray .@SK[0],2,1714,1716,40,61,300,984,2,999,5; break;
-			case 4: setarray .@SK[0],1,1407,1408,40,61,300,1010,10; break;
-			case 5: setarray .@SK[0],2,1123,1128,40,61,300,984,2,999,5; break;
-			case 6: setarray .@SK[0],1,1905,1906,40,61,300,1011,10; break;
-			case 7: setarray .@SK[0],1,1954,1955,40,61,300,1011,10; break;
-			case 8: setarray .@SK[0],1,1801,1802,40,61,300,1010,10; break;
-			case 9: setarray .@SK[0],2,1713,1715,40,61,300,984,2,999,5; break;
-			case 10: setarray .@SK[0],1,1304,1309,40,61,200,984,1; break;
-			case 11: setarray .@SK[0],1,1113,1114,40,61,200,984,1; break;
-			case 12: setarray .@SK[0],1,1523,1538,40,61,300,984,1; break;
+			switch(select("链锤:长柄短剑:角弓:步兵长矛:海东剑:鲁特琴:钢铁鞭子:虎爪拳套:亚伯雷弓")) {
+			case 1: setarray .@sk[0],1,1519,1520,40,61,300,1010,10; break;
+			case 2: setarray .@sk[0],2,1219,1220,40,61,300,984,1,999,5; break;
+			case 3: setarray .@sk[0],2,1714,1716,40,61,300,984,2,999,5; break;
+			case 4: setarray .@sk[0],1,1407,1408,40,61,300,1010,10; break;
+			case 5: setarray .@sk[0],2,1123,1128,40,61,300,984,2,999,5; break;
+			case 6: setarray .@sk[0],1,1905,1906,40,61,300,1011,10; break;
+			case 7: setarray .@sk[0],1,1954,1955,40,61,300,1011,10; break;
+			case 8: setarray .@sk[0],1,1801,1802,40,61,300,1010,10; break;
+			case 9: setarray .@sk[0],2,1713,1715,40,61,300,984,2,999,5; break;
 			}
 			break;
 		case 3:
@@ -78,27 +76,16 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "你偏爱高难度的喔，A级? 好吧，";
 			mes "你希望我为你修饰哪一种武器呢?";
 			next;
-			switch(select("猎人之弓:生存的魔杖(INT):巨大双手剑:水纹之剑:刺杀拳刃:贝利斯塔强弩:昏迷之锤:秘拳套 闪光:十字巨剑:天龙短剑:冰灵拳刃:刺藤拳刃:火灵拳刃:风灵拳刃:黄金之锤:琵琶:女王的鞭子:Phantom Spear:Gae Bolg:风灵之剑")) {
-			case 1: setarray .@SK[0],2,1718,1726,40,61,500,984,2,999,10; break;
-			case 2: setarray .@SK[0],2,1619,1620,40,61,500,984,2,999,10; break;
-			case 3: setarray .@SK[0],2,1168,1171,40,61,800,984,5,999,10; break;
-			case 4: setarray .@SK[0],2,1129,1149,40,61,500,984,2,999,10; break;
-			case 5: setarray .@SK[0],2,1261,1266,40,61,700,984,5,999,10; break;
-			case 6: setarray .@SK[0],2,1722,1727,40,61,500,984,5,999,10; break;
-			case 7: setarray .@SK[0],2,1522,1532,40,61,700,984,2,999,10; break;
-			case 8: setarray .@SK[0],2,1814,1816,40,61,700,984,5,999,10; break;
-			case 9: setarray .@SK[0],2,1163,1172,40,61,700,984,5,999,10; break;
-			case 10: setarray .@SK[0],1,13001,13030,40,61,500,984,2; break;
-			case 11: setarray .@SK[0],1,1256,1275,40,61,500,984,2; break;
-			case 12: setarray .@SK[0],1,1257,1276,40,61,500,984,2; break;
-			case 13: setarray .@SK[0],1,1258,1277,40,61,500,984,2; break;
-			case 14: setarray .@SK[0],1,1259,1278,40,61,500,984,2; break;
-			case 15: setarray .@SK[0],1,1524,1539,40,61,500,984,2; break;
-			case 16: setarray .@SK[0],1,1918,1922,40,61,500,984,2; break;
-			case 17: setarray .@SK[0],1,1970,1976,40,61,500,984,2; break;
-			case 18: setarray .@SK[0],1,1477,1479,40,61,500,984,2; break;
-			case 19: setarray .@SK[0],1,1474,1480,40,61,500,984,2; break;
-			case 20: setarray .@SK[0],1,1167,1178,40,61,500,984,2; break;
+			switch(select("猎人之弓:生存的魔杖(INT):巨大双手剑:水纹之剑:刺杀拳刃:贝利斯塔强弩:昏迷之锤:秘拳套 闪光:十字巨剑")) {
+			case 1: setarray .@sk[0],2,1718,1726,40,61,500,984,2,999,10; break;
+			case 2: setarray .@sk[0],2,1619,1620,40,61,500,984,2,999,10; break;
+			case 3: setarray .@sk[0],2,1168,1171,40,61,800,984,5,999,10; break;
+			case 4: setarray .@sk[0],2,1129,1149,40,61,500,984,2,999,10; break;
+			case 5: setarray .@sk[0],2,1261,1266,40,61,700,984,5,999,10; break;
+			case 6: setarray .@sk[0],2,1722,1727,40,61,500,984,5,999,10; break;
+			case 7: setarray .@sk[0],2,1522,1532,40,61,700,984,2,999,10; break;
+			case 8: setarray .@sk[0],2,1814,1816,40,61,700,984,5,999,10; break;
+			case 9: setarray .@sk[0],2,1163,1172,40,61,700,984,5,999,10; break;
 			}
 			break;
 		case 4:
@@ -106,22 +93,15 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "呵，哦，S级! 颤抖颤抖颤抖...";
 			mes "...你要选哪一种S级的武器呢?!";
 			next;
-			switch(select("刚尼尔长矛:巨毒短剑:破甲短锥:砂尘短剑:卡卡普剑:狂击之剑:死神之镰:生存的魔杖(DEX):Zephyrus:Mailbreaker:Dragon Slayer:Swordbreaker:Assassin Dagger:Grand Cross:Executioner")) {
-			case 1: setarray .@SK[0],2,1413,1418,40,51,1000,984,5,999,10; break;
-			case 2: setarray .@SK[0],2,1239,13016,40,51,1000,984,5,999,10; break;
-			case 3: setarray .@SK[0],2,1230,13017,40,51,1000,984,5,999,10; break;
-			case 4: setarray .@SK[0],2,1236,13018,40,51,1000,984,5,999,10; break;
-			case 5: setarray .@SK[0],2,13002,13019,40,51,1000,984,5,999,10; break;
-			case 6: setarray .@SK[0],2,1135,13400,40,51,1000,984,5,999,10; break;
-			case 7: setarray .@SK[0],2,1466,1476,40,51,1000,984,5,999,10; break;
-			case 8: setarray .@SK[0],2,1617,1618,40,51,2000,984,5,999,10; break;
-			case 9: setarray .@SK[0],2,1468,1481,40,51,1000,984,5,999,10; break;
-			case 10: setarray .@SK[0],2,1225,13032,40,51,1000,984,5,999,10; break;
-			case 11: setarray .@SK[0],2,1166,1180,40,51,1000,984,5,999,10; break;
-			case 12: setarray .@SK[0],2,1224,13031,40,51,1000,984,5,999,10; break;
-			case 13: setarray .@SK[0],2,1232,13033,40,51,1000,984,5,999,10; break;
-			case 14: setarray .@SK[0],2,1528,1540,40,51,1000,984,5,999,10; break;
-			case 15: setarray .@SK[0],2,1169,1179,40,51,1000,984,5,999,10; break;
+			switch(select("刚尼尔长矛:巨毒短剑:破甲短锥:砂尘短剑:卡卡普剑:狂击之剑:死神之镰:生存的魔杖(DEX)")) {
+			case 1: setarray .@sk[0],2,1413,1418,40,51,1000,984,5,999,10; break;
+			case 2: setarray .@sk[0],2,1239,13016,40,51,1000,984,5,999,10; break;
+			case 3: setarray .@sk[0],2,1230,13017,40,51,1000,984,5,999,10; break;
+			case 4: setarray .@sk[0],2,1236,13018,40,51,1000,984,5,999,10; break;
+			case 5: setarray .@sk[0],2,13002,13019,40,51,1000,984,5,999,10; break;
+			case 6: setarray .@sk[0],2,1135,13400,40,51,1000,984,5,999,10; break;
+			case 7: setarray .@sk[0],2,1466,1476,40,51,1000,984,5,999,10; break;
+			case 8: setarray .@sk[0],2,1617,1618,40,51,2000,984,5,999,10; break;
 			}
 			break;
 		}
@@ -140,15 +120,11 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "你选C级，那么希望我为你修饰";
 			mes "哪一种C级的防具呢?";
 			next;
-			switch(select("大衣:长大衣:头箍:圣职之帽:向日葵头饰:学士帽:红蝶发带:学生帽")) {
-			case 1: setarray .@SK[0],1,2307,2308,40,66,200,999,3; break;
-			case 2: setarray .@SK[0],1,2309,2310,40,66,200,999,3; break;
-			case 3: setarray .@SK[0],1,2232,2233,40,66,200,999,3; break;
-			case 4: setarray .@SK[0],1,2216,2217,40,66,200,999,3; break;
-			case 5: setarray .@SK[0],1,2253,5351,40,66,200,999,3; break;
-			case 6: setarray .@SK[0],1,5012,5347,40,66,200,999,3; break;
-			case 7: setarray .@SK[0],1,2244,5348,40,66,200,999,5; break;
-			case 8: setarray .@SK[0],1,5016,5349,40,66,200,999,5; break;
+			switch(select("大衣:长大衣:头箍:圣职之帽")) {
+			case 1: setarray .@sk[0],1,2307,2308,40,66,200,999,3; break;
+			case 2: setarray .@sk[0],1,2309,2310,40,66,200,999,3; break;
+			case 3: setarray .@sk[0],1,2232,2233,40,66,200,999,3; break;
+			case 4: setarray .@sk[0],1,2216,2217,40,66,200,999,3; break;
 			}
 			break;
 		case 2:
@@ -156,20 +132,18 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "你选不难的B级喔，那我为你修饰";
 			mes "哪一种B级的防具呢?";
 			next;
-			switch(select("镜盾:钢铁锁子甲:圣职之衣:丝质外袍:战士长靴:长靴:披肩:铁盾:圆盾:钢盾:妖道帽:骷髅戒指:抗魔鞋")) {
-			case 1:  setarray .@SK[0],1,2107,2108,40,61,250,999,5; break;
-			case 2:  setarray .@SK[0],1,2314,2315,40,61,250,999,5; break;
-			case 3:  setarray .@SK[0],1,2325,2326,40,61,300,999,5; break;
-			case 4:  setarray .@SK[0],1,2321,2322,40,61,300,999,5; break;
-			case 5:  setarray .@SK[0],1,2405,2406,40,61,300,999,5; break;
-			case 6:  setarray .@SK[0],1,2403,2404,40,61,300,999,5; break;
-			case 7:  setarray .@SK[0],1,2503,2504,40,61,300,999,5; break;
-			case 8:  setarray .@SK[0],1,2101,2102,40,61,300,999,5; break;
-			case 9:  setarray .@SK[0],1,2103,2104,40,61,300,999,5; break;
-			case 10: setarray .@SK[0],1,2105,2106,40,61,250,999,5; break;
-			case 11: setarray .@SK[0],1,5046,5168,40,61,250,999,5; break;
-			case 12: setarray .@SK[0],1,2609,2715,40,61,300,999,5; break;
-			case 13: setarray .@SK[0],1,2409,2432,40,61,300,999,5; break;
+			switch(select("镜盾:钢铁锁子甲:圣职之衣:丝质外袍:战士长靴:长靴:披肩:铁盾:圆盾:钢盾:妖道帽")) {
+			case 1:  setarray .@sk[0],1,2107,2108,40,61,250,999,5; break;
+			case 2:  setarray .@sk[0],1,2314,2315,40,61,250,999,5; break;
+			case 3:  setarray .@sk[0],1,2325,2326,40,61,300,999,5; break;
+			case 4:  setarray .@sk[0],1,2321,2322,40,61,300,999,5; break;
+			case 5:  setarray .@sk[0],1,2405,2406,40,61,300,999,5; break;
+			case 6:  setarray .@sk[0],1,2403,2404,40,61,300,999,5; break;
+			case 7:  setarray .@sk[0],1,2503,2504,40,61,300,999,5; break;
+			case 8:  setarray .@sk[0],1,2101,2102,40,61,300,999,5; break;
+			case 9:  setarray .@sk[0],1,2103,2104,40,61,300,999,5; break;
+			case 10: setarray .@sk[0],1,2105,2106,40,61,250,999,5; break;
+			case 11: setarray .@sk[0],1,5046,5168,40,61,250,999,5; break;
 			}
 			break;
 		case 3:
@@ -177,27 +151,25 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "你偏爱高难度的喔，A级? 好吧，";
 			mes "你希望我为你修饰哪一种防具呢?";
 			next;
-			switch(select("宝石头盔:软呢帽:谎言纪录本:紧身便衣:秘银金属铠甲:钢铁铠甲:盗贼之衣:重靴:修女的帽子:斗篷:金属头盔:忍服 血樱:兽人头盔:伯爵斗篷:神圣之帽:黄金帽:敏捷别针:僵尸帽:海盗头巾:Black Leather Boots")) {
-			case 1:  setarray .@SK[0],1,2230,2231,40,61,400,985,1; break;
-			case 2:  setarray .@SK[0],1,5114,5120,40,61,400,985,1; break;
-			case 3:  setarray .@SK[0],1,2109,2121,40,61,400,985,1; break;
-			case 4:  setarray .@SK[0],1,2330,2331,40,61,400,985,1; break;
-			case 5:  setarray .@SK[0],1,2341,2342,40,61,400,985,1; break;
-			case 6:  setarray .@SK[0],1,2316,2317,40,61,400,985,1; break;
-			case 7:  setarray .@SK[0],1,2335,2336,40,61,400,985,1; break;
-			case 8:  setarray .@SK[0],1,2411,2412,40,61,400,985,1; break;
-			case 9:  setarray .@SK[0],1,5092,5093,40,61,400,985,1; break;
-			case 10: setarray .@SK[0],1,2505,2506,40,61,400,985,1; break;
-			case 11: setarray .@SK[0],1,2228,2229,40,61,400,985,1; break;
-			case 12: setarray .@SK[0],1,2337,2359,40,61,400,985,1; break;
-			case 13: setarray .@SK[0],1,2299,5157,40,61,400,985,1; break;
-			case 14: setarray .@SK[0],1,2507,2525,40,61,400,985,1; break;
-			case 15: setarray .@SK[0],1,2251,5158,40,61,400,985,1; break;
-			case 16: setarray .@SK[0],1,2246,5159,40,61,400,985,1; break;
-			case 17: setarray .@SK[0],1,2605,2625,40,61,400,985,1; break;
-			case 18: setarray .@SK[0],1,2264,5167,40,61,300,985,1; break;
-			case 19: setarray .@SK[0],1,2287,5350,40,61,500,985,1; break;
-			case 20: setarray .@SK[0],1,2425,2434,40,61,500,985,1; break;
+			switch(select("宝石头盔:软呢帽:谎言纪录本:紧身便衣:秘银金属铠甲:钢铁铠甲:盗贼之衣:重靴:修女的帽子:斗篷:金属头盔:忍服 血樱:兽人头盔:伯爵斗篷:神圣之帽:黄金帽:敏捷别针:僵尸帽")) {
+			case 1:  setarray .@sk[0],1,2230,2231,40,61,400,985,1; break;
+			case 2:  setarray .@sk[0],1,5114,5120,40,61,400,985,1; break;
+			case 3:  setarray .@sk[0],1,2109,2121,40,61,400,985,1; break;
+			case 4:  setarray .@sk[0],1,2330,2331,40,61,400,985,1; break;
+			case 5:  setarray .@sk[0],1,2341,2342,40,61,400,985,1; break;
+			case 6:  setarray .@sk[0],1,2316,2317,40,61,400,985,1; break;
+			case 7:  setarray .@sk[0],1,2335,2336,40,61,400,985,1; break;
+			case 8:  setarray .@sk[0],1,2411,2412,40,61,400,985,1; break;
+			case 9:  setarray .@sk[0],1,5092,5093,40,61,400,985,1; break;
+			case 10: setarray .@sk[0],1,2505,2506,40,61,400,985,1; break;
+			case 11: setarray .@sk[0],1,2228,2229,40,61,400,985,1; break;
+			case 12: setarray .@sk[0],1,2337,2359,40,61,400,985,1; break;
+			case 13: setarray .@sk[0],1,2299,5157,40,61,400,985,1; break;
+			case 14: setarray .@sk[0],1,2507,2525,40,61,400,985,1; break;
+			case 15: setarray .@sk[0],1,2251,5158,40,61,400,985,1; break;
+			case 16: setarray .@sk[0],1,2246,5159,40,61,400,985,1; break;
+			case 17: setarray .@sk[0],1,2605,2625,40,61,400,985,1; break;
+			case 18: setarray .@sk[0],1,2264,5167,40,61,300,985,1; break;
 			}
 			break;
 		case 4:
@@ -205,23 +177,18 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 			mes "呵，哦，S级! 颤抖颤抖颤抖...";
 			mes "...你要选哪一种S级的防具呢?!";
 			next;
-			switch(select("山羊头盔:尖角发圈:骨制头盔:海盗船长帽:王冠:后冠:人面狮身帽:创作者外袍:智力耳环:力量戒指:神射手套:魔法外套:天衣 月舞:大天使之盾:衬衫:三角裤")) {
-			case 1:  setarray .@SK[0],1,2256,5160,40,51,2000,985,2; break;
-			case 2:  setarray .@SK[0],1,2258,5161,40,51,2000,985,2; break;
-			case 3:  setarray .@SK[0],1,5017,5162,40,51,2000,985,2; break;
-			case 4:  setarray .@SK[0],1,5019,5163,40,51,2000,985,2; break;
-			case 5:  setarray .@SK[0],1,2235,5165,40,51,2000,985,2; break;
-			case 6:  setarray .@SK[0],1,2234,5164,40,51,2000,985,2; break;
-			case 7:  setarray .@SK[0],1,5053,5166,40,51,1000,985,2; break;
-			case 8:  setarray .@SK[0],1,2343,2360,40,51,1000,985,2; break;
-			case 9:  setarray .@SK[0],1,2602,2622,40,51,1000,985,2; break;
-			case 10: setarray .@SK[0],1,2601,2621,40,51,1000,985,2; break;
-			case 11: setarray .@SK[0],1,2619,2671,40,51,1000,985,2; break;
-			case 12: setarray .@SK[0],1,2334,2372,40,51,1000,985,1; break;
-			case 13: setarray .@SK[0],1,2327,2373,40,51,1000,985,1; break;
-			case 14: setarray .@SK[0],1,2111,2128,40,51,1000,985,1; break;
-			case 15: setarray .@SK[0],1,2522,2523,40,51,1000,985,1; break;
-			case 16: setarray .@SK[0],1,2339,2371,40,51,1000,985,1; break;
+			switch(select("山羊头盔:尖角发圈:骨制头盔:海盗船长帽:王冠:后冠:人面狮身帽:创作者外袍:智力耳环:力量戒指:神射手套")) {
+			case 1:  setarray .@sk[0],1,2256,5160,40,51,2000,985,2; break;
+			case 2:  setarray .@sk[0],1,2258,5161,40,51,2000,985,2; break;
+			case 3:  setarray .@sk[0],1,5017,5162,40,51,2000,985,2; break;
+			case 4:  setarray .@sk[0],1,5019,5163,40,51,2000,985,2; break;
+			case 5:  setarray .@sk[0],1,2235,5165,40,51,2000,985,2; break;
+			case 6:  setarray .@sk[0],1,2234,5164,40,51,2000,985,2; break;
+			case 7:  setarray .@sk[0],1,5053,5166,40,51,1000,985,2; break;
+			case 8:  setarray .@sk[0],1,2343,2360,40,51,1000,985,2; break;
+			case 9:  setarray .@sk[0],1,2602,2622,40,51,1000,985,2; break;
+			case 10: setarray .@sk[0],1,2601,2621,40,51,1000,985,2; break;
+			case 11: setarray .@sk[0],1,2619,2671,40,51,1000,985,2; break;
 			}
 			break;
 		}
@@ -288,16 +255,16 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 		close;
 	}
 	mes "[世亚布连]";
-	mes "你选" +getitemname(.@SK[1])+ "喔，OK，那个的话，";
-	if (.@SK[0] == 1) {
-		mes "费用是 ^FF0000" +.@SK[5] / 10+ "万金币^000000，另外要准备的";
-		mes "材料是 ^FF0000" +getitemname(.@SK[6])+ " " +.@SK[7]+ "个^000000.";
+	mes "你选" +getitemname(.@sk[1])+ "喔，OK，那个的话，";
+	if (.@sk[0] == 1) {
+		mes "费用是 ^FF0000" +.@sk[5] / 10+ "万金币^000000，另外要准备的";
+		mes "材料是 ^FF0000" +getitemname(.@sk[6])+ " " +.@sk[7]+ "个^000000.";
 	}
-	else if (.@SK[0] == 2) {
-		mes "手续费 ^FF0000" +.@SK[5] / 10+ "万金币^000000，另外要准备的";
-		mes "材料是^FF0000" +getitemname(.@SK[6])+ " " +.@SK[7]+ "个^000000，^FF0000" +getitemname(.@SK[8])+ " " +.@SK[9]+ "个^000000，";
+	else if (.@sk[0] == 2) {
+		mes "手续费 ^FF0000" +.@sk[5] / 10+ "万金币^000000，另外要准备的";
+		mes "材料是^FF0000" +getitemname(.@sk[6])+ " " +.@sk[7]+ "个^000000，^FF0000" +getitemname(.@sk[8])+ " " +.@sk[9]+ "个^000000，";
 	}
-	mes "当然" +getitemname(.@SK[1])+ "理应也要带过来";
+	mes "当然" +getitemname(.@sk[1])+ "理应也要带过来";
 	next;
 	mes "[世亚布连]";
 	mes "材料和费用都带齐了吗? 还有，";
@@ -311,9 +278,9 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 		mes "那么下次有机会再来";
 		close;
 	}
-	switch(.@SK[0]) {
+	switch(.@sk[0]) {
 	case 1:
-		if((Zeny < .@SK[5]*1000) || (countitem(.@SK[6]) < .@SK[7]) || (!countitem(.@SK[1]))) {
+		if((Zeny < .@sk[5]*1000) || (countitem(.@sk[6]) < .@sk[7]) || (!countitem(.@sk[1]))) {
 			mes "[世亚布连]";
 			mes "笨蛋! 材料不足嘛!";
 			mes "请你备齐后再来吧?!";
@@ -321,7 +288,7 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 		}
 		break;
 	case 2:
-		if((Zeny < .@SK[5]*1000) || (countitem(.@SK[6]) < .@SK[7]) || (countitem(.@SK[8]) < .@SK[9]) || (!countitem(.@SK[1]))) {
+		if((Zeny < .@sk[5]*1000) || (countitem(.@sk[6]) < .@sk[7]) || (countitem(.@sk[8]) < .@sk[9]) || (!countitem(.@sk[1]))) {
 			mes "[世亚布连]";
 			mes "笨蛋! 材料不足嘛!";
 			mes "请你备齐后再来吧?!";
@@ -333,34 +300,34 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 	mes "那么开始进行吧!";
 	mes "要祈祷能圆满完成";
 	next;
-	set .@SKrand,rand(1,100);
-	if((.@SKrand > .@SK[3]) && (.@SKrand < .@SK[4])) {
-		if(.@SK[4] == 51) specialeffect 90;
-		else specialeffect 83;
+	set .@skrand,rand(1,100);
+	if((.@skrand > .@sk[3]) && (.@skrand < .@sk[4])) {
+		if(.@sk[4] == 51) specialeffect EF_LORD;
+		else specialeffect EF_SANCTUARY;
 		mes "[世亚布连]";
 		mes "OK... 似乎做得不错，成功了，";
 		mes "做的很漂亮呢? 总之恭喜恭喜";
-		delitem .@SK[1],1;
-		delitem .@SK[6],.@SK[7];
-		if(.@SK[0] == 2) delitem .@SK[8],.@SK[9];
-		set Zeny,Zeny - .@SK[5]*1000;
-		getitem .@SK[2],1;
+		delitem .@sk[1],1;
+		delitem .@sk[6],.@sk[7];
+		if(.@sk[0] == 2) delitem .@sk[8],.@sk[9];
+		set Zeny,Zeny - .@sk[5]*1000;
+		getitem .@sk[2],1;
 		next;
 		mes "[世亚布连]";
 		mes "那么欢迎下次再利用啰!";
 		close;
 	}
 	else {
-		specialeffect 183;
+		specialeffect EF_FREEZING;
 		mes "[世亚布连]";
 		mes "呜... 对不起，失败了，";
 		mes "不过我没罪，这都是";
 		mes "天意，只是运气不佳，";
 		mes "请你别太伤心";
-		delitem .@SK[1],1;
-		delitem .@SK[6],.@SK[7];
-		if(.@SK[0] == 2) delitem .@SK[8],.@SK[9];
-		set Zeny,Zeny - .@SK[5]*1000;
+		delitem .@sk[1],1;
+		delitem .@sk[6],.@sk[7];
+		if(.@sk[0] == 2) delitem .@sk[8],.@sk[9];
+		set Zeny,Zeny - .@sk[5]*1000;
 		next;
 		mes "[世亚布连]";
 		mes "那么欢迎下次再利用啰!";
@@ -368,13 +335,13 @@ payon,140,151,5	script	世亚布连::打洞	84,{
 	}
 }
 
-lhz_in02,281,35,5	duplicate(打洞)	世亚布连#lhz	84,0,0
-prt_in,33,70,5	duplicate(打洞)	世亚布连#prt	84,0,0
-morocc,51,41,5	duplicate(打洞)	世亚布连#moc	84,0,0
+payon,140,151,5	duplicate(SocketEnchant)	世亚布连#pay	84
+lhz_in02,281,35,5	duplicate(SocketEnchant)	世亚布连#lhz	84
+prt_in,33,70,5	duplicate(SocketEnchant)	世亚布连#prt	84
+morocc,51,41,4	duplicate(SocketEnchant)	世亚布连#moc	84
 
 // 村落青年
-payon,143,143,7	script	村落青年#pay::打洞2	97,{
-
+-	script	村落青年#dummy::SocketMan	-1,{
 	mes "[村落青年]";
 	mes "在装备上打洞时，装备";
 	mes "本身的选项也会有";
@@ -394,6 +361,7 @@ payon,143,143,7	script	村落青年#pay::打洞2	97,{
 	close;
 }
 
-lhz_in02,269,33,5	duplicate(打洞2)	村落青年#lhz	97,0,0
-prt_in,31,57,1	duplicate(打洞2)	村落青年#prt	97,0,0
-morocc,60,42,3	duplicate(打洞2)	村落青年#moc	97,0,0
+prt_in,31,57,1	duplicate(SocketMan)	村落青年#prt	97
+payon,143,143,7	duplicate(SocketMan)	村落青年#pay	97
+morocc,60,42,3	duplicate(SocketMan)	村落青年#moc	97
+lhz_in02,269,33,5	duplicate(SocketMan)	村落青年#lhz	97
