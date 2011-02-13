@@ -63,8 +63,7 @@ bonus bChangeRace,n;			变成n种族
 //=========================================================
 bonus bAtk,n;				武器攻击力 + n
 bonus bAtk2,n;				精炼攻击力 + n
-bonus bMatk,n;				最大魔法攻击力 + n
-bonus bMatk2,n;				最小魔法攻击力 + n
+bonus bMatk,n;				魔法攻击力 + n (仅复兴版有效)
 bonus bAtkRate,n;			物理攻击力 + n%
 bonus bBaseAtk,n;			基础攻击力 + n
 bonus bMatkRate,n;			魔法攻击力 + n%

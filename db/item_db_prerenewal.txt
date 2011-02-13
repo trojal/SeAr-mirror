@@ -1774,7 +1774,7 @@
 4149,Gargoyle_Card,òùòð¹­¼ýÊÖ¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAddMonsterDropItem,12028,RC_Insect,100; },{},{}
 4150,Goat_Card,Ä§Ç¼¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ if(getrefine()<6) { bonus bDef,2; bonus bMdef,5; } },{},{}
 4151,Gajomart_Card,¿ñ±©¹í»ð¿¨Æ¬,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Plant,-20; bonus2 bExpAddRace,RC_Plant,10; },{},{}
-4152,Galapago_Card,Æ¡¾ÆÆó¶ì¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Juice,50; bonus3 bAddMonsterDropItemGroup,IG_Juice,RC_Insect,900; },{},{}
+4152,Galapago_Card,Æ¡¾ÆÆó¶ì¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Juice,50; bonus3 bAddMonsterDropItem,531,RC_Insect,300; bonus3 bAddMonsterDropItem,532,RC_Insect,300; bonus3 bAddMonsterDropItem,533,RC_Insect,300; },{},{}
 4153,Crab_Card,¿¨À­Ð·¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,5; bonus2 bAddDamageClass,1266,30; if(isequipped(4247,4273)) { bonus3 bAddMonsterDropItem,544,RC_Fish,3000; bonus2 bAddEle,Ele_Water,30; } },{},{}
 4154,Rice_Cake_Boy_Card,ÔªÏüÍ¯×Ó¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Candy,50; bonus3 bAddMonsterDropItem,529,RC_DemiHuman,300; bonus3 bAddMonsterDropItem,530,RC_DemiHuman,100; },{},{}
 4155,Goblin_Leader_Card,¸ç²¼ÁéÊ×Áì¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bAddRace2,1,30; },{},{}
@@ -1837,11 +1837,11 @@
 4212,Bon_Gun_Card,ÑýµÀ¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"SM_BASH",1,20; bonus2 bAddSkillBlow,"SM_BASH",5; bonus2 bAddDefClass,1026,-100; },{},{}
 4213,Brilight_Card,ÒÁÌØÆ°³æ¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Silence,600; },{},{}
 4214,Bloody_Murderer_Card,ÊÈÑª¹ÖÈË¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bCritAtkRate,10; bonus2 bCriticalAddRace,RC_Insect,7; },{},{}
-4215,Blazzer_Card,»ðÑæÑý¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItemGroup,IG_Food,500; },{},{}
+4215,Blazzer_Card,»ðÑæÑý¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItemGroup,IG_Food,600; },{},{}
 4216,Sasquatch_Card,Ñ©ÐÜ¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Freeze,600; },{},{}
 4217,Live_Peach_Tree_Card,ºïÌÒÄ¾¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus3 bAutoSpell,"AL_HEAL",1+9*(getskilllv("AL_HEAL")==10),20; if(isequipped(4280,4185,4293,4312)) { bonus bVit,10; bonus bCastrate,-10; bonus bUseSPRate,-10; if(BaseClass == Job_Acolyte) { bonus2 bExpAddRace,RC_Undead,5; bonus2 bExpAddRace,RC_Demon,5; bonus2 bSubRace,RC_Undead,30; bonus2 bSubRace,RC_Demon,30; } } },{},{}
 4218,Succubus_Card,¶ñÄ§Å®ÆÍ¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bMaxHP,1000; if (isequipped(4269)) { bonus bVit,1; bonus bHPrecovRate,10; } else { bonus bVit,-3; bonus bHPrecovRate,-20; } },{},{}
-4219,Sageworm_Card,ÏÍÕß³æ¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItemGroup,IG_Gemstone,90; },{},{}
+4219,Sageworm_Card,ÏÍÕß³æ¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItem,715,30; bonus2 bAddMonsterDropItem,716,30; bonus2 bAddMonsterDropItem,717,30; },{},{}
 4220,Solider_Card,ÑÒÊ¯¹ê¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bDef,2; bonus bMdef,2; },{},{}
 4221,Skeleton_General_Card,Ð°º¡Õ½Ê¿³¤¿¨Æ¬,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Insect,-20; bonus2 bExpAddRace,RC_Insect,10; },{},{}
 4222,Skel_Prisoner_Card,Ð°º¡Õ½·ý¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Sleep,300+600*(isequipped(4025)); },{},{}
@@ -1849,7 +1849,7 @@
 4224,Stem_Worm_Card,»ÒÉ­Áé¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAddMonsterDropItem,12032,RC_Brute,100; },{},{}
 4225,Stone_Shooter_Card,Ê¯ÅÚ»ðÊ÷¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,10; bonus bHit,10; },{},{}
 4226,Sting_Card,Ê·Í¡¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus bDef,2; if(getrefine()>8) bonus bMdef,5; },{},{}
-4227,Spring_Rabbit_Card,µ¯»ÉÍÃ¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Meat,50; bonus3 bAddMonsterDropItemGroup,IG_Meat,RC_Brute,400; },{},{}
+4227,Spring_Rabbit_Card,µ¯»ÉÍÃ¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Meat,50; bonus3 bAddMonsterDropItem,517,RC_Brute,200; bonus3 bAddMonsterDropItem,528,RC_Brute,200; },{},{}
 4228,Sleeper_Card,É³Ñý¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAddMonsterDropItem,12031,RC_Fish,100; },{},{}
 4229,C_Tower_Manager_Card,ÖÓËþÊØ»¤Õß¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bInt,1; bonus bCastrate,-5; if(isequipped(4244,4299,4313)) { bonus bDef,3; bonus bMdef,3; } },{},{}
 4230,Shinobi_Card,»ðÈÌÎ÷Å­±Ï¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus bAgi,1; bonus3 bAutoSpellWhenHit,"AS_CLOAKING",5,100; },{},{}
@@ -1904,7 +1904,7 @@
 4279,Deleter_Card,Æß²ÊµØÁú¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus bSPrecovRate,-100; bonus bSPGainValue,10; },{},{ heal 0,-100; }
 4280,Geographer_Card,Ð°¶ñÏòÈÕ¿û¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus3 bAutoSpellWhenHit,"AL_BLESSING",2+8*(getskilllv("AL_BLESSING")==10),30; },{},{}
 4281,Zipper_Bear_Card,À­Á´ÐÜ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,30; bonus2 bSPDrainValue,-1,0; if(BaseClass == Job_Merchant) bonus bUnbreakableWeapon,0; },{},{}
-4282,Tengu_Card,Ìì¹·¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItemGroup,IG_Recovery,500; },{},{}
+4282,Tengu_Card,Ìì¹·¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItemGroup,IG_Recovery,600; },{},{}
 4283,Greatest_General_Card,½«¾üÄ§±®¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2+18*(BaseClass == Job_Acolyte); },{},{}
 4284,Chepet_Card,Ä§ÁéÍÞÍÞ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus4 bAutoSpell,"AL_HEAL",5,50,1; },{},{}
 4285,Choco_Card,ÇÉ¿Ëºï¿¨Æ¬,6,20,,10,,,,,,,,4,,,,,{ bonus bFlee2,5; bonus bFlee,10; },{},{}
@@ -1948,7 +1948,7 @@
 4323,Garm_Baby_Card,¿¨ÂØ±¦±¦¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus3 bAutoSpell,"MG_FROSTDIVER",3,50+250*isequipped(4324); },{},{}
 4324,Garm_Card,¿¨ÂØ¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Freeze,5000; },{},{}
 4325,Harpy_Card,ÄñÈË¹þ±È¿¨Æ¬,6,20,,10,,,,,,,,4,,,,,{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bSkillAtk,"MG_NAPALMBEAT",5; if(isequipped(4191,4208,4258,4309,4327)) { bonus bMaxHP,500; bonus bDef,5; bonus bMDef,5; bonus2 bSkillAtk,14,10; bonus2 bSkillAtk,19,10; bonus2 bSkillAtk,20,10; if(BaseClass == Job_Mage) { bonus bMatkRate,3; bonus bCastrate,-15; } } },{},{}
-4326,See_Otter_Card,º£Ì¡¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Fish,50; bonus3 bAddMonsterDropItemGroup,IG_Fish,RC_Fish,600; },{},{}
+4326,See_Otter_Card,º£Ì¡¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemHealRate,IG_Fish,50; bonus3 bAddMonsterDropItem,551,RC_Fish,300; bonus3 bAddMonsterDropItem,544,RC_Fish,300; },{},{}
 4327,Blood_Butterfly_Card,Ñªºûµû¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus bCastrate,30; bonus bNoCastCancel,0; bonus2 bSkillAtk,18,5; },{},{}
 4328,Hyegun_Card,Ñý¾ý¿¨Æ¬,6,20,,10,,,,,,,,4,,,,,{ bonus bFlee,15; bonus bCritical,1; if(isequipped(4090,4212)) bonus bAllStats,1; },{},{}
 4329,Phendark_Card,°¢ÐÞÂÞ¿ñÕ½Ê¿¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSPGainRace,RC_DemiHuman,5; },{},{ heal 0,-5; }
@@ -2064,9 +2064,9 @@
 4439,Flame_Skull_Card,»ðÑæ÷¼÷ÃÍ·¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bResEff,Eff_Blind,3000; bonus2 bResEff,Eff_Stun,3000; bonus2 bResEff,Eff_Curse,3000; bonus2 bResEff,Eff_Stone,3000; bonus2 bAddEffWhenHit,Eff_Blind,500; bonus2 bAddEffWhenHit,Eff_Stun,500; bonus2 bAddEffWhenHit,Eff_Curse,500; bonus2 bAddEffWhenHit,Eff_Stone,500; },{},{}
 4440,Necromancer_Card,ÐÐÑýÊõÕß¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ if (getiteminfo(getequipid(EQI_HAND_R),11) == 10) { bonus bInt,1; bonus bIgnoreMdefRate,2; } },{},{}
 4441,Fallen_Bishop_Card,¶éÂä´óÉñ¹Ù¿¨Æ¬,6,20,,10,,,,,,,,64,,,,,{ bonus bMatkRate,10; bonus bMaxSPrate,-50; bonus2 bMagicAddRace,RC_Angel,50; bonus2 bMagicAddRace,RC_DemiHuman,50; },{},{}
-4442,Tatacho_Card,ßÕßÕÇÇ¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Earth,20; bonus2 bAddEle,Ele_Earth,5; },{},{}
+4442,Tatacho_Card,ßÕßÕÇÇ¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Neutral,20; bonus2 bAddEle,Ele_Neutral,5; },{},{}
 4443,Aqua_Elemental_Card,Ë®ÔªËØ¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Water,20; bonus2 bAddEle,Ele_Water,5; },{},{}
-4444,Draco_Card,µÂÀ­¿ËÁú¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Fire,20; bonus2 bAddEle,Ele_Fire,5; },{},{}
+4444,Draco_Card,µÂÀ­¿ËÁú¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Earth,20; bonus2 bAddEle,Ele_Earth,5; },{},{}
 4445,Luciola_Vespa_Card,¶¾»Æ·ä¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Wind,20; bonus2 bAddEle,Ele_Wind,5; },{},{}
 4447,Centipede_Card,±äÒìòÚò¼¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Poison,20; bonus2 bAddEle,Ele_Poison,5; },{},{}
 4448,Cornus_Card,·ÉÂí¿¨Æ¬,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubEle,Ele_Holy,20; bonus2 bAddEle,Ele_Holy,5; },{},{}
@@ -2903,7 +2903,8 @@
 6183,Hardtack_Ticket,Hardtack Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 6184,Zherlthsh_Ticket,Zherlthsh Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
 6185,Alice_Ticket,Alice Ticket,3,0,,10,,,,,,,,,,,,,{},{},{}
-6186,»î¶¯°âÊÖ,Monkey Wrench,3,500,,10,,,,,,,,,,,,,{},{},{}
+6186,Monkey_Wrench,»î¶¯°âÊÖ,3,500,,10,,,,,,,,,,,,,{},{},{}
+6187,Blank_Card,Blank Card,3,0,,10,,,,,,,,,,,,,{},{},{}
 //6188,Slotting_Advertisement,Slotting Advertisement,
 6189,Spell_Book_(Fire_Bolt),Ä§·¨Êé(»ð¼ýÊõ),3,0,,0,,,,,,,,,,,,,{},{},{}
 6190,Spell_Book_(Cold_Bolt),Ä§·¨Êé(±ù¼ýÊõ),3,0,,0,,,,,,,,,,,,,{},{},{}
@@ -3031,7 +3032,7 @@
 6362,Yellow_Wish_Point,·çÁé¾«»ª,3,100,,5,,,,,,,,,,,,,{},{},{}
 6363,Lime_Green_Point,µØÁé¾«»ª,3,100,,5,,,,,,,,,,,,,{},{},{}
 //6376,KVM_Badge
-//6377,Buy_Stall_Permit,¼òÒ×²É¹ºÉÌµêÖ´ÕÕ,3,200,,10,,,,,,,,,,,,,{},{},{}
+6377,Buy_Stall_Permit,¼òÒ×²É¹ºÉÌµêÖ´ÕÕ,3,200,,10,,,,,,,,,,,,,{},{},{}
 //6383,Ropewa_Clues,Ropewa Clues,3,20,,10,,,,,,,,,,,,,{},{},{}
 //6386,Bathroom_Sample,Bathroom Sample,3,20,,10,,,,,,,,,,,,,{},{},{}
 //6387,Teeth_Sample,Teeth Sample,3,20,,10,,,,,,,,,,,,,{},{},{}
@@ -4497,7 +4498,7 @@
 12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
 12475,Cure_Free,Cure_Free,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(1000,1200),0; sc_end SC_Silence; sc_end SC_Bleeding; sc_end SC_POISON; sc_end SC_Curse; sc_end SC_ORCISH; sc_end SC_CHANGEUNDEAD; },{},{}
 
-//12548,Shabby_Purchase_Street_Stall_License,¼òÒ×²É¹ºÉÌµêÖ´ÕÕ2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
+12548,Shabby_Purchase_Street_Stall_License,¼òÒ×²É¹ºÉÌµêÖ´ÕÕ2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
 
 12561,Mysterious_Seeds,ÉñÃØµÄÖÖ×Ó,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
 12573,Fruit_Basket,Ë®¹ûÀº,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}
@@ -4761,6 +4762,10 @@
 13257,Kunai_Of_Furious_Wind,Ç¿·ç·Éµ¶,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Wind; },{},{}
 13258,Kunai_Of_Fierce_Flame,»ðÑæ·Éµ¶,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Fire; },{},{}
 13259,Kunai_Of_Deadly_Poison,¾Þ¶¾·Éµ¶,10,10,,20,30,,,,0x02000000,7,2,32768,,1,,7,{ bonus bAtkEle,Ele_Poison; bonus2 bAddEff,Eff_Poison,500; },{},{}
+// Genetic Created Bombs And Lumps
+13260,Apple_Bomb,Æ»¹ûÕ¨µ¯,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13261,Coconut_Bomb,Ò¬¹ûÕ¨µ¯,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
+13262,Melon_Bomb,Ìð¹ÏÕ¨µ¯,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
 13263,Pineapple_Bomb,²¤ÂÜÕ¨µ¯,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
 13264,Banana_Bomb,Ïã½¶Õ¨µ¯,10,100,,1,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
 13265,Black_Lump,ºÚÉ«¾ÛºÏÎï,10,500,,50,,,,,0x00040000,7,2,32768,,,,9,{},{},{}
