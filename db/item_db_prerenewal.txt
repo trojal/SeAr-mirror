@@ -4485,7 +4485,7 @@
 12424,HP_Increase_Potion_(Large),HP Increase Potion (Large),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; itembonus 500000,"{ bonus bMaxHP,2500+BaseLevel*4/3; }"; },{},{}
 12425,SP_Increase_Potion_(Small),SP Increase Potion (Small),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,2; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10-5; }"; },{},{}
 12426,SP_Increase_Potion_(Medium),SP Increase Potion (Medium),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,4; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10; }"; },{},{}
-12427,SP_Increase_Potion_(Large),SP Increase Potion (Large),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,8 itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10+5; }"; },{},{}
+12427,SP_Increase_Potion_(Large),SP Increase Potion (Large),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,8; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10+5; }"; },{},{}
 12428,Concentrated_White_Potion_Z,Concentrated White Potion Z,2,10,,70,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bHPrecovRate,20; }"; },{},{}
 12429,Savage_Full_Roast,Savage Full Roast,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_STRFood,300000,20; },{},{}
 12430,Cocktail_Warg_Blood,Cocktail Warg Blood,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INTFood,300000,20; },{},{}
