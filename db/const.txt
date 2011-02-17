@@ -490,6 +490,7 @@ bCastValue	1910
 bCooldownValue	1911
 bDelayValue	1912
 bUseSPValue	1913
+bNoSkill	1914
 
 bRestartFullRecover	2000
 bNoCastCancel	2001
