@@ -863,11 +863,6 @@ array, shifting all the elements beyond this towards the beginning.
 
     deletearray @array[1],3
 
-IMPORTANT: deletarray is horribly broken since the earliest days of jAthena. It 
-tends to merrily remove much more variables than it's told to remove, which 
-makes it pretty much useless for anything other than removing an array from 
-memory entirely. This would be very handy, if it always worked. 
-
 ---------------------------------------
 
 ======================================
