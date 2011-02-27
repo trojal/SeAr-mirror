@@ -1,0 +1,62 @@
+// Pet Database
+//
+// Structure of Database:
+// MobID,Name,JName,LureID,EggID,EquipID,FoodID,Fullness,HungryDelay,R_Hungry,R_Full,Intimate,Die,Capture,Speed,S_Performance,talk_convert_class,attack_rate,defence_attack_rate,change_target_rate,pet_script,loyal_script
+//
+// 01. MobID			宠物的魔物ID
+// 02. Name			DB中的宠物名
+// 03. JName			捕捉时的显示名
+// 04. LureID			诱饵道具ID
+// 05. EggID			宠物蛋ID
+// 06. EquipID			装饰品ID
+// 07. FoodID			食物ID
+// 08. Fullness			每 [饥饿延时] 秒减少的饥饿感
+// 09. HungeyDelay		喂养后要变饿所需的时间 (默认: 60 秒)
+// 10. R_Hungry			喂养时增加的亲密度
+// 11. R_Full			过度喂养后减少的亲密度
+// 12. Intimate			初始亲密度
+// 13. Die			角色死亡时减少的亲密度
+// 14. Capture			捕捉成功率 (10000 = 100%)
+// 15. Speed			宠物移动速度 (Defaul: 150)
+// 16. S_Performance		特殊表现 (Yes = 1, No = 0)
+// 17. talk_convert_class	禁止宠物说话 (不说话时他们会做 /! 表情.)
+// 18. attack_rate		宠物在玩家攻击时攻击的几率(要求达到pet_support_min_friendly亲密度).
+// 19. defence_attack_rate	宠物在玩家受到攻击时攻击的几率(要求达到pet_support_min_friendly亲密度).
+// 20. change_target_rate	宠物改变目标的几率
+// 21. pet_script		宠物孵化后运行的脚本
+// 22. loyal_script		宠物孵化后运行的脚本(要求达到pet_equip_min_friendly亲密度, 独立于pet_script).
+//注意: The max value (100%) of attack_rate, defense_rate & change_target_rate is 10000.
+
+//理论上你可以使用任何脚本指令, 但是只在读取宠物时引发一次
+//所以建议你使用特定的宠物脚本指令:
+
+//petskillattack skillid, skilllv, rate, bonusrate
+//当宠物攻击时触发宠物技能
+//机率指攻击时发动技能的机率
+//额外机率指当亲密度最大的时候给予的发动加成
+
+//petskillattack2 skillid, damage, hits, rate, bonusrate
+//跟petskillattack一样, 不同的只有伤害固定, 机率固定
+//伤害指的是全部, 不是单一攻击
+
+//petskillsupport skillid, skilllv, delay, hp%, sp%
+//当 hp% 和 sp% 低于所标示之数值时可以使用该技能
+//Delay是指再次使用此技能十所需等待时间(秒)
+
+//petheal amount, delay, hp%, sp%
+//跟petskillsupport类似, 但是技能固定是治愈术(28)
+//治疗的点数也是固定所给予的值
+
+//petrecovery type, delay: 治疗 "type" 的状态, "delay" (秒)的延迟时间
+
+//petskillbonus type, value, duration, delay
+//可以对玩家进行素质点数的额外奖励. Type 是所要增加的素质 (bStr, bLuk), value 是要增加的量,
+//duration 表示持续多久
+//delay 再次触发时等待时间
+
+//每只宠物都可以同时使用 petloot, petskillbonus, petskillattack (petskillattack2)
+// petskillsupport (petheal)
+//单是每种只能使用一次
+
+//NOTE: The max value (100%) of attack_rate, defense_rate & change_target_rate is 10000.
+// MobID,Name,JName,LureID,EggID,EquipID,FoodID,Fullness,HungryDelay,R_Hungry,R_Full,Intimate,Die,Capture,Speed,S_Performance,talk_convert_class,attack_rate,defence_attack_rate,change_target_rate,pet_script

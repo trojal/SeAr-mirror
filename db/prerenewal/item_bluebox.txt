@@ -1,0 +1,940 @@
+// Old Blue Box Obtainable Items Database
+//
+// Structure of Database:
+// GroupID,ItemID,Rate
+
+1,501,12	//红色药水//Red Potion
+1,502,12	//赤色药水//Orange Potion
+1,503,12	//黄色药水//Yellow Potion
+1,504,12	//白色药水//White Potion
+1,505,12	//蓝色药水//Blue Potion
+1,506,12	//绿色药水//Green Potion
+1,507,12	//红色药草//Red Herb
+1,508,12	//黄色药草//Yellow Herb
+1,509,12	//白色药草//White Herb
+1,510,12	//蓝色药草//Blue Herb
+1,511,12	//绿色药草//Green Herb
+1,512,12	//苹果//Apple
+1,513,12	//香蕉//Banana
+1,514,12	//葡萄//Grape
+1,515,12	//红萝卜//Carrot
+1,516,12	//蕃薯//Potato
+1,517,12	//肉//Meat
+1,518,12	//蜂蜜//Honey
+1,519,12	//牛奶//Milk
+1,520,12	//西纳雷叶子//Hinalle Leaflet
+1,521,12	//芦荟叶子//Aloe Leaflet
+1,522,12	//玛丝黛拉果实//Mastela Fruit
+1,523,12	//圣水//Holy Water
+1,525,12	//万能药//Panacea
+1,526,12	//蜂胶//Royal Jelly
+1,528,12	//魔物饲料//Monster Food
+1,529,12	//糖果//Candy
+1,530,12	//柺杖糖//Candy Cane
+1,531,12	//苹果汁//Apple Juice
+1,532,12	//香蕉汁//Banana Juice
+1,533,12	//葡萄汁//Grape Juice
+1,534,12	//红萝卜汁//Carrot Juice
+1,535,12	//南瓜//Pumpkin
+1,536,12	//霜淇淋//Ice Cream
+1,537,12	//宠物饲料//Pet Food
+1,538,12	//姜饼//Well-baked Cookie
+1,539,12	//小蛋糕//Piece of Cake
+1,544,12	//生鱼片//Raw Fish
+1,545,12	//红色纤细药水//Condensed Red Potion
+1,546,12	//黄色纤细药水//Condensed Yellow Potion
+1,547,12	//白色纤细药水//Condensed White Potion
+1,548,12	//起士//Cheese
+1,549,12	//美味蕃薯//Yam
+1,550,12	//仙贝//Rice Cake
+1,551,12	//明虾寿司//Sushi
+1,553,12	//包子//Bao
+1,555,12	//糕饼//Traditional Rice Cake
+1,558,12	//巧克力//Chocolate
+1,561,12	//白色情人巧克力//White Chocolate
+1,601,12	//苍蝇翅膀//Fly Wing
+1,602,12	//蝴蝶翅膀//Butterfly Wing
+1,603,1173	//神秘箱子//Old Blue Box
+1,604,512	//枯树枝//Dead Branch
+1,605,12	//曼特疗伤药//Anodyne
+1,606,12	//芦荟汁液//Aloevera
+1,607,12	//天地树果实//Yggdrasil Berry
+1,608,12	//天地树芽//Yggdrasil Seed
+1,609,12	//返魂符//Amulet
+1,610,12	//天地树叶子//Yggdrasil Leaf
+1,611,12	//放大镜//Magnifier
+1,612,12	//携带用熔矿炉//Mini Furnace
+1,613,12	//钢铁锤子//Iron Hammer
+1,614,12	//黄金锤子//Golden Hammer
+1,615,12	//神之金属锤子//Oridecon Hammer
+1,618,12	//老旧卷轴//Worn Out Scroll
+1,619,12	//青苹果//Unripe Apple
+1,620,12	//浓缩柳橙汁//Orange Juice
+1,621,12	//苦味草//Bitter Herb
+1,622,12	//彩色红萝卜//Rainbow Carrot
+1,623,12	//变态蚯蚓//Earthworm the Dude
+1,624,12	//腐臭之鱼//Rotten Fish
+1,625,12	//锈铁//Rusty Iron
+1,626,12	//魔物饮料//Monster Juice
+1,627,12	//魔物牛奶//Sweet Milk
+1,628,12	//营养大骨//Well-Dried Bone
+1,629,12	//呢喃花//Singing Flower
+1,630,12	//青苔//Dew Laden Moss
+1,631,12	//青嫩毒草//Deadly Noxious Herb
+1,632,12	//营养蚯蚓//Fatty Chubby Earthworm
+1,633,12	//魔物番薯//Sweet Potato
+1,634,12	//魔物香蕉//Tropical Banana
+1,635,12	//魔物之证//Orc Trophy
+1,636,12	//魔物信件//No Recipient
+1,637,12	//魔物扫把//Old Broom
+1,638,12	//纯洁银刃//Silver Knife of Chastity
+1,639,12	//驯服手镯//Armlet of Obedience
+1,640,12	//闪烁之石//Shining Stone
+1,641,12	//黑暗合约书//Contracts in Shadow
+1,642,12	//恶魔召唤书//Book of the Devil
+1,643,12	//携带用孵蛋器//Pet Incubator
+1,644,312	//礼物箱//Gift Box
+1,645,12	//集中药水//Concentration Potion
+1,656,12	//觉醒药水//Awakening Potion
+1,657,12	//菠色克药水//Berserk Potion
+1,659,12	//心爱女人之回忆//Her Heart
+1,663,12	//年糕//Songpyun
+1,664,12	//礼盒//Gift Box
+1,665,12	//礼盒//Gift Box
+1,666,12	//礼盒//Gift Box
+1,667,12	//礼盒//Gift Box
+1,668,12	//红包//Red_Envelope
+1,678,12	//毒药瓶//Poison Bottle
+1,679,12	//召还丹//Pilule
+1,701,12	//欧拉欧拉//Ora Ora
+1,702,12	//家畜血//Animal Gore
+1,703,12	//西纳雷花//Hinalle
+1,704,12	//芦荟//Aloe
+1,705,12	//三叶幸运草//Clover
+1,706,12	//四叶幸运草//Four Leaf Clover
+1,707,12	//哀唱草//Singing Plant
+1,708,12	//曼特花//Ment
+1,710,12	//幻想花//Illusion Flower
+1,711,12	//芽苗//Shoot
+1,712,12	//花//Flower
+1,713,12	//空瓶//Empty Bottle
+1,714,12	//华丽金属//Emperium
+1,715,12	//黄色魔力矿石//Yellow Gemstone
+1,716,12	//红色魔力矿石//Red Gemstone
+1,717,12	//蓝色魔力矿石//Blue Gemstone
+1,718,12	//深红宝石//Garnet
+1,719,12	//紫宝石//Amethyst
+1,720,12	//天蓝宝石//Aquamarine
+1,721,12	//绿宝石//Emerald
+1,722,12	//珍珠//Pearl
+1,723,12	//红宝石//Ruby
+1,724,12	//诅咒红宝石//Cursed Ruby
+1,725,12	//大红宝石//Sardonyx
+1,726,12	//蓝宝石//Sapphire
+1,727,12	//白宝石//Opal
+1,728,12	//黄宝石//Topaz
+1,729,12	//青绿宝石//Zircon
+1,730,12	//1克拉钻石//1carat Diamond
+1,731,12	//2克拉钻石//2carat Diamond
+1,732,12	//3克拉钻石//3carat Diamond
+1,733,12	//受损的钻石//Cracked Diamond
+1,734,12	//红色相框//Red Frame
+1,735,12	//蓝色陶瓷器//Chung Jah
+1,736,12	//白色盘子//China
+1,737,12	//黑色杓子//Black Ladle
+1,738,12	//笔筒//Pencil Case
+1,739,12	//化妆品//Rouge
+1,740,12	//疯兔娃娃//Puppet
+1,741,12	//波利娃娃//Poring Doll
+1,742,12	//苍蝇娃娃//Chonchon Doll
+1,743,12	//魔菇娃娃//Spore Doll
+1,744,12	//花束//Bouquet
+1,745,12	//捧花//Wedding Bouquet
+1,746,12	//玻璃珠//Glass Bead
+1,747,12	//水晶镜子//Crystal Mirror
+1,748,12	//永恒玫瑰//Witherless Rose
+1,749,12	//冰雕玫瑰//Frozen Rose
+1,750,12	//巴风特娃娃//Baphomet Doll
+1,751,12	//俄塞里斯娃娃//Osiris Doll
+1,752,12	//摇滚蝗虫娃娃//Grasshopper Doll
+1,753,12	//溜溜猴娃娃//Yoyo Doll
+1,754,12	//狸猫娃娃//Raccoon Doll
+1,756,12	//神之金属原石//Rough Oridecon
+1,757,12	//铝原石//Rough Elunium
+1,901,12	//辫子//Danggie
+1,902,12	//树根//Tree Root
+1,903,12	//爬虫类舌头//Reptile Tongue
+1,904,12	//蝎子尾巴//Scorpion Tail
+1,905,12	//植物梗//Stem
+1,906,12	//鳞片梗//Pointed Scale
+1,907,12	//枯木汁//Resin
+1,908,12	//青蛙蛋//Spawn
+1,909,12	//杰勒比结晶//Jellopy
+1,910,12	//加勒结晶//Garlet
+1,911,12	//雪勒结晶//Scell
+1,912,12	//刹勒空结晶//Zargon
+1,913,12	//蝙蝠牙//Tooth of Bat
+1,914,12	//毛//Fluff
+1,915,12	//蛹壳//Chrysalis
+1,916,12	//羽毛//Feather of Birds
+1,917,12	//鸟指甲//Talon
+1,918,12	//粘糊的蹼//Sticky Webfoot
+1,919,12	//动物外皮//Animal Skin
+1,920,12	//狼指甲//Wolf Claw
+1,921,12	//香菇芽孢//Mushroom Spore
+1,922,12	//兽人犬齿//Orc's Fang
+1,923,12	//恶魔角//Evil Horn
+1,924,12	//蝴蝶翅膀粉末//Powder of Butterfly
+1,925,12	//鸟嘴//Bill of Birds
+1,926,12	//蛇鳞//Snake Scale
+1,928,12	//昆虫触角//Insect Feeler
+1,929,12	//不死心脏//Immortal Heart
+1,930,12	//腐烂绷带//Rotten Bandage
+1,931,12	//兽人战士之证//Orcish Voucher
+1,932,12	//死人遗骨//Skel-Bone
+1,934,12	//亡者遗物//Memento
+1,935,12	//坚硬外壳//Shell
+1,936,12	//鳞片皮肤//Scale Shell
+1,937,12	//毒牙//Venom Canine
+1,938,12	//粘稠液体//Sticky Mucus
+1,939,12	//蜂针//Bee Sting
+1,940,12	//蝗虫后腿//Grasshopper's Leg
+1,941,12	//牛鼻环//Nose Ring
+1,942,12	//猴子尾巴//Yoyo Tail
+1,943,12	//坚硬外皮//Solid Shell
+1,944,12	//马蹄//Horseshoe
+1,945,12	//变身叶子//Raccoon Leaf
+1,946,12	//蜗牛壳//Snail's Shell
+1,947,12	//硬角//Horn
+1,948,12	//熊掌//Bear's Footskin
+1,949,12	//柔毛//Feather
+1,950,12	//人鱼之心//Heart of Mermaid
+1,951,12	//背鳍//Fin
+1,952,12	//仙人掌刺//Cactus Needle
+1,953,12	//石心//Stone Heart
+1,954,12	//发亮鳞片//Shining Scale
+1,955,12	//昆虫外壳//Worm Peeling
+1,956,12	//鳃刺//Gill
+1,957,12	//亡者指甲//Decayed Nail
+1,958,12	//亡者牙齿//Horrendous Mouth
+1,959,12	//腐烂鳞片//Stinky Scale
+1,960,12	//钳子//Nipper
+1,961,12	//海螺//Conch
+1,962,12	//触须//Tentacle
+1,963,12	//锐利麟片//Sharp Scale
+1,964,12	//螃蟹外壳//Crab Shell
+1,965,12	//蛤蜊外壳//Clam Shell
+1,966,12	//蛤蜊肉//Clam Flesh
+1,967,12	//乌龟外壳//Turtle Shell
+1,968,12	//兽人英雄之证//Heroic Emblem
+1,969,12	//黄金//Gold
+1,970,12	//酒精//Alcohol
+1,971,12	//帝特立米药水//Detrimindexta
+1,972,12	//卡勒波迪药水//Karvodailnirol
+1,973,12	//中和剂//Counteragent
+1,974,12	//混合剂//Mixture
+1,975,12	//红色染料//Scarlet Dyestuff
+1,976,12	//黄色染料//Lemon Dyestuff
+1,978,12	//蓝色染料//Cobaltblue Dyestuff
+1,979,12	//绿色染料//Darkgreen Dyestuff
+1,980,12	//赤色染料//Orange Dyestuff
+1,981,12	//紫色染料//Violet Dyestuff
+1,982,12	//白色染料//White Dyestuff
+1,983,12	//黑色染料//Black Dyestuff
+1,984,12	//神之金属//Oridecon
+1,985,12	//铝//Elunium
+1,986,12	//铁砧//Anvil
+1,987,12	//神之金属铁砧//Oridecon Anvil
+1,988,12	//黄金铁砧//Golden Anvil
+1,989,12	//华丽金属铁砧//Emperium Anvil
+1,990,12	//火灵矿石//Red Blood
+1,991,12	//水灵矿石//Crystal Blue
+1,992,12	//风灵矿石//Wind of Verdure
+1,993,12	//地灵矿石//Green Live
+1,994,12	//火灵原石//Flame Heart
+1,995,12	//水灵原石//Mystic Frozen
+1,996,12	//风灵原石//Rough Wind
+1,997,12	//土灵原石//Great Nature
+1,998,12	//铁//Iron
+1,999,12	//钢铁//Steel
+1,1000,12	//星星的角//Star Crumb
+1,1001,12	//星星的粉末//Star Dust
+1,1002,12	//铁矿石//Iron Ore
+1,1003,12	//煤矿//Coal
+1,1004,12	//忠诚之证//Chivalry Emblem
+1,1005,12	//高级铁砧//Hammer of Blacksmith
+1,1006,12	//古魔法书//Old Magicbook
+1,1007,12	//慧眼//Necklace of Wisdom
+1,1008,12	//泯灭之心//Necklace of Oblivion
+1,1009,12	//神之手//Hand of God
+1,1010,12	//强化武器金属-级数一//Phracon
+1,1011,12	//强化武器金属-级数二//Emveretarcon
+1,1012,12	//伞蜥颈//Frill
+1,1013,12	//彩色昆虫外壳//Rainbow Shell
+1,1014,12	//蚂蚁下巴//Ant Jaw
+1,1015,12	//细长舌头//Tongue
+1,1016,12	//鼠尾//Rat Tail
+1,1017,12	//鼠须//Mole Whiskers
+1,1018,12	//鼠指甲//Mole Claw
+1,1019,12	//玛哪树枝//Trunk
+1,1020,12	//长发//Black Hair
+1,1021,12	//土人之角//Dokebi Horn
+1,1022,12	//狐狸尾巴//Nine Tails
+1,1023,12	//鱼尾//Fish Tail
+1,1024,12	//墨汁//Squid Ink
+1,1025,12	//蜘蛛丝//Cobweb
+1,1026,12	//橡实//Acorn
+1,1027,12	//刺猬尖刺//Porcupine Quill
+1,1028,12	//野猪毛//Mane
+1,1029,12	//虎皮//Tiger Skin
+1,1030,12	//虎掌//Tiger's Footskin
+1,1031,12	//螳螂臂//Mantis Scythe
+1,1032,12	//噬人树花//Maneater Blossom
+1,1033,12	//噬人树根//Maneater Root
+1,1034,12	//哥布灵毛//Blue Hair
+1,1035,12	//龙牙//Dragon Canine
+1,1036,12	//龙鳞//Dragon Scale
+1,1037,12	//龙尾//Dragon Tail
+1,1038,12	//小恶魔角//Little Evil Horn
+1,1039,12	//小恶魔翅膀//Little Evil Wing
+1,1040,12	//老妖精胡须//Elder Pixie's Moustache
+1,1041,12	//手提灯//Lantern
+1,1042,12	//昆虫后脚//Bug Leg
+1,1043,12	//兽人指甲//Orc Claw
+1,1044,12	//兹诺克之牙//Zenorc's Fang
+1,1045,12	//圣殿士面具//Cultish Masque
+1,1046,12	//蝎子之钳//Scorpion Nipper
+1,1047,12	//蛇女之首//Dead Medusa
+1,1048,12	//蛇发//Horrendous Hair
+1,1049,12	//韩服//Skirt of Virgin
+1,1050,12	//血管//Tendon
+1,1051,12	//脑管//Detonator
+1,1052,12	//单细胞//Single Cell
+1,1053,12	//人鱼之牙//Ancient Tooth
+1,1054,12	//人鱼嘴巴//Ancient Lips
+1,1055,12	//蚯蚓皮//Earthworm Peeling
+1,1056,12	//黄玉碎片//Grit
+1,1057,12	//蛾蝶虫翅膀粉末//Moth Dust
+1,1058,12	//蛾蝶翅膀//Moth Wings
+1,1059,12	//透明之布//Fabric
+1,1060,12	//金色头发//Golden Hair
+1,1061,12	//魔女之星沙//Witched Starsand
+1,1062,12	//南瓜头//Jack o' Pumpkin
+1,1063,12	//锐利锥子//Fang
+1,1064,12	//鞭绳//Reins
+1,1065,12	//设置用陷阱道具//Trap
+1,1066,12	//天地树枝//Fine-grained Trunk
+1,1067,12	//智慧树枝//Solid Trunk
+1,1068,12	//世界树枝//Barren Trunk
+1,1088,12	//梦罗克水溶液试管//Morocc Solution
+1,1089,12	//斐扬水溶液试管//Payon Solution
+1,1092,12	//空试管//Empty Test Tube
+1,1093,12	//空药瓶//Empty Potion Bottle
+1,1094,12	//短辫子//Short Daenggie
+1,1095,12	//指针//Clock Hand
+1,1096,12	//圆形外皮//Round Shell
+1,1097,12	//破旧书页//Worn Out Page
+1,1098,12	//手铐//Manacles
+1,1099,12	//老旧犯人服//Worn-out Prison Uniform
+1,1101,6	//长剑//Sword
+1,1102,6	//长剑//Sword
+1,1104,6	//圆月刀//Falchion
+1,1105,6	//圆月刀//Falchion
+1,1107,6	//厚刃剑//Blade
+1,1108,6	//厚刃剑//Blade
+1,1110,6	//击刺长剑//Rapier
+1,1111,6	//击刺长剑//Rapier
+1,1113,6	//弯刀//Scimitar
+1,1114,6	//弯刀//Scimitar
+1,1116,3	//武士刀//Katana
+1,1117,3	//武士刀//Katana
+1,1119,6	//日本刀//Tsurugi
+1,1120,6	//日本刀//Tsurugi
+1,1122,6	//圆柄马刀//Ring Pommel Saber
+1,1123,6	//海东剑//Haedonggum
+1,1124,6	//兽人刀//Orcish sword
+1,1125,6	//圆柄马刀//Ring Pommel Saber
+1,1126,6	//骑兵之剑//Saber
+1,1127,6	//骑兵之剑//Saber
+1,1128,6	//海东剑//Haedonggum
+1,1129,6	//水纹之剑//Flamberge
+1,1151,3	//双手剑//Slayer
+1,1152,3	//双手剑//Slayer
+1,1154,3	//亚尔特剑//Bastard Sword
+1,1155,3	//亚尔特剑//Bastard Sword
+1,1157,3	//双手巨剑//Two-Handed Sword
+1,1158,3	//双手巨剑//Two-Handed Sword
+1,1160,3	//双手重剑//Broad Sword
+1,1162,3	//双手重剑//Broad Sword
+1,1163,3	//十字巨剑//Claymore
+1,1201,3	//短剑//Knife
+1,1202,3	//短剑//Knife
+1,1204,3	//卡特短剑//Cutter
+1,1205,3	//卡特短剑//Cutter
+1,1207,3	//笨拙短剑//Main Gauche
+1,1208,3	//笨拙短剑//Main Gauche
+1,1210,3	//德克短剑//Dirk
+1,1211,3	//德克短剑//Dirk
+1,1213,3	//大驹短剑//Dagger
+1,1214,3	//大驹短剑//Dagger
+1,1216,3	//双刃短剑//Stiletto
+1,1217,3	//双刃短剑//Stiletto
+1,1219,3	//长柄短剑//Gladius
+1,1220,3	//长柄短剑//Gladius
+1,1222,3	//大马士革短剑//Damascus
+1,1226,3	//大马士革短剑//Damascus
+1,1243,3	//初学者笨拙短剑//Novice Main Gauche
+1,1250,3	//拳刃//Jur
+1,1251,3	//拳刃//Jur
+1,1252,3	//卡塔勒拳刃//Katar
+1,1253,3	//卡塔勒拳刃//Katar
+1,1254,3	//秘刃 闇啸//Jamadhar
+1,1255,3	//秘刃 闇啸//Jamadhar
+1,1256,3	//冰灵拳刃//Katar of Frozen Icicle
+1,1257,3	//刺藤拳刃//Katar of Quaking
+1,1258,3	//火灵拳刃//Katar of Raging Blaze
+1,1259,3	//风灵拳刃//Katar of Piercing Wind
+1,1301,3	//斧//Axe
+1,1302,3	//斧//Axe
+1,1304,3	//兽人斧//Orcish Axe
+1,1351,3	//巨斧//Battle Axe
+1,1352,3	//巨斧//Battle Axe
+1,1354,3	//钢斧//Hammer
+1,1355,3	//钢斧//Hammer
+1,1357,3	//毁灭之斧//Buster
+1,1358,3	//毁灭之斧//Buster
+1,1360,3	//双手斧//Two-Handed Axe
+1,1361,3	//双手斧//Two-Handed Axe
+1,1401,9	//长戟//Javelin
+1,1402,9	//长戟//Javelin
+1,1404,9	//长矛//Spear
+1,1405,9	//长矛//Spear
+1,1407,9	//步兵长矛//Pike
+1,1408,9	//步兵长矛//Pike
+1,1410,3	//骑士长矛//Lance
+1,1411,3	//骑士长矛//Lance
+1,1451,3	//弯刃长矛//Guisarme
+1,1452,3	//弯刃长矛//Guisarme
+1,1454,3	//长枪//Glaive
+1,1455,3	//长枪//Glaive
+1,1457,3	//双刃长戟//Partizan
+1,1458,3	//双刃长戟//Partizan
+1,1460,3	//德瑞尹长戟//Trident
+1,1461,3	//德瑞尹长戟//Trident
+1,1463,3	//斧锤长矛//Halberd
+1,1464,3	//斧锤长矛//Halberd
+1,1472,3	//灵魂之杖//Soul Staff
+1,1501,6	//木锤//Club
+1,1502,6	//木锤//Club
+1,1504,6	//铁锤//Mace
+1,1505,6	//铁锤//Mace
+1,1507,6	//思麦斯铁锤//Smasher
+1,1508,6	//思麦斯铁锤//Smasher
+1,1510,6	//流星锤//Flail
+1,1511,6	//流星锤//Flail
+1,1513,6	//日星锤//Morning Star
+1,1514,6	//日星锤//Morning Star
+1,1516,6	//尖刃铁锤//Sword Mace
+1,1517,6	//尖刃铁锤//Sword Mace
+1,1519,6	//链锤//Chain
+1,1520,6	//链锤//Chain
+1,1522,6	//昏迷之锤//Stunner
+1,1550,3	//书//Book
+1,1551,3	//圣言之书//Bible
+1,1552,3	//智慧石碑//Tablet
+1,1553,3	//水灵之书//Book of Billows
+1,1554,3	//地灵之书//Book of Mother Earth
+1,1555,3	//火灵之书//Book of the Blazing Sun
+1,1556,3	//风灵之书//Book of Gust of Wind
+1,1558,3	//日记本//Girl's Diary
+1,1601,3	//手杖//Rod
+1,1602,3	//手杖//Rod
+1,1604,3	//橡木魔杖//Wand
+1,1605,3	//橡木魔杖//Wand
+1,1607,3	//智慧魔杖//Staff
+1,1608,3	//智慧魔杖//Staff
+1,1610,3	//言灵魔杖//Arc Wand
+1,1611,3	//言灵魔杖//Arc Wand
+1,1613,3	//巫杖 魂咬//Mighty Staff
+1,1614,3	//圣杖 英灵//Wand of Occult
+1,1615,3	//骷髅魔杖//Evil Bone Wand
+1,1701,3	//弓//Bow
+1,1702,3	//弓//Bow
+1,1704,3	//坎普兹弓//Composite Bow
+1,1705,3	//坎普兹弓//Composite Bow
+1,1707,3	//克罗伊特弓//Great Bow
+1,1708,3	//克罗伊特弓//Great Bow
+1,1710,3	//十字弓//Crossbow
+1,1711,3	//十字弓//Crossbow
+1,1713,3	//亚伯雷弓//Arbalest
+1,1714,3	//角弓//Gakkung Bow
+1,1715,3	//亚伯雷弓//Arbalest
+1,1716,3	//角弓//Gakkung Bow
+1,1718,3	//猎人之弓//Hunter Bow
+1,1750,12	//箭矢//Arrow
+1,1751,12	//银箭矢//Silver Arrow
+1,1752,12	//火箭矢//Fire Arrow
+1,1753,12	//钢铁箭矢//Steel Arrow
+1,1754,12	//水灵箭矢//Crystal Arrow
+1,1755,12	//风灵箭矢//Arrow of Wind
+1,1756,12	//地灵箭矢//Stone Arrow
+1,1757,12	//无形箭矢//Immaterial Arrow
+1,1758,12	//昏迷箭矢//Stun Arrow
+1,1759,12	//冰冻箭矢//Frozen Arrow
+1,1760,12	//光芒箭矢//Flash Arrow
+1,1761,12	//诅咒箭矢//Cursed Arrow
+1,1762,12	//铁锈箭矢//Rusty Arrow
+1,1763,12	//毒箭矢//Poison Arrow
+1,1764,12	//锐利箭矢//Sharp Arrow
+1,1765,12	//神之金属箭矢//Oridecon Arrow
+1,1767,12	//影子箭矢//Shadow Arrow
+1,1768,12	//睡眠箭矢//Sleep Arrow
+1,1769,12	//宁静箭矢//Mute Arrow
+1,1770,12	//铁箭矢//Iron Arrow
+1,1801,3	//虎爪拳套//Waghnak
+1,1802,3	//虎爪拳套//Waghnak
+1,1803,3	//钢铁拳套//Knuckle Duster
+1,1804,3	//钢铁拳套//Knuckle Duster
+1,1805,3	//贺勒拳套//Studded Knuckles
+1,1806,3	//贺勒拳套//Studded Knuckles
+1,1807,3	//升龙拳套//Fist
+1,1808,3	//升龙拳套//Fist
+1,1809,3	//龙爪拳套//Claw
+1,1810,3	//龙爪拳套//Claw
+1,1811,3	//鹰爪拳套//Finger
+1,1812,3	//鹰爪拳套//Finger
+1,1901,3	//小提琴//Violin
+1,1902,3	//小提琴//Violin
+1,1903,3	//曼陀林//Mandolin
+1,1904,3	//曼陀林//Mandolin
+1,1905,3	//鲁特琴//Lute
+1,1906,3	//鲁特琴//Lute
+1,1907,3	//吉他//Guitar
+1,1908,3	//吉他//Guitar
+1,1909,3	//竖琴//Harp
+1,1910,3	//竖琴//Harp
+1,1911,3	//焚鹤琴//Gumoongoh
+1,1912,3	//焚鹤琴//Gumoongoh
+1,1950,3	//鞭子//Rope
+1,1951,3	//鞭子//Rope
+1,1952,3	//细长鞭子//Whip
+1,1953,3	//细长鞭子//Whip
+1,1954,3	//钢铁鞭子//Wire Whip
+1,1955,3	//钢铁鞭子//Wire Whip
+1,1956,3	//流星鞭子//Rante Whip
+1,1957,3	//流星鞭子//Rante Whip
+1,1958,3	//幸运鞭子//Tail Whip
+1,1959,3	//幸运鞭子//Tail Whip
+1,1960,3	//玛哪鞭子//Whip
+1,1961,3	//玛哪鞭子//Whip
+1,2101,3	//铁盾//Guard
+1,2102,3	//铁盾//Guard
+1,2103,3	//圆盾//Buckler
+1,2104,3	//圆盾//Buckler
+1,2105,3	//钢盾//Shield
+1,2106,3	//钢盾//Shield
+1,2107,3	//镜盾//Mirror Shield
+1,2108,3	//镜盾//Mirror Shield
+1,2109,3	//谎言纪录本//Memory Book
+1,2112,3	//初学者铁盾//Novice Guard
+1,2201,3	//太阳眼镜//Sunglasses
+1,2203,3	//眼镜//Glasses
+1,2205,3	//泳镜//Diver Goggles
+1,2206,3	//婚礼头纱//Wedding Veil
+1,2207,3	//花朵头饰//Fancy Flower
+1,2208,3	//紫蝶发带//Ribbon
+1,2209,3	//紫蝶发带//Ribbon
+1,2210,3	//发箍//Hair Band
+1,2211,3	//方头巾//Bandana
+1,2212,3	//独眼龙眼罩//Eye Patch
+1,2213,3	//猫耳发圈//Kitty Band
+1,2214,3	//兔耳发圈//Bunny Band
+1,2215,3	//花发圈//Flower Band
+1,2216,3	//圣职之帽//Biretta
+1,2217,3	//圣职之帽//Biretta
+1,2218,3	//口罩//Flu Mask
+1,2220,3	//渔夫帽//Hat
+1,2221,3	//渔夫帽//Hat
+1,2222,3	//圆帽//Turban
+1,2223,3	//圆帽//Turban
+1,2224,3	//防风皮革眼镜//Goggles
+1,2225,3	//防风皮革眼镜//Goggles
+1,2226,3	//无边帽//Cap
+1,2227,3	//无边帽//Cap
+1,2228,3	//金属头盔//Helm
+1,2229,3	//金属头盔//Helm
+1,2230,3	//宝石头盔//Gemmed Sallet
+1,2231,3	//宝石头盔//Gemmed Sallet
+1,2232,3	//头箍//Circlet
+1,2233,3	//头箍//Circlet
+1,2236,3	//圣诞帽//Santa Hat
+1,2239,3	//单眼眼镜//Monocle
+1,2241,3	//白胡须//Grandpa Beard
+1,2242,3	//高级太阳眼镜//Purple Glasses
+1,2243,3	//旋转眼镜//Geek Glasses
+1,2244,3	//红蝶发带//Big Ribbon
+1,2245,3	//绅士帽//Sweet Gent
+1,2246,3	//黄金帽//Golden Gear
+1,2247,3	//回忆帽//Romantic Gent
+1,2248,3	//牛仔帽//Western Grace
+1,2249,1	//黄金冠冕//Coronet
+1,2250,3	//粉纱发圈//Cute Ribbon
+1,2251,3	//神圣之帽//Monk Hat
+1,2252,3	//魔法帽//Wizard Hat
+1,2253,3	//向日葵头饰//Sunflower
+1,2254,1	//天使发圈//Angel Wing
+1,2255,1	//恶魔发圈//Evil Wing
+1,2257,3	//兽角头饰//Unicorn Horn
+1,2258,1	//尖角发圈//Spiky Band
+1,2259,3	//竹蜻蜓发圈//Mini Propeller
+1,2260,3	//迷你眼镜//Mini Glasses
+1,2261,3	//普隆德拉军帽//Army Cap
+1,2262,3	//小丑鼻子//Clown Nose
+1,2263,3	//时髦眼罩//Zorro Masque
+1,2265,3	//侍卫口罩//Gangster Mask
+1,2266,3	//金属口罩//Iron Cain
+1,2267,3	//香烟//Cigarette
+1,2268,3	//烟斗//Pipe
+1,2269,3	//花叶//Romantic Flower
+1,2270,3	//草叶//Romantic Leaf
+1,2271,3	//眼镜头饰//Jack be Dandy
+1,2274,1	//亡者发箍//Ghost Bandana
+1,2275,3	//头巾//Red Bandana
+1,2276,3	//大眼睛眼镜//Angled Glasses
+1,2277,3	//护士帽//Nurse Cap
+1,2278,3	//笑脸面具//Mr. Smile
+1,2279,3	//火线头饰//Bomb Wick
+1,2282,3	//光环//Halo
+1,2285,3	//苹果头饰//Apple of Archer
+1,2287,3	//海盗头巾//Pirate Bandana
+1,2288,3	//整人面具//Mr. Scream
+1,2289,3	//粪便帽//Poo Poo Hat
+1,2290,3	//葬礼帽//Funeral Hat
+1,2291,3	//蝴蝶假面//Masquerade
+1,2294,3	//星星发夹//Stellar
+1,2295,3	//眼罩//Blinker
+1,2297,3	//哥布灵面具//Goblin Mask
+1,2298,3	//触角头饰//Green Feeler
+1,2299,3	//兽人头盔//Orc Helm
+1,2301,3	//棉衬衫//Cotton Shirt
+1,2302,3	//棉衬衫//Cotton Shirt
+1,2303,3	//皮制外套//Jacket
+1,2304,3	//皮制外套//Jacket
+1,2305,3	//冒险衣//Adventurer's Suit
+1,2306,3	//冒险衣//Adventurer's Suit
+1,2307,3	//大衣//Mantle
+1,2308,3	//大衣//Mantle
+1,2309,3	//长大衣//Coat
+1,2310,3	//长大衣//Coat
+1,2311,3	//毛皮大衣//Mink Coat
+1,2312,3	//铁制铠甲//Padded Armor
+1,2313,3	//铁制铠甲//Padded Armor
+1,2314,3	//钢铁锁子甲//Chain Mail
+1,2315,3	//钢铁锁子甲//Chain Mail
+1,2316,3	//钢铁铠甲//Full Plate
+1,2317,3	//钢铁铠甲//Full Plate
+1,2318,3	//秘衣 美德//Lord's Clothes
+1,2320,3	//西装外套//Formal Suit
+1,2321,3	//丝质外袍//Silk Robe
+1,2322,3	//丝质外袍//Silk Robe
+1,2323,3	//圣职之袍//Scapulare
+1,2324,3	//圣职之袍//Scapulare
+1,2325,3	//圣职之衣//Saint's Robe
+1,2326,3	//圣职之衣//Saint's Robe
+1,2328,3	//木制铠甲//Wooden Mail
+1,2329,3	//木制铠甲//Wooden Mail
+1,2330,3	//紧身便衣//Tights
+1,2331,3	//紧身便衣//Tights
+1,2332,3	//秘银之衣//Silver Robe
+1,2333,3	//秘银之衣//Silver Robe
+1,2335,3	//盗贼之衣//Thief Clothes
+1,2336,3	//盗贼之衣//Thief Clothes
+1,2337,3	//忍服 血樱//Ninja Suit
+1,2338,3	//结婚礼服//Wedding Dress
+1,2339,3	//三角裤//Pantie
+1,2340,3	//初学者胸铠//Novice Breastplate
+1,2341,3	//秘银金属铠甲//Legion Plate Armor
+1,2352,3	//初学者忍者斗篷//Tattered Novice Ninja Suit
+1,2401,3	//轻便鞋//Sandals
+1,2402,3	//轻便鞋//Sandals
+1,2403,3	//长靴//Shoes
+1,2404,3	//长靴//Shoes
+1,2405,3	//战士长靴//Boots
+1,2406,3	//战士长靴//Boots
+1,2407,3	//玻璃鞋//Crystal Pumps
+1,2408,3	//脚链//Shackles
+1,2409,3	//抗魔鞋//High Heels
+1,2411,3	//重靴//Greaves
+1,2414,3	//初学者海滩鞋//Novice Slippers
+1,2501,3	//连帽披肩//Hood
+1,2502,3	//连帽披肩//Hood
+1,2503,3	//披肩//Muffler
+1,2504,3	//披肩//Muffler
+1,2505,3	//斗篷//Manteau
+1,2506,3	//斗篷//Manteau
+1,2507,3	//伯爵斗篷//Ancient Cape
+1,2508,3	//抗魔斗篷//Ragamuffin Manteau
+1,2510,3	//初学者阴险披肩//Somber Novice Hood
+1,2601,3	//力量戒指//Ring
+1,2602,3	//智力耳环//Earring
+1,2603,3	//体力项链//Necklace
+1,2604,3	//防御手套//Glove
+1,2605,3	//敏捷别针//Brooch
+1,2607,3	//发夹//Clip
+1,2608,3	//幸运珠链//Rosary
+1,2609,3	//骷髅戒指//Skull Ring
+1,2610,3	//金戒指//Gold Ring
+1,2611,3	//银戒指//Silver Ring
+1,2612,3	//花戒指//Flower Ring
+1,2613,3	//钻石戒指//Diamond Ring
+1,2617,3	//智慧手套//Celebrant's Mitten
+1,2618,3	//黑狐颈链//Matyr's Leash
+1,2621,1	//力量戒指//Ring
+1,2622,1	//智力耳环//Earring
+1,2623,1	//体力项链//Necklace
+1,2624,1	//防御手套//Glove
+1,2625,1	//敏捷别针//Brooch
+1,2626,1	//幸运珠链//Rosary
+1,2627,3	//皮带//Belt
+1,2628,3	//初学者手镯//Novice Armlet
+1,5002,1	//首领冠冕//Jewel Crown
+1,5003,3	//小丑帽//Joker Jester
+1,5005,3	//防毒面具//Gas Mask
+1,5006,3	//颓废眼镜//Machoman's Glasses
+1,5008,3	//花冠//Puppy Love
+1,5009,3	//安全帽//Safety Helmet
+1,5010,3	//印地安发箍//Indian Fillet
+1,5011,3	//天线头饰//Aerial
+1,5014,3	//剑士头盔//Fin Helm
+1,5015,3	//蛋壳帽//Egg Shell
+1,5030,3	//熊猫帽//Panda Hat
+1,5035,3	//波利帽//Poring Hat
+1,5037,3	//水果皮帽//Nutshell
+1,5055,3	//初学者蛋壳帽//Novice False Eggshell
+1,5085,1	//红色小发带//Small Ribbons
+1,5088,3	//吓坏眼的假面//Surprised Mask
+1,5089,3	//讨厌的假面//Annoyed Mask
+1,5090,3	//哥布灵首领假面//Goblin Leader Mask
+1,7001,12	//霉菌粉末//Mould Powder
+1,7002,12	//兽人之牙//Ogre Tooth
+1,7003,12	//虎蜥皮//Anolian Skin
+1,7004,12	//泥团//Mud Lump
+1,7005,12	//骷髅头//Skull
+1,7006,12	//红色蝙蝠翅膀//Wing of Red Bat
+1,7007,12	//巨鼠指甲//Claw of Rat
+1,7008,12	//钢硬之角//Stiff Horn
+1,7009,12	//彩色外皮//Glitter Shell
+1,7010,12	//铁蝎尾巴//Tail of Steel Scorpion
+1,7011,12	//猴子指甲//Claw of Monkey
+1,7012,12	//强韧鳞梗//Tough Scalelike Stem
+1,7013,12	//珊瑚//Coral Reef
+1,7014,12	//破旧画像//Old Portrait
+1,7015,12	//回忆书签//Memory Bookmark
+1,7016,12	//老旧汤匙//Bent Spoon
+1,7026,12	//钟塔之钥//Key of the Clock Tower
+1,7027,12	//钟塔钥匙//Key of the Underground
+1,7030,12	//沙漠之狼之指甲//Claw of Desert Wolf
+1,7031,12	//破旧平底锅//Old Frying Pan
+1,7032,12	//蛋壳碎片//Piece of Egg Shell
+1,7033,12	//毒魔菇芽孢//Poison Spore
+1,7034,12	//破洞圣诞袜//Red Stocking
+1,7035,12	//火柴//Matchstick
+1,7036,12	//卡仑之牙//Fang of Garm
+1,7038,12	//毛线//Yarn
+1,7041,12	//黄晶沙的一角//Fine Grit
+1,7047,12	//爱丽丝的围裙//Alice's Apron
+1,7048,12	//狮鹫兽的指甲//Talon of Griffon
+1,7049,12	//石头//Stone
+1,7053,12	//赛依伐//Cyfar
+1,7054,12	//布里刊//Brigan
+1,7059,12	//卡普拉仓库 免费利用券//Free Ticket for Kafra Storage
+1,7060,12	//卡普拉传送点 免费利用券//Free Ticket for Kafra Transportation
+1,7061,12	//卡普拉手推车 免费利用券//Free Ticket for the Cart Service
+1,7063,12	//柔软的羽毛//Soft Feather
+1,7064,12	//蜻蜓的翅膀//Wing of Dragonfly
+1,7065,12	//海獭的皮革//Sea-Otter Fur
+1,7066,12	//冰块一角//Ice Cubic
+1,7067,12	//石头一角//Stone Fragment
+1,7068,12	//燃烧一半的木材//Burnt Tree
+1,7069,12	//破裂的铠甲一角//Destroyed Armor
+1,7070,12	//破裂的硬壳//Broken Shell
+1,7071,12	//破烂烂的衣服//Tattered Clothes
+1,7072,12	//锈的飞镖//Old Shuriken
+1,7093,12	//齿轮//Cogwheel
+1,7094,12	//未知的碎片//Fragment
+1,7095,12	//金属破片//Metal Fragment
+1,7096,12	//凝固的岩浆//Lava
+1,7097,12	//燃烧的心脏//Burning Heart
+1,7098,12	//火种//Live Coal
+1,7099,12	//老旧魔法图//Worn-out Magic Scroll
+1,7100,12	//尖锐的叶子//Sharp Leaf
+1,7101,12	//七彩大嘴鸟之羽//Peco Peco Feather
+1,7106,12	//魔羌之角//Antelope Horn
+1,7107,12	//魔羌之毛皮//Antelope Skin
+1,7108,12	//盾牌的碎片//Piece of Shield
+1,7109,12	//闪亮的枪锥//Shining Spear Blade
+1,7110,12	//破裂之剑//Broken Sword
+1,7111,12	//光滑的纸//Slick Paper
+1,7112,12	//恐怖的纸刃//Sharp Paper
+1,7113,12	//破碎的法老王象征//Broken Pharaoh Emblem
+1,7114,12	//杜唐卡门面具//Masque of Tutankhamen
+1,7115,12	//哈比的羽毛//Harpy Feather
+1,7116,12	//哈比的指甲//Harpy Talon
+1,7117,12	//撕裂的魔法书//Torn Magic Book
+1,7118,12	//撕裂的卷轴//Torn Scroll
+1,7119,12	//菌丝//Bacillus
+1,7120,12	//燃烧的马蹄铁//Burning Horseshoe
+1,7121,12	//蜂蜜罐//Honey Pot
+1,7122,12	//炙热的毛//Burning Hair
+1,7123,12	//龙皮//Dragon Skin
+1,7124,12	//砂团//Sand Clump
+1,7125,12	//蝎子之螯//Scorpion Claw
+1,7126,12	//巨大杰勒比结晶//Large Jellopy
+1,7134,12	//药钵//Medicine Bowl
+1,7135,12	//火烟瓶//Fire Bottle
+1,7136,12	//盐酸瓶//Acid Bottle
+1,7137,12	//噬人植物瓶//Plant Bottle
+1,7138,12	//刺锤瓶//Marine Sphere Bottle
+1,7139,12	//护贝药//Glistening Coat
+1,7149,12	//黄色碟子//Yellow Plate
+1,7150,12	//竹筒//Piece of Bamboo
+1,7151,12	//油纸//Oil Paper
+1,7152,12	//光泽的头发//Glossy Hair
+1,7153,12	//旧和服//Worn-out Kimono
+1,7154,12	//毒粉//Poisonous Powder
+1,7155,12	//牛蛙之皮//Poisonous Toad Skin
+1,7156,12	//破旧之手里剑//Broken Shuriken
+1,7157,12	//黑色覆面//Dark Mask
+1,7158,12	//破碎的酒缸//Broken Liquor Jar
+1,7159,12	//天狗的鼻子//Tengu Nose
+1,7161,12	//拉链熊毛皮//Black Bear Skin
+1,7162,12	//片云//Cloud Crumb
+1,7163,12	//锐利的触角//Hard Feeler
+1,7164,12	//石榴桃//Solid_Peach
+1,7165,12	//害羞之服//Transparent Celestial Robe
+1,7166,12	//柔软的绸缎布//Soft Silk
+1,7167,12	//魔幻拉链//Strange Steel Piece
+1,7168,12	//巨大翅膀//Giant Butterfly Wing
+1,7169,12	//太极盘//Ba_Gua
+1,7170,12	//燕尾服//Tuxedo
+1,7171,12	//花豹外皮//Leopard Skin
+1,7172,12	//花豹指甲//Leopard Claw
+1,7174,12	//缎带//Wrapping Lace
+1,7175,12	//包装纸//Wrapping Paper
+1,7182,12	//可可//Cacao
+1,7186,12	//细长梗//Thin Trunk
+1,7187,12	//庆典面具//Festival Mask
+1,7188,12	//褐色树根//Brown_Root
+1,7189,12	//树木心脏//Wooden Heart
+1,7190,12	//昆虫硬壳//Solid Husk
+1,7191,12	//纸灯笼//Lamp
+1,7192,12	//小风车手里刀//Vane
+1,7193,12	//绿芽//Sprout
+1,7194,12	//柔软的草叶//Soft Blade of Grass
+1,7195,12	//弹弓//Slingshot
+1,7196,12	//木制护肩//Shoulder Protector
+1,7197,12	//强韧木藤条//Tough Vines
+1,7198,12	//巨大叶子//Huge Leaf
+1,7200,12	//橡皮筋//Elastic Band
+1,7201,12	//木块//Log
+1,7202,12	//巨象甲虫之螯//Pincher of Beetle
+1,7203,12	//坚硬树枝//Strong Branch
+1,7205,12	//黑色布条//Piece of Black Cloth
+1,7206,12	//黑猫娃娃//Black Cat Doll
+1,7207,12	//旧斗篷//Old Manteau
+1,7208,12	//生锈厨刀//Rusty Kitchen Knife
+1,7209,12	//无颅武士的头盔//Helm of Dullahan
+1,7210,12	//无颅武士的铠甲一角//Armor Piece of Dullahan
+1,7211,12	//罗诫塔石头碎片//Fragment of Rossata Stone
+1,7212,12	//吊颈娃娃//Hung Doll
+1,7213,12	//绣针包//Needle Packet
+1,7214,12	//蝙蝠笼子//Bat Cage
+1,7215,12	//断针//Broken Needle
+1,7216,12	//红色围巾//Red Muffler
+1,7217,12	//缠线筒//Spool
+1,7218,12	//腐烂的绳子//Decomposed Rope
+1,7219,12	//彩色袜子//Striped Sock
+1,7220,12	//绿色粘稠物//Ectoplasm
+1,7221,12	//纠缠铁链//Tangled Chains
+1,7222,12	//原木块//Wooden Gnarl
+1,7223,12	//扭曲的自画像//Contorted Self-Portrait
+1,7225,12	//南瓜灯笼//Pumpkin Lantern
+1,7262,12	//折扇//Folding Fan of Cat Ghost
+1,7263,12	//猫眼石//Cat's Eye
+1,7264,12	//干沙子//Dry Sand
+1,7265,12	//舞狮之角//Dragon Horn
+1,7266,12	//舞狮的假牙//Denture from Dragon Mask
+1,7267,12	//豹纹内裤//Tiger Panty
+1,7268,12	//小鬼灵//Little Ghost Doll
+1,7269,12	//围兜兜//Pinafore
+1,7270,12	//婴儿的奶瓶//Nursing_Bottle
+1,10001,3	//牛角骨盔//Skull Helm
+1,10002,3	//宠物防毒面具//Monster Oxygen Mask
+1,10003,3	//潜水头盔//Transparent Headgear
+1,10004,3	//宠物奶嘴//Pacifier
+1,10005,3	//三色假发//Wig
+1,10006,3	//蛇饰发箍//Queen's Hair Ornament
+1,10007,3	//宠物发带//Silk Ribbon
+1,10008,3	//体罚棒//Punisher
+1,10009,3	//野生花//Wild Flower
+1,10010,3	//变形锅子//Battered Pot
+1,10011,3	//宠物发夹//Stellar Hairpin
+1,10012,3	//宠物蛋壳帽//Tiny Egg Shell
+1,10013,3	//宠物书包//Backpack
+1,10014,3	//蝗虫眼镜//Rocker Glasses
+1,10015,3	//宠物围兜兜//Green Lace
+1,10016,3	//宠物铃铛//Golden Bell
+1,10017,3	//树皮裤//Bark Shorts
+1,10018,3	//猴子发箍//Monkey Circlet
+1,10019,3	//红色领巾//Red Scarf
+1,10020,3	//灵幻道士之剑//Grave Keeper's Sword
+
+1,7561,21	// Ice Heart
+1,7562,21	// Ice Scale
+1,7563,21	// Bloody Rune
+1,7564,21	// Rotten Meat
+1,7565,21	// Sticky Poison
+1,7751,34	// Old White Cloth
+1,7752,32	// Clattering Skull
+1,7753,34	// Broken Farm Tools
+1,2123,1	// Orleans' Plate
+1,2124,1	// Thorny Shield
+1,2365,1	// Robes of Orleans
+1,2125,1	// Strong Shield
+1,2420,1	// Angel's Reincarnation
+1,5122,1	// Magni's Cap
+1,5175,1	// Censor Bar
+1,1264,1	// Specialty Jur
+1,1269,1	// Inverse Scale
+1,1271,1	// Blood Tears
+1,1370,1	// Doom Slayer
+1,1376,1	// Heart Breaker
+1,1377,1	// Hurricane's Fury
+1,1478,1	// Ahlspiess
+1,13304,1	// Spirit of Kamaitachi
+1,1730,1	// Burning Bow
+1,1731,1	// Freezing Bow
+1,1732,1	// Earthen Bow
+1,1733,1	// Gale Bow
+1,1818,1	// Magma Fist
+1,1819,1	// Iceicle Fist
+1,1820,1	// Electric Fist
+1,1821,1	// Seismic Fist
+1,1822,1	// Barrage Fist
+1,1919,1	// Bass Guitar
+1,1972,1	// Electric Eel
+1,1973,1	// Foot of the Sea Witch
+1,1974,1	// Carrot Whip
+1,13200,1	// Bullet
+1,13201,1	// Silver Bulle
+1,13202,1	// Shell of Blood
+1,13203,1	// Flare Sphere
+1,13204,1	// Lightning Sphere
+1,13205,1	// Poison Sphere
+1,13206,1	// Blind Sphere
+1,13207,1	// Freezing Sphere
+1,13167,1	// Gate Keeper-DD
+1,13168,1	// Thunder-P
+1,13163,1	// Long Barrel
+1,13170,2	// Lever Action Rifle
+1,13164,1	// Long Barrel [1]

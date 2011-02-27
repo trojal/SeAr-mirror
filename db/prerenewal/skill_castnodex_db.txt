@@ -1,0 +1,71 @@
+// <Skill id>,<Cast>,<Delay (optional)>
+//
+// 咏唱:  0 - 一切都影响该技能的咏唱
+//        1 - dex不影响该技能咏唱
+//        2 - 状态不影响该技能咏唱 (牺牲祈福等)
+//        4 - 道具属性不影响该技能咏唱 (装备, 卡片)
+//
+// 延时:  0 - 一切都影响该技能的延时
+//        1 - dex不影响该技能延时
+//        2 - 布拉奇之诗不影响该技能延时
+//        4 - 道具属性不影响该技能延时 (装备, 卡片)
+//
+// Note: Values are bit fields, add them up to combine their effects.
+// Note: Delay setting '1' only makes sense when delay_dependon_dex is enabled.
+// Example: 46,1,1 = Double Strafe's cast time and delay is not affected by dex.
+
+//<Skill id>,<Cast: 1 or 0>,<Delay (Optional): 1 or 0>
+// Cast: 设定为1时, dex不影响技能发动速度
+// Cast: 设定为2时, cast-rate cannot be reduced by Suffragium and the like
+// Cast: 设定为3时, same effect as 1 + 2
+// Cast: 设定为0时, dex影响技能发动速度
+// Delay: 设定为1时, agi不影响技能发动后的硬直时间
+// Delay: 设定为2时, delay cannot be reduced by Suffragium and the like
+// Delay: 设定为0时, agi影响技能发动后的硬直时间
+// 举例 - 46,1,1 = 二连矢技能中,dex/agi不影响发动时间和延迟
+// 根据预设值, agi无法影响技能发动后延迟,所以在这个数据中不需要设定'x,0,1'
+136,0,2	//AS_SONICBLOW
+263,0,2	//六合拳
+272,0,2	//连环全身掌
+273,0,2	//猛龙夸强
+336,1	//想念你
+366,1	//魔力增幅
+370,1	//猛虎硬爬山
+371,0,2	//伏虎拳
+372,0,2	//气绝崩击
+394,0,2	//CG_ARROWVULCAN
+403,3	//速读术
+408,1	//爸妈我爱您
+409,1	//爸妈我想念您
+410,1	//宝贝请来这里
+482,1	//双倍投掷
+462,1	//凯易哲
+496,1	//宽广配药
+497,1	//宽广配药
+498,1	//宽广配药
+512,3	//百步穿杨
+1014,1	//舍身取义
+10010,3	//下达战斗命令
+10011,3	//复兴公会员体力
+10012,6	//恢复公会员体力
+10013,7	//紧急呼叫
+
+// Renewal修改部分
+157,1	//-- 能量外套
+483,1	//-- 咖般塔音
+
+// Renewal新技能部分
+2205,1 //WL_MARSHOFABYSS
+
+// Mercenary Skills
+8214,7	//MA_CHARGEARROW
+8215,7	//MA_SHARPSHOOTING
+8217,7	//ML_BRANDISHSPEAR
+8218,7	//ML_SPIRALPIERCE
+8221,7	//ML_DEVOTION
+8222,7	//MER_MAGNIFICAT
+8225,7	//MER_CRASH
+8234,7	//MER_DECAGI
+8235,7	//MER_SCAPEGOAT
+8238,7	//MER_KYRIE
+8240,7	//MER_INCAGI

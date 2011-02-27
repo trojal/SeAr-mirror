@@ -1,0 +1,21 @@
+// Cookie Bag Obtainable Items Database
+//
+// Structure of Database:
+// GroupID,ItemID,Rate
+
+7,529,5	//糖果//Candy
+7,530,5	//柺杖糖//Candy Cane
+7,538,5	//姜饼//Well-baked Cookie
+7,539,5	//小蛋糕//Piece of Cake
+7,558,1	//巧克力//Chocolate
+7,559,1	//手制巧克力//Hand-made Chocolate
+7,560,1	//手制巧克力//Hand-made White Chocolate
+7,561,1	//白色情人巧克力//White Chocolate
+7,564,4	//肉粽//Rice Ball
+7,570,5	//红色吉祥糖果//Lucky Candy
+7,571,5	//幸运的柺杖糖//Lucky Candy Cane
+7,572,5	//幸运的姜饼//Lucky Cookie
+7,573,1	//巧克力饮料//Chocolate Drink
+7,12122,1	//茶食//Sesame Pastry
+7,12123,1	//油果//Honey Pastry
+7,12124,1	//彩色糕饼//Rainbow Cake

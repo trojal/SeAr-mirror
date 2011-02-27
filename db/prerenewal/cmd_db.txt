@@ -1,0 +1,173 @@
+//-->	自定义玩家指令DB文件	<--
+//-->	免费版玩家指令上限为5条	<--
+// <玩家指令>,<最少参数数量>,<最大参数数量>,{脚本}
+// @cmd_para$[]为脚本可用参数
+// @cmd_pcount为输入变量数
+// 参数数量最大值为128,即@cmd_para$[127]
+// 数字参数请使用atoi(@cmd_para$[])
+// 使用等级设置在atcommand_athena.conf中进行
+
+// 传送你到指定地图指定坐标 (/mm同mapmove)
+mapmove,1,3,{ callfunc "cmd_mapmove"; }
+rura,1,3,{ callfunc "cmd_mapmove"; }
+warp,1,3,{ callfunc "cmd_mapmove"; }
+
+// 传送自己到某人的位置 (/shift同jumpto)
+jumpto,1,1,{ callfunc "cmd_jumpto"; }
+warpto,1,1,{ callfunc "cmd_jumpto"; }
+goto,1,1,{ callfunc "cmd_jumpto"; }
+
+// 瞬移到地图的其他地方
+jump,0,2,{ callfunc "cmd_jump"; }
+
+// 查找某人所在的地图，如果没有目标玩家则返回自身坐标
+where,1,1,{ callfunc "cmd_where"; }
+
+// 设置你的重生点
+save,0,0,{ getmapxy .@m$,.@x,.@y,0; save .@m$,.@x,.@y; dispmes msg(6); }
+
+// 传送到你最后保存的地方
+return,0,0,{ callfunc "cmd_load"; }
+load,0,0,{ callfunc "cmd_load"; }
+
+// 开始结束公会战
+agitstart,0,0,{ if( agitstart() ) dispmes msg(72); else dispmes msg(73); }
+agitstart2,0,0,{ if( agitstart2() ) dispmes msg(403); else dispmes msg(404); }
+agitend,0,0,{ if( agitend() ) dispmes msg(74); else dispmes msg(75); }
+agitend2,0,0,{ if( agitend2() ) dispmes msg(405); else dispmes msg(406); }
+
+// PVP/GVG/CAMP开启关闭
+gvgon,0,0,{ getmapxy .@m$,.@x,.@y,0; if( gvgon(.@m$) ) dispmes msg(34); else dispmes msg(163); }
+pvpon,0,0,{ getmapxy .@m$,.@x,.@y,0; if( pvpon(.@m$) ) dispmes msg(32); else dispmes msg(161); }
+gvgoff,0,0,{ getmapxy .@m$,.@x,.@y,0; if( gvgoff(.@m$) ) dispmes msg(33); else dispmes msg(162); }
+pvpoff,0,0,{ getmapxy .@m$,.@x,.@y,0; if( pvpoff(.@m$) ) dispmes msg(31); else dispmes msg(160); }
+campon,0,0,{ getmapxy .@m$,.@x,.@y,0; campon(.@m$); dispmes "阵营模式已经打开"; }
+campon2,0,0,{ getmapxy .@m$,.@x,.@y,0; campon(.@m$,2); dispmes "阵营模式(显伤害)已经打开"; }
+campoff,0,0,{ getmapxy .@m$,.@x,.@y,0; campoff(.@m$); dispmes "阵营模式已经关闭"; }
+
+// 设定当前地图内是否可以使用某些技能
+skillon,0,0,{ getmapxy .@m$,.@x,.@y,0; setmapflag(.@m$,mf_noskill); dispmes msg(244); }
+skilloff,0,0,{ getmapxy .@m$,.@x,.@y,0; removemapflag(.@m$,mf_noskill); dispmes msg(243); }
+
+// 增加/减少你的现金点或者卡普拉点
+cash,1,1,{ set .@i, atoi(@cmd_para$[0]); set #CASHPOINTS, #CASHPOINTS+.@i; dispmes "得到"+.@i+"现金点数, 总共"+#CASHPOINTS+"点"; }
+points,1,1,{ set .@i, atoi(@cmd_para$[0]); set #KAFRAPOINTS, #KAFRAPOINTS+.@i; dispmes "得到"+.@i+"卡普拉点数, 总共"+#KAFRAPOINTS+"点"; }
+
+// 增加金钱
+zeny,1,1,{ set .@i, atoi(@cmd_para$[0]); set ZENY, ZENY + .@i; dispmes msg(176); }
+
+// 创造一个道具，用名称或者ID都可以
+item,1,2,{ set .@i, atoi(@cmd_para$[0]); set .@j, atoi(@cmd_para$[1]); if(.@j < 1) set .@j, 1; if( existitem(.@i) ) getitem .@i, .@j; else if( existitem(@cmd_para$[0]) ) getitem @cmd_para$[0], .@j; else { dispmes msg(19); end; } dispmes msg(18); }
+
+// 创造一个附带条件的道具，可以设定刷新的数量、鉴定、精炼值、是否破坏、卡片1、卡片2、卡片3、卡片4
+item2,9,9,{ set .@i, atoi(@cmd_para$[0]); if( existitem(.@i) ) getitem2 .@i, atoi(@cmd_para$[1]), atoi(@cmd_para$[2]), atoi(@cmd_para$[3]), atoi(@cmd_para$[4]), atoi(@cmd_para$[5]), atoi(@cmd_para$[6]), atoi(@cmd_para$[7]), atoi(@cmd_para$[8]); else if( existitem(@cmd_para$[0]) ) getitem2 @cmd_para$[0], atoi(@cmd_para$[1]), atoi(@cmd_para$[2]), atoi(@cmd_para$[3]), atoi(@cmd_para$[4]), atoi(@cmd_para$[5]), atoi(@cmd_para$[6]), atoi(@cmd_para$[7]), atoi(@cmd_para$[8]); else { dispmes msg(19); end; } dispmes msg(18); }
+
+// 删除一个道具，用名称或者ID都可以
+delitem,2,2,{ callfunc "cmd_delitem"; }
+
+// 刷新指定数量的魔物
+monster,1,2,{ callfunc "cmd_monster",0; }
+spawn,1,2,{ callfunc "cmd_monster",0; }
+monsterbig,1,2,{ callfunc "cmd_monster",2; }
+monstersmall,1,2,{ callfunc "cmd_monster",1; }
+
+// 杀死地图上所有魔物(掉落道具)
+killmonster,0,0,{ getmapxy .@m$,.@x,.@y,0; killmonsterall .@m$,13; dispmes msg(165); }
+
+// 杀死地图上所有魔物(不掉落物品)
+killmonster2,0,0,{ getmapxy .@m$,.@x,.@y,0; killmonsterall .@m$,5; dispmes msg(165); }
+
+// 刷新以你为首领的小兵魔物(它们会在一段时间后消失)
+summon,1,2,{ if( existmob(atoi(@cmd_para$[0])) ) set .@id, atoi(@cmd_para$[0]); else if( !set(.@id, existmob(@cmd_para$[0])) ) { dispmes msg(40); end; } set .@i, atoi(@cmd_para$[1]); if( .@i < 1 ) set .@i,1; else if( .@i > 60 ) set .@i,60; summon "--ja--", .@id, .@i; dispmes msg(39); }
+
+// 刷新一个玩家的复制人
+clone,1,1,{ callfunc "cmd_clone",1; }
+slaveclone,1,1,{ callfunc "cmd_clone",2; }
+evilclone,1,1,{ callfunc "cmd_clone",0; }
+
+// 让你免受攻击(魔物/玩家/技能无法以你为目标，管理指令)
+battleignore,0,0,{ if( battleignore(2) ) dispmes "你不会受到攻击"; else dispmes "回到正常状态"; }
+monsterignore,0,0,{ if( battleignore(2) ) dispmes "你不会受到攻击"; else dispmes "回到正常状态"; }
+
+// 不需重启服务器的情况下改变battle_config标签
+setbattleflag,2,2,{ setbattleflag @cmd_para$[0],@cmd_para$[1]; dispmes "战斗设置已按要求更改"; }
+
+// 改变外观为魔物
+disguise,1,1,{ callfunc "cmd_disguise",1; }
+undisguise,0,0,{ callfunc "cmd_disguise",0; }
+disguiseall,1,1,{ callfunc "cmd_disguise",3; }
+undisguiseall,0,0,{ callfunc "cmd_disguise",2; }
+
+//播放聲音給身邊玩家，參數為文件名
+sound,1,1,{ if( strcut(@cmd_para$[0], getstrlen(@cmd_para$[0])-5,4) != ".wav" ) soundeffectall @cmd_para$[0]+".wav",0; else soundeffectall @cmd_para$[0],0; }
+
+//結婚、離婚、收養
+marry,2,2,{ if( !isloggedin(getcharid(3,@cmd_para$[0])) ) dispmes "玩家"+@cmd_para$[0]+"不在綫"; else if( !isloggedin(getcharid(3,@cmd_para$[1])) ) dispmes "玩家"+@cmd_para$[1]+"不在綫"; else { set .@id, getcharid(3); set .@name$, @cmd_para$[1]; attachrid getcharid(3,@cmd_para$[0]); if( marriage(.@name$) ) { wedding; getitem sex?2634:2635,1; attachrid getcharid(3,.@name$); getitem sex?2634:2635,1; attachrid .@id; dispmes "祝他們幸福"; } else { attachrid .@id; dispmes "这两个人不能结婚，因为他们俩中的一个要么是宝宝要么已经结婚了。"; } } }
+divorce,1,1,{ if( !isloggedin(getcharid(3,@cmd_para$[0])) ) dispmes "玩家"+@cmd_para$[0]+"不在綫"; else { set .@id, getcharid(3); attachrid getcharid(3,@cmd_para$[0]); if(divorce()) { attachrid .@id; dispmes @cmd_para$[0]+"和他的配偶离婚了"; } else { attachrid .@id; dispmes "離婚失敗"; } } }
+adopt,3,3,{ if( !isloggedin(getcharid(3,@cmd_para$[0])) ) dispmes "玩家"+@cmd_para$[0]+"不在綫"; else if( !isloggedin(getcharid(3,@cmd_para$[1])) ) dispmes "玩家"+@cmd_para$[1]+"不在綫"; else if( !isloggedin(getcharid(3,@cmd_para$[2])) ) dispmes "玩家"+@cmd_para$[2]+"不在綫"; else if( adopt(@cmd_para$[0],@cmd_para$[1],@cmd_para$[2]) ) dispmes "祝他們幸福"; }
+
+//變性
+changesex,0,0,{ changesex; }
+
+//顯示/隱藏npc
+shownpc,0,0,{ if(getnpcdata(0,@cmd_para$[0]) == -1) dispmes msg(111); else { enablenpc @cmd_para$[0]; dispmes msg(110); } }
+hidenpc,0,0,{ if(getnpcdata(0,@cmd_para$[0]) == -1) dispmes msg(111); else { disablenpc @cmd_para$[0]; dispmes msg(112); } }
+
+//坐騎(包括鳥，龍，機器人)
+mount,0,1,{ if( checkriding() ) { setriding 0; dispmes msg(214); } else if( checkdisguise() ) dispmes msg(212); else { setriding !atoi(@cmd_para$[0])?1:atoi(@cmd_para$[0]); if( checkriding() ) dispmes msg(102); else dispmes msg(213); } }
+
+//染色、染发、换发型
+dye,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_cloth_color") && .@id <= getbattleflag("max_cloth_color")){ setlook 7, .@id; dispmes msg(36); } else dispmes msg(37); }
+ccolor,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_cloth_color") && .@id <= getbattleflag("max_cloth_color")){ setlook 7, .@id; dispmes msg(36); } else dispmes msg(37); }
+hairstyle,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_style")){ setlook 1, .@id; dispmes msg(36); } else dispmes msg(37); }
+hstyle,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_style")){ setlook 1, .@id; dispmes msg(36); } else dispmes msg(37); }
+haircolor,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_color")){ setlook 6, .@id; dispmes msg(36); } else dispmes msg(37); }
+hcolor,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id >= getbattleflag("min_hair_color")){ setlook 6, .@id; dispmes msg(36); } else dispmes msg(37); }
+model,3,3,{ set .@id1, atoi(@cmd_para$[0]); set .@id2, atoi(@cmd_para$[1]); set .@id3, atoi(@cmd_para$[2]); if(.@id1 >= getbattleflag("min_cloth_color") && .@id1 <= getbattleflag("max_cloth_color") && .@id2 >= getbattleflag("min_hair_style") && .@id3 >= getbattleflag("min_hair_color")){ setlook 7, .@id1; setlook 1, .@id2; setlook 6, .@id3; dispmes msg(36); } else dispmes msg(37); }
+
+//改变玩家外观
+changelook,1,2,{ setarray .@pos[0],4,5,3,2,8,9; set .@id1, atoi(@cmd_para$[0]); set .@id2, atoi(@cmd_para$[1]); if(@cmd_pcount == 2) { if(.@id1 < 1) set .@id1,1; else if(.@id1 > 6) set .@id1,6; set .@id1, .@pos[.@id1-1]; } else { set .@id2,.@id1; set .@id1,4; } changelook .@id1,.@id2; }
+
+//日夜
+day,0,0,{ if( !day() ) dispmes msg(90); }
+night,0,0,{ if( !night() ) dispmes msg(89); }
+
+//重置/得到技能、属性点数
+skreset,0,0,{ resetskill; dispmes msg(206,strcharinfo(0)); }
+streset,0,0,{ resetstatus; dispmes msg(207,strcharinfo(0)); }
+reset,0,0,{ resetskill; resetstatus; dispmes msg(208,strcharinfo(0)); }
+skpoint,0,0,{ set .@i, atoi(@cmd_para$[0]); if( .@i < 0 && SkillPoint < .@i*-1 ) set .@j, 0; else set .@j, SkillPoint+.@i; if(.@j != SkillPoint) { set SkillPoint,.@j; dispmes msg(175); } else { if(.@i < 0) dispmes msg(41); else dispmes msg(149); } }
+stpoint,0,0,{ set .@i, atoi(@cmd_para$[0]); if( .@i < 0 && StatusPoint < .@i*-1 ) set .@j, 0; else set .@j, StatusPoint+.@i; if(.@j != SkillPoint) { set StatusPoint,.@j; dispmes msg(174); } else { if(.@i < 0) dispmes msg(41); else dispmes msg(149); } }
+
+//阵营
+camp,1,1,{ set .@id, atoi(@cmd_para$[0]); if(.@id > getbattleflag("max.camp")) { dispmes "请输入 0 - "+getbattleflag("max_camp")+" 之间的数字"; end; } set PC_CAMP, .@id; if( !PC_CAMP ) dispmes "退出所有阵营"; else dispmes "加入阵营: "+PC_CAMP; }
+
+auction,0,0,{ openauction; }
+mail,0,0,{ openmail; }
+font,1,1,{ set .@id, atoi(@cmd_para$[0]); if( .@id < 0 || .@id > 9 ) dispmes "字体无效, 请使用0-9之间的值"; else { set .@id,setfont(.@id); if( .@id == 0 ) dispmes "字体恢复"; else dispmes "字体已变更"; } }
+tonpc,1,1,{ if(getmapxy(.@m$,.@x,.@y,1,@cmd_para$[0]) == -1) dispmes msg(111); else { warp .@m$,.@x,.@y; dispmes msg(0); } }
+option,3,3,{ set .@id1,atoi(@cmd_para$[0]); set .@id2,atoi(@cmd_para$[1]); set .@id3,atoi(@cmd_para$[2]); if(.@id1 < 0) set .@id1,0; if(.@id2 < 0) set .@id2,0; if(.@id3 < 0) set .@id3,0; setoption1 .@id1; setoption2 0xFF,0; if(.@id2) setoption2 .@id2, 1; setoption 0; setoption 0xFFFFF,0; if(.@id3) setoption .@id3, 1; dispmes msg(9); }
+effect,1,1,{ specialeffect2 atoi(@cmd_para$[0]),ALL_CLIENT; dispmes msg(229); }
+misceffect,1,1,{ misceffect2 atoi(@cmd_para$[0]); dispmes msg(229); }
+aura,1,1,{ setaura atoi(@cmd_para$[0]); if(PC_AURA) dispmes "人物光环已显示。"; else dispmes "人物光环已关闭。"; }
+title,0,1,{ if(getstrlen(@cmd_para$[0]) > 12) { dispmes "称号不允许超过12字节！"; end; } settitle @cmd_para$[0]; if( @cmd_pcount != 0 ) dispmes "显示角色称号"; else dispmes "关闭显示角色称号"; }
+makeegg,1,1,{ if(!set(.@id,existitem(@cmd_para$[0]))) if(!set(.@id,existmob(@cmd_para$[0]))) set .@id, atoi(@cmd_para$[0]); if( .@id < 0 )set .@id,.@id*-1; if(!makepet(.@id)) dispmes msg(180); }
+hatch,0,0,{ if(!getpetinfo(0)) bpet; else dispmes msg(181); }
+
+//======================= 以下为自定义指令 =========================
+// 打开悬赏窗口
+w&r,0,0,{ if((getcmduserlv() < getbattleflag("gm_cant_drop_min_lv") && getbattleflag("gm_cant_drop_min_lv"))||(getcmduserlv() > getbattleflag("gm_cant_drop_max_lv") && getbattleflag("gm_cant_drop_max_lv"))) doevent "Wanted_Reward::OnFunc"; else dispmes "您不能使用悬赏系统"; }
+
+// 租赁指令
+rentitem,2,2,{ rentitem atoi(@cmd_para$[0]),atoi(@cmd_para$[1]); }
+
+// 给全服物品, 仅支持id，不支持物品名
+// @giveall 4001 10	-> 给在线每人10张波利卡片
+// @giveall 1 1000000	-> 给在线每人100W
+// @giveall 2 100		-> 给在线每人100点points
+// @giveall 3 50		-> 给在线每人50点cash
+giveall,2,2,{ callfunc "Give_to_All"; }
+
+// 设置变量
+// set PC_Score 100000
+set,2,2,{ setd @cmd_para$[0],@cmd_para$[1]; }
