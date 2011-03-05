@@ -241,8 +241,11 @@ function	script	cmd_clone	{
 function	script	cmd_disguise	{
 	if(getarg(0)&1)
 	{
-		if( existmob(atoi(@cmd_para$[0])) ) 
-			set .@id, atoi(@cmd_para$[0]); 
+		set .@id2, atoi(@cmd_para$[0]);
+		if( existmob(.@id2) ) 
+			set .@id, .@id2;
+		else if( (.@id2 >= 46 && .@id2 <= 125) || .@id2 == 139 || (.@id2 >= 400 && .@id2 <= MAX_NPC_CLASS) || .@id2 == 32767 ) 
+			set .@id, .@id2;
 		else if( !set(.@id, existmob(@cmd_para$[0])) ) 
 		{ 
 			if( set(.@id, getnpcdata(10,@cmd_para$[0])) == -1 )
