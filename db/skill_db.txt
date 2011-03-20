@@ -777,8 +777,8 @@
 2250,3,6,2,1,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_COBALTTRAP,иНю╤ощзЕ
 2251,3,6,2,2,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_MAIZETRAP,╣╜╩фощзЕ
 2252,3,6,2,4,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_VERDURETRAP,гЮблощзЕ
-2253,3,6,2,3,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_FIRINGTRAP,╩ПяФощзЕ
-2254,3,6,2,1,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_ICEBOUNDTRAP,к╙╤ЁощзЕ
+2253,3,6,2,0,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_FIRINGTRAP,╩ПяФощзЕ
+2254,3,6,2,0,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_ICEBOUNDTRAP,к╙╤ЁощзЕ
 // ╩З╫Ё
 2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,д╖╣╪╩Зп╣ж╢уу
 2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,		NC_BOOSTKNUCKLE,еГиД╥их╜
