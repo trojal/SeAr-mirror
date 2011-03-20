@@ -1,24 +1,34 @@
 //===== eAthena Script =======================================
-//= Yuno Fields Renewal Monster Spawn Script
+//= Yuno Fields Monster Spawn Script
 //===== By: ==================================================
-//= Chilly
+//= Athena (1.0)
 //===== Current Version: =====================================
-//= 1.0+
+//= 2.0
 //===== Compatible With: =====================================
 //= Any Athena Version
-//===== Description: =========================================
-//= Official kRO renewal monster spawns
 //===== Additional Comments: =================================
-//= 1.0 First Release
-//= 1.0+ Corrected Most Official Renewal Spawn [5511]
+//= 1.1 fixed tabs, names [Lupus]
+//= 1.2 New/Better Spawn [Muad_Dib]
+//= 1.3 Fix Up [Darkchild]
+//= 1.4 Updated monster spawns. Many thanks to vicious_pucca for
+//=	providing the information [MasterOfMuppets]
+//= 1.5 Updated after Episode 10.4 - Hugel [Poki#3]
+//=	Mob quantity is custom.
+//= 1.5b Changed the spawn numbers a bit. [Poki#3]
+//=	Thanks to Playtester and Emperium.org
+//= 1.6 Fixed Yuno Field 10. Mob amount sugested by Playtester [Poki#3]
+//= 1.7 Updated by using Tharis' Homun AI, by Tharis [Vicious]
+//= 1.8 Added kRO 10.1 spawns where they fit [Playtester]
+//= 1.9 More accurate spawns [Playtester]
+//= 2.0 Updated spawns to renewal. [L0ne_W0lf]
 //============================================================
 
 //==================================================
 // yuno_fild01 - Border Posts
 //==================================================
+yuno_fild01,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,50,0,0,0
 yuno_fild01,0,0,0,0	monster	ÁÔÓ¬	1114,35,0,0,0
 yuno_fild01,0,0,0,0	monster	ó«òë	1139,35,0,0,0
-yuno_fild01,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,50,0,0,0
 yuno_fild01,0,0,0,0	monster	ºì²İ	1078,15,1800000,900000,1
 yuno_fild01,70,370,10,10	monster	À¶²İ	1079,2,1800000,900000,1
 yuno_fild01,70,370,10,10	monster	¹âÃ¢²İ	1083,1,1800000,900000,1
@@ -31,8 +41,8 @@ yuno_fild01,0,0,0,0	monster	ÂÌ²İ	1080,20,1800000,900000,1
 //==================================================
 // yuno_fild02 - Kiel Khayr's Cottage
 //==================================================
-yuno_fild02,0,0,0,0	monster	Æß²Ê´ó×ìÄñ	1369,35,0,0,0
 yuno_fild02,0,0,0,0	monster	É³Ñı	1386,130,0,0,0
+yuno_fild02,0,0,0,0	monster	Æß²Ê´ó×ìÄñ	1369,35,0,0,0
 yuno_fild02,0,0,0,0	monster	ÄñÈË¹ş±È	1376,35,0,0,0
 yuno_fild02,0,0,0,0	monster	ºì²İ	1078,10,1800000,900000,1
 yuno_fild02,0,0,0,0	monster	»Æ²İ	1081,10,1800000,900000,1
@@ -41,9 +51,9 @@ yuno_fild02,0,0,0,0	monster	ÂÌ²İ	1080,10,1800000,900000,1
 //==================================================
 // yuno_fild03 - El Mes Plateau
 //==================================================
-yuno_fild03,0,0,0,0	monster	Ä§Ç¼	1372,35,0,0,0
-yuno_fild03,0,0,0,0	monster	É³Ñı	1386,35,0,0,0
 yuno_fild03,0,0,0,0	monster	ÄñÈË¹ş±È	1376,130,0,0,0
+yuno_fild03,0,0,0,0	monster	É³Ñı	1386,35,0,0,0
+yuno_fild03,0,0,0,0	monster	Ä§Ç¼	1372,35,0,0,0
 yuno_fild03,0,0,0,0	monster	ÌìÊ¹²¨Àû	1096,1,3600000,1800000,1
 yuno_fild03,0,0,0,0	monster	¶ñÄ§²¨Àû	1582,1,3600000,1800000,1
 yuno_fild03,0,0,0,0	monster	ºì²İ	1078,15,1800000,900000,1
@@ -55,14 +65,19 @@ yuno_fild03,358,215,10,10	monster	À¶²İ	1079,4,1800000,900000,1
 //==================================================
 // yuno_fild04 - El Mes Plateau
 //==================================================
-yuno_fild04,0,0,0,0	monster	Ä§Ç¼	1372,35,0,0,0
-yuno_fild04,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,35,0,0,0
 yuno_fild04,0,0,0,0	monster	ÄñÈË¹ş±È	1376,130,0,0,0
-yuno_fild04,0,0,0,0	monster	Ê¥ÌìÊ¹²¨Àû	1388,1,3600000,1800000,1
+yuno_fild04,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,35,0,0,0
+yuno_fild04,0,0,0,0	monster	Ä§Ç¼	1372,35,0,0,0
 yuno_fild04,0,0,0,0	monster	²¨ÀûÖ®Íõ	1090,1,3600000,1800000,1
+yuno_fild04,0,0,0,0	monster	Ê¥ÌìÊ¹²¨Àû	1388,1,3600000,1800000,1
 yuno_fild04,0,0,0,0	monster	ºì²İ	1078,10,1800000,900000,1
 yuno_fild04,0,0,0,0	monster	»Æ²İ	1081,10,1800000,900000,1
 yuno_fild04,0,0,0,0	monster	ÂÌ²İ	1080,10,1800000,900000,1
+
+//==================================================
+// yuno_fild05 - El Mes Plateau
+//==================================================
+// No Spawns/Disabled Map = 13.3
 
 //==================================================
 // yuno_fild06 - Yuno Field
@@ -77,8 +92,8 @@ yuno_fild06,0,0,0,0	monster	ÂÌ²İ	1080,10,0,0,0
 // yuno_fild07 - El Mes Gorge (Valley of Abyss)
 //==================================================
 yuno_fild07,0,0,0,0	monster	Ä§Ç¼	1372,90,0,0,0
-yuno_fild07,0,0,0,0	monster	Æß²Ê´ó×ìÄñ	1369,30,0,0,0
 yuno_fild07,0,0,0,0	monster	ÄñÈË¹ş±È	1376,50,0,0,0
+yuno_fild07,0,0,0,0	monster	Æß²Ê´ó×ìÄñ	1369,30,0,0,0
 yuno_fild07,0,0,0,0	monster	ºì²İ	1078,10,180000,90000,1
 yuno_fild07,0,0,0,0	monster	ÂÌ²İ	1080,10,180000,90000,1
 yuno_fild07,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
@@ -86,13 +101,13 @@ yuno_fild07,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
 //==================================================
 // yuno_fild08 - Kiel Khayr's Academy
 //==================================================
+yuno_fild08,200,300,290,100	monster	Æß²Ê´ó×ìÄñ	1369,50,0,0,0
+yuno_fild08,272,205,100,120	monster	Æß²Ê´ó×ìÄñ	1369,30,0,0,0
+yuno_fild08,230,110,250,90	monster	Æß²Ê´ó×ìÄñ	1369,50,0,0,0
+yuno_fild08,200,300,290,100	monster	Ğ°¶ñÏòÈÕ¿û	1368,12,0,0,0
+yuno_fild08,272,205,100,120	monster	Ğ°¶ñÏòÈÕ¿û	1368,6,0,0,0
+yuno_fild08,230,110,250,90	monster	Ğ°¶ñÏòÈÕ¿û	1368,12,0,0,0
 yuno_fild08,0,0,0,0	monster	Ä§Ç¼	1372,30,0,0,0
-yuno_fild08,200,300,290,100	monster	Æß²Ê´ó×ìÄñ	1369,45,0,0,0
-yuno_fild08,272,205,100,120	monster	Æß²Ê´ó×ìÄñ	1369,45,0,0,0
-yuno_fild08,230,110,250,90	monster	Æß²Ê´ó×ìÄñ	1369,40,0,0,0
-yuno_fild08,200,300,290,100	monster	Ğ°¶ñÏòÈÕ¿û	1368,10,0,0,0
-yuno_fild08,272,205,100,120	monster	Ğ°¶ñÏòÈÕ¿û	1368,10,0,0,0
-yuno_fild08,230,110,250,90	monster	Ğ°¶ñÏòÈÕ¿û	1368,10,0,0,0
 yuno_fild08,0,0,0,0	monster	ºì²İ	1078,10,180000,90000,1
 yuno_fild08,0,0,0,0	monster	ÂÌ²İ	1080,10,180000,90000,1
 yuno_fild08,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
@@ -100,20 +115,25 @@ yuno_fild08,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
 //==================================================
 // yuno_fild09 - Schwarzwald Guards Camp
 //==================================================
-yuno_fild09,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,30,0,0,0
 yuno_fild09,0,0,0,0	monster	Æß²Ê´ó×ìÄñ	1369,130,0,0,0
+yuno_fild09,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,30,0,0,0
 yuno_fild09,0,0,0,0	monster	É³Ñı	1386,30,0,0,0
 yuno_fild09,0,0,0,0	monster	ºì²İ	1078,10,180000,90000,1
 yuno_fild09,0,0,0,0	monster	ÂÌ²İ	1080,10,180000,90000,1
 yuno_fild09,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
 
 //==================================================
+// yuno_fild10 - Yuno Field
+//==================================================
+// No Spawns/Disabled Map - 13.3
+
+//==================================================
 // yuno_fild11 - Yuno Field
 //==================================================
 yuno_fild11,0,0,0,0	monster	Ä§Ç¼	1372,100,0,0,0
-yuno_fild11,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,15,0,0,0
-yuno_fild11,65,294,70,160	monster	Ğ°¶ñÏòÈÕ¿û	1368,15,0,0,0
-yuno_fild11,225,220,125,135	monster	Ğ°¶ñÏòÈÕ¿û	1368,10,0,0,0
+yuno_fild11,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,23,0,0,0
+yuno_fild11,65,294,70,160	monster	Ğ°¶ñÏòÈÕ¿û	1368,2,0,0,0
+yuno_fild11,225,220,125,135	monster	Ğ°¶ñÏòÈÕ¿û	1368,15,0,0,0
 yuno_fild11,0,0,0,0	monster	ºì²İ	1078,10,180000,90000,1
 yuno_fild11,0,0,0,0	monster	ÂÌ²İ	1080,10,180000,90000,1
 yuno_fild11,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
@@ -121,5 +141,5 @@ yuno_fild11,0,0,0,0	monster	»Æ²İ	1081,10,180000,90000,1
 //==================================================
 // yuno_fild12 - Border Checkpoint
 //==================================================
-yuno_fild12,0,0,0,0	monster	ó«òë	1139,30,0,0,0
 yuno_fild12,0,0,0,0	monster	Ğ°¶ñÏòÈÕ¿û	1368,60,0,0,0
+yuno_fild12,0,0,0,0	monster	ó«òë	1139,30,0,0,0

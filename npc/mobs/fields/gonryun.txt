@@ -1,23 +1,19 @@
 //===== eAthena Script =======================================
-//= Gon Ryun Renewal Monster Spawn Script
+//= Gon Ryun Monster Spawn Script
 //===== By: ==================================================
-//= Chilly
+//= Athena (1.0)
 //===== Current Version: =====================================
-//= 1.0+
+//= 1.2
 //===== Compatible With: =====================================
 //= Any Athena Version
-//===== Description: =========================================
-//= Official kRO renewal monster spawns
 //===== Additional Comments: =================================
-//= 1.0 First Release
-//= 1.0+ Corrected Most Official Renewal Spawn [5511]
+//= 1.1 Official kRO 10.1 spawns [Playtester]
+//= 1.2 Updated to Renewal Spawns [Kisuka]
 //============================================================
 
 //==================================================
 // gon_fild01 - Gonryun Field
 //==================================================
-gon_fild01,0,0,0,0	monster	小花豹	1415,40,0,0,0
 gon_fild01,0,0,0,0	monster	元宵童子	1409,55,0,0,0
+gon_fild01,0,0,0,0	monster	小花豹	1415,40,0,0,0
 gon_fild01,0,0,0,0	monster	黑蛇	1037,10,0,0,0
-gon_fild01,0,0,0,0	monster	绿草	1080,5,0,0,0
-gon_fild01,0,0,0,0	monster	光芒草	1083,1,0,0,0
