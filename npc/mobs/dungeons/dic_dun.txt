@@ -1,30 +1,30 @@
 //===== eAthena Script ========================================
 //= El Dicastes Dungeon Monster Spawn Script
 //===== By: ==================================================
-//= Chilly
+//= Kisuka
 //===== Current Version: =====================================
 //= 1.0
 //===== Compatible With: =====================================
-//= Any Athena Version
+//= eAthena SVN
 //===== Description: =========================================
-//= Official kRO monster spawns
+//= Official monster spawns in El Dicastes Dungeon.
 //===== Additional Comments: =================================
-//= 1.0 First Release
+//= 1.0 Official spawns from Aegis [Kisuka]
 //============================================================
 
 //==================================================
-// dic_dun01 - El Dicastes Dungeon
+// dic_dun01 - Underground Passage Kamidal Tunnel
 //==================================================
-dic_dun01,0,0,0,0	monster	†Î½Ç¼×Ïx	2083,55,0,0,0
-dic_dun01,0,0,0,0	monster	ëp½Ç¼×Ïx	2084,55,0,0,0
-dic_dun01,0,0,0,0	monster	†Î½Ç¼×Ïxµ°	2088,20,0,0,0
-dic_dun01,0,0,0,0	monster	ëp½Ç¼×Ïxµ°	2089,20,0,0,0
+dic_dun01,0,0,0,0	monster	¶À½Ç¼×³æ	2083,50,5000,0,0
+dic_dun01,0,0,0,0	monster	Ë«½Ç¼×³æ	2084,45,5000,0,0
+dic_dun01,0,0,0,0	monster	¶À½Ç¼×³æÂÑ	2088,15,5000,0,0
+dic_dun01,0,0,0,0	monster	Ë«½Ç¼×³æÂÑ	2089,15,5000,0,0
 
 //==================================================
-// dic_dun02 - Scaraba Hole
+// dic_dun02 - Underground Nest Scarab Hole
 //==================================================
-dic_dun02,0,0,0,0	monster	Â¹½Ç¼×Ïx	2085,55,0,0,0
-dic_dun02,0,0,0,0	monster	°Ò½Ç¼×Ïx	2086,75,0,0,0
-dic_dun02,0,0,0,0	monster	Â¹½Ç¼×Ïxµ°	2090,20,0,0,0
-dic_dun02,0,0,0,0	monster	°Ò½Ç¼×Ïxµ°	2091,20,0,0,0
-dic_dun02,0,0,0,0	boss_monster	Å®Íõ¼×Ïx	2087,1,7200000,600000,1
+dic_dun02,0,0,0,0	monster	Â¹½Ç¼×³æ	2085,50,5000,0,0
+dic_dun02,0,0,0,0	monster	¼â½Ç¼×³æ	2086,45,5000,0,0
+dic_dun02,0,0,0,0	monster	Â¹½Ç¼×³æÂÑ	2090,15,5000,0,0
+dic_dun02,0,0,0,0	monster	¼â½Ç¼×³æÂÑ	2091,15,5000,0,0
+dic_dun02,0,0,0,0	boss_monster	Å®»Ê¼×³æ	2087,1,7200000,0,0

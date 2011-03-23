@@ -487,14 +487,14 @@
 1098,Anubis@NPC_DARKBREATH,attack,202,3,500,800,5000,no,target,always,0,,,,,,
 1098,Anubis@WZ_JUPITEL,attack,84,3,500,1500,5000,yes,target,always,0,,,,,,
 1098,Anubis@WZ_JUPITEL,chase,84,3,500,1500,5000,yes,target,always,0,,,,,,
+1098,Anubis@NPC_EMOTION,chase,197,1,200,0,5000,yes,self,always,0,19,0x81,,,,,
+1098,Anubis@NPC_EMOTION,idle,197,1,2000,0,5000,yes,self,always,0,6,0x3095,,,,,
 1098,Anubis@MG_THUNDERSTORM,attack,21,5,1000,1500,5000,no,target,always,0,,,,,,
 1098,Anubis@MG_THUNDERSTORM,chase,21,5,1000,1500,5000,no,target,skillused,18,,,,,,
 1098,Anubis@AL_HEAL,attack,28,5,5000,500,5000,yes,self,myhpltmaxrate,20,,,,,,
 1098,Anubis@AL_HEAL,idle,28,5,10000,500,5000,yes,self,myhpltmaxrate,20,,,,,,
 1098,Anubis@AL_HEAL,chase,28,5,10000,500,5000,yes,self,myhpltmaxrate,20,,,,,,
 1098,Anubis@AS_SONICBLOW,attack,136,10,500,800,5000,no,target,always,0,,,,,,
-1098,Anubis@NPC_EMOTION,chase,197,1,200,0,5000,yes,self,always,0,19,0x81,,,,,
-1098,Anubis@NPC_EMOTION,idle,197,1,2000,0,5000,yes,self,always,0,6,0x3095,,,,,
 1099,Argiope@AS_VENOMDUST,attack,140,1,500,1500,5000,no,target,always,0,,,,,,
 1099,Argiope@NPC_POISON,attack,176,3,500,800,5000,no,target,always,0,,,,,,
 1099,Argiope@NPC_POISONATTACK,attack,188,2,500,500,5000,no,target,always,0,,,,,,
@@ -5566,7 +5566,7 @@
 2010,Majoruros@WZ_HEAVENDRIVE,attack,91,5,500,1200,5000,yes,target,always,0,,,,,,2
 2010,Majoruros@WZ_HEAVENDRIVE,chase,91,5,500,1200,5000,yes,target,always,0,,,,,,2
 
-// Into the Unknown (13.2) (Based on information from Future Wiki) (Viktus)
+// Into the Unknown (13.2)
 2013,Draco@NPC_EMOTION,chase,197,1,2000,0,5000,yes,self,always,0,32,,,,,,
 2013,Draco@SM_PROVOKE,chase,6,10,2000,600,5000,no,target,always,0,,,,,,44,
 2013,Draco@TF_THROWSTONE,chase,152,1,2000,0,5000,no,target,always,0,,,,,,,
