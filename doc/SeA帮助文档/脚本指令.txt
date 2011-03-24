@@ -5885,6 +5885,11 @@ attached character. Guild can be one or the following constants:
 
 ---------------------------------------
 
+*equipinventory <位置序号>;
+	作用：	装备道具栏中某位置的物品，位置序号通过getinventoryinfo比对确认。
+
+---------------------------------------
+
 *getinventoryinfo(<位置序号>,  <类型>);
 	作用：	根据物品栏位置编号查询物品信息。
 		返回-1，如果物品不存在或类型不正确。
