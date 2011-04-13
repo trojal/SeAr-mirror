@@ -6077,8 +6077,14 @@ attached character. Guild can be one or the following constants:
 
 	类型：
 	1：str总值	2：agi总值	3：vit总值	4：int总值	5：dex总值
-	6：luk总值
-	
+	6：luk总值	7：hp		8：maxhp	9：sp		10：maxsp
+	11：左atk	12：左matk	13：右matk	14：移动速度	15：amotion
+	16：adelay	17：dmotion	18：hit		19：flee	20：cri
+	21：flee2	22：属性def	23：属性mdef	24：攻击速度倍率25：属性
+	26：属性等级	27：装备def	28：装备mdef	29：右手武器atk	30：右手精炼atk
+	31：右手武器属性32：右手武器距离33：左手武器atk	34：左右精炼atk	35：左右武器属性
+	36：左手武器距离37：卡片atk	38：装备matk
+
 	id或类型错误时，返回-1。	
 
 ---------------------------------------
