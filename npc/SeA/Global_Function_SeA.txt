@@ -296,3 +296,9 @@ function	script	cmd_disguise	{
 	mes "死于 "+(mob_death_info(6,.@i)==""?"无名氏":mob_death_info(6,.@i))+" 手下";
 	close;
 }
+
+-	script	ViewEquipEvent	-1,{
+OnPCViewEquipEvent:
+	viewequip @eqview_cid;
+	end;
+}
