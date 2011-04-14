@@ -308,6 +308,7 @@ mf_allowks	54
 mf_monster_noteleport	55
 mf_notalk	56
 mf_nocapture	57
+mf_maxdamage	58
 
 cell_walkable	0
 cell_shootable	1
