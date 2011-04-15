@@ -6172,4 +6172,16 @@ OnPCStatCalcEvent:
 作用：@noks的脚本指令版。设置不能被抢怪。
 
 ---------------------------------------
+
+*processhalt;
+
+作用：	在On*Event事件中终止后续运行。
+	支持以下事件:
+	OnPCUseSkillEvent
+	OnNPCDropItemEvent
+	OnPCUseItemEvent
+	OnPCEquipItemEvent
+	OnPCUnequipItemEvent
+---------------------------------------
+
 结束。
