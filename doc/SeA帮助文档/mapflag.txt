@@ -63,3 +63,6 @@ guildlock		无法加入公会
 noautoloot		无法自动拾取
 nomobinfo		不显示魔物等级血量等信息
 notalk			所在地图无法收到聊天频道所有信息
+mf_nocapture		禁止捕捉宠物
+mf_maxdamage		最大伤害限定
+mf_notoken		禁止使用不死之证
