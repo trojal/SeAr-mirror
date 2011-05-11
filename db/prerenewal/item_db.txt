@@ -2558,7 +2558,7 @@
 5408,Old_Bandanna,Old Bandana,5,20,,200,,5,,0,0xFFFFFFFF,7,0,256,,0,,6,{ bonus bInt,2; bonus bMaxSP,50; bonus bCastrate,10; },{},{}
 5409,New_Cowboy_Hat,Purple Cowboy Hat,5,20,,500,,4,,0,0xFFFFFFFF,7,2,256,,0,1,411,{ bonus bMaxSP,50; bonus bInt,2; bonus bVit,2; },{},{}
 5410,Bread_Bag2,Brown Paper Bag Hat,5,20,,200,,6,,0,0xFFFFFFFF,7,2,769,,0,1,412,{ bonus bMaxHP,100; bonus2 bResEff,Eff_Stun,400; bonus2 bSubRace,RC_DemiHuman,4; },{},{}
-//5411,White_Snake_Hat,White Snake Hat,5,20,,500,,2,,0,0xFFFFFFFF,7,2,256,,0,1,413,{ bonus bDex,2; },{},{}
+5411,White_Snake_Hat,White Snake Hat,5,20,,500,,2,,0,0xFFFFFFFF,7,2,256,,0,1,413,{ bonus bDex,2; },{},{}
 5412,Sweet_Candy,Sweet Candy,5,20,,100,,1,,0,0xFFFFFFFF,7,2,1,,0,0,414,{},{},{}
 //5413,Popcorn_Hat,Pop Corn Hat,5,20,,300,,2,,0,0xFFFFFFFF,7,2,256,,0,1,415,{ bonus2 bSubEle,Ele_Wind,10; },{},{}
 //5414,Campfire_Hat,Camp Fire Hat,5,20,,300,,2,,0,0xFFFFFFFF,7,2,256,,0,1,416,{ bonus4 bAutoSpellWhenHit,"MG_FIREBALL",5,100,1; bonus2 bSubEle,Ele_Fire,10; },{},{}

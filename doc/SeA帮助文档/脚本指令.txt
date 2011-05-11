@@ -1165,6 +1165,9 @@ EQI_ACC_L (7)     - Accessory 1.
 EQI_ACC_R (8)     - Accessory 2.
 EQI_HEAD_MID (9)  - Middle Headgear (masks and glasses)
 EQI_HEAD_LOW (10) - Lower Headgear (beards, some masks)
+EQI_COSTUME_TOP (11)  - Upper Costume Headgear
+EQI_COSTUME_MID (12) - Middle Costume Headgear
+EQI_COSTUME_LOW (13) - Lower Costume Headgear
 
 Notice that a few items occupy several equipment slots, and if the character is 
 wearing such an item, 'getequipid' will return it's ID number for either slot.
