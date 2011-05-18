@@ -5911,6 +5911,7 @@ attached character. Guild can be one or the following constants:
 		11:	耐久度修复后可以使用的时间
 		12:	当前耐久度
 		13:	耐久度最大值
+		14:	装备序列号(可叠加物品慎用)
 
 ---------------------------------------
 

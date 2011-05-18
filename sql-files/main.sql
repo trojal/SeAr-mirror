@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `auction` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`auction_id`)
 ) ENGINE=MyISAM;
 
@@ -66,6 +67,8 @@ CREATE TABLE IF NOT EXISTS `cart_inventory` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
+  `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
@@ -341,6 +344,8 @@ CREATE TABLE IF NOT EXISTS `guild_storage` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
+  `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `guild_id` (`guild_id`)
 ) ENGINE=MyISAM;
@@ -405,6 +410,8 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
+  `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
@@ -505,6 +512,7 @@ CREATE TABLE IF NOT EXISTS `mail` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM;
 
@@ -672,6 +680,8 @@ CREATE TABLE IF NOT EXISTS `storage` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
+  `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `account_id` (`account_id`)
 ) ENGINE=MyISAM;
@@ -715,5 +725,6 @@ CREATE TABLE IF NOT EXISTS `at_obj` (
   `available_time` int(11) UNSIGNED UNSIGNED NOT NULL default '0',
   `durability` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
   `max_dur` smallint(4) UNSIGNED UNSIGNED NOT NULL default '0',
+  `serialno` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM;
