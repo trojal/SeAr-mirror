@@ -6021,6 +6021,7 @@ attached character. Guild can be one or the following constants:
 *islocked <道具id>;
 	作用：	检查该玩家是否锁定该物品。
 		是则返回1，否则，则返回0。
+	注意：  如果身上有一件独立绑定的道具，该指令也会对该种类道具返回1；
 
 ---------------------------------------
 
