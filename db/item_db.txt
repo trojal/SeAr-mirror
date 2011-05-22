@@ -1481,6 +1481,7 @@
 2563,Reinforcement_Manteau,Reinforcement Manteau,5,0,,300,,18,,1,0x006654E2,7,2,4,,0,1,0,{ bonus bMaxHPRate,3; },{},{}
 2564,Wild_Tail,Ò°ÐÔµÄÎ²°Í,5,20,,0,,16,,0,0xFFFFFFFF,3,2,4,,75,0,0,{ bonus bUnbreakableGarment,0; },{},{}
 2568,Loki's_Muffler,ÂåÆæµÄÅû¼ç,5,20,,400,,1,,0,0xFFFFFFFE,2,2,4,,100,1,0,{ bonus bAgi,1; bonus2 bSkillAtk,"GC_CROSSIMPACT",5; },{},{}
+2573,Archangel_Wings,Archangel Wings,5,0,,200,,18,,1,0xFFFFFFFF,7,2,4,,0,1,1,{},{},{}
 // Accessories
 //===================================================================
 2601,Ring,Á¦Á¿½äÖ¸,5,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,20,0,0,{ bonus bStr,2; },{},{}
@@ -6157,6 +6158,7 @@
 //16588,Thoughtful_Hat_Box
 //16589,Thoughtful_Hat_Box
 //16590,Thoughtful_Hat_Box
+16998,Archangel_Wings_Box,Archangel Wings Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 2573,1; },{},{}
 // Mechanic Mado Gear Cannonball Ammo
 18000,Cannon_Ball,ÅÚµ¯,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
 18001,Holy_Cannon_Ball,ÉñÊ¥ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
