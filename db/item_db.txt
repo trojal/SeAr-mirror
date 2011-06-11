@@ -4804,6 +4804,9 @@
 12561,Mysterious_Seeds,神秘的种子,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
 12573,Fruit_Basket,水果篮,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}
 12574,Mora_Berry,莫拉浆果,2,0,,20,,,,,0xFFFFFFFF,2,2,,,120,,,{ itemheal 0,50; },{},{}
+12580,Universal_Catalog_Silver,Universal Catalog Silver,2,200,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,0; },{},{}
+12581,Universal_Catalog_Gold,Universal Catalog Gold,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
+12591,Universal_Catalog_Bronze,Universal Catalog Bronze,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
 12622,Reins_Of_Mounts,Reins Of Mounts,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if( sc_check(SC_MOUNT_NEW) ) sc_end SC_MOUNT_NEW; else sc_start SC_MOUNT_NEW,-1,0; },{},{}
 12701,Old_Blue_Box_F,神秘箱子,2,,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12702,Old_Bleu_Box,神秘蓝箱,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_BleuBox),1; getitem groupranditem(IG_BleuBox),1; },{},{}
@@ -6158,6 +6161,12 @@
 //16588,Thoughtful_Hat_Box
 //16589,Thoughtful_Hat_Box
 //16590,Thoughtful_Hat_Box
+16677,Universal_Catalog_Gold_Box10,Universal Catalog Gold 10 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,10; },{},{}
+16678,Universal_Catalog_Gold_Box50,Universal Catalog Gold 50 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,50; },{},{}
+16679,Universal_Catalog_Gold_Box10,Universal Catalog Gold 10 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,10; },{},{}
+16680,Universal_Catalog_Gold_Box50,Universal Catalog Gold 50 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,50; },{},{}
+16776,Universal_Catalog_Gold_Box10,Universal Catalog Gold 10 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,10; },{},{}
+16777,Universal_Catalog_Gold_Box50,Universal Catalog Gold 50 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,50; },{},{}
 16998,Archangel_Wings_Box,Archangel Wings Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 2573,1; },{},{}
 // Mechanic Mado Gear Cannonball Ammo
 18000,Cannon_Ball,炮弹,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
