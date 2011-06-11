@@ -1868,7 +1868,6 @@ OnDisable:
 
 moc_fild21,178,239,0	script	黑暗之徒#edq	844,1,1,{
 	if (((rebirth_moc_edq == 4) || (rebirth_moc_edq == 7)) && ($@re_moc == 1)) {
-		set $@re_moc,2;
 		mes "望着无法形容的巨大黑暗时空的缝隙处，被那压迫感惊吓而不自主的向后退了几步";
 		next;
 		mes "在充满光芒与黑暗浑沌的时空缝隙上，感觉到强烈的阴森气息";
@@ -1876,7 +1875,10 @@ moc_fild21,178,239,0	script	黑暗之徒#edq	844,1,1,{
 		mes "[" + strcharinfo(0) + "]";
 		mes "呜... 呜呜";
 		close2;
-		donpcevent "Satan Summon#edq::OnEnable";
+		if($@re_moc == 1) {
+			set $@re_moc,2;
+			donpcevent "Satan Summon#edq::OnEnable";
+		}
 		end;
 	}
 	else {
@@ -1896,11 +1898,11 @@ OnEnable:
 
 OnDisable:
 	disablenpc "黑暗之徒#edq";
-	donpcevent "Time-Space Gap#edq::OnDisable";
+	donpcevent "时空龟裂#edq::OnEnable";
 	end;
 }
 
-moc_fild21,177,239,0	script	Time-Space Gap#edq	844,1,1,{
+moc_fild21,177,239,0	script	时空龟裂#edq	844,1,1,{
 	if ((rebirth_moc_edq == 4) && ($@re_moc == 3)) {
 		mes "The time-space gap's frightening darkness seems to dissipate as Satan Morroc fades away.";
 		next;
@@ -1920,17 +1922,17 @@ moc_fild21,177,239,0	script	Time-Space Gap#edq	844,1,1,{
 	}
 
 OnInit:
-	disablenpc "Time-Space Gap#edq";
+	disablenpc "时空龟裂#edq";
 	end;
 
 OnEnable:
 	initnpctimer;
-	enablenpc "Time-Space Gap#edq";
+	enablenpc "时空龟裂#edq";
 	end;
 
 OnDisable:
 	stopnpctimer;
-	disablenpc "Time-Space Gap#edq";
+	disablenpc "时空龟裂#edq";
 	donpcevent "黑暗之徒#edq::OnEnable";
 	set $@re_moc,0;
 	end;
@@ -1942,7 +1944,7 @@ OnTimer1800000:
 OnTimer21600000:
 	stopnpctimer;
 	set $@re_moc,0;
-	donpcevent "Time-Space Gap#edq::OnDisable";
+	donpcevent "时空龟裂#edq::OnDisable";
 	end;
 }
 
@@ -1965,12 +1967,14 @@ OnDisable:
 	end;
 
 OnMyMobDead:
-	set $@re_moc,3;
-	mapannounce "moc_fild21","I'll let live just a little longer. You'll never find me through this time-space gap!",bc_map,"0xFFFF00";
-	donpcevent "Time-Space Gap#edq::OnEnable";
-	donpcevent "Satan Broadcast#edq::OnDisable";
-	donpcevent "黑暗之徒#edq::OnDisable";
-	disablenpc "Satan Summon#edq";
+	if (mobcount("moc_fild21","Satan Summon#edq::OnMyMobDead") < 1) {
+		set $@re_moc,3;
+		mapannounce "moc_fild21","I'll let live just a little longer. You'll never find me through this time-space gap!",bc_map,"0xFFFF00";
+		donpcevent "时空龟裂#edq::OnEnable";
+		donpcevent "Satan Broadcast#edq::OnDisable";
+		donpcevent "黑暗之徒#edq::OnDisable";
+		disablenpc "Satan Summon#edq";
+	}
 	end;
 
 OnTimer5400000:
