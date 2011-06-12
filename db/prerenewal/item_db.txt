@@ -5844,11 +5844,11 @@
 16776,Universal_Catalog_Gold_Box10,Universal Catalog Gold 10 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,10; },{},{}
 16777,Universal_Catalog_Gold_Box50,Universal Catalog Gold 50 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,50; },{},{}
 // Mechanic Mado Gear Cannonball Ammo
-18000,Cannon_Ball,ÅÚµ¯,10,100,,10,100,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
-18001,Holy_Cannon_Ball,ÉñÊ¥ÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
-18002,Dark_Cannon_Ball,ºÚ°µÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
-18003,Soul_Cannon_Ball,Áé»êÅÚµ¯,10,200,,10,120,,,,0x00000400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
-18004,Iron_Cannon_Ball,ÌúÅÚµ¯,10,500,,10,250,,,,0x00000400,8,2,32768,,1,,8,{},{},{}
+18000,Cannon_Ball,ÅÚµ¯,10,100,,10,100,,,,0x00040400,8,2,32768,,1,,8,{},{},{}
+18001,Holy_Cannon_Ball,ÉñÊ¥ÅÚµ¯,10,200,,10,120,,,,0x00040400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Holy; },{},{}
+18002,Dark_Cannon_Ball,ºÚ°µÅÚµ¯,10,200,,10,120,,,,0x00040400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Dark; },{},{}
+18003,Soul_Cannon_Ball,Áé»êÅÚµ¯,10,200,,10,120,,,,0x00040400,8,2,32768,,1,,8,{ bonus bAtkEle,Ele_Ghost; },{},{}
+18004,Iron_Cannon_Ball,ÌúÅÚµ¯,10,500,,10,250,,,,0x00040400,8,2,32768,,1,,8,{},{},{}
 //Ê±×°
 19507,Clear_Sun,²ÓÀÃÌ«Ñô,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,654,{},{},{}
 19509,Butterfly_Wings_Ear,»Æ·ïµû³á°ò,5,20,,0,,0,,0,0xFFFFFFFF,7,2,512,,1,0,695,{},{},{}
