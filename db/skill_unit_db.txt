@@ -157,7 +157,7 @@
 2485,0xe7,   ,  0, 3,1000,enemy, 0x080	//GN_DEMONIC_FIRE
 2487,0xe8,   ,  0, 3,1000,enemy, 0x000	//GN_FIRE_EXPANSION_SMOKE_POWDER
 2488,0xe9,   ,  0, 3,1000,enemy, 0x000	//GN_FIRE_EXPANSION_TEAR_GAS
-2490,0xea,   ,  0, 0,1000,enemy, 0x000	//GN_HELLS_PLANT
+2490,0xea,   ,  0, 0,1000,all,	 0x000	//GN_HELLS_PLANT
 
 8403,0xed,   , -1, 0,  20,enemy, 0x010	//EL_FIRE_MANTLE
 8406,0xee,   ,  0, 1,1000,all,   0x000	//EL_WATER_BARRIER
