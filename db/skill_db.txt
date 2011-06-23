@@ -862,7 +862,7 @@
 2333,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		SR_CRESCENTELBOW,±ÀÈ­
 2334,0,6,4,0,0x2,1:1:2:2:3,5,1,no,0,0,0,none,0,	SR_CURSEDCIRCLE,Öä¸¿Õó
 2335,0,6,4,0,0x1,0,5,1,yes,0,0,0,weapon,0,	SR_LIGHTNINGWALK,ÉÁµç²½
-2336,12,6,1,0,0,0,5,1,no,0,0,0,weapon,4,		SR_KNUCKLEARROW,ÐÞÂÞÇ¿»÷
+2336,8:9:10:11:12,6,1,0,0,0,5,1,no,0,0,0,weapon,2:3:4:5:6,		SR_KNUCKLEARROW,ÐÞÂÞÇ¿»÷
 2337,0,6,4,0,0x2,5,1,1,no,0,0,0,weapon,0,		SR_WINDMILL,Ðý·çÍÈ
 2338,0,6,4,0,0x1,0,10,1,yes,0,0,0,weapon,0,	SR_RAISINGDRAGON,Ç±ÁúÉýÌì
 //2339,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		SR_GENTLETOUCH,µãÑ¨
