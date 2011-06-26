@@ -792,7 +792,7 @@
 2264,0,6,4,0,0x1,0,1,1,no,0,0,0,none,7,			NC_F_SIDESLIDE,前侧滑
 2265,0,6,4,0,0x1,0,1,1,no,0,0,0,none,7,			NC_B_SIDESLIDE,后侧滑
 2266,0,0,0,0,0,0,4,0,no,0,0,0,none,0,		NC_MAINFRAME,机械结构改造
-2267,0,6,4,0,0x2,2:3:4,3,1,no,0,0,0,misc,0,	NC_SELFDESTRUCTION,自爆
+2267,0,6,4,0,0xC2,2:3:4,3,1,no,0,0,0,misc,0,	NC_SELFDESTRUCTION,自爆
 2268,0,6,4,3:2:4:1,0x1,0,4,0,no,0,0,0,none,0,	NC_SHAPESHIFT,装甲变更
 2269,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_EMERGENCYCOOL,紧急制冷
 2270,0,6,4,0,0x3,7,1,0,no,0,0,0,weapon,0,		NC_INFRAREDSCAN,红外扫描
