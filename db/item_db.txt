@@ -4790,12 +4790,12 @@
 12426,SP_Increase_Potion_(Medium),SP Increase Potion (Medium),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,4; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10; }"; },{},{}
 12427,SP_Increase_Potion_(Large),SP Increase Potion (Large),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,8; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10+5; }"; },{},{}
 12428,Concentrated_White_Potion_Z,Concentrated White Potion Z,2,10,,70,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bHPrecovRate,20; }"; },{},{}
-12429,Savage_Full_Roast,Savage Full Roast,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_STRFood,300000,20; },{},{}
-12430,Cocktail_Warg_Blood,Cocktail Warg Blood,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INTFood,300000,20; },{},{}
-12431,Minor_Stew,Minor Stew,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_VITFood,300000,20; },{},{}
-12432,Siroma_Iced_Tea,Siroma Iced Tea,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_DEXFood,300000,20; },{},{}
-12433,Drosera_Herb_Salad,Drosera Herb Salad,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_AGIFood,300000,20; },{},{}
-12434,Petite_Tail_Noodles,Petite Tail Noodles,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_LUKFood,300000,20; },{},{}
+12429,Savage_Full_Roast,Savage Full Roast,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SAVAGE_STEAK,300000,20; },{},{}
+12430,Cocktail_Warg_Blood,Cocktail Warg Blood,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_COCKTAIL_WARG_BLOOD,300000,20; },{},{}
+12431,Minor_Stew,Minor Stew,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_MINOR_BBQ,300000,20; },{},{}
+12432,Siroma_Iced_Tea,Siroma Iced Tea,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SIROMA_ICE_TEA,300000,20; },{},{}
+12433,Drosera_Herb_Salad,Drosera Herb Salad,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_DROCERA_HERB_STEAMED,300000,20; },{},{}
+12434,Petite_Tail_Noodles,Petite Tail Noodles,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_PUTTI_TAILS_NOODLES,300000,20; },{},{}
 12435,Black_Mass,Black Mass,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itembonus 300000,"{ bonus bAllStats,-rand(5,10); }"; },{},{}
 12436,Vitata_500,Vitata 500,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,100; itembonus 500000,"{ bonus bMaxSPrate,5; bonus bSPrecovRate,20; }"; },{},{}
 12437,Concentrated_Ceromain_Soup,Concentrated Ceromain Soup,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
