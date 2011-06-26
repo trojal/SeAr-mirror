@@ -87,7 +87,6 @@ bonus bIgnoreMDefEle;			无视 n 属性魔法防御 (n值见备注2)
 bonus bIgnoreMdefRate,n;		无视对方 n% 魔法防御
 bonus bDefRatioAtkRace,n;		刺穿 n 种族物理防御 (n值见备注1)
 bonus bDefRatioAtkEle,n;		刺穿 n 属性物理防御 (n值见备注2)
-bonus bIgnoreDefMob,n;			无视 n 魔物防御 (n: 0: 非BOSS, 1: 所有怪)
 bonus2 bIgnoreDefRate,n,x;		无视种族为 n 的对方 x% 的物理防御力 (n值见备注1)
 bonus2 bIgnoreMdefRate,n,x;		无视种族为 n 的对方 x% 的魔法防御力 (n值见备注1)
 
