@@ -1617,6 +1617,8 @@ packet_ver: 26
 0x0856,-1
 0x0857,-1
 0x0858,-1
+0x0859,-1
+0x0288,-1,cashshopbuy,4:8
 
 //Add new packets here
 //packet_ver: 27

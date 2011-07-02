@@ -565,7 +565,7 @@
 521,-9,6,2,-1,0x40,1,10,1,no,0,0,0,weapon,3,	GS_GROUNDDRIFT,四面埋伏
 522,0,0,0,0,0,0,10,1,no,0,0,0,weapon,0,		NJ_TOBIDOUGU,飞刀修练
 523,9,6,1,-1,0x40,0,10,1,no,0,0,0,weapon,0,	NJ_SYURIKEN,投掷飞镖
-524,9,8,1,-1,0x40,0,5,3,no,0,0,0,weapon,0,	NJ_KUNAI,投掷飞刀
+524,9,8,1,-1,0x48,0,5,3,no,0,0,0,weapon,0,	NJ_KUNAI,投掷飞刀
 525,9,8,1,-1,0x6,1,5,-3:-3:-4:-4:-5,yes,0,0,0,weapon,0,	NJ_HUUMA,投掷风魔飞镖
 526,9,6,1,0,0x50,0,10,1,no,0,0,0,misc,0,		NJ_ZENYNAGE,投掷金钱
 527,0,6,4,-1,0,0,5,1,no,0,0,0,weapon,3,		NJ_TATAMIGAESHI,榻榻米攻击
