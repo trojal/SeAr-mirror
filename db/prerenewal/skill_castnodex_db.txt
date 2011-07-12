@@ -50,13 +50,6 @@
 10012,6	//恢复公会员体力
 10013,7	//紧急呼叫
 
-// Renewal修改部分
-157,1	//-- 能量外套
-483,1	//-- 咖般塔音
-
-// Renewal新技能部分
-2205,1 //WL_MARSHOFABYSS
-
 // Mercenary Skills
 8214,7	//MA_CHARGEARROW
 8215,7	//MA_SHARPSHOOTING
