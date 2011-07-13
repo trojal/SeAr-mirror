@@ -6231,4 +6231,16 @@ OnPCStatCalcEvent:
 
 ---------------------------------------
 
+*create_vender AID, "招牌";
+
+作用：	将给于AID的角色根据挂机重载的内容创造露天商店。
+
+---------------------------------------
+
+*cartgetitem2 "<Item name>",<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
+
+作用：	在手推车中得到物品，基本同getitem2.
+
+---------------------------------------
+
 结束。
