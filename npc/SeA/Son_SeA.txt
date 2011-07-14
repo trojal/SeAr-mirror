@@ -441,7 +441,7 @@
 					case Job_Crusader:
 						setarray .@option[0],2500,2,63; break;
 					case Job_Hunter:
-						if(!checkwarg()) { 
+						if(!(Upper & 4)) { 
 							setarray .@option[0],2500,4,127; break;
 						}
 					default: mes "没有适合你的道具"; cutin "son",255; close;
