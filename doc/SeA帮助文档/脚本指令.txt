@@ -3131,11 +3131,38 @@ Valid item levels are:
  1   - Level 1 Weapons
  2   - Level 2 Weapons
  3   - Level 3 Weapons
- 16  - Blacksmith's Stones and Metals
- 32  - Alchemist's Potions
- 64  - Whitesmith's Coins
- 123 - Whitesmith's Nuggets
- 256 - Assassin Cross's Deadly Poison
+ 21  - Blacksmith's Stones and Metals
+ 22  - Alchemist's Potions, Holy Water, Assassin Cross's Deadly Poison
+ 23  - Elemental Converters
+
+---------------------------------------
+
+*cooking <dish level>;
+
+This command will open a produce window on the client connected to the invoking 
+character. The 'dish level' is the number which determines what kind of dish
+level you can produce. You can see the full list of dishes that can be produced in 
+'db/produce_db.txt'.
+
+The window will be shown empty if the invoking character does not have enough of
+the required incredients to cook a dish.
+
+Valid dish levels are:
+
+11 - Level 1 Dish
+12 - Level 2 Dish
+13 - Level 3 Dish
+14 - Level 4 Dish
+15 - Level 5 Dish
+16 - Level 6 Dish
+17 - Level 7 Dish
+18 - Level 8 Dish
+19 - Level 9 Dish
+20 - Level 10 Dish
+
+Altough it's required to set a dish level, it doesn't matter if you set it to 1
+and you want to cook a level 10 dish, as long as you got the required incredients
+to cook the dish the command works.
 
 ---------------------------------------
 
@@ -5673,8 +5700,15 @@ checkquest(<ID>{,PLAYTIME|HUNTING});
 ===========================
 ---------------------------------------
 
-*waitingroom2bg_single("<mapname>",<x>,<y>,"<On Quit Event>","<On Death Event>");
-*waitingroom2bg("<mapname>",<x>,<y>,"<On Quit Event>","<On Death Event>");
+*waitingroom2bg_single(<battle group>,"<mapname>",<x>,<y>,"<npc name>");
+
+Adds the first waiting player from the chat room of given NPC to an
+existing battleground group and warps it to specified coordinates on
+given map.
+
+---------------------------------------
+
+*waitingroom2bg("<mapname>",<x>,<y>,"<On Quit Event>","<On Death Event>"{,"<npc name>"});
 
 <Mapname> and X Y coordinates refer to where the "respawn" base is, where the player group will respawn when they die.
 <On Quit Event> refers to an NPC label that attaches to the character and is run when they relog.
@@ -5683,8 +5717,10 @@ checkquest(<ID>{,PLAYTIME|HUNTING});
 Unlike the prior command, the latter will attach a GROUP in a waiting room to the battleground, and 
 sets the array $@arenamembers[0] where 0 holds the IDs of the first group, and 1 holds the IDs of the second.
 
+If the option parameter is left out, the waiting room of the current NPC is used.
+
 Example:
-	// Battle Group will be refered to as $@KvM01BG_id1, and when they die, respawn at bat_c01,52,129.
+	// Battle Group will be referred to as $@KvM01BG_id1, and when they die, respawn at bat_c01,52,129.
 	set $@KvM01BG_id1, waitingroom2bg("bat_c01",52,129,"KvM01_BG::OnGuillaumeQuit","KvM01_BG::OnGuillaumeDie");
 	end;
 
@@ -5780,9 +5816,16 @@ Example:
 
 *bg_get_data(<Battle Group>,<type>);
 
+Retrieves data related to given battle group. Type can be one of the following:
+
+    0 - Amount of players currently belonging to the group.
+
 ----------------------------------------
 
-*bg_getareausers
+*bg_getareausers(<battle group>,<map name>,<x0>,<y0>,<x1>,<y1>);
+
+Retrieves amount of players belonging to given battle group on given
+map within an specified rectangular area.
 
 ----------------------------------------
 

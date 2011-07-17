@@ -594,7 +594,7 @@ packet_ver: 13
 0x021c,10
 
 //2004-11-15aSakexe
-0x021d,6
+0x021d,6,lesseffect,2
 
 //2004-11-29aSakexe
 packet_ver: 14
@@ -1599,6 +1599,7 @@ packet_ver: 25
 0x0839,66
 0x0842,6,recall2,2
 0x0843,6,remove2,2 
+0x0288,-1,cashshopbuy,2:4:8	//len:points:count?
 
 //2010-11-23aRagexeRE
 packet_ver: 26
@@ -1618,7 +1619,6 @@ packet_ver: 26
 0x0857,-1
 0x0858,-1
 0x0859,-1
-0x0288,-1,cashshopbuy,4:8
 
 //Add new packets here
 //packet_ver: 27
