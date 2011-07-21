@@ -3716,7 +3716,7 @@ OnWarp:
 	enablenpc "SignDance#CENTER";
 	end;
 OnInit:
-	waitingroom "DANCE~ DANCE~",20,"µ»∫Ú “#SignDance::OnWarp",1;
+	waitingroom "DANCE~ DANCE~",20,"µ»∫Ú “#SignDance::OnWarp",1,0,44,99;
 	end;
 }
 

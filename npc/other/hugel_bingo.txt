@@ -13,7 +13,7 @@ que_bingo,48,84,5	script	宾果参与等待室	124,{
 OnInit:
 	set $hu_bingoa,0;
 	set $hu_bingob,0;
-	waitingroom "宾果参与等待室 - 5人用",50,"宾果参与等待室::OnWarp",5;
+	waitingroom "宾果参与等待室 - 5人用",50,"宾果参与等待室::OnWarp",5,1000;
 	end;
 	
 OnWarp:
