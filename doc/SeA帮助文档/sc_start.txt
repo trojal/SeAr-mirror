@@ -39,4 +39,5 @@ sc_start4 SC_ARMOR_ELEMENT,n,v,w,x,y;	nÃëÄÚ£¬»ðÊôÐÔ+v%ÉËº¦£¬µØÊôÐÔ+w%ÉËº¦£¬·çÊôÐ
 sc_start SC_BONUSPOWER,n,x;		nÃëÄÚ£¬ÌáÉýËùÓÐ×°±¸¡¢¿¨Æ¬bonusÐ§¹ûx%
 sc_start4 SC_AURA,n,x,i,t,b;		nÃëÄÚ£¬Ó°ÏìÖÜÎ§x¸ñµÄÍæ¼Ò£¬Ê¹ÆäÓµÓÐidÎªiµÄµÀ¾ßµÄÐ§¹ûtºÁÃë¡£
 					bžé0±íÊ¾²»Ó°í‘×Ô¼º£¬1±íÊ¾Ó°í‘×Ô¼º
+sc_start4 SC_STOMACHACHE,n,a,b,c,0;	nÃëÄÚ£¬ËùÓÐÊôÐÔ-a£¬ÒÆ¶¯ËÙ¶È¼õÉÙb£¬Ã¿10ÃëÏûºÄcSP²¢Ç¿ÖÆ×øÏÂ¡£
 //=========================================================
