@@ -803,14 +803,14 @@ comodo,88,97,4	script	起司专家#cmd	109,{
 comodo,164,291,2	script	克魔岛居民#cmd	73,{
 	mes "[拉克寺]";
 	switch (dmdswrd_Q) {
-	case 1:
+	case 7:
 		mes "那个人还在喋喋不休的说着克魔岛的^3355FF'起司'^000000.........";
 		next;
 		mes "[拉克寺]";
 		mes "我禁不住想念那美味的起司. 我希望有朝一日能够好好的让它陪着我.";
 		set dmdswrd_Q, 8;
 		next;
-	case 2:
+	case 8:
 		mes "^5533FF戚致理^000000 好像不像别人那样喜欢起司...... 事实上他看起来很惆怅.......";
 		next;
 		mes "[拉克寺]";

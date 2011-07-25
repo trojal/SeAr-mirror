@@ -4596,12 +4596,12 @@
 12212,Giant_Fly_Wing,巨大的苍蝇翅膀,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ callfunc "F_CashPartyCall"; },{},{}
 12213,Neuralizer,技能重置棒,2,2,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ callfunc "F_CashReset"; },{},{}
 12214,Convex_Mirror,BOSS雷达,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_BOSSMAPINFO,600000,0; },{},{}
-12215,Blessing_10_Scroll,天使之赐福 10等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "AL_BLESSING",0; sc_start SC_BLESSING,240000,10; },{},{}
-12216,Inc_Agi_10_Scroll,加速术 10等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if (Hp > 15) { skilleffect "AL_INCAGI",0; sc_start SC_INCREASEAGI,240000,10; heal -15,0; } },{},{}
-12217,Aspersio_5_Scroll,撒水祈福 5等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if (countitem(523) > 0) { skilleffect "PR_ASPERSIO",0; sc_start SC_ASPERSIO,180000,5; delitem 523,1; } },{},{}
-12218,Assumptio_5_Scroll,圣母之祈福 5等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "HP_ASSUMPTIO",0; sc_start SC_ASSUMPTIO,100000,5; },{},{}
-12219,Wind_Walk_10_Scroll,风之步 10等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "SN_WINDWALK",0; sc_start SC_WINDWALK,250000,5; },{},{}
-12220,Adrenaline_Scroll,速度激发 5等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if(isequipped(1301,1302,1303)) skilleffect "BS_ADRENALINE",0; sc_start SC_ADRENALINE,150000,5; },{},{}
+12215,Blessing_10_Scroll,天使之赐福 10等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AL_BLESSING",10; },{},{}
+12216,Inc_Agi_10_Scroll,加速术 10等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AL_INCAGI",10; },{},{}
+12217,Aspersio_5_Scroll,撒水祈福 5等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"PR_ASPERSIO",5; } },{},{}
+12218,Assumptio_5_Scroll,圣母之祈福 5等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"HP_ASSUMPTIO",5; },{},{}
+12219,Wind_Walk_10_Scroll,风之步 10等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"SN_WINDWALK",10; },{},{}
+12220,Adrenaline_Scroll,速度激发 5等级卷轴,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"BS_ADRENALINE",5; },{},{}
 12221,Megaphone_,扩声器,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ input @Megaphone$; announce strcharinfo(0) + "的呼叫: " + @megaphone$,bc_all,0x00FF00; end; },{},{}
 12225,Sweet_Candy_Striper,甜美的 柺杖糖,2,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1245; },{},{}
 12226,Examination1,Examination 1,0,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SpeedUp0,5400000,0; percentheal 100,100; sc_start SC_STRFood,5400000,10; sc_start SC_DEXFood,5400000,5; sc_start SC_ATKPOTION,5400000,22; sc_start SC_MATKFood,5400000,15; },{},{}
@@ -4613,7 +4613,7 @@
 12232,Gingerbread,姜面包,0,20,,150,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12233,Kvass,裸麦啤酒,0,20,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 100,100; },{},{}
 12234,Cacao99,可怕的可可 99%,0,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 25,0; },{},{}
-12235,Strawberry_Choco,草莓巧克力,2,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,5; skilleffect "AL_BLESSING",0; sc_start SC_BLESSING,240000,10; },{},{}
+12235,Strawberry_Choco,草莓巧克力,2,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,5; unitskilluseid getcharid(3),"AL_BLESSING",5; },{},{}
 12236,Choco_Tart,巧克力塔,11,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; itemskill "AL_ANGELUS",5; },{},{}
 12237,Choco_Lump,巧克力块,2,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,5; sc_start SC_Poison,18000,0; sc_start SC_Bleeding,18000,0; },{},{}
 12238,New_Year_Rice_Cake_1,New Year Rice Cake,0,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ if(rand(1000)<100) sc_start SC_DPoison,10000,0; sc_start SC_Poison,50000,0; },{},{}
@@ -4668,8 +4668,8 @@
 12287,Love_Angel,Love Angel Magic Powder,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ setfont 1; },{},{}
 12288,Squirrel,Squillroll Magic Powder,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ setfont 2; },{},{}
 12289,Gogo,Gogo Magic Powder,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ setfont 3; },{},{}
-12290,Mysterious_Can,Mysterious Can,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; skilleffect "AL_BLESSING",0; sc_start SC_BLESSING,120000,5; },{},{}
-12291,Mysterious_PET_Bottle,Mysterious PET Bottle,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; skilleffect "AL_INCAGI",0; sc_start SC_INCREASEAGI,120000,5; },{},{}
+12290,Mysterious_Can,Mysterious Can,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; unitskilluseid getcharid(3),"AL_BLESSING",5; },{},{}
+12291,Mysterious_PET_Bottle,Mysterious PET Bottle,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; unitskilluseid getcharid(3),"AL_INCAGI",5; },{},{}
 12292,Unripe_Fruit,Unripe Fruit,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 20,0; },{},{}
 12293,Dried_Yggdrasilberry,Dried Yggdrasilberry,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,20; },{},{}
 12294,PC_Bang_Coin_Box1,PC-Room Coin Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 2740,1; },{},{}
@@ -4728,7 +4728,7 @@
 12347,Acorn_Jelly,Acorn Jelly,2,11,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_REVERSEORCISH",1; },{},{}
 12348,Manuk's_Faith,Manuk's Faith,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_POTION_BERSERK; sc_start SC_MANU_MATK,600000,10; },{},{}
 12349,Cornus'_Tears,Cornus' Tears,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_POTION_BERSERK; sc_start SC_SPL_MATK,600000,10; },{},{}
-12350,Angeling_Potion,Angeling Potion,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "AL_BLESSING",0; sc_start SC_BLESSING,120000,5; itemskill "AL_ANGELUS",5; },{},{}
+12350,Angeling_Potion,Angeling Potion,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AL_BLESSING",5; unitskilluseid getcharid(3),"AL_INCAGI",5; },{},{}
 12351,Shout_Megaphone,Shout Megaphone,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "MC_LOUD",1; },{},{}
 12352,Dun_Tele_Scroll3,Dun Tele Scroll3,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12353,Tiny_Waterbottle,Tiny Waterbottle,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_WATERWEAPON,90000,1; },{},{}
@@ -4754,8 +4754,8 @@
 12373,Boy's_Naivety,Boy's Pure Heart,2,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1370; },{},{}
 12374,Flaming_Ice,Ice Fireworks,2,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1837; },{},{}
 12375,Acaraje,Acaraje,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ specialeffect2 EF_STEAL; sc_start SC_INCHITHATE,120000,5; },{},{}
-12376,Mysterious_Can2,Mysterious Can2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12377,Mysterious_PET_Bottle2,Mysterious PET Bottle2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12376,Mysterious_Can2,Mysterious Can2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 3,0; unitskilluseid getcharid(3),"PR_GLORIA",2; },{},{}
+12377,Mysterious_PET_Bottle2,Mysterious PET Bottle2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,3; unitskilluseid getcharid(3),"PR_MAGNIFICAT",1; },{},{}
 12378,2009_Rice_Cake_Soup,2009 Rice Cake Soup,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12379,Pope's_Cookie,Pope's Cookie,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12380,Desert_Wolf_Babe_Scroll,转职考试用 笛子,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -4813,9 +4813,9 @@
 12703,Holy_Egg_2,Holy Egg,11,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12704,Elixir_Of_Life,Elixir Of Life,2,0,,10,,,,,0xFFFFFFFF,7,2,,,85,,,{ percentheal 100,0; },{},{}
 12705,Noble_Nameplate,Noble Nameplate,2,0,,100,,,,,0xFFFFFFFF,7,2,,,90,,,{ sc_start SC_EXPBOOST,1800000,100; },{},{}
-12706,Lucky_Cookie01,幸运果子,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "PR_GLORIA",5; },{},{}
-12707,Lucky_Cookie02,幸运果子,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "PR_MAGNIFICAT",1; },{},{}
-12708,Lucky_Cookie03,幸运果子,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "PR_IMPOSITIO",3; },{},{}
+12706,Lucky_Cookie01,幸运果子,2,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"PR_GLORIA",5; },{},{}
+12707,Lucky_Cookie02,幸运果子,2,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"PR_MAGNIFICAT",1; },{},{}
+12708,Lucky_Cookie03,幸运果子,2,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"PR_IMPOSITIO",3; },{},{}
 12709,Guyak_Candy,蒟蒻糖,2,0,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 30,30; },{},{}
 12710,Guyak_Pudding,蒟蒻果冻,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12711,Pretzel,Pretzel,2,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -5980,11 +5980,11 @@
 14514,Vermilion_10_Scroll,Lord of Vermilion Scroll,11,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "WZ_VERMILION",10; },{},{}
 14515,Lex_Aeterna_Scroll,Lex Aeterna Scroll,11,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "PR_LEXAETERNA",1; },{},{}
 14516,Magnificat_5_Scroll,Magnificat Scroll,11,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "PR_MAGNIFICAT",5; },{},{}
-14517,CP_Helm_Scroll,Chemical Protection Helm Scroll,2,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "AM_CP_HELM",0; sc_start SC_CP_HELM,600000,5; },{},{}
-14518,CP_Shield_Scroll,Chemical Protection Shield Scrol,2,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "AM_CP_SHIELD",0; sc_start SC_CP_SHIELD,600000,5; },{},{}
-14519,CP_Armor_Scroll,Chemical Protection Armor Scroll,2,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "AM_CP_ARMOR",0; sc_start SC_CP_ARMOR,600000,5; },{},{}
-14520,CP_Weapon_Scroll,Chemical Protection Weapon Scroll,2,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ skilleffect "AM_CP_WEAPON",0; sc_start SC_CP_WEAPON,600000,5; },{},{}
-14521,Repair_Scroll,Repair Weapon Scroll,2,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),108,1; },{},{}
+14517,CP_Helm_Scroll,Chemical Protection Helm Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AM_CP_HELM",5; },{},{}
+14518,CP_Shield_Scroll,Chemical Protection Shield Scrol,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AM_CP_SHIELD",5; },{},{}
+14519,CP_Armor_Scroll,Chemical Protection Armor Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AM_CP_ARMOR",5; },{},{}
+14520,CP_Weapon_Scroll,Chemical Protection Weapon Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"AM_CP_WEAPON",5; },{},{}
+14521,Repair_Scroll,Repair Weapon Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"BS_REPAIRWEAPON",1; },{},{}
 14522,Big_Bun,Big Bun,0,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 100,0; },{},{}
 14523,Pill_,Pill,0,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,100; },{},{}
 14524,Superb_Fish_Slice,Superb Fish Slice,0,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 100,100; },{},{}
@@ -6051,18 +6051,18 @@
 14585,WOB_Local,Blue Butterfly Wing,2,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ callfunc "F_CashCity",4; },{},{}
 14586,Spark_Candy,Jumping candy,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 14587,Repair_Scroll_,Equipment Repair Book,11,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "BS_REPAIRWEAPON",1; },{},{}
-14588,Pty_Blessing_Scroll,Party Blessing Scroll,11,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "CASH_BLESSING",10; },{},{}
-14589,Pty_Inc_Agi_Scroll,Party Increase AGI Scroll,11,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "CASH_INCAGI",10; },{},{}
-14590,Pty_Assumptio_Scroll,Party Assumtio Scroll,11,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "CASH_ASSUMPTIO",5; },{},{}
+14588,Pty_Blessing_Scroll,Party Blessing Scroll,2,10,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"CASH_BLESSING",10; },{},{}
+14589,Pty_Inc_Agi_Scroll,Party Increase AGI Scroll,2,10,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"CASH_INCAGI",10; },{},{}
+14590,Pty_Assumptio_Scroll,Party Assumtio Scroll,2,10,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"CASH_ASSUMPTIO",5; },{},{}
 14591,Siege_Teleport_Scroll,Seige Teleport Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ callfunc "F_CashSeigeTele"; },{},{}
 14592,Job_Manual50,JOB Battle Manual,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_JEXPBOOST,1800000,50; },{},{}
-14593,Magic_Power_Scroll,Mystical_Amplification_Scroll,11,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "HW_MAGICPOWER",10; },{},{}
+14593,Magic_Power_Scroll,Mystical Amplification Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"HW_MAGICPOWER",10; },{},{}
 14594,Quagmire_Scroll,Quagmire scroll,11,,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "WZ_QUAGMIRE",5; },{},{}
 14595,Unsealed_Magic_Spell,Unsealed Magic Spell,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ warp "yuno_fild09",255,127; },{},{}
 14596,Pierre_Treasurebox,Pierre's Treasure Box,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Pierre_Treasurebox),1; getitem groupranditem(IG_Pierre_Treasurebox),1; getitem groupranditem(IG_Pierre_Treasurebox),1; getitem groupranditem(IG_Pierre_Treasurebox),1; getitem groupranditem(IG_Pierre_Treasurebox),1; getitem groupranditem(IG_Pierre_Treasurebox),1; },{},{}
 14597,PhreeoniS,Phreeoni Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,180000,4121; },{},{}
 14598,GhostringS,Ghostring Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,60000,4047; },{},{}
-14599,Greed_Scroll_C,Greed Scroll C,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+14599,Greed_Scroll_C,Greed Scroll C,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ unitskilluseid getcharid(3),"BS_GREED",1; },{},{}
 14600,Mental_Potion,Mental Potion,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 14601,Tyr's_Blessing,Tyr's Blessing,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCFLEE,300000,30; sc_start SC_INCHIT,300000,30; sc_start SC_ATKPOTION,300000,20; sc_start SC_MATKPOTION,300000,20; },{},{}
 14602,TaogunkaS,Tao Gunka Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMSCRIPT,180000,4302; },{},{}
@@ -6178,14 +6178,13 @@
 18103,Mystic_Bow,神祕的弓,4,20,,1700,75,,5,0,0x00080800,8,2,34,3,105,1,11,{ bonus bMatk,100; bonus bInt,4; bonus2 bUseSPValue,"RA_ARROWSTORM",-10; },{},{}
 //时装
 19507,Clear_Sun,灿烂太阳,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,654,{},{},{}
-19509,Butterfly_Wings_Ear,黄凤蝶翅膀,5,20,,0,,0,,0,0xFFFFFFFF,7,2,512,,1,0,695,{},{},{}
 
+19509,Butterfly_Wings_Ear,黄凤蝶翅膀,5,20,,0,,0,,0,0xFFFFFFFF,7,2,512,,1,0,695,{},{},{}
 19510,Screw_Stuck_Head,穿脑螺丝,5,20,,0,,0,,0,0xFFFFFFFF,7,2,512,,1,0,696,{},{},{}
 
 19513,Chicken_Bill,鸡喙,5,20,,0,,0,,0,0xFFFFFFFF,7,2,1,,1,0,699,{},{},{}
 19514,Charlies_Beard,名人胡须,5,20,,0,,0,,0,0xFFFFFFFF,7,2,1,,1,0,700,{},{},{}
 19515,Yellow_Hat,黄色羽毛帽,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,701,{},{},{}
-
 19516,Singing_Bird,爱歌唱的小鸟,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,702,{},{},{}
 19517,Chicken_Crest,鸡冠,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,703,{},{},{}
 19518,Rainbow,绚丽彩虹,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,704,{},{},{}
