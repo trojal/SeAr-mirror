@@ -1599,11 +1599,11 @@ packet_ver: 25
 0x0839,66
 0x0842,6,recall2,2
 0x0843,6,remove2,2 
-0x0288,-1,cashshopbuy,2:4:8	//len:points:count?
 
 //2010-11-23aRagexeRE
 packet_ver: 26
 0x0436,19,wanttoconnection,2:6:10:14:18
+0x0288,-1,cashshopbuy,2:4:8	//len:points:count?
 0x035f,5,walktoxy,2
 0x0360,6,ticksend,2
 0x0361,5,changedir,2:4
