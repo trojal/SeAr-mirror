@@ -839,7 +839,7 @@
 2311,0,0,4,0,0x01,5,5,0,yes,0,0x0,0,none,0,	LG_REFLECTDAMAGE,荆棘光环
 2312,5,6,1,-1,0x0,0,5,1,yes,0,0x0,0,weapon,0,	LG_PINPOINTATTACK,精准穿刺
 2313,0,0,4,0,0x1,0,5,0,yes,0,0x0,0,none,0,	LG_FORCEOFVANGUARD,先锋之力
-2314,2,6,1,-1,0x0,0,1,1,yes,0,0x0,0,weapon,0,	LG_RAGEBURST,怒气爆发
+2314,2,6,1,0,0x0,0,1,1,yes,0,0x0,0,weapon,0,	LG_RAGEBURST,怒气爆发
 2315,0,6,4,-1,0x2,3,3,1,yes,0,0,0,weapon,1,	LG_SHIELDSPELL,盾牌咏唱
 2316,0,6,4,-1,0x1,0,5,1,no,0,0,0,weapon,0,	LG_EXCEEDBREAK,蓄势待发
 2317,-1,6,2,-1,0x2,5:1,5,1,yes,0,0,2:5,weapon,3:4:5:6:7,	LG_OVERBRAND,枪阵-血十字
