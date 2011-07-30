@@ -4924,7 +4924,7 @@ sprite based sprite id in 'db/mob-avail.txt' with this.
 
 ---------------------------------------
 
-*movenpc <NPC名>,x,y;
+*movenpc <NPC名>,x,y{,dir};
 	作用：移动NPC到指定坐标(x,y)
 	举例：
 		moveNPC "Bugga",100,20;
@@ -5565,10 +5565,9 @@ type2:
 ========================
 ---------------------------------------
 
-*instance_create("<副本名>",<队伍ID>,<副本>)
+*instance_create("<副本名>",<队伍ID>)
 
 以副本名 "<副本名>" 为队伍ID为 <队伍 ID>的队伍创建副本.
-当前副本ID只有 ID_ENDLESS (5) 或 ID_CATACOMBS (6)
 Most Instance_* commands are used in conjunction with this command and depend
 on the ID this command returns.
 
@@ -5576,7 +5575,7 @@ Example:
 	// Store the Party ID of the invoking character.
 	set .@party_id, getcharid(1);
 	// Atempt to create an instance using that party ID.
-	set .@id, instance_create("Endless Tower", .@party_id, ID_ENDLESS);
+	set .@id, instance_create("Endless Tower", .@party_id);
 	if (.@id == -1) { // Party ID is in use by another instance.
 		...
 	}
@@ -5585,16 +5584,32 @@ Example:
 	}
 ---------------------------------------
 
-*instance_destroy(<副本 ID>)
+*instance_destroy({<副本 ID>})
 
 销毁ID为 <副本 ID> 的副本.
+如果没有指定id，该脚本关联的副本id会被使用。
+如果脚本没有关联副本，关联该脚本的玩家所关联的副本id会被使用。
+如果玩家也没有关联副本，那么指令执行失败，脚本终止。
 
 ---------------------------------------
 
-*instance_attachmap(<副本 ID>,"<Map Name>")
-*instance_detachmap(<副本 ID>,"<Map Name>")
+*instance_attachmap(<副本 ID>,"<地图名>"{,<使用基本地图名>})
 
-关联或解除关联地图名为 "<Map Name>" 到id为 <副本 ID>的副本.
+关联地图名为 "<Map Name>" 到id为 <副本 ID>的副本.The
+ 
+The optional parameter specifies, whether a map requires emulation for instancing (1)
+or not (0 = default).
+
+返回地图名。
+
+---------------------------------------
+
+*instance_detachmap("<地图名>"{,<副本id>})
+
+解除关联地图名为 "<Map Name>" 到id为 <副本 ID>的副本.
+如果没有指定id，该脚本关联的副本id会被使用。
+如果脚本没有关联副本，关联该脚本的玩家所关联的副本id会被使用。
+如果玩家也没有关联副本，那么指令执行失败，脚本终止。
 
 ---------------------------------------
 
@@ -5604,7 +5619,7 @@ Example:
 
 ---------------------------------------
 
-*instance_announce <副本 ID>,"<文本>",<标签>{,<颜色>};
+*instance_announce <副本 ID>,"<文本>",<标签>{,<颜色>{,<fontType>{,<fontSize>{,<fontAlign>{,<fontY>}}}}};;
 
 像announce指令一样, 但拥有参数 <副本 ID> , 当值为 0 时为所有激活副本？
 
@@ -5616,35 +5631,51 @@ Example:
 
 ---------------------------------------
 
-*instance_npcname("<NPC Name>",<副本 ID>)
+*instance_npcname("<NPC Name>"{,<副本 ID>})
 
 获取副本中被复制的npc的唯一名.
 给与的 "<NPC Name>" 属于id为 <副本 ID> 的副本. 
 可以使用此命令来 enablenpc, disablenpc, donpcevent, 等等.
+如果没有指定id，该脚本关联的副本id会被使用。
+如果脚本没有关联副本，关联该脚本的玩家所关联的副本id会被使用。
+如果玩家也没有关联副本，那么指令执行失败，脚本终止。
 
 ---------------------------------------
 
-*has_instance("<Map Name>")
+*has_instance("<Map Name>"{,<副本 ID>})
 
 检查玩家是否在地图 <Map Name> 上有副本.
+如果没有指定id，该脚本关联的副本id会被使用。
+如果脚本没有关联副本，关联该脚本的玩家所关联的副本id会被使用。
+如果玩家也没有关联副本，那么指令执行失败，脚本终止。
 
 ---------------------------------------
 
-*instance_id(<?>)
+*instance_id(<type>)
 
 返回当前玩家关联的副本id
 
+type：
+	0 - Instance ID the script is attached to.
+	1 - Instance ID of the currently attached player's party.
+
 ---------------------------------------
 
-*instance_warpall "<Map Name>",<x>,<y>;
+*instance_warpall "<Map Name>",<x>,<y>{,<instance id>};
 
 传送所有在副本中的玩家到地图 <map name> 的指定坐标.
+如果没有指定id，该脚本关联的副本id会被使用。
+如果脚本没有关联副本，关联该脚本的玩家所关联的副本id会被使用。
+如果玩家也没有关联副本，那么指令执行失败，脚本终止。
 
 ---------------------------------------
 
-*instance_set_timeout <Time1>,<Time2>,<Instance ID>;
+*instance_set_timeout <Time1>,<Time2>{,<Instance ID>};
 
 <Time1> 为副本 <副本 ID> 的存在时间, <Time2> 是冷却时间
+如果没有指定id，该脚本关联的副本id会被使用。
+如果脚本没有关联副本，关联该脚本的玩家所关联的副本id会被使用。
+如果玩家也没有关联副本，那么指令执行失败，脚本终止。
 
 ---------------------------------------
 
