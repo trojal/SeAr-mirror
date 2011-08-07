@@ -222,10 +222,10 @@ bonus2 bSkillHeal2,n,x;			被使用时，增加治愈技能 n 效果 x% (支持技能名)
 //=========================================================
 bonus2 bGetZenyNum,n,x;			杀死魔物时, x% 几率掉落 1 ~ n zeny (不可叠加) (x值见备注7)
 bonus2 bAddGetZenyNum,n,x;		杀死魔物时, x% 几率掉落 1 ~ n zeny (可叠加) (x值见备注7)
-bonus2 bAddMonsterDropItem,n,x;		杀死魔物时, x% 几率掉落物品 n (可叠加) (x值见备注6)
-bonus2 bAddMonsterDropItemGroup,n,x;	杀死魔物时, x% 几率得到 n 组道具中的1个 (n类型在item_group_db.txt中定义) (x值见备注6)
-bonus3 bAddMonsterDropItem,n,x,y;	杀死 x 种族魔物时, y% 几率掉落物品 n (可叠加) (x值见备注1，y值见备注6)
-bonus3 bAddMonsterDropItemGroup,n,x,y;	杀死 x 种族魔物时, x% 几率得到 n 组道具中的1个 (n类型在item_group_db.txt中定义) (x值见备注1) (y值见备注6)
+bonus2 bAddMonsterDropItem,n,x;		杀死魔物时, x/100% 几率掉落物品 n (可叠加) (x值见备注6)
+bonus2 bAddMonsterDropItemGroup,n,x;	杀死魔物时, x/100% 几率得到 n 组道具中的1个 (n类型在item_group_db.txt中定义) (x值见备注6)
+bonus3 bAddMonsterDropItem,n,x,y;	杀死 x 种族魔物时, y/100% 几率掉落物品 n (可叠加) (x值见备注1，y值见备注6)
+bonus3 bAddMonsterDropItemGroup,n,x,y;	杀死 x 种族魔物时, x/100% 几率得到 n 组道具中的1个 (n类型在item_group_db.txt中定义) (x值见备注1) (y值见备注6)
 
 //=========================================================
 //=状态
