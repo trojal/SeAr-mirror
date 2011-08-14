@@ -8713,17 +8713,17 @@ L_Greet:
 que_sign01,1,1,1	script	#signserin	-1,{
 
 OnInit:
-	disablenpc "Serin#serin";
+	disablenpc "施琳#serin";
 	set $signroomfull,0;
 	set $signparty,0;
 	end;
 
 OnSerin:
-	enablenpc "Serin#serin";
+	enablenpc "施琳#serin";
 	end;
 
 OnSummon:
-	disablenpc "Serin#serin";
+	disablenpc "施琳#serin";
 	set $@Sign_Summon,10;
 	monster "que_sign01",180,200,"Rotten Corpse",1423,1,"#signserin::OnSignDead";
 	monster "que_sign01",205,205,"Rotten Corpse",1423,1,"#signserin::OnSignDead";
@@ -8749,7 +8749,7 @@ OnCooldown:
 	end;
 
 OnTimer600000:
-	disablenpc "Serin#serin";
+	disablenpc "施琳#serin";
 	killmonster "que_sign01","#signserin::OnSignDead";
 	set $signroomfull,1;
 	set $signparty,0;
@@ -8762,16 +8762,16 @@ OnTimer600000:
 que_sign01,1,1,1	script	#signserin2	-1,{
 
 OnInit:
-	disablenpc "Serin#serin2";
+	disablenpc "施琳#serin2";
 	set $signroom2full,0;
 	end;
 
 OnSerin:
-	enablenpc "Serin#serin2";
+	enablenpc "施琳#serin2";
 	end;
 
 OnSummon:
-	disablenpc "Serin#serin2";
+	disablenpc "施琳#serin2";
 	set $@Sign_Summon2,1;
 	areamonster "que_sign01",188,34,205,55,"迷幻之王",1605,1,"#signserin2::OnSignDead";
 	end;
@@ -8788,7 +8788,7 @@ OnCooldown:
 	end;
 
 OnTimer600000:
-	disablenpc "Serin#serin2";
+	disablenpc "施琳#serin2";
 	killmonster "que_sign01","#signserin2::OnSignDead";
 	set $signroom2full,1;
 	areawarp "que_sign01",229,77,166,12,"niflheim",30,156;

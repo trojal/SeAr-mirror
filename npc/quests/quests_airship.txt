@@ -1046,7 +1046,7 @@ OnTimer10000:
 	end;
 OnTimer12000:
 	mapannounce "airplane_01","机内广播 : 位于甲板上的乘客们请赶快躲入船内",1,0x00ff00;
-	disablenpc "Airship Staff#info";
+	disablenpc "飞空艇 工作人员#info";
 	end;
 OnTimer16000:
 	monster "airplane_01",245,57,"小妖精",1632,1;
@@ -1323,7 +1323,7 @@ OnTimer125000:
 OnTimer130000:
 	disablenpc "飞空艇 船长#02";
 	enablenpc "飞空艇 船长#01";
-	enablenpc "Airship Staff#info";
+	enablenpc "飞空艇 工作人员#info";
 	donpcevent "YunoIzl_Airship::OnReturn";
 	end;
 }
