@@ -66,3 +66,4 @@ notalk			所在地图无法收到聊天频道所有信息
 mf_nocapture		禁止捕捉宠物
 mf_maxdamage		最大伤害限定
 mf_notoken		禁止使用不死之证
+mf_stacklimit		设为n则每个单元格只允许n个玩家/宠物/魔物/生命体/佣兵/精灵等单位
