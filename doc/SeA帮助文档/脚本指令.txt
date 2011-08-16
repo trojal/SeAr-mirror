@@ -4674,6 +4674,13 @@ The valid information types are:
 
 ---------------------------------------
 
+*getwaitingroommember "<NPC object name>"
+
+该指令返回一个包含聊天室成员AID的数组$@waitingroommemberaid[]和一个聊天室成员数
+的变量$@waitingroommembercount
+
+---------------------------------------
+
 *warpwaitingpc "<地图名>",<x>,<y>{,<number of people>};
 
 This command will warp the amount of characters equal to the trigger number of 
