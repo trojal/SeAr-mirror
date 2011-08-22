@@ -52,8 +52,12 @@ nomobloot		所有魔物掉落物品的几率的比率,100为不掉落，0为正常，小于0增加掉率，-10
 nomvploot		MVP魔物不掉落MVP物品
 noloot			所有魔物不掉落物品
 nightenabled		黑夜
-restricted		所有列出技能物品受限地图(设置道具或技能id为 -1 时，对所有物品有效)
-unrestricted		只有列出技能物品才不受限地图(设置道具或技能id为 -1 时，对所有物品有效)
+restricted		所有列出的技能、物品将受到限制的地图(设置道具或技能id为 -1 时，对所有物品有效)
+			道具在item_noequip.txt中定义，道具id为负时表示设置物品仅在设置地图可用。
+			技能在skill_nocast_db.txt中定义
+unrestricted		只有列出的技能、物品才不受限制的地图(设置道具或技能id为 -1 时，对所有物品有效)
+			道具在item_noequip.txt中定义
+			技能在skill_nocast_db.txt中定义
 nodrop			无法扔道具
 novending		无法开露天商店
 loadevent		可以触发OnPCLoadMapEvent事件地图
