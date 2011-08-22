@@ -4803,7 +4803,7 @@
 12548,Shabby_Purchase_Street_Stall_License,简易采购商店执照2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
 12561,Mysterious_Seeds,神秘的种子,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
 12573,Fruit_Basket,水果篮,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}
-12574,Mora_Berry,莫拉浆果,2,0,,20,,,,,0xFFFFFFFF,2,2,,,120,,,{ itemheal 0,50; },{},{}
+12574,Mora_Berry,莫拉浆果,2,0,,20,,,,,0xFFFFFFFF,7,2,,,120,,,{ itemheal 0,rand(40,60); sc_start SC_MORA_BUFF,300000,10; },{},{}
 12580,Universal_Catalog_Silver,Universal Catalog Silver,2,200,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,0; },{},{}
 12581,Universal_Catalog_Gold,Universal Catalog Gold,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
 12591,Universal_Catalog_Bronze,Universal Catalog Bronze,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
