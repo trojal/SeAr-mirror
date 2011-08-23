@@ -71,8 +71,8 @@
 488,3	//海罗默德的手杖
 
 //Clone Forbidden/pointless skills
-77,16	//转生术
-79,16	//十字驱魔攻击
+77,32	//转生术
+79,32	//十字驱魔攻击
 
 //Zone 1 - Aldebaran Turbo Track
 219,64	//胁持

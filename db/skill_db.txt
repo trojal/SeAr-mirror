@@ -194,7 +194,7 @@
 150,0,6,4,0,0x1,0,1,1,no,0,0x1,0,weapon,5,	TF_BACKSLIDING,后退回避
 151,0,6,4,0,0x1,0,1,1,no,0,0x1,0,none,0,		TF_PICKSTONE,捡石头
 152,7,6,1,0,0x40,0,1,1,no,0,0x1,0,misc,0,	TF_THROWSTONE,投掷石头
-153,1,6,1,-1,0x2,1,1,1,no,0,0x1,0,weapon,2,	MC_CARTREVOLUTION,手推车攻击
+153,1,6,1,-1,0x42,1,1,1,no,0,0x1,0,weapon,2,	MC_CARTREVOLUTION,手推车攻击
 154,0,6,4,0,0x1,0,1,1,no,0,0x1,0,none,0,		MC_CHANGECART,改装手推车
 155,0,6,4,0,0x1,0,1,1,no,0,0x1,0,weapon,0,	MC_LOUD,大声呐喊
 156,9,6,1,6,0,0,1,1,yes,0,0x1,0,magic,0,		AL_HOLYLIGHT,神圣之光
@@ -526,7 +526,7 @@
 482,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,		PF_DOUBLECASTING,双倍投掷
 483,16,6,2,0,0x1,1:2:3:4:5,1,1,no,0,0,0,none,0,	HW_GANBANTEIN,咖般塔音
 484,9,6,2,2,0x91,0,5,1,yes,0,0,0,misc,0,		HW_GRAVITATION,重力原野
-485,-2,6,1,-1,0x8,0,10,1,no,0,0,0,weapon,0,	WS_CARTTERMINATION,手推车终结技
+485,-2,6,1,-1,0,0,10,1,no,0,0,0,weapon,0,	WS_CARTTERMINATION,手推车终结技
 486,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,		WS_OVERTHRUSTMAX,凶砍最大值
 487,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		CG_LONGINGFREEDOM,不要拘束我
 488,0,6,4,0,0x1,1,5,1,no,0,0x40,0,misc,0,	CG_HERMODE,海罗默德的手杖
