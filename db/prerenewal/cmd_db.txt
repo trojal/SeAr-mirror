@@ -149,7 +149,7 @@ tonpc,1,1,{ if(getmapxy(.@m$,.@x,.@y,1,@cmd_para$[0]) == -1) dispmes msg(111); e
 option,3,3,{ set .@id1,atoi(@cmd_para$[0]); set .@id2,atoi(@cmd_para$[1]); set .@id3,atoi(@cmd_para$[2]); if(.@id1 < 0) set .@id1,0; if(.@id2 < 0) set .@id2,0; if(.@id3 < 0) set .@id3,0; setoption1 .@id1; setoption2 0xFF,0; if(.@id2) setoption2 .@id2, 1; setoption 0; setoption 0xFFFFF,0; if(.@id3) setoption .@id3, 1; dispmes msg(9); }
 effect,1,1,{ specialeffect2 atoi(@cmd_para$[0]),ALL_CLIENT; dispmes msg(229); }
 misceffect,1,1,{ misceffect2 atoi(@cmd_para$[0]); dispmes msg(229); }
-aura,1,1,{ setaura atoi(@cmd_para$[0]); if(PC_AURA) dispmes "人物光环已显示。"; else dispmes "人物光环已关闭。"; }
+aura,1,4,{ setaura atoi(@cmd_para$[0]),atoi(@cmd_para$[1]),atoi(@cmd_para$[2]),atoi(@cmd_para$[3]); if(PC_AURA) dispmes "人物光环已显示。"; else dispmes "人物光环已关闭。"; }
 title,0,1,{ if(getstrlen(@cmd_para$[0]) > 12) { dispmes "称号不允许超过12字节！"; end; } settitle @cmd_para$[0]; if( @cmd_pcount != 0 ) dispmes "显示角色称号"; else dispmes "关闭显示角色称号"; }
 makeegg,1,1,{ if(!set(.@id,existitem(@cmd_para$[0]))) if(!set(.@id,existmob(@cmd_para$[0]))) set .@id, atoi(@cmd_para$[0]); if( .@id < 0 )set .@id,.@id*-1; if(!makepet(.@id)) dispmes msg(180); }
 hatch,0,0,{ if(!getpetinfo(0)) bpet; else dispmes msg(181); }
