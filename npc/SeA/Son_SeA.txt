@@ -51,38 +51,42 @@
 */
 				switch( select("普隆德拉","依斯鲁德","吉芬","梦罗克","斐扬","爱尔贝塔","艾尔帕兰","克魔岛","克雷斯特汉姆古城","朱诺",
 					"天津","昆仑","汶巴拉","姜饼城","尼芙菲姆","洛阳城","夏威夷","哎哟泰雅","里希塔乐镇","艾音布罗克","艾音贝赫",
-					"毁葛","拉赫","伯仁斯","莫斯科","马努克","拉皮内前线基地辉煌领域","米德加尔特联合驻地","巴西"
+					"毁葛","拉赫","伯仁斯","莫斯科","马努克","拉皮内前线基地辉煌领域","米德加尔特联合驻地","巴西","埃迪斯特斯","Mora","德瓦他","Malangdo"
 				) )
 				{
-				case 1: warp "prontera.gat",156,187;	break;
-				case 2: warp "izlude.gat",128,111;	break;
-				case 3: warp "geffen.gat",119,66;	break;
-				case 4: warp "morocc.gat",159,93;	break;
-				case 5: warp "payon.gat",170,110;	break;
-				case 6: warp "alberta.gat",27,236;	break;
-				case 7: warp "aldebaran.gat",145,120;	break;
-				case 8: warp "comodo.gat",188,161;	break;
-				case 9: warp "glast_01.gat",200,200;	break;
-				case 10: warp "yuno.gat",160,168;	break;
-				case 11: warp "amatsu.gat",197,86;	break;
-				case 12: warp "gonryun.gat",150,130;	break;
-				case 13: warp "umbala.gat",130,130;	break;
-				case 14: warp "xmas.gat",148,131;	break;
-				case 15: warp "niflheim.gat",202,177;	break;	
-				case 16: warp "louyang.gat",210,108;	break;
-				case 17: warp "jawaii.gat",221,215;	break;	
-				case 18: warp "ayothaya.gat",149,118;	break;	
-				case 19: warp "lighthalzen.gat",158,92;	break;	
-				case 20: warp "einbroch.gat",64,200;	break;	
-				case 21: warp "einbech.gat",70,95;	break;	
-				case 22: warp "hugel.gat",96,145;	break;	
-				case 23: warp "rachel.gat",260,126;	break;	
-				case 24: warp "veins.gat",216,123;	break;
-				case 25: warp "moscovia.gat",223,184;	break;
-				case 26: warp "manuk.gat",266,202;	break;	
-				case 27: warp "splendide.gat",197,175;	break;
-				case 28: warp "mid_camp.gat",215,242;	break;
-				case 29: warp "brasilis.gat",226,99;	break;
+				case 1: warp "prontera",156,187;	break;
+				case 2: warp "izlude",128,111;	break;
+				case 3: warp "geffen",119,66;	break;
+				case 4: warp "morocc",159,93;	break;
+				case 5: warp "payon",170,110;	break;
+				case 6: warp "alberta",27,236;	break;
+				case 7: warp "aldebaran",145,120;	break;
+				case 8: warp "comodo",188,161;	break;
+				case 9: warp "glast_01",200,200;	break;
+				case 10: warp "yuno",160,168;	break;
+				case 11: warp "amatsu",197,86;	break;
+				case 12: warp "gonryun",150,130;	break;
+				case 13: warp "umbala",130,130;	break;
+				case 14: warp "xmas",148,131;	break;
+				case 15: warp "niflheim",202,177;	break;	
+				case 16: warp "louyang",210,108;	break;
+				case 17: warp "jawaii",221,215;	break;	
+				case 18: warp "ayothaya",149,118;	break;	
+				case 19: warp "lighthalzen",158,92;	break;	
+				case 20: warp "einbroch",64,200;	break;	
+				case 21: warp "einbech",70,95;	break;	
+				case 22: warp "hugel",96,145;	break;	
+				case 23: warp "rachel",260,126;	break;	
+				case 24: warp "veins",216,123;	break;
+				case 25: warp "moscovia",223,184;	break;
+				case 26: warp "manuk",266,202;	break;	
+				case 27: warp "splendide",197,175;	break;
+				case 28: warp "mid_camp",215,242;	break;
+				case 29: warp "brasilis",226,99;	break;
+				case 30: warp "dicastes01",197,181;	break;
+				case 31: warp "mora",119,97;	break;
+				case 32: warp "dewata",200,177;	break;
+				case 33: warp "malangdo",217,85;	break;
 				}
 				break;
 			case 2:
@@ -94,7 +98,7 @@
 					"诺可罗德溶洞","樱花城迷宫","昆仑洞穴","古神木树洞","洛阳古都王陵","葛帔尼亚","优配擂斯废墟","机械娃娃工厂",
 					"达纳托斯之塔","矿山洞穴","奥丁神殿","生体试验研究所","深渊湖水地下洞穴","冰洞穴","古代神殿迷宫","神殿圣域洞穴",
 					"图尔火山洞窟","无名的海岛","地下公会","克魔岛密穴","深渊森林洞穴","次元空间","马努克旷野","辉煌领域旷野",
-					"尼德霍格洞穴","尼德霍格巢穴"))
+					"尼德霍格洞穴"))
 				{
 				case 1:
 					set .@menu,select("迷藏森林1层","迷藏森林2层","迷藏森林3层")-1;
@@ -255,10 +259,6 @@
                                 case 40:
 					set .@menu,select("尼德霍格洞穴1层","尼德霍格洞穴2层")-1;
 					setarray .@mapname$[0],"nyd_dun01","nyd_dun02";
-					break;  
-                                case 41:
-					set .@menu,select("尼德霍格巢穴1层","尼德霍格巢穴2层")-1;
-					setarray .@mapname$[0],"1@nyd","2@nyd";
 					break; 
 				}
 				warp .@mapname$[.@menu],0,0;
@@ -271,7 +271,7 @@
 		mes "我还负责相关的一些工作。";
 		mes "请问你是来做什么的呢？";
 		next;
-		switch(select("转职","转生","学习新技能","租用职业道具","点数重置"))
+		switch(select( "转职","转生","学习新技能","租用职业道具","点数重置","^FF0000领取三转职业道具^000000" ))
 		{
 			case 1:		
 				if (SkillPoint || JobLevel < (!BaseJob?10:40)) {
@@ -480,11 +480,90 @@
 				else
 					mes "你的钱不够";
 				break;
+			case 6:
+				callsub "F_Get3rdJobItems";
+				break;
 		}
 		break;
 	}
 	cutin "son",255;
 	close;
+
+F_Get3rdJobItems:
+	if(!(Upper&4)) {
+		mes "[SeA服务员]";
+		mes "您的职业无法领取三转道具。";
+		return;
+	}
+	if(item_3rdjob) {
+		mes "[SeA服务员]";
+		mes "您已经领取过三转道具了。";
+		return;
+	}
+	getitem 2795,1; // 青苹果戒指
+	switch(BaseJob)
+	{
+	case Job_Knight:
+		getitem 5746,1; // 符文 头环
+		break;
+	
+	case Job_Hunter:
+		getitem 5748,1; // 狙击手 护目镜
+		getitem 6124,1; // 狼笛
+		//getitem 5516,1; // 鹰眼
+		break;
+
+	case Job_Priest:
+		getitem 5747,1; // 圣冠
+		break;
+
+	case Job_Wizard:
+		getitem 5753,1; // 魔力之 石 帽子
+		break;
+
+	case Job_Blacksmith:
+		if(Sex)
+    		getitem 5749,1; // 驾驶员 头带
+    	else
+    		getitem 5760,1; // 驾驶员 头带
+		break;
+
+	case Job_Assassin:
+		getitem 5755,1; // 沉默 执行者
+		break;
+
+	case Job_Crusader:
+		getitem 5757,1; // 覆面 施密特 头盔
+		break;
+
+	case Job_Bard:
+		getitem 5751,1; // 宫廷乐师 宋的 帽子
+		break;
+
+	case Job_Dancer:
+		getitem 5758,1; // 濒死的天鹅
+		break;
+
+	case Job_Monk:
+		getitem 5754,1; // 燃烧的 灵魂
+		break;
+
+	case Job_Sage:
+		getitem 5756,1; // 风之 低语
+		break;
+
+	case Job_Alchemist:
+		getitem 5752,1; // 麦得斯的 低语
+		break;
+
+	case Job_Rogue:
+		getitem 6121,1; // 化妆刷
+		getitem 6122,1; // 毛刷
+		getitem 5750,1; // 影子 工艺
+		break;
+	}
+	set item_3rdjob,1;
+	return;
 
 OnTouch:
 	percentheal 100,100;
