@@ -55,6 +55,11 @@ arug_cas05	mapflag	restricted	4
 5@tower	mapflag	restricted	6
 6@tower	mapflag	restricted	6
 
-//Orc's Memory ==================
+//Orc's Memory ===================
 1@orcs	mapflag	restricted	6
 2@orcs	mapflag	restricted	6
+
+//Nidhoggur's Nest ===============
+1@nyd	mapflag	restricted	6
+2@nyd	mapflag	restricted	6
+

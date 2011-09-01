@@ -1,27 +1,35 @@
-// Magic Mushroom DB.
-// Database for skills that can be summoned through Magic Mushroom
-// Format: SkillID
+//============================================================
+// eAthena Chinese Translation Project 汉化组
+//============================================================
+// 可被"爆笑毒药(Poison_Laughing)毒菇(SC_MUSHROOM)状态"施展出的技能 数据
+//
+// 最新修正日期: 2011.07.30
+//------------------------------------------------------------
+// 数据结构:
+// <技能ID>
+//------------------------------------------------------------
 
-7	//SM_MAGNUM
-8	//SM_ENDURE
-10	//MG_SIGHT
-24	//AL_RUWACH
-32	//AL_CRUCIS
-33	//AL_ANGELUS
-45	//AC_CONCENTRATION
-61	//KN_AUTOCOUNTER
-74	//PR_MAGNIFICAT
-110	//BS_HAMMERFALL
-114	//BS_MAXIMIZE
-142	//NV_FIRSTAID
-150	//TF_BACKSLIDING
-151	//TF_PICKSTONE
-157	//MG_ENERGYCOAT
-249	//CR_AUTOGUARD
-256	//CR_PROVIDENCE
-261	//MO_CALLSPIRITS
-318	//BA_FROSTJOKER
-326	//DC_SCREAM
-500	//GS_GLITTERING
-527	//NJ_TATAMIGAESHI
-531	//NJ_UTSUSEMI
+7	//SM_MAGNUM#怒爆
+8	//SM_ENDURE#霸体
+10	//MG_SIGHT#火狩
+24	//AL_RUWACH#光猎
+32	//AL_CRUCIS#天使之光
+33	//AL_ANGELUS#天使之障壁
+45	//AC_CONCENTRATION#心神凝聚
+61	//KN_AUTOCOUNTER#反击
+74	//PR_MAGNIFICAT#圣母之颂歌
+110	//BS_HAMMERFALL#大地之击
+114	//BS_MAXIMIZE#武器值最大化
+142	//NV_FIRSTAID#紧急治疗
+150	//TF_BACKSLIDING#后退回避
+151	//TF_PICKSTONE#捡石头
+157	//MG_ENERGYCOAT#能量外套
+249	//CR_AUTOGUARD#自动防御
+256	//CR_PROVIDENCE#神佑之光
+261	//MO_CALLSPIRITS#蓄气
+270	//MO_EXPLOSIONSPIRITS#爆气
+//318	//BA_FROSTJOKER#冷笑话
+326	//DC_SCREAM#惊声尖叫
+500	//GS_GLITTERING#装满硬币
+527	//NJ_TATAMIGAESHI#榻榻米攻击
+531	//NJ_UTSUSEMI#金蝉脱壳

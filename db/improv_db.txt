@@ -1,32 +1,43 @@
-// Improvise DB.
-// Database for  skills that can be summoned trough Randomize Spell/Improvised Song (Minstrel/Wanderer Skill).
-// Format: SkillID
+//============================================================
+// eAthena Chinese Translation Project 汉化组
+//============================================================
+// 可被"自动影咒(SC_AUTOSHADOWSPELL)"和
+// "即兴演唱(WM_RANDOMIZESPELL)"施展出的技能 数据
+//
+// 最新修正日期: 2011.07.30
+//------------------------------------------------------------
+// 数据结构:
+// <技能ID>
+//------------------------------------------------------------
 
-// Mage Skills
-10	// Sight
-11	// Napalm Beat
-12	// Safety Wall
-13	// Soul Strike
-14	// Cold Bolt
-15	// Frost Diver
-16	// Stone Curse
-17	// Fire Ball
-18	// Fire Wall
-19	// Fire Bolt
-20	// Lightning Bolt
-21	// Thunderstorm
+// 魔法师技能
+//10	//MG_SIGHT#火狩
+11	//MG_NAPALMBEAT#心灵爆破
+//12	//MG_SAFETYWALL#暗之障壁
+13	//MG_SOULSTRIKE#圣灵召唤
+14	//MG_COLDBOLT#冰箭术
+15	//MG_FROSTDIVER#冰冻术
+//16	//MG_STONECURSE#石化术
+17	//MG_FIREBALL#火球术
+18	//MG_FIREWALL#火焰之壁
+19	//MG_FIREBOLT#火箭术
+20	//MG_LIGHTNINGBOLT#雷击术
+21	//MG_THUNDERSTORM#雷爆术
 
-// Wizard Skills
-80	// Fire Pillar
-81	// Sightrasher
-83	// Meteor Storm
-84	// Jupitel Thunder
-85	// Lord of Vermilion
-86	// Water Ball
-87	// Ice Wall
-88	// Frost Nova
-89	// Storm Gust
-90	// Earth Spike
-91	// Heaven's Drive
-92	// Quagmire
-93	// Sense
+// 服侍技能
+28	//AL_HEAL#治愈术
+
+// 巫师技能
+80	//WZ_FIREPILLAR#火柱攻击
+81	//WZ_SIGHTRASHER#火之猎杀
+83	//WZ_METEOR#陨石术
+84	//WZ_JUPITEL#雷鸣术
+85	//WZ_VERMILION#怒雷强击
+86	//WZ_WATERBALL#水球术
+//87	//WZ_ICEWALL#冰刃之墙
+88	//WZ_FROSTNOVA#霜冻之术
+89	//WZ_STORMGUST#暴风雪
+90	//WZ_EARTHSPIKE#地震术
+91	//WZ_HEAVENDRIVE#崩裂术
+//92	//WZ_QUAGMIRE#泥沼地
+//93	//WZ_ESTIMATION#怪物情报
