@@ -664,7 +664,7 @@
 
 //3rd Class Skills. 
 // ·ûÎÄÆïÊ¿
-2001,0,6,16,0,0x1,0,5,1,yes,0,0,0,weapon,0,	RK_ENCHANTBLADE,¸½Ä§Ö®ÈÐ
+2001,0,6,4,0,0x1,0,5,1,yes,0,0,0,weapon,0,	RK_ENCHANTBLADE,¸½Ä§Ö®ÈÐ
 2002,-5,6,1,-1,0,0,5,0,no,0,0,0,weapon,2,		RK_SONICWAVE,³å»÷Ö®ÈÐ
 2003,0,0,4,0,0x01,0,10,0,no,0,0,0,weapon,1,	RK_DEATHBOUND,ËÀÍöÀ¦°ó
 2004,-5,8,1,-1,0,0,10,-10,no,0,0,0,weapon,0,	RK_HUNDREDSPEAR,¼±ËÙ´Á´Ì
