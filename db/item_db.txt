@@ -2095,7 +2095,7 @@
 4360,Eremes_Card,éœ¡ñÊ®×Ö´Ì¿Í¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bCriticalAddRace,RC_DemiHuman,10; },{},{}
 4361,B_Harword_Card,éœ¡ñÉñ¹¤½³ ¹şÎÖµÃ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bBreakWeaponRate,1000; bonus bBreakArmorRate,700; },{},{}
 4362,Harword_Card,éœ¡ñÉñ¹¤½³¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bAspdRate,-5; bonus bHit,30; },{},{}
-4363,B_Magaleta_Card,éœ¡ñÉñ¹Ù Âê¼ÎÀ×ÌØ¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,50,BF_WEAPON|BF_MAGIC,0; },{},{}
+4363,B_Magaleta_Card,éœ¡ñÉñ¹Ù Âê¼ÎÀ×ÌØ¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",5,50,BF_WEAPON|BF_MAGIC,0; },{},{}
 4364,Magaleta_Card,éœ¡ñÉñ¹Ù¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bInt,1; bonus5 bAutoSpellWhenHit,"PR_LEXDIVINA",5,150,BF_MAGIC,1; },{},{}
 4365,B_Katrinn_Card,éœ¡ñ³¬Ä§µ¼Ê¦ ¿­ÌØÀòÄÈ¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bIgnoreMDefRace,RC_NonBoss; bonus bCastrate,100; bonus bSPrecovRate,-100; },{},{ heal 0,-2000; }
 4366,Katrinn_Card,éœ¡ñ³¬Ä§µ¼Ê¦¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bCastrate,getrefine()*-1; if(getrefine()>=9) { bonus bMatkRate,2; } },{},{}
