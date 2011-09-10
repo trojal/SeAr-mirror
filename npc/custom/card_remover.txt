@@ -44,6 +44,17 @@ prt_in,28,73,4	script	智慧的老妇人#SeA	78,{
 				mes "年轻人... 你那件装备没有插卡。那我想我什么都不能做咯！";
 				close;
 			}
+			if(isrental(.@part)) {
+				mes "[智慧的老妇人]";
+				mes "年轻人... 你那件装备好像不是你自己的！拆坏了怎么办呀？";
+				close;
+			}
+			//不检测绑定的卡片
+			if( isrestricted(getequipid(.@part)) || islocked(getequipid(.@part)) ) {
+				mes "[智慧的老妇人]";
+				mes "年轻人... 你那件装备好像不能弄丢啊！拆坏了会不会有人来找我麻烦？";
+				close;
+			}
 			set .@cardcount,getequipcardcnt(.@part);
 			
 			if (!checkweight(1202,(.@cardcount+1))) { 
@@ -57,11 +68,6 @@ prt_in,28,73,4	script	智慧的老妇人#SeA	78,{
 			if(select("好的，来吧:算了") == 2) {
 				mes "[智慧的老妇人]";
 				mes "好吧。等你想来的时候再来找我";
-				close;
-			}
-			if((zeny < (200000+(.@cardcount * 25000))) || (countitem(1000) < 1) || (countitem(715) < 1)) {
-				mes "[智慧的老妇人]";
-				mes "你没有我施法需要的东西哦，孩子。等你有了再来找我吧";
 				close;
 			}
 			mes "[智慧的老妇人]";
@@ -80,6 +86,17 @@ prt_in,28,73,4	script	智慧的老妇人#SeA	78,{
 			}
 			mes "[智慧的老妇人]";
 			mes "好的，我要开始了";
+			next;
+			mes "[智慧的老妇人]";
+			if( getequipcardcnt(.@part) != .@cardcount ) {
+				mes "你给我的东西好像不是刚才了的嘛！";
+				debugmes strcharinfo(0)+" 在拆卡时试图在中途更换装备";
+				close;
+			}
+			if((zeny < (200000+(.@cardcount * 25000))) || (countitem(1000) < 1) || (countitem(715) < 1)) {
+				mes "你没有我施法需要的东西哦，孩子。等你有了再来找我吧";
+				close;
+			}
 			set zeny,zeny - (200000+(.@cardcount * 25000));
 			delitem 1000,1;
 			delitem 715,1;
@@ -92,43 +109,31 @@ prt_in,28,73,4	script	智慧的老妇人#SeA	78,{
 			set .@failchance,rand(100);
 	
 			if(.@failchance < 2) {
-				next;
 				failedremovecards .@part,0;
-				mes "[智慧的老妇人]";
 				mes "完全失败了！可能所有东西都坏了。";
-				close;
 			}
-
+			else
 			if(.@failchance < 8) {
 				if (.@failtype == 1) {
-					next;
-					failedremovecards .@part,1;					
-					mes "[智慧的老妇人]";
+					failedremovecards .@part,1;	
 					mes "我试图将卡片拆除的时候，卡片坏了，但是装备还是好的。";
-					close;
 				}
-
+				else
 				if (.@failtype == 2) {
-					next;
 					failedremovecards .@part,2;
-					mes "[智慧的老妇人]";
 					mes "很不幸，拆卡是成功了，但是装备本身坏了。";
-					close;	
 				}
 			}
-
-
+			else
 			if(.@failchance < 10) {
-				next;
-				failedremovecards .@part,3;				
-				mes "[智慧的老妇人]";
+				failedremovecards .@part,3;
 				mes "拆卡失败了。很幸运的是，他们都没有损坏。";
-				close;	
 			}
-			next;
-			successremovecards .@part;
-			mes "[智慧的老妇人]";
-			mes "拆卡成功，这是你的卡片和装备。再见。";
+			else
+			{
+				successremovecards .@part;
+				mes "拆卡成功，这是你的卡片和装备。再见。";
+			}
 			close;			
 		case 2:
 			mes "[智慧的老妇人]";

@@ -10,6 +10,7 @@
 
 目录:
 
+0.- 基础知识
 1.- 基本指令.
 2.- 信息获取类指令.
 3.- 检查类指令.	
@@ -21,6 +22,716 @@
 9.- 战场指令
 10.- 佣兵指令.
 11.- SeA指令.		(已汉化)
+
+=====================
+|0.- 基  础  知  识.|
+=====================
+
+脚本加载
+------------------------
+
+将脚本路径设置在 'conf/map_athena.conf' 以被地图服务器加载，或任何被其加载的.conf
+文件，如 'npc/scripts_main.conf'.
+格式如下：
+
+npc: <path to a filename>
+
+Any line like this, invoked, ultimately, by 'map_athena.conf' will load up the 
+script contained in this file, which will make the script available. No file 
+will get loaded twice, to prevent possible errors.
+
+Another configuration file option of relevance is:
+
+delnpc: <path to a filename>
+
+This will unload a specified script filename from memory, which, while 
+seemingly useless, may sometimes be required.
+
+Whenever '//' is encountered in a line upon reading, everything beyond this on 
+that line is considered to be a comment and is ignored. This works wherever you 
+place it.
+
+Upon loading all the files, the server will execute all the top-level commands 
+in them. No variables exist yet at this point, no commands can be called other 
+than those given in this section. These commands set up the basic server script 
+structure - create NPC objects, spawn monster objects, set map flags, etc. No 
+code is actually executed at this point except them. The top-level commands the 
+scripting are pretty confusing, since they aren't structured like you would 
+expect commands, command name first, but rather, normally start with a map name.
+
+What's more confusing about the top-level commands is that most of them use a 
+tab symbol to divide their arguments.
+
+To prevent problems and confusion, the tab symbols are written as '%TAB%' 
+throughout this document, even though this makes the text a bit less readable. 
+Using an invisible symbol to denote arguments is one of the bad things about 
+this language, but we're stuck with it for now. :)
+
+顶级指令列表:
+
+** 设置地图标签:
+
+<map name>%TAB%mapflag%TAB%<flag>
+
+This will, upon loading, set a specified map flag on a map you like. These are 
+normally in files inside 'conf/mapflag' and are loaded first, so by the time the 
+server's up, all the maps have the flags they should have. Map flags determine 
+the behavior of the map regarding various common problems, for a better 
+explanation, see 'setmapflag'.
+
+** 创建可重生魔物:
+
+<map name>,<x>,<y>,<xs>,<ys>%TAB%monster%TAB%<monster name>%TAB%<mob id>,<amount>,<delay1>,<delay2>,<event>
+
+Map name is the name of the map the monsters will spawn on. x,y are the
+coordinates where the mob should spawn. If xs and ys are non-zero, they
+specify the diameters of a spawn-rectangle area who's center is x,y.
+Putting zeros instead of these coordinates will spawn the monsters randomly.
+Note this is only the initial spawn zone, as mobs random-walk, they are free
+to move away from their specified spawn region.
+
+Monster name is the name the monsters will have on screen, and has no relation 
+whatsoever to their names anywhere else. It's the mob id that counts, which 
+identifies monster record in 'mob_db.txt' database of monsters. If the mob name 
+is given as "--ja--", the 'japanese name' field from the monster database is 
+used, (which, in eAthena, actually contains an english name) if it's "--en--", 
+it's the 'english name' from the monster database (which contains an uppercase 
+name used to summon the monster with a GM command).
+
+If you add 20000 to the monster ID, the monster will be spawned in a 'big 
+version', (monster size class will increase) and if you add 10000, the 'tiny 
+version' of the monster will be created. However, this method is deprecated
+and not recommended, as the values to add can change at a later time (20000
+and 10000 actually stand for 2*MAX_MOB_DB and MAX_MOB_DB respectively, which
+is defined on mob.h, and can change in the future as more mobs are created).
+The recommended way to change a mob's size is to use the event-field (see
+below).
+
+Amount is the amount of monsters that will be spawned when this command is 
+executed, it is affected by spawn rates in 'battle_athena.conf'.
+
+Delay1 and delay2 are the monster respawn delays - the first one counts the time 
+since a monster defined in this spawn was last respawned and the second one 
+counts the time since the monster of this spawn was last killed. Whichever turns 
+out to be higher will be used. If the resulting number is smaller than a random 
+value between 5 and 10 seconds, this value will be used instead. (Which is 
+normally the case if both delay values are zero.) The times are given in
+1/1000ths of a second.
+
+You can specify a custom level to use for the mob different from the one of
+the database by adjoining the level after the name with a comma. eg:
+"Poring,50" for a name will spawn a monster with name Poring and level 50.
+
+Event is a script event to be executed when the mob is killed. The event must
+be in the form "NPCName::OnEventName" to execute, and the event name label
+should start with "On". As with all events, if the NPC is an on-touch NPC, the
+player who triggers the script must be within 'trigger' range for the event to
+work.
+
+The Event field can be used alternatively to specify other mob properties. Use
+2 to specify that the mob should be small, 4 for big monsters, and 8 for
+special ai mobs (which by default attack other monsters instead of players).
+You can add these, so using 10 will spawn small monsters that attack other
+mobs (if you specify both 2 and 4, the small version takes priority).
+
+** NPC名字
+
+/!\ WARNING: this applies to warps, NPCs, duplicates and shops /!\
+
+NPC names are kinda special and are formatted this way:
+
+<Display name>{::<Unique name>}
+
+All NPCs need to have a unique name that is used for identification purposes.
+When you have to identify a NPC by it's name, you should use <Unique name>.
+If <Unique name> is not provided, use <Display name> instead.
+
+The client has a special feature when displaying names:
+if the display name contains a '#' character, it hides that part of the name.
+ex: if your NPC is named 'Hunter#hunter1', it will be displayed as 'Hunter'
+
+<Display name> must be at most 24 characters in length.
+<Unique name> must be at most 24 characters in length.
+
+** 定义传送点
+
+<from map name>,<fromX>,<fromY>,<facing>%TAB%warp%TAB%<warp name>%TAB%<spanx>,<spany>,<to map name>,<toX>,<toY>
+
+This will define a warp NPC that will warp a player between maps, and while most 
+arguments of that are obvious, some deserve special mention.
+
+SpanX and SpanY will make the warp sensitive to a character who didn't step 
+directly on it, but walked into a zone which is centered on the warp from 
+coordinates and is SpanX in each direction across the X axis and SpanY in each 
+direction across the Y axis.
+
+Warp NPC objects also have a name, because you can use it to refer to them later 
+with 'enablenpc'/'disablenpc' 
+
+Facing of a warp object is irrelevant, it is not used in the code and all 
+current scripts have a zero in there.
+
+** 创建NPC
+
+<map name>,<x>,<y>,<facing>%TAB%script%TAB%<NPC Name>%TAB%<sprite id>,{<code>}
+<map name>,<x>,<y>,<facing>%TAB%script%TAB%<NPC Name>%TAB%<sprite id>,<triggerX>,<triggerY>,{<code>}
+
+This will place an NPC object on a specified map at the specified location, and 
+is a top-level command you will use the most in your custom scripting. The NPCs 
+are triggered by clicking on them, and/or by walking in their trigger area, if 
+defined, see that below.
+
+Facing is a direction the NPC sprite will face in. Not all NPC sprites have 
+different images depending on the direction you look from, so for some facing 
+will be meaningless. Facings are counted counterclockwise in increments of 45 
+degrees, where 0 means facing towards the top of the map. (So to turn the sprite 
+towards the bottom of the map, you use facing 4, and to make it look southeast 
+it's facing 5.)
+
+Sprite id is the sprite number used to display this particular NPC. For a full 
+list of sprite id numbers see http://kalen.s79.xrea.com/npc/npce.shtml You may 
+also use a monster's ID number instead to display a monster sprite for this NPC. 
+It is possible to use a job sprite as well, but you must first define it as a 
+monster sprite in 'mob_avail.txt', a full description on how to do this is not 
+in the scope of this manual.
+A '-1' sprite id will make the NPC invisible (and unclickable). 
+A '111' sprite id will make an NPC which does not have a sprite, but is still 
+clickable, which is useful if you want to make a clickable object of the 3D 
+terrain.
+
+TriggerX and triggerY, if given, will define an area, centered on NPC and 
+spanning triggerX cells in every direction across X and triggerY in every 
+direction across Y. Walking into that area will trigger the NPC. If no 
+'OnTouch:' special label is present in the NPC code, the execution will start 
+from the beginning of the script, otherwise, it will start from the 'OnTouch:' 
+label. Monsters can also trigger the NPC, though the label 'OnTouchNPC:' is 
+used in this case.
+
+The code part is the script code that will execute whenever the NPC is 
+triggered. It may contain commands and function calls, descriptions of which 
+compose most of this document. It has to be in curly brackets, unlike elsewhere 
+where we use curly brackets, these do NOT signify an optional parameter.
+
+** 创建浮动NPC
+
+-%TAB%script%TAB%<NPC Name>%TAB%-1,{<code>}
+
+This will define an NPC object not triggerable by normal means. This would 
+normally mean it's pointless since it can't do anything, but there are 
+exceptions, mostly related to running scripts at specified time, which is what 
+these floating NPC objects are for. More on that below.
+
+** 创建商店
+
+-%TAB%shop%TAB%<NPC Name>%TAB%<sprite id>,<itemid>:<price>{,<itemid>:<price>...}
+<map name>,<x>,<y>,<facing>%TAB%shop%TAB%<NPC Name>%TAB%<sprite id>,<itemid>:<price>{,<itemid>:<price>...}
+
+This will define a shop NPC, which, when triggered (which can only be done by 
+clicking) will cause a shop window to come up. No code whatsoever runs in shop 
+NPCs and you can't change the prices otherwise than by editing the script 
+itself. (No variables even exist at this point of scripting, so don't even 
+bother trying to use them.)
+
+The item id is the number of item in the 'item_db.txt' database. If Price is set 
+to -1, the 'buy price' given in the item database will be used. Otherwise, the 
+price you gave will be used for this item, which is how you create differing 
+prices for items in different shops.
+
+Since trunk r12264 you can alternatively use "cashshop" in place of "shop"
+to use the Cash Shop interface, allowing you to buy items with special points
+(Currently stored as account vars in global_reg #CASHPOINTS and #KAFRAPOINTS.)
+This type of shop will not allow you to sell items at it, you may only
+purchase items here. The layout used to define sale items still count, and
+"<price>" refers to how many points will be spent purchasing the them.
+
+** 复制NPC
+
+warp: <map name>,<x>,<y>,<facing>%TAB%duplicate(<label>)%TAB%<NPC Name>%TAB%<spanx>,<spany>
+shop/cashshop/npc: -%TAB%duplicate(<label>)%TAB%<NPC Name>%TAB%<sprite id>
+shop/cashshop/npc: <map name>,<x>,<y>,<facing>%TAB%duplicate(<label>)%TAB%<NPC Name>%TAB%<sprite id>
+npc: -%TAB%duplicate(<label>)%TAB%<NPC Name>%TAB%<sprite id>,<triggerX>,<triggerY>
+npc: <map name>,<x>,<y>,<facing>%TAB%duplicate(<label>)%TAB%<NPC Name>%TAB%<sprite id>,<triggerX>,<triggerY>
+
+This will duplicate an warp/shop/cashshop/NPC referred to by 'label'.
+Warp duplicates inherit the target location.
+Shop/cashshop duplicates inherit the item list.
+NPC duplicates inherit the script code.
+The rest (name, location, facing, sprite ID, span/trigger area)
+is obtained from the definition of the duplicate (not inherited).
+
+** 定义函数
+
+function%TAB%script%TAB%<function name>%TAB%{<code>}
+
+This will define a function object, callable with the 'callfunc' command (see 
+below). This object will load on every map server separately, so you can get at 
+it from anywhere. It's not possible to call the code in this object by 
+anything other than the 'callfunc' script command.
+
+The code part is the script code that will execute whenever the function is 
+called with 'callfunc'. It has to be in curly brackets, unlike elsewhere where 
+we use curly brackets, these do NOT signify an optional parameter.
+
+
+Once an object is defined which has a 'code' field to it's definition, it 
+contains script commands which can actually be triggered and executed. 
+
+~ RID? GID? ~
+
+What a RID is and why do you need to know
+-----------------------------------------
+
+Most scripting commands and functions will want to request data about a 
+character, store variables referenced to that character, send stuff to the 
+client connected to that specific character. Whenever a script is invoked by a 
+character, it is passed a so-called RID - this is the character ID number of a 
+character that caused the code to execute by clicking on it, walking into it's 
+OnTouch zone, or otherwise.
+
+If you are only writing common NPCs, you don't need to bother with it. However, 
+if you use functions, if you use timers, if you use clock-based script 
+activation, you need to be aware of all cases when a script execution can be 
+triggered without a RID attached. This will make a lot of commands and functions 
+unusable, since they want data from a specific character, want to send stuff to 
+a specific client, want to store variables specific to that character, and they 
+would not know what character to work on if there's no RID.
+
+Unless you use 'attachrid' to explicitly attach a character to the script first.
+
+Whenever we say 'invoking character', we mean 'the character who's RID is 
+attached to the running script. The script function "playerattached" can be
+used to check which is the currently attached player to the script (it will
+return 0 if the there is no player attached or the attached player no longer
+is logged on to the map-server).
+
+But what about GID?
+--- ---- ----- ----
+
+GID stands for the Game ID of something, this can either be the GID obtained
+through mobspawn (mob control commands) or the account ID of a character.
+Another way would be to right click on a mob, 
+NPC or char as GM sprited char to view the GID.
+
+This is mostly used for the new version of skill and the mob control commmands
+implemented (but NEVER documented by Lance. Shame on you...).
+
+Item and pet scripts
+--------------------
+
+Each item in the item database has three special fields - Script , OnEquip_Script
+and OnUnequip_Script. The first is script code run every time a character equips the item, 
+with the RID of the equipping character. Every time they unequip an item, all 
+temporary bonuses given by the script commands are cleared, and all the scripts 
+are executed once again to rebuild them. This also happens in several other 
+situations (like upon login) but the full list is currently unknown.
+
+OnEquip_Script is a piece of script code run whenever the item is used by a character 
+by doubleclicking on it. OnUnequip_Script runs whenever the
+equipment is unequip by a character
+
+Not all script commands work properly in the item scripts. Where commands and 
+functions are known to be meant specifically for use in item scripts, they are 
+described as such.
+
+Every pet in the pet database has a PetScript field, which determines pet 
+behavior. It is invoked wherever a pet of the specified type is spawned. 
+(hatched from an egg, or loaded from the char server when a character who had 
+that pet following them connects) This may occur in some other situations as 
+well. Don't expect anything other than commands definitely marked as usable in 
+pet scripts to work in there reliably.
+
+数字
+-------
+
+Beside the common decimal numbers, which are nothing special whatsoever (though 
+do not expect to use fractions, since ALL numbers are integer in this language), 
+the script engine also handles hexadecimal numbers, which are otherwise 
+identical. Writing a number like '0x<hex digits>' will make it recognized as a 
+hexadecimal value. Notice that 0x10 is equal to 16. Also notice that if you try 
+to 'mes 0x10' it will print '16'.
+
+This is not used much, but it pays to know about it.
+
+变量
+---------
+
+The meat of every programming language is variables - places where you store 
+data. 
+
+Variables are divided into and uniquely identified by the combination of:
+prefix  - determines the scope and extent (or lifetime) of the variable
+name    - an identifier consisting of '_' and alphanumeric characters
+postfix - determines the type of the variable: integer or string
+
+Scope can be:
+global    - global to all servers
+local     - local to the server
+account   - attached to the account of the character identified by RID
+character - attached to the character identified by RID
+npc       - attached to the NPC
+scope     - attached to the scope of the instance
+
+Extent can be:
+permanent - They still exist when the server resets.
+temporary - They cease to exist when the server resets.
+
+Prefix: scope and extent
+nothing  - A permanent variable attached to the character, the default variable
+           type. They are stored with all the account data in "save\athena.txt"
+           in TXT versions and in the SQL versions in the `global_reg_value`
+           table using type 3.
+"@"      - A temporary variable attached to the character.
+           SVN versions before 2094 revision and RC5 version will also treat
+           'l' as a temporary variable prefix, so beware of having variable
+           names starting with 'l' if you want full backward compatibility.
+"$"      - A global permanent variable.
+           They are stored in "save\mapreg.txt" or database table `mapreg`,
+           depending on server type.
+"$@"     - A global temporary variable.
+           This is important for scripts which are called with no RID
+           attached, that is, not triggered by a specific character object.
+"."      - A NPC variable.
+           They exist in the NPC and disappear when the server restarts or the 
+           NPC is reloaded. Can be accessed from inside the NPC or by calling 
+           'getvariableofnpc'.
+".@"     - A scope variable.
+           They are unique to the instance and scope. Each instance has it's 
+           own scope that ends when the script ends. Calling a function with 
+           callsub/callfunc starts a new scope, returning from the function 
+           ends it. When a scope ends, it's variables are converted to values 
+           ('return .@var;' returns a value, not a reference).
+"#"      - A permanent local account variable.
+           They are stored with all the account data in "save\accreg.txt" in
+           TXT versions and in the SQL versions in the 'global_reg_value'
+           table using type 2.
+"##"     - A permanent global account variable stored by the login server.
+           They are stored in "save\account.txt" and in the SQL versions in the
+           'global_reg_value' table, using type 1. The only difference you will
+           note from normal # variables is when you have multiple char-servers
+           connected to the same login server. The # variables are unique to
+           each char-server, while the ## variables are shared by all these
+           char-servers.
+
+Postfix: integer or string
+nothing - integer variable, can store positive and negative numbers, but only 
+          whole numbers (so don't expect to do any fractional math)
+'$'     - string variable, can store text
+
+Examples:
+  name  - permanent character integer variable
+  name$ - permanent character string variable
+ @name  - temporary character integer variable
+ @name$ - temporary character string variable
+ $name  - permanent global integer variable
+ $name$ - permanent global string variable
+$@name  - temporary global integer variable
+$@name$ - temporary global string variable
+ .name  - NPC integer variable
+ .name$ - NPC string variable
+.@name  - scope integer variable
+.@name$ - scope string variable
+ #name  - permanent local account integer variable
+ #name$ - permanent local account string variable
+##name  - permanent global account integer variable
+##name$ - permanent global account string variable
+
+If a variable was never set, it is considered to equal zero for integer 
+variables or an empty string ("", nothing between the quotes) for string 
+variables. Once you set it to that, the variable is as good as forgotten 
+forever, and no trace remains of it even if it was stored with character or 
+account data.
+
+Some variables are special, that is, they are already defined for you by the 
+scripting engine. You can see the full list somewhere in 'db/const.txt', which 
+is a file you should read, since it also allows you to replace lots of numbered 
+arguments for many commands with easier to read text. The special variables most 
+commonly used are all permanent character-based variables:
+
+StatusPoint - Amount of status points remaining.
+BaseLevel   - Current base level
+SkillPoint  - Amount of skill points remaining
+Class       - Current job
+Upper       - 1 if the character is an advanced job class.
+Zeny        - Current amount of Zeny
+Sex         - Character's gender, 0 if female, 1 if male.
+Weight      - The weight the character currently carries.
+MaxWeight   - The maximum weight the character can carry.
+JobLevel    - Character's job level
+BaseExp     - The amount of base experience points the character has.
+              Notice that it's zero (or close) if the character just got a level.
+JobExp      - Same for job levels
+NextBaseExp - Amount of experience points needed to reach the next base level.
+NextJobExp  - Same for job levels.
+Hp          - Current amount of hit points.
+MaxHp       - Maximum amount of hit points.
+Sp          - Current spell points.
+MaxSp       - Maximum amount of spell points.
+BaseJob     - This is sneaky, apparently meant for baby class support.
+              This will supposedly equal Job_Acolyte regardless of whether the 
+              character is an acolyte or a baby acolyte, for example.
+Karma       - The character's karma. Karma system is not fully functional, but 
+              this doesn't mean this doesn't work at all. Not tested.
+Manner      - The character's manner rating. Becomes negative if the player 
+              utters words forbidden through the use of 'manner.txt' client-side 
+              file.
+
+While these behave as variables, do not always expect to just set them - it is 
+not certain whether this will work for all of them. Whenever there is a command 
+or a function to set something, it's usually preferable to use that instead. The 
+notable exception is Zeny, which you can and often will address directly -
+setting it will make the character own this number of Zeny.
+If you try to set Zeny to a negative number, the script will be terminated with an error.
+
+字符串
+-------
+
+To include symbol '"' in a string you should use prefix '\"'
+
+
+数组
+------
+
+Arrays (in eAthena at least) are essentially a set of variables going under the 
+same name. You can tell between the specific variables of an array with an 
+'array index', a number of a variable in that array:
+
+<variable name>[<array index>]
+
+Variables stored in this way, inside an array, are also called 'array elements'. 
+Arrays are specifically useful for storing a set of similar data (like several 
+item IDs for example) and then looping through it. You can address any array 
+variable as if it was a normal variable:
+
+    set @arrayofnumbers[0],1;
+
+You can also do sneaky things like using a variable (or an expression, or even a 
+value from an another array) to get at an array value:
+
+    set @x,100;
+    set @arrayofnumbers[@x],10;
+    
+This will make @arrayofnumbers[100] equal to 10.
+
+Notice that index numbering always starts with 0. Arrays cannot hold more than 
+128 variables. (So the last one can't have a number higher than 127)
+
+And array indexes probably can't be negative. Nobody tested what happens when 
+you try to get a negatively numbered variable from an array, but it's not going 
+to be pretty. :)
+
+Arrays can naturally store strings:
+
+@menulines$[0] is the 0th element of the @menulines$ array of strings. Notice 
+the '$', normally denoting a string variable, before the square brackets that 
+denotes an array index.
+
+Resume of the allowed variable and array scopes
+------ -- --- ------- -------- --- ----- ------
+
++==========+======+=======+
+|VarType   | Norm | Array |
++==========+======+=======+
+|$Str$     | OK!  | OK!   |
++----------+------+-------+
+|$@Str$    | OK!  | OK!   |
++----------+------+-------+
+|@Str$     | OK!  | OK!   |
++----------+------+-------+
+|#Str$     | OK!  | FAIL! |
++----------+------+-------+
+|Str$      | OK!  | FAIL! |
++----------+------+-------+
+|$Int      | OK!  | OK!   |
++----------+------+-------+
+|$@Int     | OK!  | OK!   |
++----------+------+-------+
+|@Int      | OK!  | OK!   |
++----------+------+-------+
+|#Int      | OK!  | FAIL! |
++----------+------+-------+
+|Int       | OK!  | FAIL! |
++----------+------+-------+
+|.Str$     | OK!  | OK!   |
++----------+------+-------+
+|.Int      | OK!  | OK!   |
++----------+------+-------+
+|.@Str$    | OK!  | OK!   |
++----------+------+-------+
+|.@Int     | OK!  | OK!   |
++----------+------+-------+
+
+操作符
+---------
+
+Operators are things you can do to variables and numbers. They are either the 
+common mathematical operations or conditional operators
+
++ - will add two numbers. If you try to add two strings, the result will be a 
+    string glued together at the +. You can add a number to a string, and the
+    result will be a string. No other math operators work with strings.
+- - will subtract two numbers. 
+* - will multiply two numbers.
+/ - will divide two numbers. Note that this is an integer division, i.e.
+    7/2 is not equal 3.5, it's equal 3.
+% - will give you the remainder of the division. 7%2 is equal to 1.
+
+There are also conditional operators. This has to do with the conditional 
+command 'if' and they are meant to return either 1 if the condition is satisfied 
+and 0 if it isn't. (That's what they call 'boolean' variables. 0 means 'False'. 
+Anything except the zero is 'True' Odd as it is, -1 and -5 and anything below 
+zero will also be True.)
+
+You can compare numbers to each other and you compare strings to each other, but 
+you can not compare numbers to strings.
+
+ ==  - Is true if both sides are equal. For strings, it means they are the same.
+ >=  - True if the first value is equal to, or greater than, the second value.
+ <=  - True if the first value is equal to, or less than, the second value
+ >   - True if the first value greater than the second value
+ <   - True if the first value is less than the second value
+ !=  - True if the first value IS NOT equal to the second one
+
+Examples:
+
+ 1==1 is True.
+ 1<2 is True while 1>2 is False.
+ @x>2 is True if @x is equal to 3. But it isn't true if @x is 2.
+
+Only '==' and '!=' have been tested for comparing strings. Since there's no way 
+to code a seriously complex data structure in this language, trying to sort 
+strings by alphabet would be pointless anyway.
+
+Comparisons can be stacked in the same condition:
+
+ && - Is True if and only if BOTH sides are true.
+      ('1==1 && 2==2' is true. '2==1 && 1==1' is false.)
+ || - Is True if either side of this expression is True.
+
+ 1==1 && 2==2 is True.
+ 1==1 && 2==1 is False.
+ 1==1 || 2==1 is True.
+
+Logical bitwise operators work only on numbers, and they are the following:
+
+ << - Left shift.
+ >> - Right shift.
+	Left shift moves the binary 1(s) of a number n positions to the left,
+	which is the same as multiplying by 2, n times.
+	In the other hand, Right shift moves the binary 1(s) of a number n positions
+	to the right, which is the same as dividing by 2, n times.
+		Example:
+		set b,2;
+		set a, b << 3;
+		mes a;
+		set a, a >> 2;
+		mes a;
+	The first mes command would display 16, which is the same as 2 x (2 x 2 x 2) = 16.
+	The second mes command would display 4, which is the same as 16 / 2 = 8. 8 / 2 = 4.
+ &  - And.
+ |  - Or.
+	The bitwise operator AND (&) is used to test two values against each other, 
+	and results in setting bits which are active in both arguments. This can
+	be used for a few things, but in eAthena this operator is usually used to
+	create bit-masks in scripts. 
+	
+	The bitwise operator OR (|)sets to 1 a binary position if the binary position
+	of one of the numbers is 1. This way a variable can hold several values we can check,
+	known as bit-mask. A variable currently can hold up to 32 bit-masks (from position 0
+	to position 1). This is a cheap(skate) and easy way to avoid using arrays to store several checks
+	that a player can have.
+	
+	A bit-mask basically is (ab)using the variables bits to set various options in 
+	one variable. With the current limit if variables it is possible to store 32 
+	different options in one variable (by using the bits on position 0 to 31).
+
+	Example(s):
+	- Basic example of the & operator, bit example:
+		10 & 2 = 2
+	Why? :
+		10 = 2^1 + 2^3 (2 + 8), so in bits, it would be 1010
+		2 = 2^1 (2), so in bits (same size) it would be 0010
+		The & (AND) operator sets bits which are active (1) in both arguments, so in the
+		example 1010 & 0010, only the 2^1 bit is active (1) in both. Resulting in the bit
+		0010, which is 2.
+	- Basic example of creating and using a bit-mask:
+		set @options,2|4|16; //(note: this is the same as 2+4+16, or 22)
+		if (@options & 1)	mes "Option 1 is activated";
+		if (@options & 2) mes "Option 2 is activated";
+		if (@options & 4) mes "Option 3 is activated";
+		if (@options & 8) mes "Option 4 is activated";
+		if (@options & 16) mes "Options 5 is activated";
+	This would return the messages about option 2, 3 and 5 being shown (since we've set
+	the 2,4 and 16 bit to 1).
+ ^  - Xor.
+	The bitwise operator XOR (eXclusive OR) sets a binary position to 0 if both 
+	numbers have the same value in the said position. On the other hand, it 
+	sets to 1 if they have different values in the said binary position.
+	This is another way of setting and unsetting bits in bit-masks.
+	
+	Example:
+	- First let's set the quests that are currently in progress:
+		set inProgress,1|8|16; // quest 1,8 and 16 are in progress
+	- After playing for a bit, the player starts another quest:
+		if( inProgress&2 == 0 ){
+			// this will set the bit for quest 2 (inProgress has that bit set to 0)
+			set inProgress,inProgress^2;
+			mes "Quest 2: find a newbie and be helpful to him for an hour.";
+			close;
+		}
+	- After spending some time reading info on Xor's, the player finally completes quest 1:
+		if( inProgress&1 && isComplete ){
+			// this will unset the bit for quest 1 (inProgress has that bit set to 1)
+			set inProgress,inProgress^1;
+			mes "Quest 1 complete!! You unlocked the secrets of the Xor dynasty, use them wisely.";
+			close;
+		}
+
+Unary operators with only with a single number, which follows the operator, and
+are following:
+
+ -  - Negation.
+	The sign of the number will be reversed. If the number was positive, it will
+	become negative and vice versa.
+
+	Example:
+		set .@myvar,10;
+		mes "Negative 10 is "+(-.@myvar);
+
+ !  - Logical Not.
+	Reverses the boolean result of an expression. True will become false and
+	false will become true.
+
+	Example:
+		if(!callfunc("F_dosomething"))
+		{
+			mes "Doing something failed.";
+			close;
+		}
+
+ ~  - Bitwise Not.
+	Reverses each bit in a number, also known as one's complement. Cleared bits
+	are set, and set bits are cleared.
+
+	Example:
+	- Ensure, that quest 2 is disabled, while keeping all other active, if they are.
+		set inProgress,inProgress&(~2);  // same as set inProgress,inProgress&0xfffffffd
+
+Ternary operators take three expressions (numbers, strings or boolean), and are
+following:
+
+ ?: - Conditional operator
+	Very useful e.g. to replace
+
+		if(Sex) mes "..."; else mes "...";
+
+	clauses with simple
+
+		mes "Welcome, " + (Sex?"Mr.":"Mrs.") + " " + strcharinfo(0);
+
+	or to replace any other simple if-else clauses. It might be worth
+	mentioning that ?: has low priority and has to be enclosed with
+	parenthesis in most (if not all) cases.
+
 
 =====================
 |1.- Basic commands.|
