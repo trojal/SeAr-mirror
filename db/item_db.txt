@@ -4807,7 +4807,7 @@
 12580,Universal_Catalog_Silver,Universal Catalog Silver,2,200,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,0; },{},{}
 12581,Universal_Catalog_Gold,Universal Catalog Gold,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
 12591,Universal_Catalog_Bronze,Universal Catalog Bronze,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
-12622,Reins_Of_Mounts,Reins Of Mounts,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if( sc_check(SC_MOUNT_NEW) ) sc_end SC_MOUNT_NEW; else sc_start SC_MOUNT_NEW,-1,0; },{},{}
+12622,Reins_Of_Mounts,Reins Of Mounts,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ callfunc "F_ALLRIDING"; },{},{}
 12701,Old_Blue_Box_F,…Ò√ÿœ‰◊”,2,,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12702,Old_Bleu_Box,…Ò√ÿ¿∂œ‰,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_BleuBox),1; getitem groupranditem(IG_BleuBox),1; },{},{}
 12703,Holy_Egg_2,Holy Egg,11,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}

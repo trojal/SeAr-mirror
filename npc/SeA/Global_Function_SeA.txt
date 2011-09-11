@@ -289,6 +289,43 @@ function	script	cmd_disguise	{
 	dispmes msg(124);
 }
 
+function	script	F_ALLRIDING	{
+	switch(BaseJob)
+	{
+	case Job_Knight:
+	case Job_Crusader:
+		setriding(checkriding()?0:1);
+		break;
+	case Job_Blacksmith:
+		if(Upper&4)
+		{
+			setriding(checkriding()?0:1);
+			break;
+		} //Let it fall through
+	case Job_Hunter:
+		if(Upper&4)
+		{
+			if( checkoption(0x00200020) )
+			{
+				unitskilluseid getcharid(3),"RA_WUGRIDER",1;
+				unitskilluseid getcharid(3),"RA_WUGMASTERY",1;	
+			}
+			else
+			{
+				setwarg();
+				unitskilluseid getcharid(3),"RA_WUGRIDER",1;
+			}
+			break;
+		} //Let it fall through
+	default:
+		if( sc_check(SC_ALLRIDING) ) 
+			sc_end SC_ALLRIDING; 
+		else 
+			sc_start SC_ALLRIDING,-1,0;
+		break;
+	}
+}
+
 -	script	Ä¹±®::Grave_System	565,{
 	set .@i,atoi(strnpcinfo(2));
 	mes "Ä§Îï ["+mob_death_info(0,.@i)+"] ÔÚ";
