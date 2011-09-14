@@ -481,7 +481,7 @@
 					mes "ÄãµÄÇ®²»¹»";
 				break;
 			case 6:
-				callsub "F_Get3rdJobItems";
+				callsub F_Get3rdJobItems;
 				break;
 		}
 		break;
