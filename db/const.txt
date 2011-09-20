@@ -494,6 +494,7 @@ bCooldownValue	1911
 bDelayValue	1912
 bUseSPValue	1913
 bNoSkill	1914
+bAddEleRace	1920
 
 bRestartFullRecover	2000
 bNoCastCancel	2001

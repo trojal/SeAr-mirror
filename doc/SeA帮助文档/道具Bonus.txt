@@ -195,6 +195,7 @@ bonus2 bAddMDefClass,n,x;		减少id为 n 的魔物/职业id为 n 的玩家给与的魔法攻击伤害
 bonus2 bAddDamageByClass,n,x;		被 n 魔物攻击时增加伤害 x%
 bonus2 bAddRace2,n,x;			对种族 n 的敌人的伤害增加 x% (种族n在mob_race2_db.txt中定义)
 bonus2 bSubRace2,n,x;			对种族 n 的敌人的伤害减少 x% (种族n在mob_race2_db.txt中定义)
+bonus3 bAddEleRace,m,n,x;		对种族 n 属性 m 的敌人的增加减少 x% (n值见备注1)(m值见备注2)
 bonus bNearAtkDef,n;			减少 n% 近距离物理攻击伤害
 bonus bLongAtkDef,n;			减少 n% 远距离攻击伤害
 bonus bMagicAtkDef,n;			减少 n% 近距离魔法攻击伤害
