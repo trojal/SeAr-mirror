@@ -6591,6 +6591,22 @@ This command will force the update of the displayed scoreboard.
 
 ----------------------------------------
 
+bg_kickall <battleground ID>;
+
+----------------------------------------
+
+getbgusers <battleground ID>;
+
+----------------------------------------
+
+setbgid <battleground ID> {, <player name> };
+
+----------------------------------------
+
+createbgid <battleground ID>, <respawn map>, <respawn x>, <respawn y>, <On Quit event>, <On Death event>;
+
+----------------------------------------
+
 ==========================
 |10.- Mercenary commands.|
 ==========================
