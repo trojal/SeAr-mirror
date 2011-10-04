@@ -273,8 +273,24 @@
 		next;
 		switch(select( "转职","转生","学习新技能","租用职业道具","点数重置","^FF0000领取三转职业道具^000000" ))
 		{
-			case 1:		
-				if (SkillPoint || JobLevel < (!BaseJob?10:40)) {
+			case 1:
+				if( !BaseJob )
+					set .@joblv_req,10;
+				else if( (Class >= Job_Swordman && Class <= Job_Thief) ||
+					 (Class >= Job_Swordman_High && Class <= Job_Thief_High) ||
+					 (Class >= Job_Baby_Swordman && Class <= Job_Baby_Thief) )
+					set .@joblv_req,40;
+				else if( (Class >= Job_Knight && Class <= Job_Dancer) ||
+					 (Class >= Job_Baby_Knight && Class <= Job_Baby_Dancer) )
+					set .@joblv_req,50;
+				else if( (Class >= Job_Lord_Knight && Class <= Job_Gypsy) )
+					set .@joblv_req,50;
+				else if( (BaseJob == Job_SuperNovice) )
+					set .@joblv_req,99;
+				else if( (Class == Job_Taekwon) )
+					set .@joblv_req,40;
+
+				if (SkillPoint || JobLevel < .@joblv_req) {
 					mes "[SeA服务员]";
 					mes "你的Job等级不够或者技能点数没有加完";
 				} else {
@@ -283,7 +299,7 @@
 						mes "您的职业不能转职了";
 						break;
 					}
-					if( BaseJob >= 7 && BaseJob <= 21 ) {
+					if( BaseJob >= 7 && BaseJob <= 21 || BaseJob == Job_SuperNovice ) {
 						if ( BaseLevel < 99 ) {
 							mes "[SeA服务员]";
 							mes "你的Base等级不够99级";
@@ -291,6 +307,8 @@
 						}
 						if( BaseJob <= 13 )
 							jobchange BaseClass+4053, Upper;
+						else if( BaseJob == Job_SuperNovice )
+							jobchange 4190, Upper;
 						else
 							jobchange (BaseClass<=2?BaseClass:BaseClass+1)+4065, Upper;
 					}
@@ -381,11 +399,19 @@
 						skill 157,1,0;
 						if (BaseJob==9) skill 1006,1,0;
 						if (BaseJob==16) {
+							if(!getskilllv(1008) && !getskilllv(1017) && !getskilllv(1018) && !getskilllv(1019)) {
+								mes "请选择一种元素更换技能";
+								mes "(^FF0000一旦选择不可再做更改^000000)";
+								next;
+								switch(select("元素更换(水):元素更换(地):元素更换(火):元素更换(风)")) {
+								case 1: skill 1008,1,0; break;
+								case 2: skill 1017,1,0; break;
+								case 3: skill 1018,1,0; break;
+								case 4: skill 1019,1,0; break;
+								}
+								mes "[SeA服务员]";
+							}
 							skill 1007,1,0;
-							skill 1008,1,0;
-							skill 1017,1,0;
-							skill 1018,1,0;
-							skill 1019,1,0;
 						}
 						break;
 					case 3:
@@ -481,7 +507,7 @@
 					mes "你的钱不够";
 				break;
 			case 6:
-				callsub F_Get3rdJobItems;
+				callsub S_Get3rdJobItems;
 				break;
 		}
 		break;
@@ -489,7 +515,7 @@
 	cutin "son",255;
 	close;
 
-F_Get3rdJobItems:
+S_Get3rdJobItems:
 	if(!(Upper&4)) {
 		mes "[SeA服务员]";
 		mes "您的职业无法领取三转道具。";
