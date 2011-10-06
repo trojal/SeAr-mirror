@@ -152,12 +152,12 @@
 2452,0xe4,   ,  0, 3,3000,friend,0x000	//SO_WARMER
 2453,0xeb,    , 0, 1:1:2:2:3, 100,enemy, 0x010	//SO_VACUUM_EXTREME
 
-2479,0xe5,   ,  0, 2,1000,enemy, 0x018	//GN_THORNS_TRAP
+2479,0xe5,   ,  0, 2,1000,enemy, 0x01E	//GN_THORNS_TRAP
 2482,0xe6,   , -1, 0,  20,enemy, 0x018	//GN_WALLOFTHORN
 2485,0xe7,   ,  0, 3,1000,enemy, 0x080	//GN_DEMONIC_FIRE
 2487,0xe8,   ,  0, 3,1000,enemy, 0x000	//GN_FIRE_EXPANSION_SMOKE_POWDER
 2488,0xe9,   ,  0, 3,1000,enemy, 0x000	//GN_FIRE_EXPANSION_TEAR_GAS
-2490,0xea,   ,  0, 1,1000,all,	 0x000	//GN_HELLS_PLANT
+2490,0xea,   ,  0, 1,1000,all,	 0x004	//GN_HELLS_PLANT
 
 8403,0xed,   , -1, 0,  20,enemy, 0x010	//EL_FIRE_MANTLE
 8406,0xee,   ,  0, 1,1000,all,   0x000	//EL_WATER_BARRIER
