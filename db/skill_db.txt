@@ -647,7 +647,7 @@
 1003,0,0,0,0,0,0,1,0,no,0,0x1,0,weapon,0,	AS_SONICACCEL,超音速投掷
 1004,9,8,1,0,0x8,0,1,1,no,0,0x1,0,weapon,0,	AS_VENOMKNIFE,毒刃
 1005,1,6,1,0,0x1,0,1,1,no,0,0x1,0,weapon,0,	RG_CLOSECONFINE,紧密的约束
-1006,0,6,4,3,0,2,1,1,yes,0,0x1,0,magic,3,	WZ_SIGHTBLASTER,火狩 Blaster
+1006,0,6,4,3,0,2,1,1,yes,0,0x1,0,magic,3,	WZ_SIGHTBLASTER,火狩芽
 1007,0,6,4,0,0x1,0,1,0,no,0,0x1,0,none,0,	SA_CREATECON,元素肯贝特 制作
 1008,9,6,1,1,0x1,0,1,1,yes,0,0x1,0,magic,0,	SA_ELEMENTWATER,元素更换(水)
 1009,-9,6,1,0,0,0,1,1,no,0,0x1,0,weapon,3,	HT_PHANTASMIC,幻影箭
@@ -746,8 +746,8 @@
 2220,8,6,1,4,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_WIND,元素漩涡_WIND
 2221,8,6,1,2,0x6,3:5:7:7:7,5,1,no,0,0,1,magic,0,WL_TETRAVORTEX_GROUND,元素漩涡_GROUND
 2222,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONFB,召唤火球
-2223,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONBL,召唤水球
-2224,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONWB,召唤闪电球
+2223,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONBL,召唤闪电球
+2224,0,6,4,0,0x1,0,5,1,yes,0,0,0,magic,0,	WL_SUMMONWB,召唤水球
 2225,9,6,4,3,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_FIRE,召唤火球ATK
 2226,9,6,4,1,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_WATER,召唤水球ATK
 2227,9,6,4,4,0,0,5,1,no,0,0,0,magic,0,		WL_SUMMON_ATK_WIND,召唤电球ATK
