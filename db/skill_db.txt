@@ -685,8 +685,8 @@
 2019,0,6,4,0,0x01,0,1,0,no,0,0,0,none,0,	RK_ABUNDANCE,充沛
 2020,5,6,16,-1,0,0,5,1,no,0,0,0,misc,0,		RK_PHANTOMTHRUST,幻影刺击
 // 十字切割者
-2021,5,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化
-2022,3,8,1,-1,0,0,5,7,no,0,0,0,weapon,0,	GC_CROSSIMPACT,十字斩
+2021,10,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化
+2022,3,8,1,-1,0,0,5,-7,no,0,0,0,weapon,0,	GC_CROSSIMPACT,十字斩
 2023,3:4:5:6:7,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,GC_DARKILLUSION,暗影步
 2024,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GC_RESEARCHNEWPOISON,新毒研究
 2025,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		GC_CREATENEWPOISON,新毒制造
@@ -701,7 +701,7 @@
 2034,5,6,4,-1,0x02,3,1,1,no,0,0,0,weapon,0,	GC_PHANTOMMENACE,鬼魅之舞
 2035,0,6,4,0,0x01,0,5,0,no,0,0,0,none,0,	GC_HALLUCINATIONWALK,疾风步
 2036,0,6,4,-1,0x02,2,5,0,no,0,0,0,weapon,0,	GC_ROLLINGCUTTER,回旋利刃
-2037,7,8,1,-1,0,0,5,10,no,0,0,0,weapon,0,	GC_CROSSRIPPERSLASHER,回旋十字斩
+2037,9:10:11:12:13,8,1,-1,0,0,5,-10,no,0,0,0,weapon,0,	GC_CROSSRIPPERSLASHER,回旋十字斩
 // 大主教
 2038,9,8,1,6,0x2,1,5,-3,no,0,0,0,magic,0,	AB_JUDEX,审判
 2039,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		AB_ANCILLA,辅助者
