@@ -757,10 +757,10 @@
 2231,0,6,4,0,0x1,0,1,1,yes,0,0,0,none,0,	WL_READING_SB,魔法书阅读
 2232,0,0,0,0,0,0,5,1,no,0,0,0,none,0,		WL_FREEZE_SP,魔法保存
 // 游侠
-2233,-9,8,1,-1,0x2,4,10,10,no,0,0,0,weapon,0,	RA_ARROWSTORM,箭矢风暴
+2233,-9,8,1,-1,0x2,4,10,-10,no,0,0,0,weapon,0,	RA_ARROWSTORM,箭矢风暴
 2234,0,6,4,0,0x3,3,5,2:2:3:4:5,no,0,0,0,weapon,0,	RA_FEARBREEZE,屠戮射击
 2235,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		RA_RANGERMAIN,游侠的决心
-2236,-9,8,1,-1,0,0,10,4,no,0,0,0,weapon,0,	RA_AIMEDBOLT,瞄准射击
+2236,-9,8,1,-1,0,0,10,1,no,0,0,0,weapon,0,	RA_AIMEDBOLT,瞄准射击
 2237,7,6,2,0,0x3,6,1,1,no,0,0,0,none,0,		RA_DETONATOR,引爆
 2238,3,6,2,0,0x3,2,5,1,no,0,0x80,3,misc,0,	RA_ELECTRICSHOCKER,电击陷阱
 2239,3,6,2,0,0xC2,3,5,1,no,0,0x80,3,misc,0,	RA_CLUSTERBOMB,集束炸弹
@@ -777,8 +777,8 @@
 2250,3,6,2,1,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_COBALTTRAP,深蓝陷阱
 2251,3,6,2,2,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_MAIZETRAP,淡黄陷阱
 2252,3,6,2,4,0x1,1,5,1,no,0,0x80,1,misc,0,	RA_VERDURETRAP,青绿陷阱
-2253,3,6,2,0,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_FIRINGTRAP,火焰陷阱
-2254,3,6,2,0,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_ICEBOUNDTRAP,霜冻陷阱
+2253,3,6,2,3,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_FIRINGTRAP,火焰陷阱
+2254,3,6,2,1,0xC2,2,5,1,no,0,0x80,2,misc,0,	RA_ICEBOUNDTRAP,霜冻陷阱
 // 机匠
 2255,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		NC_MADOLICENCE,魔导机械执照
 2256,11,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,	NC_BOOSTKNUCKLE,喷射飞拳
