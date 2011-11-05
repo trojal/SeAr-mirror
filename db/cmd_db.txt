@@ -46,8 +46,8 @@ campon2,0,0,{ getmapxy .@m$,.@x,.@y,0; campon(.@m$,2); dispmes "阵营模式(显伤害)
 campoff,0,0,{ getmapxy .@m$,.@x,.@y,0; campoff(.@m$); dispmes "阵营模式已经关闭"; }
 
 // 设定当前地图内是否可以使用某些技能
-skillon,0,0,{ getmapxy .@m$,.@x,.@y,0; setmapflag(.@m$,mf_noskill); dispmes msg(244); }
-skilloff,0,0,{ getmapxy .@m$,.@x,.@y,0; removemapflag(.@m$,mf_noskill); dispmes msg(243); }
+skillon,0,0,{ getmapxy .@m$,.@x,.@y,0; removemapflag(.@m$,mf_noskill); dispmes msg(244); }
+skilloff,0,0,{ getmapxy .@m$,.@x,.@y,0; setmapflag(.@m$,mf_noskill); dispmes msg(243); }
 
 // 增加/减少你的现金点或者卡普拉点
 cash,1,1,{ set .@i, atoi(@cmd_para$[0]); set #CASHPOINTS, #CASHPOINTS+.@i; dispmes "得到"+.@i+"现金点数, 总共"+#CASHPOINTS+"点"; }
