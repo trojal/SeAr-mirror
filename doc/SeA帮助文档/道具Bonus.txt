@@ -139,7 +139,7 @@ bonus bUnstripableWeapon,n;		武器无法被脱。n无意义
 bonus bUnstripableArmor,n;		盔甲无法被脱。n无意义
 bonus bUnstripableHelm,n;		头盔无法被脱。n无意义
 bonus bUnstripableShield,n;		盾牌无法被脱。n无意义
-bonus bUnbreakable,n;			全部装备无法损坏。n无意义
+bonus bUnbreakable,n;			减少全部装备损坏几率n%无法损坏。
 bonus bUnbreakableWeapon,n;		武器无法损坏。n无意义
 bonus bUnbreakableArmor,n;		盔甲无法损坏。n无意义
 bonus bUnbreakableHelm,n;		头盔无法损坏。n无意义
