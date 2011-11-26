@@ -911,13 +911,13 @@
 2445,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	SO_SPELLFIST,魔力之拳
 2446,9,8,2,2,0,0,5,-3,yes,0,0,0,magic,0,	SO_EARTHGRAVE,岩枪
 2447,9,6,2,1,0,0,5,-5,yes,0,0,0,magic,0,	SO_DIAMONDDUST,钻石星尘
-2448,9,6,1,5,0x20,0,5,1,yes,0,0,0,magic,0,	SO_POISON_BUSTER,剧毒爆发
+2448,9,6,1,5,0x22,1,5,1,yes,0,0,0,magic,0,	SO_POISON_BUSTER,剧毒爆发
 2449,9,6,2,0,0,0,5,1,yes,0,0,0,magic,0,		SO_PSYCHIC_WAVE,精神冲击
 2450,9,6,2,5,0,0,5,1,yes,0,0,0,magic,0,		SO_CLOUD_KILL,毒云术
 2451,9,6,16,0,0x1,0,5,1,yes,0,0,0,none,0,	SO_STRIKING,锐化武器
 2452,9,6,2,0,0,0,5,1,yes,0,0,0,magic,0,		SO_WARMER,暖风
 2453,8,6,2,0,0x1,0,5,1,yes,0,0,0,none,0,	SO_VACUUM_EXTREME,黑洞
-2454,9,6,1,4,0x2,1:1:2:2:3,5,1,yes,0,0,0,magic,0,	SO_VARETYR_SPEAR,闪电之枪
+2454,9,6,1,4,0x2,2,5,1,yes,0,0,0,magic,0,	SO_VARETYR_SPEAR,闪电之枪
 2455,9,6,1,0,0x3,1:1:2:2:3,5,1,yes,0,0,0,magic,0,	SO_ARRULLO,群体催眠
 2456,0,6,4,0,0x1,0,4,1,no,0,0,0,none,0,		SO_EL_CONTROL,操控精灵
 2457,0,6,4,3,0x1,0,3,0,yes,0,0,0,none,0,	SO_SUMMON_AGNI,召唤火元素
