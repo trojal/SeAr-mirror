@@ -562,19 +562,18 @@ EQI_COSTUME_TOP	11
 EQI_COSTUME_MID	12
 EQI_COSTUME_LOW	13
 
-Eff_Stone	0
-Eff_Freeze	1
-Eff_Stun	2
-Eff_Sleep	3
-Eff_Poison	4
-Eff_Curse	5
-Eff_Silence	6
-Eff_Confusion	7
-Eff_Blind	8
-Eff_Bleeding	9
-Eff_DPoison	10
-Eff_Burning	308
-Eff_Freezing	339
+//下列仍有效，且所有SC_*都可以使用Eff_*代替
+//Eff_Stone	0
+//Eff_Freeze	1
+//Eff_Stun	2
+//Eff_Sleep	3
+//Eff_Poison	4
+//Eff_Curse	5
+//Eff_Silence	6
+//Eff_Confusion	7
+//Eff_Blind	8
+//Eff_Bleeding	9
+//Eff_DPoison	10
 
 Ele_Neutral	0
 Ele_Water	1
