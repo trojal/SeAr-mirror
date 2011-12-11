@@ -6673,7 +6673,7 @@ attached character. Guild can be one or the following constants:
 	举例：
 		getnpcdata(1);			//返回npc名
 		setnpcdata 20,getcharid(0);	//复制自己的形象给npc
-	注：	setnpcdata设置的形象数据对共享同一形象ID的npc都有效
+	注：	仅Xray客户端支持NPC使用玩家形象。
 
 ---------------------------------------
 
