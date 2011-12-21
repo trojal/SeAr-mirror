@@ -531,7 +531,7 @@
 487,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		CG_LONGINGFREEDOM,不要拘束我
 488,0,6,4,0,0x1,1,5,1,no,0,0x40,0,misc,0,	CG_HERMODE,海罗默德的手杖
 489,9,6,1,0,0x41,0,5,1,no,0,0,0,misc,0,		CG_TAROTCARD,命运的塔罗牌
-490,9,8,1,0,0x40,0,10,1:2:3:4:5:6:7:8:9:10,yes,0,0,0,misc,0,	CR_ACIDDEMONSTRATION,强酸火烟瓶投掷
+490,9,8,1,0,0x60,0,10,-1:-2:-3:-4:-5:-6:-7:-8:-9:-10,yes,0,0,0,weapon,0,	CR_ACIDDEMONSTRATION,强酸火烟瓶投掷
 491,1,6,2,0,0x1,0,2,1,no,0,0,0,none,0,		CR_CULTIVATION,植物栽培
 492,0,6,4,0:1:2:3:4:5:6:7:8:9,0x1,0,10,1,no,0,0x2,0,none,0,	ITEM_ENCHANTARMS,武器属性附加
 493,0,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		TK_MISSION,太拳任务
@@ -936,19 +936,19 @@
 2474,0,0,0,0,0,0,5,0,no,0,0,0,weapon,0,		GN_TRAINING_SWORD,单手剑使用熟练度
 2475,0,0,0,0,0,0,5,0,no,0,0,0,weapon,0,		GN_REMODELING_CART,手推车强化
 2476,0,6,4,0,0x2,2,5,0,no,0,0,0,weapon,2,	GN_CART_TORNADO,手推车龙卷风
-2477,8:9:10:11:12,6,1,0,0x62,1:1:2:2:3,5,0,yes,0,0,0,weapon,0,	GN_CARTCANNON,手推车加农炮
+2477,8:9:10:11:12,6,1,0,0xE2,1:1:2:2:3,5,0,yes,0,0,0,weapon,0,	GN_CARTCANNON,手推车加农炮
 2478,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	GN_CARTBOOST,手推车爆发
 2479,6,6,2,0,0xD0,0,5,1,yes,0,0x80,3,misc,0,	GN_THORNS_TRAP,荆棘陷阱
 2480,9,6,1,0,0xD1,0,5,0,no,0,0,3,misc,0,	GN_BLOOD_SUCKER,吸血草
-2481,9,6,1,0,0,3:5:7:9:11,5,1,yes,0,0,0,magic,0,	GN_SPORE_EXPLOSION,爆炸孢子
+2481,9,6,1,0,0x2,1:2:3:4:5,5,1,yes,0,0,0,weapon,0,	GN_SPORE_EXPLOSION,爆炸孢子
 2482,9,6,16,0,0,0,5,1,yes,0,0,1,weapon,2,	GN_WALLOFTHORN,荆棘之墙
-2483,9,6,2,0,0x2,5,10,1,yes,0,0,3:4:4:5:5:6:6:7:7:8,none,0,	GN_CRAZYWEED,疯狂野草
+2483,9,6,2,0,0x2,4,10,1,yes,0,0,3:4:4:5:5:6:6:7:7:8,none,0,	GN_CRAZYWEED,疯狂野草
 2484,0,6,1,2,0x88,2,10,0,no,0,0,0,weapon,0,	GN_CRAZYWEED_ATK,疯狂野草_ATK
 2485,9,6,2,3,0,0,5,1,yes,0,0,0,magic,0,		GN_DEMONIC_FIRE,疯狂火焰
-2486,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	GN_FIRE_EXPANSION,火焰爆炸
-2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	GN_FIRE_EXPANSION_SMOKE_POWDER,火焰爆炸 Smoke Powder
-2488,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	GN_FIRE_EXPANSION_TEAR_GAS,火焰爆炸 Tear Gas
-2489,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	GN_FIRE_EXPANSION_ACID,火焰爆炸 Acid
+2486,9,6,2,0,0,0,5,1,yes,0,0,0,none,0,		GN_FIRE_EXPANSION,火焰爆炸
+//2487,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	GN_FIRE_EXPANSION_SMOKE_POWDER,火焰爆炸 Smoke Powder
+//2488,9,6,2,0,0,0,5,1,yes,0,0,0,weapon,0,	GN_FIRE_EXPANSION_TEAR_GAS,火焰爆炸 Tear Gas
+2489,9,8,2,0,0x20,0,10,-1:-2:-3:-4:-5:-6:-7:-8:-9:-10,yes,0,0,0,magic,0,	GN_FIRE_EXPANSION_ACID,火焰爆炸 Acid
 2490,7,6,2,0,0,0,5,1,yes,0,0,2:3:4:5:6,none,0,	GN_HELLS_PLANT,地狱植物
 2491,0,6,1,0,0x8,0,5,1,no,0,0,0,misc,0,		GN_HELLS_PLANT_ATK,地狱植物 Attack
 2492,9,6,4,0,0x1,5:6:6:7:7,5,1,yes,0,0,0,none,0,	GN_MANDRAGORA,曼陀罗的嚎叫
