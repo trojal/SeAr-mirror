@@ -622,7 +622,7 @@
 
 // Additional NPC skill (Episode 12)
 682,0,0,4,0,0x1,0,1,1,no,0,0x2,0,none,0,	NPC_TALK,Talk
-683,-9,6,1,-1,0,0,1,1,no,0,0x2,0,none,0,	NPC_HELLPOWER,地狱之力
+683,-9,6,1,-1,0,0,1,1,no,0,0x2,0,weapon,0,	NPC_HELLPOWER,地狱之力
 684,0,6,4,0,0x3,-1,1,1,no,0,0x2,0,none,0,	NPC_WIDEHELLDIGNITY,Hell Dignity
 685,0,0,4,0,0x1,0,1,1,no,0,0x2,0,none,0,	NPC_INVINCIBLE,Invincible
 686,0,0,4,0,0x1,0,1,1,no,0,0x2,0,none,0,	NPC_INVINCIBLEOFF,Invincible off
