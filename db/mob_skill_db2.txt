@@ -132,3 +132,26 @@
 //1239,»ðÑæ²¨Àû@RG_STRIPWEAPON,attack,215,5,2000,0,3000,yes,target,always,0,,,,,,
 
 // Here you can place your custom mob skills
+
+// Izlude Undersea Cave F5 (Un-Official)
+2198,Dramoh@NPC_WATERATTACK,attack,184,1,2000,0,5000,yes,target,always,0,,,,,,,
+2202,KRAKEN@AL_TELEPORT,idle,26,1,10000,0,0,yes,self,rudeattacked,,,,,,,,
+2202,KRAKEN@AL_TELEPORT,walk,26,1,5000,0,5000,yes,self,rudeattacked,,,,,,,,
+2202,KRAKEN@NPC_EARTHQUAKE,chase,653,5,10000,2000,30000,no,self,myhpltmaxrate,80,,,,,,6,
+2202,KRAKEN@NPC_EARTHQUAKE,attack,653,5,10000,2000,30000,no,self,myhpltmaxrate,80,,,,,,6,
+2202,KRAKEN@AL_HEAL,idle,28,11,10000,0,5000,yes,self,myhpltmaxrate,50,,,,,,,
+2202,KRAKEN@WZ_WATERBALL,attack,86,10,2000,500,5000,no,target,always,0,,,,,,0,
+2202,KRAKEN@WZ_WATERBALL,chase,86,10,2000,500,5000,no,target,always,0,,,,,,0,
+2202,KRAKEN@BS_MAXIMIZE,attack,114,1,500,0,5000,no,self,always,0,,,,,,,
+2202,KRAKEN@BS_MAXIMIZE,chase,114,1,500,0,5000,no,self,always,0,,,,,,,
+2202,KRAKEN@NPC_AGIUP,attack,350,10,10000,0,30000,yes,self,myhpltmaxrate,30,,,,,,6,
+2202,KRAKEN@NPC_CALLSLAVE,attack,352,1,10000,0,30000,yes,self,always,0,,,,,,,
+2202,KRAKEN@NPC_CALLSLAVE,idle,352,1,10000,0,30000,yes,self,always,0,,,,,,,
+2202,KRAKEN@NPC_GUIDEDATTACK,attack,172,5,500,0,20000,no,target,always,0,,,,,,,
+2202,KRAKEN@NPC_GUIDEDATTACK,chase,172,5,500,0,20000,no,target,always,0,,,,,,,
+2202,KRAKEN@NPC_SUMMONSLAVE,attack,196,5,10000,700,10000,no,self,slavele,5,2206,,,,,,
+2202,KRAKEN@NPC_SUMMONSLAVE,idle,196,5,10000,700,10000,no,self,slavele,5,2206,,,,,,
+2202,KRAKEN@NPC_SUMMONSLAVE,idle,196,5,10000,0,0,no,self,onspawn,0,2206,,,,,,
+2202,KRAKEN@NPC_WATERATTACK,attack,184,5,2000,0,5000,no,target,always,0,,,,,,29,
+2202,KRAKEN@NPC_WATERATTACK,chase,184,5,2000,0,5000,no,target,skillused,18,,,,,,29,
+2202,KRAKEN@NPC_WATERATTACK,chase,184,5,2000,0,5000,no,target,always,0,,,,,,29,
