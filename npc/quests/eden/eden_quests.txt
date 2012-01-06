@@ -13,6 +13,9 @@
 //= 1.1 Removed unencoded comments (Korean -> Gibberish)
 //=     Readded the GM helper NPC, commented out.
 //============================================================
+//= 备注:
+//= 20120106 v1.1+1 修正"Instructor Boya"有时会不给予任务变量。
+//============================================================
 
 moc_para01,25,35,4	script	Instructor Boya#para01	469,{
 	if (countitem(6219) > 0) {
@@ -711,6 +714,7 @@ moc_para01,25,35,4	script	Instructor Boya#para01	469,{
 						mes "Anyway...";
 						mes "that place is pretty close to here so, come back quickly.";
 						mes "Ok, blessing you~!!";
+						set para_suv01,17;
 						setquest 7142;
 						close;
 					}

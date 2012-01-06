@@ -11,6 +11,9 @@
 //===== Additional Comments: ================================= 
 //= 1.0 First Version.
 //============================================================
+//= 备注:
+//= 20120106 v1.0+1 修完成任务后可重复领取奖励。
+//============================================================
 
 moc_para01,44,38,3	script	Request [71 - 85]	857,{
 	if (countitem(6219) < 1) {
@@ -259,7 +262,8 @@ morocc,35,174,5	script	Meidi#para	729,{
 		switch(select("Requiem:Marduk:Pasana")) {
 		case 1:
 			set .@chk_req,checkquest(10107,HUNTING);
-			if (.@chk_req == 2) {
+			set .@chk_req2,checkquest(10107);
+			if (.@chk_req == 2 && .@chk_req2 != 2) {
 				mes "[Meidi]";
 				mes "You hunted all 10 Requiem.";
 				mes "Thank you very much.";
@@ -285,7 +289,8 @@ morocc,35,174,5	script	Meidi#para	729,{
 			break;
 		case 2:
 			set .@chk_mar,checkquest(10108,HUNTING);
-			if (.@chk_mar == 2) {
+			set .@chk_mar2,checkquest(10108);
+			if (.@chk_mar == 2 && .@chk_mar2 != 2) {
 				mes "[Meidi]";
 				mes "You hunted all 10 Marduk.";
 				mes "Thank you very much.";
@@ -311,7 +316,8 @@ morocc,35,174,5	script	Meidi#para	729,{
 			break;
 		case 3:
 			set .@chk_pas,checkquest(10109,HUNTING);
-			if (.@chk_pas == 2) {
+			set .@chk_pas2,checkquest(10109);
+			if (.@chk_pas == 2 && .@chk_pas2 != 2) {
 				mes "[Meidi]";
 				mes "Wow, you hunted 10 Pasana.";
 				mes "Cool.";
@@ -426,7 +432,8 @@ geffen,146,132,3	script	Ancellia#para	906,{
 		switch(select("Dark Frame:Evil Druid:Wraith:Raydric Archer")) {
 		case 1:
 			set .@chk_dar,checkquest(10110,HUNTING);
-			if (.@chk_dar == 2) {
+			set .@chk_dar2,checkquest(10110);
+			if (.@chk_dar == 2 && .@chk_dar2 != 2) {
 				mes "[Ancellia]";
 				mes "Eliminate 10 Dark Frame.";
 				mes "That was pretty difficult!";
@@ -449,7 +456,8 @@ geffen,146,132,3	script	Ancellia#para	906,{
 			break;
 		case 2:
 			set .@chk_eve,checkquest(10111,HUNTING);
-			if (.@chk_eve == 2) {
+			set .@chk_eve2,checkquest(10111);
+			if (.@chk_eve == 2 && .@chk_eve2 != 2) {
 				mes "[Ancellia]";
 				mes "Eliminate 10 Evil Druids.";
 				mes "That was pretty difficult!";
@@ -472,7 +480,8 @@ geffen,146,132,3	script	Ancellia#para	906,{
 			break;
 		case 3:
 			set .@chk_wra,checkquest(10112,HUNTING);
-			if (.@chk_wra == 2) {
+			set .@chk_wra2,checkquest(10112);
+			if (.@chk_wra == 2 && .@chk_wra2 != 2) {
 				mes "[Ancellia]";
 				mes "Eliminate 10 Wraith.";
 				mes "That was pretty difficult!";
@@ -495,7 +504,8 @@ geffen,146,132,3	script	Ancellia#para	906,{
 			break;
 		case 4:
 			set .@chk_red,checkquest(10113,HUNTING);
-			if (.@chk_red == 2) {
+			set .@chk_red2,checkquest(10113);
+			if (.@chk_red == 2 && .@chk_red2 != 2) {
 				mes "[Ancellia]";
 				mes "Eliminate 10 Raydric Archers.";
 				mes "That was pretty difficult!";
@@ -604,7 +614,8 @@ aldebaran,144,230,3	script	Jeanbai#para	900,{
 		switch(select("Grand Peco:Sleeper:Goat:Harpy")) {
 		case 1:
 			set .@chk_gra,checkquest(10114,HUNTING);
-			if (.@chk_gra == 2) {
+			set .@chk_gra2,checkquest(10114);
+			if (.@chk_gra == 2 && .@chk_gra2 != 2) {
 				mes "[Jeanbai]";
 				mes "20 Grand Pecos. Perfect!";
 				mes "Thanks a lot.";
@@ -626,7 +637,8 @@ aldebaran,144,230,3	script	Jeanbai#para	900,{
 			break;
 		case 2:
 			set .@chk_sle,checkquest(10115,HUNTING);
-			if (.@chk_sle == 2) {
+			set .@chk_sle2,checkquest(10115);
+			if (.@chk_sle == 2 && .@chk_sle2 != 2) {
 				mes "[Jeanbai]";
 				mes "20 Sleepers!";
 				mes "Thanks a lot.";
@@ -648,7 +660,8 @@ aldebaran,144,230,3	script	Jeanbai#para	900,{
 			break;
 		case 3:
 			set .@chk_goa,checkquest(10116,HUNTING);
-			if (.@chk_goa == 2) {
+			set .@chk_goa2,checkquest(10116);
+			if (.@chk_goa == 2 && .@chk_goa2 != 2) {
 				mes "[Jeanbai]";
 				mes "20 Goats. Perfect!";
 				mes "I checked the amount and it was exact.";
@@ -671,7 +684,8 @@ aldebaran,144,230,3	script	Jeanbai#para	900,{
 			break;
 		case 4:
 			set .@chk_har,checkquest(10117,HUNTING);
-			if (.@chk_har == 2) {
+			set .@chk_har2,checkquest(10117);
+			if (.@chk_har == 2 && .@chk_har2 != 2) {
 				mes "[Jeanbai]";
 				mes "20 Harpies. Perfect!!";
 				mes "Thanks a lot.";
@@ -780,7 +794,8 @@ aldebaran,105,116,3	script	Lizingshetter#para	869,{
 		switch(select("Clock:Punk:Rideword")) {
 		case 1:
 			set .@chk_clk,checkquest(10118,HUNTING);
-			if (.@chk_clk == 2) {
+			set .@chk_clk2,checkquest(10118);
+			if (.@chk_clk == 2 && .@chk_clk2 != 2) {
 				mes "[Lizingshetter]";
 				mes "Good! You hunted 15 Clocks.";
 				mes "Exactly! Ah, now";
@@ -805,7 +820,8 @@ aldebaran,105,116,3	script	Lizingshetter#para	869,{
 			break;
 		case 2:
 			set .@chk_pun,checkquest(10119,HUNTING);
-			if (.@chk_pun == 2) {
+			set .@chk_pun2,checkquest(10119);
+			if (.@chk_pun == 2 && .@chk_pun2 != 2) {
 				mes "[Lizingshetter]";
 				mes "Good! You hunted 15 Punks.";
 				mes "Exactly! Ah, now";
@@ -829,7 +845,8 @@ aldebaran,105,116,3	script	Lizingshetter#para	869,{
 			break;
 		case 3:
 			set .@chk_rid,checkquest(10120,HUNTING);
-			if (.@chk_rid == 2) {
+			set .@chk_rid2,checkquest(10120);
+			if (.@chk_rid == 2 && .@chk_rid2 != 2) {
 				mes "[Lizingshetter]";
 				mes "Good! You hunted 15 Ridewords.";
 				mes "Exactly! Ah, now";
@@ -931,7 +948,8 @@ alberta,215,111,5	script	Funfi#para	828,{
 		switch(select("Uzhas:Miyabi Doll:Mi Gao")) {
 		case 1:
 			set .@chk_uzh,checkquest(10121,HUNTING);
-			if (.@chk_uzh == 2) {
+			set .@chk_uzh2,checkquest(10121);
+			if (.@chk_uzh == 2 && .@chk_uzh2 != 2) {
 				mes "[Funfi]";
 				mes "Ok! 15 Uzhas!";
 				mes "Completed! Perfect!";
@@ -952,7 +970,8 @@ alberta,215,111,5	script	Funfi#para	828,{
 			break;
 		case 2:
 			set .@chk_miy,checkquest(10122,HUNTING);
-			if (.@chk_miy == 2) {
+			set .@chk_miy2,checkquest(10122);
+			if (.@chk_miy == 2 && .@chk_miy2 != 2) {
 				mes "[Funfi]";
 				mes "Ok! 15 Miyabi Dolls!";
 				mes "Perfect!";
@@ -973,7 +992,8 @@ alberta,215,111,5	script	Funfi#para	828,{
 			break;
 		case 3:
 			set .@chk_sik,checkquest(10123,HUNTING);
-			if (.@chk_sik == 2) {
+			set .@chk_sik2,checkquest(10123);
+			if (.@chk_sik == 2 && .@chk_sik2 != 2) {
 				mes "[Funfi]";
 				mes "Ok! 15 Mi Gaos!";
 				mes "Perfect!";

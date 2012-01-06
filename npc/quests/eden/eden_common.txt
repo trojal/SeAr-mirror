@@ -13,6 +13,10 @@
 //= 1.1 Removed showevent use, and use of duplicates.
 //=     Commented out warps that should not be active.
 //============================================================
+//= 备注:
+//= 20120106 v1.1+1 修正斐扬"Eden Teleport Officer"无法传送。
+//= 		  修正"Secretary Lime Evenor"表情错误。
+//============================================================
 
 moc_para01,27,35,5	script	Secretary Lime Evenor#1	952,{
 	if (checkweight(1201,1) == 0) {
@@ -65,7 +69,7 @@ moc_para01,27,35,5	script	Secretary Lime Evenor#1	952,{
 					mes "Your name is ^3131FFBo"+.@input$+"Ba^000000..? Is that right?";
 					mes "Huh? Isn't it??";
 					next;
-					emotion 4,"Secretary Lime Evenor#eden";
+					emotion 4,"Secretary Lime Evenor#1";
 					mes "[Lime Evenor]";
 					mes "Hmm that isn't what you wrote?";
 					mes "Ok, hmm, it seems a bit hard to read.";
@@ -78,7 +82,7 @@ moc_para01,27,35,5	script	Secretary Lime Evenor#1	952,{
 					mes "Ah~ ha. You are ^3131FF"+strcharinfo(0)+"^000000.";
 					mes "I got it right this time.";
 					next;
-					emotion e_no1,"Secretary Lime Evenor#eden";
+					emotion e_no1,"Secretary Lime Evenor#1";
 					mes "[Lime Evenor]";
 					mes "We already put your name on the list.";
 					mes "Welcome to Eden's group new member!";
@@ -139,11 +143,11 @@ moc_para01,27,35,5	script	Secretary Lime Evenor#1	952,{
 				mes "[Lime Evenor]";
 				mes "Hum.. huh??..................";
 				next;
-				emotion e_dots,"Secretary Lime Evenor#eden";
+				emotion e_dots,"Secretary Lime Evenor#1";
 				mes "[Lime Evenor]";
 				mes "I think you should complete one of our missions first before you take up a new mission.";
 				next;
-				emotion e_pif,"Secretary Lime Evenor#eden";
+				emotion e_pif,"Secretary Lime Evenor#1";
 				mes "[Lime Evenor]";
 				mes "^3131FFClient: Lime Evenor^000000";
 				mes "^3131FFMission: Practice your handwriting for one month.^000000";
@@ -489,7 +493,6 @@ payon,177,111,3	script	Eden Teleport Officer#12	729,{
 		mes "[Eden Teleport Officer]";
 		mes "Let's go to our secret base!";
 		set nak_warp,12;
-		close;
 		close2;
 		warp "moc_para01",31,14;
 		end;
@@ -758,7 +761,7 @@ moc_para01,20,35,5	script	Office Assistant Neede#e	814,{
 	emotion 54,"Office Assistant Neede#e";
 	mes "I don't trust Evenor. She never shows her feelings... she's going to snitch on me to my boss.";
 	next;
-	emotion e_pif,"Secretary Lime Evenor#eden";
+	emotion e_pif,"Secretary Lime Evenor#1";
 	mes "[Lime Evenor]";
 	mes "I am not that kind of guy.";
 	next;
