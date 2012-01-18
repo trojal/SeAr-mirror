@@ -694,7 +694,7 @@
 2027,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		GC_POISONINGWEAPON,剧毒武器
 2028,0,0,4,0,0,0,5,1,yes,0,0,0,weapon,0,	GC_WEAPONBLOCKING,武器格挡
 2029,0,6,4,-1,0x2,1,5,1,no,0,0,0,weapon,1,	GC_COUNTERSLASH,反击斩
-2030,0,6,4,-1,0x2,1,5,1,no,0,0,0,none,0,	GC_WEAPONCRUSH,解除武装
+2030,0,6,4,-1,0x1,0,5,1,no,0,0x200,0,none,0,	GC_WEAPONCRUSH,解除武装
 2031,-1,6,1,5,0,0,5,1,no,0,0,0,weapon,0,	GC_VENOMPRESSURE,剧毒压制
 2032,5,8,2,5,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,毒雾
 2033,0,6,4,0,0x1,0,5,1,no,0,0,0,weapon,0,	GC_CLOAKINGEXCEED,高级伪装
