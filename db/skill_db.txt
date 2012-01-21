@@ -687,7 +687,7 @@
 // 十字切割者
 2021,10,6,1,0,1,0,5,1,no,0,0,0,none,0,		GC_VENOMIMPRESS,毒抗性弱化
 2022,3,8,1,-1,0,0,5,-7,no,0,0,0,weapon,0,	GC_CROSSIMPACT,十字斩
-2023,3:4:5:6:7,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,GC_DARKILLUSION,暗影步
+2023,5:6:7:8:9,6,1,-1,0,0,5,1,no,0,0,0,weapon,0,GC_DARKILLUSION,暗影步
 2024,0,0,0,0,0,0,10,0,no,0,0,0,none,0,		GC_RESEARCHNEWPOISON,新毒研究
 2025,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		GC_CREATENEWPOISON,新毒制造
 2026,9,6,16,5,0x1,0,1,1,no,0,0,0,weapon,0,	GC_ANTIDOTE,高级解毒
