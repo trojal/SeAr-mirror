@@ -2672,7 +2672,7 @@ bra_dun02,67,205,5	script	Recluse#bra	475,3,3,{
 	end;
 
 OnTouchNPC:
-	//unitwarp 0,"this",67,215;
+	unitwarp 0,"this",67,215;
 	end;
 }
 
