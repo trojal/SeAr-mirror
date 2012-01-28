@@ -1620,5 +1620,69 @@ packet_ver: 26
 0x0858,-1
 0x0859,-1
 
+packet_ver: 27
+0x022d,19,wanttoconnection,2:6:10:14:18
+
+0x0437,5,walktoxy,2
+0x035f,6,ticksend,2
+
+0x0893,5,changedir,2:4
+
+0x07e4,6,takeitem,2
+
+0x0362,6,dropitem,2:4
+
+0x07ec,8,movetokafra,2:4
+
+0x0364,8,movefromkafra,2:4
+0x0202,10,useskilltopos,2:4:6:8
+0x0366,90,useskilltoposinfo,2:4:6:8:10
+
+0x08ad,6,getcharnamerequest,2
+0x0368,6,solvecharname,2
+
+0x0369,7,actionrequest,2:6
++0x083c,10,useskilltoid,2:4:6
+
+
+packet_ver: 28
+//2011-11-02
+
+//0x083c,19,wanttoconnection,2:6:10:14:18
+//0x088a,6,getcharnamerequest,2
+
+//0x0817,6,ticksend,2
+//0x0366,5,changedir,2:4
+
+//0x0364,5,walktoxy,2
+
+//0x08aa,7,actionrequest,2:6
+
+//0x02c4,10,useskilltoid,2:4:6
+
+//0x0369,10,useskilltopos,2:4:6:8
+//0x08ad,90,useskilltoposinfo,2:4:6:8:10
+
+//0x0885,6,dropitem,2:4
+//0x0815,6,takeitem,2
+
+
+//2011-11-22
+
+0x0835,19,wanttoconnection,2:6:10:14:18
+0x0898,6,getcharnamerequest,2
+0x0899,6,ticksend,2
+0x0896,5,changedir,2:4
+
+0x0892,5,walktoxy,2
+0x022d,7,actionrequest,2:6
+0x08a1,10,useskilltoid,2:4:6
+
+0x08ad,10,useskilltopos,2:4:6:8
+
+0x0363,90,useskilltoposinfo,2:4:6:8:10
+0x0436,6,dropitem,2:4
+0x0893,6,takeitem,2
+
 //Add new packets here
-//packet_ver: 27
+//packet_ver: 29
