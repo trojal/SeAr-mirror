@@ -970,6 +970,36 @@
 //2536,0,6,4,0,0x1,0,2,1,no,0,0x1,0,none,0,	ALL_GUARDIAN_RECALL,守护者的召唤
 2537,9,6,16,0,0x1,0,2,1,no,0,0x1,0,none,0,	ALL_ODINS_POWER,奥丁神力
 
+3001,1,6,4,0,1,0,1,1,no,0,0,0,none,0,		KO_YAMIKUMO,暗云
+3002,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		KO_RIGHT,双刀修炼-右
+3003,0,0,0,0,0,0,5,0,no,0,0,0,none,0,		KO_LEFT,双刀修炼-左
+3004,5,3:4:5:6:7,6,1,0,0x1,0,1,no,0,0,0,none,0,	KO_JYUMONJIKIRI,十文字斩
+3005,2,6,1,0,0x1,0,5,1,no,0,0,0,none,0,		KO_SETSUDAN,灵魂绝断
+3006,7:8:9:10:11,6,1,0,0x1,0,5,1,no,0,0,0,none,0,	KO_BAKURETSU,爆炸苦无
+3007,1,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		KO_HAPPOKUNAI,八方苦无
+3008,11,6,1,0,0x1,0,10,1,no,0,0,0,none,0,	KO_MUCHANAGE,乾坤一掷
+3009,9:10:11:12:13,6,1,0,0x1,0,5,1,no,0,0,0,none,0,	KO_HUUMARANKA,风魔乱华
+3010,7,6,2,0,0x1,0,5,1,no,0,0,0,none,0,		KO_MAKIBISHI,撒菱
+3011,1,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		KO_MEIKYOUSISUI,明镜止水
+3012,1,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		KO_ZANZOU,幻术-残像
+3013,5,6,1,0,0x1,0,5,1,no,0,0,0,none,0,		KO_KYOUGAKU,幻术-惊愕
+3014,5,6,1,0,0x1,0,5,1,no,0,0,0,none,0,		KO_JYUSATSU,幻术-咒杀
+3015,1,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		KO_KAHU_ENTEN,火符:炎天
+3016,1,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		KO_HYOUHU_HUBUKI,冰符:吹雪
+3017,1,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		KO_KAZEHU_SEIRAN,风符:青岚
+3018,1,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		KO_DOHU_KOUKAI,土符:刚块
+3019,1,6,1,0,0x1,0,1,1,no,0,0,0,none,0,		KO_KAIHOU,术式解放
+3020,1,6,2,0,0x1,0,1,1,no,0,0,0,none,0,		KO_ZENKAI,术式全开
+3021,5:6:7:8:9,6,1,0,0x1,0,5,1,no,0,0,0,none,0,	KO_GENWAKU,幻术-幻惑
+3022,1,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		KO_IZAYOI,十六夜
+3023,5:7:9:11:13,6,2,0,0x1,0,5,1,no,0,0,0,none,0,	KG_KAGEHUMI,蹋影
+3024,1,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		KG_KYOMU,虚无之影
+3025,1,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		KG_KAGEMUSYA,影武者
+3026,7,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	OB_ZANGETSU,残月
+3027,7,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	OB_OBOROGENSOU,胧幻想
+3028,9,6,16,0,0x1,0,1,1,no,0,0,0,none,0,	OB_OBOROGENSOU_TRANSITION_ATK,胧幻想(Transition Atk)
+3029,7,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	OB_AKAITSUKI,赤月
+
 8001,9,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	HLIF_HEAL,治愈之手
 8002,0,6,4,0,0x3,-1,5,1,no,0,0,0,none,0,	HLIF_AVOID,轻捷移动
 8003,0,0,0,0,0,1,5,0,no,0,0,0,none,0,		HLIF_BRAIN,脑手术
