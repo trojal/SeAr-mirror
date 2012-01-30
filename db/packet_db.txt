@@ -1642,7 +1642,8 @@ packet_ver: 27
 0x0368,6,solvecharname,2
 
 0x0369,7,actionrequest,2:6
-+0x083c,10,useskilltoid,2:4:6
+
+0x083c,10,useskilltoid,2:4:6
 
 
 packet_ver: 28
