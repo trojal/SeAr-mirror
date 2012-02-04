@@ -1464,7 +1464,7 @@ packet_ver: 25
 
 //2009-12-01aRagexeRE
 //0x07fc,10
-//0x07fd,-1
+0x07fd,-1
 //0x07fe,26
 //0x07ff,-1
 
@@ -1684,6 +1684,7 @@ packet_ver: 28
 0x0363,90,useskilltoposinfo,2:4:6:8:10
 0x0436,6,dropitem,2:4
 0x0893,6,takeitem,2
+0x0907,5,dragitem,2 //not support yet, just prevent from dc
 
 //Add new packets here
 //packet_ver: 29

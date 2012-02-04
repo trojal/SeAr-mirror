@@ -60,7 +60,7 @@ Job: Equippable jobs. Uses the following bitmask table:
 	Rogue       (2^17): 0x00020000
 	Alchemist   (2^18): 0x00040000
 	Bard/Dancer (2^19): 0x00080000
-	Unused      (2^20): 0x00100000
+	Kagerou/Oboro(2^20): 0x00100000
 	Taekwon     (2^21): 0x00200000
 	StarGladi   (2^22): 0x00400000
 	Soul Linker (2^23): 0x00800000
