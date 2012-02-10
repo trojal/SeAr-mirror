@@ -1685,6 +1685,8 @@ packet_ver: 28
 0x0436,6,dropitem,2:4
 0x0893,6,takeitem,2
 0x0907,5,dragitem,2 //not support yet, just prevent from dc
+0x08a4,8,movetokafra,2:4
+0x0362,8,movefromkafra,2:4
 
 //Add new packets here
 //packet_ver: 29
