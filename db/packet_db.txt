@@ -1671,22 +1671,22 @@ packet_ver: 28
 //2011-11-22
 
 0x0835,19,wanttoconnection,2:6:10:14:18
+0x0891,26,friendslistadd,2
+0x0892,5,walktoxy,2
+0x0893,6,takeitem,2
+0x0895,26,partyinvite2,2
+0x0896,5,changedir,2:4
 0x0898,6,getcharnamerequest,2
 0x0899,6,ticksend,2
-0x0896,5,changedir,2:4
-
-0x0892,5,walktoxy,2
-0x022d,7,actionrequest,2:6
+0x089e,5,hommenu,4
 0x08a1,10,useskilltoid,2:4:6
-
 0x08ad,10,useskilltopos,2:4:6:8
-
 0x0363,90,useskilltoposinfo,2:4:6:8:10
-0x0436,6,dropitem,2:4
-0x0893,6,takeitem,2
-0x0907,5,dragitem,2 //not support yet, just prevent from dc
-0x08a4,8,movetokafra,2:4
 0x0362,8,movefromkafra,2:4
+0x08a4,8,movetokafra,2:4
+0x022d,7,actionrequest,2:6
+0x0436,6,dropitem,2:4
+0x0907,5,dragitem,2 //not support yet, just prevent from dc
 
 //Add new packets here
 //packet_ver: 29
