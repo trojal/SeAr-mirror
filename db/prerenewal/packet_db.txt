@@ -1687,6 +1687,7 @@ packet_ver: 28
 0x022d,7,actionrequest,2:6
 0x0436,6,dropitem,2:4
 0x0907,5,dragitem,2 //not support yet, just prevent from dc
+0x035f,6,solvecharname,2
 
 //Add new packets here
 //packet_ver: 29
