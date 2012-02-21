@@ -810,11 +810,11 @@
 2282,5,6,2,0,0x1,0,5,1,no,0,0,2,none,0,		NC_MAGICDECOY,FAW 魔法傀儡
 2283,-5,6,16,0,0,0,1,0,no,0,0,2,none,0,		NC_DISJOINT,FAW 解除
 // 逐影
-2284,1,6,1,-1,0x2,3,5,0,no,0,0,0,weapon,0,	SC_FATALMENACE,致命威胁
+2284,1,6,1,-1,0x2,1,5,0,no,0,0,0,weapon,0,	SC_FATALMENACE,致命威胁
 2285,0,6,4,0,0x1,0,10,0,no,0,0,0,none,0,	SC_REPRODUCE,复制
 2286,0,6,4,0,0x1,0,10,0,yes,0,0,0,none,0,	SC_AUTOSHADOWSPELL,自动影咒
 2287,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,	SC_SHADOWFORM,暗影附身
-2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,-3,yes,0,0,0,weapon,4,	SC_TRIANGLESHOT,三连矢
+2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,-3,yes,0,0,0,weapon,3,	SC_TRIANGLESHOT,三连矢
 2289,9,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
 2290,0,6,4,0,0x1,0,5,1,yes,0,0,0,none,0,	SC_INVISIBILITY,隐形
 2291,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_DEADLYINFECT,致命感染
@@ -830,7 +830,7 @@
 2301,7,6,2,0,0,0,3,1,yes,0,0,0,none,0,		SC_CHAOSPANIC,混乱恐慌
 2302,7,6,2,0,0,5,3,1,yes,0,0,0,none,0,		SC_MAELSTROM,吸能漩涡
 2303,7,6,2,0,0,0,3,1,yes,0,0,0,none,0,		SC_BLOODYLUST,血腥渴望
-2304,0,6,4,0,0x2,4,3,1,yes,0,0,0,weapon,1,	SC_FEINTBOMB,伪装炸弹
+2304,0,6,4,0,0x2,2,3,1,yes,0,0,0,weapon,3:4:5,	SC_FEINTBOMB,伪装炸弹
 // 皇家卫士
 2307,11,6,1,-1,0x2,1,5,1,yes,0,0,10,weapon,0,	LG_CANNONSPEAR,重炮枪击
 2308,7,6,1,-1,0,0,10,0,yes,0,0,0,weapon,0,	LG_BANISHINGPOINT,驱逐点刺
