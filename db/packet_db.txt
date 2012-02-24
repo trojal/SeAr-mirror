@@ -1688,6 +1688,9 @@ packet_ver: 28
 0x0436,6,dropitem,2:4
 0x0907,5,favoriteitem,2
 0x035f,6,solvecharname,2
+0x0369,-1,itemlistwindowselected,2:4:8
+0x0202,18,recruit,2:4:6:8:10:12:14:16
+0x0366,12,searchstoreinfolistitemclick,2:6:10
 
 //Add new packets here
 //packet_ver: 29
