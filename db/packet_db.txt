@@ -1619,6 +1619,7 @@ packet_ver: 26
 0x0857,-1
 0x0858,-1
 0x0859,-1
+0x0887,-1,openbuying,2:4:8:9:89
 
 packet_ver: 27
 0x022d,19,wanttoconnection,2:6:10:14:18
