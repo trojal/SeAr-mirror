@@ -1620,6 +1620,9 @@ packet_ver: 26
 0x0858,-1
 0x0859,-1
 0x0887,-1,openbuying,2:4:8:9:89
+0x08a9,2,closebuying,0
+0x088c,6,buyinglistreq,2
+0x089d,-1,buyingsellreq,2:4:8:12
 
 packet_ver: 27
 0x022d,19,wanttoconnection,2:6:10:14:18
