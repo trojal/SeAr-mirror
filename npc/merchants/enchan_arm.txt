@@ -11,10 +11,12 @@
 //= Add a +1, 2, or 3, of a random stat to specified armor.
 //===== Additional Comments: ================================= 
 //= 1.0 First version.
-//= 汉化 v1.0 [5511]
+//= v1.0.20091212 初版汉化 [5511]
+//= v1.0.20120309 对话期间禁止任何物品相关操作 [5511]
 //============================================================ 
 
 prontera,165,60,2	script	实习附魔师	73,{
+	disable_items;
 	if (Zeny > 399999) {
 		mes "[实习附魔师]";
 		mes "我一直致力于研究如何提高防具的最大能力.";
@@ -161,7 +163,9 @@ prontera,165,60,2	script	实习附魔师	73,{
 		case 4:
 			mes "[实习附魔师]";
 			mes "如果你对防具附魔有兴趣的话就来找我.";
-			close;
+			close2;
+			enable_items;
+			end;
 		}
 	}
 	else {
@@ -170,7 +174,9 @@ prontera,165,60,2	script	实习附魔师	73,{
 		next;
 		mes "[实习附魔师]";
 		mes "如果你有兴趣想要给你的防具附魔的话, 请带着400,000 Zeny 和你想要附魔的防具来找我.";
-		close;
+		close2;
+		enable_items;
+		end;
 	}
 
 S_EnchantArmor:
@@ -190,7 +196,9 @@ S_EnchantArmor:
 			mes "[实习附魔师]";
 			mes "好的, 我不会怪你的. 安全第一才最重要, 对吧?";
 			mes "那就祝你愉快了.";
-			close;
+			close2;
+			enable_items;
+			end;
 		case 2:
 			mes "[实习附魔师]";
 			mes "想要来一次真正的冒险吧? 好的, 那咱们开始了?";
@@ -199,7 +207,9 @@ S_EnchantArmor:
 			if (Zeny < 400000) {
 				mes "[实习附魔师]";
 				mes "抱歉啊, 你可没有足够的金钱.";
-				close;
+				close2;
+				enable_items;
+				end;
 			}
 			progressbar "ffff00",7;
 			set .@enc_ran,rand(1,.@failrate);
@@ -264,15 +274,21 @@ S_EnchantArmor:
 				mes "[实习附魔师]";
 				mes "噢, 真是太不幸了.";
 				mes "附魔竟然失败了.";
-				close;
+				close2;
+				enable_items;
+				end;
 			}
 			getitem2 .@itemid, 1, 1, 0, 0, 0, 0, 0, .@addpart;
+			enable_items;
+			end;
 		}
 	}
 	else {
 		mes "[实习附魔师]";
 		mes "嗯? 没有东西可以被附魔呀!";
 		mes "请确定你只带来了一件要附魔的防具.";
-		close;
+		close2;
+		enable_items;
+		end;
 	}
 }

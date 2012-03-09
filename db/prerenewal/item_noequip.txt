@@ -1,53 +1,82 @@
-// 装备/物品/卡片 限制设定
-// 你可以定义什么物品不能在PVP/GVG等场合使用
-// 格式: <物品id>,<模式>
-// 物品id
-// 	id为正，表示在下列场合不能使用
-// 	id为负，表示只有在下列场合可以使用
-// 模式
-//	 1- PVP里不可使用
-//	 2- GVG里不可使用
-//	 3- GVG里PVP均不可用
-//	 4- 战场里不可使用
-//	 8- 城镇里不能使用
-//	 限制区域 - 由 'restricted <数字>' 的mapflag设置
-//	 16   - 限制区域1
-//	 32   - 限制区域2
-//	 64   - 限制区域3
-//	 128  - 限制区域4
-//	 256  - 限制区域5
-//	 512  - 限制区域6
-//	 1024 - 限制区域7
+//============================================================
+// eAthena Chinese Translation Project 汉化组
+//============================================================
+// 装备/物品/卡片使用限制 数据
+//
+// 根据所给类型限制道具的使用范围.
+//
+// 最新汉化修正日期: 2011.10.16
+//------------------------------------------------------------
+// 数据结构:
+// <物品ID>,<类型>
+//
+//  例如:
+//  1201,1 = "短剑"无法在PvP地图使用
+//  608,3 = "天地树芽"无法在PvP和GvG地图使用 (1+2)
+//  4174,3 = 在PvP和GvG地图禁用"恶魔波利卡片"的效果 (1+2)
+//  501,16 = "红色药水"无法在区域1地图使用
+//  -502,32 = "赤色药水"仅可以在区域2地图使用
+//  -503,11 = "黄色药水"仅可以在城镇,PvP和GvG地图使用 (8+2+1)
+//  519,161 = "牛奶"无法在PvP地图,区域2和区域4使用 (128+32+1)
+//------------------------------------------------------------
+// 备注:
+// 	<物品ID>:
+// 	 ID为正,表示在下列场合无法使用
+// 	 ID为负,表示只有在下列场合可以使用
+// 	<类型>取值:
+// 	 1 = 限制于PvP地图
+// 	 2 = 限制于GvG地图
+//	 3 = 限制于GVG/PVP地图
+//	 4 = 限制于战场地图
+//	 8 = 限制于城镇地图
+// 	 以下为限制区域 - 使用'restricted <区域号>'的mapflag设置
+// 	 16 = 限制于区域1地图
+// 	 32 = 限制于区域2地图
+// 	 64 = 限制于区域3地图
+// 	 128 = 限制于区域4地图
+// 	 256 = 限制于区域5地图
+//	 512 = 限制于区域6地图
+//	 1024 = 限制于区域7地图
+//------------------------------------------------------------
 
-//举例:
-//1201,1 you can't use KNIFE(ID 1201) on PvP and GvG
-//608,3 you can't use Yggdrasil Seed(ID 608) on both PvP & GvG & WoE Castles
-//4174,3 Forbid Deviling Card in every PVP or GVG map, and during woes.
-//501,4 you can't use Red Potion on map marked as 'restricted zone 1'
-//502,8 you can't use Orange Potion on map marked as 'restricted zone 2'
-//503,16 you can't use Yellow Potion on map marked as 'restricted zone 3'
-// you can even mix modes
-//519,41 (32+8+1) you can't use Milk on PVP, and maps marked as 'restricted zone 2' and 'restricted zone 4'
+//PVP
+14529,1 //Greed_Scroll#贪婪卷轴
 
+//GVG
+12218,2	//Assumptio_5_Scroll#圣母之祈福 5级卷轴
+14529,2	//Greed_Scroll#贪婪卷轴
+14590,2	//Pty_Assumptio_Scroll#超大的 圣母之祈福 卷轴
 
-//Zone 1 - 艾尔帕兰竞速场地
-601,16 //苍蝇翅膀
-506,16 //绿色药水
-525,16 //万能药
+//Battle Ground
+12218,4	//Assumptio_5_Scroll#圣母之祈福 5级卷轴
+14590,4	//Pty_Assumptio_Scroll#超大的 圣母之祈福 卷轴
 
-//Zone 2 - 监狱
-601,32 //苍蝇翅膀
-602,32 //蝴蝶翅膀
-12212,32 //巨大苍蝇翅膀
-14582,32
-14583,32
-14584,32
-14585,32
+//Zone 1 - Aldebaran Turbo Track
+506,16	//Green_Potion#绿色药水
+525,16	//Panacea#万能药
+601,16	//Wing_Of_Fly#苍蝇翅膀
+602,16	//Wing_Of_Butterfly#蝴蝶翅膀
+605,16	//Anodyne#曼特疗伤药
+12323,16	//N_Fly_Wing#新手用苍蝇翅膀
 
-//Zone 3 - 依斯鲁得岛 亚雷纳竞技场
-601,64 //苍蝇翅膀
+//Zone 2 - Jail
+601,32	//Wing_Of_Fly#苍蝇翅膀 // not really needed here but ...
+602,32	//Wing_Of_Butterfly#蝴蝶翅膀 // also not needed
+12212,32	//Giant_Fly_Wing#巨大的苍蝇翅膀
+12323,32	//N_Fly_Wing#新手用苍蝇翅膀
+14582,32	//WOB_Rune#卢恩王国蝴蝶翅膀
+14583,32	//WOB_Schwaltz#秀发兹蝴蝶翅膀
+14584,32	//WOB_Rachel#拉赫蝴蝶翅膀
+14585,32	//WOB_Local#本地蝴蝶翅膀
 
-//只能在PVP和GVG使用的道具
+//Zone 3 - Izlude Battle Arena
+601,64 //Wing_Of_Fly#苍蝇翅膀
+
+//Zone 6 - Endless Tower & Orc's Memory & Nidhoggur's Nest
+1235,512 //Azoth#变形短剑
+4321,512 //Hylozoist_Card#兔斯拉卡片
+
+//Hall of Abyss
 -1293,3
 -1294,3
 -1395,3
@@ -66,9 +95,9 @@
 -2485,3
 -2586,3
 -2587,3
--11547,3
--11548,3
--11549,3
+-11547,11
+-11548,11
+-11549,11
 -13072,3
 -15046,3
 -15047,3
@@ -79,8 +108,3 @@
 -18114,3
 -21001,3
 -21002,3
-
-//只能在城镇使用的道具
--11547,8
--11548,8
--11549,8
