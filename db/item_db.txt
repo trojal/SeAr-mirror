@@ -544,7 +544,7 @@
 1191,Alca_Bringer,海鹰召唤者,4,20,,3400,280,,1,0,0x00004080,8,2,34,3,100,1,3,{ bonus bAspd,getrefine()/2; },{},{}
 1192,P_Slayer1,P.屠杀者Ⅰ,4,0,,0,162,,1,0,0x00004082,7,2,34,2,26,0,3,{},{},{}
 1193,P_Slayer2,P.屠杀者Ⅱ,4,0,,0,185,,1,0,0x00004082,7,2,34,2,40,0,3,{},{},{}
-1196,Chrome_Twohand_Sword,铬黄 金属 双持 剑,4,20,,40,2800,,,,0x00004082,2,2,34,3,110,1,3,{ bonus bAgi,3; bonus bMaxHPrate,-10; bonus bUnbreakableWeapon,0; },{},{}
+1196,Chrome_Twohand_Sword,铬黄 金属 双持 剑,4,20,,400,280,,1,0,0x00004082,2,2,34,3,110,1,3,{ bonus bAgi,3; bonus bMaxHPRate,-10; bonus bUnbreakableWeapon,0; },{},{}
 // Daggers
 1201,Knife,短剑,4,50,,400,17,,1,3,0xFE9F7EEF,7,2,2,1,1,1,1,{},{},{}
 1202,Knife_,短剑,4,50,,400,17,,1,4,0xFE9F7EEF,7,2,2,1,1,1,1,{},{},{}
@@ -576,7 +576,7 @@
 1228,Combat_Knife,战斗短剑,4,20,,400,80,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bIgnoreDefRace,RC_DemiHuman; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Demon,-10; },{},{}
 1229,Mama's_Knife,厨刀,4,20,,500,75,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bCritical,30; bonus3 bAddMonsterDropItem,517,RC_Brute,5000; },{},{}
 1230,House_Auger,破甲短锥,4,20,,600,80,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bDefRatioAtkRace,RC_Boss; bonus bDefRatioAtkRace,RC_NonBoss; },{},{}
-1231,Bazerald,华丽短剑,4,20,,500,70,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bAtkEle,Ele_Fire; bonus bInt,5; bonus bMatk,105; },{},{}
+1231,Bazerald,华丽短剑,4,20,,500,70,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bMatk,105; bonus bAtkEle,Ele_Fire; bonus bInt,5; },{},{}
 1232,Assasin_Dagger,妖短剑 泣神怨,4,20,,600,140,,1,0,0x00001000,7,2,2,4,36,1,1,{ bonus bMaxHPrate,20; bonus bMaxSPrate,15; bonus bAspdRate,2; bonus bAtkEle,Ele_Dark; },{},{}
 1233,Exercise,除灵短剑,4,20,,700,90,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bIgnoreDefRace,RC_Demon; bonus2 bSubRace,RC_Demon,5; bonus2 bSubRace,RC_DemiHuman,-10; },{},{}
 1234,Moonlight_Sword,月灵短剑,4,20,,700,50,,1,0,0x029F5EEE,7,2,2,4,36,1,1,{ bonus bMaxSPrate,10; bonus bSPDrainValue,3; },{},{}
@@ -745,8 +745,8 @@
 1470,Brionac,圣光之戟,4,20,,3000,190,,3,0,0x00004082,7,2,34,4,48,1,5,{ bonus bAtkEle,Ele_Holy; skill "AL_HEAL",5; bonus3 bAutoSpell,"MG_SOULSTRIKE",3,100; bonus2 bAddRace,RC_Boss,5; },{},{}
 1471,Hell_Fire,火灵之矛,4,20,,3500,200,,3,0,0x00004082,7,2,34,4,48,1,5,{ bonus bAtkEle,Ele_Fire; bonus3 bAutoSpell,"MG_FIREBALL",3,100; bonus bStr,3; },{},{}
 // 2-Handed Staffs
-1472,Staff_Of_Soul,灵魂之杖,4,20,,1400,25,,1,0,0x00810204,7,2,34,3,73,1,10,{ bonus bInt,5; bonus bAgi,2; bonus bMatk,200; if(isequipped(2677) || isequipped(2711)){ bonus bMatkRate,6; bonus bDex,2; bonus bCastrate,-getrefine(); } },{},{}
-1473,Wizardy_Staff,大巫师之杖,4,20,,2400,120,,1,0,0x00810204,7,2,34,4,90,1,10,{ bonus bInt,6; bonus bDex,2; bonus bMatk,200; if(isequipped(2677) || isequipped(2711)){ bonus bMatkRate,6; bonus bDex,2; bonus bCastrate,-getrefine(); } },{},{}
+1472,Staff_Of_Soul,灵魂之杖,4,20,,1400,25,,1,0,0x00810204,7,2,34,3,73,1,10,{ bonus bMatk,200; bonus bInt,5; bonus bAgi,2; if(isequipped(2677) || isequipped(2711)){ bonus bMatkRate,6; bonus bDex,2; bonus bCastrate,-getrefine(); } },{},{}
+1473,Wizardy_Staff,大巫师之杖,4,20,,2400,120,,1,0,0x00810204,7,2,34,4,90,1,10,{ bonus bMatk,200; bonus bInt,6; bonus bDex,2; if(isequipped(2677) || isequipped(2711)){ bonus bMatkRate,6; bonus bDex,2; bonus bCastrate,-getrefine(); } },{},{}
 // 2-Handed Spears
 1474,Gae_Bolg,加野矛,4,20,,2000,160,,3,0,0x00004082,7,2,34,4,60,1,5,{ bonus bIgnoreDefRace,RC_Dragon; bonus2 bAddRace,RC_Boss,10; },{},{}
 1475,Horseback_Lance,马背长矛,4,20,,3700,200,,4,0,0x00004082,7,2,34,4,75,1,5,{},{},{}
@@ -832,81 +832,81 @@
 1564,Encyclopedia,大百科 全书,4,20,,2000,110,,1,2,0x00410100,7,2,2,3,70,1,15,{ bonus bMatk,100; bonus bInt,3; bonus bDex,2; bonus bCritical,20+((readparam(bLuk)*2)/10); },{},{}
 1565,Death_Note,死亡笔记,4,20,,1000,137,,1,2,0x00410100,7,2,2,4,85,1,15,{ bonus bMatk,100; bonus bStr,3; bonus bInt,3; bonus bLuk,-20; bonus2 bWeaponComaRace,RC_DemiHuman,10; bonus bAspdRate,getrefine(); if(BaseJob == Job_Sage) bonus3 bAutoSpell,"NPC_HELLJUDGEMENT",5,20; },{},{}
 1566,Diary_Of_Great_Basil,Diary Of Great Basil,4,20,,0,120,,1,0,0x00410100,7,2,2,1,1,0,15,{ bonus bMatk,125; bonus2 bAddRace,RC_Boss,50; bonus2 bAddRace,RC_NonBoss,50; },{},{}
-1567,Hardback_C,Refined Hardcover Book,4,1,,0,168,,1,1,0x00410100,7,2,2,4,1,0,15,{ bonus bStr,5; bonus bDex,2; bonus bMatk,100; },{},{}
+1567,Hardback_C,Refined Hardcover Book,4,1,,0,168,,1,1,0x00410100,7,2,2,4,1,0,15,{ bonus bMatk,100; bonus bStr,5; bonus bDex,2; },{},{}
 1568,Book_Of_Billows_,水灵之书,4,35000,,750,90,,1,3,0x00410100,7,2,2,3,27,1,15,{ bonus bAtkEle,Ele_Water; },{},{}
 1569,Book_Of_Mother_Earth_,地灵之书,4,35000,,750,90,,1,3,0x00410100,7,2,2,3,27,1,15,{ bonus bAtkEle,Ele_Earth; },{},{}
 1570,Book_Of_Blazing_Sun_,火灵之书,4,35000,,750,90,,1,3,0x00410100,7,2,2,3,27,1,15,{ bonus bAtkEle,Ele_Fire; },{},{}
 1571,Book_Of_Gust_Of_Wind_,风灵之书,4,35000,,750,90,,1,3,0x00410100,7,2,2,3,27,1,15,{ bonus bAtkEle,Ele_Wind; },{},{}
 1572,Principles_Of_Magic,魔法策略,4,20,,300,60,,1,2,0x00410100,7,2,2,3,60,1,15,{ bonus bMatk,160; bonus bInt,3; bonus bSPrecovRate,5; },{},{}
 1573,Ancient_Magic,远古魔法,4,20,,700,30,,1,2,0x00410100,7,2,2,3,70,1,15,{ bonus bMatk,140; if (isequipped(2334) || isequipped(2372)) { bonus bMdef,8; bonus bMaxSPRate,10; bonus bInt,4; }; },{},{}
-1574,BF_Book1,角斗士的兵法书,4,0,,0,90,,1,0,0x00410100,7,2,2,3,80,1,15,{ bonus bStr,2; bonus bInt,1; bonus bMatk,125; bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; },{},{}
-1575,BF_Book2,角斗士的谋略书,4,0,,0,90,,1,0,0x00410100,7,2,2,3,80,1,15,{ bonus bStr,2; bonus bInt,1; bonus bMatk,125; bonus2 bIgnoreMDefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; },{},{}
+1574,BF_Book1,角斗士的兵法书,4,0,,0,90,,1,0,0x00410100,7,2,2,3,80,1,15,{ bonus bMatk,125; bonus bStr,2; bonus bInt,1; bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; },{},{}
+1575,BF_Book2,角斗士的谋略书,4,0,,0,90,,1,0,0x00410100,7,2,2,3,80,1,15,{ bonus bMatk,125; bonus bStr,1; bonus bInt,2; bonus2 bIgnoreMDefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; },{},{}
 1576,Krieger_Book1,荣光之碑,4,0,,0,90,,1,0,0x00410100,7,2,2,4,80,1,15,{ bonus bMatk,155; bonus2 bAddRace,RC_DemiHuman,80; bonus2 bIgnoreDefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-4)*((getrefine()>14?14:getrefine())-4); bonus2 bIgnoreDefRate,RC_DemiHuman,5; } if(getrefine() > 8) autobonus "{ bonus bBaseAtk,200; }",30,3000,BF_WEAPON,"{ specialeffect2 EF_BASH3D; }"; },{},{}
 1577,Krieger_Book2,荣光启示录,4,0,,0,90,,1,0,0x00410100,7,2,2,4,80,1,15,{ bonus bMatk,155; bonus2 bAddRace,RC_DemiHuman,80; bonus2 bIgnoreDefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus2 bIgnoreDefRate,RC_DemiHuman,5; if(getrefine() > 8) { bonus bMatkRate,5; bonus bCastrate,-5; bonus bDelayRate,-5; } },{},{}
 1578,Book_Of_Prayer,Book Of Prayer,4,0,,0,140,,1,0,0x00410100,7,2,2,3,1,0,15,{ bonus bVit,2; bonus bMdef,2; bonus bMaxSPrate,10; },{},{}
 1579,Death_Note_M,Book of the Dead,4,0,,1000,137,,1,2,0x00410100,7,2,2,4,85,1,15,{ bonus bMatkRate,15; bonus bStr,3; bonus bInt,3; bonus bLuk,-20; bonus2 bWeaponComaRace,RC_DemiHuman,10; bonus bAspdRate,getrefine(); if(BaseJob == Job_Sage) bonus3 bAutoSpell,"NPC_HELLJUDGEMENT",5,20; },{},{}
 1580,Encyclopedia_C,Giant Encyclopedia,4,0,,0,145,,1,0,0x00410100,7,2,2,3,0,0,15,{ bonus bMatk,100; bonus bInt,3; bonus bDex,2; bonus bCritical,20+((readparam(bLuk)*2)/10); bonus2 bAddSize,0,40; bonus2 bAddSize,1,40; bonus2 bAddSize,2,40; },{},{}
 1585,Upg_Book,强化书籍,4,20,,600,45,,1,1,0x00410100,7,2,2,3,1,1,15,{ bonus bMatk,20+(5*getrefine()); bonus bAtk,10*getrefine(); if(BaseLevel >= 70) { bonus bAtk,5*((BaseLevel-69)/10); } },{},{}
-1599,Angra_Manyu,圣锤 十字星,4,1,,10,200,,2,0,0xFFFFFFFF,7,2,2,1,1,1,8,{ bonus bAllStats,50; bonus bBaseAtk,3800; bonus bMatkRate,200; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddRace,RC_NonBoss,100; bonus2 bAddRace,RC_Boss,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; /*skill "GM_SANDMAN",1;*/ },{},{}
+1599,Angra_Manyu,圣锤 十字星,4,1,,10,1000,,2,0,0xFFFFFFFF,7,2,2,1,1,1,8,{ bonus bMatkRate,1000; bonus bAllStats,50; bonus bBaseAtk,3800; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddRace,RC_NonBoss,100; bonus2 bAddRace,RC_Boss,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; /*skill "GM_SANDMAN",1;*/ bonus bFixedCastRate,-100; },{},{}
 // Staffs
 1601,Rod,手杖,4,50,,400,15,,1,3,0x00818315,7,2,2,1,1,1,10,{ bonus bMatk,30; },{},{}
 1602,Rod_,手杖,4,50,,400,15,,1,4,0x00818315,7,2,2,1,1,1,10,{ bonus bMatk,30; },{},{}
 1603,Rod__,手杖,4,50,,400,15,,1,0,0x00818315,7,2,2,1,1,1,10,{ bonus bMatk,30; },{},{}
-1604,Wand,橡木魔杖,4,2500,,400,25,,1,2,0x00818315,7,2,2,2,12,1,10,{ bonus bInt,1; bonus bMatk,45; },{},{}
-1605,Wand_,橡木魔杖,4,2500,,400,25,,1,3,0x00818315,7,2,2,2,12,1,10,{ bonus bInt,1; bonus bMatk,45; },{},{}
-1606,Wand__,橡木魔杖,4,2500,,400,25,,1,0,0x00818315,7,2,2,2,12,1,10,{ bonus bInt,1; bonus bMatk,45; },{},{}
-1607,Staff,智慧魔杖,4,9500,,400,40,,1,2,0x00818314,7,2,2,2,12,1,10,{ bonus bInt,2; bonus bMatk,70; },{},{}
-1608,Staff_,智慧魔杖,4,9500,,400,40,,1,3,0x00818314,7,2,2,2,12,1,10,{ bonus bInt,2; bonus bMatk,70; },{},{}
-1609,Staff__,智慧魔杖,4,9500,,400,40,,1,0,0x00818314,7,2,2,2,12,1,10,{ bonus bInt,2; bonus bMatk,70; },{},{}
-1610,Arc_Wand,言灵魔杖,4,45000,,400,60,,1,1,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,3; bonus bMatk,95; },{},{}
-1611,Arc_Wand_,言灵魔杖,4,45000,,400,60,,1,2,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,3; bonus bMatk,95; },{},{}
-1612,Arc_Wand__,言灵魔杖,4,45000,,400,60,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,3; bonus bMatk,95; },{},{}
-1613,Mighty_Staff,巫杖 魂咬,4,20,,700,130,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bStr,10; bonus bMatk,100; bonus bSPDrainValue,-2; },{},{}
-1614,Blessed_Wand,圣杖 英灵,4,20,,700,75,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,3; bonus bMatk,105; },{},{}
-1615,Bone_Wand,骷髅魔杖,4,20,,700,40,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,4; bonus bAtkEle,Ele_Undead; bonus bMatk,110; },{},{}
-1616,Staff_Of_Wing,羽翼之杖,4,20,,500,60,,1,0,0x00810204,7,2,2,4,40,1,10,{ bonus bMatk,115; bonus bCastrate,-5; },{},{}
-1617,Survival_Rod,生存的魔杖,4,85000,,1000,50,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bDex,2; bonus bMatk,120; bonus bMaxHP,300; },{},{}
-1618,Survival_Rod_,生存的魔杖,4,85000,,1000,50,,1,1,0x00818314,7,2,2,3,24,1,10,{ bonus bDex,3; bonus bMatk,120; bonus bMaxHP,400; },{},{}
-1619,Survival_Rod2,高等生存的魔杖,4,85000,,1000,50,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,2; bonus bMatk,120; bonus bMaxHP,300; },{},{}
-1620,Survival_Rod2_,高等生存的魔杖,4,85000,,1000,50,,1,1,0x00818314,7,2,2,3,24,1,10,{ bonus bInt,3; bonus bMatk,120; bonus bMaxHP,400; },{},{}
-1621,Hypnotist's_Staff,催眠师的魔杖,4,43000,,500,70,,1,1,0x00000001,7,2,2,3,30,1,10,{ bonus bInt,1; bonus bMatk,120; },{},{}
-1622,Hypnotist's_Staff_,催眠师的魔杖,4,20,,500,70,,1,2,0x00000001,7,2,2,3,30,1,10,{ bonus bInt,1; bonus bMatk,120; },{},{}
-1623,Mighty_Staff_C,巫杖 魂咬,4,1,,700,165,,1,0,0x00818314,7,2,2,3,1,0,10,{ bonus bStr,10; bonus bInt,4; bonus bMatk,100; bonus bSPDrainValue,-1; },{},{}
-1624,Lich_Bone_Wand,巫妖之 骨杖,4,20,,800,60,,1,2,0x00018314,2,2,2,3,70,1,10,{ bonus bInt,1; bonus bDex,1; bonus bAtkEle,Ele_Undead; bonus bMatk,170; bonus3 bAutoSpellWhenHit,"NPC_WIDECURSE",5,10+getrefine(); if(getrefine()>=9){ bonus bMatkRate,3; bonus bMaxSP,300; } },{},{}
-1625,Healing_Staff,恢复之 杖,4,20,,400,10,,1,0,0x00008110,7,2,2,3,55,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,105; bonus bHealPower,(getrefine()*3/2); },{},{}
-1626,Piercing_Staff,洞察之 杖,4,20,,500,80,,1,0,0x00018314,2,2,2,3,70,1,10,{ bonus bInt,4; bonus bMatk,145; bonus bIgnoreMdefRate,10+getrefine(); },{},{}
-1627,Staffy,Staffy,4,20,,0,120,,1,0,0x00818314,7,2,2,1,1,0,10,{ bonus bMatk,120; bonus2 bAddRace,RC_Boss,50; bonus2 bAddRace,RC_NonBoss,50; },{},{}
-1628,Survival_Rod_C,Refined Survivor's Rod,4,1,,0,71,,1,0,0x00818314,7,2,2,3,1,0,10,{ bonus bDex,4; bonus bMatk,145; bonus bMaxHP,500; },{},{}
+1604,Wand,橡木魔杖,4,2500,,400,25,,1,2,0x00818315,7,2,2,2,12,1,10,{ bonus bMatk,45; bonus bInt,1; },{},{}
+1605,Wand_,橡木魔杖,4,2500,,400,25,,1,3,0x00818315,7,2,2,2,12,1,10,{ bonus bMatk,45; bonus bInt,1; },{},{}
+1606,Wand__,橡木魔杖,4,2500,,400,25,,1,0,0x00818315,7,2,2,2,12,1,10,{ bonus bMatk,45; bonus bInt,1; },{},{}
+1607,Staff,智慧魔杖,4,9500,,400,40,,1,2,0x00818314,7,2,2,2,12,1,10,{ bonus bMatk,70; bonus bInt,2; },{},{}
+1608,Staff_,智慧魔杖,4,9500,,400,40,,1,3,0x00818314,7,2,2,2,12,1,10,{ bonus bMatk,70; bonus bInt,2; },{},{}
+1609,Staff__,智慧魔杖,4,9500,,400,40,,1,0,0x00818314,7,2,2,2,12,1,10,{ bonus bMatk,70; bonus bInt,2; },{},{}
+1610,Arc_Wand,言灵魔杖,4,45000,,400,60,,1,1,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,95; bonus bInt,3; },{},{}
+1611,Arc_Wand_,言灵魔杖,4,45000,,400,60,,1,2,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,95; bonus bInt,3; },{},{}
+1612,Arc_Wand__,言灵魔杖,4,45000,,400,60,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,95; bonus bInt,3; },{},{}
+1613,Mighty_Staff,巫杖 魂咬,4,20,,700,130,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,100; bonus bStr,10; bonus bSPDrainValue,-2; },{},{}
+1614,Blessed_Wand,圣杖 英灵,4,20,,700,75,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,105; bonus bInt,3; },{},{}
+1615,Bone_Wand,骷髅魔杖,4,20,,700,40,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,110; bonus bAtkEle,Ele_Undead; bonus bInt,4; },{},{}
+1616,Staff_Of_Wing,羽翼之杖,4,20,,500,60,,1,0,0x00810204,7,2,2,4,40,1,10,{ bonus bMatk,115; bonus bAtkEle,Ele_Wind; bonus bCastrate,-5; },{},{}
+1617,Survival_Rod,生存的魔杖,4,85000,,1000,50,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,120; bonus bDex,2; bonus bMaxHP,300; },{},{}
+1618,Survival_Rod_,生存的魔杖,4,85000,,1000,50,,1,1,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,120; bonus bDex,3; bonus bMaxHP,400; },{},{}
+1619,Survival_Rod2,高等生存的魔杖,4,85000,,1000,50,,1,0,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,120; bonus bInt,2; bonus bMaxHP,300; },{},{}
+1620,Survival_Rod2_,高等生存的魔杖,4,85000,,1000,50,,1,1,0x00818314,7,2,2,3,24,1,10,{ bonus bMatk,120; bonus bInt,3; bonus bMaxHP,400; },{},{}
+1621,Hypnotist's_Staff,催眠师的魔杖,4,43000,,500,70,,1,1,0x00000001,7,2,2,3,30,1,10,{ bonus bMatk,120; bonus bInt,1; },{},{}
+1622,Hypnotist's_Staff_,催眠师的魔杖,4,20,,500,70,,1,2,0x00000001,7,2,2,3,30,1,10,{ bonus bMatk,120; bonus bInt,1; },{},{}
+1623,Mighty_Staff_C,巫杖 魂咬,4,1,,0,165,,1,0,0x00818314,7,2,2,3,1,0,10,{ bonus bMatk,100; bonus bStr,10; bonus bInt,4; bonus bSPDrainValue,-1; },{},{}
+1624,Lich_Bone_Wand,巫妖之 骨杖,4,20,,800,60,,1,2,0x00018314,2,2,2,3,70,1,10,{ bonus bMatk,170; bonus bAtkEle,Ele_Undead; bonus bInt,1; bonus bDex,1; bonus3 bAutoSpellWhenHit,"NPC_WIDECURSE",5,10+getrefine(); if(getrefine()>=9){ bonus bMatkRate,3; bonus bMaxSP,300; } },{},{}
+1625,Healing_Staff,恢复之 杖,4,20,,400,10,,1,0,0x00008110,7,2,2,3,55,1,10,{ bonus bMatk,105; bonus bAtkEle,Ele_Holy; bonus bHealPower,(getrefine()*3/2); },{},{}
+1626,Piercing_Staff,洞察之 杖,4,20,,500,80,,1,0,0x00018314,2,2,2,3,70,1,10,{ bonus bMatk,145; bonus bInt,4; bonus bIgnoreMdefRate,10+getrefine(); },{},{}
+1627,Staffy,Staffy,4,20,,0,40,,1,0,0x00818314,7,2,2,1,0,0,10,{ bonus bMatk,120; bonus bInt,4; bonus2 bAddRace,RC_Boss,50; bonus2 bAddRace,RC_NonBoss,50; },{},{}
+1628,Survival_Rod_C,Refined Survivor's Rod,4,1,,0,71,,1,0,0x00818314,7,2,2,3,0,0,10,{ bonus bMatk,145; bonus bDex,4; bonus bMaxHP,500; },{},{}
 1629,Walking_Stick,绅士的手杖,4,20,,500,40,,1,1,0x00818314,7,2,2,4,50,1,10,{ bonus bMatk,125; bonus bDex,1; if (isequipped(5045)) { bonus bDex,2; bonus bInt,2; bonus bSPrecovRate,5; bonus bMatkRate,getrefine(); } },{},{}
-1630,Release_Of_Wish,许愿之杖,4,20,,500,30,,1,0,0x00010204,7,2,2,3,50,1,10,{ bonus bMatk,125; bonus bInt,3; bonus bHealPower,5; autobonus "{ bonus2 bSPRegenRate,100,2000; bonus2 bHPRegenRate,50,2000; }",10,10000,BF_MAGIC,"{ specialeffect2 EF_HEAL; }"; },{},{}
-1631,Holy_Stick,神圣权杖,4,20,,500,50,,1,1,0x00008100,7,2,2,4,70,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,140; bonus2 bCastrate,156,-25; bonus2 bCastrate,77,-25; bonus2 bCastrate,79,-25; },{},{}
-1632,BF_Staff1,角斗士的法杖,4,0,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bInt,4; bonus bDex,3; bonus bMatk,125; bonus2 bIgnoreMdefRate,RC_DemiHuman,25; bonus3 bAddEff,Eff_Stun,500,ATF_SKILL; bonus bUnbreakableWeapon,0; },{},{}
-1633,BF_Staff2,角斗士的魔杖,4,0,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bInt,3; bonus bDex,3; bonus bMatk,125; bonus2 bMagicAddRace,RC_DemiHuman,15; bonus3 bAddEff,Eff_Stun,500,ATF_SKILL; bonus bUnbreakableWeapon,0; },{},{}
-1634,BF_Staff3,角斗士的强力恢复魔杖,4,0,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bMatk,125; bonus bHealPower,14; bonus2 bSPRegenRate,5,10000; bonus bUnbreakableWeapon,0; },{},{}
-1635,BF_Staff4,角斗士的快速恢复魔杖,4,0,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bInt,3; bonus bDex,2; bonus bMatk,125; bonus bDelayRate,-15; bonus2 bSPRegenRate,5,10000; bonus bUnbreakableWeapon,0; },{},{}
-1636,Thorn_Staff,诅咒魔杖,4,20,,700,60,,1,0,0x00018314,2,2,34,4,75,1,10,{ bonus bInt,3; bonus bDex,3; bonus bMatk,160; bonus bIgnoreMdefRate,getrefine(); bonus bDelayRate,-(getrefine()*3/2); },{},{}
+1630,Release_Of_Wish,许愿之杖,4,20,,500,30,,1,0,0x00810204,7,2,2,3,50,1,10,{ bonus bMatk,125; bonus bInt,3; bonus bHealPower,5; autobonus "{ bonus2 bSPRegenRate,100,2000; bonus2 bHPRegenRate,50,2000; }",10,10000,BF_MAGIC,"{ specialeffect2 EF_HEAL; }"; },{},{}
+1631,Holy_Stick,神圣权杖,4,20,,500,50,,1,1,0x00008100,7,2,2,4,70,1,10,{ bonus bMatk,140; bonus bAtkEle,Ele_Holy; bonus2 bCastrate,156,-25; bonus2 bCastrate,77,-25; bonus2 bCastrate,79,-25; },{},{}
+1632,BF_Staff1,角斗士的法杖,4,20,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bMatk,125; bonus bInt,4; bonus bDex,3; bonus2 bIgnoreMdefRate,RC_DemiHuman,25; bonus3 bAddEff,Eff_Stun,500,ATF_SKILL; bonus bUnbreakableWeapon,0; },{},{}
+1633,BF_Staff2,角斗士的魔杖,4,20,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bMatk,125; bonus bInt,3; bonus bDex,3; bonus2 bMagicAddRace,RC_DemiHuman,15; bonus3 bAddEff,Eff_Stun,500,ATF_SKILL; bonus bUnbreakableWeapon,0; },{},{}
+1634,BF_Staff3,角斗士的强力恢复魔杖,4,20,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bMatk,125; bonus bHealPower,14; bonus2 bSPRegenRate,5,10000; bonus bUnbreakableWeapon,0; },{},{}
+1635,BF_Staff4,角斗士的快速恢复魔杖,4,20,,0,70,,1,0,0x00818314,7,2,2,3,80,1,10,{ bonus bMatk,125; bonus bInt,3; bonus bDex,2; bonus bDelayRate,-15; bonus2 bSPRegenRate,5,10000; bonus bUnbreakableWeapon,0; },{},{}
+1636,Thorn_Staff,诅咒魔杖,4,20,,700,60,,1,0,0x00018314,2,2,2,4,75,1,10,{ bonus bMatk,160; bonus bAtkEle,Ele_Dark; bonus bInt,3; bonus bDex,3; bonus bIgnoreMdefRate,getrefine(); bonus bDelayRate,-(getrefine()*3/2); },{},{}
 1637,Eraser,净化之仗,4,20,,500,80,,1,0,0x00018314,2,2,2,4,70,1,10,{ bonus bMatk,170; bonus bInt,3; bonus bDex,2; bonus bSPrecovRate,8; if( getrefine() > 9 ) bonus5 bAutoSpell,"NPC_WIDESOULDRAIN",3,5,BF_MAGIC,0; else bonus5 bAutoSpell,"NPC_WIDESOULDRAIN",1,5,BF_MAGIC,0; },{},{}
-1638,Healing_Staff_C,Staff Of Healing,4,20,,400,10,,1,0,0x00008110,7,2,2,3,55,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,125; bonus bHealPower,(getrefine()*3/2); },{},{}
-1639,N_Rod,新手杖,4,1,,0,15,,1,3,0x00818315,7,2,2,1,1,0,10,{ bonus bMatk,32; },{},{}
-1640,Krieger_Onehand_Staff1,荣光法杖,4,0,,0,70,,1,0,0x00018314,7,2,2,4,80,1,10,{ bonus bMatk,135; bonus2 bMagicAddRace,RC_DemiHuman,15; bonus2 bIgnoreMdefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus2 bIgnoreMdefRate,RC_DemiHuman,5; if(getrefine() > 8) { bonus bMatkRate,5; bonus bCastrate,-5; bonus bDelayRate,-5; } },{},{}
-1641,Krieger_Onehand_Staff2,荣光权杖,4,0,,0,70,,1,0,0x00018314,7,2,2,4,80,1,10,{ bonus bMatk,135; bonus bHealPower,14; bonus bDelayRate,-10; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bIgnoreMdefRate,RC_DemiHuman,5; bonus bHealPower,5+((getrefine()>14?14:getrefine())-5)*2; } if(getrefine() > 8) bonus5 bAutoSpellOnSkill,"AL_HEAL","AL_HEAL",10,100,1; if(getrefine() > 9) { bonus bHealPower,10; } },{},{}
-1642,Staff_Of_Darkness,Staff Of Darkness,4,0,,0,100,,1,0,0x00818315,7,2,2,2,1,0,10,{ bonus bCastrate,-5; bonus bMatkRate,15; bonus bInt,2; },{},{}
-1643,Dead_Tree_Cane,古树之杖,4,0,,100,100,,1,0,0x00818315,7,2,2,4,70,1,10,{ bonus bMatk,15; bonus bInt,4; if (getrefine()>5) { bonus bInt,getrefine()-5; bonus bMaxHP,-200; bonus bMaxSP,-100; } },{},{}
-1644,Piercing_Staff_M,Staff of Piercing,4,0,,500,80,,1,0,0x00018314,2,2,2,3,70,1,10,{ bonus bInt,4; bonus bMatkRate,15; bonus bIgnoreMdefRate,10+getrefine(); },{},{}
-1645,Lich_Bone_Wand_M,Lich's Bone Wand,4,0,,800,60,,1,2,0x00018314,2,2,2,3,70,1,10,{ bonus bInt,1; bonus bDex,1; bonus bAtkEle,Ele_Undead; bonus bMatkRate,20; bonus3 bAutoSpellWhenHit,"NPC_WIDECURSE",5,10+getrefine(); if(getrefine()>=9){ bonus bMatkRate,3; bonus bMaxSP,300; } },{},{}
-1646,La'cryma_Stick,拉格利玛之杖,4,0,,500,30,,1,2,0x00010204,2,2,2,3,50,1,10,{ bonus bInt,4; bonus bMatk,180; bonus bMDef,1; bonus2 bSkillAtk,"WZ_STORMGUST",getrefine(); if (getrefine() > 9) bonus2 bCastRate,"WZ_STORMGUST",-8; },{},{}
-1647,Croce_Staff,红十字杖,4,20,,400,10,,1,1,0x00008110,2,2,2,3,50,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,175; bonus bInt,4; bonus4 bAutoSpellOnSkill,"AL_HEAL","AL_BLESSING",getskilllv("AL_BLESSING")>1?getskilllv("AL_BLESSING"):1,20; },{},{}
-1648,Staff_Of_Bordeaux,波尔多之杖,4,0,,500,30,,1,0,0x00010204,2,2,2,4,50,1,10,{ bonus bMatk,170; bonus bInt,2; bonus bDex,1; if(getskilllv("SA_DRAGONOLOGY") == 5) { bonus bUseSPrate,-15; bonus bInt,3; } },{},{}
+1638,Healing_Staff_C,Staff Of Healing,4,20,,0,10,,1,0,0x00008110,7,2,2,3,1,0,10,{ bonus bMatk,125; bonus bAtkEle,Ele_Holy; bonus bHealPower,(getrefine()*3/2); },{},{}
+1639,N_Rod,新手杖,4,0,,0,15,,1,3,0x00818315,7,2,2,1,1,0,10,{ bonus bMatk,32; },{},{}
+1640,Krieger_Onehand_Staff1,荣光法杖,4,20,,0,70,,1,0,0x00818314,7,2,2,4,80,1,10,{ bonus bMatk,135; bonus2 bMagicAddRace,RC_DemiHuman,15; bonus2 bIgnoreMdefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus2 bIgnoreMdefRate,RC_DemiHuman,5; if(getrefine() > 8) { bonus bMatkRate,5; bonus bCastrate,-5; bonus bDelayRate,-5; } },{},{}
+1641,Krieger_Onehand_Staff2,荣光权杖,4,20,,0,70,,1,0,0x00818314,7,2,2,4,80,1,10,{ bonus bMatk,135; bonus bHealPower,14; bonus bDelayRate,-10; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bIgnoreMdefRate,RC_DemiHuman,5; bonus bHealPower,5+((getrefine()>14?14:getrefine())-5)*2; } if(getrefine() > 8) bonus5 bAutoSpellOnSkill,"AL_HEAL","AL_HEAL",10,100,1; if(getrefine() > 9) { bonus bHealPower,10; } },{},{}
+1642,Staff_Of_Darkness,Staff Of Darkness,4,20,,0,100,,1,0,0x00818314,7,2,2,2,0,0,10,{ bonus bMatkRate,15; bonus bInt,2; bonus bCastrate,-5; },{},{}
+1643,Dead_Tree_Cane,古树之杖,4,20,,100,100,,1,0,0x00818314,7,2,2,4,70,1,10,{ bonus bMatk,155; bonus bInt,4; if (getrefine()>5) { bonus bInt,getrefine()-5; bonus bMaxHP,-200; bonus bMaxSP,-100; } },{},{}
+1644,Piercing_Staff_M,Staff of Piercing,4,20,,500,80,,1,0,0x00018314,2,2,2,3,70,1,10,{ bonus bMatkRate,15; bonus bInt,4; bonus bIgnoreMdefRate,10+getrefine(); },{},{}
+1645,Lich_Bone_Wand_M,Lich's Bone Wand,4,20,,800,60,,1,2,0x00018314,2,2,2,3,70,1,10,{ bonus bMatkRate,20; bonus bAtkEle,Ele_Undead; bonus bInt,1; bonus bDex,1; bonus3 bAutoSpellWhenHit,"NPC_WIDECURSE",5,10+getrefine(); if(getrefine()>=9){ bonus bMatkRate,3; bonus bMaxSP,300; } },{},{}
+1646,La'cryma_Stick,拉格利玛之杖,4,20,,500,30,,1,2,0x00010204,2,2,2,3,50,1,10,{ bonus bMatk,180; bonus bInt,4; bonus bMdef,getrefine(); bonus2 bSkillAtk,"WZ_STORMGUST",getrefine(); if (getrefine() > 9) bonus2 bCastRate,"WZ_STORMGUST",-8; },{},{}
+1647,Croce_Staff,红十字杖,4,20,,500,30,,1,1,0x00008110,2,2,2,3,50,1,10,{ bonus bMatk,175; bonus bAtkEle,Ele_Holy; bonus bInt,4; bonus4 bAutoSpellOnSkill,"AL_HEAL","AL_BLESSING",getskilllv("AL_BLESSING")>1?getskilllv("AL_BLESSING"):1,20; },{},{}
+1648,Staff_Of_Bordeaux,波尔多之杖,4,20,,500,30,,1,0,0x00010204,2,2,2,4,50,1,10,{ bonus bMatk,170; bonus bInt,2; bonus bDex,1; if(getskilllv("SA_DRAGONOLOGY") == 5) { bonus bUseSPrate,-15; bonus bInt,3; } },{},{}
 1649,Rafini_Staff,拉菲尼之杖,4,20,,500,30,,1,0,0x00018300,8,2,2,3,100,1,10,{ bonus bMatk,180; bonus bFixedCastRate,-getrefine(); },{},{}
-1650,P_Staff1,P.杖Ⅰ,4,0,,0,60,,1,0,0x00818314,7,2,2,2,26,0,10,{ bonus bInt,2; bonus bMatk,125; },{},{}
-1651,P_Staff2,P.杖Ⅱ,4,0,,0,60,,1,0,0x00818314,7,2,2,2,40,0,10,{ bonus bInt,3; bonus bMatk,150; },{},{}
-1652,Tourist_Staff,Tourist Staff,4,20,,500,35,,1,0,0x00818315,7,2,2,1,1,1,10,{ bonus bMatkRate,15; bonus bInt,2; bonus bAgi,1; },{},{}
-1653,Staff_Of_Healing_C,Staff of Healing,4,20,,0,10,,1,0,0x00818314,7,2,2,3,1,1,10,{ bonus bMatk,100; bonus bHealPower,18; },{},{}
-1654,Mental_Stick,精神掌控 木棍,4,20,,500,40,,1,1,0x00010000,8,2,2,3,102,1,10,{ bonus bMatk,170; bonus2 bCastValue,"SO_PSYCHIC_WAVE",-3000; bonus2 bUseSPValue,"SO_PSYCHIC_WAVE",60; if(getrefine() > 5) { bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",2*(getrefine()-5); bonus bMaxHPrate,2*(5-getrefine()); } },{},{ heal 0,-100; }
+1650,P_Staff1,P.杖Ⅰ,4,0,,0,60,,1,0,0x00818314,7,2,2,2,26,0,10,{ bonus bMatk,125; bonus bInt,2; },{},{}
+1651,P_Staff2,P.杖Ⅱ,4,0,,0,60,,1,0,0x00818314,7,2,2,2,40,0,10,{ bonus bMatk,150; bonus bInt,3; },{},{}
+1652,Tourist_Staff,Tourist Staff,4,0,,500,35,,1,0,0x00818315,7,2,2,1,1,0,10,{ bonus bMatkRate,15; bonus bInt,2; bonus bAgi,1; },{},{}
+1653,Staff_Of_Healing_C,Staff of Healing,4,20,,0,10,,1,0,0x00008110,7,2,2,3,1,0,10,{ bonus bMatk,100; bonus bAtkEle,Ele_Holy; bonus bHealPower,18; },{},{}
+1654,Mental_Stick,精神掌控 木棍,4,20,,500,40,,1,1,0x00010000,8,2,2,3,102,1,10,{ bonus bMatk,170; if(getrefine() > 5) { bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",(getrefine()-5)*2; bonus bMaxHPRate,-(getrefine()-5)*2; } bonus2 bCastValue,"SO_PSYCHIC_WAVE",-3000; bonus2 bUseSPValue,"SO_PSYCHIC_WAVE",60; },{},{ heal 0,-100; }
 // Bows
 1701,Bow,弓,4,1000,,500,15,,5,3,0x000A0848,7,2,34,1,4,1,11,{},{},{}
 1702,Bow_,弓,4,1000,,500,15,,5,4,0x000A0848,7,2,34,1,4,1,11,{},{},{}
-1703,Bow__,弓,4,1000,,500,15,,5,0,0x000A0848,7,2,34,1,4,1,11,{},{},{}
+1703,Bow__,弓,4,1000,,0,15,,5,0,0x000A0848,7,2,34,1,4,1,11,{ bonus2 bAddDamageClass,1002,500; bonus2 bAddDamageClass,1113,500; bonus2 bAddDamageClass,1031,500; bonus2 bAddDamageClass,1242,500; },{},{}
 1704,Composite_Bow,坎普兹弓,4,2500,,600,29,,5,3,0x000A0848,7,2,34,1,4,1,11,{},{},{}
 1705,Composite_Bow_,坎普兹弓,4,2500,,600,29,,5,4,0x000A0848,7,2,34,1,4,1,11,{},{},{}
 1706,Composite_Bow__,坎普兹弓,4,2500,,600,29,,5,0,0x000A0848,7,2,34,1,4,1,11,{},{},{}
@@ -1076,19 +1076,19 @@
 1982,Phenomena_Whip,Phenomena Whip,4,0,,0,160,,2,0,0x00080000,7,0,2,4,1,0,14,{ bonus2 bSkillAtk,"DC_THROWARROW",25; },{},{}
 1983,Rante_C,Rante Whip,4,0,,0,170,,2,0,0x00080000,7,0,2,3,1,0,14,{ bonus2 bAddSize,0,40; bonus2 bAddSize,1,40; bonus2 bAddSize,2,40; },{},{}
 1984,Stem_Whip,节 鞭,4,20,,800,170,,2,1,0x00080000,8,0,2,3,102,1,14,{ bonus bMatk,50; bonus2 bCastrate,"WM_LULLABY_DEEPSLEEP",-2; bonus2 bCastrate,"WA_SWING_DANCE",-2; if(getrefine() > 5) { bonus2 bUseSPValue,"WM_LULLABY_DEEPSLEEP",4*(5-getrefine()); bonus2 bUseSPValue,"WA_SWING_DANCE",4*(5-getrefine()); } },{},{}
-1985,Rosebine,玫瑰蔓,4,20,,1000,100,,2,0,0x00080000,8,0,2,4,110,1,14,{ bonus bInt,2; bonus bAgi,-2; bonus bMatk,130; bonus3 bAutoSpell,"WM_VOICEOFSIREN",1,20; },{},{}
+1985,Rosebine,玫瑰蔓,4,20,,1000,100,,2,0,0x00080000,8,0,2,4,110,1,14,{ bonus bMatk,130; bonus bInt,2; bonus bAgi,-2; bonus3 bAutoSpell,"WM_VOICEOFSIREN",1,20; },{},{}
 // Additional 2-Handed Staffs
-2000,Destruction_Rod,毁灭之 杖,4,20,,2500,130,,1,1,0x00000200,2,2,34,4,80,1,10,{ bonus bBaseAspd,-10; bonus bMatk,280; bonus bMatkRate,getrefine()/2; bonus bInt,3; bonus bAgi,10; bonus bUseSPrate,(getrefine()*2); bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",5,(getrefine()*20); bonus2 bCastrate,366,-50; },{},{}
-2001,Divine_Cross,圣十字之 杖,4,20,,1500,120,,1,0,0x00008100,7,2,34,4,70,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,210; bonus bDex,4; bonus2 bSubRace,RC_Demon,15; bonus2 bSubRace,RC_Undead,15; if (isequipped(2677) || isequipped(2711)) { bonus bMatkRate,10; bonus bDex,2; bonus2 bSubRace,RC_Demon,10; bonus2 bSubRace,RC_Undead,10; }; },{},{}
-2002,Krieger_Twohand_Staff1,荣光长杖,4,0,,0,70,,1,0,0x00018314,7,2,34,4,80,1,10,{ bonus bMatk,210+getrefine(); bonus2 bMagicAddRace,RC_DemiHuman,15; bonus2 bIgnoreMdefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus bMatkRate,5; bonus2 bMagicAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-5)*2; bonus2 bIgnoreMdefRate,RC_DemiHuman,((getrefine()>14?14:getrefine())-5)*2; } if(getrefine() > 8) { bonus5 bAutoSpellOnSkill,"WZ_STORMGUST","MG_SAFETYWALL",10,200,1; bonus5 bAutoSpellOnSkill,"WZ_METEOR","MG_SAFETYWALL",10,200,1; bonus5 bAutoSpellOnSkill,"WZ_VERMILION","MG_SAFETYWALL",10,200,1; } },{},{}
-2003,Destruction_Rod_M,Staff of Destruction,4,20,,2500,130,,1,1,0x00000200,2,2,34,4,80,1,10,{ bonus bMatk,280; bonus bMatkRate,getrefine()/2; bonus bInt,3; bonus bAgi,10; bonus bUseSPrate,(getrefine()*2); bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",5,(getrefine()*20); bonus2 bCastrate,366,-50; },{},{}
-2004,Kronos,克罗诺斯之杖,4,0,,1000,30,,1,0,0x00010204,2,2,34,4,50,1,10,{ bonus bMatk,240; bonus bInt,3+(getrefine()/2); bonus bMaxHP,300+(50*getrefine()/2); autobonus "{ bonus bMatkRate,12; bonus bUseSPRate,20; }",1,5000,BF_MAGIC,"{ specialeffect2 EF_ENHANCE; }"; },{},{}
-2005,Dea_Staff,黛雅之杖,4,20,,1000,30,,1,1,0x00008110,2,2,34,3,50,1,10,{ bonus bAtkEle,Ele_Holy; bonus bMatk,220; bonus bInt,6; bonus bVit,2; bonus bMatkRate,getrefine()/2; autobonus3 "{ end; }",20,1000,"AL_HEAL","{ specialeffect2 EF_MAGICALATTHIT; heal 0,200;  }"; },{},{}
-2006,G_Staff_Of_Light,光护之杖,4,20,,1900,80,,1,0,0x00010204,2,2,34,3,60,1,10,{ bonus bMatkRate,18; bonus bInt,6; bonus bMaxSP,150; },{},{}
-2007,Golden_Rod_Staff,黄金领主权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Wind; bonus2 bSkillAtk,"WZ_JUPITEL",12; },{},{}
-2008,Aqua_Staff,水蓝权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Water; bonus2 bSkillAtk,"MG_COLDBOLT",12; bonus2 bSkillAtk,"MG_FROSTDIVER",12; },{},{}
-2009,Crimson_Staff,深红权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Fire; bonus2 bSkillAtk,"MG_FIREBOLT",10; bonus2 bSkillAtk,"MG_FIREBALL",10; },{},{}
-2010,Forest_Staff,森林权杖,4,20,,900,30,,1,2,0x00000200,2,2,34,4,100,1,10,{ bonus bMatkRate,25; bonus bInt,3; bonus bAtkEle,Ele_Earth; bonus2 bSkillAtk,"WZ_EARTHSPIKE",10; bonus2 bSkillAtk,"WZ_HEAVENDRIVE",10; },{},{}
+2000,Destruction_Rod,毁灭之 杖,4,20,,2500,130,,1,1,0x00000200,2,2,34,4,80,1,10,{ bonus bMatk,280; bonus bMatkRate,getrefine()/2; bonus bInt,3; bonus bAgi,10; bonus bUseSPrate,(getrefine()*2); bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",5,(getrefine()*20); bonus2 bCastrate,"HW_MAGICPOWER",-50; },{},{}
+2001,Divine_Cross,圣十字之 杖,4,20,,1500,120,,1,0,0x00008100,7,2,34,4,70,1,10,{ bonus bMatk,210; bonus bAtkEle,Ele_Holy; bonus bDex,4; bonus2 bSubRace,RC_Demon,15; bonus2 bSubRace,RC_Undead,15; if (isequipped(2677) || isequipped(2711)) { bonus bMatkRate,10; bonus bDex,2; bonus2 bSubRace,RC_Demon,10; bonus2 bSubRace,RC_Undead,10; }; },{},{}
+2002,Krieger_Twohand_Staff1,荣光长杖,4,20,,0,70,,1,0,0x00818314,7,2,34,4,80,1,10,{ bonus bMatk,210+getrefine(); bonus2 bMagicAddRace,RC_DemiHuman,15; bonus2 bIgnoreMdefRate,RC_DemiHuman,25; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus bMatkRate,5; bonus2 bMagicAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-5)*2; bonus2 bIgnoreMdefRate,RC_DemiHuman,((getrefine()>14?14:getrefine())-5)*2; } if(getrefine() > 8) { bonus5 bAutoSpellOnSkill,"WZ_STORMGUST","MG_SAFETYWALL",10,200,1; bonus5 bAutoSpellOnSkill,"WZ_METEOR","MG_SAFETYWALL",10,200,1; bonus5 bAutoSpellOnSkill,"WZ_VERMILION","MG_SAFETYWALL",10,200,1; } },{},{}
+2003,Destruction_Rod_M,Staff of Destruction,4,20,,2500,130,,1,1,0x00000200,2,2,34,4,80,1,10,{ bonus bMatk,280; bonus bMatkRate,getrefine()/2; bonus bInt,3; bonus bAgi,10; bonus bUseSPrate,(getrefine()*2); bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",5,(getrefine()*20); bonus2 bCastrate,"HW_MAGICPOWER",-50; },{},{}
+2004,Kronos,克罗诺斯之杖,4,20,,1000,30,,1,0,0x00010204,2,2,34,4,50,1,10,{ bonus bMatk,240; bonus bInt,3+(getrefine()/2); bonus bMaxHP,300+(50*getrefine()/2); autobonus "{ bonus bMatkRate,12; bonus bUseSPRate,20; }",1,5000,BF_MAGIC,"{ specialeffect2 EF_ENHANCE; }"; },{},{}
+2005,Dea_Staff,黛雅之杖,4,20,,1000,30,,1,1,0x00008110,2,2,34,3,50,1,10,{ bonus bMatk,220; bonus bAtkEle,Ele_Holy; bonus bMatkRate,getrefine()/2; bonus bInt,6; bonus bVit,2; autobonus3 "{ end; }",20,1000,"AL_HEAL","{ specialeffect2 EF_MAGICALATTHIT; heal 0,200; }"; },{},{}
+2006,G_Staff_Of_Light,光护之杖,4,20,,1900,80,,1,0,0x00010204,7,2,34,4,60,1,10,{ bonus bMatk,150; bonus bInt,6; bonus bMaxSP,150; },{},{}
+2007,Golden_Rod_Staff,黄金领主权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Wind; bonus bInt,3; bonus2 bSkillAtk,"WZ_JUPITEL",12; },{},{}
+2008,Aqua_Staff,水蓝权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Water; bonus bInt,3; bonus2 bSkillAtk,"MG_COLDBOLT",10; bonus2 bSkillAtk,"MG_FROSTDIVER",10; },{},{}
+2009,Crimson_Staff,深红权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Fire; bonus bInt,3; bonus2 bSkillAtk,"MG_FIREBOLT",10; bonus2 bSkillAtk,"MG_FIREBALL",10; },{},{}
+2010,Forest_Staff,森林权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Earth; bonus bInt,3; bonus2 bSkillAtk,"WZ_EARTHSPIKE",10; bonus2 bSkillAtk,"WZ_HEAVENDRIVE",10; },{},{}
 2015,Upg_Staff,强化智慧魔杖,4,20,,1000,50,,1,1,0x00818314,7,2,34,3,1,1,10,{ bonus bMatk,70+(30*(BaseJob==Job_Wizard))+(20*(BaseJob==Job_Sage))+(10*getrefine()); bonus bHealPower,getrefine(); if(BaseLevel >= 70) { bonus bMatk,5*((BaseLevel-69)/10); } },{},{}
 // Shields
 //===================================================================
@@ -5369,7 +5369,7 @@
 13304,Huuma_Calm_Mind,风魔飞镖:启明星,4,20,,1550,112,,1,2,0x02100000,7,2,34,3,70,1,22,{ bonus2 bSkillAtk,"NJ_HUUMA",30; bonus bNoCastCancel,0; },{},{}
 13305,BF_Huuma_Shuriken1,角斗士的风魔手里剑,4,0,,0,55,,1,0,0x02100000,7,2,34,3,80,1,22,{ bonus bStr,2; bonus bDex,1; bonus2 bAddRace,RC_DemiHuman,95; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; },{},{}
 13306,BF_Huuma_Shuriken2,角斗士的真风魔手里剑,4,0,,0,55,,1,0,0x02100000,7,2,34,3,80,1,22,{ bonus bStr,2; bonus bDex,1; bonus2 bAddRace,RC_DemiHuman,95; autobonus "{ bonus2 bSkillAtk,\"NJ_HUUMA\",100; bonus2 bSkillAtk,\"NJ_ISSEN\",100; }",50,10000,BF_WEAPON,"{specialeffect2 EF_POTION_BERSERK; }"; bonus bUnbreakableWeapon,0; },{},{}
-13307,Krieger_Huuma_Shuriken1,荣光袖里剑,4,0,,0,55,,1,0,0x02100000,7,2,34,4,80,1,22,{ bonus2 bAddRace,RC_DemiHuman,95; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bMatk,90; autobonus "{ bonus2 bSkillAtk,\"NJ_HUUMA\",10; bonus2 bSkillAtk,\"NJ_ISSEN\",10; }",50,10000; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-3)*((getrefine()>14?14:getrefine())-3); bonus2 bIgnoreDefRate,RC_DemiHuman,5; } if(getrefine() > 8) { bonus5 bAutoSpellOnSkill,"NJ_ISSEN","AL_HEAL",10,1000,1; bonus4 bAutoSpellOnSkill,"NJ_HUUMA","NPC_CRITICALWOUND",2,200; } },{},{}
+13307,Krieger_Huuma_Shuriken1,荣光袖里剑,4,0,,0,55,,1,0,0x02100000,7,2,34,4,80,1,22,{ bonus bMatk,90; bonus2 bAddRace,RC_DemiHuman,95; bonus2 bIgnoreDefRate,RC_DemiHuman,20; autobonus "{ bonus2 bSkillAtk,\"NJ_HUUMA\",10; bonus2 bSkillAtk,\"NJ_ISSEN\",10; }",50,10000; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-3)*((getrefine()>14?14:getrefine())-3); bonus2 bIgnoreDefRate,RC_DemiHuman,5; } if(getrefine() > 8) { bonus5 bAutoSpellOnSkill,"NJ_ISSEN","AL_HEAL",10,1000,1; bonus4 bAutoSpellOnSkill,"NJ_HUUMA","NPC_CRITICALWOUND",2,200; } },{},{}
 //13308,Huuma_Blaze_I
 //13309,Huuma_Giant_Wheel_C
 13311,浅付荐府八_康,风魔手里剑 影,4,20,,1500,170,,1,1,0x02100000,7,2,34,3,99,1,22,{ bonus bStr,3; },{},{}
@@ -5390,14 +5390,15 @@
 13408,Fire_Brand_C,具有火之力的剑,4,,,0,120,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus bAtkEle,Ele_Fire; bonus bInt,2; skill "MG_FIREBOLT",5; bonus3 bAutoSpell,"MG_FIREBOLT",5,100; },{},{}
 13409,Immaterial_Sword_C,Refined Immaterial Sword,4,,,0,160,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus bAtkEle,Ele_Ghost; bonus2 bSPVanishRate,45,30; bonus bSPDrainValue,-1; bonus bUnbreakableWeapon,0; },{},{}
 13410,BF_Sword1,角斗士的佩剑,4,0,,0,115,,1,0,0x000654E3,7,2,2,3,80,1,2,{ bonus bStr,1; bonus bDex,1; bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; },{},{}
-13411,BF_Sword2,角斗士的长剑,4,0,,0,115,,1,0,0x000654E3,7,2,2,3,80,1,2,{ bonus bStr,1; bonus bDex,1; bonus2 bAddRace,RC_DemiHuman,75; bonus bMatk,74; bonus bUnbreakableWeapon,0; },{},{}
+13411,BF_Sword2,角斗士的长剑,4,0,,0,115,,1,0,0x000654E3,7,2,2,3,80,1,2,{ bonus bMatk,74; bonus bStr,1; bonus bDex,1; bonus2 bAddRace,RC_DemiHuman,75; bonus bUnbreakableWeapon,0; },{},{}
 13412,Twin_Edge_B,纳户特基格的寒冰剑,4,0,,1500,150,,1,3,0x000654E2,2,2,2,4,75,1,2,{ bonus bAtkEle,Ele_Water; skill "MG_FROSTDIVER",5; autobonus "{ bonus bIgnoreDefRace,RC_NonBoss; }",50,5000; },{},{}
 13413,Twin_Edge_R,纳户特基格的火焰剑,4,0,,1500,160,,1,3,0x000654E2,2,2,2,4,75,1,2,{ bonus bAtkEle,Ele_Fire; skill "WZ_METEOR",3; autobonus "{ bonus bIgnoreDefRace,RC_NonBoss; }",50,5000; },{},{}
-13414,Elemental_Sword,元素之剑,4,20,,1200,105,,1,3,0x000654E2,2,2,2,3,70,1,2,{ bonus bStr,2; bonus bInt,4; bonus bDex,1; bonus bMatkRate,5; bonus2 bAddEle,Ele_Neutral,10; bonus3 bAutoSpell,"MG_COLDBOLT",3,50; bonus4 bAutoSpellOnSkill,"MG_COLDBOLT","MG_FIREBOLT",3,1000; bonus4 bAutoSpellOnSkill,"MG_COLDBOLT","MG_LIGHTNINGBOLT",3,1000; bonus4 bAutoSpellOnSkill,"MG_COLDBOLT","WZ_EARTHSPIKE",3,1000; },{},{}
+13414,Elemental_Sword,元素之剑,4,20,,1200,105,,1,3,0x000654E2,2,2,2,3,70,1,2,{ bonus bMatk,95; bonus bStr,2; bonus bInt,4; bonus bDex,1; bonus2 bAddEle,Ele_Neutral,10; bonus3 bAutoSpell,"MG_COLDBOLT",3,50; bonus4 bAutoSpellOnSkill,"MG_COLDBOLT","MG_FIREBOLT",3,1000; bonus4 bAutoSpellOnSkill,"MG_COLDBOLT","MG_LIGHTNINGBOLT",3,1000; bonus4 bAutoSpellOnSkill,"MG_COLDBOLT","WZ_EARTHSPIKE",3,1000; },{},{}
 13415,N_Falchion,新手弯刀,4,1,,0,59,,1,3,0x000654E3,7,2,2,1,1,0,2,{},{},{}
 13416,Krieger_Onehand_Sword1,荣光之刃,4,0,,0,130,,1,0,0x000654E3,7,2,2,4,80,1,2,{ bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,((getrefine()>14?14:getrefine())-4)*((getrefine()>14?14:getrefine())-4); bonus2 bIgnoreDefRate,RC_DemiHuman,5; } if(getrefine() > 6) bonus bAspdRate,5; if(getrefine() > 8) { bonus bAspdRate,5; bonus4 bAutoSpellOnSkill,"SM_BASH","NPC_CRITICALWOUND",2,200; } },{},{}
-13417,Krieger_Onehand_Sword2,荣光细剑,4,0,,0,130,,1,0,0x000654E3,7,2,2,4,80,1,2,{ bonus bInt,getrefine()-5; bonus bMatk,80; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus bUseSPrate,-10; if(getrefine() > 8) bonus bInt,5; },{},{}
-13418,Krieger_Onehand_Sword3,荣光复仇者,4,0,,0,130,,1,0,0x000444A2,7,2,2,4,80,1,2,{ bonus bInt,getrefine()-5; bonus bMatk,80; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus bUseSPrate,-10; if(getrefine() > 8) bonus4 bAutoSpellOnSkill,"PA_PRESSURE","PR_LEXDIVINA",1,1000; if(getrefine() > 9) bonus bInt,5; },{},{}//13419,Holy_Saber
+13417,Krieger_Onehand_Sword2,荣光细剑,4,0,,0,130,,1,0,0x000654E3,7,2,2,4,80,1,2,{ bonus bMatk,80; bonus bInt,getrefine()-5; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus bUseSPrate,-10; if(getrefine() > 8) bonus bInt,5; },{},{}
+13418,Krieger_Onehand_Sword3,荣光复仇者,4,0,,0,130,,1,0,0x000444A2,7,2,2,4,80,1,2,{ bonus bMatk,80; bonus bInt,getrefine()-5; bonus bUnbreakableWeapon,0; if(getrefine() > 5) bonus bUseSPrate,-10; if(getrefine() > 8) bonus4 bAutoSpellOnSkill,"PA_PRESSURE","PR_LEXDIVINA",1,1000; if(getrefine() > 9) bonus bInt,5; },{},{}
+//13419,Holy_Saber
 //13420,Honglyun's_Sword
 13421,Ruber,火红单手剑,4,20,,1500,170,,1,1,0x000444A2,2,2,2,3,50,1,2,{ autobonus "{ bonus2 bSkillAtk,\"KN_BOWLINGBASH\",20; bonus2 bSkillAtk,\"SM_BASH\",20; }",5,15000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }"; },{},{}
 //13422,Flamberge_C
@@ -6371,7 +6372,7 @@
 16003,Carga_Mace,卡尔加权杖,4,20,,1500,175,,1,2,0x0004C580,8,2,2,3,100,1,8,{},{},{}
 16004,P_Mace1,P.权杖Ⅰ,4,0,,0,142,,1,0,0x0004C5B2,7,2,2,2,26,0,8,{},{},{}
 16005,P_Mace2,P.权杖Ⅱ,4,0,,0,163,,1,0,0x0004C5B2,7,2,2,2,40,0,8,{},{},{}
-16010,Red_Ether_Bag,红色 乙醚 包包,4,20,,1000,15,,1,1,0x00040000,8,2,2,3,102,1,8,{ bonus bMatk,100; bonus2 bSkillAtk,"GN_CRAZYWEED",30; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",30; if(getrefine() > 5) { bonus2 bSkillAtk,"GN_CRAZYWEED",2*(getrefine()-5); bonus2 bSkillAtk,"GN_DEMONIC_FIRE",2*(getrefine()-5); } },{},{}
+16010,Red_Ether_Bag,红色 乙醚 包包,4,20,,1000,15,,1,1,0x00040000,8,2,2,3,102,1,8,{ bonus bMatk,100; bonus2 bSkillAtk,"GN_CRAZYWEED",20; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",20; if(getrefine() > 5) { bonus2 bSkillAtk,"GN_CRAZYWEED",2*(getrefine()-5); bonus2 bSkillAtk,"GN_DEMONIC_FIRE",2*(getrefine()-5); } },{},{}
 16019,Upg_Mace,强化铁锤,4,20,,800,80,,1,1,0x0004C5B3,7,2,2,3,1,1,8,{ bonus bAtk,10*getrefine(); bonus bHealPower,getrefine(); if(BaseLevel >= 70) { bonus bAtk,5*((BaseLevel-69)/10); } },{},{}
 //
 16134,King_Frog_Hat_Box,青蛙王子头饰箱子,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5528,1; },{},{}
