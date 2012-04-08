@@ -1,21 +1,25 @@
-//===== eAthena Script =======================================
+//===== eAthena Script ======================================= 
 //= Sealed Shrine
-//===== By: ==================================================
+//===== By: ================================================== 
 //= L0ne_W0lf
-//===== Current Version: =====================================
-//= 1.5
-//===== Compatible With: =====================================
+//===== Current Version: ===================================== 
+//= 1.7
+//===== Compatible With: ===================================== 
 //= eAthena SVN
-//===== Description: =========================================
+//===== Description: ========================================= 
 //= [Aegis Conversion]
 //= Seal away the Great Demon Baphomet.
-//===== Additional Comments: =================================
+//===== Additional Comments: ================================= 
 //= 1.0 First version. [L0ne_W0lf]
 //= 1.1 Added setquest for instance cooldown. [L0ne_W0lf]
 //= 1.2 Fixed Torch#12 not being disabled. (bugreport:4044) [L0ne_w0lf]
 //= 1.3 Fixed cutins not being removed. (bugreport:4117) [L0ne_w0lf]
 //= 1.4 Fixed some typos. [Gepard]
 //= 1.5 Fixed not being able to enter dungeon for the first two hours.
+//= 1.6 Players should be able to re-take the quest after 12 hours now.
+//=     Changed quest 3046 to 3040. This is the correct quest id.
+//=     Removed checking quest 3045, unofficial check.
+//= 1.7 Fixed a checkquest condition never setting quest. [L0ne_W0lf]
 //===== 翻译: =================================
 //= 翻译 Blue狮子 QQ: 88369337
 //= 校对 5511 (队长检查，和6001数量检查)
@@ -23,7 +27,7 @@
 //============================================================
 
 // Sealed Catacomb Entrance
-monk_test,309,146,3	script	修道士 帕特里克	412,{
+monk_test,309,146,3	script	修道士 帕特里克#edq	412,{
 	if (checkquest(3040)>=0) erasequest 3040;
 	cutin "ins_cata_pri_n",2;
 	mes "[修道士 帕特里克]";
@@ -98,15 +102,15 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 			copyarray .@partymembername$[0],$@partymembername$[0],.@partymembercount;
 
 			mes "[Friar Patrick]";
-			mes "Do you mean you'll go to the grave and reseal Baphomet?";
+			mes "Do you mean you'll go to the shrine and reseal Baphomet?";
 			next;
 
 			// 12 hour cooldown
-			set .@ins_bapho_check,checkquest(3046,PLAYTIME);
+			set .@ins_bapho_check,checkquest(3040,PLAYTIME);
 			// Two hour play limit
-			set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
+			//set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
 
-			if (.@ins_bapho_check < 2) {
+			//if (.@ins_bapho_check < 2) {
 				if (.@ins_bapho_check == -1) {
 					if ((getpartyleader(.@party_id,2) == getcharid(0)) && (.@partymembercount > 1)) {
 						set .@instance, instance_create("Sealed Catacombs", .@party_id);
@@ -128,7 +132,7 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 							}
 
 							instance_attach(.@instance);
-							instance_set_timeout 14400,300,.@instance;
+							instance_set_timeout 7200,300,.@instance;
 							instance_init(.@instance);
 
 							// First Floor
@@ -206,13 +210,13 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 					mes "[修道士 帕特里克]";
 					mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
 					next;
-					if (checkquest(3046)) erasequest 3046;
+					if (checkquest(3040)) erasequest 3040;
 					if (checkquest(3041)) erasequest 3041;
 					if (checkquest(3045)) erasequest 3045;
 					mes "[修道士 帕特里克]";
 					mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
 				}
-			}
+			//}
 		}
 		else {
 			mes "[修道士 帕特里克]";
@@ -256,7 +260,6 @@ monk_test,309,146,3	script	修道士 帕特里克	412,{
 }
 
 monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
-	if (checkquest(3040)>=0) erasequest 3040;
 	if (countitem(6002) > 0)
 		delitem 6002,countitem(6002); //Token_Of_Apostle门徒的标示
 	mes "这个石墓穴上有一个巨大、邪恶山羊角的雕像,不详的感觉从中散发出来.";
@@ -273,16 +276,16 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 		instance_attach(.@instance);
 
 		// 12 hour cooldown
-		set .@ins_bapho_check,checkquest(3046,PLAYTIME);
+		set .@ins_bapho_check,checkquest(3040,PLAYTIME);
 		// Two hour play limit
-		set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
+		//set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
 
-		if ((.@ins_bapho_check == -1) || ((.@ins_bapho_check2 >= 0) && (.@ins_bapho_check2 < 2))) {
+		if (.@ins_bapho_check == -1) {
 			if (has_instance("1@cata") == "") {
 				mes "摸起来很冰冷,但是并没有任何反应.";
 			}
 			//else if (ret == 2) {
-			//	mes "It's cold to the touch. But, there is no response.";
+			//	mes "It's cold to the touch. It doesn't respond.";
 			//	close;
 			//}
 			else if ((has_instance("1@cata") != "") && (.@partymembercount < 2)) {
@@ -293,8 +296,7 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 			//else if (ret == 0) {
 			else {
 				mapannounce "monk_test","队伍 [" + getpartyname(.@party_id) + "] 的成员 [" + strcharinfo(0) + "] 进入了封印神殿",bc_map,"0x00ff99";
-				setquest 3046;
-				setquest 3045;
+				if (checkquest(3040) == -1) setquest 3040;
 				warp "1@cata",100,224;
 			}
 		}
@@ -309,7 +311,7 @@ monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
 			mes "[修道士 帕特里克]";
 			mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
 			specialeffect2 EF_HOLYHIT;
-			if (checkquest(3046)) erasequest 3046;
+			if (checkquest(3040)) erasequest 3040;
 			if (checkquest(3041)) erasequest 3041;
 			if (checkquest(3045)) erasequest 3045;
 			next;
@@ -469,7 +471,7 @@ prt_monk,261,91,3	script	锈蚀的黑手#edq	826,{
 				mes "[锈蚀的黑手]";
 				mes "在你得到之前你是无法想象 ^4d4dff巨大山羊头盔^000000 的样子的! 想得到的话快去找材料来.";
 				//recall_completequest 3043
-				setquest 3043;
+				changequest 3042,3043;
 				close;
 			case 2:
 				mes "[锈蚀的黑手]";
@@ -837,7 +839,6 @@ OnMyMobDead:
 	}
 	end;
 
-//OnTouch2:
 OnTouch:
 	if ('ins_baphomet == 0) {
 		mes "'咳... 咳...'";
@@ -1065,7 +1066,7 @@ OnTouch:
 
 //===================== TO 2F Warp ========================
 1@cata,281,12,0	script	ins_bapho_to_2f	45,1,1,{
-//OnTouch2:
+
 OnTouch:
 	if (countitem(6002) > 0) {
 		delitem 6002,countitem(6002); //Token_Of_Apostle
@@ -2137,8 +2138,8 @@ OnTouch:
 2@cata,80,63,4	script	远古英雄的灵魂#2F	411,{
 	cutin "ins_cata_champ_s",2;
 	if (checkquest(3041)) erasequest 3041;
-	if (checkquest(3046)) erasequest 3046;
-	setquest 3046;
+	if (checkquest(3040)) erasequest 3040;
+	setquest 3040;
 	mes "[远古英雄的灵魂]";
 	mes "做得不错, 我的孩子们. 你满足了我和我的同伴们长久以来都无法达成的期望.";
 	next;
@@ -2224,7 +2225,7 @@ OnDisable:
 OnMyMobDead:
 	if (mobcount("2@cata",instance_npcname("control_baphomet", instance_id())+"::OnMyMobDead") < 1) {
 		set 'ins_baphomet,7;
-		setquest 3046;
+		setquest 3040;
 		erasequest 3041;
 		instance_announce 0, "魔王巴风特 : 不!不不不!! 这怎么可能??? 我怎么又被这些微不足道的人类侮辱了呢??? 你们绝不可能.... 你们绝不可能再次封印我!!!",bc_map,"0xdb7093";
 		enablenpc instance_npcname("远古英雄的灵魂#2F", instance_id());
