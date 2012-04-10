@@ -13,31 +13,31 @@
 //=========================================================
 常规状态：
 -----------------------------------------------------------
-sc_start SC_STONE,n,v;			石化n秒，v无意义
-sc_start SC_FREEZE,n,v;			冰冻n秒，v无意义
-sc_start SC_STUN,n,v;			晕眩n秒，v无意义
-sc_start SC_SLEEP,n,v;			睡眠n秒，v无意义
-sc_start SC_POISON,n,v;			中毒n秒，v无意义
-sc_start SC_CURSE,n,v;			诅咒n秒，v无意义
-sc_start SC_SILENCE,n,v;		沉默n秒，v无意义
-sc_start SC_CONFUSION,n,v;		混乱n秒，v无意义
-sc_start SC_BLIND,n,v;			黑暗n秒，v无意义
-sc_start SC_BLEEDING,n,v;		出血n秒，v无意义
-sc_start SC_DPOISON,n,v;		致命涂毒n秒，v无意义(吃毒药的那种)
+sc_start SC_STONE,n,v;			石化n毫秒，v无意义
+sc_start SC_FREEZE,n,v;			冰冻n毫秒，v无意义
+sc_start SC_STUN,n,v;			晕眩n毫秒，v无意义
+sc_start SC_SLEEP,n,v;			睡眠n毫秒，v无意义
+sc_start SC_POISON,n,v;			中毒n毫秒，v无意义
+sc_start SC_CURSE,n,v;			诅咒n毫秒，v无意义
+sc_start SC_SILENCE,n,v;		沉默n毫秒，v无意义
+sc_start SC_CONFUSION,n,v;		混乱n毫秒，v无意义
+sc_start SC_BLIND,n,v;			黑暗n毫秒，v无意义
+sc_start SC_BLEEDING,n,v;		出血n毫秒，v无意义
+sc_start SC_DPOISON,n,v;		致命涂毒n毫秒，v无意义(吃毒药的那种)
 //=========================================================
 
 //=========================================================
 技能状态：
 -----------------------------------------------------------
-sc_start SC_PROVOKE,n,v;		挑衅n秒，v为技能等级
+sc_start SC_PROVOKE,n,v;		挑衅n毫秒，v为技能等级
 //=========================================================
 
 //=========================================================
 其他状态：
 -----------------------------------------------------------
-sc_start4 SC_ARMOR_ELEMENT,n,v,w,x,y;	n秒内，火属性+v%伤害，地属性+w%伤害，风属性+x%伤害，水属性+y%伤害，负值有效
-sc_start SC_BONUSPOWER,n,x;		n秒内，提升所有装备、卡片bonus效果x%
-sc_start4 SC_AURA,n,x,i,t,b;		n秒内，影响周围x格的玩家，使其拥有id为i的道具的效果t毫秒。
+sc_start4 SC_ARMOR_ELEMENT,n,v,w,x,y;	n毫秒内，火属性+v%伤害，地属性+w%伤害，风属性+x%伤害，水属性+y%伤害，负值有效
+sc_start SC_BONUSPOWER,n,x;		n毫秒内，提升所有装备、卡片bonus效果x%
+sc_start4 SC_AURA,n,x,i,t,b;		n毫秒内，影响周围x格的玩家，使其拥有id为i的道具的效果t毫秒。
 					b為0表示不影響自己，1表示影響自己
-sc_start4 SC_STOMACHACHE,n,a,b,c,0;	n秒内，所有属性-a，移动速度减少b，每10秒消耗cSP并强制坐下。
+sc_start4 SC_STOMACHACHE,n,a,b,c,0;	n毫秒内，所有属性-a，移动速度减少b，每10秒消耗cSP并强制坐下。
 //=========================================================
