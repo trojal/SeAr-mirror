@@ -893,7 +893,7 @@
 2420,9,6,4,0,0x2,2:3:4:5:6,5,1,yes,0,0,0,misc,0,	WM_VOICEOFSIREN,塞壬的歌声
 2421,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_DEADHILLHERE,回归之歌
 2422,9,6,2,0,0x2,5:6:7:9:10,5,1,yes,0,0,0,misc,0,	WM_LULLABY_DEEPSLEEP,安息摇篮曲
-2423,0,6,4,0,0x3,2:3:4:5:6,5,1,yes,0,0,0,misc,0,	WM_SIRCLEOFNATURE,循环自然之声
+2423,0,6,4,0,0x3,3:4:5:6:7,5,1,yes,0,0,0,misc,0,	WM_SIRCLEOFNATURE,循环自然之声
 2424,0,6,4,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_RANDOMIZESPELL,即兴演唱
 2425,9,6,16,0,0x1,0,5,1,yes,0,0,0,misc,0,	WM_GLOOMYDAY,忧郁的一天
 2426,9,6,2,0,0,0,5,1,yes,0,0x40,0,weapon,0,	WM_GREAT_ECHO,雄壮回声
