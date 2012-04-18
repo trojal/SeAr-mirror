@@ -901,10 +901,10 @@
 2428,0,6,4,0,0x3,5:6:7:8:9,5,1,yes,0,0x40,0,misc,0,	WM_DANCE_WITH_WUG,与狼共舞
 2429,9,6,1,0,0x1,0,5,1,yes,0,0x40,0,misc,0,	WM_SOUND_OF_DESTRUCTION,毁灭之歌
 2430,0,6,4,0,0x3,3:4:5:6:7,5,1,yes,0,0x40,0,misc,0,	WM_SATURDAY_NIGHT_FEVER,狂热的周末
-2431,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_LERADS_DEW,雷拉德的晨露
-2432,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,夕阳之歌
-2433,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_BEYOND_OF_WARCRY,远古呐喊
-2434,0,6,4,0,0x3,-1,5,1,yes,0,0x40,0,misc,0,	WM_UNLIMITED_HUMMING_VOICE,无限吟唱
+2431,0,6,4,0,0x3,5:5:6:6:7,5,1,yes,0,0x40,0,misc,0,	WM_LERADS_DEW,雷拉德的晨露
+2432,0,6,4,0,0x3,5:5:6:6:7,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,夕阳之歌
+2433,0,6,4,0,0x3,5:5:6:6:7,5,1,yes,0,0x40,0,misc,0,	WM_BEYOND_OF_WARCRY,远古呐喊
+2434,0,6,4,0,0x3,5:5:6:6:7,5,1,yes,0,0x40,0,misc,0,	WM_UNLIMITED_HUMMING_VOICE,无限吟唱
 // 元素使
 2443,0,6,4,3,0,0,5,0,yes,0,0,0,magic,0,		SO_FIREWALK,火焰路径
 2444,0,6,4,4,0,0,5,0,yes,0,0,0,magic,0,		SO_ELECTRICWALK,电流路径
