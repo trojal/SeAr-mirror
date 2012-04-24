@@ -172,7 +172,7 @@ bonus2 bAddItemHealRate,n,x;		使用 n 类型的物品时，恢复量 +x% (也可以直接使用Ite
 bonus bClassChange,n;			n/100% 几率是魔物变形
 bonus bBreakWeaponRate,n;		n% 几率破坏对方武器
 bonus bBreakArmorRate,n;		n% 几率破坏对方盔甲
-bonus2 bRandomAttackIncrease,n,r;	r% 几率增加物理攻击伤害 n%
+bonus2 bRandomAttackIncrease,n,r;	r% 几率增加物理攻击伤害 n
 
 //=========================================================
 //=伤害修正
