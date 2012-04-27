@@ -287,6 +287,8 @@
 					set .@joblv_req,50;
 				else if( (BaseJob == Job_SuperNovice) )
 					set .@joblv_req,99;
+				else if( (Class == Job_Ninja) )
+					set .@joblv_req,70;
 				else if( (Class == Job_Taekwon) )
 					set .@joblv_req,40;
 
@@ -329,6 +331,7 @@
 								case 4: jobchange set(.@i,select("牧师","武僧"))==1?(.@i+7):(.@i+13),Upper; break;
 								case 5: jobchange set(.@i,select("铁匠","炼金术师"))==1?(.@i+9):(.@i+16),Upper; break;
 								case 6: jobchange set(.@i,select("刺客","流氓"))==1?(.@i+11):(.@i+15),Upper; break;
+								case 25: jobchange set(.@i,4210+select((Sex?"影狼":""),(Sex?"":"胧"))),Upper; break;
 								case 4046: jobchange Class+select("拳圣","","灵媒"),Upper; break;
 								default: mes "[SeA服务员]"; mes "当前职业不能再转职了!"; break;
 							}
