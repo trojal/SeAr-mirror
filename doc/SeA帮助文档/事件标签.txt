@@ -41,6 +41,7 @@ OnTouch_		进入范围NPC的有效范围内时执行的事件，
 OnPCDieEvent		玩家死亡时，运行标签下的脚本。如果杀死你的是玩家，可以通过killerrid变量获得其aid，如果是魔物，可以获得gid， 如果是自然死亡，则killerrid值为0
 OnPCKillEvent		玩家杀死玩家时，运行标签下的脚本。可以通过killedrid变量获得被杀死玩家的aid
 OnNPCKillEvent		玩家杀死魔物时，运行标签下的脚本。该脚本仅对本身没有OnMobDead事件的魔物触发。可以通过killedrid变量获得杀死魔物的id
+			赋予关联者变量@killed_x，表示魔物x坐标，@killed_y，表示魔物y坐标
 OnPCLoginEvent		玩家登陆时，运行标签下的脚本。
 OnPCLogoutEvent		玩家登出时，运行标签下的脚本。
 OnPCLoadMapEvent	玩家登陆地图时，运行标签下的脚本，默认情况下只有loadevent标签的地图可以触发该标签下的脚本。
@@ -63,7 +64,9 @@ OnPCPetLvUpEvent	玩家宠物升级时，运行标签下的脚本。
 OnPCHomLvUpEvent	玩家生命体升级时，运行标签下的脚本。
 OnPCSCStartEvent	玩家获得某种状态时，运行标签下的脚本。意在某些状态共存限制。赋予关联者变量@startedsc，表示状态编号
 OnPCSCEndEvent		玩家解除某种状态时，运行标签下的脚本。意在支持无限状态。赋予关联者变量@endedsc，表示状态编号
-OnPCUseSkillEvent	玩家使用某种技能时，运行标签下的脚本。赋予关联者变量@useskill_id，表示技能id，@useskill_lv，表示技能等級
+OnPCUseSkillEvent	玩家使用某种技能时，运行标签下的脚本。
+			赋予关联者变量@useskill_id，表示技能id，@useskill_lv，表示技能等級
+			赋予关联者变量@useskill_x，表示技能x坐标，@useskill_y，表示技能y坐标，表示技能id，@useskill_target，表示对象AID或GID
 OnPCUseItemEvent	玩家使用某种物品时，运行标签下的脚本。赋予关联者变量@useitem_pos，表示在物品栏中的位置编号
 OnPCEquipEvent		玩家装备某件道具时，运行标签下的脚本。赋予关联者变量@equip_pos，表示在物品栏中的位置编号
 OnPCUnequipEvent	玩家卸除某件道具时，运行标签下的脚本。赋予关联者变量@unequip_pos，表示在物品栏中的位置编号
