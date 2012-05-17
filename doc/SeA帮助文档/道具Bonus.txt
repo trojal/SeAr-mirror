@@ -215,8 +215,11 @@ bonus3 bSubEle,n,x,t;			ÔÚ t Ìõ¼þÏÂ ¶ÔnÊôÐÔ ¼õÉÙx% ÎïÀíÉËº¦ (tÖµ¼û±¸×¢10)(nÖµ¼û±
 bonus bHealPower,n;			Ôö¼Ó n% ¼¼ÄÜÖÎÓúÐ§¹û
 bonus bHealPower2,n;			Ôö¼Ó n% ±»¼¼ÄÜÖÎÓúÐ§¹û
 bonus2 bSkillAtk,n,x;			Ôö¼Ó¼¼ÄÜ n ÉËº¦ x% (Ö§³Ö¼¼ÄÜÃû)
+bonus2 bSkillDef,n,x;			¼õÉÙ¼¼ÄÜ n ÉËº¦ x% (Ö§³Ö¼¼ÄÜÃû)
 bonus2 bSkillHeal,n,x;			Ê¹ÓÃÊ±£¬Ôö¼ÓÖÎÓú¼¼ÄÜ n Ð§¹û x% (Ö§³Ö¼¼ÄÜÃû)
 bonus2 bSkillHeal2,n,x;			±»Ê¹ÓÃÊ±£¬Ôö¼ÓÖÎÓú¼¼ÄÜ n Ð§¹û x% (Ö§³Ö¼¼ÄÜÃû)
+bonus3 bSkillAtkRace,n,x,y;		¶ÔÖÖ×åÎªxµÄ¶ÔÏóÔÚÊ¹ÓÃn¼¼ÄÜÊ±ÉËº¦Ôö¼Óy%¡£(xÖµ¼û±¸×¢1)(Ö§³Ö¼¼ÄÜÃû)
+bonus3 bSkillAtkEle,n,x,y;		¶ÔÊôÐÔÎªxµÄ¶ÔÏóÔÚÊ¹ÓÃn¼¼ÄÜÊ±ÉËº¦Ôö¼Óy%¡£(xÖµ¼û±¸×¢2)(Ö§³Ö¼¼ÄÜÃû)
 
 //=========================================================
 //=Ä§ÎïËÀÍö½±Àø

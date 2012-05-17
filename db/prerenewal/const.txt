@@ -514,6 +514,9 @@ bDelayValue	1912
 bUseSPValue	1913
 bNoSkill	1914
 bAddEleRace	1920
+bSkillAtkRace	1925
+bSkillAtkEle	1926
+bSkillDef	1927
 
 bRestartFullRecover	2000
 bNoCastCancel	2001
