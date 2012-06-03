@@ -82,8 +82,8 @@ bonus bMdefRate,n;			装备魔法防御 + n%
 bonus bMdef2Rate,n;			INT魔法防御 + n%
 bonus bIgnoreDefRace,n;			无视 n 种族物理防御 (n值见备注1)
 bonus bIgnoreDefEle,n;			无视 n 属性物理防御 (n值见备注2)
-bonus bIgnoreMDefRace;			无视 n 种族魔法防御 (n值见备注1)
-bonus bIgnoreMDefEle;			无视 n 属性魔法防御 (n值见备注2)
+bonus bIgnoreMDefRace,n;		无视 n 种族魔法防御 (n值见备注1)
+bonus bIgnoreMDefEle,n;			无视 n 属性魔法防御 (n值见备注2)
 bonus bIgnoreMdefRate,n;		无视对方 n% 魔法防御
 bonus bDefRatioAtkRace,n;		刺穿 n 种族物理防御 (n值见备注1)
 bonus bDefRatioAtkEle,n;		刺穿 n 属性物理防御 (n值见备注2)
