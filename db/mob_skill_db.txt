@@ -5789,3 +5789,5 @@
 2082,Piranha@MG_COLDBOLT,chase,14,3,500,1000,5000,yes,target,always,0,,,,,,,
 2082,Piranha@WZ_WATERBALL,attack,86,3,500,1000,5000,yes,target,always,0,,,,,,6,
 2082,Piranha@NPC_BLOODDRAIN,attack,199,1,500,0,5000,yes,target,always,0,,,,,,,
+
+2308,Shinobi@SM_BASH,attack,5,5,500,0,5000,yes,target,always,0,,,,,,,
