@@ -5043,12 +5043,12 @@
 12419,Manaplus,法力增加药水,3,10,,50,,,,,,,,,,,,,{},{},{}
 12420,Muramura_M,Muramura M,3,10,,50,,,,,,,,,,,,,{},{},{}
 12421,Falmons_F,Falmons F,3,10,,50,,,,,,,,,,,,,{},{},{}
-12422,HP_Increase_Potion_(Small),HP增加药水(小),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 1,0; itembonus 500000,"{ bonus bMaxHP,500+BaseLevel*4/3; }"; },{},{}
-12423,HP_Increase_Potion_(Medium),HP增加药水(中),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 2,0; itembonus 500000,"{ bonus bMaxHP,1500+BaseLevel*4/3; }"; },{},{}
-12424,HP_Increase_Potion_(Large),HP增加药水(大),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; itembonus 500000,"{ bonus bMaxHP,2500+BaseLevel*4/3; }"; },{},{}
-12425,SP_Increase_Potion_(Small),SP增加药水(小),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,2; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10-5; }"; },{},{}
-12426,SP_Increase_Potion_(Medium),SP增加药水(中),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,4; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10; }"; },{},{}
-12427,SP_Increase_Potion_(Large),SP增加药水(大),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,8; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10+5; }"; },{},{}
+12422,HP_Increase_Potion_(Small),HP增加药水(小),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 1,0; itembonus 500000,"{ bonus bMaxHP,500+BaseLevel*4/3; }",1; },{},{}
+12423,HP_Increase_Potion_(Medium),HP增加药水(中),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 2,0; itembonus 500000,"{ bonus bMaxHP,1500+BaseLevel*4/3; }",1; },{},{}
+12424,HP_Increase_Potion_(Large),HP增加药水(大),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,0; itembonus 500000,"{ bonus bMaxHP,2500+BaseLevel*4/3; }",1; },{},{}
+12425,SP_Increase_Potion_(Small),SP增加药水(小),2,10,,20,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,2; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10-5; }",2; },{},{}
+12426,SP_Increase_Potion_(Medium),SP增加药水(中),2,10,,40,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,4; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10; }",2; },{},{}
+12427,SP_Increase_Potion_(Large),SP增加药水(大),2,10,,80,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,8; itembonus 500000,"{ bonus bMaxSPrate,BaseLevel/10+5; }",2; },{},{}
 12428,Concentrated_White_Potion_Z,浓缩白色药水Z,2,10,,70,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bHPrecovRate,20; }"; },{},{}
 12429,Savage_Full_Roast,烤野猪,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SAVAGE_STEAK,300000,20; },{},{}
 12430,Cocktail_Warg_Blood,狼血鸡尾酒,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_COCKTAIL_WARG_BLOOD,300000,20; },{},{}

@@ -497,6 +497,7 @@ bSkillHeal2	1088
 bAddEffOnSkill	1089
 bHealPower	1090
 bHealPower2	1091
+bEleMagicAddRate	1092
 
 bFixDamage	1900
 bBonusDamage	1901
