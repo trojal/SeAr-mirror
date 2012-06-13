@@ -6405,6 +6405,61 @@ type：
 
 ---------------------------------------
 
+*instance_check_party <队伍ID>{,<数量>{,<最小>{,<最大>}}};
+
+检查玩家队伍是否符合副本要求。
+
+While the Party ID of the invoking character has to be set, the Values amount, min
+and max are optional parameters and doesn't need to be set. You will find below an
+little List for an explenation of what those values are for.
+
+值:
+队伍ID : 关联角色的队伍ID. [必要参数]
+数量 : 副本需求的队伍玩家数量. [可选]
+最小 : 加入副本的最小等级. [可选]
+最大 : 加入副本的最大等级. [可选]
+
+如果没有指定数量，则默认最少1人。
+如果没有指定最小等级，则默认等级1.
+如果没有指定最大等级，任何玩家都可以加入. Level setting in the configuration files of your Server.
+
+指令也检测玩家时候在线，如果队伍有2人，其中一人不在线，则另一人也不能进入副本。
+
+Also, here are some examples of how this Command will work inside a script:
+
+if(instance_check_party(getcharid(1),2,2,149)){
+	mes "Ok, your party is complete and meets the Memorial Dungeons requirement.",
+	mes	"Members have a Baselevel between 1 and 150 and there are at least 2 Players inside the Party.";
+	close;
+}else{
+	mes "Sorry, but it seems like your Party does not meet the Memorial Dungeon requirements.";
+	close;
+}
+
+You also can use set .@party_id,getcharid(1); for example to save the Players Party ID.
+
+if(instance_check_party(.@party_id,2,2,149)){
+	mes "Ok, your party is complete and meets the Memorial Dungeons requirement.",
+	mes	"Members have a Baselevel between 1 and 150 and there are at least 2 Players inside the Party.";
+	close;
+}else{
+	mes "Sorry, but it seems like your Party does not meet the Memorial Dungeon requirements.";
+	close;
+}
+
+And another way of checking could also be:
+
+if(!instance_check_party(getcharid(1),2,2,149)){
+	mes "Sorry, but it seems like your Party does not meet the Memorial Dungeon requirements.";
+	close;
+}else{
+	mes "Ok, your party is complete and meets the Memorial Dungeons requirement.",
+	mes	"Members have a Baselevel between 1 and 150 and there are at least 2 Players inside the Party.";
+	close;
+}
+
+---------------------------------------
+
 ========================
 |8.- Quest Log commands.|
 ========================
