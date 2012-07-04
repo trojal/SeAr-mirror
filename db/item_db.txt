@@ -1,7 +1,7 @@
 // Items Database
 //
 // Structure of Database:
-// ID,AegisName,Name,Type,Buy,Sell,Weight,ATK,DEF,Range,Slots,Job,Upper,Gender,Loc,wLV,eLV,Refineable,View,{ Script },{ OnEquip_Script },{ OnUnequip_Script }
+// ID,AegisName,Name,Type,Buy,Sell,Weight,ATK,DEF,Range,Slots,Job,Upper,Gender,Loc,wLV,eLV{:装备LV上限},Refineable,View,{ Script },{ OnEquip_Script },{ OnUnequip_Script }
 //
 // Healing Items
 //=============================================================
@@ -1433,6 +1433,28 @@
 2468,Aqua_Shoes,水蓝鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Water,15; },{},{}
 2469,Crimson_Shoes,深红鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Fire,15; },{},{}
 2470,Forest_Shoes,森林鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Earth,15; },{},{}
+2471,Mercy_Shoes,Mercy Shoes,5,20,,300,,12,,0,0x00000100,7,2,64,,100,1,0,{ bonus bMaxHP,500; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Formless,-10; bonus2 bSubRace,RC_Undead,-10; bonus2 bSubRace,RC_Brute,-10; bonus2 bSubRace,RC_Plant,-10; bonus2 bSubRace,RC_Insect,-10; bonus2 bSubRace,RC_Fish,-10; bonus2 bSubRace,RC_Demon,-10; bonus2 bSubRace,RC_Angel,-10; bonus2 bSubRace,RC_Dragon,-10; },{},{}
+2472,Judgement_Shoes,Judgement Shoes,5,20,,300,,12,,0,0x00000100,7,2,64,,100,1,0,{ bonus bMaxSP,150; /* bonus2 bSkillAtk,"AB_JUDEX",30; */ },{},{}
+2473,Para_Team_Boots4,Eden Team Boots IV,5,0,,0,,20,,0,0xFFFFFFFF,7,2,64,,60,0,0,{ bonus bAgi,1; bonus bVit,1; bonus bHPrecovRate,28; bonus bSPrecovRate,12; },{},{}
+//2474,
+2475,Urj_Greaves,Urj Greaves,5,20,,900,,32,,1,0x00000080,8,2,64,,100,1,0,{ bonus bMaxSP,40; if(getequiprefinerycnt(EQI_SHOES)>7) bonus bMaxHPRate,getequiprefinerycnt(EQI_SHOES)-7; },{},{}
+2476,Pertz_Greaves,Pertz Greaves,5,20,,900,,32,,1,0x00000080,8,2,64,,100,1,0,{ bonus bMaxSP,40; bonus bAgi,-7+(getequiprefinerycnt(EQI_SHOES)>8)?8:getequiprefinerycnt(EQI_SHOES); },{},{}
+2477,Sabath_Shoes,Sabath Shoes,5,20,,400,,18,,1,0x00001000,7,2,64,,100,1,0,{ bonus bMaxSP,30; bonus bLuk,3; },{},{}
+2478,Nabeu's_Shoes,Nabeu's Shoes,5,20,,400,,18,,1,0x00001000,7,2,64,,100,1,0,{ bonus bFlee,3; bonus bInt,2; },{},{}
+2479,White_Wing_Boots,White Wing Boots,5,20,,400,,18,,1,0x00000800,7,2,64,,100,1,0,{ bonus bAgi,2; },{},{}
+2480,Black_Wing_Boots,Black Wing Boots,5,20,,400,,18,,1,0x00000800,8,2,64,,100,1,0,{ bonus bInt,2; bonus bMaxSPRate,5; },{},{}
+//2481,
+//2482,
+2483,Siege_Greaves,Siege Greaves,5,0,,750,,30,,1,0x006444A2,7,2,64,,95,1,0,{ bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,2; },{},{}
+2484,Siege_Boots,Siege Boots,5,0,,500,,20,,1,0x036E5CEA,7,2,64,,95,1,0,{ bonus bMdef,5; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
+2485,Siege_Shoes,Siege Shoes,5,0,,350,,15,,1,0x00818315,7,2,64,,95,1,0,{ bonus bMdef,10; bonus2 bSubRace,RC_DemiHuman,1; },{},{}
+//2486,
+//2487,
+//2488,
+//2489,
+//2490,
+2491,Nightmare_Bangungot_Boots,Nightmare Bangungot Boots,5,20,,600,,10,,0,0xFFFFFFFF,7,2,64,,1,1,0,{ bonus bMdef,getrefine(); if(getrefine()>=14){ bonus bSpeedRate,25; } },{},{}
+2492,Bayani_Nightmare_Bangungot_Boots,Bayani Nightmare Bangungot Boots,5,20,,600,,10,,1,0xFFFFFFFF,7,2,64,,1,1,0,{ bonus bMdef,getrefine(); if(getrefine()>=12){ bonus bSpeedRate,25; } },{},{}
 // Garments
 //===================================================================
 2501,Hood,连帽披肩,5,1000,,200,,4,,0,0xFFFFFFFF,7,2,4,,0,1,0,{},{},{}
@@ -1502,6 +1524,15 @@
 2568,Loki's_Muffler,洛奇的披肩,5,20,,400,,1,,0,0xFFFFFFFE,2,2,4,,100,1,0,{ bonus bAgi,1; bonus2 bSkillAtk,"GC_CROSSIMPACT",5; },{},{}
 2573,Archangel_Wings,永恒之翼,5,0,,200,,18,,1,0xFFFFFFFF,7,2,4,,0,1,1,{},{},{}
 2582,Salvage_Cape,救援斗篷,5,20,,400,,1,,0,0x00000300,8,2,4,,130,1,0,{ skill "NJ_UTSUSEMI",1; bonus2 bCooldownValue,"NJ_UTSUSEMI",30000; bonus bUseSPrate,100; },{},{ heal 0,-1200; }
+//2583,
+//2584,
+//2585,
+2586,Siege_Manteau,Siege Manteau,5,0,,600,,32,,1,0xFFFFFFFE,7,2,4,,95,1,0,{ bonus bMdef,1; bonus2 bSubRace,RC_DemiHuman,2; },{},{}
+2587,Siege_Muffler,Siege Muffler,5,0,,400,,15,,1,0xFFFFFFFF,7,2,4,,95,1,0,{ bonus bMdef,10; bonus2 bSubRace,RC_DemiHuman,2; },{},{}
+//2588,
+//2589,
+2590,Buwaya_Skin_Clothes,Buwaya Skin Clothes,5,20,,200,,8,,0,0xFFFFFFFF,7,2,4,,1,1,0,{ bonus bHealpower2,getrefine()/3; bonus bAddItemHealRate,getrefine()/3; bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Fire,10; },{},{}
+2591,Bayani_Buwaya_Skin_Clothes,Bayani Buwaya Skin Clothes,5,20,,200,,8,,1,0xFFFFFFFF,7,2,4,,1,1,0,{ bonus bHealpower2,getrefine(); bonus bAddItemHealRate,getrefine(); bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Fire,10; },{},{}
 // Accessories
 //===================================================================
 2601,Ring,力量戒指,5,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,20,0,0,{ bonus bStr,2; },{},{}
@@ -1723,12 +1754,12 @@
 2816,Radar_Ring1,Radar Ring,5,0,,0,,0,,0,0xFFFFFFFE,7,2,136,,0,0,0,{},{},{}
 2817,Radar_Ring2,Radar Ring,5,0,,0,,0,,0,0xFFFFFFFE,7,2,136,,0,0,0,{},{},{}
 2818,Radar_Ring3,Radar Ring,5,0,,0,,0,,0,0xFFFFFFFE,7,2,136,,0,0,0,{},{},{}
-2819,Swordsman_Manual,剑士 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1,0,0,{ bonus bMaxSP,100; skill "SM_BASH",1; skill "SM_PROVOKE",1; skill "SM_MAGNUM",1; },{},{}
-2820,Thief_Manual,盗贼 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1,0,0,{ bonus bMaxSP,100; skill "TF_DOUBLE",3; skill "TF_STEAL",1; skill "TF_HIDING",1; skill "TF_POISON",1; },{},{}
-2821,Acolyte_Manual,服事 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1,0,0,{ bonus bMaxSP,100; skill "AL_HEAL",1; skill "AL_INCAGI",1; skill "AL_BLESSING",1; },{},{}
-2822,Archer_Manual,弓箭手 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1,0,0,{ bonus bMaxSP,100; skill "AC_OWL",1; skill "AC_CONCENTRATION",1; },{},{}
-2823,Merchant_Manual,商人 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1,0,0,{ bonus bMaxSP,100; skill "MC_DISCOUNT",1; skill "MC_OVERCHARGE",10; skill "MC_IDENTIFY",1; skill "MC_MAMMONITE",1; },{},{}
-2824,Mage_Manual,魔法师 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1,0,0,{ bonus bMaxSP,100; skill "MG_SRECOVERY",1; skill "MG_COLDBOLT",1; skill "MG_FIREWALL",1; skill "MG_FIREBOLT",1; },{},{}
+2819,Swordsman_Manual,剑士 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1:12,0,0,{ bonus bMaxSP,100; skill "SM_BASH",1; skill "SM_PROVOKE",1; skill "SM_MAGNUM",1; },{},{}
+2820,Thief_Manual,盗贼 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1:12,0,0,{ bonus bMaxSP,100; skill "TF_DOUBLE",3; skill "TF_STEAL",1; skill "TF_HIDING",1; skill "TF_POISON",1; },{},{}
+2821,Acolyte_Manual,服事 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1:12,0,0,{ bonus bMaxSP,100; skill "AL_HEAL",1; skill "AL_INCAGI",1; skill "AL_BLESSING",1; },{},{}
+2822,Archer_Manual,弓箭手 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1:12,0,0,{ bonus bMaxSP,100; skill "AC_OWL",1; skill "AC_CONCENTRATION",1; },{},{}
+2823,Merchant_Manual,商人 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1:12,0,0,{ bonus bMaxSP,100; skill "MC_DISCOUNT",1; skill "MC_OVERCHARGE",10; skill "MC_IDENTIFY",1; skill "MC_MAMMONITE",1; },{},{}
+2824,Mage_Manual,魔法师 入门书,5,0,,100,,0,,0,0x00000001,7,2,136,,1:12,0,0,{ bonus bMaxSP,100; skill "MG_SRECOVERY",1; skill "MG_COLDBOLT",1; skill "MG_FIREWALL",1; skill "MG_FIREBOLT",1; },{},{}
 2825,Shaman_Earrings_,Shaman Earrings,5,0,,100,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{ bonus bInt,2; },{},{}
 2826,Dark_Knight_Belt_,Dark Knight Belt,5,0,,500,,1,,0,0xFFFFFFFF,7,2,136,,80,0,0,{ bonus bDex,2; bonus bAgi,1; },{},{}
 2827,Dark_Knight_Glove_,Dark Knight Glove,5,0,,500,,1,,0,0xFFFFFFFF,7,2,136,,80,0,0,{ autobonus "{ bonus bMaxHPRate,10; }",10,10000,0,"{ specialeffect2 EF_POTION_BERSERK; }"; },{},{}
@@ -2232,6 +2263,38 @@
 4475,Cobalt_Mineral_Card,钴矿石魔卡片,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Formless,10; },{},{}
 4476,Pinguicula_Card,捕虫堇卡片,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Insect,10; },{},{}
 4477,Hell_Apocalypse_Card,地狱机械战士卡片,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Demon,10; },{},{}
+//
+4505,Scaraba_Card,Scaraba Card,6,20,,10,,,,,,,,136,,,,,{ /* bonus bEquipmentMatk,20; */ bonus bMaxSPrate,-1; },{},{}
+4506,Dolomedes_Card,Dolomedes Card,6,20,,10,,,,,,,,769,,,,,{ bonus bDex,2; if(BaseClass == Job_Archer){ bonus bDex,getrefine()/3; } },{},{}
+4507,Queen_Scaraba_Card,Queen Scaraba Card,6,20,,10,,,,,,,,2,,,,,{},{},{}
+4508,Gold_Scaraba_Card,Gold Scaraba Card,6,20,,10,,,,,,,,136,,,,,{ bonus bBaseAtk,20; bonus bMaxHPrate,-1; },{},{}
+4509,Gold_Queen_Scaraba_Card,Gold Queen Scaraba Card,6,20,,10,,,,,,,,769,,,,,{ bonus bInt,3; bonus2 bSubRace,RC_Insect,10; if(getrefine()>=9) { bonus2 bSubRace,RC_Insect,5; } },{},{}
+4510,Miming_Card,Miming Card,6,20,,10,,,,,,,,2,,,,,{ /* bonus3 bAutoSpell,"WM_LULLABY_DEEPSLEEP",1,30; */ },{},{}
+4511,Little_Fatum_Card,Little Fatum Card,6,20,,10,,,,,,,,2,,,,,{ bonus3 bAddEff,Eff_Silence,500,ATF_SKILL; },{},{}
+4512,Parus_Card,Parus Card,6,20,,10,,,,,,,,769,,,,,{ bonus bHealPower,3; if(BaseClass == Job_Acolyte){ bonus bHealPower,getrefine()/2; } },{},{}
+4513,Angra_Mantis_Card,Angra Mantis Card,6,20,,10,,,,,,,,769,,,,,{ bonus bCritAtkRate,2; if(BaseClass == Job_Thief){ bonus bCritAtkRate,getrefine()/2; } },{},{}
+4514,Pom_Spider_Card,Pom Spider Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bAddRace,RC_Undead,20; },{},{}
+4515,Alnoldi_Card,Alnoldi Card,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubRace,RC_Plant,30; },{},{}
+4516,Comodo_Card,Comodo Card,6,20,,10,,,,,,,,16,,,,,{ bonus bDef,50; bonus bFlee,-25; },{},{}
+4517,Cendrawasih_Card,Cendrawasih Card,6,20,,10,,,,,,,,769,,,,,{ bonus bInt,2; if(BaseClass == Job_Mage){ bonus bInt,getrefine()/3; } },{},{}
+4518,Banaspaty_Card,Banaspaty Card,6,20,,10,,,,,,,,2,,,,,{},{},{}
+4519,Butoijo_Card,Butoijo Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bAddRace,RC_Angel,20; },{},{}
+4520,Leak_Card,Leak Card,6,20,,10,,,,,,,,4,,,,,{ bonus bStr,3; bonus2 bAddEff,Eff_Confusion,5000; bonus3 bAddEff,Eff_Confusion,5000,ATF_SKILL; },{},{}
+4521,Sedora_Card,Sedora Card,6,20,,10,,,,,,,,2,,,,,{ bonus bCritAtkRate,15; },{},{}
+4522,Sropho_Card,Sropho Card,6,20,,10,,,,,,,,2,,,,,{ /* bonus3 bAutoSpell,"WL_FROSTMISTY",1,30; */ },{},{}
+4523,Pot_Dofle_Card,Pot Dofle Card,6,20,,10,,,,,,,,16,,,,,{ bonus bDefEle,Ele_Water; bonus2 bSubRace,RC_Fish,10; },{},{}
+4524,King_Dramoh_Card,King Dramoh Card,6,20,,10,,,,,,,,769,,,,,{ bonus bStr,2; if(BaseClass == Job_Swordman){ bonus bStr,getrefine()/3; } },{},{}
+4525,Kraken_Card,Kraken Card,6,20,,10,,,,,,,,4,,,,,{ bonus bFlee,10; skill "TF_HIDING",1; skill "RG_RAID",1; bonus3 bAddEffOnSkill,"RG_RAID",Eff_Bleeding,1000; },{},{ sc_end SC_HIDING; }
+4526,Weird_Coelacanth_Card,Weird Coelacanth Card,6,20,,10,,,,,,,,16,,,,,{ bonus bMaxSPrate,5; bonus bMdef,50; },{},{}
+4527,Dark_Coelacanth_Card,Dark Coelacanth Card,6,20,,10,,,,,,,,16,,,,,{ bonus bMaxHPrate,10; bonus bDef,100; },{},{}
+4528,Mutant_Coelacanth_Card,Mutant Coelacanth Card,6,20,,10,,,,,,,,769,,,,,{ bonus bMatkRate,2+(getrefine()/2); bonus bMaxHPrate,-getrefine()/2; },{},{}
+4529,Violent_Coelacanth_Card,Violent Coelacanth Card,6,20,,10,,,,,,,,769,,,,,{ bonus2 bAddRace,RC_NonBoss,2+(getrefine()/2); bonus2 bAddRace,RC_Boss,2+(getrefine()/2); bonus bMaxSPrate,-getrefine()/2; },{},{}
+4530,Siorava_Card,Siorava Card,6,20,,10,,,,,,,,769,,,,,{ bonus bLuk,2; if(BaseClass == Job_Merchant){ bonus bLuk,getrefine()/3; } },{},{}
+4531,Red_Eruma_Card,Red Eruma Card,6,20,,10,,,,,,,,2,,,,,{ bonus3 bAddEff,Eff_Curse,500,ATF_SKILL; },{},{}
+4532,Wild_Rider_Card,Wild Rider Card,6,20,,10,,,,,,,,64,,,,,{ bonus3 bAutoSpellWhenHit,"AL_INCAGI",1,10; },{},{}
+4533,Octopus_Card,Octopus Card,6,20,,10,,,,,,,,2,,,,,{ bonus3 bAddEff,Eff_Blind,500,ATF_SKILL; },{},{}
+4534,Giant_Octopus_Card,Giant Octopus Card,6,20,,10,,,,,,,,16,,,,,{ bonus bMaxHPrate,12; skill "WZ_WATERBALL",5; },{},{}
+
 // Armor Enchant System
 //===================================================================
 4700,Strength1,STR+1,6,20,,10,,,,,,,,16,,,,,{ bonus bStr,1; },{},{}
@@ -4113,11 +4176,11 @@
 7595,Unique_Sword,特别的剑,3,20,,10,,,,,,,,,,,,,{},{},{}
 7596,Unique_Shield,特别的盾牌,3,20,,10,,,,,,,,,,,,,{},{},{}
 7597,Magic_Stone,魔法的石头,3,20,,10,,,,,,,,,,,,,{},{},{}
-//7598,BlueCard_I,Blue I Card,3,0,,10,,,,,,,,,,,,,{},{},{}
-//7599,BlueCard_D,Blue D Card,3,0,,10,,,,,,,,,,,,,{},{},{}
-//7600,BlueCard_K,Blue K Card,3,0,,10,,,,,,,,,,,,,{},{},{}
-//7601,BlueCard_S,Blue S Card,3,0,,10,,,,,,,,,,,,,{},{},{}
-//7602,BlueCard_R,Blue R Card,3,0,,10,,,,,,,,,,,,,{},{},{}
+7598,BlueCard_I,Blue I Card,3,0,,10,,,,,,,,,,,,,{},{},{}
+7599,BlueCard_D,Blue D Card,3,0,,10,,,,,,,,,,,,,{},{},{}
+7600,BlueCard_K,Blue K Card,3,0,,10,,,,,,,,,,,,,{},{},{}
+7601,BlueCard_S,Blue S Card,3,0,,10,,,,,,,,,,,,,{},{},{}
+7602,BlueCard_R,Blue R Card,3,0,,10,,,,,,,,,,,,,{},{},{}
 7603,RO_Party_Ticket,RO聚会招待券,3,0,,10,,,,,,,,,,,,,{},{},{}
 7604,Flour,面粉,3,0,,10,,,,,,,,,,,,,{},{},{}
 7605,Chicken_Egg,鸡蛋,3,0,,10,,,,,,,,,,,,,{},{},{}
@@ -5036,8 +5099,25 @@
 12395,Tantanmen,担担面,2,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 1519; },{},{}
 12396,Fools_Day_Box,奇怪箱子,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ if(rand(1,10)==1) itemskill "AL_TELEPORT",1; else if(rand(1,10)==2) itemskill "AL_TELEPORT",3; else if(rand(1,10)==3) percentheal 50,0; else if(rand(1,10)==4) percentheal 0,50; else if(rand(1,10)==5) end; else if(rand(1,10)==6) getitem 512,1; else if(rand(1,10)==7) itemskill "ALL_REVERSEORCISH",1; else if(rand(1,10)==8) specialeffect2 247; else if(rand(1,10)==9) specialeffect2 338; else specialeffect2 10; },{},{}
 12397,Fools_Day_Box2,奇怪箱子,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ if(rand(1,10)==1) itemskill "TF_DETOXIFY",1; else if(rand(1,10)==2) itemskill "TF_PICKSTONE",1; else if(rand(1,10)==3) itemskill "BA_FROSTJOKER",1; else if(rand(1,10)==4) itemskill "DC_SCREAM",1; else if(rand(1,10)==5) end; else if(rand(1,10)==6) getitem 909,1; else if(rand(1,10)==7) itemskill "AL_RUWACH",1; else if(rand(1,10)==8) specialeffect2 328; else if(rand(1,10)==9) specialeffect2 68; else specialeffect2 196; },{},{}
+12398,PCBang_Gift_Box,PCBang Gift Box,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12399,Castle_Treasure_Box,Castle Treasure Box,2,20,,1000,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12400,Water_Of_Blessing_,Water Of Blessing ,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12401,Rune_Kn_Test_Int,Rune Kn Test Int,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_INCINT,300000,40; },{},{}
+12402,29Fruit,29Fruit,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12403,Lucky_Egg2,Lucky Egg2,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12404,Acti_Potion,Acti Potion,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12405,Underripe_Yggseed,Underripe Yggseed,2,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12406,Psychic_ArmorS,Psychic ArmorS,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12407,PCBang_Coupon_Box,PCBang Coupon Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12408,Hydra_Ball,Hydra Ball,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ pet 2081; },{},{}
+12409,Pork_Belly_H,Pork Belly H,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12410,Spareribs_H,Spareribs H,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12411,HE_Battle_Manual,提要经验值倍增书,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_EXPBOOST,900000,200; },{},{}
 12412,HE_Bubble_Gum,HE Bubble Gum,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ITEMBOOST,900000,300; },{},{}
+12413,PCBang_Coupon_Box2,PCBang Coupon Box2,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12414,Guarana_Candy,Guarana Candy,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{sc_start SC_INCASPDRATE,1800000,10; sc_start SC_INCREASEAGI,140000,5; skilleffect "AL_INCAGI",0;},{},{}
+12415,Siege_Teleport_Scroll2,Siege Teleport Scroll2,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12416,LUcky_Egg_C3,LUcky Egg C3,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12417,Boost_500,Boost 500,3,10,,50,,,,,,,,,,,,,{},{},{}
 12418,Full_Swing_K,兴奋剂K,3,10,,50,,,,,,,,,,,,,{},{},{}
 12419,Manaplus,法力增加药水,3,10,,50,,,,,,,,,,,,,{},{},{}
@@ -5059,15 +5139,80 @@
 12435,Black_Mass,黑色物体,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start4 SC_STOMACHACHE,300000,rand(5,10),25,10,0; },{},{}
 12436,Vitata_500,黑蚁500,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,100; itembonus 500000,"{ bonus bMaxSPrate,5; bonus bSPrecovRate,20; }"; },{},{}
 12437,Concentrated_Ceromain_Soup,浓缩速度泉水,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 1000,0; itembonus 500000,"{ bonus bASPDRate,10; }"; },{},{}
+12438,F_Giant_Fly_Wing,F Giant Fly Wing,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12439,F_Battle_Manual,F Battle Manual,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12440,F_Insurance,F Insurance,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12441,F_Bubble_Gum,F Bubble Gum,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12442,F_Kafra_Card,F Kafra Card,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12443,F_Neuralizer,F Neuralizer,2,2,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12444,F_Dun_Tele_Scroll1,F Dun Tele Scroll1,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12445,F_Str_Dish10_,F Str Dish10 ,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12446,F_Agi_Dish10_,F Agi Dish10 ,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12447,F_Int_Dish10_,F Int Dish10 ,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12448,F_Dex_Dish10_,F Dex Dish10 ,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12449,F_Luk_Dish10_,F Luk Dish10 ,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12450,F_Vit_Dish10_,F Vit Dish10 ,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12451,F_WOB_Rune,F WOB Rune,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12452,F_WOB_Schwaltz,F WOB Schwaltz,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12453,F_WOB_Rachel,F WOB Rachel,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12454,F_WOB_Local,F WOB Local,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12456,F_Greed_Scroll,F Greed Scroll,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12457,F_Glass_Of_Illusion,F Glass Of Illusion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12458,F_Abrasive,F Abrasive,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12459,F_Med_Life_Potion,F Med Life Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12460,F_Small_Life_Potion,F Small Life Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12461,F_Regeneration_Potion,F Regeneration Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12462,F_B_Mdef_Potion,F B Mdef Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12463,F_S_Mdef_Potion,F S Mdef Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12464,F_B_Def_Potion,F B Def Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12465,F_S_Def_Potion,F S Def Potion,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12466,F_Blessing_10_Scroll,F Blessing 10 Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12467,F_Inc_Agi_10_Scroll,F Inc Agi 10 Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12468,F_Aspersio_5_Scroll,F Aspersio 5 Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12470,F_Wind_Walk_10_Scroll,F Wind Walk 10 Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12471,F_Adrenaline_Scroll,F Adrenaline Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12472,F_Convex_Mirror,F Convex Mirror,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12473,RWC_Parti_Box,RWC Parti Box,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12474,RWC_Final_Comp_Box,RWC Final Comp Box,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12475,Cure_Free,自由恢复药水,2,10,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(1000,1200),0; sc_end SC_Silence; sc_end SC_Bleeding; sc_end SC_POISON; sc_end SC_Curse; sc_end SC_ORCISH; sc_end SC_CHANGEUNDEAD; },{},{}
 12548,Shabby_Purchase_Street_Stall_License,简易采购商店执照2,11,500,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_BUYING_STORE",1; },{},{}
 12561,Mysterious_Seeds,神秘的种子,2,20,,10,,,,,0xFFFFFFFF,31,2,,,,,,{},{},{}
 12573,Fruit_Basket,水果篮,2,20,,50,,,,,0xFFFFFFFF,31,2,,,,,,{ getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; getitem groupranditem(IG_FoodBag),1; },{},{}
 12574,Mora_Berry,莫拉浆果,2,0,,20,,,,,0xFFFFFFFF,7,2,,,120,,,{ itemheal 0,rand(40,60); sc_start SC_MORA_BUFF,300000,10; },{},{}
+12575,Arrow_Of_Elf_Cntr,Arrow Of Elf Cntr,2,500,,250,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1773,500; },{},{}
+12576,Hunting_Arrow_Cntr,Hunting Arrow Cntr,2,500,,250,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1774,500; },{},{}
+12577,Lucky_Egg_C6,Lucky Egg C6,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12578,Rapid_Life_Water,Rapid Life Water,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12579,Ring_Of_Valkyrie_Box,Ring Of Valkyrie Box,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12580,Universal_Catalog_Silver,Universal Catalog Silver,2,200,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,0; },{},{}
 12581,Universal_Catalog_Gold,Universal Catalog Gold,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
 12591,Universal_Catalog_Bronze,Universal Catalog Bronze,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ searchstores 10,1; },{},{}
+//
+12601,Fresh_Watermelon_Juice,Fresh Watermelon Juice,0,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 5,5; },{},{}
+//
+12612,Old_Coin_Bag,Old Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12613,Improved_Coin_Bag,Improved Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Improved_Coin_Bag),1; getitem groupranditem(IG_Improved_Coin_Bag),1; getitem groupranditem(IG_Improved_Coin_Bag),1; getitem groupranditem(IG_Improved_Coin_Bag),1; },{},{}
+12614,Intermediate_Coin_Bag,Intermediate Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Intermediate_Coin_Bag),1; getitem groupranditem(IG_Intermediate_Coin_Bag),1; getitem groupranditem(IG_Intermediate_Coin_Bag),1; getitem groupranditem(IG_Intermediate_Coin_Bag),1; },{},{}
+12615,Minor_Coin_Bag,Minor Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Minor_Coin_Bag),1; getitem groupranditem(IG_Minor_Coin_Bag),1; getitem groupranditem(IG_Minor_Coin_Bag),1; getitem groupranditem(IG_Minor_Coin_Bag),1; },{},{}
+12616,S_Grade_Coin_Bag,S Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_S_Grade_Coin_Bag),1; getitem groupranditem(IG_S_Grade_Coin_Bag),1; getitem groupranditem(IG_S_Grade_Coin_Bag),1; },{},{}
+12617,A_Grade_Coin_Bag,A Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_A_Grade_Coin_Bag),1; getitem groupranditem(IG_A_Grade_Coin_Bag),1; getitem groupranditem(IG_A_Grade_Coin_Bag),1; },{},{}
+12618,B_Grade_Coin_Bag,B Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12619,C_Grade_Coin_Bag,C Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12620,D_Grade_Coin_Bag,D Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12621,E_Grade_Coin_Bag,E Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12622,Reins_Of_Mounts,坐骑用缰绳,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if( sc_check(SC_ALLRIDING) ) sc_end SC_ALLRIDING; else sc_start SC_ALLRIDING,-1,0; },{},{}
+12623,Advanced_Weapons_Box,Advanced Weapons Box,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Advanced_Weapons_Box),1; },{},{}
+12624,Delicious_Jelly,Delicious Jelly,0,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 3,3; },{},{}
+//
+12636,Malangdo_Canned_Specialties,Malangdo Canned Specialties,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ warp "malangdo",140,114; },{},{}
+//
+12642,Terra_Mars_100_Box,Terra_Mars_100_Box,0,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 504,100; },{},{}
+//
+12646,Fried_Octopus_Legs,Fried Octopus Legs,2,20,,30,,,,,,,,,,,,,{},{},{}
+12647,Sea_Ink,Sea Ink,2,20,,30,,,,,,,,,,,,,{},{},{}
+//
+12699,Tikbalang_Belt,Tikbalang Belt,2,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ /* pet 2313; */ },{},{}
+12700,Upside_Down_Shirt,Upside Down Shirt,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ warp "malaya",242,211; },{},{}
 12701,Old_Blue_Box_F,陈旧的 蓝色箱子,2,,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12702,Old_Bleu_Box,神秘蓝箱,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_BleuBox),1; getitem groupranditem(IG_BleuBox),1; },{},{}
 12703,Holy_Egg_2,Holy Egg,11,0,,50,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -6376,7 +6521,30 @@
 15026,Aqua_Robe,水蓝外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Water; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,89,-30; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
 15027,Crimson_Robe,深红外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Fire; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,83,-30; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
 15028,Forest_Robe,森林外袍,5,20,,500,,4,,0,0x00000200,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Earth; bonus bMdef,10; bonus bInt,1; bonus2 bCastrate,91,-10; if(readparam(bInt)>=120){ bonus bInt,1; } },{},{}
+15029,Mercy_Robe,Mercy Robe,5,20,,300,,22,,0,0x00000100,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Holy; bonus bMdef,10; bonus bInt,1; },{},{}
+15030,Judgement_Robe,Judgement Robe,5,20,,300,,22,,0,0x00000100,2,2,16,,100,1,0,{ bonus bDefEle,Ele_Dark; bonus bMdef,10; bonus bStr,2; bonus2 bSubRace,RC_Demon,10; bonus2 bSubRace,RC_Undead,10; bonus2 bSubRace,RC_Formless,-10; bonus2 bSubRace,RC_Brute,-10; bonus2 bSubRace,RC_DemiHuman,-10; bonus2 bSubRace,RC_Plant,-10; bonus2 bSubRace,RC_Insect,-10; bonus2 bSubRace,RC_Fish,-10; bonus2 bSubRace,RC_Angel,-10; bonus2 bSubRace,RC_Dragon,-10; },{},{}
+15031,Paradise_Uniform4,Paradise Uniform IV,5,0,,0,,58,,0,0xFFFFFFFF,7,2,16,,60,0,0,{ bonus bMdef,5; bonus bMaxHP,500; bonus bMaxSP,50; bonus bStr,1; bonus bInt,1; bonus bDex,1; },{},{}
+15032,Tidon,Tidon,5,20,,500,,2,,1,0xFFFFFFFE,7,2,16,,1,1,0,{ bonus bMdef,10; bonus2 bResEff,Eff_Stun,1500; bonus2 bResEff,Eff_Freeze,1500; bonus2 bSubRace,RC_NonBoss,5; bonus2 bSubRace,RC_Boss,5; },{},{}
+//15033,
+//15034,
+//15035,
+15036,Urj_Plate,Urj Plate,5,20,,3000,,110,,0,0x00000080,8,2,16,,100,1,0,{ bonus bMdef,10; bonus bMaxHPRate,getequiprefinerycnt(EQI_ARMOR); bonus2 bSubRace,RC_DemiHuman,5; bonus2 bSubEle,Ele_Neutral,5; if(isequipped(2475,2574,2883)) { bonus bMaxHPRate,14; bonus2 bSkillAtk,"RK_HUNDREDSPEAR",50; skill "CR_AUTOGUARD",1; } },{},{}
+15037,Pertz_Plate,Pertz Plate,5,20,,3000,,110,,0,0x00000080,8,2,16,,100,1,0,{ bonus bMdef,10; bonus bBaseAtk,20; bonus bFlee,17; if(isequipped(2476,2575,2884)) { bonus2 bAddRace,RC_NonBoss,10; bonus2 bAddRace,RC_Boss,10; bonus2 bSkillAtk,"RK_SONICWAVE",100; bonus2 bSkillAtk,"RK_WINDCUTTER",100; autobonus "{ sc_start SC_CONCENTRATION,10000,getskilllv(\"LK_CONCENTRATION\") ? getskilllv(\"LK_CONCENTRATION\"):1; bonus bAspd,2; }",1,10000,BF_WEAPON,"{}"; } },{},{}
+15038,Sabath's_Cloth,Sabath's Cloth,5,20,,100,,45,,1,0x00001000,7,2,16,,100,1,0,{ bonus bLuk,3; bonus3 bAutoSpell,"ASC_METEORASSAULT",getskilllv("ASC_METEORASSAULT"),10; if(isequipped(2477,2577,2886)){ bonus bCritical,15; bonus bFlee,10; bonus bCritAtkRate,40; /* bonus2 bSkillAtk,"GC_CROSSIMPACT",20; */ } },{},{}
+15039,Nabeu's_Cloth,Nabeu's Cloth,5,20,,100,,45,,1,0x00001000,7,2,16,,100,1,0,{ bonus bStr,2; bonus bInt,2; if(isequipped(2478,2578,2887)){ bonus2 bAddRace,RC_NonBoss,10; bonus2 bAddRace,RC_Boss,10; /* bonus bEquipmentMatk,10; */ if(readparam(bStr)>=120){ bonus bBaseAtk,30; } bonus3 bAutoSpell,"ASC_BREAKER",getskilllv("ASC_BREAKER"),10; bonus bCritical,-20; } },{},{}
+//15040,
+//15041,
+15042,White_Wing_Suit,White Wing Suit,5,20,,100,,45,,1,0x00000800,7,2,16,,100,1,0,{ bonus bLongAtkRate,getrefine()*2; bonus bFlee,getrefine(); if(isequipped(2479,2580,2890)){ bonus bAspd,2; bonus bLongAtkRate,30; bonus3 bAutoSpell,"AC_DOUBLE",3,10; /* bonus2 bSkillAtk,"RA_ARROWSTORM",50; */ } },{},{}
+15043,Black_Wing_Suit,Black Wing Suit,5,20,,100,,45,,1,0x00000800,8,2,16,,100,1,0,{ bonus bInt,2; bonus bBaseAtk,getequiprefinerycnt(EQI_ARMOR)*3; if(isequipped(2480,2581,2891)) { bonus bMaxHPRate,15; bonus2 bSkillAtk,"RA_CLUSTERBOMB",20; bonus bFlee2,20; bonus bLongAtkRate,-30; bonus bAspd,-7; } },{},{}
 15044,Green_Surgical_Gown,绿色研究服,5,20,,660,,66,,1,0x00040000,8,2,16,,100,1,0,{ bonus bDex,1; bonus bMaxSP,30; if(isequipped(13027)) { bonus3 bAddMonsterDropItem,929,RC_Brute,50+5*getrefine(); bonus3 bAddMonsterDropItem,929,RC_DemiHuman,50+5*getrefine(); bonus3 bAddMonsterDropItem,970,RC_Brute,10+5*getrefine(); bonus3 bAddMonsterDropItem,970,RC_DemiHuman,10+5*getrefine(); } },{},{}
+//15045,
+15046,Siege_Plate,Siege Plate,5,0,,3300,,85,,1,0x006444A2,7,2,16,,95,1,0,{ bonus bMdef,5; bonus2 bSubRace,RC_DemiHuman,2; if(getrefine() > 5) { bonus bHealpower2,12; bonus bAddItemHealRate,12; } if(getrefine() > 8) { bonus bMaxHPRate,25; } if(isequipped(2483,2586)){ bonus2 bSubRace,RC_DemiHuman,15; } },{},{}
+15047,Siege_Suit,Siege Suit,5,0,,750,,50,,1,0x036E5CEA,7,2,16,,95,1,0,{ bonus bMdef,10; bonus2 bSubRace,RC_DemiHuman,2; if(getrefine() > 5) { bonus bFlee2,5; bonus bLongAtkDef,20; } if(getrefine() > 8) { bonus bMaxHPRate,15; } if(isequipped(2484,2587)){ bonus bDex,5; bonus2 bSubRace,RC_DemiHuman,15; } },{},{}
+15048,Siege_Robe,Siege Robe,5,0,,500,,40,,1,0x00818315,7,2,16,,95,1,0,{ bonus bMdef,20; bonus2 bSubRace,RC_DemiHuman,2; if(getrefine() > 5) { bonus bFlee,5; bonus bLongAtkDef,15; } if(getrefine() > 8) { bonus bMaxHP,1000; bonus bMaxSP,100; } if(isequipped(2485,2587)){ bonus bInt,5; bonus bMdef,10; bonus2 bSubRace,RC_DemiHuman,15; } },{},{}
+//15049,
+//15050,
+15051,Bakunawa_Scale_Armor,Bakunawa Scale Armor,5,20,,500,,55,,0,0xFFFFFFFF,7,2,16,,1,1,0,{ bonus2 bSubRace,RC_Boss,getrefine()/2; bonus bAllStats,1; },{},{}
+15052,Bayani_Bakunawa_Scale_Armor,Bayani Bakunawa Scale Armor,5,20,,500,,55,,1,0xFFFFFFFF,7,2,16,,1,1,0,{ bonus2 bSubRace,RC_Boss,getrefine()/2; bonus bAllStats,2; },{},{}
 15053,漂荐_囱磊_酱明,特攻忍装,5,20,,1200,,70,,0,0x02000000,7,2,16,,100,1,0,{ bonus bAgi,1+getrefine()/3+2*isequipped(2171); },{},{}
 15054,囱磊_厚疵_癌渴,忍者鳞甲,5,20,,1800,,90,,1,0x02000000,7,2,16,,100,1,0,{ bonus bMaxHPrate,15; bonus bMaxSPrate,-30; if(isequipped(2172)) { bonus bAtkRate,10; bonus bStr,2; } },{},{}
 15055,公吝鞠康,虚影装束,5,20,,1500,,60,,1,0x02000000,7,2,16,,100,1,0,{ bonus bAgi,1; /* bonus3 bAutoSpellWhenHit,"KO_ZANZOU",1,10; */ if(isequipped(2173)) { bonus bFlee2,10; bonus bFlee,10; } },{},{}

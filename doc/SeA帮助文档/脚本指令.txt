@@ -1161,6 +1161,21 @@ in the previous example getarg(2,-1) would be 3 and getarg(3,-1) would be -1
 
 ---------------------------------------
 
+*getargcount()
+
+This function is used when you use the 'callsub' or 'callfunc' commands. In the 
+call you can specify arguments. This function will return the number of arguments 
+provided.
+
+Example:
+	callfunc "funcNPC",5,4,3;
+	...
+	function%TAB%script%TAB%funcNPC%TAB%{
+		set .@count, getargcount(); // 3
+		...
+	}
+
+---------------------------------------
 *return {<value>};
 
 When you use callsub or callfunc, this command allows you to go back to the 
