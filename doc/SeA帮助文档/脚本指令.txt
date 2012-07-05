@@ -7032,6 +7032,9 @@ attached character. Guild can be one or the following constants:
 	类型4：全公会：script4each "<脚本>",4,玩家cid;
 	类型5：全阵营：script4each "<脚本>",5,玩家cid;
 	类型6：全区域：script4each "<脚本>",6,"地图名",坐标x0,坐标y0,坐标x1,坐标y1;
+	类型7：全组队：script4each "<脚本>",7,队伍id; 
+	类型8：全公会：script4each "<脚本>",8,公会id;
+	类型9：全阵营：script4each "<脚本>",9,阵营id;
 
 ---------------------------------------
 
