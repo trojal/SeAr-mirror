@@ -6556,7 +6556,7 @@
 16003,Carga_Mace,卡尔加权杖,4,20,,1500,175,,1,2,0x0004C580,8,2,2,3,100,1,8,{},{},{}
 16004,P_Mace1,P.权杖Ⅰ,4,0,,0,142,,1,0,0x0004C5B2,7,2,2,2,26,0,8,{},{},{}
 16005,P_Mace2,P.权杖Ⅱ,4,0,,0,163,,1,0,0x0004C5B2,7,2,2,2,40,0,8,{},{},{}
-16010,Red_Ether_Bag,红色 乙醚 包包,4,20,,1000,15,,1,1,0x00040000,8,2,2,3,102,1,8,{ bonus bMatk,100; bonus2 bSkillAtk,"GN_CRAZYWEED",20; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",20; if(getrefine() > 5) { bonus2 bSkillAtk,"GN_CRAZYWEED",2*(getrefine()-5); bonus2 bSkillAtk,"GN_DEMONIC_FIRE",2*(getrefine()-5); } },{},{}
+16010,Red_Ether_Bag,红色 乙醚 包包,4,20,,1000,15,,1,1,0x00040000,8,2,2,3,102,1,8,{ bonus bMatk,100; bonus2 bSkillAtk,"GN_CRAZYWEED_ATK",20; bonus2 bSkillAtk,"GN_DEMONIC_FIRE",20; if(getrefine() > 5) { bonus2 bSkillAtk,"GN_CRAZYWEED_ATK",2*(getrefine()-5); bonus2 bSkillAtk,"GN_DEMONIC_FIRE",2*(getrefine()-5); } },{},{}
 16017,Bloody_Cross,嗜血十字锤,4,20,,1500,170,,1,0,0x00008110,2,2,2,4,100,1,8,{ bonus bAtkEle,Ele_Dark; bonus5 bAutoSpell,"WL_HELLINFERNO",1,10+5*getrefine(),BF_SHORT,1; },{},{}
 16019,Upg_Mace,强化铁锤,4,20,,800,80,,1,1,0x0004C5B3,7,2,2,3,1,1,8,{ bonus bAtk,10*getrefine(); bonus bHealPower,getrefine(); if(BaseLevel >= 70) { bonus bAtk,5*((BaseLevel-69)/10); } },{},{}
 //
