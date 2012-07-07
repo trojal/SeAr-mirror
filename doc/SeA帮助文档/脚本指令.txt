@@ -1604,8 +1604,9 @@ invoking character. Whatever it returns is determined by type.
  0 - Character's name.
  1 - The name of the party they're in if any.
  2 - The name of the guild they're in if any.
- 3 - 读取关联角色的帐号注册email地址.
+ 3 - 读取关联角色的帐号当前地图名.
  4 - 读取关联角色的帐号当前IP地址.
+ 5 - 读取关联角色的帐号注册email地址.
 
 If a character is not a member of any party or guild, an empty string will be 
 returned when requesting that information.
