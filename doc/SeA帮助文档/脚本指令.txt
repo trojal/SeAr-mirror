@@ -7169,9 +7169,11 @@ id在effect_list.txt中查看。
 *setcashpoints("<NPC名>","<变量名>");
 *setfreepoints("<NPC名>","<变量名>");
 
-作用：	使制定npc使用指定变量为cashshop变量。也可以使用cashshop(变量名)来定义cashshop
+作用：	使指定npc使用指定变量为cashshop变量。
+
+也可以使用cashshop(变量名)来定义cashshop
 例如：
-	-	cashshop(#Inkfish)	Inkfish	-1,501:1;
+	-	cashshop(#账号变量)	Inkfish	-1,501:1;
 
 ---------------------------------------
 
