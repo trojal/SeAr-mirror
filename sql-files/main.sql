@@ -70,6 +70,7 @@ CREATE TABLE IF NOT EXISTS `cart_inventory` (
   `serialno` varchar(20) NOT NULL default '',
   `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   `favorite` tinyint(2) UNSIGNED NOT NULL default '0',
+  `rent_card` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
@@ -349,6 +350,7 @@ CREATE TABLE IF NOT EXISTS `guild_storage` (
   `serialno` varchar(20) NOT NULL default '',
   `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   `favorite` tinyint(2) UNSIGNED NOT NULL default '0',
+  `rent_card` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `guild_id` (`guild_id`)
 ) ENGINE=MyISAM;
@@ -416,6 +418,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `serialno` varchar(20) NOT NULL default '',
   `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   `favorite` tinyint(2) UNSIGNED NOT NULL default '0',
+  `rent_card` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
@@ -687,6 +690,7 @@ CREATE TABLE IF NOT EXISTS `storage` (
   `serialno` varchar(20) NOT NULL default '',
   `bind` tinyint(2) UNSIGNED NOT NULL default '0',
   `favorite` tinyint(2) UNSIGNED NOT NULL default '0',
+  `rent_card` tinyint(2) UNSIGNED NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `account_id` (`account_id`)
 ) ENGINE=MyISAM;
