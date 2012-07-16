@@ -1,0 +1,9 @@
+// Item Combos Database
+//
+// Structure of Database:
+// ID:ID:ID:ID...,{ Script }
+// 注：	该DB的添加不是为了方便Combo脚本填写，
+//	是为了模拟同时装备两套套装，仅有一套生效！
+
+4028:4296,{ bonus bStr,3; }
+4168:4169,{ bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bCastrate,-10; }

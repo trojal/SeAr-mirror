@@ -1954,8 +1954,8 @@
 4165,Gig_Card,É³Ä®¶¾Ð«¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSPGainRace,RC_Insect,5; },{},{ heal 0,-5; }
 4166,Nightmare_Terror_Card,Æß²ÊÃÎ÷Ê¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Curse,300+600*(isequipped(4127)); },{},{}
 4167,Neraid_Card,ÄÎÀû³æ¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSPGainRace,RC_Brute,5; },{},{ heal 0,-5; }
-4168,Dark_Lord_Card,ºÚ°µÖ®Íõ¿¨Æ¬,6,20,,10,,,,,,,,64,,,,,{ bonus3 bAutoSpellWhenHit,"WZ_METEOR",5,100; if(isequipped(4169)) { bonus bMaxHPrate,20; bonus bMaxSPrate,20; } },{},{}
-4169,Dark_Illusion_Card,ÃÔ»ÃÖ®Íõ¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bMaxHPrate,-10; bonus bMaxSPrate,-10; bonus bCastrate,-10-10*isequipped(4168); },{},{}
+4168,Dark_Lord_Card,ºÚ°µÖ®Íõ¿¨Æ¬,6,20,,10,,,,,,,,64,,,,,{ bonus3 bAutoSpellWhenHit,"WZ_METEOR",5,100; },{},{}
+4169,Dark_Illusion_Card,ÃÔ»ÃÖ®Íõ¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus bMaxHPrate,-10; bonus bMaxSPrate,-10; bonus bCastrate,-10; },{},{}
 4170,Dark_Frame_Card,¾µÑý¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Stone,600; },{},{}
 4171,Dark_Priest_Card,°µºÚ¼ÀË¾¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus2 bSPVanishRate,50,10; if(BaseJob==Job_Sage) bonus bSPDrainValue,1; },{},{}
 4172,The_Paper_Card,Ö½Ñý¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bCritAtkRate,20; bonus2 bSPDrainValue,-1,0; },{},{}
@@ -2082,7 +2082,7 @@
 4293,Cookie_Card,Ìð±ýÈË¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ bonus bLuk,2; bonus2 bSkillAtk,"AL_HOLYLIGHT",10; },{},{}
 4294,Quve_Card,ÍòÊ¥Ä§¿¨Æ¬,6,20,,10,,,,,,,,136,,,,,{ if(BaseJob==Job_Novice||BaseJob==Job_SuperNovice) bonus3 bAutoSpellWhenHit,"AL_INCAGI",1,100; if(isequipped(4193)) { bonus bMaxHP,300; bonus bMaxSP,60; } },{},{}
 4295,Kraben_Card,¿ËÀ³±¾¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Blind,600; },{},{}
-4296,Cramp_Card,À¶Êó¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus2 bGetZenyNum,500,1; if(isequipped(4028)) bonus bStr,3; },{},{}
+4296,Cramp_Card,À¶Êó¿¨Æ¬,6,20,,10,,,,,,,,769,,,,,{ bonus2 bGetZenyNum,500,1; },{},{}
 4297,Cruiser_Card,Íæ¾ßÊ¿±ø¿¨Æ¬,6,20,,10,,,,,,,,2,,,,,{ bonus bCritAtkRate,10; bonus2 bCriticalAddRace,RC_Brute,7; },{},{}
 4298,Cremy_Fear_Card,¿ñ±©¿ËÈðÃ×¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus2 bAddEffWhenHit,Eff_Confusion,600; },{},{}
 4299,Clock_Card,¹ÅÖÓÄ§¿¨Æ¬,6,20,,10,,,,,,,,16,,,,,{ bonus3 bAutoSpellWhenHit,"CR_AUTOGUARD",3+7*(getskilllv("CR_AUTOGUARD")==10),30; },{},{ sc_end SC_AUTOGUARD; }
