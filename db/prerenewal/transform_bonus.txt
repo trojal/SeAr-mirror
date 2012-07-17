@@ -1,0 +1,3 @@
+//定义变身为该魔物时的bonus
+
+1109,{ bonus bAspd,1; bonus bHit,5; }

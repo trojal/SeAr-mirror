@@ -5210,6 +5210,7 @@
 //
 12646,Fried_Octopus_Legs,Fried Octopus Legs,2,20,,30,,,,,,,,,,,,,{},{},{}
 12647,Sea_Ink,Sea Ink,2,20,,30,,,,,,,,,,,,,{},{},{}
+12658,Transform_Scroll_Deviruchi,±‰…ÌæÌ÷·(–°∂Òƒß),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1109; },{},{}
 //
 12699,Tikbalang_Belt,Tikbalang Belt,2,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ /* pet 2313; */ },{},{}
 12700,Upside_Down_Shirt,Upside Down Shirt,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ warp "malaya",242,211; },{},{}
