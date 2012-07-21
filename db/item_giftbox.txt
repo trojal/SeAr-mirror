@@ -77,7 +77,7 @@
 4,997,1	//土灵原石//Great Nature
 4,999,1	//钢铁//Steel
 4,1000,1	//星星的角//Star Crumb
-4,1558,2	//日记本//Girl's Diary
+4,1558,1	//日记本//Girl's Diary
 4,4005,1	//圣诞波利卡片//Santa Poring Card
 4,7034,1	//破洞圣诞袜//Red Stocking
 // GiftBox_1
@@ -308,7 +308,7 @@
 30,997,1	//土灵原石//Great Nature
 30,999,1	//钢铁//Steel
 30,1000,1	//星星的角//Star Crumb
-30,1558,2	//日记本//Girl's Diary
+30,1558,1	//日记本//Girl's Diary
 30,4005,1	//圣诞波利卡片//Santa Poring Card
 30,7034,1	//破洞圣诞袜//Red Stocking
 // GiftBox_4
@@ -385,7 +385,7 @@
 31,997,1	//土灵原石//Great Nature
 31,999,1	//钢铁//Steel
 31,1000,1	//星星的角//Star Crumb
-31,1558,2	//日记本//Girl's Diary
+31,1558,1	//日记本//Girl's Diary
 31,4005,1	//圣诞波利卡片//Santa Poring Card
 31,7034,1	//破洞圣诞袜//Red Stocking
 // GiftBox_China
