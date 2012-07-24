@@ -3,21 +3,19 @@
 //============================================================
 // v1.1c 中文化 [5511]
 //
-// 最新汉化修正日期: 2012.03.14
+// 最新汉化修正日期: 2012.01.14
 //------------------------------------------------------------
-// 城市商店 (Renewal)
+// 城市商店 (Pre-Renewal)
 //------------------------------------------------------------
 // 备注:
-// 20120314 v1.2 更新宠物商人
 // 20120114 v1.1d 修正德瓦塔商人贩卖的物品
 // 20110909 v1.1a 加入德瓦塔商人
-// 20110811 v1.1 更新v2.8.(未更新NPC方向)
-// 20110725 v1.0d 更新renewal商人.
-//          修正克魔多武器商人鞭子ID错误.
+// 20110811 v1.1 更新v2.8 (未更新NPC方向)
+// 20110725 v1.0d 修正克魔多武器商人鞭子ID错误.
 // 20110??? v1.0c 吉芬的商人不再出售杰勒比结晶.
 // 20100??? v1.0a 加入艾尔贝塔, 依斯鲁得岛的枪手用品商人
 //          加入普隆德拉的忍者用品商人
-// 20100??? v1.0 更新v2.7.
+// 20100??? v1.0 更新v2.7
 //------------------------------------------------------------
 
 //=======================================================
@@ -75,8 +73,6 @@ comodo,296,125,4	shop	纪念品商人#cmd	101,965:-1,964:-1
 cmd_fild07,257,126,5	shop	道具商人#cmd2	83,1770:-1,501:-1,502:-1,503:-1,504:-1,645:-1,656:-1,601:-1,602:-1,611:-1,1065:-1
 cmd_fild07,250,98,2	shop	武器商人#cmd2	49,1401:-1,1404:-1,1407:-1,1451:-1,1454:-1,1457:-1,1460:-1,1463:-1,1410:-1
 cmd_fild07,277,85,4	shop	防御具商人#cmd2	101,2226:-1,2228:-1,2103:-1,2105:-1,2405:-1,2503:-1,2505:-1,2305:-1,2321:-1,2307:-1,2309:-1,2335:-1,2312:-1,2314:-1,2316:-1
-comodo,106,213,5	shop	热带水果商人#cmd	724,6258:-1
-comodo,196,162,3	shop	哈丽布#candy	479,11513:-1,6144:-1
 
 //=======================================================
 // 德瓦他岛村
@@ -95,7 +91,6 @@ ein_in01,119,26,4	shop	武器商人#ein	855,1247:-1,1248:-1,1249:-1,13000:-1
 ein_in01,189,15,1	shop	道具商人#ein	850,1750:-1,1752:-1,1751:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,1065:-1
 einbroch,138,66,4	shop	头饰商人#ein	850,5114:-1,2218:-1
 einbroch,82,199,4	shop	商人#ein	855,512:-1,645:-1,1750:-1,501:-1
-einbroch,122,250,4	shop	黑市商人#ein	49,2139:-1,2800:-1,2801:-1,2802:-1,2803:-1,2804:-1,2805:-1,2806:-1,2807:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,12392:-1,12393:-1,12394:-1,6145:-1,6146:-1,6147:-1,6186:-1,2808:-1
 // 神枪手商店
 que_ng,179,91,3	shop	起瓦士 鲁盖	900,13150:-1,13102:-1,13151:-1,13154:-1,13155:-1,13163:-1,13165:-1,13168:-1
 que_ng,180,79,3	shop	约翰沃克	900,13200:-1,13201:-1,13202:-1
@@ -110,7 +105,7 @@ geffen_in,74,144,0	shop	商人#gef	66,911:-1,910:-1,912:-1
 geffen_in,77,167,0	shop	道具商人#gef	68,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,2241:-1
 geffen_in,77,173,0	shop	魔法商人#gef	64,717:-1,1601:-1,1604:-1,1607:-1,1610:-1,2232:-1,2321:-1,2332:-1
 geffen_in,171,123,4	shop	道具商人#gef2	64,1092:-1,1093:-1
-geffen,193,152,4	shop	宠物商人#gef	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
+geffen,193,152,4	shop	宠物商人#gef	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1 
 
 //=======================================================
 // 昆仑
@@ -139,7 +134,7 @@ izlude_in,115,61,0	shop	道具商人#iz	47,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1
 izlude,105,99,0	shop	肉品商人#iz	54,517:-1
 izlude,94,98,4	shop	水果商人#iz	53,512:-1,513:-1,515:-1,516:-1
 izlude,105,92,7	shop	牛奶商人#i	90,519:-1
-izlude,164,138,4	shop	宠物商人#iz	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
+izlude,164,138,4	shop	宠物商人#iz	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1 
 izlude_in,121,64,3	shop	交易商人#iz	900,13200:-1,13201:-1,13202:-1,13150:-1,13102:-1,13151:-1,13154:-1,13155:-1,13163:-1,13165:-1,13168:-1
 
 //=======================================================
@@ -152,14 +147,13 @@ jawaii,186,174,3	shop	冰淇淋 史丹#ja	85,536:-1,536:-1,536:-1,536:-1,536:-1,536:-
 //=======================================================
 yuno,218,97,5	shop	道具商人#yuno	84,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1
 yuno,226,107,5	shop	道具商人#yuno1	83,911:-1,910:-1,912:-1
-yuno,197,114,4	shop	宠物商人#yuno	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
+yuno,197,114,4	shop	宠物商人#yuno	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1 
 yuno,205,103,4	shop	装备商人#yuno	125,2340:-1,2341:-1,2411:-1,2222:-1,2230:-1,1721:-1
 yuno,163,187,5	shop	魔法商人#yuno	90,717:-1,1601:-1,1604:-1,1607:-1,1610:-1,2232:-1,2321:-1,2332:-1
 yuno_in01,25,34,5	shop	道具商人#yuno2	83,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1
 yuno_in01,103,35,2	shop	武器商人#yuno	49,1750:-1,1751:-1,1101:-1,1701:-1,1201:-1,1204:-1,1207:-1,1210:-1,1213:-1,1216:-1,1601:-1,1604:-1,1607:-1,1610:-1
 yuno_in01,112,26,4	shop	防御具商人#yuno	101,2628:-1,2101:-1,2107:-1,2401:-1,2501:-1,2230:-1,2301:-1,2303:-1,2305:-1,2321:-1,2332:-1
 yuno_in03,176,22,3	shop	大卷轴商人#yuno03	89,7433:-1
-s_atelier,114,117,1	shop	打工崽#sc_yuno	67,6123:-1,6120:-1
 
 //=======================================================
 // 里希塔乐镇
@@ -168,7 +162,7 @@ lighthalzen,69,75,5	shop	水果商人#lhz	102,512:-1,513:-1
 lighthalzen,112,44,0	shop	卖花的少女#lhz	90,712:-1,744:-1,748:-1
 lighthalzen,124,129,0	shop	蔬菜商人#lhz	91,515:-1,516:-1,535:-1
 lighthalzen,220,122,3	shop	牛奶商人#l	90,519:-1
-lighthalzen,222,191,4	shop	宠物商人#lhz	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
+lighthalzen,222,191,4	shop	宠物商人#lhz	125,537:-1,643:-1,10013:-1,10014:-1
 lhz_in02,286,95,4	shop	初学者商人#lhz	62,5112:-1,2416:-1,2113:-1,2512:-1
 lhz_in02,271,99,5	shop	防御具商人#lhz	851,2101:-1,2103:-1,2403:-1,2405:-1,2503:-1,2321:-1,2314:-1,2309:-1,2335:-1,2628:-1
 lhz_in02,276,99,4	shop	武器商人#lhz	851,1201:-1,1207:-1,1216:-1,1107:-1,1122:-1,1116:-1,1154:-1,1407:-1,1457:-1,1354:-1,1519:-1,13003:-1
@@ -185,9 +179,6 @@ lhz_in02,87,208,3	shop	玩具商人#lhz	715,2243:-1,2212:-1,2242:-1,2241:-1
 lhz_in03,239,106,5	shop	道具商人#lhz2	850,501:-1,502:-1,506:-1,645:-1,656:-1,601:-1,602:-1,1065:-1,611:-1
 lhz_in03,258,101,3	shop	弓箭商人#lhz	855,1750:-1,1770:-1,1752:-1,1751:-1
 lhz_in03,249,24,4	shop	商人#lhz	855,911:-1,910:-1,912:-1,528:-1
-lighthalzen,337,240,4	shop	陷阱专家#lhz	66,7940:-1,12341:-1
-lhz_in03,181,17,4	shop	黑市商人#lhz	49,2139:-1,2800:-1,2801:-1,2802:-1,2803:-1,2804:-1,2805:-1,2806:-1,2807:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,12392:-1,12393:-1,12394:-1,6145:-1,6146:-1,6147:-1,6186:-1,2808:-1
-s_atelier,15,65,5	shop	打工崽#sc_lhz	67,6123:-1,6120:-1
 
 //=======================================================
 // 龙之城
@@ -205,11 +196,6 @@ xmas_in,169,34,2	shop	礼物商人#xmas	702,2612:-1,744:-1,748:-1,736:-1,746:-1,740:
 xmas_in,174,98,2	shop	武器商人#xmas	49,1201:-1,1204:-1,1207:-1,1210:-1,1213:-1,1216:-1,1219:-1,1222:-1
 
 //=======================================================
-// 米德加尔特联合驻地
-//=======================================================
-mid_camp,129,284,4	shop	陷阱专家#mid	66,7940:-1,12341:-1
-mid_camp,184,263,4	shop	黑市商人#mid	49,2139:-1,2800:-1,2801:-1,2802:-1,2803:-1,2804:-1,2805:-1,2806:-1,2807:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,12392:-1,12393:-1,12394:-1,6145:-1,6146:-1,6147:-1,6186:-1,2808:-1
-
 // 梦罗克 Ep12.1
 //=======================================================
 in_moc_16,22,20,7	shop	殡葬商人#moc	880,1771:-1
@@ -225,7 +211,7 @@ moc_ruins,71,139,5	shop	商人#moc3	93,2612:-1
 moc_ruins,125,135,6	shop	商人#moc4	89,2609:-1,1516:-1,1522:-1
 moc_ruins,87,109,6	shop	屠夫#moc	58,517:-1
 moc_ruins,90,149,6	shop	商人#moc5	99,513:-1,513:-1,513:-1,513:-1,513:-1,513:-1
-moc_ruins,118,170,4	shop	宠物商人#moc	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
+moc_ruins,118,170,4	shop	宠物商人#moc	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1 
 morocc_in,141,67,0	shop	武器商人#moc1	58,1750:-1,1751:-1,1701:-1,1601:-1,1201:-1,1204:-1,1207:-1,1210:-1,1213:-1,1216:-1,1219:-1,1222:-1,1250:-1,1252:-1,1254:-1
 morocc_in,141,60,0	shop	防具商人#moc	58,2101:-1,2103:-1,2401:-1,2403:-1,2405:-1,2501:-1,2503:-1,2218:-1,2301:-1,2303:-1,2305:-1,2321:-1,2328:-1,2332:-1,2307:-1,2309:-1,2335:-1,2628:-1
 morocc_in,132,57,0	shop	武器商人#moc2	99,1146:-1,1245:-1
@@ -255,8 +241,7 @@ payon_in01,7,119,2	shop	防御具商人#pay	76,2401:-1,2403:-1,2405:-1,2501:-1,2503:-
 payon_in01,5,49,7	shop	道具商人#pay	88,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,1065:-1
 payon_in02,87,34,0	shop	道具商人#pay2	75,1750:-1,1751:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1,656:-1,601:-1,602:-1,1065:-1
 payon,159,96,4	shop	道具商人#pay3	88,1750:-1,501:-1,645:-1,601:-1,602:-1
-payon,177,131,4	shop	宠物商人#pay	124,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
-payon,123,109,4	shop	陷阱专家#pay	66,7940:-1,12341:-1
+payon,177,131,4	shop	宠物商人#pay	124,537:-1,643:-1,10013:-1,10014:-1
 
 //=======================================================
 // 普隆德拉
@@ -267,7 +252,7 @@ prontera,64,125,0	shop	肉品商人#prt	87,517:-1,528:-1
 prontera,58,182,0	shop	卖花的少女#prt	96,712:-1,744:-1
 prontera,113,42,0	shop	卖花的女士#prt	90,712:-1,744:-1
 prontera,105,87,0	shop	礼物商人#prt	91,734:-1,735:-1,736:-1,737:-1,746:-1
-prontera,218,211,4	shop	宠物商人#prt	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1,6100:-1,6098:-1,6112:-1,6104:-1,6108:-1,6111:-1,6095:-1
+prontera,218,211,4	shop	宠物商人#prt	125,537:-1,643:-1,10013:-1,10014:-1,554:-1,6113:-1,6114:-1,6115:-1 
 prontera,248,153,0	shop	娃娃商人#prt	85,740:-1,741:-1,742:-1
 prontera,48,58,0	shop	蔬菜商人#prt	91,515:-1,516:-1,535:-1
 prt_church,108,124,4	shop	修女#prt	79,2608:-1,2216:-1,5092:-1,2323:-1,2325:-1,1501:-1,1504:-1,1507:-1,1510:-1,1513:-1,1519:-1
@@ -280,9 +265,6 @@ prt_in,171,140,0	shop	武器商人#prt2	47,1401:-1,1404:-1,1407:-1,1451:-1,1454:-1,1
 prt_in,165,140,4	shop	武器商人#prt3	66,1146:-1,1245:-1
 prt_monk,135,263,5	shop	武器商人#prt4	726,1801:-1,1803:-1,1805:-1
 prontera,178,244,3	shop	交易商人#prt	83,13250:-1,13251:-1,13252:-1,13253:-1,13254:-1,2117:-1,7521:-1,7522:-1,7523:-1,7524:-1
-prt_in,109,68,4	shop	陷阱专家#prt	66,7940:-1,12341:-1
-prt_in,175,137,4	shop	黑市商人#prt	49,2139:-1,2800:-1,2801:-1,2802:-1,2803:-1,2804:-1,2805:-1,2806:-1,2807:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,12392:-1,12393:-1,12394:-1,6145:-1,6146:-1,6147:-1,6186:-1,2808:-1
-s_atelier,17,10,1	shop	打工崽#sc_prt	67,6123:-1,6120:-1
 
 //=======================================================
 // 拉赫
@@ -292,9 +274,6 @@ ra_in01,257,269,3	shop	道具商人#ra	919,501:-1,502:-1,503:-1,504:-1,506:-1,645:-1
 ra_in01,176,389,3	shop	武器商人#ra	931,1201:-1,1207:-1,1216:-1,1107:-1,1122:-1,1116:-1,1154:-1,1407:-1,1457:-1,1354:-1,1519:-1,13003:-1,1601:-1,1604:-1,1607:-1
 ra_in01,254,300,3	shop	水果商人#ra	931,512:-1,513:-1
 rachel,65,80,1	shop	蔬菜商人#ra	919,515:-1,535:-1,516:-1
-ra_in01,263,281,4	shop	陷阱专家#ra	66,7940:-1,12341:-1
-ra_in01,257,266,4	shop	黑市商人#ra	49,2139:-1,2800:-1,2801:-1,2802:-1,2803:-1,2804:-1,2805:-1,2806:-1,2807:-1,18000:-1,18001:-1,18002:-1,18003:-1,18004:-1,12392:-1,12393:-1,12394:-1,6145:-1,6146:-1,6147:-1,6186:-1,2808:-1
-s_atelier,137,60,3	shop	打工崽#sc_ra	67,6123:-1,6120:-1
 
 //=======================================================
 // 乌龟岛
@@ -337,83 +316,3 @@ gonryun,147,101,5	shop	料理材料商人#gon	83,7452:-1,580:-1
 ayothaya,203,178,3	shop	料理材料商人#ayo	83,7455:-1,577:-1
 xmas,152,137,5	shop	料理材料商人#xmas	83,7457:-1,577:-1
 niflheim,209,180,5	shop	料理材料商人#nif	83,581:-1
-
-//===== eAthena Script ======================================= 
-//= Shops
-//===== By: ================================================== 
-//= eAthena Dev Team
-//===== Current Version: ===================================== 
-//= 2.8
-//===== Compatible With: ===================================== 
-//= eAthena 1.0+
-//===== Description: ========================================= 
-//=
-//===== Additional Comments: ================================= 
-//= For earlier update notes see the bottom.
-//= 2.0 updated several shop npcs. [L0ne_W0lf]
-//=	Added proper Venom Knife dealer, and consiquently removed wenom Knives from weapon dealers.
-//=	Moved all Cooking related NPCs to their own section.
-//=	Re-alphabetized sections. Some of them were out of place.
-//=	Removed commented out shops.
-//= 2.0b Einbech tool dealer got lost somewhere along the way, re-added. [L0ne_W0lf]
-//= 2.1 Fixed missing item from "Fresh Fish" from cooking addition shops. [L0ne_W0lf]
-//= 2.1a Fixed the second "Line" selling in Comodo Weapon shop. (Should have been Whip) [L0ne_W0lf]
-//= 2.2 Added Veins shops. [L0ne_W0lf]
-//= 2.3 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
-//= 2.4 Fixed Jawaii Ice cream salesman. [L0ne_W0lf]
-//= 2.5 Updated Morroc shops to episode 12.1. [L0ne_W0lf]
-//= 2.6 Added Brasilis shops. [L0ne_W0lf]
-//=     Updated Pet Groomers with four new pet feeds.
-//= 2.7 Added Trading merchants, (ninja& gunslinger) to Izlude and Alberta. [L0ne_W0lf]
-//=     Made Brasilis shop names unique, and uncommented.
-//=     Changed the whip sold in comodo weapon shop. (1956 ->1960)
-//=     Added Fire and Silver arrow to Einbroch tool dealer.
-//=     Re-added Bill of Birds to Morroc Item Collectors.
-//= 2.7a Actually applied the right update to the comodo weapon shop. [L0ne_W0lf]
-//= 2.7b Corrected Brasilis Fruit Merchant. (bugreport:4278) [L0ne_W0lf]
-//= 2.8 Updates to Brasilis Merchants. [L0ne_W0lf]
-//============================================================ 
-
-//===== Additional Comments(old): ================================= 
-//= swapped shop titles in GONRYUN, thanks to Kashy
-//= 1.3a Fixed Louyang map name. Added additional shops in Yuno. [kobra_k88]
-//= 1.4 Added Niflheim Shops
-//= 1.5 New Payon Locations [Darkchild]
-//= Moved shops in Umbala.txt here. Commented out the duplicate ones.[kobra_k88]
-//= 1.6 Removed GRAPE ID 514 from shops (caused exploits)
-//= 1.7 Removed juices from custom amatsu shops (it's a quest item + levelup exploit)
-//= 1.8 Corrected Niflheim Shops and Morroc Jewel Merchant [celest]
-//= 1.9 Updated Louyang shops thanks to MasterOfMuppets
-//= 1.10 Lutie Tools coords [Yor]
-//= 1.11 Added Belts to Prontera/Aldebaran shops, thanks to reddozen [Lupus]
-//= 1.12 official Ayothaya Shops, thanks to MasterOfMuppets [Lupus]
-//= 1.13 Added 5092 Coif into Prontera Church shop [Lupus]
-//= 1.14 Added Lighthalzen,Einbroch,Einbech shops. Updated Prontera,Morroc,Payon shops [Lupus]
-//= 1.15 Added Venom Knives into every Weapon Shop (that sells Knife[3]) [Lupus]
-//= 1.15a Fixed a small typo in alberta's weapon shop, thanks to reddozen for the fix [MasterOfMuppets]
-//= 1.16 Added a temp shop in Yuno to sell Blank scrolls, thanks to reddozen [MasterOfMuppets]
-//= 1.17 Added wand of hypnotist to the Lighthalzen weapon shop [MasterOfMuppets]
-//= 1.18 Fixed some shops based on kRO shots [Poki#3]
-//= 1.19 Added Hugel and fixed Payon shops based on kRO shots [Poki#3]
-//= 1.19a Added Food Seller selling Mastela Fruit in Hugel (Update item_db for the correct price!) [Poki#3]
-//= 1.20 Added 3 weapons shops, thx2 Muad_Dib [Lupus]
-//= 1.21 Added another weapon dealer to Einbroch, thanks to Muad_Dib [MasterOfMuppets]
-//=    - Fixed up the missing sprites for you Lupus :)
-//=   -  Guys, I suggest we crop these comments and put them at the bottom soon
-//= 1.22 Thx8) Removed Berserk Potions from all shops but Comodo [Lupus]
-//= 1.3 Added Gunslinger shops. Credits goes to RockmanEXE for the info [erKURITA]
-//=	Added Bucket Hat to Flu Mask dealer and modified it's name to a more logical one :P [erKURITA]
-//= 1.4 Added an ingredient seller to Morroc, thanks to Muad_Dib [MasterOfMuppets]
-//= a Removed doubled Morocc Ing.Seller, arranged the rest Ing.Sellers according to the city names [Lupus]
-//= 1.4b Commented out temp Gunslinger shops. [Lupus]
-//= 1.5 Removed Temp gunslinger shops and moved up the official ones. [erKURITA]
-//=	  Added Official Ninja shops in their correct location and commented a few
-//=	  shops. Thanks to RockmanEXE and Muad_Dib [erKURITA]
-//= 1.6 Implemented a missing Tool Shop in Lighthalzen [MasterOfMuppets]
-//= 1.7 Added some missing iRO - Lighthalzen NPCs [Musashiden]
-//= 1.8 Added Rachel Official shops. Special Thanks to RockmanEXE. [erKURITA]
-//= 1.9 Uncommented Homunculus shop, since Homunculus is working on trunk now. [Evera]
-//= 1.9a Pet Merchant -> Lighthalzen [erKURITA]
-//= 1.9b Added items to Chivas Regal
-//= 1.9c Slight update for Rachel shop: Tool Dealer -> Fruit Gardener [L0ne_W0lf]
-//============================================================
