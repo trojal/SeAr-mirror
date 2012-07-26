@@ -169,3 +169,5 @@
 2466,0xf2,   ,  0, 1,  -1,all,	 0x010	//SO_WATER_INSIGNIA
 2467,0xf3,   ,  0, 1,  -1,all,	 0x010	//SO_WIND_INSIGNIA
 2468,0xf4,   ,  0, 1,  -1,all,	 0x010	//SO_EARTH_INSIGNIA
+
+8025,0x86,    , 0, 2:2:3:3:4,500,enemy,0x018	//MH_XENO_SLASHER
