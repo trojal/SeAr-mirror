@@ -4827,6 +4827,8 @@ Example(s):
 Okay, these commands should be fairly self explaining.
 For the emotions, you can look in db/const.txt for prefixes with e_
 
+GID为0表示脚本关联的对象。
+
 ---------------------------------------
 
 ------------------------------------------------
@@ -5784,7 +5786,7 @@ rand(2,10) 的结果会是 2,3,4,5,6,7,8,9 or 10
 
 显示表情. 表情数字见 'db/const.txt' 以 'e_' 开头的. 
 
-目标为0或省略则表情显示在NPC头上，目标为1则显示在关联玩家头上
+目标为0或省略则表情显示在NPC头上，目标为1则显示在脚本关联的对象头上
 
 <目标名字> 可以在其他没有事件标签的NPC/PC身上执行此指令。如果没有
 发现名字则什么都不会做。
