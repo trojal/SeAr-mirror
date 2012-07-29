@@ -3928,7 +3928,7 @@ who made it, can answer why is it so.
 
 ---------------------------------------
 
-*successrefitem <equipment slot>;
+*successrefitem <equipment slot>{, <增加精炼值>};
 
 This command will refine an item in the specified equipment slot of the invoking 
 character by +1. For a list of equipment slots see 'getequipid'. This command 
@@ -3940,6 +3940,8 @@ will only take effect for blacksmith who will later forge a weapon.
 The official scripts seem to use the 'successrefitem' command as a function 
 instead: 'successrefitem(<number>)' but it returns nothing on the stack. 
 This is since jAthena, so probably nobody knows for sure why is it so.
+
+<增加精炼值>默认为1；
 
 ---------------------------------------
 
@@ -3965,7 +3967,7 @@ window.
 
 ---------------------------------------
 
-*unequip <equipment slot>;
+*unequip(<装备位置>);
 
 This command will unequip whatever is currently equipped in the invoking 
 character's specified equipment slot. For a full list of possible equipment 
@@ -3973,6 +3975,8 @@ slots see 'getequipid'.
 
 If an item occupies several equipment slots, it will get unequipped from all of 
 them. (Which is a good thing.)
+
+返回值可用以delinventory等inventory系列指令。
 
 ---------------------------------------
 
