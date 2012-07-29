@@ -6985,9 +6985,12 @@ attached character. Guild can be one or the following constants:
 
 *getguildmember <guild id>,{<type>};
 	作用：	该命令会得到如下信息的数列：
-		$@guildmembername$[]	所有工会成员的名字（如果type为0或者没有设置）。
+		$@guildmembername$[]	所有工会成员的名字（如果type不为1、2、3）。
 		$@guildmembercid[]	所有工会成员的CID（角色id）（如果type为1）。
 		$@guildmemberaid[]	所有工会成员的AID（账号id）（如果type为2）。
+		$@guildiplist$[]	所有在线工会成员的ip（如果type为3）。
+		$@guildipcount		工会在线ip数量（如果type为3）。
+		$@guildonlinecount	工会在线成员数量（如果type为3）。
 		$@guildmembercount	工会成员数量（包括不在线）。
 
 ---------------------------------------
