@@ -1640,6 +1640,7 @@ packet_ver: 27
 0x083c,10,useskilltoid,2:4:6
 0x0893,5,changedir,2:4
 0x08ad,6,getcharnamerequest,2
+0x08d2,10
 
 //2011-11-02aRagexeRE
 packet_ver: 28
