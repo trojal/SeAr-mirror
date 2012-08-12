@@ -4691,7 +4691,7 @@
 11523,Yellow_Laphine_Sap,黄色西拉皮汁,2,2400,,120,,,,,0xFFFFFFFF,2,2,,,110,,,{ itemheal 600,0; },{},{}
 11524,White_Laphine_Sap,白色西拉皮汁,2,2800,,120,,,,,0xFFFFFFFF,2,2,,,120,,,{ itemheal 800,0; },{},{}
 11701,Girl_Bunch_Of_Flower,Girl Bunch of Flowers,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(105,145),0; },{},{}
-11702,Moon_Cookie,月亮饼干,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_end SC_Poison; sc_end SC_Silence; sc_end SC_Blind; sc_end SC_Confusion; sc_end SC_Curse; sc_end SC_Hallucination; },{},{}
+11702,Moon_Cookie,月亮饼干,1,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_end SC_Poison; sc_end SC_Silence; sc_end SC_Blind; sc_end SC_Confusion; sc_end SC_Curse; sc_end SC_Hallucination; },{},{}
 11703,Mysterious_Blood,Mystery Blood,0,,,1,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(25,35); },{},{}
 11704,KETUPAT_F,Ketupat,2,2,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(70,90),0; },{},{}
 11705,Special_White_Potion,Children's Potion,2,,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -5200,7 +5200,7 @@
 12619,C_Grade_Coin_Bag,C Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12620,D_Grade_Coin_Bag,D Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12621,E_Grade_Coin_Bag,E Grade Coin Bag,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12622,Reins_Of_Mounts,坐骑用缰绳,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if( sc_check(SC_ALLRIDING) ) sc_end SC_ALLRIDING; else sc_start SC_ALLRIDING,-1,0; },{},{}
+12622,Reins_Of_Mounts,坐骑用缰绳,1,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if( sc_check(SC_ALLRIDING) ) sc_end SC_ALLRIDING; else sc_start SC_ALLRIDING,-1,0; },{},{}
 12623,Advanced_Weapons_Box,Advanced Weapons Box,2,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Advanced_Weapons_Box),1; },{},{}
 12624,Delicious_Jelly,Delicious Jelly,0,20,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 3,3; },{},{}
 //

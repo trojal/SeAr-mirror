@@ -7,17 +7,19 @@ AegisName: Server name to reference the item in scripts and lookups, ²»ÄÜÊ¹ÓÃ¿Õ¸
 Name: Name in english for displaying as output for @ and script commands.
 
 Type: 
-	0	Healing item.
-	2	Usable item.
-	3	Etc item
-	4	Weapon
-	5	Armor/Garment/Boots/Headgear
-	6	Card
-	7	Pet egg
-	8	Pet equipment
-	10	Ammo (Arrows/Bullets/etc)
-	11	Usable with delayed consumption (item is lost from inventory
-		after selecting a target, for use with skills and pet lures)
+	0	ÖÎÓúµÀ¾ß.
+	1	ÎŞ¿ÉÏûºÄµÀ¾ß.
+	2	¿ÉÊ¹ÓÃµÀ¾ß.
+	3	ÆäËûÀàĞÍµÀ¾ß
+	4	ÎäÆ÷
+	5	·À¾ß
+	6	¿¨Æ¬
+	7	³èÎïµ°
+	8	³èÎï×°±¸
+	9	Î´Ê¹ÓÃ
+	10	µ¯Ò©µÈ
+	11	ÑÓ³ÙÏûºÄµÀ¾ß (ÎïÆ·ÔÚÑ¡Ôñ¶ÔÏóºó±»É¾³ı£¬µÀ¾ß¼¼ÄÜÊ¹ÓÃ)
+	12	»¤Éí·û
 
 Buy: Default buying price. When not specified, becomes double the sell price.
 
