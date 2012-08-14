@@ -1028,9 +1028,9 @@
 8025,7,6,2,4:0:4:0:4,0,0,5,1,no,0,0,0,magic,0,	MH_XENO_SLASHER,幻象斩击
 8026,5:5:7:7:9,6,16,0,0x1,0,5,1,no,0,0,0,magic,0,	MH_SILENT_BREEZE,静寂微风
 8027,0,6,4,0,0x1,0,1,1,no,0,0,0,none,0,		MH_STYLE_CHANGE,风格切换
-//8028,1,8,1,0,0,0,5,1,no,0,0,0,weapon,0,		MH_SONIC_CRAW,疯狂乱抓
-//8029,1,6,4,0,0,0,5,1,no,0,0x200,0,weapon,0,	MH_SILVERVEIN_RUSH,银光突击
-//8030,1,6,4,0,0,0,5,1,no,0,0x200,0,weapon,0,	MH_MIDNIGHT_FRENZY,午夜乱舞
+8028,1,8,1,0,0,0,5,1,no,0,0,0,weapon,0,		MH_SONIC_CRAW,疯狂乱抓
+8029,1,6,4,0,0,0,5,1,no,0,0x200,0,weapon,0,	MH_SILVERVEIN_RUSH,银光突击
+8030,1,6,4,0,0,0,5,1,no,0,0x200,0,weapon,0,	MH_MIDNIGHT_FRENZY,午夜乱舞
 8031,5:6:7:8:9,6,1,0,0,0,5,1,no,0,0,0,weapon,3,	MH_STAHL_HORN,钢之角
 8032,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		MH_GOLDENE_FERSE,黄金之蹄
 8033,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		MH_STEINWAND,命运石之杖
