@@ -825,7 +825,7 @@
 2296,3,6,1,0,0x1,0,3,1,yes,0,0,0,none,0,	SC_UNLUCKY,假面-不幸
 2297,3,6,1,0,0x1,0,3,1,yes,0,0,0,none,0,	SC_WEAKNESS,假面-衰弱
 2298,1,6,1,0,0x1,0,5,1,yes,0,0,0,none,0,	SC_STRIPACCESSARY,卸除饰品
-2299,7,6,2,0,0x1,1,3,1,yes,0,0,3,none,0,	SC_MANHOLE,黑洞陷阱
+2299,7,6,2,0,0x1,0,3,1,yes,0,0,3,none,0,	SC_MANHOLE,黑洞陷阱
 2300,7,6,2,0,0,0,3,1,yes,0,0,1,none,0,		SC_DIMENSIONDOOR,次元之门
 2301,7,6,2,0,0,0,3,1,yes,0,0,0,none,0,		SC_CHAOSPANIC,混乱恐慌
 2302,7,6,2,0,0,5,3,1,yes,0,0,0,none,0,		SC_MAELSTROM,吸能漩涡
