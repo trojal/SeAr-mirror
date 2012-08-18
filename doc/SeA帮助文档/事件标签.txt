@@ -34,7 +34,7 @@ OnTimerQuit		关联玩家的NPC计时器，在玩家退出时执行的事件
 OnWhisperGlobal		密语此npc执行的事件。<NPC:"NPC名"><内容1#内容2#内容3>
 			对NPC名为"NPC名"的NPC进行密语，执行事件时包含变量@whispervar0$为"内容1"，@whispervar1$为"内容2"，以此类推
 OnBuyItem		买到物品时执行的事件，附带变量"@bought_nameid"，"@bought_quantity"
-OnSellItem		卖出物品时执行的事件，附带变量"@sold_nameid"，"@sold_quantity"
+OnSellItem		卖出物品时执行的事件，附带变量"@sold_nameid"，"@sold_quantity"，"@sold_postion"(表明道具在物品栏中位置)。
 OnTouch			进入范围NPC的有效范围内时执行的事件。
 OnTouch_		进入范围NPC的有效范围内时执行的事件，
 			该事件不对隐匿、伪装玩家执行，且一次只关联一个玩家直到该玩家隐匿/登出/走出范围后，自动关联范围内的下一个玩家。
