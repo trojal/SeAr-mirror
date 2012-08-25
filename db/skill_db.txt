@@ -720,8 +720,8 @@
 2052,9,6,16,0,0x1,0,5,1,yes,0,0,0,magic,0,	AB_CLEARANCE,驱散
 2053,0,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	AB_EXPIATIO,赎罪
 2054,0,6,4,0,0x1,1,10,1,yes,0,0,0,magic,0,	AB_DUPLELIGHT,双重圣光
-2055,-1,6,1,-1,0,1,10,1,no,0,0,0,weapon,0,	AB_DUPLELIGHT_MELEE,双重圣光
-2056,-1,6,1,0,0,1,10,1,no,0,0,0,magic,0,	AB_DUPLELIGHT_MAGIC,双重圣光
+2055,5,6,1,-1,0,1,10,1,no,0,0,0,weapon,0,	AB_DUPLELIGHT_MELEE,双重圣光
+2056,5,6,1,0,0,1,10,1,no,0,0,0,magic,0,	AB_DUPLELIGHT_MAGIC,双重圣光
 2057,0,6,4,0,0x3,4:5:6:7:8,5,1,no,0,0,0,magic,0,AB_SILENTIUM,寂静
 // 大法师
 2201,6,6,16,0,0x1,0,5,1,yes,0,0,1:2:3:4:5,magic,0,	WL_WHITEIMPRISON,白色监狱
@@ -815,7 +815,7 @@
 2286,0,6,4,0,0x1,0,10,0,yes,0,0,0,none,0,	SC_AUTOSHADOWSPELL,自动影咒
 2287,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,	SC_SHADOWFORM,暗影附身
 2288,7:7:7:9:9:9:9:11:11:11,8,1,-1,0,0,10,-3,yes,0,0,0,weapon,3,	SC_TRIANGLESHOT,三连矢
-2289,9,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
+2289,9,6,4,0,0x3,2,5,1,no,0,0,0,none,0,		SC_BODYPAINT,人体彩绘
 2290,0,6,4,0,0x1,0,5,1,yes,0,0,0,none,0,	SC_INVISIBILITY,隐形
 2291,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		SC_DEADLYINFECT,致命感染
 2292,3,6,1,0,0x1,0,3,1,yes,0,0,0,none,0,	SC_ENERVATION,假面-虚脱
