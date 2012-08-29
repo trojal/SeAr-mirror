@@ -68,9 +68,12 @@ Job: Equippable jobs. Uses the following bitmask table:
 	Ninja       (2^25): 0x02000000
 
 Upper: Equippable upper-types. Uses the following bitmasks:
-	1: Normal jobs
-	2: Upper jobs
-	4: Baby jobs
+	1: 普通职业
+	2: 转生职业及三转职业
+	4: 宝宝职业
+	8: 限定三转职业
+	16: 限定转生三转职业
+	32: 限定宝宝三转职业
 
 Gender: Gender restriction. 0 is female, 1 is male, 2 for both.
 

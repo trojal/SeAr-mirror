@@ -5230,14 +5230,14 @@
 12714,Easter_Scroll,ºÜ¾ÉºÜÇ¿´óµÄ¾íÖá,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem groupranditem(IG_Easter_Scroll),1; },{},{}
 12715,Black_Treasure_Chest,Black Treasure Chest,2,0,,200,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12716,Indian_Rice_Cake,Indian Rice Cake,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12717,Poison_Paralysis,Ì±»¾¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PARALIZE,300000,0; },{},{}
-12718,Poison_Leech,ÎüÑª¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_LEECHEND,300000,0; },{},{}
-12719,Poison_Oblivion,ÍüÈ´¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_OBLIVIONCURSE,300000,0; },{},{}
-12720,Poison_Contamination,ÎÛÈ¾¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_DISHEART,300000,0; },{},{}
-12721,Poison_Numb,Éñ¾­¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_TOXIN,300000,0; },{},{}
-12722,Poison_Fever,·¢ÈÈ¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_PYREXIA,300000,0; },{},{}
-12723,Poison_Laughing,±¬Ð¦¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_MUSHROOM,300000,0; },{},{}
-12724,Poison_Fatigue,Æ£ÀÍ¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ sc_start SC_VENOMBLEED,15000,0; },{},{}
+12717,Poison_Paralysis,Ì±»¾¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_PARALIZE,300000,0; },{},{}
+12718,Poison_Leech,ÎüÑª¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_LEECHEND,300000,0; },{},{}
+12719,Poison_Oblivion,ÍüÈ´¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_OBLIVIONCURSE,300000,0; },{},{}
+12720,Poison_Contamination,ÎÛÈ¾¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_DISHEART,300000,0; },{},{}
+12721,Poison_Numb,Éñ¾­¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_TOXIN,300000,0; },{},{}
+12722,Poison_Fever,·¢ÈÈ¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_PYREXIA,300000,0; },{},{}
+12723,Poison_Laughing,±¬Ð¦¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_MUSHROOM,300000,0; },{},{}
+12724,Poison_Fatigue,Æ£ÀÍ¶¾Ò©,0,2,,20,,,,,0x00001000,8,2,,,,,,{ end; sc_start SC_VENOMBLEED,15000,0; },{},{}
 12725,Runstone_Nosiege,Êø¸¿·ûÎÄÊ¯,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_REFRESH",1; },{},{}
 12726,Runstone_Rhydo,µ÷ºÍ·ûÎÄÊ¯,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_CRUSHSTRIKE",1; },{},{}
 12727,Runstone_Verkana,ÔÙÉú·ûÎÄÊ¯,11,2,,100,,,,,0x00000080,8,2,,,,,,{ itemskill "RK_MILLENNIUMSHIELD",1; },{},{}
