@@ -117,7 +117,7 @@
 2253,0xd6,    , 0, 1,1000,enemy, 0x082	//RA_FIRINGTRAP
 2254,0xd7,    , 0, 1,1000,enemy, 0x082	//RA_ICEBOUNDTRAP
 
-2209,0x86,    , 0, 9:10:11:12:13,1000,enemy, 0x000	//WL_STASIS
+2209,0x86,    , 0, 9:10:11:12:13,1000,all, 0x000	//WL_STASIS
 2213,0x86,    , 0, 7,1000,enemy, 0x010	//WL_COMET
 2216,0xcb,    ,-1, 0,1000,enemy, 0x018	//WL_EARTHSTRAIN
 
