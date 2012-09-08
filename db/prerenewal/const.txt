@@ -502,6 +502,7 @@ bAddEffOnSkill	1089
 bHealPower	1090
 bHealPower2	1091
 bEleMagicAddRate	1092
+bSPForceVanishRate	1093
 
 bFixDamage	1900
 bBonusDamage	1901
@@ -633,6 +634,7 @@ RC_Dragon	9
 RC_Boss	10
 RC_NonBoss	11
 RC_NonDemiHuman	12
+RC_Player	13
 
 RC2_None	0
 RC2_Goblin	1

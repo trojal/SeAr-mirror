@@ -47,6 +47,8 @@ bonus bCastrate,n;			可变咏唱时间 + n%
 bonus bFixedCastRate,n;			固定咏唱时间 + n%
 bonus bDelayrate,n;			延迟时间 + n%
 bonus bCooldownRate,n;			冷却时间 + n%
+bonus bCastValue,n;			增加 n 毫秒可变咏唱时间
+bonus bFixedCastValue,n;		增加 n 毫秒固定咏唱时间
 bonus2 bCastrate,n,x;			增加 x% 技能 n 的可变咏唱时间 (支持技能名)
 bonus2 bFixedCastrate,n,x;		增加 x% 技能 n 的固定咏唱时间 (支持技能名)
 bonus2 bDelayrate,n,x;			增加 x% 使用技能 n 后的延迟时间
@@ -173,6 +175,7 @@ bonus bClassChange,n;			n/100% 几率是魔物变形
 bonus bBreakWeaponRate,n;		n% 几率破坏对方武器
 bonus bBreakArmorRate,n;		n% 几率破坏对方盔甲
 bonus2 bRandomAttackIncrease,n,r;	r% 几率增加物理攻击伤害 n
+bonus bSPForceVanishRate,n;		普通攻击中，100%使得攻击无效，并使被攻击者的SP减少将造成的HP伤害的n%。
 
 //=========================================================
 //=伤害修正
