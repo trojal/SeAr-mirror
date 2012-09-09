@@ -123,6 +123,8 @@ bonus2 bHPRegenRate,n,x;		每 x 毫秒得到 n HP
 bonus2 bHPLossRate,n,x;			每 x 毫秒失去 n HP
 bonus2 bSPRegenRate,n,x;		每 x 毫秒得到 n SP
 bonus2 bSPLossRate,n,x;			每 x 毫秒失去 n SP
+bonus bSPForceVanishRate,n;		普通攻击中，100%使得攻击无效，并使被攻击者的SP减少MaxSP的n%。
+bonus bHPForceVanishRate,n;		普通攻击中，100%使得攻击无效，并使被攻击者的HP减少MaxHP的n%。
 
 //=========================================================
 //=人物防御性能力
@@ -175,7 +177,6 @@ bonus bClassChange,n;			n/100% 几率是魔物变形
 bonus bBreakWeaponRate,n;		n% 几率破坏对方武器
 bonus bBreakArmorRate,n;		n% 几率破坏对方盔甲
 bonus2 bRandomAttackIncrease,n,r;	r% 几率增加物理攻击伤害 n
-bonus bSPForceVanishRate,n;		普通攻击中，100%使得攻击无效，并使被攻击者的SP减少将造成的HP伤害的n%。
 
 //=========================================================
 //=伤害修正
