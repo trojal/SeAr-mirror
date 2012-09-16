@@ -1641,6 +1641,7 @@ packet_ver: 27
 0x0893,5,changedir,2:4
 0x08ad,6,getcharnamerequest,2
 0x08d2,10
+0x08cf,10
 
 //2011-11-02aRagexeRE
 packet_ver: 28
