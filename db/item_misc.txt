@@ -561,3 +561,235 @@
 55,7935,1	// Poison_Herb_Seratum
 55,7936,1	// Poison_Herb_Scopolia
 55,7937,1	// Poison_Herb_Amoena
+// Improved Coin Bag
+56,6080,5	// Manuk Coin
+56,6081,5	// Splendide Coin
+56,6304,5	// Proof Of Sapha's Honor
+56,6380,5	// Mora Village Coin
+56,6418,1	// A Grade Coin
+56,6419,2	// B Grade Coin
+56,6420,1	// C Grade Coin
+56,12636,8	// Malangdo Canned Specialties
+// Intermediate Coin Bag
+57,6080,4	// Manuk Coin
+57,6081,4	// Splendide Coin
+57,6304,4	// Proof Of Sapha's Honor
+57,6380,4	// Mora Village Coin
+57,6419,1	// B Grade Coin
+57,6420,2	// C Grade Coin
+57,6421,1	// D Grade Coin
+57,12636,9	// Malangdo Canned Specialties
+// Minor Coin Bag
+58,6080,3	// Manuk Coin
+58,6081,3	// Splendide Coin
+58,6304,3	// Proof Of Sapha's Honor
+58,6380,3	// Mora Village Coin
+58,6420,1	// C Grade Coin
+58,6421,2	// D Grade Coin
+58,6422,1	// E Grade Coin
+58,12636,10	// Malangdo Canned Specialties
+// S Grade Coin Bag
+59,6423,3	// Sea God's Wrath
+59,6418,2	// A Grade Coin
+59,6419,1	// B Grade Coin
+// A Grade Coin Bag
+60,6418,3	// A Grade Coin
+60,6419,2	// B Grade Coin
+60,6420,1	// C Grade Coin
+// Advanced Weapons Box
+61,1130,1	// Nagan
+61,1131,1	// Ice_Falchon
+61,1132,1	// Edge
+61,1133,1	// Fire_Brand
+61,1134,1	// Caesar's Sword
+61,1135,1	// Cutlas
+61,1136,1	// Solar_Sword
+61,1137,1	// Excalibur
+61,1138,1	// Mysteltainn
+61,1139,1	// Tirfing
+61,1140,1	// Byeollungum
+61,1141,1	// Immaterial_Sword
+61,1148,1	// Star_Dust_Blade
+61,1164,1	// Muramasa
+61,1165,1	// Masamune
+61,1166,1	// Dragon_Slayer
+61,1167,1	// Schweizersabel
+61,1168,1	// Zweihander
+61,1169,1	// Executioner
+61,1170,1	// Katzbalger
+61,1171,1	// Zweihander_
+61,1175,1	// Altas_Weapon
+61,1176,1	// Muscle_Cutter
+61,1178,1	// Schweizersabel_
+61,1179,1	// Executioner__
+61,1180,1	// Dragon_Slayer_
+61,1181,1	// Tae_Goo_Lyeon
+61,1182,1	// Bloody_Eater
+61,1185,1	// Violet_Fear
+61,1186,1	// Death_Guidance
+61,1188,1	// Veteran_Sword
+61,1189,1	// Krasnaya
+61,1196,1	// Chrome_Metal_Two-Hand_Sword
+61,1223,1	// Forturn_Sword
+61,1224,1	// Sword_Breaker
+61,1225,1	// Mail_Breaker
+61,1227,1	// Weeder_Knife
+61,1228,1	// Combat_Knife
+61,1229,1	// Kitchen_Knife
+61,1230,1	// Ice_Pick
+61,1231,1	// Bazerald
+61,1232,1	// Assasin_Dagger
+61,1233,1	// Exorciser
+61,1234,1	// Moonlight_Dagger
+61,1235,1	// Azoth
+61,1236,1	// Sucsamad
+61,1237,1	// Grimtooth
+61,1240,1	// Princess_Knife
+61,1241,1	// Cursed_Dagger
+61,1242,1	// Counter_Dagger
+61,1244,1	// Holy_Dagger
+61,1261,1	// Infiltrator
+61,1263,1	// Unholy_Touch
+61,1265,1	// Bloody_Roar
+61,1266,1	// Infiltrator_
+61,1268,1	// Wild_Beast_Claw
+61,1269,1	// Inverse_Scale
+61,1270,1	// Drill_Katar
+61,1271,1	// Blood_Tears
+61,1284,1	// Krishna
+61,1285,1	// Chakram
+61,1305,1	// Cleaver
+61,1311,1	// Vecer_Axe
+61,1363,1	// Bloody_Axe
+61,1364,1	// Great_Axe
+61,1365,1	// Sabbath
+61,1366,1	// Light Epsilon
+61,1367,1	// Slaughter
+61,1368,1	// Tomahawk
+61,1369,1	// Guillotine
+61,1370,1	// Doom_Slayer
+61,1371,1	// Doom_Slayer_
+61,1376,1	// Heart_Breaker
+61,1377,1	// Hurricane_Fury
+61,1385,1	// Bradium_Stonehammer
+61,1387,1	// Giant_Axe
+61,1413,1	// Gungnir
+61,1414,1	// Gelerdria
+61,1415,1	// Brocca
+61,1416,1	// Tjungkuletti
+61,1418,1	// Gungnir_
+61,1420,1	// Long_Horn
+61,1421,1	// Battle_Hook
+61,1422,1	// Hunting_Spear
+61,1433,1	// Imperial_Spear
+61,1466,1	// Crescent_Scythe
+61,1467,1	// Bill_Guisarme
+61,1468,1	// Zephyrus
+61,1469,1	// Longinus's_Spear
+61,1470,1	// Brionac
+61,1471,1	// Hell_Fire
+61,1473,1	// Wizardy_Staff
+61,1474,1	// Gae_Bolg
+61,1477,1	// Spectral_Spear
+61,1478,1	// Ahlspiess,
+61,1479,1	// Spectral_Spear_
+61,1480,1	// Gae_Bolg_
+61,1481,1	// Zephyrus_
+61,1484,1	// Cardo
+61,1523,1	// Spike
+61,1524,1	// Golden_Mace
+61,1525,1	// Long_Mace
+61,1527,1	// Quadrille
+61,1528,1	// Grand_Cross
+61,1538,1	// Spike_
+61,1539,1	// Golden_Mace_
+61,1540,1	// Grand_Cross_
+61,1541,1	// Nemesis
+61,1557,1	// Book_Of_The_Apocalypse
+61,1558,1	// Girl's_Diary
+61,1559,1	// Legacy_Of_Dragon
+61,1561,1	// Hardcover_Book
+61,1562,1	// Battlefield_Textbook
+61,1565,1	// Ledger of Death
+61,1616,1	// Wing Staff
+61,1629,1	// Gentleman's Staff
+61,1631,1	// Holy_Stick
+61,1636,1	// Thorn_Staff
+61,1637,1	// Eraser
+61,1643,1	// Dead_Tree_Cane
+61,1654,1	// Mental_Stick
+61,1719,1	// Bow_Of_Roguemaster
+61,1720,1	// Bow_Of_Rudra
+61,1722,1	// Ballista
+61,1724,1	// Dragon_Wing
+61,1725,1	// Bow_Of_Minstrel
+61,1727,1	// Balistar_
+61,1737,1	// Ixion_Wing
+61,1740,1	// Nepenthes_Bow
+61,1741,1	// Cursed_Lyre
+61,1745,1	// Falken_Blitz
+61,1813,1	// Kaiser_Knuckle
+61,1814,1	// Berserk
+61,1815,1	// Claw_Of_Garm
+61,1816,1	// Berserk_
+61,1830,1	// Great_King's_Dance
+61,1913,1	// Electronic_Guitar
+61,1918,1	// Oriental_Lute
+61,1920,1	// Berserk_Guitar
+61,1922,1	// Oriental_Lute_
+61,1926,1	// Harp_Of_Nepenthes
+61,1930,1	// Green_Whistle
+61,1962,1	// Lariat_Whip
+61,1963,1	// Rapture_Rose
+61,1964,1	// Chemeti_Whip
+61,1969,1	// Blade_Whip
+61,1970,1	// Queen's_Whip
+61,1972,1	// Electric_Eel
+61,1973,1	// Sea_Witch_Foot
+61,1974,1	// Carrot_Whip
+61,1976,1	// Queen's_Whip_
+61,1979,1	// Stem_Of_Nepenthes
+61,1984,1	// Stem_Whip
+61,1985,1	// Rose_Vine
+61,2000,1	// Destruction_Rod
+61,2001,1	// Divine_Cross
+61,2004,1	// Kronos
+61,2005,1	// Dea_Staff
+61,13046,1	// Krieg
+61,13047,1	// Weihna
+61,13061,1	// Black_Wing
+61,13062,1	// Ancient_Dagger
+61,13421,1	// Ruber
+61,13431,1	// Chrome_Metal_Sword
+61,16000,1	// Erde
+61,16001,1	// Red_Square_Bag
+61,16010,1	// Red_Ether_Bag
+61,18103,1	// Mystic_Bow
+// Splendid_Box
+62,1189,1	// Krasnaya
+62,1191,1	// Alca Bringer
+62,1196,1	// Two-Handed Chrome Metal Sword
+62,1284,1	// Krishna
+62,1285,1	// Chakram
+62,1287,1	// Durga
+62,1311,1	// Vecer Axe
+62,1387,1	// Giant Axe
+62,1433,1	// Imperial Spear
+62,1649,1	// Laphine Staff
+62,1745,1	// Falken Blitz
+62,1746,1	// Elven Bow
+62,1930,1	// Green Whistle
+62,1984,1	// Stem Whip
+62,2148,1	// Rosa Shield
+62,2153,1	// Imperial Guard
+62,13046,1	// Krieg
+62,13047,1	// Weihna
+62,13061,1	// Black Wing
+62,13421,1	// Ruber
+62,15000,1	// Bone Plate
+62,15014,1	// Ebone Armor
+62,16000,1	// Erde
+62,16001,1	// Red Square Bag
+62,16003,1	// Carga Mace
+62,16010,1	// Red Ether Bag
+62,18103,2	// Mystic Bow
