@@ -1807,7 +1807,7 @@ packet_ver: 31
 0x0815,-1,openbuying,2:4:8:9:89
 0x0817,2,closebuying,0
 0x083c,10,useskilltoid,2:4:6
-0x0856,26,friendslistadd,2
+0x023b,26,friendslistadd,2
 0x0940,-1,buyingsellreq,2:4:8:12
 0x096a,6,getcharnamerequest,2
 
