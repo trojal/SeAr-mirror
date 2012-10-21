@@ -4862,6 +4862,7 @@
 
 1904,Bomb Poring@NPC_SELFDESTRUCTION,attack,173,2,10000,3000,0,no,self,always,0,,,,,,
 1904,Bomb Poring@NPC_SELFDESTRUCTION,chase,173,2,10000,3000,0,no,self,always,0,,,,,,
+1904,Bomb Poring@NPC_SELFDESTRUCTION,idle,173,2,10000,3000,0,no,self,always,0,,,,,,
 
 // Satan Morroc (12.1)
 //5% HP - Dragon Fear
