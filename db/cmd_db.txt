@@ -54,7 +54,7 @@ cash,1,1,{ set .@i, atoi(@cmd_para$[0]); set #CASHPOINTS, #CASHPOINTS+.@i; dispm
 points,1,1,{ set .@i, atoi(@cmd_para$[0]); set #KAFRAPOINTS, #KAFRAPOINTS+.@i; dispmes "得到"+.@i+"卡普拉点数, 总共"+#KAFRAPOINTS+"点"; }
 
 // 增加金钱
-zeny,1,1,{ set .@i, atoi(@cmd_para$[0]); set ZENY, ZENY + .@i; dispmes msg(176); }
+zeny,1,1,{ set .@i, atoi(@cmd_para$[0]); set ZENY, ZENY + .@i; dispmes msg(176,.@i); }
 
 // 创造一个道具，用名称或者ID都可以
 item,1,2,{ set .@i, atoi(@cmd_para$[0]); set .@j, atoi(@cmd_para$[1]); if(.@j < 1) set .@j, 1; if( existitem(.@i) ){ if( !checkweight(.@i,.@j) ) { dispmes "物品栏已满或负重太小"; end; }  getitem .@i, .@j; } else if( existitem(@cmd_para$[0]) ) { if( !checkweight(@cmd_para$[0],.@j) ) { dispmes "物品栏已满或负重太小"; end; } getitem @cmd_para$[0], .@j; } else { dispmes msg(19); end; } dispmes msg(18); }

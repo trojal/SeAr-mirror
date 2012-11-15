@@ -524,6 +524,7 @@ bAddEleRace	1920
 bSkillAtkRace	1925
 bSkillAtkEle	1926
 bSkillDef	1927
+bSubFixedCastRate	1932
 
 bRestartFullRecover	2000
 bNoCastCancel	2001

@@ -862,7 +862,7 @@
 1585,Upg_Book,强化书籍,4,20,,600,45,,1,1,0x00410100,7,2,2,3,1,1,15,{ bonus bMatk,20+(5*getrefine()); bonus bAtk,10*getrefine(); if(BaseLevel >= 70) { bonus bAtk,5*((BaseLevel-69)/10); } },{},{}
 1586,Vellum_Bible,战争圣言之书,4,20,,600,110,,1,0,0x00410100,7,2,2,4,95,1,15,{ bonus bMatk,125; if(BaseLevel > 104) { bonus bHealPower2,(BaseLevel/5)-20; } if(getrefine() >= 6) { bonus2 bCooldownRate,"AB_LAUDAAGNUS",-100; bonus2 bCooldownRate,"AB_LAUDARAMUS",-100; bonus2 bCooldownRate,"AB_CLEARANCE",-100; bonus2 bUseSPValue,"AB_LAUDAAGNUS",60; bonus2 bUseSPValue,"AB_LAUDARAMUS",60; bonus2 bUseSPValue,"AB_CLEARANCE",60; } },{},{}
 1587,Vellum_Encyclopedia,战争大百科全书,4,20,,1000,130,,1,0,0x00410100,7,2,2,4,95,1,15,{ bonus2 bAddRace,RC_Player,80+getrefine(); bonus2 bIgnoreDefRate,RC_Player,30; if(getrefine() >= 9) { autobonus "{ bonus bBaseAtk,200; }",20,3000,BF_WEAPON,"{ specialeffect2 EF_ENHANCE; }"; } },{},{}
-1599,Angra_Manyu,圣锤 十字星,4,1,,10,1000,,2,0,0xFFFFFFFF,7,2,2,1,1,1,8,{ bonus bMatkRate,1000; bonus bAllStats,50; bonus bBaseAtk,3800; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddRace,RC_NonBoss,100; bonus2 bAddRace,RC_Boss,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; /*skill "GM_SANDMAN",1;*/ bonus bFixedCastRate,-100; },{},{}
+1599,Angra_Manyu,圣锤 十字星,4,1,,10,1000,,2,0,0xFFFFFFFF,7,2,2,1,1,1,8,{ bonus bMatkRate,1000; bonus bAllStats,50; bonus bBaseAtk,3800; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddRace,RC_NonBoss,100; bonus2 bAddRace,RC_Boss,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; /*skill "GM_SANDMAN",1;*/ bonus bSubFixedCastRate,100; },{},{}
 // Staffs
 1601,Rod,手杖,4,50,,400,15,,1,3,0x00818315,7,2,2,1,1,1,10,{ bonus bMatk,30; },{},{}
 1602,Rod_,手杖,4,50,,400,15,,1,4,0x00818315,7,2,2,1,1,1,10,{ bonus bMatk,30; },{},{}
@@ -912,7 +912,7 @@
 1646,La'cryma_Stick,拉格利玛之杖,4,20,,500,30,,1,2,0x00010204,2,2,2,3,50,1,10,{ bonus bMatk,180; bonus bInt,4; bonus bMdef,getrefine(); bonus2 bSkillAtk,"WZ_STORMGUST",getrefine(); if (getrefine() > 9) bonus2 bCastRate,"WZ_STORMGUST",-8; },{},{}
 1647,Croce_Staff,红十字杖,4,20,,500,30,,1,1,0x00008110,2,2,2,3,50,1,10,{ bonus bMatk,175; bonus bAtkEle,Ele_Holy; bonus bInt,4; bonus4 bAutoSpellOnSkill,"AL_HEAL","AL_BLESSING",getskilllv("AL_BLESSING")>1?getskilllv("AL_BLESSING"):1,20; },{},{}
 1648,Staff_Of_Bordeaux,波尔多之杖,4,20,,500,30,,1,0,0x00010204,2,2,2,4,50,1,10,{ bonus bMatk,170; bonus bInt,2; bonus bDex,1; if(getskilllv("SA_DRAGONOLOGY") == 5) { bonus bUseSPrate,-15; bonus bInt,3; } },{},{}
-1649,Rafini_Staff,拉菲尼之杖,4,20,,500,30,,1,0,0x00018300,8,2,2,3,100,1,10,{ bonus bMatk,180; bonus bFixedCastRate,-getrefine(); },{},{}
+1649,Rafini_Staff,拉菲尼之杖,4,20,,500,30,,1,0,0x00018300,8,2,2,3,100,1,10,{ bonus bMatk,180; bonus bSubFixedCastRate,getrefine(); },{},{}
 1650,P_Staff1,P.杖Ⅰ,4,0,,0,60,,1,0,0x00818314,7,2,2,2,26,0,10,{ bonus bMatk,125; bonus bInt,2; },{},{}
 1651,P_Staff2,P.杖Ⅱ,4,0,,0,60,,1,0,0x00818314,7,2,2,2,40,0,10,{ bonus bMatk,150; bonus bInt,3; },{},{}
 1652,Tourist_Staff,Tourist Staff,4,0,,500,35,,1,0,0x00818315,7,2,2,1,1,0,10,{ bonus bMatkRate,15; bonus bInt,2; bonus bAgi,1; },{},{}
@@ -2253,10 +2253,10 @@
 4453,Hilsrion_Card,希斯利安卡片,6,20,,10,,,,,,,,2,,,,,{ bonus bAtk,25; },{},{}
 //4454
 //4455
-4456,Nidhoggr_Card,尼德霍格的影子卡片,6,20,,10,,,,,,,,16,,,,,{ bonus bInt,5; if(Class == Job_Warlock || Class == Job_Warlock_H || Class == Job_High_Wizard) bonus bFixedCastRate,-50; },{},{}
+4456,Nidhoggr_Card,尼德霍格的影子卡片,6,20,,10,,,,,,,,16,,,,,{ bonus bInt,5; if(Class == Job_Warlock || Class == Job_Warlock_H || Class == Job_High_Wizard) bonus bSubFixedCastRate,50; },{},{}
 4457,Naght_Sieger_Card,夜胜魔卡片,6,20,,10,,,,,,,,16,,,,,{ bonus2 bSkillAtk,"MG_NAPALMBEAT",30; bonus2 bSkillAtk,"MG_SOULSTRIKE",30; bonus2 bSkillAtk,"WL_SOULEXPANSION",30; /*bonus2 bSkillAtk,"HW_NAPALMVULCAN",30;*/ },{},{}
 4458,Duneyrr_Card,杜涅尔卡片,6,20,,10,,,,,,,,769,,,,,{ bonus bBaseAtk,10; autobonus2 "{ bonus bFlee2,10; }",5,4000,BF_WEAPON,"{ specialeffect2 EF_COIN; }"; },{},{}
-4459,Rata_Card,松鼠人卡片,6,20,,10,,,,,,,,769,,,,,{ bonus bMatk,10; autobonus2 "{ bonus bFixedCastRate,-50; }",5,4000,BF_MAGIC,"{ specialeffect2 EF_COIN; }"; },{},{}
+4459,Rata_Card,松鼠人卡片,6,20,,10,,,,,,,,769,,,,,{ bonus bMatk,10; autobonus2 "{ bonus bSubFixedCastRate,50; }",5,4000,BF_MAGIC,"{ specialeffect2 EF_COIN; }"; },{},{}
 4460,Rhyncho_Card,水娃娃卡片,6,20,,10,,,,,,,,769,,,,,{ bonus bHealPower,4; bonus2 bUseSPValue,"AL_HEAL",15; },{},{}
 4461,Phylla_Card,瓶子姑娘卡片,6,20,,10,,,,,,,,769,,,,,{ bonus bDex,1; bonus bAgi,1; autobonus2 "{ bonus bCritical,20; }",5,4000,BF_WEAPON,"{ specialeffect2 EF_COIN; }"; },{},{}
 4462,Hardrock_Mammoth_Card,硬石猛犸卡片,6,20,,10,,,,,,,,16,,,,,{ bonus bDef,5; if(getrefine() > 11) { bonus bDef,20; bonus bMaxHPrate,10; } if(getrefine() > 13) { bonus bMaxHPrate,3; } },{},{}
@@ -6534,7 +6534,7 @@
 15009,Para_Team_Uniform1,乐园团 制服Ⅰ,5,0,,0,,35,,0,0xFFFFFFFF,7,2,16,,12,0,0,{ bonus bMaxHP,100; bonus bMaxSP,10; },{},{}
 15010,Para_Team_Uniform2,乐园团 制服Ⅱ,5,0,,0,,46,,0,0xFFFFFFFF,7,2,16,,26,0,0,{ bonus bMaxHP,200; bonus bMaxSP,20; },{},{}
 15011,Para_Team_Uniform3,乐园团 制服Ⅲ,5,0,,0,,58,,0,0xFFFFFFFF,7,2,16,,40,0,0,{ bonus bMaxHP,300; bonus bMaxSP,30; bonus bMdef,5; },{},{}
-15012,Purity_Robe,纯洁长袍,5,20,,400,,42,,1,0xFFFFFFFF,7,2,16,,22,1,0,{ bonus bFixedCastrate,-3; bonus bHealPower,5; },{},{}
+15012,Purity_Robe,纯洁长袍,5,20,,400,,42,,1,0xFFFFFFFF,7,2,16,,22,1,0,{ bonus bSubFixedCastrate,3; bonus bHealPower,5; },{},{}
 15013,Clair_Suit,克莱尔外套,5,20,,2800,,58,,1,0xFFFFFFFE,7,2,16,,22,1,0,{},{},{}
 15014,Black_Armor,漆黑盔甲,5,20,,4500,,93,,1,0x00004080,8,2,16,,100,1,0,{},{},{}
 15015,Upg_Adventure_Suit,强化冒险衣,5,20,,150,,25,,1,0xFFFFFFFF,7,2,16,,1,1,0,{ bonus bMaxHPRate,3; },{},{}

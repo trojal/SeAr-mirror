@@ -45,6 +45,7 @@ bonus bFixedAspd,n;			攻击速度固定为 + n%
 bonus bAtkRange,n;			攻击距离 + n
 bonus bCastrate,n;			可变咏唱时间 + n%
 bonus bFixedCastRate,n;			固定咏唱时间 + n%
+bonus bSubFixedCastRate,n;		固定咏唱时间 - n%(仅最大值有效)
 bonus bDelayrate,n;			延迟时间 + n%
 bonus bCooldownRate,n;			冷却时间 + n%
 bonus bCastValue,n;			增加 n 毫秒可变咏唱时间
