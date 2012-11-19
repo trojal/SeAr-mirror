@@ -170,7 +170,7 @@ bonus bPerfectHitAddRate,n;		必中攻击率 + n%
 bonus2 bExpAddRace,n,r;			对种族 r 增加 n% 经验 (r值见备注1)
 bonus2 bWeaponComaRace,x,y;		攻击时，y/100% 使种族为 x 的对方得到濒死状态。(x值见备注1)
 bonus2 bWeaponComaEle,x,y;		攻击时，y/100% 使属性为 x 的对方得到濒死状态。(x值见备注2)
-bonus bMonsterAddDropItem,n;		增加 n% 掉率
+bonus bAddMonsterDropItem,n;		增加 n% 掉率
 bonus bAddStealRate,n;			增加偷窃成功率 n/100%
 bonus2 bAddSkillBlow,x,y;		使用技能 x 时击退 y 格 (支持技能名)
 bonus2 bAddItemHealRate,n,x;		使用 n 类型的物品时，恢复量 +x% (也可以直接使用ItemID代替。n类型在item_group_db.txt中定义)
