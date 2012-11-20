@@ -113,12 +113,13 @@ bonus2 bUseSPrate,x,n;			技能 x SP消耗 + n%
 bonus2 bUseSPValue,x,n;			技能 x SP消耗 + n
 bonus2 bSPGainValueOnSKill,x,n;		使用技能 x 后得到SP n
 bonus2 bHPGainValueOnSKill,x,n;		使用技能 x 后得到HP n
-bonus2 bSPDrainValue,n,x;		物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
-bonus2 bSPDrainValueRace,r,x;		物理攻击时, 种族为 r 的对象 SP 变化 n
-bonus2 bSPVanishRate,n,x;		攻击时 n/10 % 几率减少 x% 对方SP
-bonus2 bHPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到HP
-bonus2 bSPDrainRate,n,x;		攻击时 n/10 % 几率把伤害的 x% 应用到SP
-bonus3 bSPDrainRate,n,x,y;		物理攻击时, n 几率把伤害的 x% 应用到 y 的SP (y 0: 自己, 1: 对方)
+bonus2 bSPDrainValue,n,x;		单体物理物理攻击时, x 的 SP 变化 n (x 0: 自己, 1: 对方)
+bonus2 bSPDrainValueRace,r,x;		单体物理物理攻击时, 种族为 r 的对象 SP 变化 n
+bonus2 bSPVanishRate,n,x;		单体物理攻击时 n/10 % 几率减少 x% 对方SP
+bonus2 bSPVanishMagicRate,n,x;		魔法攻击时 n/10 % 几率减少 x% 对方SP
+bonus2 bHPDrainRate,n,x;		单体物理攻击时 n/10 % 几率把伤害的 x% 应用到HP
+bonus2 bSPDrainRate,n,x;		单体物理攻击时 n/10 % 几率把伤害的 x% 应用到SP
+bonus3 bSPDrainRate,n,x,y;		单体物理攻击时, n 几率把伤害的 x% 应用到 y 的SP (y 0: 自己, 1: 对方)
 bonus2 bSPGainRace,n,x;			物理攻击杀死 n 种族怪物时，得到 x 点SP (种族n在mob_race2_db.txt中定义)
 bonus2 bHPRegenRate,n,x;		每 x 毫秒得到 n HP
 bonus2 bHPLossRate,n,x;			每 x 毫秒失去 n HP

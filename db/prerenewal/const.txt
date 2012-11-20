@@ -504,6 +504,7 @@ bHealPower2	1091
 bEleMagicAddRate	1092
 bSPForceVanishRate	1093
 bHPForceVanishRate	1094
+bSPVanishMagicRate	1095
 
 bFixDamage	1900
 bBonusDamage	1901
