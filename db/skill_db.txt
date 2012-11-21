@@ -797,7 +797,7 @@
 2269,0,6,4,0,0x1,0,1,0,no,0,0,0,none,0,		NC_EMERGENCYCOOL,紧急制冷
 2270,0,6,4,0,0x3,7,1,0,no,0,0,0,weapon,0,	NC_INFRAREDSCAN,红外扫描
 2271,7,6,1,0,0x3,3,3,0,no,0,0,0,none,0,		NC_ANALYZE,分析
-2272,0,6,4,0,0x1,0,3,1,yes,0,0,0,none,0,	NC_MAGNETICFIELD,磁场
+2272,0,6,4,0,0x1,2,3,1,yes,0,0,0,none,0,	NC_MAGNETICFIELD,磁场
 2273,0,6,4,0,0x1,0,3,0,no,0,0,0,none,0,		NC_NEUTRALBARRIER,中粒子屏障
 2274,0,6,4,0,0x1,0,3,1,yes,0,0,0,none,0,	NC_STEALTHFIELD,光学迷彩立场
 2275,9,6,16,0,0x1,0,5,0,no,0,0,0,none,0,	NC_REPAIR,机械维修
