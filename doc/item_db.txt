@@ -74,6 +74,8 @@ Upper: Equippable upper-types. Uses the following bitmasks:
 	8: 限定三转职业
 	16: 限定转生三转职业
 	32: 限定宝宝三转职业
+	注意: Kagerou/Oboro, Taekwon, StarGladi, Soul Linker, Gunslinger, Ninja等没有进阶、三转或宝宝的职业
+	将无视Upper设定,即Job设定0xFFFFFFFF，Upper设定2，不能由于Ninja没有进阶而阻止其装备(使用)物品。
 
 Gender: Gender restriction. 0 is female, 1 is male, 2 for both.
 
