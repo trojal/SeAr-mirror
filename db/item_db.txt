@@ -6842,7 +6842,7 @@
 16017,Bloody_Cross,嗜血十字锤,4,20,,1500,170,,1,0,0x00008110,2,2,2,4,100,1,8,{ bonus bAtkEle,Ele_Dark; bonus5 bAutoSpell,"WL_HELLINFERNO",1,10+5*getrefine(),BF_SHORT,1; },{},{}
 16019,Upg_Mace,强化铁锤,4,20,,800,80,,1,1,0x0004C5B3,7,2,2,3,1,1,8,{ bonus bAtk,10*getrefine(); bonus bHealPower,getrefine(); if(BaseLevel >= 70) { bonus bAtk,5*((BaseLevel-69)/10); } },{},{}
 16020,Vellum_Stunner,战争昏迷之锤,4,20,,1500,170,,1,0,0x0004C5B3,7,2,2,4,95,1,8,{ bonus bUnbreakableWeapon,0; bonus2 bAddEff,Eff_Stun,1000+getrefine(); bonus bAspdRate,getrefine(); },{},{}
-16021,Vellum_Flail,战争链锤,4,20,,1500,170,,1,0,0x0004C5B3,7,2,2,4,95,1,8,{ bonus4 bAddEff,SC_HANDICAP_RECOVER,100,BF_NORMAL,13000; bonus bUnbreakableWeapon,0; bonus bHit,getrefine(); bonus bCritical,getrefine(); },{},{}
+16021,Vellum_Flail,战争链锤,4,20,,1500,170,,1,0,0x0004C5B3,7,2,2,4,95,1,8,{ bonus4 bAddEff,SC_HANDICAP_NORECOVER,100,BF_NORMAL,13000; bonus bUnbreakableWeapon,0; bonus bHit,getrefine(); bonus bCritical,getrefine(); },{},{}
 //
 16134,King_Frog_Hat_Box,青蛙王子头饰箱子,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5528,1; },{},{}
 16135,Evil's_Bone_Hat_Box,暗灵王子的愤怒箱子,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 5529,1; },{},{}
