@@ -249,6 +249,9 @@ bonus3 bAddEff,n,x,y;			¹¥»÷Ê± x/100% ¼¸ÂÊÔÚ y Ìõ¼þÏÂ²úÉú n ×´Ì¬ (nÖµ¼û±¸×¢4)(yÖ
 bonus3 bAddEffWhenHit,n,x,y;		ÊÜµ½¹¥»÷Ê± x/100% ¼¸ÂÊÔÚ y Ìõ¼þÏÂ²úÉú n ×´Ì¬ (nÖµ¼û±¸×¢4)(yÖµ¼û±¸×¢8)
 bonus3 bAddEffOnSkill,s,x,y;		y/100% ¼¸ÂÊÔÚÊ¹ÓÃ s ¼¼ÄÜÊ±¶Ô¼¼ÄÜ¶ÔÏó²úÉú x ×´Ì¬ (Ö§³Ö¼¼ÄÜÃû)(xÖµ¼û±¸×¢4)
 bonus4 bAddEffOnSkill,s,x,y,t;		y/100% ¼¸ÂÊÔÚÊ¹ÓÃ s ¼¼ÄÜÊ±ÔÚ t Ìõ¼þÏÂ²úÉú x ×´Ì¬ (Ö§³Ö¼¼ÄÜÃû)(xÖµ¼û±¸×¢4)(tÖµ¼û±¸×¢8)
+bonus4 bAddEff,n,x,y,z;			¹¥»÷Ê± x/100% ¼¸ÂÊÔÚ y Ìõ¼þÏÂ²úÉú n ×´Ì¬ z ºÁÃë(nÖµ¼û±¸×¢4)(yÖµ¼û±¸×¢8)
+bonus4 bAddEffWhenHit,n,x,y,z;		ÊÜµ½¹¥»÷Ê± x/100% ¼¸ÂÊÔÚ y Ìõ¼þÏÂ²úÉú n ×´Ì¬ z ºÁÃë (nÖµ¼û±¸×¢4)(yÖµ¼û±¸×¢8)
+bonus5 bAddEffOnSkill,s,x,y,t,z;	y/100% ¼¸ÂÊÔÚÊ¹ÓÃ s ¼¼ÄÜÊ±ÔÚ t Ìõ¼þÏÂ²úÉú x ×´Ì¬ z ºÁÃë (Ö§³Ö¼¼ÄÜÃû)(xÖµ¼û±¸×¢4)(tÖµ¼û±¸×¢8)
 
 //=========================================================
 //=×Ô¶¯Ó½³ª
@@ -292,27 +295,17 @@ bonus5 bAutoSpellOnSkill,x,y,n,r,i;	r/10% ¼¸ÂÊÔÚÊ¹ÓÃ x ¼¼ÄÜÊ±ÔÚ i Ìõ¼þÏÂ×Ô¶¯Ó½³ª
 ×¢3£º
 	n ±íÊ¾ (2*n+1)*(2*n+1)¸öµ¥Ôª¸ñ·¶Î§
 ×¢4£º
-	Eff_Blind	ºÚ°µ
-	Eff_Sleep	Ë¯Ãß
-	Eff_Poison	ÖÐ¶¾
-	Eff_Freeze	±ù¶³
-	Eff_Silence	³ÁÄ¬
-	Eff_Stun	ÔÎÑ£
-	Eff_Curse	×çÖä
-	Eff_Confusion	»ìÂÒ
-	Eff_Stone	Ê¯»¯
-	Eff_Bleeding	³öÑª
+	¿ÉÊ¹ÓÃËùÓÐSC_*»òEff_*£¬Ð§¹ûÏàÍ¬£¬¿ÉÒÔ»ìÓÃ
 ×¢5£º
 	0=Ð¡  1=ÖÐ  2=´ó
 ×¢6£º
 	Èç¹ûxÎª¸ºÊý, x = -x*(É±ËÀµÄÄ§ÎïµÈ¼¶/10)+1
 ×¢7£º
 	Èç¹ûxÎª¸ºÊý, ×î´ózenyÁ¿Îª -x*É±ËÀµÄÄ§ÎïµÈ¼¶
-×¢8£º
-	ATF_SELF:	×÷ÓÃÔÚ×Ô¼º
-	ATF_TARGET: 	×÷ÓÃÔÚ¶Ô·½(Ä¬ÈÏ¼¤»î)
-	ATF_SHORT:	ÔÚ½ü¾àÀë¹¥»÷Ê±(Ä¬ÈÏ¼¤»î)
-	ATF_LONG:	ÔÚÔ¶¾àÀë¹¥»÷Ê±(Ä¬ÈÏ¼¤»î)
+×¢8£º	
+	ATF_SELF	×÷ÓÃÔÚ×Ô¼º
+	ATF_SELF	×÷ÓÃÔÚ¶Ô·½(²»Ö¸¶¨Ê±Ä¬ÈÏ´ËÏî)
+	ÆäËûATF_*Í¬×¢10£¬Ô­ATF_*ÈÔÈ»ÓÐÐ§
 ×¢9£º
 	0=×÷ÓÃÔÚ×Ô¼º
 	1=×÷ÓÃÔÚ¶Ô·½
@@ -328,7 +321,7 @@ bonus5 bAutoSpellOnSkill,x,y,n,r,i;	r/10% ¼¸ÂÊÔÚÊ¹ÓÃ x ¼¼ÄÜÊ±ÔÚ i Ìõ¼þÏÂ×Ô¶¯Ó½³ª
 		´Ë×éÈô²»¶¨Òå£¬ÔòÄ¬ÈÏBF_WEAPON¡£
 	µÚ3×é:	BF_NORMAL:	ÆÕÍ¨¹¥»÷	
 		BF_SKILL:	¼¼ÄÜ¹¥»÷
-		´Ë×éÈô²»¶¨Òå£¬ÔòBF_WEAPONÊ±Ä¬ÈÏBF_NORMAL£¬·ñÔòBF_SKILL¡£
+		´Ë×éÈô²»¶¨Òå£¬ÔòBF_WEAPONÊ±Ä¬ÈÏBF_NORMAL|BF_SKILL£¬·ñÔòBF_SKILL¡£
 ×¢11£º
 	bAddDamageClassÏà¹Ø£¬bAddMonsterDropItemÏà¹Ø£¬bAddEffÏà¹Ø£¬bAutoSpellÏà¹Ø£¬Ö»ÄÜÉè¶¨10¸ö¡£³¬¹ý10¸öµÄ¶¼±»ÎÞÊÓ¡£
 ×¢12£º
