@@ -268,6 +268,12 @@ below). This object will load on every map server separately, so you can get at
 it from anywhere. It's not possible to call the code in this object by 
 anything other than the 'callfunc' script command.
 
+1.9.24更新无须使用callfunc来调用。
+例如:
+function	script	F_Test	{ return getarg(0) }
+原来使用callfunc "F_Test",1;
+现可使用F_Test(1);
+
 The code part is the script code that will execute whenever the function is 
 called with 'callfunc'. It has to be in curly brackets, unlike elsewhere where 
 we use curly brackets, these do NOT signify an optional parameter.
