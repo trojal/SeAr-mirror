@@ -1042,7 +1042,7 @@
 8039,0,6,4,3,0x2,1:1:1:2:2,5,1,no,0,0,0,weapon,0,	MH_MAGMA_FLOW,ÈÛÑÒ±¼Á÷
 8040,0,6,4,0,0x1,0,5,1,no,0,0,0,none,0,		MH_GRANITIC_ARMOR,»¨¸ÚÑÒ×°¼×
 8041,7,6,2,3,0x2,0,5,1,no,0,0,1,weapon,0,		MH_LAVA_SLIDE,ÑÒ½¬±À»¬
-8042,0,6,4,3,0x1,0,5,1,no,0,0,0,none,0,		MH_PYROCLASTIC,ÈÛÑÒ×¶
+8042,0,6,4,3,0x1,0,5,1,yes,0,0,0,none,0,		MH_PYROCLASTIC,ÈÛÑÒ×¶
 8043,7,6,2,0,0x1,0,5,1,no,0,0,3,none,0,		MH_VOLCANIC_ASH,»ðÉ½»Ò
 // Mercenary Skill Place holders
 8201,-1,6,1,-1,0,0,10,1,no,0,0,0,weapon,0,	MS_BASH,¿ñ»÷
