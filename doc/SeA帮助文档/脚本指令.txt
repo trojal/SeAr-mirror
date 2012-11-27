@@ -81,7 +81,7 @@ explanation, see 'setmapflag'.
 
 ** 创建可重生魔物:
 
-<map name>,<x>,<y>,<xs>,<ys>%TAB%monster%TAB%<monster name>%TAB%<mob id>,<amount>,<delay1>,<delay2>,<event>
+<地图名>,<x>,<y>,<xs>,<ys>%TAB%monster%TAB%<魔物名字>{,<魔物等级>}%TAB%<魔物ID>,<数量>,<延迟1>,<延迟2>,<事件>{,<大小>,<魔物ai>} 
 
 Map name is the name of the map the monsters will spawn on. x,y are the
 coordinates where the mob should spawn. If xs and ys are non-zero, they
