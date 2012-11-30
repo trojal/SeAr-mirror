@@ -6090,6 +6090,176 @@ atoi 转换十进制数字而 axtoi 转换十六进制.
 
 ---------------------------------------
 
+*charat("<字符串>",<位置>)
+
+返回字符串中特定位置的字符. 如果位置超出范围，则返回空字符串.
+	
+例如:
+	
+	charat("This is a string", 10); //返回 "s"
+	
+---------------------------------------
+	
+*setchar("<字符串>","<字母>",<位置>)
+
+对已有字符串中某位置设置字母。如果位置超出范围，则返回原字符串。
+如果字母不只有一个字符，只有第一个字母会被使用。
+	
+例如:
+	
+	setchar("Cat", "B", 0); //returns "Bat"
+	
+---------------------------------------
+
+*insertchar("<字符串>","<字母>",<位置>)
+	
+对已有字符串中某位置插入字母。如果位置超出范围，则返回原字符串。
+如果字母不只有一个字符，只有第一个字母会被使用。
+	
+例如:
+	
+	insertchar("laughter", "s", 0); //returns "slaughter"
+	
+---------------------------------------
+
+*delchar("<字符串>",<位置>)
+
+删除字符串中特定位置的字符. 如果位置超出范围，则返回原字符串.
+	
+例如:
+	
+	delchar("Diet", 3); //returns "Die"
+	
+---------------------------------------
+
+*strtoupper("<字符串>")
+*strtolower("<字符串>")
+
+返回字符串的大写/小写形式，所有非字母将被保留
+	
+例如:
+	
+	strtoupper("The duck is blue!!"); //returns "THE DUCK IS BLUE!!"
+
+---------------------------------------
+
+*charisupper("<字符串>",<位置>)
+*charislower("<字符串>",<位置>)
+
+如果字符串是大写/小写则返回1，否则0；非字母返回0；
+
+例如:
+	
+	charisupper("SeAr", 1); //returns 0
+	
+---------------------------------------
+
+*substr("<字符串>",<起始位置>,<结束位置>)
+	
+返回字符串指定位置之间的子字符串. 如果位置超过范围或，起始位置大于结束位置则返回空字符串.
+
+例如:
+	
+	substr("foobar", 3, 5); //returns "bar"
+	
+---------------------------------------
+
+*explode(<目标数组>,"<字符串>","<标示符>")
+
+基于标示符把字符串分解为子字符串。子字符串将储存在指定数组里。
+如果标示符有多个字符，则只有第一个被使用。
+如果没有标示符，字符串将按原样放进数组。
+
+Example:
+	
+	explode(.@my_array$, "Explode:Test:1965:red:PIE", ":");
+	//.@my_array$ contents will be...
+	//.@my_array$[0]: "Explode"
+	//.@my_array$[1]: "Test"
+	//.@my_array$[2]: "1965"
+	//.@my_array$[3]: "red"
+	//.@my_array$[4]: "PIE"
+
+---------------------------------------
+
+*implode("字符串"{,<粘合符>})
+
+把子字符串粘合成一个字符串。
+如果指定粘合符，那么粘合符将存在于每个子字符串之间。
+	
+Example:
+	setarray .@my_array$[0], "This", "is", "a", "test";
+	implode(.@my_array$, " "); //returns "This is a test"
+
+---------------------------------------
+
+*sprintf(<格式>[,参数[,参数[,...]]]) [Mirei]
+
+C style sprintf. 
+The resulting string is returned same as in PHP. 
+除了 %n 以外的C符号都支持. 
+More info: sprintf @ www.cplusplus.com. 
+参数数量受限于脚本引擎
+
+Example:
+	.@format$ = 'The %s contains %d monkeys';
+	dispbottom(sprintf(.@format$, "zoo", 5));        //prints "The zoo contains 5 monkeys"
+	dispbottom(sprintf(.@format$, "barrel", 82));    //prints "The barrel contains 82 monkeys"
+	
+---------------------------------------
+
+*sscanf(<string>,<format>[,param[,param[,...]]]) [Mirei]
+	
+C style sscanf. 
+所有C格式的指示符都支持. 
+More info: sscanf @ www.cplusplus.com. 
+参数数量受限于脚本引擎
+
+Example:
+	sscanf("This is a test: 42 foobar", "This is a test: %d %s", .@num, .@str$);
+	dispbottom(.@num + " " + .@str$); //prints "42 foobar"
+	
+---------------------------------------
+
+*strpos("<字符串>", "<子字符串>"{,<序号>})
+
+PHP style strpos. 
+在字符串中搜索子字符串，并返回其起始位置.
+序号标示要返回第几个找到的目标。
+如果没有找到则返回-1.
+区分大小写
+
+Example:
+	strpos("foobar", "bar", 0); //returns 3
+	strpos("foobarfoo", "foo", 0); //returns 0
+	strpos("foobarfoo", "foo", 1); //returns 6
+	
+---------------------------------------
+
+*replacestr("<字符串>", "<子字符串1>", "<子字符串2>"{, <大小写>{, <数量>}})
+
+在字符串中搜索子字符串1并替换为字符串2.
+除非大小写设定为0，否则默认区分大小写。
+除非指定数量时按顺序替换指定个数，否则将全部替换子字符串1。
+返回替换结果。
+
+Example:
+	replacestr("testing tester", "test", "dash"); //returns "dashing dasher"
+	replacestr("Donkey", "don", "mon", 0);	//returns "monkey"
+	replacestr("test test test test test", "yay", 0, 3); //returns "yay yay yay test test"
+	
+---------------------------------------
+
+*countstr("<字符串>", "<子字符串>"{, <大小写>})
+
+计算字符串中包含的子字符串. 除非大小写设定为0，否则默认区分大小写。
+
+Example:
+	countstr("test test test Test", "test"); //returns 3
+	countstr("cake Cake", "Cake", 0); //returns 2
+
+---------------------------------------
+
 *wedding_effect;
 结婚成功是播放结婚效果 (音乐等)
 结婚脚本中有实例.
