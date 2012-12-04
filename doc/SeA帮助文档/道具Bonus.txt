@@ -100,7 +100,7 @@ bonus bMaxHP,n;				HP上限 + n
 bonus bMaxSP,n;				SP上限 + n
 bonus bMaxHPrate,n;			HP上限 + n% 
 bonus bMaxSPrate,n;			SP上限 + n%
-bonus bAddHealRate,n			恢复类道具效果上升 n%
+bonus bAddItemHealRate,n		恢复类道具效果上升 n%
 bonus bHPrecovRate,n;			HP自然恢复率 + n%
 bonus bSPrecovRate,n;			SP自然恢复率 + n%
 bonus bSPGainValue,n;			以物理攻击杀死魔物时得到 n SP
