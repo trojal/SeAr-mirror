@@ -522,6 +522,10 @@ bCooldownValue	1911
 bDelayValue	1912
 bUseSPValue	1913
 bNoSkill	1914
+bFixedDef	1916
+bFixedDef2	1917
+bFixedMdef	1918
+bFixedMdef2	1919
 bAddEleRace	1920
 bSkillAtkRace	1925
 bSkillAtkEle	1926
@@ -1201,6 +1205,7 @@ SC_SP_POTION_S	575
 SC_SP_POTION_M	576
 SC_SP_POTION_L	577
 SC_C_WHITE_POTION_Z	578
+SC_FIXED_DEF	579
 SC_HANDICAP_NORECOVER	710
 
 e_gasp	0

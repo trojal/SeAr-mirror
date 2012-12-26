@@ -522,6 +522,10 @@ bCooldownValue	1911
 bDelayValue	1912
 bUseSPValue	1913
 bNoSkill	1914
+bFixedDef	1916
+bFixedDef2	1917
+bFixedMdef	1918
+bFixedMdef2	1919
 bAddEleRace	1920
 bSkillAtkRace	1925
 bSkillAtkEle	1926

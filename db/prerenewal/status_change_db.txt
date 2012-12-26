@@ -159,6 +159,8 @@
 470,4	//SC_ADORAMUS
 479,125	//SC_PUSH_CART
 519,126	//SC_TRANSFORM
+521,1	//SC_LIGHT_OF_REGENE
+525,124	//SC_FIGHT_MODE
 570,126,{ bonus bASPDRate,10; }	//SC_CEROMAIN_SOUP
 571,126,{ bonus bMaxSPrate,5; bonus bSPrecovRate,20; }	//SC_VITATA_500
 572,126,{ bonus bMaxHP,500+BaseLevel*4/3; } //SC_HP_POTION_S
@@ -168,3 +170,4 @@
 576,126,{ bonus bMaxSPrate,BaseLevel/10; } //SC_SP_POTION_M
 577,126,{ bonus bMaxSPrate,BaseLevel/10+5; } //SC_SP_POTION_L
 578,126,{ bonus bHPrecovRate,20; }	//SC_C_WHITE_POTION_Z
+579,126,{ bonus bFixedDef,1; bonus bFixedDef2,1; bonus bFixedMdef,1; bonus bFixedMdef2,1; }	//SC_FIXED_DEF

@@ -5690,7 +5690,7 @@
 13069,As_Nail,绿光魔短剑,4,20,,500,160,,1,0,0x000654E2,2,2,2,4,110,1,1,{ bonus bMatk,80; bonus bAtkEle,Ele_Wind; bonus3 bAddEff,Eff_Freeze,100+5*getrefine(),ATF_SHORT|ATF_TARGET; },{},{}
 13070,Scarlet_Nail,红光魔短剑,4,20,,500,160,,1,0,0x000654E2,2,2,2,4,110,1,1,{ bonus bMatk,80; bonus bAtkEle,Ele_Fire; bonus3 bAddEff,Eff_Stone,100+5*getrefine(),ATF_SHORT|ATF_TARGET; },{},{}
 13071,Upg_Dagger,强化大驹短剑,4,20,,600,55,,1,1,0x028F5EEF,7,2,2,3,1,1,1,{ bonus bMatk,5*getrefine(); bonus bAtk,10*getrefine(); if(BaseLevel >= 70) { bonus bAtk,5*((BaseLevel-69)/10); } },{},{}
-13072,Vellum_Damascus,战争大马士革短剑,4,20,,1000,180,,1,0,0x028F5EEF,7,2,2,4,95,1,1,{ bonus2 bAddEff,Eff_Stun,1000; bonus bAspdRate,getrefine(); },{},{}
+13072,Vellum_Damascus,战争大马士革短剑,4,20,,1000,180,,1,0,0x028F5EEF,7,2,2,4,95,1,1,{ bonus4 bAddEff,SC_FIXED_DEF,10000,ATF_TARGET,5000; bonus bAspdRate,getrefine(); },{},{}
 13074,囱磊_窜八_矫力前,忍刀原型,4,20,,0,0,,1,0,0x02100000,7,2,2,4,99,1,1,{},{},{}
 13075,捻饭唱捞,红,4,20,,700,130,,1,1,0x02100000,7,2,2,3,99,1,1,{ bonus bInt,3; },{},{}
 13076,唱蔓八,千年忍刀,4,20,,600,120,,1,1,0x02100000,7,2,2,3,110,1,1,{ bonus bMatk,100; bonus bInt,3; },{},{}

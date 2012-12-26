@@ -305,7 +305,7 @@ bonus5 bAutoSpellOnSkill,x,y,n,r,i;	r/10% 几率在使用 x 技能时在 i 条件下自动咏唱
 	如果x为负数, 最大zeny量为 -x*杀死的魔物等级
 注8：	
 	ATF_SELF	作用在自己
-	ATF_SELF	作用在对方(不指定时默认此项)
+	ATF_TARGET	作用在对方(不指定时默认此项)
 	其他ATF_*同注10，原ATF_*仍然有效
 注9：
 	0=作用在自己

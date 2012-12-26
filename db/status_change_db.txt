@@ -170,3 +170,4 @@
 576,126,{ bonus bMaxSPrate,BaseLevel/10; } //SC_SP_POTION_M
 577,126,{ bonus bMaxSPrate,BaseLevel/10+5; } //SC_SP_POTION_L
 578,126,{ bonus bHPrecovRate,20; }	//SC_C_WHITE_POTION_Z
+579,126,{ bonus bFixedDef,1; bonus bFixedDef2,1; bonus bFixedMdef,1; bonus bFixedMdef2,1; }	//SC_FIXED_DEF
