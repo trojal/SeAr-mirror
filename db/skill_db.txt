@@ -693,7 +693,7 @@
 2026,9,6,16,5,0x1,0,1,1,no,0,0,0,weapon,0,	GC_ANTIDOTE,¸ß¼¶½â¶¾
 2027,0,6,4,0,0,0,5,0,no,0,0,0,none,0,		GC_POISONINGWEAPON,¾ç¶¾ÎäÆ÷
 2028,0,0,4,0,0,0,5,1,yes,0,0,0,weapon,0,	GC_WEAPONBLOCKING,ÎäÆ÷¸ñµ²
-2029,0,6,4,-1,0x2,1,5,1,no,0,0,0,weapon,1,	GC_COUNTERSLASH,·´»÷Õ¶
+2029,0,6,4,-1,0x1,0,5,1,no,0,0x200,0,weapon,1,	GC_COUNTERSLASH,·´»÷Õ¶
 2030,0,6,4,-1,0x1,0,5,1,no,0,0x200,0,none,0,	GC_WEAPONCRUSH,½â³ýÎä×°
 2031,-1,6,1,5,0,0,5,1,no,0,0,0,weapon,0,	GC_VENOMPRESSURE,¾ç¶¾Ñ¹ÖÆ
 2032,5,8,2,5,0,0,5,1,no,0,0,0,weapon,0,		GC_POISONSMOKE,¶¾Îí
