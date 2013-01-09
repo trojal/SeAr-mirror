@@ -188,6 +188,7 @@ e_tower,82,105,3	script	无限塔保护石	406,{
 			mes "请确定你的队伍已经申请过无限之塔挑战，并且你们的挑战副本并没有因为长时间没有人参加而取消";
 			close;
 		}
+		set ETING,1;
 		instance_attach instance_id(1);
 		if(ET_Lasttime + $ET_Cooldown < gettimetick(2))
 			set ET_Lasttime,'ET_Lasttime;
@@ -200,6 +201,16 @@ e_tower,82,105,3	script	无限塔保护石	406,{
 	case 4:
 		close;
 	}
+
+	end;
+
+OnPCPartyLeaveEvent:
+	if( ETING )
+	{
+		set ET_Lasttime,gettimetick(2);
+		set ETING,0;
+	}
+	end;
 }
 
 // = ET_Manager - Many general functions regarding the Endless Tower - Controls the instance =
@@ -1560,8 +1571,8 @@ OnEnableAshtimer:
 // 5@tower
 // TODO: Has a yellow "tube" effect (permanently)
 5@tower,106,109,0	script	发光的水晶	111,{
-	if('ET_Floor < 101)
-		end;
+	//if('ET_Floor < 101)
+	//	end;
 	if(getgmlevel() >= $ET_GM){
 		mes "Hi, Master!";
 		mes "你的 ET_Talk 变量是 "+ET_Talk;
@@ -1607,6 +1618,7 @@ OnEnableAshtimer:
 		close2;
 		set ET_Talk,5;
 		set ET_Lasttime,gettimetick(2);
+		set ETING,0;
 		warp "alberta",223,36;
 		end;
 	} 

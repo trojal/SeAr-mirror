@@ -5779,22 +5779,22 @@
 13272,Throwing_Cure_Free,投掷型自由恢复药水,3,10,,50,,,,,,,,,,,,,{},{},{}
 13273,Throwing_Muramura_M,Throwing Muramura M,3,10,,50,,,,,,,,,,,,,{},{},{}
 13274,Throwing_Falmons_F,Throwing Falmons F,3,10,,50,,,,,,,,,,,,,{},{},{}
-13275,Throwing_Increase_HP_Potion_(Small),投掷型 HP增加药水(小),3,10,,20,,,,,,,,,,,,,{},{},{}
-13276,Throwing_Increase_HP_Potion_(Medium),投掷型 HP增加药水(中),3,10,,40,,,,,,,,,,,,,{},{},{}
-13277,Throwing_Increase_HP_Potion_(Large),投掷型 HP增加药水(大),3,10,,80,,,,,,,,,,,,,{},{},{}
-13278,Throwing_Increase_SP_Potion_(Small),投掷型 SP增加药水(小),3,10,,20,,,,,,,,,,,,,{},{},{}
-13279,Throwing_Increase_SP_Potion_(Medium),投掷型 SP增加药水(中),3,10,,40,,,,,,,,,,,,,{},{},{}
-13280,Throwing_Increase_SP_Potion_(Large),投掷型 SP增加药水(大),3,10,,80,,,,,,,,,,,,,{},{},{}
-13281,Throwing_Concentrated_White_Potion_Z,投掷型 浓缩白色药水Z,3,10,,70,,,,,,,,,,,,,{},{},{}
-13282,Throwing_Vitata_500,投掷型 黑蚁500,3,10,,50,,,,,,,,,,,,,{},{},{}
-13283,Throwing_Ceromain_Soup,投掷型浓缩速度泉水,3,10,,50,,,,,,,,,,,,,{},{},{}
-13284,Throwing_Savage_Full_Roast,投掷型烤野猪,3,10,,50,,,,,,,,,,,,,{},{},{}
-13285,Throwing_Cocktail_Warg_Blood,投掷型狼血鸡尾酒,3,10,,50,,,,,,,,,,,,,{},{},{}
-13286,Throwing_Minor_Stew,投掷型小牛排,3,10,,50,,,,,,,,,,,,,{},{},{}
-13287,Throwing_Siroma_Iced_Tea,投掷型城间冰茶,3,10,,50,,,,,,,,,,,,,{},{},{}
-13288,Throwing_Drosera_Herb_Salad,投掷型药草蒸茅膏菜,3,10,,50,,,,,,,,,,,,,{},{},{}
-13289,Throwing_Petite_Tail_Soup,投掷型毕帝特龙尾面,3,10,,50,,,,,,,,,,,,,{},{},{}
-13290,Throwing_Black_Mass,投掷型黑色物体,3,10,,50,,,,,,,,,,,,,{},{},{}
+13275,Throwing_Increase_HP_Potion_(Small),投掷型 HP增加药水(小),10,10,,20,,,,,0x00040000,7,2,32768,,,,9,{ percentheal 1,0; itembonus 500000,SC_HP_POTION_S,1; },{},{}
+13276,Throwing_Increase_HP_Potion_(Medium),投掷型 HP增加药水(中),10,10,,40,,,,,0x00040000,7,2,32768,,,,9,{ percentheal 2,0; itembonus 500000,SC_HP_POTION_M,1; },{},{}
+13277,Throwing_Increase_HP_Potion_(Large),投掷型 HP增加药水(大),10,10,,80,,,,,0x00040000,7,2,32768,,,,9,{ percentheal 5,0; itembonus 500000,SC_HP_POTION_L,1; },{},{}
+13278,Throwing_Increase_SP_Potion_(Small),投掷型 SP增加药水(小),10,10,,20,,,,,0x00040000,7,2,32768,,,,9,{ percentheal 0,2; itembonus 500000,SC_SP_POTION_S,2; },{},{}
+13279,Throwing_Increase_SP_Potion_(Medium),投掷型 SP增加药水(中),10,10,,40,,,,,0x00040000,7,2,32768,,,,9,{ percentheal 0,4; itembonus 500000,SC_SP_POTION_M,2; },{},{}
+13280,Throwing_Increase_SP_Potion_(Large),投掷型 SP增加药水(大),10,10,,80,,,,,0x00040000,7,2,32768,,,,9,{ percentheal 0,8; itembonus 500000,SC_SP_POTION_L,2; },{},{}
+13281,Throwing_Concentrated_White_Potion_Z,投掷型 浓缩白色药水Z,10,10,,70,,,,,0x00040000,7,2,32768,,,,9,{ itemheal 1000,0; itembonus 500000,SC_C_WHITE_POTION_Z; },{},{}
+13282,Throwing_Vitata_500,投掷型 黑蚁500,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ itemheal 0,100; itembonus 500000,SC_VITATA_500; },{},{}
+13283,Throwing_Ceromain_Soup,投掷型浓缩速度泉水,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ itemheal 1000,0; itembonus 500000,SC_CEROMAIN_SOUP; },{},{}
+13284,Throwing_Savage_Full_Roast,投掷型烤野猪,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start SC_SAVAGE_STEAK,300000,20; },{},{}
+13285,Throwing_Cocktail_Warg_Blood,投掷型狼血鸡尾酒,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start SC_COCKTAIL_WARG_BLOOD,300000,20; },{},{}
+13286,Throwing_Minor_Stew,投掷型小牛排,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start SC_MINOR_BBQ,300000,20; },{},{}
+13287,Throwing_Siroma_Iced_Tea,投掷型城间冰茶,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start SC_SIROMA_ICE_TEA,300000,20; },{},{}
+13288,Throwing_Drosera_Herb_Salad,投掷型药草蒸茅膏菜,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start SC_DROCERA_HERB_STEAMED,300000,20; },{},{}
+13289,Throwing_Petite_Tail_Soup,投掷型毕帝特龙尾面,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start SC_PUTTI_TAILS_NOODLES,300000,20; },{},{}
+13290,Throwing_Black_Mass,投掷型黑色物体,10,10,,50,,,,,0x00040000,7,2,32768,,,,9,{ sc_start4 SC_STOMACHACHE,300000,rand(5,10),25,10,0; },{},{}
 13294,气惯_捻唱捞,爆炸苦无,3,10,,30,50,,,,,,,,,,,,{},{},{}
 // Ninja Fuuma Shurikens
 13300,Huuma_Bird_Wing,风魔飞镖偏翼,4,90000,,3000,150,,1,0,0x02100000,7,2,34,4,65,1,22,{ bonus bAtkEle,Ele_Wind; bonus bAgi,-1; bonus bDex,-2; },{},{}
