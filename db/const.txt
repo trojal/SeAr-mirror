@@ -506,6 +506,7 @@ bSPForceVanishRate	1093
 bHPForceVanishRate	1094
 bSPVanishMagicRate	1095
 bSubRaceMagic	1096
+bSlingItem	1097
 
 bFixDamage	1900
 bBonusDamage	1901
