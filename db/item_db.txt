@@ -1452,7 +1452,7 @@
 2461,Upg_Greaves,强化重靴,5,20,,400,,32,,1,0x00004080,7,2,64,,1,1,0,{ bonus bMaxHPRate,3; },{},{}
 2462,Sleipnir_R,Sleipnir,5,0,,3500,,40,,0,0xFFFFFFFF,7,2,64,,94,0,0,{ bonus bMdef,10; bonus bInt,25; bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bSPrecovRate,25; bonus bSpeedRate,25; },{},{}
 2463,Wild_Boats,狂野 长靴,5,20,,0,,12,,0,0xFFFFFFFF,7,2,64,,75,0,0,{ bonus bUnbreakableShoes,0; },{},{}
-2465,Dance_Shoes,舞 鞋,5,20,,300,,15,,1,0x00080000,8,1,64,,105,1,0,{ bonus bAgi,1; bonus bDelayrate,-2; bonus2 bCastValue,"WA_SWING_DANCE",-32; },{},{}
+2465,Dance_Shoes,舞 鞋,5,20,,300,,15,,1,0x00080000,8,1,64,,105,1,0,{ bonus bAgi,1; bonus bDelayrate,-2; bonus2 bUseSPValue,"WA_SWING_DANCE",-32; },{},{}
 2467,Golden_Lord_Shoes,黄主领主鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Wind,15; },{},{}
 2468,Aqua_Shoes,水蓝鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Water,15; },{},{}
 2469,Crimson_Shoes,深红鞋,5,20,,500,,2,,1,0x00000200,2,2,64,,100,1,0,{ bonus bMdef,2; bonus bMaxHP,500; bonus2 bSubEle,Ele_Fire,15; },{},{}
