@@ -155,7 +155,7 @@
 2490,0xea,   ,  0, 1,1000,all,	 0x002	//GN_HELLS_PLANT
 
 3010,0xfc,   ,  0, 0,1000,all,	 0x006	//KO_MAKIBISHI
-3020,0xf8,   ,  0, 2,1000,all,	 0x018	//KO_ZENKAI
+3020,0xf8,   ,  0, 2, 500,all,	 0x018	//KO_ZENKAI
 
 8403,0xed,   , -1, 0,  20,enemy, 0x010	//EL_FIRE_MANTLE
 8406,0xee,   ,  0, 1,1000,all,   0x000	//EL_WATER_BARRIER
