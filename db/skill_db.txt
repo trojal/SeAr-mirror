@@ -1005,7 +1005,7 @@
 3025,1,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	KG_KAGEMUSYA,影武者
 3026,7,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	OB_ZANGETSU,残月
 3027,7,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	OB_OBOROGENSOU,胧幻想
-3028,9,6,1,0,0x3,3,1,1,no,0,0,0,misc,0,		OB_OBOROGENSOU_TRANSITION_ATK,胧幻想(Transition Atk)
+3028,9,6,1,0,0xDA,3,1,1,no,0,0,0,misc,0,		OB_OBOROGENSOU_TRANSITION_ATK,胧幻想(Transition Atk)
 3029,7,6,16,0,0x1,0,5,1,no,0,0,0,none,0,	OB_AKAITSUKI,赤月
 
 8001,9,6,4,0,0x1,0,5,1,no,0,0,0,magic,0,	HLIF_HEAL,治愈之手
