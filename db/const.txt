@@ -334,6 +334,8 @@ mf_nocapture	57
 mf_maxdamage	58
 mf_notoken	59
 mf_stacklimit	60
+mf_maxpcdamage	61
+mf_maxmobdamage	62
 
 cell_walkable	0
 cell_shootable	1

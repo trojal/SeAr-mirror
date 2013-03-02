@@ -67,7 +67,9 @@ guildlock		无法加入公会
 noautoloot		无法自动拾取
 nomobinfo		不显示魔物等级血量等信息
 notalk			所在地图无法收到聊天频道所有信息
-mf_nocapture		禁止捕捉宠物
-mf_maxdamage		最大伤害限定
-mf_notoken		禁止使用不死之证
-mf_stacklimit		设为n则每个单元格只允许n个玩家/宠物/魔物/生命体/佣兵/精灵等单位
+nocapture		禁止捕捉宠物
+maxdamage		最大伤害限定
+maxpcdamage		对玩家及其召唤生命造成的最大伤害限定
+maxmobdamage		对魔物造成的最大伤害限定
+notoken			禁止使用不死之证
+stacklimit		设为n则每个单元格只允许n个玩家/宠物/魔物/生命体/佣兵/精灵等单位
