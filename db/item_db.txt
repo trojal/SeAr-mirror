@@ -922,6 +922,8 @@
 1652,Tourist_Staff,Tourist Staff,4,0,,500,35,,1,0,0x00818315,7,2,2,1,1,0,10,{ bonus bMatkRate,15; bonus bInt,2; bonus bAgi,1; },{},{}
 1653,Staff_Of_Healing_C,Staff of Healing,4,20,,0,10,,1,0,0x00008110,7,2,2,3,1,0,10,{ bonus bMatk,100; bonus bAtkEle,Ele_Holy; bonus bHealPower,18; },{},{}
 1654,Mental_Stick,精神掌控 木棍,4,20,,500,40,,1,1,0x00010000,8,2,2,3,102,1,10,{ bonus bMatk,170; if(getrefine() > 5) { bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",(getrefine()-5)*2; bonus bMaxHPRate,-(getrefine()-5)*2; } bonus2 bCastValue,"SO_PSYCHIC_WAVE",-3000; bonus2 bUseSPValue,"SO_PSYCHIC_WAVE",60; },{},{ heal 0,-100; }
+1657,Mercy_Staff,慈爱权杖,4,20,,500,30,,1,2,0x00000100,8,2,2,3,100,1,10,{ bonus bMatk,160; bonus bInt,2; bonus bAtkEle,Ele_Holy; bonus bHealPower,10; if(isequipped(2471,2569,15029)){ bonus bHealPower,25; bonus2 bUseSPValue,"AL_HEAL",20; bonus2 bCooldownValue,"AB_SECRAMENT",2000; bonus2 bCooldownValue,"AB_LAUDARAMUS",2000; bonus2 bCooldownValue,"AB_LAUDAAGNUS",2000; }; },{},{}
+1658,P_Staff3,P.Staff III,4,0,,0,60,,1,0,0x00818314,7,2,2,3,60,0,10,{ bonus bInt,4; bonus bMatk,170; },{},{}
 1659,Light_Of_Recovery,元气之光魔杖,4,20,,400,30,,1,1,0x00000100,8,2,2,4,110,1,10,{ bonus bMatk,160; bonus bAtkEle,Ele_Holy; bonus bUnbreakableWeapon,0; bonus bHealPower,3*getrefine(); bonus bUseSPrate,5*getrefine(); },{},{}
 1660,Mercy_Staff2,Mercy Staff II,4,20,,500,30:180,,1,1,0x00000100,7,2,2,3,130,1,10,{ bonus bAtkEle,Ele_Holy; bonus bInt,4; bonus bHealPower,20; if(isequipped(2471,2569,15029)){ bonus bHealPower,45; bonus3 bAutoSpellWhenHit,"AB_SILENTIUM",1,10; }; },{},{}
 1661,Mental_Destroyer,Mental Destroyer,4,20,,1400,100:50,,1,0,0x00000200,7,2,2,4,95,1,10,{ bonus bInt,10; bonus bMdef,20; bonus bUnbreakableWeapon,0; bonus2 bSPVanishMagicRate,1000,5; if(getrefine()>5) { bonus2 bSPVanishMagicRate,1000,5; } },{},{}
@@ -1116,6 +1118,10 @@
 2008,Aqua_Staff,水蓝权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Water; bonus bInt,3; bonus2 bSkillAtk,"MG_COLDBOLT",10; bonus2 bSkillAtk,"MG_FROSTDIVER",10; },{},{}
 2009,Crimson_Staff,深红权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Fire; bonus bInt,3; bonus2 bSkillAtk,"MG_FIREBOLT",10; bonus2 bSkillAtk,"MG_FIREBALL",10; },{},{}
 2010,Forest_Staff,森林权杖,4,20,,900,30,,1,2,0x00000200,8,2,34,4,100,1,10,{ bonus bMatk,230; bonus bAtkEle,Ele_Earth; bonus bInt,3; bonus2 bSkillAtk,"WZ_EARTHSPIKE",10; bonus2 bSkillAtk,"WZ_HEAVENDRIVE",10; },{},{}
+2011,Golden_Rod_Staff2,强化黄金领主之杖,4,20,,900,30,,1,1,0x00000200,8,2,34,4,130,1,23,{ bonus bMatk,270; bonus bAtkEle,Ele_Wind; bonus bInt,5; bonus2 bSkillAtk,"WZ_JUPITEL",30; if(isequipped(2467,2859,15025)) { bonus2 bEleMagicAddRate,Ele_Wind,60; bonus2 bEleMagicAddRate,Ele_Earth,-60; bonus2 bSubEle,Ele_Earth,-50; } },{},{}
+2012,Aqua_Staff2,强化流水之杖,4,20,,900,30,,1,1,0x00000200,8,2,34,4,130,1,23,{ bonus bMatk,270; bonus bAtkEle,Ele_Water; bonus bInt,5; bonus2 bSkillAtk,"MG_COLDBOLT",30; bonus2 bSkillAtk,"MG_FROSTDIVER",30; if(isequipped(2468,2860,15026)) { bonus2 bEleMagicAddRate,Ele_Water,60; bonus2 bEleMagicAddRate,Ele_Wind,-60; bonus2 bSubEle,Ele_Wind,-50; } },{},{}
+2013,Crimson_Staff2,强化赤红之杖,4,20,,900,30,,1,1,0x00000200,8,2,34,4,130,1,23,{ bonus bMatk,270; bonus bAtkEle,Ele_Fire; bonus bInt,5; bonus2 bSkillAtk,"MG_FIREBOLT",30; bonus2 bSkillAtk,"MG_FIREBALL",30; if(isequipped(2469,2861,15027)) { bonus2 bEleMagicAddRate,Ele_Fire,60; bonus2 bEleMagicAddRate,Ele_Water,-60; bonus2 bSubEle,Ele_Water,-50; } },{},{}
+2014,Forest_Staff2,强化森林之杖,4,20,,900,30,,1,1,0x00000200,8,2,34,4,130,1,23,{ bonus bMatk,270; bonus bAtkEle,Ele_Earth; bonus bInt,5; bonus2 bSkillAtk,"WZ_EARTHSPIKE",30; bonus2 bSkillAtk,"WZ_HEAVENDRIVE",30; if(isequipped(2470,2862,15028)) { bonus2 bEleMagicAddRate,Ele_Earth,60; bonus2 bEleMagicAddRate,Ele_Fire,-60; bonus2 bSubEle,Ele_Fire,-50;  } },{},{}
 2015,Upg_Staff,强化智慧魔杖,4,20,,1000,50,,1,1,0x00818314,7,2,34,3,1,1,10,{ bonus bMatk,70+(30*(BaseJob==Job_Wizard))+(20*(BaseJob==Job_Sage))+(10*getrefine()); bonus bHealPower,getrefine(); if(BaseLevel >= 70) { bonus bMatk,5*((BaseLevel-69)/10); } },{},{}
 2016,Vellum_Arc_Wand,战争魔杖,4,20,,800,110,,1,0,0x00818314,7,2,34,4,95,1,10,{ bonus bMatk,220; bonus2 bMagicAddRace,RC_Player,25; bonus bIgnoreMdefRate,25; bonus bUnbreakableWeapon,0; if(getrefine() >= 6) { bonus bMatkRate,15; } if(getrefine() > 8) { bonus bCastrate,-20; bonus bFixedCastValue,-200; } },{},{}
 // Shields
@@ -1546,7 +1552,17 @@
 2563,Upg_Manteau,强化斗篷,5,0,,300,,18,,1,0x006654E2,7,2,4,,1,1,0,{ bonus bMaxHPRate,3; },{},{}
 2564,Wild_Tail,狂野 尾巴,5,20,,0,,16,,0,0xFFFFFFFF,7,2,4,,75,0,0,{ bonus bUnbreakableGarment,0; },{},{}
 2568,Loki's_Muffler,洛奇的披肩,5,20,,400,,1,,0,0x000FFFFE,2,2,4,,100,1,0,{ bonus bAgi,1; bonus2 bSkillAtk,"GC_CROSSIMPACT",5; },{},{}
+2569,Mercy_Shawl,Affection Shawl,5,20,,400,,12,,0,0x00000100,8,2,4,,100,1,0,{ bonus bFlee2,5; bonus3 bAutoSpellWhenHit,"AB_RENOVATIO",1,10; },{},{}
+2570,Judgement_Shawl,审判披肩,5,20,,400,,12,,0,0x00000100,8,2,4,,100,1,0,{ bonus bFlee,5; bonus3 bAutoSpellWhenHit,"AB_ORATIO",getskilllv("AB_ORATIO")>2?getskilllv("AB_ORATIO"):2,10; },{},{}
+2571,Para_Team_Manteau2,Eden Group Manteau II,5,0,,0,,18,,0,0xFFFFFFFF,7,2,4,,60,0,0,{ bonus2 bSubEle,Ele_Neutral,10; bonus bFlee,12; },{},{}
 2573,Archangel_Wings,永恒之翼,5,0,,200,,18,,1,0xFFFFFFFF,7,2,4,,0,1,1,{},{},{}
+2574,Urj_Manteau,乌鲁兹符文斗篷,5,2,,600,,20,,0,0x00000080,8,2,4,,100,1,0,{ bonus bMaxHPRate,2; bonus2 bSubEle,Ele_Neutral,10; },{},{}
+2575,Pertz_Manteau,珀斯符文斗篷,5,2,,600,,16,,0,0x00000080,8,2,4,,100,1,0,{ bonus bFlee,10; bonus bCritical,10; },{},{}
+2576,Adventurer_Bag,保险者背包,5,0,,200,,20,,1,0xFFFFFFFF,7,2,4,,1,1,2,{ skill "BS_GREED",1; if(getrefine() >= 7) { if(readparam(bStr)>=90) bonus bAtk,20; if(readparam(bInt)>=90) bonus bMatk,30; if(readparam(bVit)>=90) bonus2 bSubEle,Ele_Neutral,30; if(readparam(bAgi)>=90) bonus bAspdRate,8; if(readparam(bDex)>=90) bonus bLongAtkRate,5; if(readparam(bLuk)>=90) bonus bCritAtkRate,5; } if(getrefine() >= 9) { if(readparam(bStr)>=90) bonus bAtk,10; if(readparam(bInt)>=90) bonus bMatk,20; if(readparam(bVit)>=90) bonus2 bSubEle,Ele_Neutral,5; if(readparam(bAgi)>=90) bonus bAspd,1; if(readparam(bDex)>=90) bonus bLongAtkRate,5; if(readparam(bLuk)>=90) bonus bCritAtkRate,5; } },{},{}
+2577,Hood_Of_Sabath,萨巴斯的披风,5,2,,100,,13,,0,0x00001000,8,2,4,,100,1,0,{ bonus bFlee,12; bonus bCritAtkRate,getrefine(); },{},{}
+2578,Hood_Of_Nabeuui,奈博的披肩,5,2,,100,,13,,0,0x00001000,8,2,4,,100,1,0,{ bonus bFlee,2*getrefine(); bonus bBaseAtk,2*getrefine(); },{},{}
+2580,White_Wing_Manteau,白翼斗篷,5,2,,200,,15,,0,0x00000800,8,2,4,,100,1,0,{ bonus bAgi,2; bonus bFlee,10; autobonus "{ bonus bFlee,20; }",10,7000,BF_LONG,"{ specialeffect2 EF_HASTEUP; }"; },{},{}
+2581,Black_Wing_Manteau,黑翼斗篷,5,2,,200,,15,,0,0x00000800,8,2,4,,100,1,0,{ bonus bInt,2; if(getrefine() >= 7) { bonus bFlee2,getrefine()-6; } },{},{}
 2582,Salvage_Cape,救援斗篷,5,20,,400,,1,,0,0x00000300,8,2,4,,130,1,0,{ skill "NJ_UTSUSEMI",1; bonus2 bCooldownValue,"NJ_UTSUSEMI",30000; bonus bUseSPrate,100; },{},{ heal 0,-1200; }
 //2583,
 //2584,
