@@ -918,7 +918,7 @@
 2452,9,6,2,0,0,0,5,1,yes,0,0,0,magic,0,		SO_WARMER,暖风
 2453,8,6,2,0,0x1,0,5,1,yes,0,0,0,none,0,	SO_VACUUM_EXTREME,黑洞
 2454,9,6,1,4,0x2,2,5,1,yes,0,0,0,magic,0,	SO_VARETYR_SPEAR,闪电之枪
-2455,9,6,1,0,0x3,1:1:2:2:3,5,1,yes,0,0,0,magic,0,	SO_ARRULLO,群体催眠
+2455,9,6,2,0,0x3,1:1:2:2:3,5,1,yes,0,0,0,magic,0,	SO_ARRULLO,群体催眠
 2456,0,6,4,0,0x1,0,4,1,no,0,0,0,none,0,		SO_EL_CONTROL,操控精灵
 2457,0,6,4,3,0x1,0,3,0,yes,0,0,0,none,0,	SO_SUMMON_AGNI,召唤火元素
 2458,0,6,4,1,0x1,0,3,0,yes,0,0,0,none,0,	SO_SUMMON_AQUA,召唤水元素
