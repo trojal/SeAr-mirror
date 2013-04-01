@@ -339,3 +339,8 @@ OnPCViewEquipEvent:
 	viewequip @eqview_cid;
 	end;
 }
+
+function	script	delequip	{
+	delinventory unequip(getarg(0)),1;
+	return;
+}
