@@ -6375,6 +6375,31 @@ ID决定。创建宠物蛋和玩家成功捕捉魔物的方式一模一样。
 
 ---------------------------------------
 
+*morphembryo;
+
+This command will try to put the invoking player's Homunculus in an
+uncallable state, required for mutation into a Homunculus S. The player
+will also receive a Strange Embryo (ID 6415) in their inventory if
+successful, which is deleted upon mutation.
+
+The command will fail if the invoking player does not have an evolved
+Homunculus at level 99 or above. The /swt emotion is shown upon failure.
+
+Returns 1 upon success and 0 for all failures.
+
+---------------------------------------
+
+*checkhomcall()
+
+This function checks if the attached player's Homunculus is active,
+and will return the following values:
+ -1: The player has no Homunculus.
+  0: The player's Homunculus is active.
+  1: The player's Homunculus is vaporized.
+  2: The player's Homunculus is in morph state.
+
+---------------------------------------
+
 *setcell "<地图名>",<x1>,<y1>,<x2>,<y2>,<类型>,<标记>;
 
 每个地图的单元格都有很多指定其单元格属性的“标记”。
@@ -7404,6 +7429,12 @@ id在effect_list.txt中查看。
 
 作用：	让npc对关联玩家使用技能，如果是地面技能则最玩家位置使用。
 	npc6个属性点将被赋予相同的值。
+
+---------------------------------------
+
+*freeloop <标记>
+
+作用：	标记为0则解除，其他则无视script_athena.conf中设置的check_cmdcount和check_gotocount
 
 ---------------------------------------
 
