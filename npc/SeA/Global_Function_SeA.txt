@@ -328,9 +328,11 @@ function	script	F_ALLRIDING	{
 
 -	script	墓碑::Grave_System	565,{
 	set .@i,atoi(strnpcinfo(2));
-	mes "魔物 ["+mob_death_info(0,.@i)+"] 在";
-	mes mob_death_info(1,.@i)+"年"+mob_death_info(2,.@i)+"月"+mob_death_info(3,.@i)+"日"+mob_death_info(4,.@i)+"点"+mob_death_info(5,.@i)+"分";
-	mes "死于 "+(mob_death_info(6,.@i)==""?"无名氏":mob_death_info(6,.@i))+" 手下";
+	mes "[ ^0000FF"+mob_death_info(0,.@i)+"^000000 ]";
+	mes "在此结束短暂的一生吧";
+	mes "死亡时间 : ^0000FF"+mob_death_info(4,.@i)+":"+mob_death_info(5,.@i)+"^000000";
+	mes "将其送上不归之路者";
+	mes "[^0000FF"+(mob_death_info(6,.@i)==""?"无名氏":mob_death_info(6,.@i))+"^000000]";
 	close;
 }
 
