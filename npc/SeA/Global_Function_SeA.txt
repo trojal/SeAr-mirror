@@ -326,7 +326,7 @@ function	script	F_ALLRIDING	{
 	}
 }
 
--	script	墓碑::Grave_System	565,{
+-	script	坟墓::Grave_System	565,{
 	set .@i,atoi(strnpcinfo(2));
 	mes "[ ^0000FF"+mob_death_info(0,.@i)+"^000000 ]";
 	mes "在此结束短暂的一生吧";
