@@ -346,3 +346,13 @@ function	script	delequip	{
 	delinventory unequip(getarg(0)),1;
 	return;
 }
+
+function	script	getrandgroupitem	{
+	getitem groupranditem(getarg(0)),getarg(1);
+	return;
+}
+
+function	script	consumeitem	{
+	runitemscript getarg(0);
+	return;
+}
