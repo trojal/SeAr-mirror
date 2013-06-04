@@ -79,3 +79,5 @@ OnPCGuildLeaveEvent	玩家离开公会时，运行标签下的脚本。脚本对离开公会者运行。
 OnNPCDropItemEvent	魔物掉落物品事件。关联杀死该魔物的玩家，赋予关联者变量@dropitem_id
 OnPCViewEquipEvent	授权版限定。玩家查看玩家装备时，运行标签下的脚本。查看者赋予变量@eqview_cid
 OnPCPetCatchEvent	捕捉魔物时出发的事件，processhalt有效。赋予变量@petcatchid，标示被捕捉的魔物GID。
+OnPCZenyChangeEvent	金钱变化后的事件。
+OnPCDamageEvent		发出技能和普通攻击后的事件。关联攻击者，赋予变量@pcdamage_target，为被攻击方。
