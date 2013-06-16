@@ -336,6 +336,11 @@ mf_notoken	59
 mf_stacklimit	60
 mf_maxpcdamage	61
 mf_maxmobdamage	62
+mf_nousecart	63
+mf_noitemconsumption	64
+mf_sumstartmiracle	65
+mf_nomineffect	66
+mf_nolockon	67
 
 cell_walkable	0
 cell_shootable	1

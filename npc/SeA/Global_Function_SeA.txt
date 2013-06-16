@@ -356,3 +356,15 @@ function	script	consumeitem	{
 	runitemscript getarg(0);
 	return;
 }
+
+
+function	script	isbegin_quest	{
+	 switch(checkquest(getarg(0))) 
+	{
+	 case -1: return 0; // 无任务
+	 case 0:
+	 case 1:  return 1; // 进行中
+	 case 2:  return 2; // 已完成(Custom）
+	 default: return 3; // 异常(Custom）
+	 }
+}
