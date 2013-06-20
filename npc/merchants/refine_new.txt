@@ -8,36 +8,31 @@
 // 更新日志
 // v1.1.20110721 初版
 // v1.1.20120605 加入官方精炼度判断的设置
+// v1.1.20130620 更新官方精炼表现
 //------------------------------------------------------------
 
 //============================================================
 // +11~+20防具/武器 精炼师
 //============================================================
 prt_in,90,72,5	script	贝斯特里#prt	826,{
-	callfunc "F_NewRefine","贝斯特里",0;
+	callfunc "F_NewRefine","贝斯特里";
 	end;
 }
 
 morocc_in,64,41,5	script	贝斯特里#moc	826,{
-	callfunc "F_NewRefine","贝斯特里",0;
+	callfunc "F_NewRefine","贝斯特里";
 	end;
 }
 
 payon_in01,18,132,3	script	贝斯特里#pay	826,{
-	callfunc "F_NewRefine","贝斯特里",0;
+	callfunc "F_NewRefine","贝斯特里";
 	end;
 }
 
 //============================================================
 // +11~+20防具/武器 精炼函数
 //============================================================
-//= 在官方脚本中似乎会生成一个1~3的随机数作为精炼结果, 其作用分别如下:
-//= 1: 精炼成功
-//= 2: 降低精炼度
-//= 3: 精炼失败
-//=
-//= 若需要启用以上, 请设置第二个参数为'1'.
-//= 默认情况将使用refine_db.txt文件中的成功百分率.
+//= 在官方服务器中, 装备精炼失败时会有20%损坏, 80%掉精炼.
 //============================================================
 function	script	F_NewRefine	{
 	disable_items;
@@ -177,19 +172,18 @@ function	script	F_NewRefine	{
 		enable_items;
 		end;
 	}
-	if(getarg(1) == 1){
-		set .@rand,rand(1,3);
-		if (.@rand == 1) {
-			mes "[" + getarg(0) + "]";
-			mes "呵呵！";
-			mes "成功了~";
-			successrefitem .@part;
-			emotion e_no1;
-			close2;
-			enable_items;
-			end;
-		}
-		if (.@rand == 2) {
+	if(getequippercentrefinery(.@part) > rand(100)) {
+		mes "[" + getarg(0) + "]";
+		mes "呵呵！";
+		mes "成功了~";
+		successrefitem .@part;
+		emotion e_no1;
+		close2;
+		enable_items;
+		end;
+	}
+	else {
+		if(rand(100) < 80) {
 			mes "[" + getarg(0) + "]";
 			mes "可恶啊!";
 			mes "我说过精炼成功的几率很低的!";
@@ -212,39 +206,6 @@ function	script	F_NewRefine	{
 		enable_items;
 		end;
 	}
-	set .@rand,rand(100);
-	if(getequippercentrefinery(.@part) > .@rand) {
-		mes "[" + getarg(0) + "]";
-		mes "呵呵！";
-		mes "成功了~";
-		successrefitem .@part;
-		emotion e_no1;
-		close2;
-		enable_items;
-		end;
-	}
-	else if(getequippercentrefinery(.@part) < .@rand) {
-		mes "[" + getarg(0) + "]";
-		mes "可恶啊!";
-		mes "我说过精炼成功的几率很低的!";
-		mes "不过好在装备还在。";
-		failedrefitem2 .@part,3;
-		if(rand(1,5) == 1)
-			emotion e_cash;
-		else
-			emotion e_omg;
-		close2;
-		enable_items;
-		end;
-	}
-	mes "[" + getarg(0) + "]";
-	mes "啊啊啊啊啊！";
-	mes "竟然失败了！";
-	mes "抱歉没能保住你的装备……";
-	failedrefitem .@part;
-	close2;
-	enable_items;
-	end;
 }
 
 // 魔力之石/混沌金属 兑换员
