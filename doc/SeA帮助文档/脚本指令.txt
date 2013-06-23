@@ -1630,6 +1630,7 @@ Whatever it returns is determined by type.
  1 - The visible part of the NPC's display name
  2 - The hidden part of the NPC's display name
  3 - The NPC's unique name (::name)
+ 4 - NPC所在地图名
 
 ---------------------------------------
 
