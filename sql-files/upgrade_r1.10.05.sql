@@ -1,0 +1,1 @@
+ALTER TABLE `sc_data` ADD `tick_org` int(11) NOT NULL;

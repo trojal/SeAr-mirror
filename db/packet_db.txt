@@ -1810,12 +1810,10 @@ packet_ver: 31
 0x023b,26,friendslistadd,2
 0x0940,-1,reqtradebuyingstore,2:4:8:12
 0x096a,6,getcharnamerequest,2
-
-packet_ver: 32
 0x0983,29
 
 //2012-07-02aRagexeRE (unstable)
-packet_ver: 33
+packet_ver: 32
 0x0363,19,wanttoconnection,2:6:10:14:18
 0x0364,6,ticksend,2
 0x085a,7,actionrequest,2:6
@@ -1832,7 +1830,7 @@ packet_ver: 33
 0x0960,5,changedir,2:4
 
 //2013-03-20Ragexe (Judas)
-packet_ver: 34
+packet_ver: 33
 0x014f,6,guildrequestinfo,2
 0x01fd,15,repairitem,2
 //0x0281,-1,itemlistwindowselected,2:4:8
@@ -1895,7 +1893,7 @@ packet_ver: 34
 0x099b,8 //maptypeproperty2
 
 //2013-05-15a Ragexe (Yommy)
-packet_ver: 35
+packet_ver: 34
 0x0369,7,actionrequest,2:6
 0x083C,10,useskilltoid,2:4:6
 0x0437,5,walktoxy,2
@@ -1927,7 +1925,7 @@ packet_ver: 35
 0x093E,36,storagepassword,0
 
 //2013-05-22 Ragexe (Yommy)
-packet_ver: 36
+packet_ver: 35
 0x08A2,7,actionrequest,2:6
 0x095C,10,useskilltoid,2:4:6
 0x0360,5,walktoxy,2
