@@ -61,6 +61,7 @@ bonus2 bCooldownValue,n,x;		增加 n 技能 x 的冷却时间
 bonus2 bSCDef,n,x;			某状态 n 抵抗力 + x%
 bonus2 bNoSkill,n,x;			某技能 n 抵抗力 + x%
 bonus bChangeRace,n;			变成n种族
+bonus bMonTransform,n;			变身魔物n
 
 //=========================================================
 //=攻击修正

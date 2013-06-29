@@ -4437,6 +4437,19 @@ next;
 undisguise; //Yay!!!! You're a human again!!
 
 ---------------------------------------
+
+*montransform <Ä§Îïid>;
+
+This command disguises the current player with a monster sprite.
+The disguise lasts until 'montransform 0' is issued or the player logs out.
+
+¾ÙÀı:
+
+montransform 1002; //Yay! You're a Poring!!!
+next;
+montransform 0; //Yay!!!! You're a human again!!
+
+---------------------------------------
 \\
 4,3 Marriage-related commands
 \\

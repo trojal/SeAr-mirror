@@ -5520,7 +5520,13 @@
 //
 12646,Fried_Octopus_Legs,Fried Octopus Legs,2,20,,30,,,,,,,,,,,,,{},{},{}
 12647,Sea_Ink,Sea Ink,2,20,,30,,,,,,,,,,,,,{},{},{}
-12658,Transform_Scroll_Deviruchi,变身卷轴(小恶魔),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1109; },{},{}
+12658,Trans_Scroll_Devi,变身卷轴(小恶魔),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1109; },{},{}
+12659,Trans_Scroll_Ray_Arch,变身卷轴(幽灵弓箭手),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1276; },{},{}
+12660,Trans_Scroll_Mavka,变身卷轴(玛维卡),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1884; },{},{}
+12661,Trans_Scroll_Marduk,变身卷轴(马尔杜克),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1140; },{},{}
+12662,Trans_Scroll_Banshee,变身卷轴(女妖),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1867; },{},{}
+12663,Trans_Scroll_Poring,变身卷轴(波利),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1002; },{},{}
+12664,Trans_Scroll_Golem,变身卷轴(巨石怪),2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_TRANSFORM,120000,1040; },{},{}
 //
 12674,God_Material_Box,神器材料箱子,2,20,,500,,,,,0xFFFFFFFF,7,2,,,,,,{ /*TODO*/ },{},{}
 12675,WoE_Weapon_Supply_Box,攻城武器补给品箱,2,20,,500,,,,,0xFFFFFFFF,7,2,,,,,,{ /*TODO*/ },{},{}
@@ -7066,6 +7072,13 @@
 16776,Universal_Catalog_Gold_Box10,Universal Catalog Gold 10 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,10; },{},{}
 16777,Universal_Catalog_Gold_Box50,Universal Catalog Gold 50 Box,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12581,50; },{},{}
 16998,Archangel_Wings_Box,永恒之翼箱子,2,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 2573,1; },{},{}
+17037,Transform_Scroll_Deviruchi_Box,变身卷轴(小恶魔) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12658,10; },{},{}
+17038,Transform_Scroll_Raydric_Archer_Box,变身卷轴(幽灵弓箭手) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12659,10; },{},{}
+17039,Transform_Scroll_Mavka_Box,变身卷轴(玛维卡) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12660,10; },{},{}
+17040,Transform_Scroll_Marduk_Box,变身卷轴(马尔杜克) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12661,10; },{},{}
+17041,Transform_Scroll_Banshee_Box,变身卷轴(女妖) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12662,10; },{},{}
+17042,Transform_Scroll_Poring_Box,变身卷轴(波利) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12663,10; },{},{}
+17043,Transform_Scroll_Golem_Box,变身卷轴(巨石怪) 10只 箱子,2,20,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12664,10; },{},{}
 17084,Upg_Katar_Box,强化卡塔勒拳刃箱子,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1292,1; },{},{}
 17085,Upg_Two_Handed_Axe_Box,强化双手斧箱子,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1394,1; },{},{}
 17086,Upg_Lance_Box,强化骑士长矛箱子,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1491,1; },{},{}
@@ -7279,6 +7292,7 @@
 19552,C_Centimental_Flower,Costume Centimental Flower,5,20,,100,,0,,0,0xFFFFFFFF,7,2,4096,,100,0,56,{ bonus bUnbreakableHelm,0; },{},{}
 19553,C_Assassin_Mask_,Costume Assassin Mask,5,20,,100,,0,,0,0xFFFFFFFF,7,2,4096,,100,0,180,{ bonus bUnbreakableHelm,0; },{},{}
 19573,C_Heart_Wing_Hairband,Costume Heart Wing Hairband,5,0,,0,,0,,0,0xFFFFFFFF,7,2,1024,,1,1,733,{},{},{}
+19575,T_Black_Dragon,Black Dragon,5,20,,0,,0,,0,0xFFFFFFFF,7,2,256,,1,0,863,{ autobonus "{ bonus bAspdRate,10; bonus bMonTransform,2022; }",1000,3000,BF_WEAPON,"{ end; unittalk getcharid(3),\"Dragon Power !!\"; }"; },{},{}
 19587,C_King_Poring_Hat,Costume King Poring Hat,5,0,,100,,0,,0,0xFFFFFFFF,7,2,1024,,1,0,905,{ bonus bUnbreakableHelm,0; },{},{}
 19650,C_Rainbow_Feather_Deco,Costume Rainbow Feather Deco,5,0,,0,,0,,0,0xFFFFFFFF,7,2,1024,,1,1,934,{},{},{}
 20500,T_Archangel_Wing,Archangel Wing,5,0,,0,,0,,0,0xFFFFFFFF,7,2,8192,,1,0,1,{ bonus bUnbreakableHelm,0; },{},{}

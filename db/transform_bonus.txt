@@ -1,3 +1,8 @@
 //定义变身为该魔物时的bonus
-
-1109,{ bonus bAspd,1; bonus bHit,5; }
+1109,{ bonus bAspd,1; bonus bHit,5; }// SC_MTF_ASPD
+1276,{ if(getiteminfo(getequipid(EQI_HAND_R),11) == 11) bonus bLongAtkRate,25; } // SC_MTF_RANGEATK
+1884,{ if(getiteminfo(getequipid(EQI_HAND_R),11) == 11) bonus bLongAtkRate,25; } // SC_MTF_RANGEATK
+1140,{ bonus bMatk,25; } // SC_MTF_MATK
+1867,{ bonus bMatk,25; } // SC_MTF_MATK
+1040,{ bonus3 bAutoSpellWhenHit,5,"SM_ENDURE",500; bonus2 bSubEle,Ele_Neutral,2; } // SC_MTF_MLEATKED
+1002,{ bonus bCritAtkRate,5; } // SC_MTF_CRIDAMAGE
