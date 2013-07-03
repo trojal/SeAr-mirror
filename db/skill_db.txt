@@ -899,7 +899,7 @@
 2426,9,6,2,0,0,0,5,1,yes,0,0x40,0,weapon,0,	WM_GREAT_ECHO,雄壮回声
 2427,0,6,4,0,0x3,5:6:7:8:9,5,1,yes,0,0x40,0,misc,0,	WM_SONG_OF_MANA,魔力之歌
 2428,0,6,4,0,0x3,5:6:7:8:9,5,1,yes,0,0x40,0,misc,0,	WM_DANCE_WITH_WUG,与狼共舞
-2429,9,6,1,0,0x1,0,5,1,yes,0,0x40,0,misc,0,	WM_SOUND_OF_DESTRUCTION,毁灭之歌
+2429,9,6,2,0,0x1,0,5,1,yes,0,0x40,0,misc,0,	WM_SOUND_OF_DESTRUCTION,毁灭之歌
 2430,0,6,4,0,0x3,3:4:5:6:7,5,1,yes,0,0x40,0,misc,0,	WM_SATURDAY_NIGHT_FEVER,狂热的周末
 2431,0,6,4,0,0x3,5:5:6:6:7,5,1,yes,0,0x40,0,misc,0,	WM_LERADS_DEW,雷拉德的晨露
 2432,0,6,4,0,0x3,5:5:6:6:7,5,1,yes,0,0x40,0,misc,0,	WM_MELODYOFSINK,夕阳之歌
