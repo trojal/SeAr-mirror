@@ -488,6 +488,7 @@ CREATE TABLE IF NOT EXISTS `sc_data` (
   `val2` int(11) NOT NULL default '0',
   `val3` int(11) NOT NULL default '0',
   `val4` int(11) NOT NULL default '0',
+  `tick_org` int(11) NOT NULL,
   KEY (`account_id`),
   KEY (`char_id`)
 ) ENGINE=MyISAM;
