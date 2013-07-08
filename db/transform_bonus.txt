@@ -1,4 +1,16 @@
-//定义变身为该魔物时的bonus
+//============================================================
+// eAthena Chinese Translation Project 汉化组
+//============================================================
+// 可被"魔物变身(SC_TRANSFORM)状态"读取的变身效果 数据
+//
+// 最新修正日期: 2012.07.18
+//------------------------------------------------------------
+// 数据结构:
+// <增益ID>,[{<变身效果>}]
+//------------------------------------------------------------
+// 
+//------------------------------------------------------------
+// 官方效果
 1109,{ bonus bAspd,1; bonus bHit,5; }// SC_MTF_ASPD
 1276,{ if(getiteminfo(getequipid(EQI_HAND_R),11) == 11) bonus bLongAtkRate,25; } // SC_MTF_RANGEATK
 1884,{ if(getiteminfo(getequipid(EQI_HAND_R),11) == 11) bonus bLongAtkRate,25; } // SC_MTF_RANGEATK
@@ -6,3 +18,4 @@
 1867,{ bonus bMatk,25; } // SC_MTF_MATK
 1040,{ bonus3 bAutoSpellWhenHit,5,"SM_ENDURE",500; bonus2 bSubEle,Ele_Neutral,2; } // SC_MTF_MLEATKED
 1002,{ bonus bCritAtkRate,5; } // SC_MTF_CRIDAMAGE
+// 自定义效果
