@@ -4,7 +4,7 @@
 // type, item ID, price
 //
 // type:
-//    0: New
+//    0: New（数量必须在所有type中最多）
 //    1: Hot
 //    2: Limited
 //    3: Rental
