@@ -1,0 +1,33 @@
+//===== eAthena Script =======================================
+//= Shadow Workshop Warp Script
+//===== By: ==================================================
+//= 5511
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Warp Points for Shadow Workshop
+//===== Additional Comments: =================================
+//= 1.0 First Release
+//============================================================
+
+prontera,272,108,0	warp	prt_to_sa_prt#job_sc01	1,1,s_atelier,13,119
+s_atelier,10,119,0	warp	sa_prt_to_prt#job_sc02	1,1,prontera,268,108
+s_atelier,31,128,0	warp	sa_prt01_to_02#job_sc03	1,1,s_atelier,76,125
+s_atelier,76,128,0	warp	sa_prt02_to_01#job_sc04	1,1,s_atelier,28,128
+
+rachel,180,115,0	warp	ra_to_sa_ra#job_sc01	1,1,s_atelier,130,70
+s_atelier,131,75,0	warp	sa_ra_to_ra#job_sc02	1,1,rachel,180,118
+s_atelier,117,71,0	warp	sa_ra01_to_02#job_sc03	1,1,s_atelier,171,72
+s_atelier,166,72,0	warp	sa_ra02_to_01#job_sc04	1,1,s_atelier,117,67
+
+yuno,278,67,0	warp	yuno_to_sa_yuno#job_sc01	1,1,s_atelier,109,123
+s_atelier,105,123,0	warp	sa_yuno_to_yuno#job_sc02	1,1,yuno,275,67
+s_atelier,108,129,0	warp	sa_yuno01_to_02#job_sc03	1,1,s_atelier,159,125
+s_atelier,159,130,0	warp	sa_yuno02_to_01#job_sc04	1,1,s_atelier,112,129
+
+lighthalzen,41,52,0	warp	lgt_to_sa_lgt#job_sc01	1,1,s_atelier,18,75
+s_atelier,18,79,0	warp	sa_lgt_to_lgt#job_sc02	1,1,lighthalzen,41,56
+s_atelier,32,64,0	warp	sa_lgt01_to_02#job_sc03	1,1,s_atelier,80,63
+s_atelier,80,66,0	warp	sa_lgt02_to_01#job_sc04	1,1,s_atelier,32,62
