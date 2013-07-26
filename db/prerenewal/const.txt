@@ -515,6 +515,7 @@ bSPVanishMagicRate	1095
 bSubRaceMagic	1096
 bSlingItem	1097
 bMonTransform	1098
+bSubShadowDamage	1099
 
 bFixDamage	1900
 bBonusDamage	1901
