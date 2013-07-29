@@ -91,6 +91,7 @@ bonus bIgnoreMDefEle,n;			无视 n 属性魔法防御 (n值见备注2)
 bonus bIgnoreMdefRate,n;		无视对方 n% 魔法防御
 bonus bDefRatioAtkRace,n;		刺穿 n 种族物理防御 (n值见备注1)
 bonus bDefRatioAtkEle,n;		刺穿 n 属性物理防御 (n值见备注2)
+bonus bAddShadowDamage,n;		暗影附身反射的伤害增加n% 
 bonus bSubShadowDamage,n;		被暗影附身反射的伤害减少n% 
 bonus2 bIgnoreDefRate,n,x;		无视种族为 n 的对方 x% 的物理防御力 (n值见备注1)
 bonus2 bIgnoreMdefRate,n,x;		无视种族为 n 的对方 x% 的魔法防御力 (n值见备注1)

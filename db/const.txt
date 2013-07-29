@@ -516,6 +516,7 @@ bSubRaceMagic	1096
 bSlingItem	1097
 bMonTransform	1098
 bSubShadowDamage	1099
+bAddShadowDamage	1100
 
 bFixDamage	1900
 bBonusDamage	1901
