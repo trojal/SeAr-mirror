@@ -1,13 +1,13 @@
-//===== eAthena Script ======================================= 
+//===== rAthena Script ======================================= 
 //= Sealed Shrine
 //===== By: ================================================== 
 //= L0ne_W0lf
 //===== Current Version: ===================================== 
-//= 1.7
+//= 2.3
 //===== Compatible With: ===================================== 
-//= eAthena SVN
+//= rAthena SVN
 //===== Description: ========================================= 
-//= [Aegis Conversion]
+//= [Official Conversion]
 //= Seal away the Great Demon Baphomet.
 //===== Additional Comments: ================================= 
 //= 1.0 First version. [L0ne_W0lf]
@@ -20,86 +20,84 @@
 //=     Changed quest 3046 to 3040. This is the correct quest id.
 //=     Removed checking quest 3045, unofficial check.
 //= 1.7 Fixed a checkquest condition never setting quest. [L0ne_W0lf]
-//===== 翻译: =================================
-//= 翻译 Blue狮子 QQ: 88369337
-//= 校对 5511 (队长检查，和6001数量检查)
-//= 校对 Inkfish (金钱和物品需求改回官方)
-//============================================================
+//= 1.8 Added 'instance_check_party' command to the script for proper checking if
+//=     the invoking party meets the requirements to join the Memorial Dungeon.
+//= 1.9 Fixed broken else/if chaining. [Joseph]
+//= 2.0 Some optimization. [Euphy]
+//= 2.1 Fixed quest being removed before the 12 hours cool down. [Joseph]
+//= 2.2 Removed extra setquest (quest id:3040).	[Joseph]
+//= 2.3 Instance system rewrite. [Euphy]
+//============================================================ 
 
 // Sealed Catacomb Entrance
-monk_test,309,146,3	script	修道士 帕特里克#edq	412,{
-	if (checkquest(3040)>=0) erasequest 3040;
+//============================================================
+monk_test,309,146,3	script	Friar Patrick#edq	412,{
 	cutin "ins_cata_pri_n",2;
-	mes "[修道士 帕特里克]";
-	mes "这个世界的平静即将被打破...恶魔即将把他们邪恶的双手再次伸向这个世界...从灾难诞生之地而来...";
+	mes "[Friar Patrick]";
+	mes "The peace of this world cannot last forever... The hands of Evil are reaching into the world again...";
 	next;
-	mes "[修道士 帕特里克]";
-	mes "是什么将你带入了这个混沌迷茫的时空?";
+	mes "[Friar Patrick]";
+	mes "What brought you to this place?";
 	next;
 	if (countitem(6004) > 0) {
 		set .@doll,1;
-		set .@selection,select("这是哪里?:我想进去:取消");
+		set .@selection,select("What is this place?:I want to enter.:About the Cursed Baphomet Doll.:Cancel.");
 	}
 	else {
-		set .@selection,select("这是哪里?:我想进去:取消");
+		set .@selection,select("What is this place?:I want to enter.:Cancel.");
 	}
 	switch(.@selection) {
 	case 1:
-		mes "[修道士 帕特里克]";
-		mes "唔... 你不知道吗? 这是圣.丘比特神殿修道院,巴风特层在这里成为一名僧侣，受训并祷告.";
+		mes "[Friar Patrick]";
+		mes "Huh... Don't you know? This is St. Capitolina Monastery where the Brothers who wish to become monks train and pray.";
 		next;
-		mes "[修道士 帕特里克]";
-		mes "而且这个地方是. 怎么说好呢..";
-		mes "对了. 这是魔鬼的坟墓.";
-		mes "墓地...";
+		mes "[Friar Patrick]";
+		mes "And this place is... What can I say... Yes. It's the grave of the Devil. Grave...";
 		next;
-		mes "[修道士 帕特里克]";
-		mes "曾经摧毁整个世界的最强大的魔鬼就沉睡在这里.";
+		mes "[Friar Patrick]";
+		mes "The very place where the great Devil who once demolished this world is sleeping.";
 		next;
-		switch(select("多告诉我一些.:别说了")) {
+		switch(select("Tell me more.:Stop talking.")) {
 		case 1:
 			cutin "ins_cata_pri_n",2;
-			mes "[修道士 帕特里克]";
-			mes "巴风特-这是魔鬼的名字,我想你听说过他的名字.";
+			mes "[Friar Patrick]";
+			mes "Baphomet... is the name of the Devil... I think you have heard of his name.";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "这个修道院, 许许多多勇敢的斗士曾经在这里受训.";
+			mes "[Friar Patrick]";
+			mes "Numerous brave men and brothers have trained in this monastery...";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "矗立在你面前的这块封印石下面, 巴风特被勇士们的鲜血和灵魂封印着.";
+			mes "[Friar Patrick]";
+			mes "Under this gravestone in front of you... Baphomet is sealed.";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "不论怎样, 这些牺牲都是暂时的. 当魔王梦罗克醒来的时候, 他的魔力将影响这片大陆上的每一个生灵.";
+			mes "[Friar Patrick]";
+			mes "But... As we speak Satan Morocc is marshalling his powerful magic in order to affect all life on this continent.";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "由于魔王梦罗克的复苏削弱了封印的力量,被封印的巴风特也蠢蠢欲动.";
+			mes "[Friar Patrick]";
+			mes "Baphomet also... has awakened and is preparing for his revival, into this world, by weakening the power of the seal through the power of Satan Morocc...";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "现在,我正在寻找一名真的勇士, 敢于重新将他封印在墓穴里. 必须有人这么做, 就象我以前那样.";
+			mes "[Friar Patrick]";
+			mes "Now... I'm looking for someone brave enough to reseal Baphomet in its shrine... as we once did many years ago...";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "如果你是一名富于冒险的勇士, 你一定能感觉到这周围邪恶的气息.";
+			mes "[Friar Patrick]";
+			mes "Anyone who fights for good will know, deep inside, that evil is threatening to conquer this world...";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
+			mes "[Friar Patrick]";
+			mes "Train more and use your skills to protect the world from evil's looming presence...";
 			break;
 		case 2:
 			cutin "ins_cata_pri_n",2;
-			mes "[修道士 帕特里克]";
-			mes "如果你是一名富于冒险的勇士, 你一定能感觉到这周围邪恶的气息.";
+			mes "[Friar Patrick]";
+			mes "Anyone who fights for good will know, deep inside, that evil is threatening to conquer this world...";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
+			mes "[Friar Patrick]";
+			mes "Train more and use your skills to protect the world from evil's looming presence...";
 			break;
 		}
 		break;
 	case 2:
-		if (BaseLevel > 74) {
+		if (BaseLevel >= 75) {
 
 			set .@party_id,getcharid(1);
-			getpartymember(.@party_id);
-			set .@partymembercount,$@partymembercount;
-			copyarray .@partymembername$[0],$@partymembername$[0],.@partymembercount;
 
 			mes "[Friar Patrick]";
 			mes "Do you mean you'll go to the shrine and reseal Baphomet?";
@@ -110,148 +108,92 @@ monk_test,309,146,3	script	修道士 帕特里克#edq	412,{
 			// Two hour play limit
 			//set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
 
-			//if (.@ins_bapho_check < 2) {
-				if (.@ins_bapho_check == -1) {
-					if ((getpartyleader(.@party_id,2) == getcharid(0)) && (.@partymembercount > 1)) {
-						set .@instance, instance_create("Sealed Catacombs", .@party_id);
-						if (.@instance < 0) {
-							mes "[修道士 帕特里克]";
-							mes "队伍名字是 "+getpartyname(.@party_id)+"...";
-							mes "队长的名字 "+.@partymembername$[0]+"...";
-							mes "唔...好像有点问题...我再检查一次,请稍等.";
-						}
-						else {
-
-							for( set .@i, 1; .@i <= 2; set .@i, .@i + 1 ) {
-								if( instance_attachmap("" + .@i + "@cata", .@instance) == "" )
-									break;
-							}
-							if( .@i < 2 ) {
-								instance_destroy(.@instance);
-								close;
-							}
-
-							instance_attach(.@instance);
-							instance_set_timeout 7200,300,.@instance;
-							instance_init(.@instance);
-
-							// First Floor
-							disablenpc instance_npcname("远古英雄的灵魂#1F", instance_id());
-							disablenpc instance_npcname("ins_bapho_to_2f", instance_id());
-
-							for( set .@i, 1; .@i < 13; set .@i, .@i + 1 ) {
-								disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"T", instance_id());
-								disablenpc instance_npcname("行将倒塌的墓穴#1F_"+.@i+"F", instance_id());
-							}
-							for( set .@i, 1; .@i <= 12; set .@i, .@i + 1 ) {
-								disablenpc instance_npcname("火把#"+.@i, instance_id());
-							}
-
-							// Second Floor
-							disablenpc instance_npcname("ins_baphomet_1f_timer", instance_id());
-							disablenpc instance_npcname("ins_2f_enter_broad", instance_id());
-							disablenpc instance_npcname("封印#0", instance_id());
-							disablenpc instance_npcname("封印#2", instance_id());
-							disablenpc instance_npcname("封印#4", instance_id());
-							disablenpc instance_npcname("封印#8", instance_id());
-							disablenpc instance_npcname("封印#10", instance_id());
-							disablenpc instance_npcname("远古英雄的灵魂#2F", instance_id());
-							disablenpc instance_npcname("control_baphomet", instance_id());
-							disablenpc instance_npcname("ins_2f_hero_broad2", instance_id());
-							disablenpc instance_npcname("2f_callmon_pattern_c", instance_id());
-							disablenpc instance_npcname("2f_callmon_pattern", instance_id());
-							disablenpc instance_npcname("ins_2f_hero_pattern_c", instance_id());
-							disablenpc instance_npcname("ins_2f_hero_pattern", instance_id());
-
-							// Pick proper grave
-							donpcevent instance_npcname("ins_baphomet_lotto", instance_id())+"::OnEnable";
-
-							// Spawn monsters.
-							donpcevent instance_npcname("ins_1f_spawn_mobs", instance_id())+"::OnEnable";
-
-							mes "[修道士 帕特里克]";
-							mes "队伍名字是 "+getpartyname(.@party_id)+"...";
-							mes "队长名字是 "+.@partymembername$[0]+"...";
-							mes "Okay...我将调节墓穴封印以便你和你的同伴能够进入.";
-							next;
-							mes "[修道士 帕特里克]";
-							mes "封印的调节结束时,你会看到一个标志，到时就可以进去了.";
-							mes "请等待标志出现.";
-							next;
-							mes "[修道士 帕特里克]";
-							mes "当你看到标志时,把手放在墓穴的祭坛上,这样就可以进入墓穴内部了.";
-							next;
-							mes "[修道士 帕特里克]";
-							mes "有件事你必须记住: 任何进入墓穴的人都将受到巴风特的诅咒. 在被诅咒期间将无法离开和进入墓穴.";
-							next;
-							mes "[修道士 帕特里克]";
-							mes "还有一件事...在受诅咒的区域里,一些通过外部物理防御力来增加保护的技能将被封印影响.";
-							next;
-							mes "[修道士 帕特里克]";
-							mes "比如 ^0000FF暗之障壁, 圣母之祈福^000000... 因此进入墓穴前你最好做好准备.";
-						}
+			if (.@ins_bapho_check == -1) {
+				if (getpartyleader(.@party_id,2) == getcharid(0) && instance_check_party(.@party_id,2,75)) {
+					mes "[Friar Patrick]";
+					mes "Party name is "+getpartyname(.@party_id)+"...";
+					mes "Name of the leader is "+strcharinfo(0)+"...";
+					if (instance_create("Sealed Catacomb") < 0) {
+						mes "Umm... But it seems that there is a problem here... I'll check quickly. Please wait.";
 					}
 					else {
-						mes "[修道士 帕特里克]";
-						mes "唔...我很欣赏你的勇气, 但是, 我不会允许任何人单独进入这里. 如果是一支队伍我倒是可以考虑.";
+						mes "Okay... I'll adjust the shrine's seal so that you and your group can enter.";
 						next;
-						mes "[修道士 帕特里克]";
-						mes "当队长获得进入许可时, 队伍的其他成员才能随后进入. 这是修道院的规矩.";
+						mes "[Friar Patrick]";
+						mes "You will see a sign when the seal has broken. Please wait until the sign appears...";
+						next;
+						mes "[Friar Patrick]";
+						mes "When you see the sign, put your hands on the gravestone... Then you can move inside.";
+						next;
+						mes "[Friar Patrick]";
+						mes "One thing that you should remember is... Anyone who enters this shrine will be cursed by Baphomet and cannot enter or leave while they are cursed.";
+						next;
+						mes "[Friar Patrick]";
+						mes "And one more thing... In this cursed area, some skills, which are protected by outer physical power are prohibited by the effect of the seal.";
+						next;
+						mes "[Friar Patrick]";
+						mes "For example, the skills like ^0000FFSafety Wall and Assumptio^000000... So you'd better prepare before entering the shrine.";
 					}
 				}
-				else if ((.@ins_bapho_check == 0) || (.@ins_bapho_check == 1)) {
-					mes "[修道士 帕特里克]";
-					mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
-				}
-				else if (.@ins_bapho_check == 2) {
-					mes "[修道士 帕特里克]";
-					mes "唔... 看起来巴风特的诅咒变弱了,现在我可以移除诅咒了.";
+				else {
+					mes "[Friar Patrick]";
+					mes "Umm... I recognize your courage, but... I can't permit anyone to enter this place. I can only permit the leader of a party to enter first.";
 					next;
-					mes "[修道士 帕特里克]";
-					mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
-					next;
-					if (checkquest(3040)) erasequest 3040;
-					if (checkquest(3041)) erasequest 3041;
-					if (checkquest(3045)) erasequest 3045;
-					mes "[修道士 帕特里克]";
-					mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
+					mes "[Friar Patrick]";
+					mes "Once the party leader is permitted, the rest of the party can enter. This is a rule of this monastery, so please understand.";
 				}
-			//}
+			}
+			else if (.@ins_bapho_check == 0 || .@ins_bapho_check == 1) {
+				mes "[Friar Patrick]";
+				mes "It seems you have entered this shrine recently... You cannot reenter because Baphomet's Curse still remains. Baphomet's Curse disappears only after a certain amount of time has passed.";
+			}
+			else if (.@ins_bapho_check == 2) {
+				mes "[Friar Patrick]";
+				mes "Umm... It seems that Baphomet's Curse has weakened. I can remove it now.";
+				next;
+				mes "[Friar Patrick]";
+				mes "Haaaaaaap... Hocus Pocus Wingardium Abracadabra!!!!!";
+				next;
+				erasequest 3040;
+				if (checkquest(3041)>=0) erasequest 3041;
+				if (checkquest(3045)>=0) erasequest 3045;
+				mes "[Friar Patrick]";
+				mes "Huu... It's over. Now that I've released Baphomet's Curse, you can enter again.";
+			}
 		}
 		else {
-			mes "[修道士 帕特里克]";
-			mes "唔. 你应该多经受一些锻炼再进入这个危险的地方. 请先提升到 85级再来这里.";
+			mes "[Friar Patrick]";
+			mes "Umm... You should train more to enter this dangerous place... You should reach at least Lv 75 to enter here.";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "请多锻炼锻炼再来吧.";
+			mes "[Friar Patrick]";
+			mes "Please train more and come again.";
 		}
 		break;
 	case 3:
 		if (.@doll == 1) {
-			mes "[修道士 帕特里克]";
-			mes "那个是...你拿着的是魔力巴风特娃娃? 让我看看.";
+			mes "[Friar Patrick]";
+			mes "That is... the villainous doll that you are holding... Let me see it.";
 			next;
-			mes "[修道士 帕特里克]";
+			mes "[Friar Patrick]";
 			mes "... ... ...";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "没错了. 我能感觉到巴风特的气息... 你要用这个娃娃做什么?";
+			mes "[Friar Patrick]";
+			mes "That's correct... I can feel Baphomet's evil inside... So, what will you do with the doll?";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "如果你不打算用这个东西做任何事, 那么留在身上是很危险的!";
-			mes "我可以介绍你去一个地方, 或者能帮到你.";
+			mes "[Friar Patrick]";
+			mes "It is just a dangerous and useless thing if you do nothing with it... I'll introduce someone who can help you... Do you want to see him?";
 			next;
-			mes "[修道士 帕特里克]";
-			mes "去修道院大厅附近找 ^0000FF锈蚀的黑手^000000 ...它能帮你用这个娃娃做点什么.";
+			mes "[Friar Patrick]";
+			mes "Go to see ^0000FFRust Blackhand^000000 who is near the main building of the monastery... He will make this doll helpful to you.";
 			setquest 3042;
 			break;
 		}
 	case 4:
-		mes "[修道士 帕特里克]";
-		mes "如果你是一名富于冒险的勇士, 你一定能感觉到这周围邪恶的气息.";
+		mes "[Friar Patrick]";
+		mes "Anyone who fights for good will know, deep inside, that evil is threatening to conquer this world...";
 		next;
-		mes "[修道士 帕特里克]";
-		mes "多经受一些考验,并用你的力量阻止这个世界坠入邪恶吧.";
+		mes "[Friar Patrick]";
+		mes "Train more and use your skills to protect the world from evil's looming presence...";
 		break;
 	}
 	close2;
@@ -259,90 +201,74 @@ monk_test,309,146,3	script	修道士 帕特里克#edq	412,{
 	end;
 }
 
-monk_test,306,151,3	script	巴风特的墓穴#edq	111,{
-	if (countitem(6002) > 0)
-		delitem 6002,countitem(6002); //Token_Of_Apostle门徒的标示
-	mes "这个石墓穴上有一个巨大、邪恶山羊角的雕像,不详的感觉从中散发出来.";
+monk_test,306,151,3	script	Grave of Baphomet#edq	111,{
+	if (countitem(6002)) delitem 6002,countitem(6002); //Token_Of_Apostle
+	mes "This gravestone has a carving of a wicked devil with large horns. It arouses an ominous feeling.";
 	next;
-	switch(select("触碰它:退后")) {
-	case 1:
+	if(select("Touch the stone.:Step back.") == 2)
+		close;
 
-		set .@party_id,getcharid(1);
-		getpartymember(.@party_id);
-		set .@partymembercount,$@partymembercount;
-		copyarray .@partymembername$[0],$@partymembername$[0],.@partymembercount;
+	// 12 hour cooldown
+	set .@ins_bapho_check,checkquest(3040,PLAYTIME);
+	// Two hour play limit
+	//set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
 
-		set .@instance, instance_id(1);
-		instance_attach(.@instance);
-
-		// 12 hour cooldown
-		set .@ins_bapho_check,checkquest(3040,PLAYTIME);
-		// Two hour play limit
-		//set .@ins_bapho_check2,checkquest(3045,PLAYTIME);
-
-		if (.@ins_bapho_check == -1) {
-			if (has_instance("1@cata") == "") {
-				mes "摸起来很冰冷,但是并没有任何反应.";
-			}
-			//else if (ret == 2) {
-			//	mes "It's cold to the touch. It doesn't respond.";
-			//	close;
-			//}
-			else if ((has_instance("1@cata") != "") && (.@partymembercount < 2)) {
-				mes "[修道士 帕特里克]";
-				mes "要进入这个地方你必须有一个队伍.";
-				mes "请加入一个队伍后再来.";
-			}
-			//else if (ret == 0) {
-			else {
-				mapannounce "monk_test","队伍 [" + getpartyname(.@party_id) + "] 的成员 [" + strcharinfo(0) + "] 进入了封印神殿",bc_map,"0x00ff99";
-				if (checkquest(3040) == -1) setquest 3040;
-				warp "1@cata",100,224;
-			}
+	if (.@ins_bapho_check == -1) {
+		switch(instance_enter("Sealed Catacomb")) {
+		case 3:
+		case 2:
+			mes "It's cold to the touch. It doesn't respond.";
+			close;
+		case 1:
+			mes "[Friar Patrick]";
+			mes "To enter this dangerous place, you can't go alone. Come again after you join a party.";
+			close;
+		case 0:
+			mapannounce "monk_test","[" + strcharinfo(0) + "] member of the [" + getpartyname(.@party_id) + "] party has entered the Sealed Shrine.",bc_map,"0x00ff99";
+			setquest 3040;
+			//warp "1@cata",100,224;
+			close;
 		}
-		else if ((.@ins_bapho_check == 0) || (.@ins_bapho_check == 1)) {
-			mes "[修道士 帕特里克]";
-			mes "你最近进入过墓穴,在巴风特的诅咒还没有消失前你不能再次进入.";
-		}
-		else if (.@ins_bapho_check == 2) {
-			mes "[修道士 帕特里克]";
-			mes "唔... 看起来巴风特的诅咒变弱了,现在我可以移除诅咒了.";
-			next;
-			mes "[修道士 帕特里克]";
-			mes "哈啪啦哈哈... 麻醉剂、聚苯乙烯、加速、咒语!!!!!";
-			specialeffect2 EF_HOLYHIT;
-			if (checkquest(3040)) erasequest 3040;
-			if (checkquest(3041)) erasequest 3041;
-			if (checkquest(3045)) erasequest 3045;
-			next;
-			mes "[修道士 帕特里克]";
-			mes "呼... 好了. 巴风特的诅咒已经被释放了, 你可以进去了.";
-		}
-		break;
-	case 2:
-		break;
+	} else if (.@ins_bapho_check == 0 || .@ins_bapho_check == 1) {
+		mes "[Friar Patrick]";
+		mes "It seems you have entered this shrine recently... You cannot reenter because the curse of Baphomet still remains.";
+		mes "The curse of Baphomet disappears after a certain amount of time after you entered.";
+		close;
+	} else if (.@ins_bapho_check == 2) {
+		mes "[Friar Patrick]";
+		mes "Umm... It seems the curse of Baphomet weakened. I'll clear the bad curse.";
+		next;
+		mes "[Friar Patrick]";
+		mes "Haaaaaaap... Wingardium Leviosa Expecto Patronum !!!!!";
+		specialeffect2 EF_HOLYHIT;
+		erasequest 3040;
+		if (checkquest(3041)>=0) erasequest 3041;
+		if (checkquest(3045)>=0) erasequest 3045;
+		next;
+		mes "[Friar Patrick]";
+		mes "Huu... It's over. Now I released all of the curses on you. You can enter again.";
+		close;
 	}
-	close;
 }
 
-prt_monk,261,91,3	script	锈蚀的黑手#edq	826,{
+prt_monk,261,91,3	script	Rust Blackhand#edq	826,{
 	set .@new_maje,checkquest(3043);
-	mes "[锈蚀的黑手]";
-	mes "你是谁? 来我这里做什么?";
+	mes "[Rust Blackhand]";
+	mes "Who are you? What do you want me for?";
 	next;
-	mes "[锈蚀的黑手]";
-	mes "你不是一名僧侣, 那你到底想要什么?";
+	mes "[Rust Blackhand]";
+	mes "You're not a monk, then what do you want?";
 	next;
-	if ((.@new_maje == 0) || (.@new_maje == 1)) {
-		mes "[锈蚀的黑手]";
-		mes "你把所有材料都带来了吗?";
+	if (.@new_maje == 0 || .@new_maje == 1) {
+		mes "[Rust Blackhand]";
+		mes "Did you bring all of the ingredients?";
 		next;
 		if ((countitem(6004) > 0) && (countitem(2256) > 0) && (countitem(7799) > 29) && (countitem(7798) > 49) && (Zeny > 990000)) {
-			mes "[锈蚀的黑手]";
-			mes "嚯嚯... 你已经准备好了全部材料. 把材料放在那等着.";
+			mes "[Rust Blackhand]";
+			mes "kkk... You prepared the ingredients well. Why don't you leave it there and wait?";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "呒...很久没见过这个奇怪的犄角了...开始...";
+			mes "[Rust Blackhand]";
+			mes "Hmm... It's been such a long time since I last saw these wicked horns... kkk... Let me start...";
 			next;
 			mes "...";
 			next;
@@ -350,614 +276,420 @@ prt_monk,261,91,3	script	锈蚀的黑手#edq	826,{
 			next;
 			mes "... ... ...";
 			next;
-			delitem 6004,1; //魔力巴风特娃娃
-			delitem 2256,1; //山羊头盔
-			delitem 7799,30; //黑暗的结晶体
-			delitem 7798,50; //黑暗的碎片
+			delitem 6004,1; //Bapho_Doll
+			delitem 2256,1; //Magestic_Goat
+			delitem 7799,30; //Dark_Crystal
+			delitem 7798,50; //Dark_Debris
 			set zeny,zeny-990000;
 			completequest 3043;
-			getitem 5374,1; //巨大山羊头盔
-			mes "[锈蚀的黑手]";
-			mes "完成了! 想必你激动的不能自己了吧? 当然是这样,我能理解.";
+			getitem 5374,1; //L_Magestic_Goat
+			mes "[Rust Blackhand]";
+			mes "It's done. You may be excited, of course. I understand...";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "我不接受抱怨,也不回答任何问题! 所以...";
-			next;
-			mes "我得走了...";
+			mes "[Rust Blackhand]";
+			mes "I don't accept complaints or A/S requests, so use it with care. I must go...";
 			close;
 		}
 		else {
-			mes "[锈蚀的黑手]";
-			mes "呼... 你并不理解我所说的. 就这些材料你什么也得不到.";
+			mes "[Rust Blackhand]";
+			mes "Huu... You don't understand what I said. You cannot make anything with these ingredients.";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "我再告诉你一次材料名字和数量,听好了!";
+			mes "[Rust Blackhand]";
+			mes "I'll tell you the ingredients one more time, so please gather them correctly.";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "^0000FF1个魔力巴风特娃娃, 1个山羊头盔, 30个黑暗的结晶体, 50个黑暗的碎片^000000, 最重要的是制作费用 ^0000FF990000^000000 Zeny.";
+			mes "[Rust Blackhand]";
+			mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness^000000, and the most important, production cost is ^0000FF990000^000000 Zeny.";
 			close;
 		}
 	}
 	else if ((.@new_maje == -1) && (countitem(6004) > 0)) {
-		switch(select("关于魔力巴风特娃娃:停止交谈")) {
+		switch(select("About the Cursed Baphomet Doll:Stop talking.")) {
 		case 1:
-			mes "[锈蚀的黑手]";
-			mes "什么? 呒呒呒...你得到魔力巴风特娃娃? 你比我想象的要厉害多了!!";
+			mes "[Rust Blackhand]";
+			mes "What?... Hmmm... Did you get the doll? You're pretty good, unlike your appearance...";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "给我看看. 什么也不用说, 一定是英雄把你引到这里来处理魔力巴风特娃娃, 对不对?";
+			mes "[Rust Blackhand]";
+			mes "Let me see... Needless to say, Patric must have sent you here to deal with the doll, right?";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "Cool...我来帮你把无用的魔力巴风特娃娃变得有用. 什么? 我能做什么?";
+			mes "[Rust Blackhand]";
+			mes "Cool... I'll help you make the evil doll useful. What? What can I do?";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "我能作出强大的、巨大的山羊犄角. 有着巴风特力量的头盔.";
+			mes "[Rust Blackhand]";
+			mes "I can make the strong and large horns of the wicked devil Baphomet for you. A helm that has his immense power.";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "人们都叫它 ^4d4dff巨大山羊头盔^000000. 你将会发现普通的山羊头盔只是未熟的青苹果.";
+			mes "[Rust Blackhand]";
+			mes "It is called the ^4d4dffGigantic Magestic Goat^000000. You'll realize that the Magestic Goat you're familiar with is nothing in comparison.";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "魔力巴风特娃娃是最重要的材料. 如果你想要我可以做给你, 你需要做么?";
+			mes "[Rust Blackhand]";
+			mes "The Cursed Baphomet Doll is the most important ingredient... I'll make you if you want. What would you like to do?";
 			next;
-			switch(select("我想做:不需要")) {
+			switch(select("I want to make one!:I don't need one.")) {
 			case 1:
-				mes "[锈蚀的黑手]";
-				mes "嘿.. 是了, 聪明人总能抓住机会! 我告诉你材料, 不要忘了全部带来.";
+				mes "[Rust Blackhand]";
+				mes "kkk... Yes, wise men take their chances when the opportunity comes. I'll tell you the ingredients. Don't forget, and bring them all.";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "^0000FF1个魔力巴风特娃娃, 1个山羊头盔, 30个黑暗的结晶体, 50个黑暗的碎片^000000, 最重要的是制作费用 ^0000FF 1999万^000000 Zeny.";
+				mes "[Rust Blackhand]";
+				mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness^000000, and the most important, production cost is ^0000FF990000^000000 Zeny.";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "普通山羊头盔你可以从北森的小弟巴风特那里得到, 黑暗的结晶体 和 黑暗的碎片 可以在魔王梦洛克区域的怪物那里得到.";
+				mes "[Rust Blackhand]";
+				mes "You can get the Magestic Goat from the weak Baphomet in the Labyrinth Forest. Crystal of Darkness and Fragment of Darkness are from the Incarnation of Morocc.";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "我相信你一定可以找到这些材料,因为你连真正的巴风特都能重新封印! 不是吗? 咳咳咳...";
+				mes "[Rust Blackhand]";
+				mes "I'm sure that you can get the ingredients because you sealed the real Baphomet. Can't you? kkk...";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "在你得到之前你是无法想象 ^4d4dff巨大山羊头盔^000000 的样子的! 想得到的话快去找材料来.";
+				mes "[Rust Blackhand]";
+				mes "You'll never know how great this hat is until you get one. If you understood, go and get the ingredients.";
 				changequest 3042,3043;
 				close;
 			case 2:
-				mes "[锈蚀的黑手]";
-				mes "呼...你能吗? 爱干嘛干嘛.你觉得还有其它机会得到这顶 ^4d4dff巨大山羊头盔^000000?";
+				mes "[Rust Blackhand]";
+				mes "Huh... Do you? Do whatever you want... Do you really want to let this opportunity go to waste?";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "秃噜,秃噜...我才不关心魔力巴风特娃娃将给你的生命带去什么样的影响.";
+				mes "[Rust Blackhand]";
+				mes "Tut, tut... I don't care if the wicked doll threatens your life all the time!";
 				close;
 			}
 		case 2:
-			mes "[锈蚀的黑手]";
-			mes "真是个傻瓜...呼!";
+			mes "[Rust Blackhand]";
+			mes "What a dull boy he is... huh...";
 			close;
 		}
 	}
 	else if ((.@new_maje == -1) && (countitem(6004) == 0)) {
-		mes "[锈蚀的黑手]";
-		mes "没什么事的话,离开吧! 你也看到了,我要给修道院的兄弟制作装备.";
+		mes "[Rust Blackhand]";
+		mes "If you don't have business with me, go away! As you see, I make equipment for the Brothers at the monastery, not for adventurers like you. Do you understand?";
 		close;
 	}
 	else if ((.@new_maje == 2) && (countitem(6004) > 0)) {
-		switch(select("关于魔力巴风特娃娃:停止交谈")) {
+		switch(select("About the Cursed Baphomet Doll:Stop talking.")) {
 		case 1:
-			mes "[锈蚀的黑手]";
-			mes "什么? 又是你? 这次你想要什么?";
+			mes "[Rust Blackhand]";
+			mes "What?... You again? What do you want this time?";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "什么? 你又得到一个魔力巴风特娃娃? 呒...你比我想象的厉害多了.";
+			mes "[Rust Blackhand]";
+			mes "What? You got another doll from the wicked devil? Umm... You're much better than I thought...";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "好吧...再帮你一次.";
+			mes "[Rust Blackhand]";
+			mes "Alright... I'll help you again.";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "如果你想再次用魔力巴风特娃娃制作 ^4d4dff巨大山羊头盔^000000, 我就再做一次.";
+			mes "[Rust Blackhand]";
+			mes "If you want to make the doll into a ^4d4dffGigantic Magestic Goat^000000 again, I can make you another.";
 			next;
-			mes "[锈蚀的黑手]";
-			mes "我再告诉你一次材料. 那么, 你决定了?";
+			mes "[Rust Blackhand]";
+			mes "I'll tell you the ingredients again. So, do you want to make?";
 			next;
-			switch(select("我想做.:不,我不想做.")) {
+			switch(select("I want.:No, I don't want.")) {
 			case 1:
-				mes "[锈蚀的黑手]";
-				mes "咳咳咳...是的, 聪明人总能抓住机会! 我告诉你材料, 不要忘了全部带来.";
+				mes "[Rust Blackhand]";
+				mes "kkk... Yes, wise men take their chances when the opportunity comes. I'll tell you the ingredients. Don't forget, and bring them all.";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "^0000FF1个魔力巴风特娃娃, 1个山羊头盔, 30个黑暗的结晶体, 50个黑暗的碎片^000000, 最重要的是制作费用 ^0000FF 1999万^000000 Zeny.";
+				mes "[Rust Blackhand]";
+				mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness^000000, and the most important, production cost is ^0000FF990000^000000 Zeny.";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "普通山羊头盔你可以从北森的小弟巴风特那里得到, 黑暗的结晶体 和 黑暗的碎片 可以在魔王梦洛克区域的怪物那里得到.";
+				mes "[Rust Blackhand]";
+				mes "You can get the Magestic Goat from the weak Baphomet in the Labyrinth Forest. Crystal of Darkness and Fragment of Darkness are from the Incarnation of Morocc.";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "我相信你一定可以找到这些材料,因为你连真正的巴风特都能重新封印! 不是吗? 咳咳咳...";
+				mes "[Rust Blackhand]";
+				mes "I'm sure that you can get the ingredients because you sealed the real Baphomet. Can't you? kkk...";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "在你得到之前你是无法想象 ^4d4dff巨大山羊头盔^000000 的样子的! 想得到的话快去找材料来.";
+				mes "[Rust Blackhand]";
+				mes "You'll never know how great this hat is until you get one. If you understood, go and get the ingredients.";
 				//recall_completequest 3043
 				changequest 3042,3043;
 				close;
 			case 2:
-				mes "[锈蚀的黑手]";
-				mes "呼...你能吗? 爱干嘛干嘛.你觉得还有其它机会得到这顶 ^4d4dff巨大山羊头盔^000000?";
+				mes "[Rust Blackhand]";
+				mes "Huh... Do you? Do whatever you want... Do you really want to let this opportunity go to waste?";
 				next;
-				mes "[锈蚀的黑手]";
-				mes "秃噜,秃噜...我才不关心魔力巴风特娃娃将给你的生命带去什么样的影响.";
+				mes "[Rust Blackhand]";
+				mes "Tut, tut... I don't care if the wicked doll threatens your life all the time!";
 				close;
 			}
 		case 2:
-			mes "[锈蚀的黑手]";
-			mes "真是个傻瓜...呼!";
+			mes "[Rust Blackhand]";
+			mes "What a dull boy he is... huh...";
 			close;
 		}
 	}
 	else if ((.@new_maje == 2) && (countitem(6004) == 0)) {
-		mes "[锈蚀的黑手]";
-		mes "你为什么还在这里转悠? 如果你不做 ^4d4dff巨大山羊头盔^000000, 赶快离开!";
+		mes "[Rust Blackhand]";
+		mes "Why are you hanging around here? If you don't want a ^4d4dffGigantic Magestic Goat^000000, go away.";
 		close;
 	}
 }
 
-// Inside Sealed Catacomb
+// Sealed Shrine Interior
+//============================================================
 1@cata,1,2,0	script	ins_baphomet_lotto	-1,{
-OnEnable:
-	switch(rand(1,13)) {
-	case 1:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 2:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 3:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 4:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 5:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 6:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 7:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 8:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 9:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 10:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 11:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 12:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12T", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13F", instance_id());
-		end;
-	case 13:
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_1F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_2F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_3F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_4F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_5F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_6F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_7F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_8F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_9F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_10F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_11F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_12F", instance_id());
-		enablenpc instance_npcname("行将倒塌的墓穴#1F_13T", instance_id());
-		end;
+OnInstanceInit:
+	// Pick one "true" Gravestone and 12 "false" Gravestones.
+	set .@true, rand(1,13);
+	for(set .@i,1; .@i<13; set .@i,.@i+1) {
+		disablenpc instance_npcname("Gravestone#1F_1"+((.@i == .@true)?"F":"T"));
 	}
+	disablenpc instance_npcname("ins_baphomet_lotto");
 	end;
 }
 
 1@cata,3,2,0	script	ins_baphomet_lotto2	-1,{
 OnEnable:
-	enablenpc instance_npcname("火把#1", instance_id());
-	enablenpc instance_npcname("火把#2", instance_id());
-	enablenpc instance_npcname("火把#3", instance_id());
-	enablenpc instance_npcname("火把#4", instance_id());
-	enablenpc instance_npcname("火把#5", instance_id());
-	enablenpc instance_npcname("火把#6", instance_id());
-	enablenpc instance_npcname("火把#7", instance_id());
-	enablenpc instance_npcname("火把#8", instance_id());
-	enablenpc instance_npcname("火把#9", instance_id());
-	enablenpc instance_npcname("火把#10", instance_id());
-	enablenpc instance_npcname("火把#11", instance_id());
-	enablenpc instance_npcname("火把#12", instance_id());
+	for(set .@i,1; .@i<12; set .@i,.@i+1)
+		enablenpc instance_npcname("Bobbing Torch#"+.@i);
 	end;
 }
 
 1@cata,4,2,0	script	ins_baphomet_lotto3	-1,{
 OnEnable:
-	monster "1@cata",0,0,"巴风特门徒#1",1869,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#2",1291,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#3",1869,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#4",1291,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#5",1869,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#6",1291,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#7",1869,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#8",1132,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#9",1117,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#10",1132,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#11",1117,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#12",1132,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#13",1291,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#14",1117,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
-	monster "1@cata",0,0,"巴风特门徒#15",1869,1,instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
+	set .@label$, instance_npcname("ins_baphomet_lotto3")+"::OnMyMobDead";
+	set .@map$, instance_mapname("1@cata");
+	monster .@map$,0,0,"Apostle of Baphomet",1869,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1291,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1869,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1291,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1869,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1291,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1869,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1132,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1117,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1132,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1117,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1132,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1291,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1117,1,.@label$;
+	monster .@map$,0,0,"Apostle of Baphomet",1869,1,.@label$;
 	end;
 
 OnDisable:
-	killmonster "1@cata",instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead";
+	killmonster instance_mapname("1@cata"),instance_npcname("ins_baphomet_lotto3")+"::OnMyMobDead";
 	end;
 
 OnMyMobDead:
-	if (mobcount("1@cata",instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnMyMobDead") < 1) {
-		instance_announce 0, "巴风特的门徒全部死亡!",bc_map,"0x00ff99";
+	set .@map$, instance_mapname("1@cata");
+	if (mobcount(.@map$,instance_npcname("ins_baphomet_lotto3")+"::OnMyMobDead") < 1) {
+		mapannounce .@map$, "All apostles of Baphomet are dead!",bc_map,"0x00ff99";
 	}
-	getitem 6002,1; //Token_Of_Apostle门徒的标示
+	getitem 6002,1; //Token_Of_Apostle
 	end;
 }
 
-//===================== soul of hero near the north grave ========================
-1@cata,141,221,0	script	行将倒塌的墓穴#	844,3,3,{
+// Soul of hero near the north grave
+//============================================================
+1@cata,141,221,0	script	Gravestone#	844,3,3,{
 	set .@party_id,getcharid(1);
 	if ('ins_baphomet == 0) {
-		mes "墓穴正在颤动着.";
+		mes "The gravestone is trembling...";
 		next;
-		mes "触碰墓穴后, 我听到一个声音.";
+		mes "When touching the gravestone, I hear a voice.";
 		next;
 		specialeffect2 EF_CONE;
-		mes "[墓穴的声音]";
-		mes "我一直等待着象你这样的勇士.";
+		mes "[Voice of the Gravestone]";
+		mes "I have waited and waited for a brave adventurer like you who will come back here again...";
 		next;
 		while(1) {
-			switch(select("你是谁?:一直等着我?:取消.")) {
+			switch(select("Who are you?:Waited for me?:Cancel.")) {
 			case 1:
-				mes "[墓穴的声音]";
-				mes "我曾经是一名象你一样阻截巴风特的战士. 现在, 我已经死去, 只剩下灵魂.";
+				mes "[Voice of the Gravestone]";
+				mes "I was one of the warriors to stop Baphomet like you. Now, I'm dead and only my soul remains...";
 				next;
-				mes "[墓穴的声音]";
-				mes "你知道...我们没有多少时间, 你无法独自阻止巴风特. 这个恶魔的力量在过去十年里得到了很大的增强.";
+				mes "[Voice of the Gravestone]";
+				mes "As you know... We don't have much time. You can't stop Baphomet by yourselves. The power of the devil has strengthened over the years.";
 				next;
-				mes "[墓穴的声音]";
-				mes "我和我的同伴们曾经将巴风特封印在地下室2层的祭坛下,并且封闭了入口.";
+				mes "[Voice of the Gravestone]";
+				mes "In the past, my companions and I sealed Baphomet at the altar located on the 2nd basement and blocked the entrance.";
 				next;
-				mes "[墓穴的声音]";
-				mes "我将自己的灵魂附在了我 ^0000FF灵魂的吊坠^000000上, 因此我还能存在于这个世界上, 并且成为了墓穴的守卫.";
+				mes "[Voice of the Gravestone]";
+				mes "I moved my soul's essence to my pendant, so that I could remain in this world. That's when I became this grave's guardian.";
 				next;
 				break;
 			case 2:
-				mes "[墓穴的声音]";
-				mes "巴风特的力量正在突破封印的困阻. 如果你不能重新激活封印, 巴风特的复活只是时间问题.";
+				mes "[Voice of the Gravestone]";
+				mes "Baphomet's power is about to break the seal that we made. If you don't reactivate them... Baphomet's revival will only be a matter of time.";
 				next;
-				mes "[墓穴的声音]";
-				mes "要打开入口你必须使我的灵魂实体化, 当我实体化以后我就能打开入口, 并且重新激活越发虚弱的封印.";
+				mes "[Voice of the Gravestone]";
+				mes "To open the entrance, you must substantialize my soul. I'll open the entrance and reactivate the weakened seals after I am substantilized.";
 				next;
-				mes "[墓穴的声音]";
-				mes "使我的灵魂实体化的方法是找到我 ^0000FF灵魂的吊坠^000000, 就在墓穴的附近.";
+				mes "[Voice of the Gravestone]";
+				mes "To substantialize my soul, you should find my pendant. You can find my body near a grave here.";
 				next;
-				mes "[墓穴的声音]";
-				mes "如果你们队伍的 ^0000FF队长^000000 将 ^0000FF灵魂的吊坠^000000 拿给我, 我的灵魂就能实体化. 请尽快!!";
+				mes "[Voice of the Gravestone]";
+				mes "If your ^0000FFparty leader^000000 brings me the pendant, my soul can be substantialized. So, hurry up.";
 				set 'ins_baphomet,1;
 				close;
 			case 3:
-				mes "我能感觉到声音变得越来越微弱.";
+				mes "I can feel the voice becoming faint.";
 				close;
 			}
 		}
 	}
 	else if ('ins_baphomet == 1) {
-		mes "[墓穴的声音]";
-		mes "要打开入口你必须使我的灵魂实体化, 当我实体化以后我就能打开入口, 并且重新激活越发虚弱的封印.";
+		mes "[Voice of the Gravestone]";
+		mes "To open the entrance, you must substantialize my soul. I'll open the entrance and reactivate the weakened seals after I am substantilized.";
 		next;
-		mes "[墓穴的声音]";
-		mes "使我的灵魂实体化的方法是找到我 ^0000FF灵魂的吊坠^000000, 就在墓穴的附近.";
+		mes "[Voice of the Gravestone]";
+		mes "To substantialize my soul, you should find my pendant. You can find my body near a grave here.";
 		next;
-		mes "[墓穴的声音]";
-		mes "如果你们队伍的 ^0000FF队长^000000 将 ^0000FF灵魂的吊坠^000000 拿给我, 我的灵魂就能实体化. 请尽快!!";
+		mes "[Voice of the Gravestone]";
+		mes "If your ^0000FFparty leader^000000 brings me the pendant, my soul can be substantialized. So, hurry up.";
 		close;
 	}
 	else if (('ins_baphomet == 2) && (getpartyleader(.@party_id,2) == getcharid(0))) {
-		mes "[墓穴的声音]";
-		mes "你找到灵魂的吊坠了吗?";
+		mes "[Voice of the Gravestone]";
+		mes "Did you find the pendant?";
 		next;
 		if (countitem(6003) > 0) {
 			specialeffect EF_MAPPILLAR;
-			mes "[墓穴的声音]";
-			mes "是的... 这是... 我灵魂的吊坠...";
+			mes "[Voice of the Gravestone]";
+			mes "Yes... This is... My pendant...";
 			next;
-			delitem 6003,1; //Soul_Pendant灵魂的吊坠
-			enablenpc instance_npcname("远古英雄的灵魂#1F", instance_id());
-			disablenpc instance_npcname("行将倒塌的墓穴#", instance_id());
-			mes "[墓穴的声音]";
-			mes "现在我可以将我的灵魂实体化了, 我会在墓穴中央的祭坛那里等着你.";
+			delitem 6003,1; //Soul_Pendant
+			enablenpc instance_npcname("Ancient Hero's Soul#1F");
+			disablenpc instance_npcname("Gravestone#");
+			mes "[Voice of the Gravestone]";
+			mes "Now I can substantialize my soul. I'll wait for you in front of the altar of fire located at the center of this grave. Let's meet there.";
 			next;
-			instance_announce 0, "远古英雄的灵魂 : 我会在墓穴中央的祭坛那里等着你",bc_map,"0xFFFF00";
-			mes "我能感觉到声音变得越来越微弱.";
+			mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : I'll wait for you in front of the altar of fire located at the center",bc_map,"0xFFFF00";
+			mes "I can feel the voice becoming faint.";
 			close;
 		}
 		else {
-			mes "[墓穴的声音]";
-			mes "你还在吗? 快些找来我灵魂的吊坠.";
+			mes "[Voice of the Gravestone]";
+			mes "Are you still there? Bring back my pendant as soon as possible.";
 			next;
-			mes "[墓穴的声音]";
-			mes "我的躯体就在墓穴附近, 去那里找我魂的吊坠.";
+			mes "[Voice of the Gravestone]";
+			mes "You can find my body near a grave here. Go and get my pendant there.";
 			close;
 		}
 	}
 	else {
-		mes "[墓穴的声音]";
-		mes "我想跟你们 ^0000FF队伍的代表^000000 说话, 其他人等着.";
+		mes "[Voice of the Gravestone]";
+		mes "I want to talk to ^0000FFa representative among your party^000000. Everyone else, wait here.";
 		close;
 	}
 	end;
 
 OnTouch:
 	if ('ins_baphomet == 0) {
-		mes "'咳... 咳...'";
+		mes "'Krrrr... Krrrr...'";
 		next;
-		mes "我能感觉到墓穴中有一种奇怪的感觉, 就像一个人在心理呼唤着什么...";
+		mes "I can feel something odd at the grave. It's like someone is calling out silently...";
 		close;
 	}
 	end;
+
+OnInstanceInit: // Temporary fix for @reloadscript.
+	set 'ins_baphomet,0;
+	end;
 }
 
-1@cata,176,119,4	script	远古英雄的灵魂#1F	411,{
+1@cata,176,119,4	script	Ancient Hero's Soul#1F	411,{
 	set .@party_id,getcharid(1);
 	cutin "ins_cata_champ_n",2;
 	if ('ins_baphomet == 2) {
-		mes "[远古英雄的灵魂]";
-		mes "因为你们的帮助我的灵魂能够实体化了. 我想多说些什么, 但是时间不够了..";
+		mes "[Ancient Hero's Soul]";
+		mes "With your help, my soul can be substantialized. I want to talk more, but we do not have enough time...";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "一小时左右我就可以完全实体化. 要到达地下的主祭坛, 你必须帮助我完成打开每一个封印的仪式.";
+		mes "[Ancient Hero's Soul]";
+		mes "I must be substantialized within the next hour. To reach the Main Altar underground, you must help me perform the ceremony for opening each seal.";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "我告诉你该怎么做. 首先, 从墓穴的每一个火把上收集 ^0000FF战神的精魄^000000 .";
+		mes "[Ancient Hero's Soul]";
+		mes "Now I'll tell you what should you do. First, collect ^0000FFEssence of Fire^000000 from the torches on the graves...";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "然后, 进入墓穴的每一个队员都要携带 ^0000FF门徒的标示^000000 .";
+		mes "[Ancient Hero's Soul]";
+		mes "Second, all members who will enter the underground must carry a symbol, called the Token of Apostle.";
 		next;
 		while(1) {
 			cutin "ins_cata_champ_n",2;
-			switch(select("什么是战神的精魄?:什么是门徒的标示?:我应该怎么做?:我准备好了.")) {
+			switch(select("What is Essence of Fire?:What is a Token of Apostle?:What should I do?:I am ready.")) {
 			case 1:
 				set .@ins_baphomet_1f_1,.@ins_baphomet_1f_1+1;
-				mes "[远古英雄的灵魂]";
-				mes "这里有很多火把, 这些火把是雷神托尔的精魄. 它们继承我们的实体, 阻止虚弱的巴风特.";
+				mes "[Ancient Hero's Soul]";
+				mes "You can see the torches here and there. These torches are the essence of Thor, the god of Thunder. They are inherited from our predecessors to stop the darkness of Baphomet...";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "为了打开封印的地底大门, 我必须继承 ^0000FF战神的精魄^000000 .因此从火把上收集战神的精魄吧.";
+				mes "[Ancient Hero's Soul]";
+				mes "To open the sealed underground gate, I must be purified by the ^0000FFEssence of Fire^000000 which has the power of Thor. Collect ^0000FF10 Essence of Fire^000000 from the torches.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "有一点你必须记住, 收集这些 ^0000FF战神的精魄^000000 必须要有继承人的信念.";
+				mes "[Ancient Hero's Soul]";
+				mes "One thing you must remember is... ^0000FFEssence of Fire^000000 can only be collected by the Inheritor of Faith.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "我将把继承人的信念象征记录给队长. 只有队长可以收集 ^0000FF战神的精魄^000000.";
+				mes "[Ancient Hero's Soul]";
+				mes "I'll give the token of the Inheritor of Faith to the party leader. Only the party leader can collect the ^0000FFEssence of Fire^000000.";
 				next;
 				break;
 			case 2:
 				set .@ins_baphomet_1f_2,.@ins_baphomet_1f_2+1;
-				mes "[远古英雄的灵魂]";
-				mes "到那时, 凭我们是无法征服恶魔巴风特的. 在许多英雄献出他们的生命后, 我们仅仅能将它封印在修道院里.";
+				mes "[Ancient Hero's Soul]";
+				mes "At that time, it was impossible to get rid of Devil Baphomet by ourselves. After numerous heroes sacrificed their lives, we could barely seal him under this Abbey.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "不论怎样巴风特从来没有放弃过. 它一直在积蓄力量, 而且它的力量将带来一些新的魔物.";
+				mes "[Ancient Hero's Soul]";
+				mes "However, Baphomet never gave up. He continuously strengthened his power. And his power has brought new life to this shrine.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "这些魔物具有魔力, 巴风特称他们为 '门徒'.";
+				mes "[Ancient Hero's Soul]";
+				mes "Some of these monsters have magical powers. Baphomet calls them his 'Apostles'.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "门徒们用邪恶的能量克隆自己, 充满了整个墓穴. 他们就是这个古墓中的怪物.";
+				mes "[Ancient Hero's Soul]";
+				mes "The apostles are cloning themselves to fill the shrine with their evil energy. They are the monsters here in this catacomb.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "杀死门徒, 因为他们拥有 ^0000FF门徒的标示^000000...";
+				mes "[Ancient Hero's Soul]";
+				mes "Kill the Apostles. They can only be distinguished from their clones because they will possess a ^0000FFToken of Apostle^000000...";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "如果每一个队员都持有一个 ^0000FF门徒的标示^000000, 巴风特就无法在你们进入地下墓穴的祭坛时察觉.";
+				mes "[Ancient Hero's Soul]";
+				mes "If each party member possesses a ^0000FFToken of Apostle^000000, Baphomet will not be able to perceive your entrance to the Main Altar underground.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "如果你们通过封印门时被巴风特发觉, 它可能会释放出巨大的魔法力量, 修道院将被完全摧毁.";
+				mes "[Ancient Hero's Soul]";
+				mes "If Baphomet perceives you when you pass through the sealed gate, he may release his tremendous magical power. Then, this abbey will be demolished.";
 				next;
-				mes "[远古英雄的灵魂]";
-				mes "杀死门徒, 取得 ^0000FF门徒的标示^000000.";
+				mes "[Ancient Hero's Soul]";
+				mes "Kill the apostles and get the ^0000FFToken of Apostle^000000.";
 				next;
 				break;
 			case 3:
 				set .@ins_baphomet_1f_3,.@ins_baphomet_1f_3+1;
 				if (getpartyleader(.@party_id,2) == getcharid(0)) {
-					mes "[远古英雄的灵魂]";
-					mes "看起来你是这个队伍的队长, 那么你需要去各个火把处取得总共 ^0000FF10个战神的精魄^000000 .";
+					mes "[Ancient Hero's Soul]";
+					mes "You look like the leader of this party. You need to go and get ^0000FF10 Essence of Fire^000000 from the torches.";
 					next;
-					mes "[远古英雄的灵魂]";
-					mes "现在我要雕刻你的继承者信仰象征. 注意: 你的队伍中除了你没人能够得到 ^0000FF10个战神的精魄^000000 .";
+					mes "[Ancient Hero's Soul]";
+					mes "Now I'll carve you the symbol which shows you're a inheritor of faith. Be aware that no one in your party but you can collect the Essence of Fire.";
 					next;
 					specialeffect2 EF_HOLYHIT;
-					mes "[远古英雄的灵魂]";
-					mes "你也应该携带 ^0000FF门徒的标示^000000 .";
+					mes "[Ancient Hero's Soul]";
+					mes "You should also carry a ^0000FFToken of Apostle^000000, so find one for yourself too.";
 					next;
-					mes "[远古英雄的灵魂]";
-					mes "当你们全部准备好的时候通知我. 我会打开封印之门.";
+					mes "[Ancient Hero's Soul]";
+					mes "When all of you are ready to go, let me know. I'll open the sealed gate when you're ready.";
 					next;
 				}
 				else {
-					mes "[远古英雄的灵魂]";
-					mes "确保队长知道自己和队员应该做什么.";
+					mes "[Ancient Hero's Soul]";
+					mes "Make sure that your party leader has listened to my explanation of what you and your companions must do.";
 					next;
-					mes "[远古英雄的灵魂]";
-					mes "杀死巴风特的门徒, 得到 ^0000FF门徒的标示^000000.";
+					mes "[Ancient Hero's Soul]";
+					mes "Kill the Apostles of Baphomet and find their ^0000FFToken of Apostle^000000.";
 					next;
-					mes "[远古英雄的灵魂]";
-					mes "最好将墓穴中的怪物全部杀死, 因为门徒们有很多克隆, 你很难区分它们.";
+					mes "[Ancient Hero's Soul]";
+					mes "It might be better to kill all of them because there is no way to differentiate them from their clones.";
 					next;
-					mes "[远古英雄的灵魂]";
-					mes "你准备好了吗?";
-					mes "在你说准备好了之前请确信你已经明白了我所说的一切.";
+					mes "[Ancient Hero's Soul]";
+					mes "Are you ready?";
+					mes "Make sure that you have listened to all that I have to say before saying that you are ready.";
 					next;
 				}
 				break;
 			case 4:
 				if ((.@ins_baphomet_1f_1 > 0) && (.@ins_baphomet_1f_2 > 0) && (.@ins_baphomet_1f_3 > 0)) {
 					cutin "ins_cata_champ_n",2;
-					mes "[远古英雄的灵魂]";
-					mes "你准备好了吗? 我现在打开封印之门.";
+					mes "[Ancient Hero's Soul]";
+					mes "Are you ready to go? Then I'll open this sealed gate now.";
 					next;
 					set .@exitloop,1;
 				}
 				else {
 					cutin "ins_cata_champ_a",2;
-					mes "[远古英雄的灵魂]";
-					mes "也许比较困难, 但是我希望你能勇敢面对古墓中的危险.";
+					mes "[Ancient Hero's Soul]";
+					mes "It may be difficult but I wish you luck braving the perils of this catacomb.";
 					next;
-					mes "[远古英雄的灵魂]";
-					mes "记住: 你需要从火把那里收集 ^0000FF10个战神的精魄^000000, 从巴风特门徒那里收集 ^0000FF门徒的标示^000000 .";
+					mes "[Ancient Hero's Soul]";
+					mes "Remember, you need to collect ^0000FF10 Essence of Fire^000000 from the torches and the ^0000FFToken of Apostle^000000 from the Apostles of Baphomet.";
 					next;
 				}
 				break;
@@ -965,36 +697,17 @@ OnTouch:
 			if (.@exitloop) break;
 		}
 		if (getpartyleader(.@party_id,2) == getcharid(0)) {
-			mes "[远古英雄的灵魂]";
-			mes "再次提醒你, 我需要一个小时后才能完成实体化. 因此你们要在这个时间里完成需要做的准备.";
+			mes "[Ancient Hero's Soul]";
+			mes "To remind you again, I must be substantialized within the next hour. So everyone, finish your work within that time!";
 			set 'ins_baphomet,3;
-			donpcevent instance_npcname("ins_baphomet_1f_timer", instance_id())+"::OnEnable";
-			donpcevent instance_npcname("ins_baphomet_lotto2", instance_id())+"::OnEnable";
-			donpcevent instance_npcname("ins_baphomet_lotto3", instance_id())+"::OnEnable";
+			donpcevent instance_npcname("ins_baphomet_1f_timer")+"::OnEnable";
+			donpcevent instance_npcname("ins_baphomet_lotto2")+"::OnEnable";
+			donpcevent instance_npcname("ins_baphomet_lotto3")+"::OnEnable";
 		}
 		else {
-			mes "[远古英雄的灵魂]";
-			mes "再次提醒你, 我需要一个小时后才能完成实体化. 因此你们要在这个时间里完成需要做的准备.";
+			mes "[Ancient Hero's Soul]";
+			mes "To remind you again, I can be substantialized for the next hour. So everyone, finish your work within that time.";
 			//set 'ins_baphomet,3;
-		}
-		close2;
-		cutin "",255;
-		end;
-	}
-	else if ('ins_baphomet == 3) {
-		cutin "ins_cata_champ_n",2;
-		mes "[远古英雄的灵魂]";
-		mes "你收集好 ^0000FF10个战神的精魄^000000 和 ^0000FF门徒的标示^000000 了吗?";
-		next;
-		if ((countitem(6001) > 9) && (countitem(6002) > 0)) {
-			delitem 6001,countitem(6001); //Essence_Of_Fire
-			set 'ins_baphomet,4;
-			mes "[远古英雄的灵魂]";
-			mes "Okay. 你已经完成了你的事情. 现在检查你的队员们是否完成了他们需要做的事情.";
-		}
-		else {
-			mes "[远古英雄的灵魂]";
-			mes "还没准备好? 你需要准备 ^0000FF10个战神的精魄^000000 和 ^0000FF门徒的标示^000000.";
 		}
 		close2;
 		cutin "",255;
@@ -1002,798 +715,246 @@ OnTouch:
 	}
 	else if (('ins_baphomet == 3) && (getpartyleader(.@party_id,2) == getcharid(0))) {
 		cutin "ins_cata_champ_n",2;
-		mes "[远古英雄的灵魂]";
-		mes "你有 ^0000FF门徒的标示^000000 吗?";
+		mes "[Ancient Hero's Soul]";
+		mes "Did you get 10 ^0000FFEssence of Fire^000000 and ^0000FFToken of Apostle^000000?";
 		next;
-		if (countitem(6002) > 0) {
+		if ((countitem(6001) > 9) && (countitem(6002) > 0)) {
+			delitem 6001,countitem(6001); //Essence_Of_Fire
 			set 'ins_baphomet,4;
-			mes "[远古英雄的灵魂]";
-			mes "Okay. 你已经完成了你的事情. 现在检查你的队员们是否完成了他们需要做的事情.";
+			mes "[Ancient Hero's Soul]";
+			mes "Okay. You've done your work. Now check your companions and tell me when everyone has finished their work.";
 		}
 		else {
-			mes "[远古英雄的灵魂]";
-			mes "还没准备好? 你需要准备 ^0000FF门徒的标示^000000.";
+			mes "[Ancient Hero's Soul]";
+			mes "Not ready yet? You should prepare 10 ^0000FFEssence of Fire^000000 and ^0000FFToken of Apostle^000000.";
 		}
 		close2;
 		cutin "",255;
 		end;
 	}
-	else if ('ins_baphomet == 4) {
+	else if ('ins_baphomet == 3) {
 		cutin "ins_cata_champ_n",2;
-		mes "[远古英雄的灵魂]";
-		mes "准备好了吗? 我现在打开封印之门, 你要携带 ^0000FF门徒的标示^000000.";
+		mes "[Ancient Hero's Soul]";
+		mes "Do you have a ^0000FFToken of Apostle^000000?";
+		next;
+		if (countitem(6002) > 0) {
+			set 'ins_baphomet,4;
+			mes "[Ancient Hero's Soul]";
+			mes "Okay. You've done your work. Tell your representative to check your companions and come to me when everyone has finished their work.";
+		}
+		else {
+			mes "[Ancient Hero's Soul]";
+			mes "Not ready yet? You should prepare ^0000FFToken of Apostle^000000.";
+		}
+		close2;
+		cutin "",255;
+		end;
+	}
+	else if (('ins_baphomet == 4) && (getpartyleader(.@party_id,2) == getcharid(0))) {
+		cutin "ins_cata_champ_n",2;
+		mes "[Ancient Hero's Soul]";
+		mes "Are you ready? I opened the sealed gate. To pass the gate, you should carry a ^0000FFToken of Apostle^000000.";
 		next;
 		set 'ins_baphomet,5;
 		specialeffect EF_TELEPORTATION;
-		enablenpc instance_npcname("ins_bapho_to_2f", instance_id());
-		mes "[远古英雄的灵魂]";
-		mes "现在你可以去主祭坛了. 主祭坛位于本层底部右边的角落.";
+		enablenpc instance_npcname("ins_bapho_to_2f");
+		mes "[Ancient Hero's Soul]";
+		mes "Now you can go to the main altar. It is located in the bottom right corner of this floor.";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "你真正的战斗即将开始. 我会跟着你看能帮到你什么.";
+		mes "[Ancient Hero's Soul]";
+		mes "Your real battle will begin... I'll follow you soon and find a way to help you.";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "勇敢的战士, 请前进吧.";
+		mes "[Ancient Hero's Soul]";
+		mes "Go ahead, warriors.";
 		cutin "",255;
-		instance_announce 0, "远古英雄的灵魂 : 现在你可以去位于东南方的主祭坛了.",bc_map,"0xFFFF00";
+		mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : Now you can go to the Main Altar's gate. It is located in the Southeast",bc_map,"0xFFFF00";
 		close;
 	}
-	else if (('ins_baphomet == 4) && (getpartyleader(.@party_id,2) != getcharid(0))) {
+	else if ('ins_baphomet == 4) {
 		cutin "ins_cata_champ_n",2;
-		mes "[远古英雄的灵魂]";
-		mes "准备好了吗? 我现在打开封印之门, 你要携带 ^0000FF门徒的标示^000000.";
+		mes "[Ancient Hero's Soul]";
+		mes "Are you ready? I opened the sealed gate. To pass the gate, you should carry a ^0000FFToken of Apostle^000000.";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "当你准备好的时候请告诉我, 我将打开封印之门.";
+		mes "[Ancient Hero's Soul]";
+		mes "I'll complete opening the sealed gate when your representative tells me that you're ready.";
 		cutin "",255;
 		close;
 	}
 	else if ('ins_baphomet == 5) {
 		cutin "ins_cata_champ_n",2;
-		mes "[远古英雄的灵魂]";
-		mes "你在做什么? 主祭坛的门已经打开了, 去战斗吧! 入口位于本层右下方位.";
+		mes "[Ancient Hero's Soul]";
+		mes "What are you doing? The entrance of the main altar is opened now, go and fight! The entrance is near the bottom right side of this floor.";
 		cutin "",255;
 		close;
 	}
 	else {
 		cutin "ins_cata_champ_n",2;
-		mes "[远古英雄的灵魂]";
-		mes "我没什么好说的了.";
+		mes "[Ancient Hero's Soul]";
+		mes "I have nothing to say to you...";
 		cutin "",255;
 		close;
 	}
+
+OnInstanceInit:
+	disablenpc instance_npcname("Ancient Hero's Soul#1F");
+	end;
 }
 
-//===================== TO 2F Warp ========================
+// To 2F Warp
+//============================================================
 1@cata,281,12,0	script	ins_bapho_to_2f	45,1,1,{
-
 OnTouch:
 	if (countitem(6002) > 0) {
 		delitem 6002,countitem(6002); //Token_Of_Apostle
 		set 'ins_baphomet,5;
-		warp "2@cata",80,144;
+		warp instance_mapname("2@cata"),80,144;
 		end;
 	}
 	else {
-		mes "[远古英雄的灵魂]";
-		mes "你的^0000FF门徒的标示^000000呢? 我告诉过你必须携带^0000FF门徒的标示^000000 才能进入祭坛.";
+		mes "[Ancient Hero's Soul]";
+		mes "Where is your Token of Apostle? I said you should carry the Token of Apostle to pass this gate.";
 		close;
 	}
-}
 
-1@cata,86,214,0	script	行将倒塌的墓穴#1F_1T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,86,214,0	script	行将倒塌的墓穴#1F_1F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
+OnInstanceInit:
+	disablenpc instance_npcname("ins_bapho_to_2f");
 	end;
 }
 
-1@cata,200,209,0	script	行将倒塌的墓穴#1F_2T	844,{
+// Gravestones
+//============================================================
+-	script	Gravestone#SS1	-1,{
 	if ('ins_baphomet == 1) {
 		getitem 6003,1; //Soul_Pendant
 		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
+		mes "A small object is shining under a leaning grave.";
 		next;
 		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
+		mes "I think this is the pendant...";
 		close;
 	}
 	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
+		mes "I can only feel gloom from this Gravestone.";
 		close;
 	}
 }
+1@cata,86,214,0	duplicate(Gravestone#SS1)	Gravestone#1F_1T	844
+1@cata,200,209,0	duplicate(Gravestone#SS1)	Gravestone#1F_2T	844
+1@cata,230,195,0	duplicate(Gravestone#SS1)	Gravestone#1F_3T	844
+1@cata,118,182,0	duplicate(Gravestone#SS1)	Gravestone#1F_4T	844
+1@cata,193,182,0	duplicate(Gravestone#SS1)	Gravestone#1F_5T	844
+1@cata,253,156,0	duplicate(Gravestone#SS1)	Gravestone#1F_6T	844
+1@cata,88,154,0	duplicate(Gravestone#SS1)	Gravestone#1F_7T	844
+1@cata,127,116,0	duplicate(Gravestone#SS1)	Gravestone#1F_8T	844
+1@cata,90,98,0	duplicate(Gravestone#SS1)	Gravestone#1F_9T	844
+1@cata,188,84,0	duplicate(Gravestone#SS1)	Gravestone#1F_10T	844
+1@cata,244,42,0	duplicate(Gravestone#SS1)	Gravestone#1F_11T	844
+1@cata,127,32,0	duplicate(Gravestone#SS1)	Gravestone#1F_12T	844
+1@cata,267,30,0	duplicate(Gravestone#SS1)	Gravestone#1F_13T	844
 
-1@cata,200,209,0	script	行将倒塌的墓穴#1F_2F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
+-	script	Gravestone#SS2	-1,{
+	mes "I can only feel gloom from this Gravestone.";
 	close;
 }
+1@cata,86,214,0	duplicate(Gravestone#SS2)	Gravestone#1F_1F	844
+1@cata,200,209,0	duplicate(Gravestone#SS2)	Gravestone#1F_2F	844
+1@cata,230,195,0	duplicate(Gravestone#SS2)	Gravestone#1F_3F	844
+1@cata,118,182,0	duplicate(Gravestone#SS2)	Gravestone#1F_4F	844
+1@cata,193,182,0	duplicate(Gravestone#SS2)	Gravestone#1F_5F	844
+1@cata,253,156,0	duplicate(Gravestone#SS2)	Gravestone#1F_6F	844
+1@cata,88,154,0	duplicate(Gravestone#SS2)	Gravestone#1F_7F	844
+1@cata,127,116,0	duplicate(Gravestone#SS2)	Gravestone#1F_8F	844
+1@cata,90,98,0	duplicate(Gravestone#SS2)	Gravestone#1F_9F	844
+1@cata,188,84,0	duplicate(Gravestone#SS2)	Gravestone#1F_10F	844
+1@cata,244,42,0	duplicate(Gravestone#SS2)	Gravestone#1F_11F	844
+1@cata,127,32,0	duplicate(Gravestone#SS2)	Gravestone#1F_12F	844
+1@cata,267,30,0	duplicate(Gravestone#SS2)	Gravestone#1F_13F	844
 
-1@cata,230,195,0	script	行将倒塌的墓穴#1F_3T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
+// Bobbing Torches
+//============================================================
+-	script	Bobbing Torch#SS	-1,{
+	set .@party_id,getcharid(1);
+	if (getpartyleader(.@party_id,2) == getcharid(0)) {
+		if (('ins_baphomet == 3) && (countitem(6001) < 11)) {
+			mes "A huge torch appearing as if it can burn everything is bobbing up and down in front of me.";
+			next;
+			mes "The grand appearance and heat of the fire makes me step back... But I pluck up my courage and reach out to pick up the torch.";
+			next;
+			specialeffect2 EF_HOLYHIT;
+			getitem 6001,1; //Essence_Of_Fire
+			mes "The symbol of inheritor shines. Then a small crystal falls into my hand from the torch.";
+			disablenpc instance_npcname(strnpcinfo(0));
+			close;
+		}
+		else if (('ins_baphomet == 3) && (countitem(6001) > 10)) {
+			mes "You have 10 Essence of Fire already, so you don't need to collect any more.";
+			close;
+		}
+		else {
+			mes "You don't need to collect Essence of Fire anymore.";
+			close;
+		}
 	}
 	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,230,195,0	script	行将倒塌的墓穴#1F_3F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,118,182,0	script	行将倒塌的墓穴#1F_4T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
+		mes "A huge torch appearing as if it can burn everything is bobbing up and down in front of me..";
 		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
+		mes "[Unknown Voice]";
+		mes "You are not a inheritor of faith. Do not desecrate the Essence of Fire with your disrespectful hands.";
+		specialeffect2 EF_FIRESPLASHHIT;
+		percentheal -50,0;
 		close;
 	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
 
-1@cata,118,182,0	script	行将倒塌的墓穴#1F_4F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,193,182,0	script	行将倒塌的墓穴#1F_5T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,193,182,0	script	行将倒塌的墓穴#1F_5F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,253,156,0	script	行将倒塌的墓穴#1F_6T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,253,156,0	script	行将倒塌的墓穴#1F_6F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,88,154,0	script	行将倒塌的墓穴#1F_7T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,88,154,0	script	行将倒塌的墓穴#1F_7F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,127,116,0	script	行将倒塌的墓穴#1F_8T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,127,116,0	script	行将倒塌的墓穴#1F_8F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,90,98,0	script	行将倒塌的墓穴#1F_9T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,90,98,0	script	行将倒塌的墓穴#1F_9F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
+OnInstanceInit:
+	disablenpc instance_npcname(strnpcinfo(0));
 	end;
 }
-
-1@cata,188,84,0	script	行将倒塌的墓穴#1F_10T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,188,84,0	script	行将倒塌的墓穴#1F_10F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-	end;
-}
-
-1@cata,244,42,0	script	行将倒塌的墓穴#1F_11T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,244,42,0	script	行将倒塌的墓穴#1F_11F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,127,32,0	script	行将倒塌的墓穴#1F_12T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,127,32,0	script	行将倒塌的墓穴#1F_12F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,267,30,0	script	行将倒塌的墓穴#1F_13T	844,{
-	if ('ins_baphomet == 1) {
-		getitem 6003,1; //Soul_Pendant
-		set 'ins_baphomet,2;
-		mes "在行将倒塌的墓穴下有一个闪闪发光的物体.";
-		next;
-		mes "[" + strcharinfo(0) + "]";
-		mes "我想这就是灵魂的吊坠.";
-		close;
-	}
-	else {
-		mes "我只能感觉到这个墓穴的阴暗.";
-		close;
-	}
-}
-
-1@cata,267,30,0	script	行将倒塌的墓穴#1F_13F	844,{
-	mes "我只能感觉到这个墓穴的阴暗.";
-	close;
-}
-
-1@cata,267,210,0	script	火把#1	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#1", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,85,182,0	script	火把#2	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#2", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,267,154,0	script	火把#3	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#3", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,157,139,0	script	火把#4	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#4", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,193,138,0	script	火把#5	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#5", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,193,102,0	script	火把#6	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#6", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,157,102,0	script	火把#7	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#7", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,113,112,0	script	火把#8	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#8", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,253,56,0	script	火把#9	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#9", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,239,56,0	script	火把#10	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#10", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,71,42,0	script	火把#11	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#11", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
-
-1@cata,155,14,0	script	火把#12	844,{
-	set .@party_id,getcharid(1);
-	if (getpartyleader(.@party_id,2) == getcharid(0)) {
-		if (('ins_baphomet == 3) && (countitem(6001) < 10)) {
-			mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽.";
-			next;
-			mes "呈现在面前的巨大火焰让我不由的后退几步. 但是我鼓足勇气将手臂伸向火把.";
-			next;
-			specialeffect2 EF_HOLYHIT;
-			getitem 6001,1; //Essence_Of_Fire
-			mes "继承人的象征开始闪光. 然后从火把中掉出一块小水晶, 落入我的手中.";
-			disablenpc instance_npcname("火把#12", instance_id());
-			close;
-		}
-		else if (('ins_baphomet == 3) && (countitem(6001) >= 10)) {
-			mes "你已经有10个战神的精魄, 不需要再收集了.";
-			close;
-		}
-		else {
-			mes "你不需要收集更多战神的精魄了.";
-			close;
-		}
-	}
-	else {
-		mes "一支巨大的火把看起来似乎能将我面前的一切燃烧殆尽..";
-		next;
-		mes "[神秘的声音]";
-		mes "你不是信仰的继承者, 不要用你的手玷污了战神的精魄.";
-		specialeffect2 EF_FIRESPLASHHIT;
-		percentheal -50,0;
-		close;
-	}
-}
+1@cata,267,210,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#1	844
+1@cata,85,182,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#2	844
+1@cata,267,154,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#3	844
+1@cata,157,139,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#4	844
+1@cata,193,138,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#5	844
+1@cata,193,102,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#6	844
+1@cata,157,102,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#7	844
+1@cata,113,112,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#8	844
+1@cata,253,56,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#9	844
+1@cata,239,56,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#10	844
+1@cata,71,42,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#11	844
+1@cata,155,14,0	duplicate(Bobbing Torch#SS)	Bobbing Torch#12	844
 
 1@cata,1,1,0	script	ins_baphomet_1f_timer	-1,{
+OnInstanceInit:
+	disablenpc instance_npcname("ins_baphomet_1f_timer");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("ins_baphomet_1f_timer", instance_id());
+	enablenpc instance_npcname("ins_baphomet_1f_timer");
 	initnpctimer;
 	end;
 
-OnDisable:;
-	disablenpc instance_npcname("ins_baphomet_1f_timer", instance_id());
+OnDisable:
+	disablenpc instance_npcname("ins_baphomet_1f_timer");
 	stopnpctimer;
 	end;
 
 OnTimer1800000:
-	instance_announce 0, "远古英雄的灵魂 : 我们没有太多时间, 快点儿!",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : We don't have enough time! Hurry up!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer2400000:
-	instance_announce 0, "远古英雄的灵魂 : 我的身体正在消失, 快点儿.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : My body is disappearing... Hurry up!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer3000000:
-	instance_announce 0, "远古英雄的灵魂 : 所有这一切都结束了, 除了等待下一次机会外再也没有别的办法.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : Everything is over... There is no other way but to wait for the next chance...",bc_map,"0xFFFF00";
 	end;
 
 OnTimer3050000:
-	instance_announce 0, "远古英雄的灵魂 : 我们失败了, 然而我们还有机会, 我希望你不断提高自己的能力直到下一次再来.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("1@cata"), "Ancient Hero's Soul : We failed... However... We still have a chance. I hope you will train yourselves until the time comes.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer3100000:
-	instance_announce 0, "你未能成功打开主祭坛的封印之门.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("1@cata"), "You've failed to open the seal of main altar.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer3500000:
@@ -1804,658 +965,519 @@ OnTimer3500000:
 
 2@cata,80,144,0	script	ins_2f_enter	-1,3,3,{
 OnTouch:
-	donpcevent instance_npcname("ins_2f_enter_broad", instance_id())+"::OnEnable";
-	disablenpc instance_npcname("ins_2f_enter", instance_id());
+	donpcevent instance_npcname("ins_2f_enter_broad")+"::OnEnable";
+	disablenpc instance_npcname("ins_2f_enter");
 	end;
 }
 
 2@cata,1,1,0	script	ins_2f_enter_broad	-1,{
+OnInstanceInit:
+OnDisable:
+	disablenpc instance_npcname("ins_2f_enter_broad");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("ins_2f_enter_broad", instance_id());
+	enablenpc instance_npcname("ins_2f_enter_broad");
 	initnpctimer;
 	end;
 
-OnDisable:
-	disablenpc instance_npcname("ins_2f_enter_broad", instance_id());
-	end;
-
 OnTimer10000:
-	instance_announce 0, "巴风特的吼叫 : 人类... 又一次妨碍了我...",bc_map,"0xdb7093";
+	mapannounce instance_mapname("2@cata"), "Baphomet : Humans... interfering again...",bc_map,"0xdb7093";
 	end;
 
 OnTimer13000:
-	instance_announce 0, "巴风特的门徒 : 人类! 人类侵略了我们的圣地!",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Apostle of Baphomet : Humans! Humans have invaded our sanctum!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer16000:
-	instance_announce 0, "巴风特的门徒 : 杀死人类! 不要让他们阻止我们的主人重生!",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Apostle of Baphomet : Kill the humans! Do not stop the revival of our Master!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer18000:
-	instance_announce 0, "巴风特的门徒 : 赶快打破祭坛的封印! 主人的重生全靠我们了.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Apostle of Baphomet : Hurry up and release the seals of the altars! Our Master's return is upon us!",bc_map,"0xFFFF00";
 	stopnpctimer;
-	disablenpc instance_npcname("ins_2f_enter_broad", instance_id());
+	disablenpc instance_npcname("ins_2f_enter_broad");
 	end;
 }
 
 2@cata,50,67,0	script	slave_left	-1,5,5,{
 OnTouch:
-	disablenpc instance_npcname("slave_left", instance_id());
-	instance_announce 0, "巴风特的门徒 : 杀死人类! 不要让他们阻止我们的主人重生!",bc_map,"0xFFFF00";
-	monster "2@cata",55,67,"巴风特门徒",1869,1;
-	monster "2@cata",51,67,"巴风特门徒",1291,1;
-	monster "2@cata",58,67,"巴风特门徒",1292,1;
-	monster "2@cata",53,67,"巴风特门徒",1291,1;
-	monster "2@cata",54,67,"巴风特门徒",1869,1;
-	monster "2@cata",55,67,"巴风特门徒",1291,1;
-	monster "2@cata",56,67,"巴风特门徒",1117,1;
-	monster "2@cata",58,66,"巴风特门徒",1869,1;
-	monster "2@cata",56,66,"巴风特门徒",1117,1;
-	monster "2@cata",60,66,"巴风特门徒",1132,1;
-	monster "2@cata",59,66,"巴风特门徒",1117,1;
-	monster "2@cata",54,66,"巴风特门徒",1132,1;
-	monster "2@cata",55,66,"巴风特门徒",1292,1;
-	monster "2@cata",56,66,"巴风特门徒",1132,1;
-	monster "2@cata",50,65,"巴风特门徒",1867,1;
-	monster "2@cata",61,65,"巴风特门徒",1292,1;
+	set .@map$, instance_mapname("2@cata");
+	mapannounce .@map$, "Apostle of Baphomet : Kill the humans! Don't let them interrupt the revival of our Master!",bc_map,"0xFFFF00";
+	monster .@map$,55,67,"Apostle of Baphomet",1869,1;
+	monster .@map$,51,67,"Apostle of Baphomet",1291,1;
+	monster .@map$,58,67,"Apostle of Baphomet",1292,1;
+	monster .@map$,53,67,"Apostle of Baphomet",1291,1;
+	monster .@map$,54,67,"Apostle of Baphomet",1869,1;
+	monster .@map$,55,67,"Apostle of Baphomet",1291,1;
+	monster .@map$,56,67,"Apostle of Baphomet",1117,1;
+	monster .@map$,58,66,"Apostle of Baphomet",1869,1;
+	monster .@map$,56,66,"Apostle of Baphomet",1117,1;
+	monster .@map$,60,66,"Apostle of Baphomet",1132,1;
+	monster .@map$,59,66,"Apostle of Baphomet",1117,1;
+	monster .@map$,54,66,"Apostle of Baphomet",1132,1;
+	monster .@map$,55,66,"Apostle of Baphomet",1292,1;
+	monster .@map$,56,66,"Apostle of Baphomet",1132,1;
+	monster .@map$,50,65,"Apostle of Baphomet",1867,1;
+	monster .@map$,61,65,"Apostle of Baphomet",1292,1;
+	disablenpc instance_npcname("slave_left");
 	end;
 }
 
 2@cata,109,67,0	script	slave_right	-1,5,5,{
 OnTouch:
-	disablenpc instance_npcname("slave_right", instance_id());
-	instance_announce 0, "巴风特的门徒 : 杀死人类! 不要让他们阻止我们的主人重生!",bc_map,"0xFFFF00";
-	monster "2@cata",105,67,"巴风特门徒",1869,1;
-	monster "2@cata",104,67,"巴风特门徒",1291,1;
-	monster "2@cata",107,67,"巴风特门徒",1869,1;
-	monster "2@cata",106,67,"巴风特门徒",1291,1;
-	monster "2@cata",102,67,"巴风特门徒",1869,1;
-	monster "2@cata",103,67,"巴风特门徒",1291,1;
-	monster "2@cata",103,67,"巴风特门徒",1117,1;
-	monster "2@cata",109,66,"巴风特门徒",1117,1;
-	monster "2@cata",108,66,"巴风特门徒",1132,1;
-	monster "2@cata",101,66,"巴风特门徒",1117,1;
-	monster "2@cata",106,66,"巴风特门徒",1292,1;
-	monster "2@cata",102,66,"巴风特门徒",1132,1;
-	monster "2@cata",104,66,"巴风特门徒",1292,1;
-	monster "2@cata",103,66,"巴风特门徒",1132,1;
-	monster "2@cata",109,65,"巴风特门徒",1867,1;
-	monster "2@cata",108,65,"巴风特门徒",1292,1;
+	set .@map$, instance_mapname("2@cata");
+	mapannounce .@map$, "Apostle of Baphomet : Kill the humans! Don't let them interrupt the revival of our Master!",bc_map,"0xFFFF00";
+	monster .@map$,105,67,"Apostle of Baphomet",1869,1;
+	monster .@map$,104,67,"Apostle of Baphomet",1291,1;
+	monster .@map$,107,67,"Apostle of Baphomet",1869,1;
+	monster .@map$,106,67,"Apostle of Baphomet",1291,1;
+	monster .@map$,102,67,"Apostle of Baphomet",1869,1;
+	monster .@map$,103,67,"Apostle of Baphomet",1291,1;
+	monster .@map$,103,67,"Apostle of Baphomet",1117,1;
+	monster .@map$,109,66,"Apostle of Baphomet",1117,1;
+	monster .@map$,108,66,"Apostle of Baphomet",1132,1;
+	monster .@map$,101,66,"Apostle of Baphomet",1117,1;
+	monster .@map$,106,66,"Apostle of Baphomet",1292,1;
+	monster .@map$,102,66,"Apostle of Baphomet",1132,1;
+	monster .@map$,104,66,"Apostle of Baphomet",1292,1;
+	monster .@map$,103,66,"Apostle of Baphomet",1132,1;
+	monster .@map$,109,65,"Apostle of Baphomet",1867,1;
+	monster .@map$,108,65,"Apostle of Baphomet",1292,1;
+	disablenpc instance_npcname("slave_right");
 	end;
 }
 
 2@cata,79,39,0	script	slave_down	-1,5,5,{
 OnTouch:
-	disablenpc instance_npcname("slave_down", instance_id());
-	instance_announce 0, "巴风特的门徒 : 杀死人类! 不要让他们阻止我们的主人重生!",bc_map,"0xFFFF00";
-	monster "2@cata",78,41,"巴风特门徒",1869,1;
-	monster "2@cata",79,42,"巴风特门徒",1291,1;
-	monster "2@cata",78,46,"巴风特门徒",1869,1;
-	monster "2@cata",81,41,"巴风特门徒",1291,1;
-	monster "2@cata",81,42,"巴风特门徒",1869,1;
-	monster "2@cata",79,43,"巴风特门徒",1291,1;
-	monster "2@cata",77,40,"巴风特门徒",1117,1;
-	monster "2@cata",79,41,"巴风特门徒",1132,1;
-	monster "2@cata",79,42,"巴风特门徒",1117,1;
-	monster "2@cata",79,43,"巴风特门徒",1132,1;
-	monster "2@cata",79,48,"巴风特门徒",1117,1;
-	monster "2@cata",78,49,"巴风特门徒",1132,1;
-	monster "2@cata",78,41,"巴风特门徒",1292,1;
-	monster "2@cata",74,42,"巴风特门徒",1292,1;
-	monster "2@cata",72,48,"巴风特门徒",1867,1;
-	monster "2@cata",72,38,"巴风特门徒",1292,1;
+	set .@map$, instance_mapname("2@cata");
+	mapannounce .@map$, "Apostle of Baphomet : Kill the humans! Don't let them interrupt the revival of our Master!",bc_map,"0xFFFF00";
+	monster .@map$,78,41,"Apostle of Baphomet",1869,1;
+	monster .@map$,79,42,"Apostle of Baphomet",1291,1;
+	monster .@map$,78,46,"Apostle of Baphomet",1869,1;
+	monster .@map$,81,41,"Apostle of Baphomet",1291,1;
+	monster .@map$,81,42,"Apostle of Baphomet",1869,1;
+	monster .@map$,79,43,"Apostle of Baphomet",1291,1;
+	monster .@map$,77,40,"Apostle of Baphomet",1117,1;
+	monster .@map$,79,41,"Apostle of Baphomet",1132,1;
+	monster .@map$,79,42,"Apostle of Baphomet",1117,1;
+	monster .@map$,79,43,"Apostle of Baphomet",1132,1;
+	monster .@map$,79,48,"Apostle of Baphomet",1117,1;
+	monster .@map$,78,49,"Apostle of Baphomet",1132,1;
+	monster .@map$,78,41,"Apostle of Baphomet",1292,1;
+	monster .@map$,74,42,"Apostle of Baphomet",1292,1;
+	monster .@map$,72,48,"Apostle of Baphomet",1867,1;
+	monster .@map$,72,38,"Apostle of Baphomet",1292,1;
+	disablenpc instance_npcname("slave_down");
 	end;
 }
 
-2@cata,79,81,0	script	封印#0	844,{
+// Magical Seals
+//============================================================
+-	script	Magical Seal#SS	-1,{
 	set .@seal_check,checkquest(3041,PLAYTIME);
-	if (.@seal_check == -1) {
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#0", instance_id());
-		areamobuseskill "2@cata",79,81,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	else if ((.@seal_check == 0) || (.@seal_check == 1)) {
+	if (.@seal_check == 0 || .@seal_check == 1) {
 		specialeffect2 EF_SILENCEATTACK;
 		percentheal -50,0;
 		sc_start Eff_Stone,30000,0;
-		mes "你的SP还没有恢复. 虽然你将魔法能量注入祭坛, 但是看起来封印的力量并没有回复.";
+		mes "Your SP has not recovered yet. You lost your SP on the altar, but it seems the power of the seal has returned.";
 		close;
 	}
-	else if (.@seal_check == 2) {
-		erasequest 3041;
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#0", instance_id());
-		areamobuseskill "2@cata",79,81,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
+	if (.@seal_check == 2) erasequest 3041;
+	specialeffect EF_LEXDIVINA;
+	disablenpc instance_npcname(strnpcinfo(0));
+	set .@map$, instance_mapname("2@cata");
+	if (strnpcinfo(2) == "0") areamobuseskill .@map$,79,81,10,1929,"NPC_INVINCIBLEOFF",1,0,0,e_hlp,0;
+	else if (strnpcinfo(2) == "2") areamobuseskill .@map$,123,109,10,1929,"NPC_INVINCIBLEOFF",1,0,0,e_hlp,0;
+	else if (strnpcinfo(2) == "4") areamobuseskill .@map$,123,22,10,1929,"NPC_INVINCIBLEOFF",1,0,0,e_hlp,0;
+	else if (strnpcinfo(2) == "8") areamobuseskill .@map$,35,21,10,1929,"NPC_INVINCIBLEOFF",1,0,0,e_hlp,0;
+	else if (strnpcinfo(2) == "10") areamobuseskill .@map$,35,109,10,1929,"NPC_INVINCIBLEOFF",1,0,0,e_hlp,0;
+	percentheal -50,0;
+	sc_start Eff_Stone,20000,0;
+	setquest 3041;
+	mapannounce .@map$, "The seal activated by putting magical power into the altar.",bc_map,"0x87ceeb";
+	mes "I can feel the power of the altar came back by adding magical power.";
+	next;
+	mes "But you can't use your magic for 3 minutes because you used your SP on the altar.";
+	close;
+
+OnInstanceInit:
+	disablenpc instance_npcname(strnpcinfo(0));
 	end;
 }
+2@cata,79,81,0	duplicate(Magical Seal#SS)	Magical Seal#0	844
+2@cata,123,109,0	duplicate(Magical Seal#SS)	Magical Seal#2	844
+2@cata,123,22,0	duplicate(Magical Seal#SS)	Magical Seal#4	844
+2@cata,35,21,0	duplicate(Magical Seal#SS)	Magical Seal#8	844
+2@cata,35,109,0	duplicate(Magical Seal#SS)	Magical Seal#10	844
 
-2@cata,123,109,0	script	封印#2	844,{
-	set .@seal_check,checkquest(3041,PLAYTIME);
-	if (.@seal_check == -1) {
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#2", instance_id());
-		areamobuseskill "2@cata",123,109,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	else if ((.@seal_check == 0) || (.@seal_check == 1)) {
-		specialeffect2 EF_SILENCEATTACK;
-		percentheal -50,0;
-		sc_start Eff_Stone,30000,0;
-		mes "你的SP还没有恢复. 虽然你将魔法能量注入祭坛, 但是看起来封印的力量并没有回复.";
-		close;
-	}
-	else if (.@seal_check == 2) {
-		erasequest 3041;
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#2", instance_id());
-		areamobuseskill "2@cata",123,109,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	end;
-}
-
-2@cata,123,22,0	script	封印#4	844,{
-	set .@seal_check,checkquest(3041,PLAYTIME);
-	if (.@seal_check == -1) {
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#4", instance_id());
-		areamobuseskill "2@cata",123,22,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	else if ((.@seal_check == 0) || (.@seal_check == 1)) {
-		specialeffect2 EF_SILENCEATTACK;
-		percentheal -50,0;
-		sc_start Eff_Stone,30000,0;
-		mes "你的SP还没有恢复. 虽然你将魔法能量注入祭坛, 但是看起来封印的力量并没有回复.";
-		close;
-	}
-	else if (.@seal_check == 2) {
-		erasequest 3041;
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#4", instance_id());
-		areamobuseskill "2@cata",123,22,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	end;
-}
-
-2@cata,35,21,0	script	封印#8	844,{
-	set .@seal_check,checkquest(3041,PLAYTIME);
-	if (.@seal_check == -1) {
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#8", instance_id());
-		areamobuseskill "2@cata",35,21,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	else if ((.@seal_check == 0) || (.@seal_check == 1)) {
-		specialeffect2 EF_SILENCEATTACK;
-		percentheal -50,0;
-		sc_start Eff_Stone,30000,0;
-		mes "你的SP还没有恢复. 虽然你将魔法能量注入祭坛, 但是看起来封印的力量并没有回复.";
-		close;
-	}
-	else if (.@seal_check == 2) {
-		erasequest 3041;
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#8", instance_id());
-		areamobuseskill "2@cata",35,21,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	end;
-}
-
-2@cata,35,109,0	script	封印#10	844,{
-	set .@seal_check,checkquest(3041,PLAYTIME);
-	if (.@seal_check == -1) {
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#10", instance_id());
-		areamobuseskill "2@cata",35,109,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	else if ((.@seal_check == 0) || (.@seal_check == 1)) {
-		specialeffect2 EF_SILENCEATTACK;
-		percentheal -50,0;
-		sc_start Eff_Stone,30000,0;
-		mes "你的SP还没有恢复. 虽然你将魔法能量注入祭坛, 但是看起来封印的力量并没有回复.";
-		close;
-	}
-	else if (.@seal_check == 2) {
-		erasequest 3041;
-		specialeffect EF_LEXDIVINA;
-		disablenpc instance_npcname("封印#10", instance_id());
-		areamobuseskill "2@cata",35,109,10,1929,686,1,0,0,26,0;
-		percentheal -50,0;
-		sc_start Eff_Stone,20000,0;
-		setquest 3041;
-		instance_announce 0, "向祭坛注入魔法能量后封印被重新激活.",bc_map,"0x87ceeb";
-		mes "注入魔法能量后, 我能感觉到祭坛的能量又恢复了.";
-		next;
-		mes "但是3分钟内你无法再次向祭坛注入能量.";
-		close;
-	}
-	end;
-}
-
-2@cata,79,65,0	script	主封印#ss	844,{
+2@cata,79,65,0	script	The Main Altar#ss	844,{
 	set .@party_id,getcharid(1);
 	if (('ins_baphomet == 5) && (getpartyleader(.@party_id,2) == getcharid(0))) {
-		mes "一股强大到无法形容的邪恶紫光从封印阵地下散发出来.";
+		mes "An evil power, too terrible to describe, lies under the great altar radiating a violet color.";
 		next;
-		mes "复杂的符文快速闪动着努力控制着那可怕的力量，看起来相当危险.";
+		mes "Complicated Magical Rune letters blink rapidly, attempting to suppress the dreadful power within.";
 		next;
-		mes "源源不断迸发的邪恶力量洪流一般不断从底部狂暴地冲击着封印阵.";
+		mes "The bottom of the Main Altar trembles furiously.";
 		next;
 		specialeffect EF_METEORSTORM;
 		specialeffect EF_METEORSTORM;
 		mes "[" + strcharinfo(0) + "]";
-		mes "快看! 有东西...正在出来...";
+		mes "Watch out! Something... Something is coming.";
 		set 'ins_baphomet,6;
-		donpcevent instance_npcname("ins_2f_hero_broad", instance_id())+"::OnEnable";
-		disablenpc instance_npcname("主封印#ss", instance_id());
-		close;
-	}
-	else if (('ins_baphomet == 5) && (getpartyleader(.@party_id,2) != getcharid(0))) {
-		mes "一股强大到无法形容的邪恶紫光从封印阵地下散发出来.";
-		next;
-		mes "复杂的符文快速闪动着努力控制着那可怕的力量，看起来相当危险.";
+		donpcevent instance_npcname("ins_2f_hero_broad")+"::OnEnable";
+		disablenpc instance_npcname("The Main Altar#ss");
 		close;
 	}
 	else {
-		mes "一股强大到无法形容的邪恶紫光从封印阵地下散发出来.";
+		mes "An evil power, too terrible to describe, lies under the great altar radiating a violet color.";
 		next;
-		mes "复杂的符文快速闪动着努力控制着那可怕的力量，看起来相当危险.";
+		mes "Complicated Magical Rune letters blink rapidly, attempting to suppress the dreadful power within.";
 		close;
 	}
 	end;
 }
 
-2@cata,80,63,4	script	远古英雄的灵魂#2F	411,{
+2@cata,80,63,4	script	Ancient Hero's Soul#2F	411,{
 	cutin "ins_cata_champ_s",2;
-	if (checkquest(3041)) erasequest 3041;
-	if (checkquest(3040)) erasequest 3040;
-	setquest 3040;
-	mes "[远古英雄的灵魂]";
-	mes "做得不错, 我的孩子们. 你满足了我和我的同伴们长久以来都无法达成的期望.";
+	if (checkquest(3041)>=0) erasequest 3041;
+	mes "[Ancient Hero's Soul]";
+	mes "Good job, my descendants... You've finished the long-cherished task that me and my bretheren could not complete.";
 	next;
-	mes "[远古英雄的灵魂]";
-	mes "...";
+	mes "[Ancient Hero's Soul]";
+	mes "I really appreciate your help.";
+	mes "Our souls can finally rest in peace...";
 	next;
-	mes "[远古英雄的灵魂]";
-	mes "我非常感激你的帮助.";
-	mes "我们的灵魂终于能够归于宁静了.";
+	mes "[Ancient Hero's Soul]";
+	mes "The struggle for peace on this world will never end. But... my role here is finally over because there are brave heroes like you.";
 	next;
-	mes "[远古英雄的灵魂]";
-	mes "为保护这个世界的和平而进行的战斗将永远不会终止. 但是因为有了象你这样的英雄, 我的任务终于可以结束了.";
-	next;
-	switch(select("让我离开修道院.:停止交谈.")) {
+	switch(select("Let me leave the shrine.:Stop talking.")) {
 	case 1:
-		mes "[远古英雄的灵魂]";
-		mes "Okay. 我将让你和你的同伴们安全的离开这里.";
+		mes "[Ancient Hero's Soul]";
+		mes "Okay. I'll let you and your group leave here safely.";
 		next;
-		mes "[远古英雄的灵魂]";
-		mes "离开修道院的时候, 请代我向帕特里克问候.";
+		mes "[Ancient Hero's Soul]";
+		mes "If you leave, please say hello to Patrick for me.";
 		cutin "",255;
 		set 'ins_baphomet,0;
 		warp "monk_test",310,150;
 		close;
 	case 2:
-		mes "[远古英雄的灵魂]";
-		mes "你在这里还有什么事情吗? 如果你已经完成了, 我将让你安全的离开这里.";
+		mes "[Ancient Hero's Soul]";
+		mes "Do you still have something to do here? If you're done I'll let you leave safely...";
 		cutin "",255;
 		close;
 	}
+
+OnInstanceInit:
+	disablenpc instance_npcname("Ancient Hero's Soul#2F");
+	end;
 }
 
 2@cata,1,2,0	script	ins_2f_hero_broad	-1,{
 OnEnable:
-	enablenpc instance_npcname("ins_2f_hero_broad", instance_id());
+	enablenpc instance_npcname("ins_2f_hero_broad");
 	initnpctimer;
 	end;
 
 OnDisable:
-	disablenpc instance_npcname("ins_2f_hero_broad", instance_id());
+	disablenpc instance_npcname("ins_2f_hero_broad");
 	end;
 
 OnTimer3000:
-	instance_announce 0, "远古英雄的灵魂 : 我的天! 主祭坛的控制力正在变弱.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : My God! The seal of the Main Altar is weakening!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer6000:
-	instance_announce 0, "远古英雄的灵魂 : 我的孩子们, 仔细听我说.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : My descendants... Listen carefully to what I'm going to say.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer9000:
-	instance_announce 0, "远古英雄的灵魂 : 祭坛, 控制主祭坛的力量, 位于这个房间的东北、东南、西南和西北角落.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The altars that control the Main Altar's power are located in the Northeast, Southeast, Southwest and Northwest corners of this room.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer12000:
-	instance_announce 0, "远古英雄的灵魂 : 在巴风特重生前找到这些祭坛, 并重新激活他们的封印.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : Find these altars and activate their seals before Baphomet revives.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer15000:
-	instance_announce 0, "魔王巴风特 : 太迟了, 人类啊... 现在你们都将感受到死亡的绝望.",bc_map,"0xdb7093";
+	mapannounce instance_mapname("2@cata"), "Baphomet : It's too late, weaklings... Now, you'll feel the despair of death!",bc_map,"0xdb7093";
 	end;
 
 OnTimer17000:
-	instance_announce 0, "魔王巴风特 : 在我的地盘上, 你们连我一根汗毛都伤不到! 安安静静的等着做我的祭礼吧.",bc_map,"0xdb7093";
-	donpcevent instance_npcname("control_baphomet", instance_id())+"::OnEnable";
-	donpcevent instance_npcname("ins_2f_hero_broad2", instance_id())+"::OnEnable";
+	mapannounce instance_mapname("2@cata"), "Baphomet : No one can harm me here. You will be my first sacrifice.",bc_map,"0xdb7093";
+	donpcevent instance_npcname("control_baphomet")+"::OnEnable";
+	donpcevent instance_npcname("ins_2f_hero_broad2")+"::OnEnable";
 	stopnpctimer;
-	disablenpc instance_npcname("ins_2f_hero_broad", instance_id());
+	disablenpc instance_npcname("ins_2f_hero_broad");
 	end;
 }
 
 2@cata,3,3,0	script	control_baphomet	-1,{
-OnEnable:
-	enablenpc instance_npcname("control_baphomet", instance_id());
-	donpcevent instance_npcname("2f_callmon_pattern_c", instance_id())+"::OnEnable";
-	monster "2@cata",79,64,"Baphomet#",1929,1,instance_npcname("control_baphomet", instance_id())+"::OnMyMobDead";
+OnInstanceInit:
+OnDisable:
+	disablenpc instance_npcname("control_baphomet");
 	end;
 
-OnDisable:
-	disablenpc "control_baphomet";
+OnEnable:
+	enablenpc instance_npcname("control_baphomet");
+	donpcevent instance_npcname("2f_callmon_pattern_c")+"::OnEnable";
+	monster instance_mapname("2@cata"),79,64,"Baphomet#",1929,1,instance_npcname("control_baphomet")+"::OnMyMobDead";
 	end;
 
 OnMyMobDead:
-	if (mobcount("2@cata",instance_npcname("control_baphomet", instance_id())+"::OnMyMobDead") < 1) {
+	set .@map$, instance_mapname("2@cata");
+	if (mobcount(.@map$,instance_npcname("control_baphomet")+"::OnMyMobDead") < 1) {
 		set 'ins_baphomet,7;
-		setquest 3040;
 		erasequest 3041;
-		instance_announce 0, "魔王巴风特 : 不!不不不!! 这怎么可能??? 我怎么又被这些微不足道的人类侮辱了呢??? 你们绝不可能.... 你们绝不可能再次封印我!!!",bc_map,"0xdb7093";
-		enablenpc instance_npcname("远古英雄的灵魂#2F", instance_id());
-		disablenpc instance_npcname("slave_down", instance_id());
-		disablenpc instance_npcname("slave_left", instance_id());
-		disablenpc instance_npcname("slave_right", instance_id());
-		donpcevent instance_npcname("ins_2f_hero_broad", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("ins_2f_hero_broad2", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("ins_2f_hero_pattern_c", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("2f_callmon_pattern_c", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("2f_callmon_pattern", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("ins_2f_hero_pattern", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("ins_2f_enter_broad", instance_id())+"::OnDisable";
-		donpcevent instance_npcname("control_baphomet", instance_id())+"::OnDisable";
-		disablenpc instance_npcname("control_baphomet", instance_id());
+		mapannounce .@map$, "Baphomet : No! Nonono! How dare these weaklings defeat me!... No!!...",bc_map,"0xdb7093";
+		enablenpc instance_npcname("Ancient Hero's Soul#2F");
+		disablenpc instance_npcname("slave_down");
+		disablenpc instance_npcname("slave_left");
+		disablenpc instance_npcname("slave_right");
+		donpcevent instance_npcname("ins_2f_hero_broad")+"::OnDisable";
+		donpcevent instance_npcname("ins_2f_hero_broad2")+"::OnDisable";
+		donpcevent instance_npcname("ins_2f_hero_pattern_c")+"::OnDisable";
+		donpcevent instance_npcname("2f_callmon_pattern_c")+"::OnDisable";
+		donpcevent instance_npcname("2f_callmon_pattern")+"::OnDisable";
+		donpcevent instance_npcname("ins_2f_hero_pattern")+"::OnDisable";
+		donpcevent instance_npcname("ins_2f_enter_broad")+"::OnDisable";
+		donpcevent instance_npcname("control_baphomet")+"::OnDisable";
+		disablenpc instance_npcname("control_baphomet");
 	}
 	end;
 }
 
 2@cata,2,2,0	script	ins_2f_hero_broad2	-1,{
+OnInstanceInit:
+OnDisable:
+	disablenpc instance_npcname("ins_2f_hero_broad2");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("ins_2f_hero_broad2", instance_id());
+	enablenpc instance_npcname("ins_2f_hero_broad2");
 	initnpctimer;
 	end;
 
-OnDisable:
-	disablenpc instance_npcname("ins_2f_hero_broad2", instance_id());
-	end;
-
 OnTimer8000:
-	instance_announce 0, "远古英雄的灵魂 : 不要气馁, 你们仍然能够打败巴风特.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : Don't be discouraged, Baphomet can still be defeated!",bc_map,"0xFFFF00";
 	end;
 
 OnTimer11000:
-	instance_announce 0, "远古英雄的灵魂 : 去祭坛激活封印.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : Go to the altars and activate their seals.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer13000:
-	instance_announce 0, "远古英雄的灵魂 : 一旦封印回复能量, 巴风特很容易受到攻击伤害.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : Once the seals recover their power, Baphomet will be vulnerable.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer16000:
-	instance_announce 0, "远古英雄的灵魂 : 还要记住, 必须让巴风特处于封印阵当中，否则封印阵就发挥不了作用.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : You should lure Baphomet to the unsealed Altars. Otherwise, your efforts will be futile.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer19000:
-	instance_announce 0, "远古英雄的灵魂 : 切记!! 我们只有一个小时阻击巴风特! 如果超过时间封印就无法困阻它了.",bc_map,"0xFFFF00";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : We have only 1 hour to stop Baphomet. If time runs out, the power of the seals will be useless.",bc_map,"0xFFFF00";
 	end;
 
 OnTimer22000:
-	instance_announce 0, "魔王巴风特 : 封印对我来说完全是废物! 你们尽管多弄些封印来, 我会当着你们的面粉碎它们! 你们没有一个人能活着出去!!!",bc_map,"0xdb7093";
+	mapannounce instance_mapname("2@cata"), "Baphomet : It's useless. Make more seals. I'll crush them all. None of you will survive!",bc_map,"0xdb7093";
 	end;
 
 OnTimer26000:
-	instance_announce 0, "远古英雄的灵魂 : 位于中央的封印魔法能量快要用尽! 快去注入魔法能量!!",bc_map,"0xFFFF00";
-	enablenpc instance_npcname("封印#0", instance_id());
-	disablenpc instance_npcname("封印#2", instance_id());
-	disablenpc instance_npcname("封印#4", instance_id());
-	disablenpc instance_npcname("封印#8", instance_id());
-	disablenpc instance_npcname("封印#10", instance_id());
-	donpcevent instance_npcname("ins_2f_hero_pattern_c", instance_id())+"::OnEnable";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The magical power of the central seal is running out. Go to the central seal and put the magical power.",bc_map,"0xFFFF00";
+	enablenpc instance_npcname("Magical Seal#0");
+	disablenpc instance_npcname("Magical Seal#2");
+	disablenpc instance_npcname("Magical Seal#4");
+	disablenpc instance_npcname("Magical Seal#8");
+	disablenpc instance_npcname("Magical Seal#10");
+	donpcevent instance_npcname("ins_2f_hero_pattern_c")+"::OnEnable";
 	stopnpctimer;
-	disablenpc instance_npcname("ins_2f_hero_broad2", instance_id());
+	disablenpc instance_npcname("ins_2f_hero_broad2");
 	end;
 }
 
 2@cata,4,1,0	script	2f_callmon_pattern_c	-1,{
+OnInstanceInit:
+	disablenpc instance_npcname("2f_callmon_pattern_c");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("2f_callmon_pattern_c", instance_id());
+	enablenpc instance_npcname("2f_callmon_pattern_c");
 	initnpctimer;
-	donpcevent instance_npcname("2f_callmon_pattern_c", instance_id())+"::Ongo";
+	donpcevent instance_npcname("2f_callmon_pattern_c")+"::Ongo";
 	end;
 
 OnDisable:
 	stopnpctimer;
-	disablenpc instance_npcname("2f_callmon_pattern_c", instance_id());
+	disablenpc instance_npcname("2f_callmon_pattern_c");
 	end;
 
 Ongo:
-	donpcevent instance_npcname("2f_callmon_pattern", instance_id())+"::OnEnable";
+	donpcevent instance_npcname("2f_callmon_pattern")+"::OnEnable";
 	end;
 
 OnTimer3600000:
-	donpcevent instance_npcname("2f_callmon_pattern_c", instance_id())+"::OnDisable";
+	donpcevent instance_npcname("2f_callmon_pattern_c")+"::OnDisable";
 	end;
 }
 
 2@cata,4,2,0	script	2f_callmon_pattern	-1,{
+OnInstanceInit:
+	disablenpc instance_npcname("2f_callmon_pattern");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("2f_callmon_pattern", instance_id());
+	enablenpc instance_npcname("2f_callmon_pattern");
 	stopnpctimer;
 	initnpctimer;
 	end;
 
 OnDisable:
-	disablenpc instance_npcname("2f_callmon_pattern", instance_id());
+	disablenpc instance_npcname("2f_callmon_pattern");
 	stopnpctimer;
 	end;
 
 OnTimer300000:
-	enablenpc instance_npcname("slave_down", instance_id());
-	enablenpc instance_npcname("slave_left", instance_id());
-	enablenpc instance_npcname("slave_right", instance_id());
-	donpcevent instance_npcname("2f_callmon_pattern_c", instance_id())+"::Ongo";
+	enablenpc instance_npcname("slave_down");
+	enablenpc instance_npcname("slave_left");
+	enablenpc instance_npcname("slave_right");
+	donpcevent instance_npcname("2f_callmon_pattern_c")+"::Ongo";
 	end;
 }
 
 2@cata,3,1,0	script	ins_2f_hero_pattern_c	-1,{
+OnInstanceInit:
+	disablenpc instance_npcname("ins_2f_hero_pattern_c");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("ins_2f_hero_pattern_c", instance_id());
+	enablenpc instance_npcname("ins_2f_hero_pattern_c");
 	initnpctimer;
-	donpcevent instance_npcname("ins_2f_hero_pattern_c", instance_id())+"::Ongo";
+	donpcevent instance_npcname("ins_2f_hero_pattern_c")+"::Ongo";
 	end;
 
 Ongo:
-	donpcevent instance_npcname("ins_2f_hero_pattern", instance_id())+"::OnEnable";
+	donpcevent instance_npcname("ins_2f_hero_pattern")+"::OnEnable";
 	end;
 
 OnDisable:
 	stopnpctimer;
-	disablenpc instance_npcname("封印#0", instance_id());
-	disablenpc instance_npcname("封印#2", instance_id());
-	disablenpc instance_npcname("封印#4", instance_id());
-	disablenpc instance_npcname("封印#8", instance_id());
-	disablenpc instance_npcname("封印#10", instance_id());
-	donpcevent instance_npcname("ins_2f_hero_pattern", instance_id())+"::OnDisable";
-	disablenpc instance_npcname("ins_2f_hero_pattern_c", instance_id());
+	disablenpc instance_npcname("Magical Seal#0");
+	disablenpc instance_npcname("Magical Seal#2");
+	disablenpc instance_npcname("Magical Seal#4");
+	disablenpc instance_npcname("Magical Seal#8");
+	disablenpc instance_npcname("Magical Seal#10");
+	donpcevent instance_npcname("ins_2f_hero_pattern")+"::OnDisable";
+	disablenpc instance_npcname("ins_2f_hero_pattern_c");
 	end;
 
 OnTimer3600000:
-	instance_announce 0, "魔王巴风特 : 咳咳咳... 用封印就像阻挡我? 你们等死吧!!.",bc_map,"0xdb7093";
+	mapannounce instance_mapname("2@cata"), "Baphomet : krrrr... Now you can't stop me with the seals. All you can do is wait for death!",bc_map,"0xdb7093";
 	end;
 
 OnTimer3605000:
-	instance_announce 0, "远古英雄的灵魂 : 我们再也无法用封印的能量阻止巴风特, 现在一切就看天意了...",bc_map,"0xFFFF00";
-	donpcevent instance_npcname("ins_2f_hero_pattern_c", instance_id())+"::OnDisable";
+	mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : We can't stop Baphomet with the magical power of the seals anymore. Now everything depends on God...",bc_map,"0xFFFF00";
+	donpcevent instance_npcname("ins_2f_hero_pattern_c")+"::OnDisable";
 	end;
 }
 
 2@cata,3,2,0	script	ins_2f_hero_pattern	-1,{
+OnInstanceInit:
+	disablenpc instance_npcname("ins_2f_hero_pattern");
+	end;
+
 OnEnable:
-	enablenpc instance_npcname("ins_2f_hero_pattern", instance_id());
+	enablenpc instance_npcname("ins_2f_hero_pattern");
 	initnpctimer;
 	end;
 
 OnDisable:
-	disablenpc instance_npcname("ins_2f_hero_pattern", instance_id());
+	disablenpc instance_npcname("ins_2f_hero_pattern");
 	stopnpctimer;
 	end;
 
 OnTimer70000:
 	switch(rand(1,5)) {
 	case 1:
-		instance_announce 0, "远古英雄的灵魂 : 位于中央的封印魔法能量快要用尽! 快去注入魔法能量!!",bc_map,"0xFFFF00";
-		enablenpc instance_npcname("封印#0", instance_id());
-		disablenpc instance_npcname("封印#2", instance_id());
-		disablenpc instance_npcname("封印#4", instance_id());
-		disablenpc instance_npcname("封印#8", instance_id());
-		disablenpc instance_npcname("封印#10", instance_id());
+		mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The seal of the Main Altar is running out. Strengthen the Main Altar's seal!",bc_map,"0xFFFF00";
+		enablenpc instance_npcname("Magical Seal#0");
+		disablenpc instance_npcname("Magical Seal#2");
+		disablenpc instance_npcname("Magical Seal#4");
+		disablenpc instance_npcname("Magical Seal#8");
+		disablenpc instance_npcname("Magical Seal#10");
 		break;
 	case 2:
-		instance_announce 0, "远古英雄的灵魂 : 2点钟方向的封印能量微弱! 快去注入魔法能量!!",bc_map,"0xFFFF00";
-		disablenpc instance_npcname("封印#0", instance_id());
-		enablenpc instance_npcname("封印#2", instance_id());
-		disablenpc instance_npcname("封印#4", instance_id());
-		disablenpc instance_npcname("封印#8", instance_id());
-		disablenpc instance_npcname("封印#10", instance_id());
+		mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The magical power of the seal at 2 o'clock is running out. Go to 2 o'clock and put the magical power in the seal.",bc_map,"0xFFFF00";
+		disablenpc instance_npcname("Magical Seal#0");
+		enablenpc instance_npcname("Magical Seal#2");
+		disablenpc instance_npcname("Magical Seal#4");
+		disablenpc instance_npcname("Magical Seal#8");
+		disablenpc instance_npcname("Magical Seal#10");
 		break;
 	case 3:
-		instance_announce 0, "远古英雄的灵魂 : 4点钟方向的封印能量微弱! 快去注入魔法能量!!",bc_map,"0xFFFF00";
-		disablenpc instance_npcname("封印#0", instance_id());
-		disablenpc instance_npcname("封印#2", instance_id());
-		enablenpc instance_npcname("封印#4", instance_id());
-		disablenpc instance_npcname("封印#8", instance_id());
-		disablenpc instance_npcname("封印#10", instance_id());
+		mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The magical power of the seal at 4 o'clock is running out. Go to 4 o'clock and put the magical power in the seal.",bc_map,"0xFFFF00";
+		disablenpc instance_npcname("Magical Seal#0");
+		disablenpc instance_npcname("Magical Seal#2");
+		enablenpc instance_npcname("Magical Seal#4");
+		disablenpc instance_npcname("Magical Seal#8");
+		disablenpc instance_npcname("Magical Seal#10");
 		break;
 	case 4:
-		instance_announce 0, "远古英雄的灵魂 : 8点钟方向的封印能量微弱! 快去注入魔法能量!!",bc_map,"0xFFFF00";
-		disablenpc instance_npcname("封印#0", instance_id());
-		disablenpc instance_npcname("封印#2", instance_id());
-		disablenpc instance_npcname("封印#4", instance_id());
-		enablenpc instance_npcname("封印#8", instance_id());
-		disablenpc instance_npcname("封印#10", instance_id());
+		mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The magical power of the seal at 8 o'clock is running out. Go to 8 o'clock and put the magical power in the seal.",bc_map,"0xFFFF00";
+		disablenpc instance_npcname("Magical Seal#0");
+		disablenpc instance_npcname("Magical Seal#2");
+		disablenpc instance_npcname("Magical Seal#4");
+		enablenpc instance_npcname("Magical Seal#8");
+		disablenpc instance_npcname("Magical Seal#10");
 		break;
 	case 5:
-		instance_announce 0, "远古英雄的灵魂 : 10点钟方向的封印能量微弱! 快去注入魔法能量!!",bc_map,"0xFFFF00";
-		disablenpc instance_npcname("封印#0", instance_id());
-		disablenpc instance_npcname("封印#2", instance_id());
-		disablenpc instance_npcname("封印#4", instance_id());
-		disablenpc instance_npcname("封印#8", instance_id());
-		enablenpc instance_npcname("封印#10", instance_id());
+		mapannounce instance_mapname("2@cata"), "Ancient Hero's Soul : The magical power of the seal at 10 o'clock is running out. Go to 10 o'clock and put the magical power in the seal.",bc_map,"0xFFFF00";
+		disablenpc instance_npcname("Magical Seal#0");
+		disablenpc instance_npcname("Magical Seal#2");
+		disablenpc instance_npcname("Magical Seal#4");
+		disablenpc instance_npcname("Magical Seal#8");
+		enablenpc instance_npcname("Magical Seal#10");
 	}
 	stopnpctimer;
-	donpcevent instance_npcname("ins_2f_hero_pattern_c", instance_id())+"::Ongo";
+	donpcevent instance_npcname("ins_2f_hero_pattern_c")+"::Ongo";
 	end;
 }
 
 
 1@cata,1,1,0	script	ins_1f_spawn_mobs	-1,{
-OnEnable:
-	monster "1@cata",0,0,"腐尸首领",1298,10;
-	monster "1@cata",0,0,"狂暴恶灵",1291,10;
-	//monster "1@cata",0,0,"狂暴邪恶箱",1699,10;
-	monster "1@cata",0,0,"火焰颅骨",1869,10;
-	monster "1@cata",0,0,"邪骸战士长",1290,10;
-	monster "1@cata",0,0,"腐尸首领",1298,10;
-	monster "1@cata",0,0,"邪骸战士长",1290,10;
-	monster "1@cata",0,0,"火焰颅骨",1869,10;
-	monster "1@cata",0,0,"狂暴恶灵",1291,10;
-	monster "1@cata",0,0,"狂暴恶灵",1291,10;
-	monster "1@cata",0,0,"卡利斯格",1132,10;
-	monster "1@cata",0,0,"卡利斯格",1132,10;
-	monster "1@cata",0,0,"火焰颅骨",1869,10;
-	monster "1@cata",0,0,"火焰颅骨",1869,10;
-	monster "1@cata",0,0,"狂暴邪恶箱",1699,10;
-	monster "1@cata",0,0,"腐尸首领",1298,10;
-	monster "1@cata",0,0,"狂暴邪恶箱",1699,10;
-	monster "1@cata",0,0,"腐尸首领",1298,10;
-	monster "1@cata",0,0,"狂暴恶灵",1291,10;
-	monster "1@cata",0,0,"邪骸战士长",1290,10;
-	monster "1@cata",0,0,"邪骸战士长",1290,10;
-	monster "1@cata",0,0,"风魔巫师",1263,10;
-	monster "1@cata",0,0,"风魔巫师",1263,10;
-	monster "1@cata",0,0,"风魔巫师",1263,10;
-	monster "1@cata",0,0,"南瓜魂",1509,10;
-	monster "1@cata",0,0,"南瓜魂",1509,10;
-	monster "1@cata",0,0,"闇神官",1117,10;
-	monster "1@cata",0,0,"闇神官",1117,10;
-	monster "1@cata",0,0,"闇神官",1117,10;
-	monster "1@cata",0,0,"女妖",1867,10;
-	monster "1@cata",0,0,"迷幻之王",1302,1;
+OnInstanceInit:
+	set .@map$, instance_mapname("1@cata");
+	monster .@map$,0,0,"Zombie Master",1298,10;
+	monster .@map$,0,0,"Wraith Dead",1291,10;
+	//monster .@map$,0,0,"Ancient Mimic",1699,10;
+	monster .@map$,0,0,"Flame Skull",1869,10;
+	monster .@map$,0,0,"Skeleton General",1290,10;
+	monster .@map$,0,0,"Zombie Master",1298,10;
+	monster .@map$,0,0,"Skeleton General",1290,10;
+	monster .@map$,0,0,"Flame Skull",1869,10;
+	monster .@map$,0,0,"Wraith Dead",1291,10;
+	monster .@map$,0,0,"Wraith Dead",1291,10;
+	monster .@map$,0,0,"Khalitzburg",1132,10;
+	monster .@map$,0,0,"Khalitzburg",1132,10;
+	monster .@map$,0,0,"Flame Skull",1869,10;
+	monster .@map$,0,0,"Flame Skull",1869,10;
+	monster .@map$,0,0,"Ancient Mimic",1699,10;
+	monster .@map$,0,0,"Zombie Master",1298,10;
+	monster .@map$,0,0,"Ancient Mimic",1699,10;
+	monster .@map$,0,0,"Zombie Master",1298,10;
+	monster .@map$,0,0,"Wraith Dead",1291,10;
+	monster .@map$,0,0,"Skeleton General",1290,10;
+	monster .@map$,0,0,"Skeleton General",1290,10;
+	monster .@map$,0,0,"Wind Ghost",1263,10;
+	monster .@map$,0,0,"Wind Ghost",1263,10;
+	monster .@map$,0,0,"Wind Ghost",1263,10;
+	monster .@map$,0,0,"Lude",1509,10;
+	monster .@map$,0,0,"Lude",1509,10;
+	monster .@map$,0,0,"Evil Druid",1117,10;
+	monster .@map$,0,0,"Evil Druid",1117,10;
+	monster .@map$,0,0,"Evil Druid",1117,10;
+	monster .@map$,0,0,"Banshee",1867,10;
+	monster .@map$,0,0,"Dark Illusion",1302,1;
+	disablenpc instance_npcname("ins_1f_spawn_mobs");
 	end;
 }

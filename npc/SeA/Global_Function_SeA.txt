@@ -367,3 +367,40 @@ function	script	isbegin_quest	{
 	 default: return 0; // Òì³£
 	 }
 }
+
+function	script	instance_create	{
+	if( getargcount() == 2 )
+		return instance_create2(getarg(0),getarg(1));
+	if( instance_getdbinfo(getarg(0),0) == -1 )
+		return -1;
+	if( !getcharid(1) )
+		return -2;
+	set .@instance, instance_create2(getarg(0), getcharid(1));
+	if( .@instance == -1 )//party already instancing
+		return -3;
+	if( .@instance == -2 )//no free instance
+		return -4;
+	set .@limit, instance_getdbinfo(getarg(0),1);
+	instance_set_timeout .@limit,300,.@instance;
+	for(.@i=0; .@i < 10 && instance_getdbinfo(getarg(0),5+.@i) != ""; .@i++)
+		instance_attachmap(instance_getdbinfo(getarg(0),5+.@i),.@instance);
+	instance_init .@instance;
+	instance_attach .@instance;
+	instance_doevent .@instance;
+	return .@instance;
+}
+
+function	script	instance_enter	{
+	if( instance_getdbinfo(getarg(0),0) == -1 )
+		return 3;
+	if( !getcharid(1) )
+		return 1;
+	if( has_instance(instance_getdbinfo(getarg(0),2)) == "" )
+		return 2;
+	warp has_instance(instance_getdbinfo(getarg(0),2)),instance_getdbinfo(getarg(0),3),instance_getdbinfo(getarg(0),4);
+	return 0;
+}
+
+function	script	instance_mapname	{
+	return has_instance(getarg(0),getarg(1));
+}
