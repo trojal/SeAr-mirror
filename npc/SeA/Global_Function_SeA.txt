@@ -402,5 +402,8 @@ function	script	instance_enter	{
 }
 
 function	script	instance_mapname	{
-	return has_instance(getarg(0),getarg(1));
+	if(getargcount() >= 2)
+		return has_instance(getarg(0),getarg(1));
+	else
+		return has_instance(getarg(0));
 }
