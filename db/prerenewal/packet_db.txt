@@ -1448,7 +1448,7 @@ packet_ver: 25
 //0x07f4,3
 
 //2009-10-27aRagexeRE
-//0x07f5,6
+0x07f5,6,gmrequnequip,2
 0x07f6,14
 
 //2009-11-03aRagexeRE
@@ -1774,6 +1774,8 @@ packet_ver: 30
 0x0907,5,moveitem,2:4
 0x0908,5
 0x08D7,28,bookingregreqbg,2:4 //≤ªƒ‹”√
+0x0977,14 //Monster HP Bar
+0x0916,26,guildinvite2,2
 
 // 2012-06-18aRagexeRE
 packet_ver: 31
@@ -1859,7 +1861,6 @@ packet_ver: 33
 0x089b,10,useskilltoid,2:4:6
 0x08ac,8,movetokafra,2:4
 0x08c9,4,cashshopitemlist,0
-0x08cf,10 //Amulet spirits
 0x08d2,10
 0x0907,5,moveitem,2:4
 0x0908,5
@@ -1876,7 +1877,6 @@ packet_ver: 33
 0x094e,-1,searchstoreinfo,2:4:5:9:13:14:15
 0x0959,10,useskilltopos,2:4:6:8
 //0x095a,8,mailsetattach,2:4
-0x0977,14 //Monster HP Bar
 0x0978,6,reqworldinfo,2
 0x0979,50 //ackworldinfo
 0x0990,31 //additem
