@@ -10,7 +10,7 @@
 packet_db_ver: default
 
 
-packet_ver: 5
+packet_ver: 1
 0x0064,55
 0x0065,17
 0x0066,6
@@ -439,7 +439,7 @@ packet_ver: 5
 0x020d,-1
 
 //2004-07-05aSakexe
-packet_ver: 6
+//packet_ver: 6
 0x0072,22,wanttoconnection,5:9:13:17:21
 0x0085,8,walktoxy,5
 0x00a7,13,useitem,5:9
@@ -450,7 +450,7 @@ packet_ver: 6
 0x020e,24
 
 //2004-07-13aSakexe
-packet_ver: 7
+//packet_ver: 7
 0x0072,39,wanttoconnection,12:22:30:34:38
 0x0085,9,walktoxy,6
 0x009b,13,changedir,5:12
@@ -461,7 +461,7 @@ packet_ver: 7
 0x0190,99,useskilltoposinfo,7:9:15:17:19
 
 //2004-07-26aSakexe
-packet_ver: 8
+//packet_ver: 8
 0x0072,14,dropitem,5:12
 0x007e,33,wanttoconnection,12:18:24:28:32
 0x0085,20,useskilltoid,7:12:16
@@ -481,7 +481,7 @@ packet_ver: 8
 0x0193,9,actionrequest,3:8
 
 //2004-08-09aSakexe
-packet_ver: 9
+//packet_ver: 9
 0x0072,17,dropitem,8:15
 0x007e,37,wanttoconnection,9:21:28:32:36
 0x0085,26,useskilltoid,11:18:22
@@ -508,7 +508,7 @@ packet_ver: 9
 0x0210,22
 
 //2004-09-06aSakexe
-packet_ver: 10
+//packet_ver: 10
 0x0072,20,useitem,9:20
 0x007e,19,movetokafra,3:15
 0x0085,23,actionrequest,9:22
@@ -528,7 +528,7 @@ packet_ver: 10
 0x0193,17,movefromkafra,3:13
 
 //2004-09-20aSakexe
-packet_ver: 11
+//packet_ver: 11
 0x0072,18,useitem,10:14
 0x007e,25,movetokafra,6:21
 0x0085,9,actionrequest,3:8
@@ -546,7 +546,7 @@ packet_ver: 11
 0x0193,12,movefromkafra,4:8
 
 //2004-10-05aSakexe
-packet_ver: 12
+//packet_ver: 12
 0x0072,17,useitem,6:13
 0x007e,16,movetokafra,5:12
 0x0089,6,walktoxy,3
@@ -563,7 +563,7 @@ packet_ver: 12
 0x0193,26,movefromkafra,10:22
 
 //2004-10-25aSakexe
-packet_ver: 13
+//packet_ver: 13
 0x0072,13,useitem,5:9
 0x007e,13,movetokafra,6:9
 0x0085,15,actionrequest,4:14
@@ -597,7 +597,7 @@ packet_ver: 13
 0x021d,6,lesseffect,2
 
 //2004-11-29aSakexe
-packet_ver: 14
+//packet_ver: 14
 0x0072,22,useskilltoid,8:12:18
 0x007e,30,useskilltopos,4:9:22:28
 0x0085,-1,globalmessage,2:4
@@ -629,7 +629,7 @@ packet_ver: 14
 0x0220,10
 
 //2005-01-10bSakexe
-packet_ver: 15
+//packet_ver: 15
 0x0072,26,useskilltoid,8:16:22
 0x007e,114,useskilltoposinfo,10:18:22:32:34
 0x0085,23,changedir,12:22
@@ -670,7 +670,7 @@ packet_ver: 15
 0x0234,6,hommovetomaster,0
 
 //2005-05-09aSakexe
-packet_ver: 16
+//packet_ver: 16
 0x0072,25,useskilltoid,6:10:21
 0x007e,102,useskilltoposinfo,5:9:12:20:22
 0x0085,11,changedir,7:10
@@ -715,7 +715,7 @@ packet_ver: 16
 0x022e,71
 
 //2005-06-28aSakexe
-packet_ver: 17
+//packet_ver: 17
 0x0072,34,useskilltoid,6:17:30
 0x007e,113,useskilltoposinfo,12:15:18:31:33
 0x0085,17,changedir,8:16
@@ -736,7 +736,7 @@ packet_ver: 17
 0x023e,4
 
 //2005-07-18aSakexe
-packet_ver: 18
+//packet_ver: 18
 0x0072,19,useskilltoid,5:11:15
 0x007e,110,useskilltoposinfo,9:15:23:28:30
 0x0085,11,changedir,6:10
@@ -775,7 +775,7 @@ packet_ver: 18
 0x0252,-1
 
 //2005-07-19bSakexe
-packet_ver: 19
+//packet_ver: 19
 0x0072,34,useskilltoid,6:17:30
 0x007e,113,useskilltoposinfo,12:15:18:31:33
 0x0085,17,changedir,8:16
@@ -869,7 +869,7 @@ packet_ver: 19
 0x0273,30,mailreturn,2:6
 
 //2006-03-27aSakexe
-packet_ver: 20
+//packet_ver: 20
 0x0072,26,useskilltoid,11:18:22
 0x007e,120,useskilltoposinfo,5:15:29:38:40
 0x0085,12,changedir,7:11
@@ -936,7 +936,7 @@ packet_ver: 20
 0x02a2,8
 
 //2007-01-08aSakexe
-packet_ver: 21
+//packet_ver: 21
 0x0072,30,useskilltoid,10:14:26
 0x007e,120,useskilltoposinfo,10:19:23:38:40
 0x0085,14,changedir,10:13
@@ -969,7 +969,7 @@ packet_ver: 21
 0x02ac,6
 
 //2007-02-12aSakexe
-packet_ver: 22
+//packet_ver: 22
 0x0072,25,useskilltoid,6:10:21
 0x007e,102,useskilltoposinfo,5:9:12:20:22
 0x0085,11,changedir,7:10
@@ -1203,7 +1203,7 @@ packet_ver: 22
 0x0389,-1
 
 //2008-08-27aRagexeRE
-packet_ver: 23
+//packet_ver: 23
 0x0072,22,useskilltoid,9:15:18
 0x007c,44
 0x007e,105,useskilltoposinfo,10:14:18:23:25	//Test
@@ -1270,7 +1270,7 @@ packet_ver: 23
 0x0435,-1
 
 //2008-09-10aSakexe
-packet_ver: 23
+//packet_ver: 23
 0x0436,19,wanttoconnection,2:6:10:14:18
 0x0437,7,actionrequest,2:6
 0x0438,10,useskilltoid,2:4:6
@@ -1311,7 +1311,7 @@ packet_ver: 23
 
 //Renewal Clients
 //2008-08-27aRagexeRE
-packet_ver: 24
+//packet_ver: 24
 0x0072,22,useskilltoid,9:15:18
 0x007c,44
 0x007e,105,useskilltoposinfo,10:14:18:23:25
@@ -1334,7 +1334,7 @@ packet_ver: 24
 0x02e5,9
 
 //2008-09-10aRagexeRE
-packet_ver: 25
+//packet_ver: 25
 0x0436,19,wanttoconnection,2:6:10:14:18
 0x0437,7,actionrequest,2:6
 0x0438,10,useskilltoid,2:4:6
@@ -1601,7 +1601,7 @@ packet_ver: 25
 0x0843,6,remove2,2 
 
 //2010-11-23aRagexeRE
-packet_ver: 26
+packet_ver: 2
 0x0288,-1,cashshopbuy,2:4:8	//len:points:count?
 0x035f,5,walktoxy,2
 0x0360,6,ticksend,2
@@ -1625,7 +1625,7 @@ packet_ver: 26
 0x08a9,2,reqclosebuyingstore,0
 
 //2011-10-05aRagexeRE
-packet_ver: 27
+packet_ver: 3
 0x0202,10,useskilltopos,2:4:6:8
 0x022d,19,wanttoconnection,2:6:10:14:18
 0x035f,6,ticksend,2
@@ -1644,7 +1644,7 @@ packet_ver: 27
 0x08cf,10
 
 //2011-11-02aRagexeRE
-packet_ver: 28
+packet_ver: 4
 0x0436,26,friendslistadd,2
 0x0898,5,hommenu,2:4
 0x0281,36,storagepassword,0
@@ -1687,7 +1687,7 @@ packet_ver: 28
 0x0907,5,moveitem,2
 
 //2012-03-07fRagexeRE
-packet_ver:29
+packet_ver: 5
 0x086A,19,wanttoconnection,2:6:10:14:18
 0x0437,5,walktoxy,2
 0x0887,6,ticksend,2
@@ -1718,7 +1718,7 @@ packet_ver:29
 0x0439,8,useitem,2:4
 
 //2012-04-10aRagexeRE
-packet_ver: 30
+packet_ver: 6
 0x01FD,15,repairitem,2
 0x089C,26,friendslistadd,2
 0x0885,5,hommenu,2:4
@@ -1778,7 +1778,7 @@ packet_ver: 30
 0x0916,26,guildinvite2,2
 
 // 2012-06-18aRagexeRE
-packet_ver: 31
+packet_ver: 7
 0x0078,55
 0x007c,44
 0x00aa,9
@@ -1815,7 +1815,7 @@ packet_ver: 31
 0x0983,29
 
 //2012-07-02aRagexeRE (unstable)
-packet_ver: 32
+packet_ver: 8
 0x0363,19,wanttoconnection,2:6:10:14:18
 0x0364,6,ticksend,2
 0x085a,7,actionrequest,2:6
@@ -1832,7 +1832,7 @@ packet_ver: 32
 0x0960,5,changedir,2:4
 
 //2013-03-20Ragexe (Judas)
-packet_ver: 33
+packet_ver: 9
 0x014f,6,guildrequestinfo,2
 0x01fd,15,repairitem,2
 //0x0281,-1,itemlistwindowselected,2:4:8
@@ -1893,7 +1893,7 @@ packet_ver: 33
 0x099b,8 //maptypeproperty2
 
 //2013-05-15a Ragexe (Yommy)
-packet_ver: 34
+packet_ver: 10
 0x0369,7,actionrequest,2:6
 0x083C,10,useskilltoid,2:4:6
 0x0437,5,walktoxy,2
@@ -1925,7 +1925,7 @@ packet_ver: 34
 0x093E,36,storagepassword,0
 
 //2013-05-22 Ragexe (Yommy)
-packet_ver: 35
+packet_ver: 11
 0x08A2,7,actionrequest,2:6
 0x095C,10,useskilltoid,2:4:6
 0x0360,5,walktoxy,2
@@ -1955,3 +1955,355 @@ packet_ver: 35
 0x0362,26,friendslistadd,2
 0x0926,5,hommenu,2:4
 0x088E,36,storagepassword,0
+
+//2013-05-29
+packet_ver: 12
+0x0890,7,actionrequest,2:6
+0x0438,10,useskilltoid,2:4:6
+0x0876,5,walktoxy,2
+0x0897,6,ticksend,2
+0x0951,5,changedir,2:4
+0x0895,6,takeitem,2
+0x08A7,6,dropitem,2:4
+0x0938,8,movetokafra,2:4
+0x0957,8,movefromkafra,2:4
+0x0917,10,useskilltopos,2:4:6:8
+0x085E,90,useskilltoposinfo,2:4:6:8:10
+0x0863,6,getcharnamerequest,2
+0x0937,6,solvecharname,2
+0x085A,12,searchstoreinfolistitemclick,2:6:10
+0x0941,2,searchstoreinfonextpage,0
+0x0918,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0936,-1,reqtradebuyingstore,2:4:8:12
+0x0892,6,reqclickbuyingstore,2
+0x0964,2,reqclosebuyingstore,0
+0x0869,-1,reqopenbuyingstore,2:4:8:9:89
+0x0874,18,bookingregreq,2:4
+// 0x088E,8 CZ_JOIN_BATTLE_FIELD
+0x0958,-1,itemlistwindowselected,2:4:8
+0x0919,19,wanttoconnection,2:6:10:14:18
+0x08A8,26,partyinvite2,2
+// 0x0888,4 CZ_GANGSI_RANK
+0x0877,26,friendslistadd,2
+0x023B,5,hommenu,2:4
+0x0956,36,storagepassword,0
+
+//2013-06-05
+packet_ver: 13
+0x0369 ,7,actionrequest,2:6
+0x083C ,10,useskilltoid,2:4:6
+0x0437 ,5,walktoxy,2
+0x035F ,6,ticksend,2
+0x0202 ,5,changedir,2:4
+0x07E4 ,6,takeitem,2
+0x0362 ,6,dropitem,2:4
+0x07EC ,8,movetokafra,2:4
+0x0364 ,8,movefromkafra,2:4
+0x0438 ,10,useskilltopos,2:4:6:8
+0x0366 ,90,useskilltoposinfo,2:4:6:8:10
+0x096A ,6,getcharnamerequest,2
+0x0368 ,6,solvecharname,2
+0x0838 ,12,searchstoreinfolistitemclick,2:6:10
+0x0835 ,2,searchstoreinfonextpage,0
+0x0819 ,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0811 ,-1,reqtradebuyingstore,2:4:8:12
+0x0360 ,6,reqclickbuyingstore,2
+0x0817 ,2,reqclosebuyingstore,0
+0x0815 ,-1,reqopenbuyingstore,2:4:8:9:89
+0x0365 ,18,bookingregreq,2:4
+// 0x0363 ,8 CZ_JOIN_BATTLE_FIELD
+0x0281 ,-1,itemlistwindowselected,2:4:8
+0x022D ,19,wanttoconnection,2:6:10:14:18
+0x0802 ,26,partyinvite2,2
+// 0x0436 ,4 CZ_GANGSI_RANK
+0x023B ,26,friendslistadd,2
+0x0361 ,5,hommenu,2:4
+0x0883,36,storagepassword,0
+
+//2013-06-12
+packet_ver: 14
+0x0369,7,actionrequest,2:6
+0x083C,10,useskilltoid,2:4:6
+0x0437,5,walktoxy,2
+0x035F,6,ticksend,2
+0x087E,5,changedir,2:4
+0x07E4,6,takeitem,2
+0x0362,6,dropitem,2:4
+0x07EC,8,movetokafra,2:4
+0x0364,8,movefromkafra,2:4
+0x0438,10,useskilltopos,2:4:6:8
+0x0366,90,useskilltoposinfo,2:4:6:8:10
+0x096A,6,getcharnamerequest,2
+0x0368,6,solvecharname,2
+0x0838,12,searchstoreinfolistitemclick,2:6:10
+0x0835,2,searchstoreinfonextpage,0
+0x0819,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0811,-1,reqtradebuyingstore,2:4:8:12
+0x0360,6,reqclickbuyingstore,2
+0x0817,2,reqclosebuyingstore,0
+0x0815,-1,reqopenbuyingstore,2:4:8:9:89
+0x0365,18,bookingregreq,2:4:6
+// 0x0363,8 CZ_JOIN_BATTLE_FIELD
+0x0281,-1,itemlistwindowselected,2:4:8:12
+0x0919,19,wanttoconnection,2:6:10:14:18
+0x0802,26,partyinvite2,2
+// 0x0436,4 CZ_GANGSI_RANK
+0x0940,26,friendslistadd,2
+0x093A,5,hommenu,2:4
+0x0964,36,storagepassword,2:4:20
+
+//2013-06-18
+packet_ver: 15
+0x0889,7,actionrequest,2:6
+0x0951,10,useskilltoid,2:4:6
+0x088E,5,walktoxy,2
+0x0930,6,ticksend,2
+0x08A6,5,changedir,2:4
+0x0962,6,takeitem,2
+0x0917,6,dropitem,2:4
+0x0885,8,movetokafra,2:4
+0x0936,8,movefromkafra,2:4
+0x096A,10,useskilltopos,2:4:6:8
+0x094F,90,useskilltoposinfo,2:4:6:8:10
+0x0944,6,getcharnamerequest,2
+0x0945,6,solvecharname,2
+0x0890,12,searchstoreinfolistitemclick,2:6:10
+0x0363,2,searchstoreinfonextpage,0
+0x0281,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0891,-1,reqtradebuyingstore,2:4:8:12
+0x0862,6,reqclickbuyingstore,2
+0x085A,2,reqclosebuyingstore,0
+0x0932,-1,reqopenbuyingstore,2:4:8:9:89
+0x08A7,18,bookingregreq,2:4:6
+// 0x087A,8 CZ_JOIN_BATTLE_FIELD
+0x0942,-1,itemlistwindowselected,2:4:8:12
+0x095B,19,wanttoconnection,2:6:10:14:18
+0x0887,26,partyinvite2,2
+// 0x0878,4 CZ_GANGSI_RANK
+0x0953,26,friendslistadd,2
+0x02C4,5,hommenu,2:4
+0x0864,36,storagepassword,2:4:20
+
+//2013-06-26
+packet_ver: 16
+0x0369,7,actionrequest,2:6
+0x083C,10,useskilltoid,2:4:6
+0x0437,5,walktoxy,2
+0x035F,6,ticksend,2
+0x094D,5,changedir,2:4
+0x088B,6,takeitem,2
+0x0952,6,dropitem,2:4
+0x0921,8,movetokafra,2:4
+0x0817,8,movefromkafra,2:4
+0x0438,10,useskilltopos,2:4:6:8
+0x0366,90,useskilltoposinfo,2:4:6:8:10
+0x096A,6,getcharnamerequest,2
+0x0368,6,solvecharname,2
+0x0838,12,searchstoreinfolistitemclick,2:6:10
+0x0835,2,searchstoreinfonextpage,0
+0x0819,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0811,-1,reqtradebuyingstore,2:4:8:12
+0x0360,6,reqclickbuyingstore,2
+0x0365,2,reqclosebuyingstore,0
+0x0815,-1,reqopenbuyingstore,2:4:8:9:89
+0x0894,18,bookingregreq,2:4:6
+// 0x0860,8 CZ_JOIN_BATTLE_FIELD
+0x08A5,-1,itemlistwindowselected,2:4:8:12
+0x088C,19,wanttoconnection,2:6:10:14:18
+0x0895,26,partyinvite2,2
+// 0x088F,4 CZ_GANGSI_RANK
+0x08AB,26,friendslistadd,2
+0x0960,5,hommenu,2:4
+0x0930,36,storagepassword,2:4:20
+
+//2013-07-03
+packet_ver: 17
+0x0369,7,actionrequest,2:6
+0x083C,10,useskilltoid,2:4:6
+0x0437,5,walktoxy,2
+0x035F,6,ticksend,2
+0x0930,5,changedir,2:4
+0x07E4,6,takeitem,2
+0x0362,6,dropitem,2:4
+0x07EC,8,movetokafra,2:4
+0x0364,8,movefromkafra,2:4
+0x0438,10,useskilltopos,2:4:6:8
+0x0366,90,useskilltoposinfo,2:4:6:8:10
+0x096A,6,getcharnamerequest,2
+0x0368,6,solvecharname,2
+0x0838,12,searchstoreinfolistitemclick,2:6:10
+0x0835,2,searchstoreinfonextpage,0
+0x0819,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0811,-1,reqtradebuyingstore,2:4:8:12
+0x0202,6,reqclickbuyingstore,2
+0x0817,2,reqclosebuyingstore,0
+0x0815,-1,reqopenbuyingstore,2:4:8:9:89
+0x0365,18,bookingregreq,2:4:6
+// 0x0363,8 CZ_JOIN_BATTLE_FIELD
+0x0281,-1,itemlistwindowselected,2:4:8:12
+0x022D,19,wanttoconnection,2:6:10:14:18
+0x0802,26,partyinvite2,2
+// 0x0436,4 CZ_GANGSI_RANK
+0x0360,26,friendslistadd,2
+0x094A,5,hommenu,2:4
+0x0873,36,storagepassword,2:4:20
+
+//2013-07-10
+packet_ver: 18
+0x0369,7,actionrequest,2:6
+0x083C,10,useskilltoid,2:4:6
+0x0437,5,walktoxy,2
+0x035F,6,ticksend,2
+0x0202,5,changedir,2:4
+0x07E4,6,takeitem,2
+0x0362,6,dropitem,2:4
+0x07EC,8,movetokafra,2:4
+0x0364,8,movefromkafra,2:4
+0x0438,10,useskilltopos,2:4:6:8
+0x0366,90,useskilltoposinfo,2:4:6:8:10
+0x096A,6,getcharnamerequest,2
+0x0368,6,solvecharname,2
+0x0838,12,searchstoreinfolistitemclick,2:6:10
+0x0835,2,searchstoreinfonextpage,0
+0x0819,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0811,-1,reqtradebuyingstore,2:4:8:12
+0x0360,6,reqclickbuyingstore,2
+0x0817,2,reqclosebuyingstore,0
+0x0815,-1,reqopenbuyingstore,2:4:8:9:89
+0x0365,18,bookingregreq,2:4:6
+// 0x0363,8 CZ_JOIN_BATTLE_FIELD
+0x0281,-1,itemlistwindowselected,2:4:8:12
+0x022D,19,wanttoconnection,2:6:10:14:18
+0x0802,26,partyinvite2,2
+// 0x0436,4 CZ_GANGSI_RANK
+0x023B,26,friendslistadd,2
+0x0361,5,hommenu,2:4
+0x0880,36,storagepassword,2:4:20
+
+//2013-07-17
+packet_ver: 19
+0x0918,7,actionrequest,2:6
+0x091E,10,useskilltoid,2:4:6
+0x083C,5,walktoxy,2
+0x02C4,6,ticksend,2
+0x088C,5,changedir,2:4
+0x08A9,6,takeitem,2
+0x0917,6,dropitem,2:4
+0x089B,8,movetokafra,2:4
+0x0956,8,movefromkafra,2:4
+0x0882,10,useskilltopos,2:4:6:8
+0x0952,90,useskilltoposinfo,2:4:6:8:10
+0x0958,6,getcharnamerequest,2
+0x0967,6,solvecharname,2
+0x0960,12,searchstoreinfolistitemclick,2:6:10
+0x0819,2,searchstoreinfonextpage,0
+0x086B,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x093B,-1,reqtradebuyingstore,2:4:8:12
+0x0898,6,reqclickbuyingstore,2
+0x096A,2,reqclosebuyingstore,0
+0x08AA,-1,reqopenbuyingstore,2:4:8:9:89
+0x0862,18,bookingregreq,2:4:6
+// 0x08A6,8 CZ_JOIN_BATTLE_FIELD
+0x0897,-1,itemlistwindowselected,2:4:8:12
+0x091D,19,wanttoconnection,2:6:10:14:18
+0x092F,26,partyinvite2,2
+// 0x086C,4 CZ_GANGSI_RANK
+0x0863,26,friendslistadd,2
+0x088A,5,hommenu,2:4
+0x095B,36,storagepassword,2:4:20
+
+//2013-07-24
+packet_ver: 20
+0x0876,7,actionrequest,2:6
+0x0958,10,useskilltoid,2:4:6
+0x0953,5,walktoxy,2
+0x035F,6,ticksend,2
+0x0966,5,changedir,2:4
+0x094A,6,takeitem,2
+0x0891,6,dropitem,2:4
+0x095D,8,movetokafra,2:4
+0x085E,8,movefromkafra,2:4
+0x089C,10,useskilltopos,2:4:6:8
+0x0921,90,useskilltoposinfo,2:4:6:8:10
+0x0867,6,getcharnamerequest,2
+0x0954,6,solvecharname,2
+0x0956,12,searchstoreinfolistitemclick,2:6:10
+0x0890,2,searchstoreinfonextpage,0
+0x0965,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x095C,-1,reqtradebuyingstore,2:4:8:12
+0x0924,6,reqclickbuyingstore,2
+0x023B,2,reqclosebuyingstore,0
+0x086A,-1,reqopenbuyingstore,2:4:8:9:89
+0x085A,18,bookingregreq,2:4:6
+// 0x0437,8 CZ_JOIN_BATTLE_FIELD
+0x092E,-1,itemlistwindowselected,2:4:8:12
+0x0893,19,wanttoconnection,2:6:10:14:18
+0x0927,26,partyinvite2,2
+// 0x08AB,4 CZ_GANGSI_RANK
+0x092B,26,friendslistadd,2
+0x0874,5,hommenu,2:4
+0x0860,36,storagepassword,2:4:20
+
+//2013-07-31
+packet_ver: 21
+0x0878,7,actionrequest,2:6
+0x0865,10,useskilltoid,2:4:6
+0x0437,5,walktoxy,2
+0x095F,6,ticksend,2
+0x0438,5,changedir,2:4
+0x0935,6,takeitem,2
+0x0962,6,dropitem,2:4
+0x0941,8,movetokafra,2:4
+0x094C,8,movefromkafra,2:4
+0x0925,10,useskilltopos,2:4:6:8
+0x095B,90,useskilltoposinfo,2:4:6:8:10
+0x088B,6,getcharnamerequest,2
+0x0957,6,solvecharname,2
+0x095D,12,searchstoreinfolistitemclick,2:6:10
+0x0366,2,searchstoreinfonextpage,0
+0x0894,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x0819,-1,reqtradebuyingstore,2:4:8:12
+0x0863,6,reqclickbuyingstore,2
+0x087E,2,reqclosebuyingstore,0
+0x0897,-1,reqopenbuyingstore,2:4:8:9:89
+0x0923,18,bookingregreq,2:4:6
+// 0x0895,8 CZ_JOIN_BATTLE_FIELD
+0x0958,-1,itemlistwindowselected,2:4:8:12
+0x092B,19,wanttoconnection,2:6:10:14:18
+0x0956,26,partyinvite2,2
+// 0x0889,4 CZ_GANGSI_RANK
+0x022D,26,friendslistadd,2
+0x092D,5,hommenu,2:4
+0x0884,36,storagepassword,2:4:20
+
+//2013-08-07
+packet_ver: 22
+0x0876,7,actionrequest,2:6
+0x0958,10,useskilltoid,2:4:6
+0x0953,5,walktoxy,2
+0x035F,6,ticksend,2
+0x0966,5,changedir,2:4
+0x094A,6,takeitem,2
+0x0891,6,dropitem,2:4
+0x095D,8,movetokafra,2:4
+0x085E,8,movefromkafra,2:4
+0x089C,10,useskilltopos,2:4:6:8
+0x0921,90,useskilltoposinfo,2:4:6:8:10
+0x0867,6,getcharnamerequest,2
+0x0954,6,solvecharname,2
+0x0956,12,searchstoreinfolistitemclick,2:6:10
+0x0890,2,searchstoreinfonextpage,0
+0x0965,-1,searchstoreinfo,2:4:5:9:13:14:15
+0x095C,-1,reqtradebuyingstore,2:4:8:12
+0x0924,6,reqclickbuyingstore,2
+0x023B,2,reqclosebuyingstore,0
+0x086A,-1,reqopenbuyingstore,2:4:8:9:89
+0x085A,18,bookingregreq,2:4:6
+// 0x0437,8 CZ_JOIN_BATTLE_FIELD
+0x092E,-1,itemlistwindowselected,2:4:8:12
+0x0893,19,wanttoconnection,2:6:10:14:18
+0x0927,26,partyinvite2,2
+// 0x08AB,4 CZ_GANGSI_RANK
+0x092B,26,friendslistadd,2
+0x0874,5,hommenu,2:4
+0x0860,36,storagepassword,2:4:20
